@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Shader">
+      <UniqueIdentifier>{61d331de-88f6-40d3-84d5-56c66296f462}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Image">
+      <UniqueIdentifier>{80eae2f8-4d6c-4bd5-95f4-583a91c8c320}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shader\SimpleFragmentShader.fragmentshader">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="Shader\SimpleVertexShader.vertexshader">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="Shader\Shading.fragmentshader">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="Shader\Shading.vertexshader">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="Shader\LightSource.fragmentshader">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="Shader\Texture.fragmentshader">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="Shader\Texture.vertexshader">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="Shader\TransformVertexShader.vertexshader">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="Shader\Blending.fragmentshader">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="Shader\Text.fragmentshader">
+      <Filter>Shader</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Mesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\MeshBuilder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Camera2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Light.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Material.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Utility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\LoadTGA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Camera3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\LoadOBJ.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Assignment3Scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Boundary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SoundSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\shader.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\MeshBuilder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Vertex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Camera2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Light.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Material.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Utility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\LoadTGA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Camera3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\LoadOBJ.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CameraPhysics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Assignment3Scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Boundary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SoundSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Image\color2.tga">
+      <Filter>Image</Filter>
+    </Image>
+    <Image Include="Image\back.tga">
+      <Filter>Image</Filter>
+    </Image>
+    <Image Include="Image\bottom.tga">
+      <Filter>Image</Filter>
+    </Image>
+    <Image Include="Image\chair.tga">
+      <Filter>Image</Filter>
+    </Image>
+    <Image Include="Image\dart.tga">
+      <Filter>Image</Filter>
+    </Image>
+    <Image Include="Image\dartboard.tga">
+      <Filter>Image</Filter>
+    </Image>
+    <Image Include="Image\doorman.tga">
+      <Filter>Image</Filter>
+    </Image>
+    <Image Include="Image\front.tga">
+      <Filter>Image</Filter>
+    </Image>
+    <Image Include="Image\left.tga">
+      <Filter>Image</Filter>
+    </Image>
+    <Image Include="Image\Mario.tga">
+      <Filter>Image</Filter>
+    </Image>
+    <Image Include="Image\right.tga">
+      <Filter>Image</Filter>
+    </Image>
+    <Image Include="Image\shoe.tga">
+      <Filter>Image</Filter>
+    </Image>
+    <Image Include="Image\top.tga">
+      <Filter>Image</Filter>
+    </Image>
+    <Image Include="Image\winebottle.tga">
+      <Filter>Image</Filter>
+    </Image>
+    <Image Include="Image\calibri.tga">
+      <Filter>Image</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
