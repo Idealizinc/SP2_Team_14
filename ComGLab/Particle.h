@@ -1,5 +1,5 @@
-#ifndef SP2_SCENE_H
-#define SP2_SCENE_H
+#ifndef _PARTICLE_H
+#define _PARTICLE_H
 
 #include "Scene.h"
 #include "Light.h"
@@ -23,7 +23,7 @@ using namespace irrklang;
 extern int S_Width, S_Height;
 
 
-class SP2_Scene : public Scene
+class Particle : public Scene
 {
 	enum GEOMETRY_TYPE
 	{
@@ -48,11 +48,6 @@ class SP2_Scene : public Scene
 
 		//Custom Models
 		GEO_SNIPER,
-		//GEO_RIFLE,
-		//GEO_PLAYERSHIP,
-		//GEO_MOTHERSHIP,
-		//GEO_DRONE,
-		//GEO_ROBOT1,
 
 		//add these enum in GEOMETRY_TYPE before NUM_GEOMETRY
 		GEO_TEXT,
@@ -125,8 +120,8 @@ class SP2_Scene : public Scene
 	};
 
 public:
-	SP2_Scene();
-	~SP2_Scene();
+	Particle();
+	~Particle();
 
 	Light light[3];
 	void RenderMesh(Mesh *mesh, bool enableLight);
@@ -167,14 +162,12 @@ private:
 	unsigned m_programID;
 	unsigned m_parameters[U_TOTAL];
 	Mesh* meshList[NUM_GEOMETRY];
-	
+
 	void initLights();
 
 	//Render Calls
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
-	void RenderImageOnScreen(Mesh* mesh, Color color, float Xsize, float Ysize, float Xpos, float Ypos);
-	virtual void RenderSniperInHand(Mesh* mesh, float size, float x, float y);
 
 	//Interaction Values
 	bool InteractionBoundsCheck(Vector3 CameraPosition, int value);
@@ -184,7 +177,7 @@ private:
 	bool canInteractWithKyogre = false;
 	bool interactedWithKyogre = false;
 	Boundary KyogreIxB;
-	void SP2_Scene::initBounds();
+	void Particle::initBounds();
 	float framesPerSecond;
 	Boundary DoorIxB;
 	bool canOpenDoor = false;

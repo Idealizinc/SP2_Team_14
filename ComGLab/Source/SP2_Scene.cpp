@@ -133,6 +133,21 @@ void SP2_Scene::Init()
 	meshList[GEO_SNIPER] = MeshBuilder::GenerateOBJ("test", "OBJ//Sniper.obj");
 	meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Sniper.tga");
 
+	//meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
+	//meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
+
+	//meshList[GEO_PLAYERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//PlayerShip.obj");
+	//meshList[GEO_PLAYERSHIP]->textureID = LoadTGA("Image//Tex_PlayerShip.tga");
+
+	//meshList[GEO_MOTHERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//Mothership.obj");
+	//meshList[GEO_MOTHERSHIP]->textureID = LoadTGA("Image//Tex_Mothership.tga");
+
+	//meshList[GEO_DRONE] = MeshBuilder::GenerateOBJ("test", "OBJ//Drone.obj");
+	//meshList[GEO_DRONE]->textureID = LoadTGA("Image//Tex_Drone.tga");
+
+	//meshList[GEO_ROBOT1] = MeshBuilder::GenerateOBJ("test", "OBJ//Robot1.obj");
+	////meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Robot1.tga");
+
 	initBounds();
 }
 
@@ -208,44 +223,23 @@ void SP2_Scene::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, fl
 	glEnable(GL_DEPTH_TEST);
 }
 
-void SP2_Scene::RenderImageOnScreen(Mesh* mesh, Color color, float Xsize, float Ysize, float Xpos, float Ypos)
-{
-	if (!mesh || mesh->textureID <= 0) //Proper error check
-		return;
 
+void SP2_Scene::RenderSniperInHand(Mesh* mesh, float size, float x, float y)
+{
 	glDisable(GL_DEPTH_TEST);
 	//Add these code just after glDisable(GL_DEPTH_TEST);
 	Mtx44 ortho;
-	ortho.SetToOrtho(0, 160, 0, 90, -10, 10); //size of screen UI
+	ortho.SetToOrtho(0, 170, 0, 90, -70, 70); //size of screen UI
 	projectionStack.PushMatrix();
 	projectionStack.LoadMatrix(ortho);
 	viewStack.PushMatrix();
 	viewStack.LoadIdentity(); //No need camera for ortho mode
 	modelStack.PushMatrix();
 	modelStack.LoadIdentity(); //Reset modelStack
-	modelStack.Scale(Xsize, Ysize, 1);
-	modelStack.Translate(Xpos, Ypos, 0);
-
-	//glUniform1i(m_parameters[U_TEXT_ENABLED], 1);
-	//glUniform3fv(m_parameters[U_TEXT_COLOR], 1, &color.r);
-	glUniform1i(m_parameters[U_LIGHTENABLED], 0);
-	//glUniform1i(m_parameters[U_COLOR_TEXTURE_ENABLED], 1);
-	glActiveTexture(GL_TEXTURE0);
-	glBindTexture(GL_TEXTURE_2D, mesh->textureID);
-	glUniform1i(m_parameters[U_COLOR_TEXTURE], 0);
-	//for (unsigned i = 0; i < text.length(); ++i)
-	//{
-	//	Mtx44 characterSpacing;
-	//	characterSpacing.SetToTranslation(i * 0.5f, 0, 0); //1.0f is the spacing of each character, you may change this value
-	//	Mtx44 MVP = projectionStack.Top() * viewStack.Top() * modelStack.Top() * characterSpacing;
-	//	glUniformMatrix4fv(m_parameters[U_MVP], 1, GL_FALSE, &MVP.a[0]);
-
-	//	mesh->Render((unsigned)text[i] * 6, 6);
-	//}
-	mesh->Render();
-	glBindTexture(GL_TEXTURE_2D, 0);
-	glUniform1i(m_parameters[U_TEXT_ENABLED], 0);
-	//Add these code just before glEnable(GL_DEPTH_TEST);
+	modelStack.Translate(145, 5, 0);
+	modelStack.Rotate(200, 0, 1, 0);
+	modelStack.Scale(18, 18, 18);
+	RenderMesh(meshList[GEO_SNIPER], true);
 	projectionStack.PopMatrix();
 	viewStack.PopMatrix();
 	modelStack.PopMatrix();
@@ -546,7 +540,8 @@ void SP2_Scene::Render(double dt)
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	RenderImageOnScreen(meshList[GEO_TOP], Color(1,1,1), 1, 2, 2 ,2);
+	//RenderImageOnScreen(meshList[GEO_TOP], Color(1,1,1), 1, 2, 2 ,2);
+	RenderSniperInHand(meshList[GEO_SNIPER], 5, 1, 1);
 	modelStack.PopMatrix();
 }
 

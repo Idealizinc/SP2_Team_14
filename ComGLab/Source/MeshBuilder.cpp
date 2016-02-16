@@ -885,3 +885,55 @@ Mesh* MeshBuilder::GenerateText(const std::string &meshName, unsigned numRow, un
 	
 
 }
+
+/******************************************************************************/
+/*!
+\brief
+Generate the vertices of a quad; Use random color for each vertex
+Then generate the VBO/IBO and store them in Mesh object
+
+\param meshName - name of mesh
+\param lengthX - width of quad
+\param lengthY - height of quad
+
+\return Pointer to mesh storing VBO/IBO of quad
+*/
+/******************************************************************************/
+Mesh* MeshBuilder::GenerateParticle(const std::string &meshName, Color color)
+{
+	int MaxParticles = 10;
+	static const GLfloat g_vertex_buffer_data[] = {
+	-0.5f, -0.5f, 0.0f,
+	0.5f, -0.5f, 0.0f,
+	-0.5f, 0.5f, 0.0f,
+	0.5f, 0.5f, 0.0f,
+	};
+	GLuint billboard_vertex_buffer;
+	glGenBuffers(1, &billboard_vertex_buffer);
+	glBindBuffer(GL_ARRAY_BUFFER, billboard_vertex_buffer);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW);
+
+	// The VBO containing the positions and sizes of the particles
+	GLuint particles_position_buffer;
+	glGenBuffers(1, &particles_position_buffer);
+	glBindBuffer(GL_ARRAY_BUFFER, particles_position_buffer);
+	// Initialize with empty (NULL) buffer : it will be updated later, each frame.
+	glBufferData(GL_ARRAY_BUFFER, MaxParticles * 4 * sizeof(GLfloat), NULL, GL_STREAM_DRAW);
+	
+	// The VBO containing the colors of the particles
+	GLuint particles_color_buffer;
+	glGenBuffers(1, &particles_color_buffer);
+	glBindBuffer(GL_ARRAY_BUFFER, particles_color_buffer);
+	// Initialize with empty (NULL) buffer : it will be updated later, each frame.
+	glBufferData(GL_ARRAY_BUFFER, MaxParticles * 4 * sizeof(GLubyte), NULL, GL_STREAM_DRAW);
+
+	//// Update the buffers that OpenGL uses for rendering.
+	//glBindBuffer(GL_ARRAY_BUFFER, particles_position_buffer);
+	//glBufferData(GL_ARRAY_BUFFER, MaxParticles * 4 * sizeof(GLfloat), NULL, GL_STREAM_DRAW); // Buffer orphaning, a common way to improve streaming perf. See above link for details.
+	//glBufferSubData(GL_ARRAY_BUFFER, 0, ParticlesCount * sizeof(GLfloat) * 4, g_particule_position_size_data);
+	//
+	//glBindBuffer(GL_ARRAY_BUFFER, particles_color_buffer);
+	//glBufferData(GL_ARRAY_BUFFER, MaxParticles * 4 * sizeof(GLubyte), NULL, GL_STREAM_DRAW); // Buffer orphaning, a common way to improve streaming perf. See above link for details.
+	//glBufferSubData(GL_ARRAY_BUFFER, 0, ParticlesCount * sizeof(GLubyte) * 4, g_particule_color_data);
+	return 0;
+}
