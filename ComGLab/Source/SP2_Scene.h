@@ -10,7 +10,7 @@
 #include "LoadTGA.h"
 #include <iomanip>
 #include <string>
-
+#include "removeMonospace.h"
 #include <vector>
 using std::vector;
 
@@ -171,6 +171,7 @@ private:
 	void initLights();
 
 	//Render Calls
+	void readtextfile();
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
 	void SP2_Scene::RenderImageOnScreen(GLuint texture, float Xsize, float Ysize, float Xpos, float Ypos);
@@ -195,6 +196,21 @@ private:
 	bool IsNight = false;
 	bool LampActive = true;
 	float timeCheck = 0;
+
+	//test on screen values
+	double fps;
+	int hp;
+	int ammo;
+	int wave;
+	//check game state
+	int state;
+	bool weaponinterface;
+	bool wave1robots;
+	bool wave2robots;
+	bool meteor;
+	bool wave4robots;
+	bool wave5robots;
+	bool boss;
 
 	//Light Stuff
 	Vector3 TownLightPosition;
