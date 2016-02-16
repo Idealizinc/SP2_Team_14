@@ -6,6 +6,11 @@
 #include "Application.h"
 #include "MeshBuilder.h"
 #include "Utility.h"
+#include "removeMonospace.h"
+#include <fstream>
+#include <iostream>
+using std::cout;
+using std::endl;
 
 ISoundEngine* engine;
 
@@ -21,6 +26,24 @@ SP2_Scene::SP2_Scene()
 
 SP2_Scene::~SP2_Scene()
 {
+}
+
+void SP2_Scene::readtextfile()
+{
+	std::string line;
+	std::ifstream startfile;
+	startfile.open("readme\\start.txt");
+	std::string file_contents;
+	if (startfile.is_open())
+	{
+		while (std::getline(startfile, line))
+		{
+			file_contents += line;
+			file_contents.push_back('\n');
+			//std::cout << line << endl;
+		}
+		startfile.close();
+	}
 }
 
 void SP2_Scene::Init()
@@ -53,6 +76,17 @@ void SP2_Scene::Init()
 	toggleLimiters = true;
 	limitersON = true;
 	lightOff = false;
+	hp = 100;
+	ammo = 100;
+	wave = 0;
+	state = 0;
+	weaponinterface = false;
+	wave1robots = false;
+	wave2robots = false;
+	meteor = false;
+	wave4robots = false;
+	wave5robots = false;
+	boss = false;
 
 	// Enable depth Test
 	glEnable(GL_DEPTH_TEST);
@@ -477,6 +511,8 @@ void SP2_Scene::Render(double dt)
 		camera.up.x, camera.up.y, camera.up.z
 		);
 
+	readtextfile();
+
 	modelStack.LoadIdentity();
 
 	if (light[0].type == Light::LIGHT_DIRECTIONAL)
@@ -529,6 +565,37 @@ void SP2_Scene::Render(double dt)
 		RenderSkybox(camera.getCameraPosition());
 	}
 
+	if (wave == 0)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robot wave incoming", Color(1, 0, 0), 3, 22, 29);
+	}
+	if (wave == 1)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "*Robots coming from all directions*", Color(1, 0, 0), 3, 22, 29);
+	}
+	if (wave == 2)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robots now walk faster!!", Color(1, 0, 0), 3, 22, 29);
+	}
+	if (wave == 3)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Meteors incoming!!!", Color(1, 0, 1), 3, 22, 29);
+	}
+	if (wave == 4)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robots now fire weapons faster!!", Color(1, 0, 0), 3, 22, 29);
+	}
+	if (wave == 5)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robots are now in god mode!!", Color(1, 0, 0), 3, 22, 29);
+	}
+	//boss wave 
+	if (wave == 6)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Boss: Defeat Mothership", Color(1, 0, 0), 3, 22, 29);
+	}
+	readtextfile();
+
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_AXES], false);
 	modelStack.PopMatrix();
@@ -543,6 +610,20 @@ void SP2_Scene::Render(double dt)
 	//RenderImageOnScreen(meshList[GEO_TOP], Color(1,1,1), 1, 2, 2 ,2);
 	RenderSniperInHand(meshList[GEO_SNIPER], 5, 1, 1);
 	modelStack.PopMatrix();
+
+	RenderTextOnScreen(meshList[GEO_TEXT], "X:" + std::to_string(camera.position.x), Color(1, 0, 1), 3, 2, 1);
+
+	RenderTextOnScreen(meshList[GEO_TEXT], "X:" + std::to_string(camera.position.x), Color(1, 0, 1), 3, 2, 1);
+
+	RenderTextOnScreen(meshList[GEO_TEXT], "Z:" + std::to_string(camera.position.z), Color(1, 0, 1), 3, 14, 1);
+
+	RenderTextOnScreen(meshList[GEO_TEXT], "FPS: " + std::to_string(fps), Color(1, 0.5, 0), 3, 2, 2);
+
+	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(hp), Color(0, 0.5, 0), 3, 2, 29);
+
+	RenderTextOnScreen(meshList[GEO_TEXT], "" + std::to_string(ammo), Color(0, 0.5, 0), 3, 4, 28);
+
+	RenderTextOnScreen(meshList[GEO_TEXT], "" + std::to_string(wave), Color(0, 0.5, 0), 3, 4, 27);
 }
 
 void SP2_Scene::Exit()
