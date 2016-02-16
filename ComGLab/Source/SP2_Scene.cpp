@@ -31,7 +31,7 @@ void SP2_Scene::readtextfile()
 {
 	std::string line;
 	std::ifstream startfile;
-	startfile.open("readme\\start.txt");
+	startfile.open("ComGLab\readme\\start.txt");
 	std::string file_contents;
 	if (startfile.is_open())
 	{
@@ -161,7 +161,7 @@ void SP2_Scene::Init()
 	meshList[GEO_RIGHT]->textureID = SB_Day_right;
 
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
-	meshList[GEO_TEXT]->textureID = LoadTGA("Image//calibri.tga");
+	meshList[GEO_TEXT]->textureID = LoadTGA("Image/courier.tga");
 
 	meshList[GEO_SNIPER] = MeshBuilder::GenerateOBJ("test", "OBJ//Sniper.obj");
 	meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Sniper.tga");
@@ -743,9 +743,9 @@ void SP2_Scene::Render(double dt)
 
 	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(hp), Color(0, 0.5, 0), 3, 2, 29);
 
-	RenderTextOnScreen(meshList[GEO_TEXT], "" + std::to_string(ammo), Color(0, 0.5, 0), 3, 4, 28);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Ammo: " + std::to_string(ammo), Color(0, 0.5, 0), 3, 4, 28);
 
-	RenderTextOnScreen(meshList[GEO_TEXT], "" + std::to_string(wave), Color(0, 0.5, 0), 3, 4, 27);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Wave Number: " + std::to_string(wave), Color(0, 0.5, 0), 3, 4, 27);
 }
 
 void SP2_Scene::Exit()
