@@ -10,7 +10,6 @@
 #include "LoadTGA.h"
 #include <iomanip>
 #include <string>
-#include "removeMonospace.h"
 #include <vector>
 using std::vector;
 
@@ -60,6 +59,9 @@ class SP2_Scene : public Scene
 		GEO_LIGHTBALL,
 		GEO_FLOOR,
 
+		GEO_BASE,
+		GEO_GATE_MAIN,
+		GEO_GATE_SIDE,
 		NUM_GEOMETRY,
 	};
 
@@ -215,6 +217,9 @@ private:
 	//Light Stuff
 	Vector3 TownLightPosition;
 	Vector3 RoomLightPosition;
+
+	// Base Stuff
+	Vector3 basePosition;
 };
 
 

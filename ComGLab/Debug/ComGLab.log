@@ -1,0 +1,10 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ComGLab.vcxproj, Main Framework.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  SP2_Scene.cpp
+c:\users\rayner\desktop\sp2_cgp_v1.1\comglab\source\camera3.h(34): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+c:\users\rayner\desktop\sp2_cgp_v1.1\comglab\source\sp2_scene.cpp(90): warning C4305: '=' : truncation from 'double' to 'float'
+c:\users\rayner\desktop\sp2_cgp_v1.1\comglab\source\sp2_scene.cpp(385): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\rayner\desktop\sp2_cgp_v1.1\comglab\source\sp2_scene.cpp(472): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\rayner\desktop\sp2_cgp_v1.1\comglab\source\sp2_scene.cpp(645): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\rayner\desktop\sp2_cgp_v1.1\comglab\source\sp2_scene.cpp(648): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\rayner\desktop\sp2_cgp_v1.1\comglab\source\sp2_scene.cpp(653): warning C4305: 'argument' : truncation from 'double' to 'float'
+  ComGLab.vcxproj -> C:\Users\Rayner\Desktop\SP2_CGP_V1.1\Debug\Mains.exe
