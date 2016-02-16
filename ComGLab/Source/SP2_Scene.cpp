@@ -34,7 +34,7 @@ void SP2_Scene::Init()
 	glClearColor(0.15f, 0.2f, 0.35f, 0.0f);
 
 	Mtx44 projection;
-	projection.SetToPerspective(45.0f, static_cast < float >(S_Width) / static_cast < float >(S_Height), 0.1f, 3000.0f);
+	projection.SetToPerspective(30.0f, static_cast < float >(S_Width) / static_cast < float >(S_Height), 0.1f, 3000.0f);
 	projectionStack.LoadMatrix(projection);
 
 	camera.Init(Vector3(0, 4, 8.5), Vector3(0, 4, 0), Vector3(0, 1, 0));
@@ -226,7 +226,7 @@ void SP2_Scene::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, fl
 
 void SP2_Scene::RenderSniperInHand(Mesh* mesh, float size, float x, float y)
 {
-	glDisable(GL_DEPTH_TEST);
+	//glDisable(GL_DEPTH_TEST);
 	//Add these code just after glDisable(GL_DEPTH_TEST);
 	Mtx44 ortho;
 	ortho.SetToOrtho(0, 170, 0, 90, -70, 70); //size of screen UI
@@ -237,7 +237,7 @@ void SP2_Scene::RenderSniperInHand(Mesh* mesh, float size, float x, float y)
 	modelStack.PushMatrix();
 	modelStack.LoadIdentity(); //Reset modelStack
 	modelStack.Translate(145, 5, 0);
-	modelStack.Rotate(200, 0, 1, 0);
+	modelStack.Rotate(190, 0, 1, 0);
 	modelStack.Scale(18, 18, 18);
 	RenderMesh(meshList[GEO_SNIPER], true);
 	projectionStack.PopMatrix();
