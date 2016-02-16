@@ -48,7 +48,7 @@ class SP2_Scene : public Scene
 
 		//Custom Models
 		GEO_SNIPER,
-		//GEO_RIFLE,
+		GEO_RIFLE,
 		//GEO_PLAYERSHIP,
 		//GEO_MOTHERSHIP,
 		//GEO_DRONE,
@@ -173,8 +173,8 @@ private:
 	//Render Calls
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
-	void RenderImageOnScreen(Mesh* mesh, Color color, float Xsize, float Ysize, float Xpos, float Ypos);
-	virtual void RenderSniperInHand(Mesh* mesh, float size, float x, float y);
+	void SP2_Scene::RenderImageOnScreen(GLuint texture, float Xsize, float Ysize, float Xpos, float Ypos);
+	void RenderSniperInHand(Mesh* mesh, float size, float x, float y);
 
 	//Interaction Values
 	bool InteractionBoundsCheck(Vector3 CameraPosition, int value);
