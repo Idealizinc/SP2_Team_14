@@ -397,7 +397,105 @@ void SP2_Scene::initBounds()
 {
 	
 }
+void SP2_Scene::gamestate()
+{
+	//outline for game state, will edit again next time
+	if (weaponinterface == true) //fighting 
+	{
+		//display screen
+	}
 
+	if (wave == 0)
+	{
+		//wait function here
+		wave++;
+	}
+	if (wave == 1)
+	{
+		wave1robots = true;
+		//to do: spawn robots
+		//if all robots dead, maybe after killing a certain number
+		wave1robots = false;
+		//wait function here
+		//state = 1; 
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1 clear", Color(1, 0, 0), 3, 22, 15); //appear for a few seconds
+		weaponinterface = true;
+		if (Application::IsKeyPressed('Z'))
+		{
+			weaponinterface = false;
+			//state = 0;
+		}
+		wave++;
+	}
+	if (wave == 2)
+	{
+		wave2robots = true;
+		//to do outside: spwan robots
+		//if kill robots
+		wave2robots = false;
+		//wait function here
+		//state = 1; 
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2 clear", Color(1, 0, 0), 3, 22, 15);
+		weaponinterface = true;
+		if (Application::IsKeyPressed('Z'))
+		{
+			weaponinterface = false;
+			//state = 0;
+		}
+		wave++;
+	}
+	if (wave == 3)
+	{
+		meteor = true;
+		//to do outside: spawn meteors
+		//if destroy meteor
+		meteor = false;
+		//wait function here
+		//state = 1;
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 22, 15);
+		weaponinterface = true;
+		if (Application::IsKeyPressed('Z'))
+		{
+			weaponinterface = false;
+			//state = 0;
+		}
+		wave++;
+	}
+	if (wave == 4)
+	{
+		wave4robots = true;
+		//to do:spawn robots
+		//if kill all robots
+		wave4robots = false;
+		//wait function here
+		//state = 1;
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4 clear", Color(1, 0, 0), 3, 22, 15);
+		weaponinterface = true;
+		if (Application::IsKeyPressed('Z'))
+		{
+			weaponinterface = false;
+			//state = 0;
+		}
+		wave++;
+	}
+	if (wave == 5)
+	{
+		wave5robots = true;
+		//to do:spawn robots
+		//if kill all robots
+		wave5robots = false;
+		//wait function here
+		//state = 1; //wave intermission state
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 22, 15);
+		weaponinterface = true;
+		if (Application::IsKeyPressed('Z'))
+		{
+			weaponinterface = false;
+			//state = 0;
+		}
+		wave++;
+	}
+}
 void SP2_Scene::Update(double dt)
 {
 	camera.Update(dt);
