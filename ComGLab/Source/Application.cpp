@@ -11,12 +11,13 @@
 #include <stdlib.h>
 
 #include "SP2_Scene.h"
+#include "Particle.h"
 
+int S_Width, S_Height;
 
 GLFWwindow* m_window;
 const unsigned char FPS = 60; // FPS of this game
 const unsigned int frameTime = 1000 / FPS; // time for each frame
-int S_Width, S_Height;
 
 //Define an error callback
 static void error_callback(int error, const char* description)
@@ -80,9 +81,10 @@ void Application::Init()
 	S_Height = mode->height;
 	//Choose ONE
 	//Set to be windowed at primary monitor's resolution;
-	m_window = glfwCreateWindow(S_Width, S_Height, "Computer Graphics", NULL, NULL);
+		m_window = glfwCreateWindow(S_Width, S_Height, "Computer Graphics", NULL, NULL);
 	//Set to fullscreen at primary monitor's resolution;
-	//m_window = glfwCreateWindow(S_Width, S_Height, "Computer Graphics", glfwGetPrimaryMonitor(), NULL);
+		//m_window = glfwCreateWindow(S_Width, S_Height, "Computer Graphics", glfwGetPrimaryMonitor(), NULL);
+	//
 
 	//Hide The Cursor Within the Application;
 	glfwSetInputMode(m_window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
@@ -124,7 +126,7 @@ void Application::Run()
 	while (!glfwWindowShouldClose(m_window) && !IsKeyPressed(VK_ESCAPE))
 	{
 		scene->Update(m_timer.getElapsedTime());
-		scene->Render();
+		scene->Render(m_timer.getElapsedTime());
 		//Swap buffers
 		glfwSwapBuffers(m_window);
 		//Get and organize events, like keyboard and mouse input, window resizing, etc...

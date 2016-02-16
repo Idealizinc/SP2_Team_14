@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Application.cpp" />
+    <ClCompile Include="Source\Particle.cpp" />
     <ClCompile Include="Source\SP2_Scene.cpp" />
     <ClCompile Include="Source\SoundSystem.cpp" />
     <ClCompile Include="Source\Boundary.cpp" />
@@ -114,6 +115,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Application.h" />
+    <ClInclude Include="Source\Particle.h" />
+    <ClInclude Include="Source\SharedData.h" />
     <ClInclude Include="Source\SP2_Scene.h" />
     <ClInclude Include="Source\SoundSystem.h" />
     <ClInclude Include="Source\Boundary.h" />

@@ -35,6 +35,8 @@ public:
 	static Mesh* GenerateOBJ(const std::string &meshName, const std::string &file_path);
 	//text gen
 	static Mesh* GenerateText(const std::string &meshName, unsigned numRow, unsigned numCol);
+	//Particle
+	Mesh* GenerateParticle(const std::string &meshName, Color color);
 };
 
 #endif

@@ -1,4 +1,4 @@
-#include "SP2_Scene.h"
+#include "Particle.h"
 #include "GL\glew.h"
 
 #include "shader.hpp"
@@ -7,29 +7,16 @@
 #include "MeshBuilder.h"
 #include "Utility.h"
 
-ISoundEngine* engine;
-
-const std::string SoundName[] = {
-	"Sounds//Spacebattle.mp3"
-};
-
-ISound* Song;
-
-SP2_Scene::SP2_Scene()
+Particle::Particle()
 {
 }
 
-SP2_Scene::~SP2_Scene()
+Particle::~Particle()
 {
 }
 
-void SP2_Scene::Init()
+void Particle::Init()
 {
-	engine = createIrrKlangDevice();
-	engine->addSoundSourceFromFile(SoundName[0].c_str());
-	Song = engine->play2D(SoundName[0].c_str(), true, false, true);
-	Song->setVolume(0.25);
-
 	// Init VBO here
 	glClearColor(0.15f, 0.2f, 0.35f, 0.0f);
 
@@ -38,21 +25,6 @@ void SP2_Scene::Init()
 	projectionStack.LoadMatrix(projection);
 
 	camera.Init(Vector3(0, 4, 8.5), Vector3(0, 4, 0), Vector3(0, 1, 0));
-
-	//Initiallising Variables For Translate, Rotate, Scale
-	tweenVal = 0;
-	constRotation = 0;
-	constTranslation = 0;
-	DoorRot = 0;
-	translateX = 5;
-	scaleAll = 1;
-	rotationalLimit = 180;
-	translationLimit = 5;
-	scalingLimit = 10;
-	rLimiter = true;
-	toggleLimiters = true;
-	limitersON = true;
-	lightOff = false;
 
 	// Enable depth Test
 	glEnable(GL_DEPTH_TEST);
@@ -83,7 +55,7 @@ void SP2_Scene::Init()
 	m_parameters[U_MATERIAL_SHININESS] = glGetUniformLocation(m_programID, "material.kShininess");
 
 	initLights();
-	
+
 	// Get a handle for our "MVP" uniform
 	m_parameters[U_MVP] = glGetUniformLocation(m_programID, "MVP");
 
@@ -91,18 +63,8 @@ void SP2_Scene::Init()
 	m_parameters[U_TEXT_ENABLED] = glGetUniformLocation(m_programID, "textEnabled");
 	m_parameters[U_TEXT_COLOR] = glGetUniformLocation(m_programID, "textColor");
 
-
-	Color white(1, 1, 1);
-
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("axes", 1000, 1000, 1000);
-	meshList[GEO_QUAD] = MeshBuilder::GenerateQuad("quad", white);
-	meshList[GEO_CUBE] = MeshBuilder::GenerateCube("cube", white);
-	meshList[GEO_CIRCLE] = MeshBuilder::GenerateCircle("circle", white, 36);
-	meshList[GEO_RING] = MeshBuilder::GenerateRing("ring", white, 0.5, 36);
-	meshList[GEO_TORUS] = MeshBuilder::GenerateTorus("torus", white, 1, 0.5, 20, 20);
-	meshList[GEO_CYLINDER] = MeshBuilder::GenerateCylinder("cylinder", white, 20);
-	meshList[GEO_CONE] = MeshBuilder::GenerateCone("cone", white, 20);
-	meshList[GEO_HEMISPHERE] = MeshBuilder::GenerateHemisphere("hemisphere", white, 20, 20);
+	meshList[GEO_QUAD] = MeshBuilder::GenerateQuad("quad", Color(1,1,1));
 
 	//Skybox
 	//Using the lower res skybox image
@@ -129,29 +91,9 @@ void SP2_Scene::Init()
 
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//calibri.tga");
-
-	meshList[GEO_SNIPER] = MeshBuilder::GenerateOBJ("test", "OBJ//Sniper.obj");
-	meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Sniper.tga");
-
-	//meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
-	//meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
-
-	//meshList[GEO_PLAYERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//PlayerShip.obj");
-	//meshList[GEO_PLAYERSHIP]->textureID = LoadTGA("Image//Tex_PlayerShip.tga");
-
-	//meshList[GEO_MOTHERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//Mothership.obj");
-	//meshList[GEO_MOTHERSHIP]->textureID = LoadTGA("Image//Tex_Mothership.tga");
-
-	//meshList[GEO_DRONE] = MeshBuilder::GenerateOBJ("test", "OBJ//Drone.obj");
-	//meshList[GEO_DRONE]->textureID = LoadTGA("Image//Tex_Drone.tga");
-
-	//meshList[GEO_ROBOT1] = MeshBuilder::GenerateOBJ("test", "OBJ//Robot1.obj");
-	////meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Robot1.tga");
-
-	initBounds();
 }
 
-void SP2_Scene::RenderText(Mesh* mesh, std::string text, Color color)
+void Particle::RenderText(Mesh* mesh, std::string text, Color color)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
 		return;
@@ -179,7 +121,7 @@ void SP2_Scene::RenderText(Mesh* mesh, std::string text, Color color)
 
 }
 
-void SP2_Scene::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
+void Particle::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
 		return;
@@ -223,34 +165,7 @@ void SP2_Scene::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, fl
 	glEnable(GL_DEPTH_TEST);
 }
 
-void SP2_Scene::RenderSniperInHand(Mesh* mesh, float size, float x, float y)
-{
-	glDisable(GL_DEPTH_TEST);
-	//Add these code just after glDisable(GL_DEPTH_TEST);
-	Mtx44 ortho;
-	ortho.SetToOrtho(0, 170, 0, 90, -70, 70); //size of screen UI
-	projectionStack.PushMatrix();
-	projectionStack.LoadMatrix(ortho);
-	viewStack.PushMatrix();
-	viewStack.LoadIdentity(); //No need camera for ortho mode
-	modelStack.PushMatrix();
-	modelStack.LoadIdentity(); //Reset modelStack
-
-	modelStack.Translate(145, 5, 0);
-	modelStack.Rotate(200, 0, 1, 0);
-	modelStack.Scale(18, 18, 18);
-	//RenderMesh(meshList[GEO_AXES], false);
-
-	RenderMesh(meshList[GEO_SNIPER], true);
-
-	projectionStack.PopMatrix();
-	viewStack.PopMatrix();
-	modelStack.PopMatrix();
-
-	glEnable(GL_DEPTH_TEST);
-}
-
-void SP2_Scene::RenderMesh(Mesh *mesh, bool enableLight)
+void Particle::RenderMesh(Mesh *mesh, bool enableLight)
 {
 	Mtx44 MVP, modelView, modelView_inverse_transpose;
 	MVP = projectionStack.Top() * viewStack.Top() * modelStack.Top();
@@ -293,7 +208,7 @@ void SP2_Scene::RenderMesh(Mesh *mesh, bool enableLight)
 
 }
 
-void SP2_Scene::initLights()
+void Particle::initLights()
 {
 	//Light 0 - Sun
 	m_parameters[U_LIGHTENABLED] = glGetUniformLocation(m_programID, "lightEnabled");
@@ -339,53 +254,14 @@ void SP2_Scene::initLights()
 	glUniform1f(m_parameters[U_LIGHT0_EXPONENT], light[0].exponent);
 }
 
-void SP2_Scene::initBounds()
+void Particle::initBounds()
 {
-	
+
 }
 
-void SP2_Scene::Update(double dt)
+void Particle::Update(double dt)
 {
 	camera.Update(dt);
-	constRotation += (float)(10 * dt);
-	constTranslation += (float)(10 * dt);
-	//Lerping Rotation
-	if ((rLimiter == true))
-	{
-		tweenVal += (float)(50 * dt);
-	}
-	else if ((rLimiter == false))
-	{
-		tweenVal -= (float)(50 * dt);
-	}
-	if (tweenVal >= rotationalLimit)
-	{
-		rLimiter = false;
-	}
-	else if (tweenVal <= -rotationalLimit + (180 - rotationalLimit))
-	{
-		rLimiter = true;
-	}
-	//End
-
-	//Wrapping Translation
-	if (translateX >= translationLimit)
-	{
-		translateX = -40;
-	}
-	else if (translateX <= -translationLimit)
-	{
-		translateX = 40;
-	}
-	translateX += (float)(10 * dt /* EXTRA */ * 2);
-	//End
-
-	//Resetting Scaling
-	if (scaleAll >= scalingLimit)
-	{
-		scaleAll = 5;
-	}
-	scaleAll += (float)(2 * dt);
 	if (Application::IsKeyPressed('1'))
 	{
 		glEnable(GL_CULL_FACE);
@@ -404,14 +280,9 @@ void SP2_Scene::Update(double dt)
 	}
 
 	framesPerSecond = 1 / dt;
-
-	TownLightPosition.y += tweenVal / 15000;
-	light[1].position.Set(TownLightPosition.x, TownLightPosition.y, TownLightPosition.z);
-	RoomLightPosition.y += tweenVal / 150000;
-	light[2].position.Set(RoomLightPosition.x, RoomLightPosition.y, RoomLightPosition.z);
 }
 
-void SP2_Scene::RenderSkybox(Vector3 Position)
+void Particle::RenderSkybox(Vector3 Position)
 {
 	float scaleSB = 2500;
 	float transSB = scaleSB / 2 - scaleSB / 1250;
@@ -467,7 +338,7 @@ void SP2_Scene::RenderSkybox(Vector3 Position)
 	modelStack.PopMatrix();
 }
 
-void SP2_Scene::Render(double dt)
+void Particle::Render(double dt)
 {
 	// Render VBO here
 	// Clear color buffer every frame
@@ -519,14 +390,6 @@ void SP2_Scene::Render(double dt)
 		glUniform3fv(m_parameters[U_LIGHT1_POSITION], 1, &lightposition_cameraspace.x);
 	}
 
-	if (lightOff == false)
-	{
-		modelStack.PushMatrix();
-		modelStack.Translate(light[0].position.x, light[0].position.y, light[0].position.z);
-		//Hide the lightball
-		//RenderMesh(meshList[GEO_LIGHTBALL], false);
-		modelStack.PopMatrix();
-	}
 	if (skyboxID == 0)
 	{
 		RenderSkybox(camera.getCameraPosition());
@@ -535,21 +398,10 @@ void SP2_Scene::Render(double dt)
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_AXES], false);
 	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(0,2,5);
-	modelStack.Scale(0.8, 0.8, 0.8);
-	RenderMesh(meshList[GEO_SNIPER], true);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	RenderSniperInHand(meshList[GEO_SNIPER], 5, 1, 1);
-	modelStack.PopMatrix();
 }
 
-void SP2_Scene::Exit()
+void Particle::Exit()
 {
-	engine->drop();
 	// Cleanup VBO here
 	glDeleteVertexArrays(1, &m_vertexArrayID);
 	glDeleteProgram(m_programID);

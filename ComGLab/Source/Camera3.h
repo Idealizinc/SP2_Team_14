@@ -3,10 +3,10 @@
 
 #include "Camera.h"
 #include "Boundary.h"
+#include "SharedData.h"
 #include <vector>
 
 extern int S_Width, S_Height;
-extern bool plankBoundActive, doorBoundActive;
 
 class Camera3 : public Camera
 {
