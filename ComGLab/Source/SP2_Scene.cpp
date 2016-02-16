@@ -1,4 +1,4 @@
-#include "Assignment3Scene.h"
+#include "SP2_Scene.h"
 #include "GL\glew.h"
 
 #include "shader.hpp"
@@ -18,15 +18,15 @@ const std::string SoundName[] = {
 
 ISound* Song;
 
-Assignment3Scene::Assignment3Scene()
+SP2_Scene::SP2_Scene()
 {
 }
 
-Assignment3Scene::~Assignment3Scene()
+SP2_Scene::~SP2_Scene()
 {
 }
 
-void Assignment3Scene::Init()
+void SP2_Scene::Init()
 {
 	engine = createIrrKlangDevice();
 	engine->addSoundSourceFromFile(SoundName[0].c_str());
@@ -139,7 +139,7 @@ void Assignment3Scene::Init()
 	initBounds();
 }
 
-void Assignment3Scene::RenderText(Mesh* mesh, std::string text, Color color)
+void SP2_Scene::RenderText(Mesh* mesh, std::string text, Color color)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
 		return;
@@ -167,7 +167,7 @@ void Assignment3Scene::RenderText(Mesh* mesh, std::string text, Color color)
 
 }
 
-void Assignment3Scene::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
+void SP2_Scene::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
 		return;
@@ -212,7 +212,7 @@ void Assignment3Scene::RenderTextOnScreen(Mesh* mesh, std::string text, Color co
 }
 
 
-void Assignment3Scene::RenderMesh(Mesh *mesh, bool enableLight)
+void SP2_Scene::RenderMesh(Mesh *mesh, bool enableLight)
 {
 	Mtx44 MVP, modelView, modelView_inverse_transpose;
 	MVP = projectionStack.Top() * viewStack.Top() * modelStack.Top();
@@ -255,7 +255,7 @@ void Assignment3Scene::RenderMesh(Mesh *mesh, bool enableLight)
 
 }
 
-void Assignment3Scene::initLights()
+void SP2_Scene::initLights()
 {
 	//Light 0 - Sun
 	m_parameters[U_LIGHTENABLED] = glGetUniformLocation(m_programID, "lightEnabled");
@@ -375,7 +375,7 @@ void Assignment3Scene::initLights()
 	//glUniform1f(m_parameters[U_LIGHT2_EXPONENT], light[2].exponent);*/
 }
 
-void Assignment3Scene::initBounds()
+void SP2_Scene::initBounds()
 {
 	/*PlankIxB.set(-5.0f, 5.0f, -1.0f, 8.0f);
 	PlankIxB.type = 1;
@@ -387,7 +387,7 @@ void Assignment3Scene::initBounds()
 	LampIxB.type = 1;*/
 }
 
-void Assignment3Scene::Update(double dt)
+void SP2_Scene::Update(double dt)
 {
 	camera.Update(dt);
 	plankBoundActive = plankPlaced;
@@ -577,7 +577,7 @@ void Assignment3Scene::Update(double dt)
 	}*/
 }
 
-void Assignment3Scene::RenderSkybox(Vector3 Position)
+void SP2_Scene::RenderSkybox(Vector3 Position)
 {
 	float scaleSB = 2500;
 	float transSB = scaleSB / 2 - scaleSB / 1250;
@@ -633,7 +633,7 @@ void Assignment3Scene::RenderSkybox(Vector3 Position)
 	modelStack.PopMatrix();
 }
 
-void Assignment3Scene::Render()
+void SP2_Scene::Render()
 {
 	// Render VBO here
 	// Clear color buffer every frame
@@ -709,7 +709,7 @@ void Assignment3Scene::Render()
 	modelStack.PopMatrix();
 }
 
-void Assignment3Scene::Exit()
+void SP2_Scene::Exit()
 {
 	engine->drop();
 	// Cleanup VBO here

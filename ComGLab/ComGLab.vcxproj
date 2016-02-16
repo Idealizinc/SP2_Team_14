@@ -96,7 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Application.cpp" />
-    <ClCompile Include="Source\Assignment3Scene.cpp" />
+    <ClCompile Include="Source\SP2_Scene.cpp" />
     <ClCompile Include="Source\SoundSystem.cpp" />
     <ClCompile Include="Source\Boundary.cpp" />
     <ClCompile Include="Source\Camera.cpp" />
@@ -114,7 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Application.h" />
-    <ClInclude Include="Source\Assignment3Scene.h" />
+    <ClInclude Include="Source\SP2_Scene.h" />
     <ClInclude Include="Source\SoundSystem.h" />
     <ClInclude Include="Source\Boundary.h" />
     <ClInclude Include="Source\Camera.h" />

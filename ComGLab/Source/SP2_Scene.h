@@ -1,5 +1,5 @@
-#ifndef Assignment3Scene_H
-#define Assignment3Scene_H
+#ifndef SP2_SCENE_H
+#define SP2_SCENE_H
 
 #include "Scene.h"
 #include "Light.h"
@@ -23,7 +23,7 @@ using namespace irrklang;
 extern int S_Width, S_Height;
 
 
-class Assignment3Scene : public Scene
+class SP2_Scene : public Scene
 {
 	enum GEOMETRY_TYPE
 	{
@@ -168,8 +168,8 @@ class Assignment3Scene : public Scene
 	};
 
 public:
-	Assignment3Scene();
-	~Assignment3Scene();
+	SP2_Scene();
+	~SP2_Scene();
 
 	Light light[3];
 	void RenderMesh(Mesh *mesh, bool enableLight);
@@ -238,7 +238,7 @@ private:
 	bool canInteractWithKyogre = false;
 	bool interactedWithKyogre = false;
 	Boundary KyogreIxB;
-	void Assignment3Scene::initBounds();
+	void SP2_Scene::initBounds();
 	float framesPerSecond;
 	Boundary DoorIxB;
 	bool canOpenDoor = false;
