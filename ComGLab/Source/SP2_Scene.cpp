@@ -86,6 +86,9 @@ void SP2_Scene::Init()
 	wave4robots = false;
 	wave5robots = false;
 	boss = false;
+	weaponSelect = 0;
+	sniper = true;
+	rifle = false;
 
 	// Enable depth Test
 	glEnable(GL_DEPTH_TEST);
@@ -256,35 +259,35 @@ void SP2_Scene::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, fl
 	glEnable(GL_DEPTH_TEST);
 }
 
-void SP2_Scene::RenderImageOnScreen(GLuint texture, float Xsize, float Ysize, float Xpos, float Ypos)
-{
-	if (!texture) //Proper error check
-		return;
-	Mesh* mesh = meshList[GEO_QUAD];
-	mesh->textureID = texture;
-	glDisable(GL_DEPTH_TEST);
-	//Add these code just after glDisable(GL_DEPTH_TEST);
-	Mtx44 ortho;
-	ortho.SetToOrtho(0, 160, 0, 90, -10, 10); //size of screen UI
-	projectionStack.PushMatrix();
-	projectionStack.LoadMatrix(ortho);
-	viewStack.PushMatrix();
-	viewStack.LoadIdentity(); //No need camera for ortho mode
-	modelStack.PushMatrix();
-	modelStack.LoadIdentity(); //Reset modelStack
-	modelStack.Translate(Xpos, Ypos, 0);
-	modelStack.Rotate(90, 1, 0, 0);
-	modelStack.Scale(Xsize, Ysize, 1);
-	RenderMesh(meshList[GEO_AXES], false);
-	RenderMesh(mesh, false);
-	projectionStack.PopMatrix();
-	viewStack.PopMatrix();
-	modelStack.PopMatrix();
-	glEnable(GL_DEPTH_TEST);
-}
+//void SP2_Scene::RenderImageOnScreen(GLuint texture, float Xsize, float Ysize, float Xpos, float Ypos)
+//{
+//	if (!texture) //Proper error check
+//		return;
+//	Mesh* mesh = meshList[GEO_QUAD];
+//	mesh->textureID = texture;
+//	glDisable(GL_DEPTH_TEST);
+//	//Add these code just after glDisable(GL_DEPTH_TEST);
+//	Mtx44 ortho;
+//	ortho.SetToOrtho(0, 160, 0, 90, -10, 10); //size of screen UI
+//	projectionStack.PushMatrix();
+//	projectionStack.LoadMatrix(ortho);
+//	viewStack.PushMatrix();
+//	viewStack.LoadIdentity(); //No need camera for ortho mode
+//	modelStack.PushMatrix();
+//	modelStack.LoadIdentity(); //Reset modelStack
+//	modelStack.Translate(Xpos, Ypos, 0);
+//	modelStack.Rotate(90, 1, 0, 0);
+//	modelStack.Scale(Xsize, Ysize, 1);
+//	RenderMesh(meshList[GEO_AXES], false);
+//	RenderMesh(mesh, false);
+//	projectionStack.PopMatrix();
+//	viewStack.PopMatrix();
+//	modelStack.PopMatrix();
+//	glEnable(GL_DEPTH_TEST);
+//}
 
 
-void SP2_Scene::RenderSniperInHand(Mesh* mesh, float size, float x, float y)
+void SP2_Scene::RenderGun(float size, float x, float y)
 {
 	Mtx44 ortho;
 	ortho.SetToOrtho(0, 170, 0, 90, -70, 70); //size of screen UI
@@ -298,11 +301,41 @@ void SP2_Scene::RenderSniperInHand(Mesh* mesh, float size, float x, float y)
 	modelStack.Rotate(200, 0, 1, 0);
 	modelStack.Rotate(5, -1, 0, 0);
 	modelStack.Scale(20, 20, 20);
-	RenderMesh(meshList[GEO_SNIPER], true);
+	
+	if (sniper == true)
+	{
+		RenderMesh(meshList[GEO_SNIPER], true);
+	}
+
+	if (rifle == true)
+	{
+		RenderMesh(meshList[GEO_RIFLE], true);
+	}
+
 	projectionStack.PopMatrix();
 	viewStack.PopMatrix();
 	modelStack.PopMatrix();
 }
+
+//void SP2_Scene::RenderRifleInHand(Mesh* mesh, float size, float x, float y)
+//{
+//	Mtx44 ortho;
+//	ortho.SetToOrtho(0, 170, 0, 90, -70, 70); //size of screen UI
+//	projectionStack.PushMatrix();
+//	projectionStack.LoadMatrix(ortho);
+//	viewStack.PushMatrix();
+//	viewStack.LoadIdentity(); //No need camera for ortho mode
+//	modelStack.PushMatrix();
+//	modelStack.LoadIdentity(); //Reset modelStack
+//	modelStack.Translate(140, 5, -10);
+//	modelStack.Rotate(200, 0, 1, 0);
+//	modelStack.Rotate(5, -1, 0, 0);
+//	modelStack.Scale(20, 20, 20);
+//	RenderMesh(meshList[GEO_RIFLE], true);
+//	projectionStack.PopMatrix();
+//	viewStack.PopMatrix();
+//	modelStack.PopMatrix();
+//}
 
 void SP2_Scene::RenderMesh(Mesh *mesh, bool enableLight)
 {
@@ -457,6 +490,27 @@ void SP2_Scene::Update(double dt)
 		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	}
 
+	//Weapon Select
+	if (Application::IsKeyPressed(VK_NUMPAD1))
+	{
+		weaponSelect = 1;
+	}
+	if (Application::IsKeyPressed(VK_NUMPAD2))
+	{
+		weaponSelect = 2;
+	}
+	if (weaponSelect == 1)
+	{
+		rifle = false;
+		sniper = true;
+	}
+	if (weaponSelect == 2)
+	{
+		sniper = false;
+		rifle = true;
+	}
+
+	//Miscellaneous
 	framesPerSecond = 1 / dt;
 
 	TownLightPosition.y += tweenVal / 15000;
@@ -624,16 +678,23 @@ void SP2_Scene::Render(double dt)
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(0,2,5);
+	modelStack.Translate(0, 2, 5);
 	modelStack.Scale(0.8, 0.8, 0.8);
 	RenderMesh(meshList[GEO_SNIPER], true);
 	modelStack.PopMatrix();
 
-	RenderImageOnScreen(SB_Day_left, 10, 10, 1, 1);
+	//RenderImageOnScreen(SB_Day_left, 10, 10, 1, 1);
 
 	modelStack.PushMatrix();
-	RenderSniperInHand(meshList[GEO_SNIPER], 5, 1, 1);
+	RenderGun(5, 1, 1);
 	modelStack.PopMatrix();
+
+	//if (rifle == true)
+	//{
+	//	modelStack.PushMatrix();
+	//	RenderRifleInHand(meshList[GEO_RIFLE], 5, 1, 1);
+	//	modelStack.PopMatrix();
+	//}
 
 	std::stringstream fpsText;
 	fpsText << std::fixed << std::setprecision(1) << "FPS = " << framesPerSecond;
