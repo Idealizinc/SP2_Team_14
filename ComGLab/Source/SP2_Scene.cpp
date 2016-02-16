@@ -255,7 +255,6 @@ void SP2_Scene::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, fl
 	projectionStack.PopMatrix();
 	viewStack.PopMatrix();
 	modelStack.PopMatrix();
-
 	glEnable(GL_DEPTH_TEST);
 }
 
@@ -646,15 +645,16 @@ void SP2_Scene::Render(double dt)
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(0,2,5);
+	modelStack.Translate(0, 2, 5);
 	modelStack.Scale(0.8, 0.8, 0.8);
 	RenderMesh(meshList[GEO_SNIPER], true);
 	modelStack.PopMatrix();
 
-	RenderImageOnScreen(SB_Day_left, 10, 10, 15, 15);
+	RenderImageOnScreen(SB_Day_top, 10, 10, 15, 15);
 
 	modelStack.PushMatrix();
 	RenderWeaponInHand(weaponValue, 5, 1, 1);
+	modelStack.PushMatrix();
 	modelStack.PopMatrix();
 
 	std::stringstream fpsText;

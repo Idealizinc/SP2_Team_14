@@ -147,6 +147,8 @@ public:
 	float constTranslation;
 	float DoorRot;
 	bool canUseDoor = true;
+	int weaponSelect;
+	bool sniper, rifle;
 
 	unsigned short skyboxID = 0;
 
@@ -174,8 +176,8 @@ private:
 	void readtextfile();
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
-	void SP2_Scene::RenderImageOnScreen(GLuint texture, float Xsize, float Ysize, float Xpos, float Ypos);
 	void RenderWeaponInHand(unsigned short wepVal, float size, float x, float y);
+	void RenderImageOnScreen(GLuint texture, float Xsize, float Ysize, float Xpos, float Ypos);
 
 	//Interaction Values
 	bool InteractionBoundsCheck(Vector3 CameraPosition, int value);
