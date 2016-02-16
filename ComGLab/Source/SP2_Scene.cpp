@@ -6,7 +6,6 @@
 #include "Application.h"
 #include "MeshBuilder.h"
 #include "Utility.h"
-#include "removeMonospace.h"
 #include <fstream>
 #include <iostream>
 using std::cout;
@@ -636,13 +635,13 @@ void SP2_Scene::Render(double dt)
 	RenderSniperInHand(meshList[GEO_SNIPER], 5, 1, 1);
 	modelStack.PopMatrix();
 
-	RenderTextOnScreen(meshList[GEO_TEXT], "X:" + std::to_string(camera.position.x), Color(1, 0, 1), 3, 2, 1);
+	std::stringstream fpsText;
+	fpsText << std::fixed << std::setprecision(1) << "FPS = " << framesPerSecond;
+	RenderTextOnScreen(meshList[GEO_TEXT], fpsText.str(), Color(1, 1, 1), 2.5, 2, 3);
 
-	RenderTextOnScreen(meshList[GEO_TEXT], "X:" + std::to_string(camera.position.x), Color(1, 0, 1), 3, 2, 1);
-
-	RenderTextOnScreen(meshList[GEO_TEXT], "Z:" + std::to_string(camera.position.z), Color(1, 0, 1), 3, 14, 1);
-
-	RenderTextOnScreen(meshList[GEO_TEXT], "FPS: " + std::to_string(fps), Color(1, 0.5, 0), 3, 2, 2);
+	std::stringstream coordText;
+	coordText << std::fixed << std::setprecision(1) << "Player Location = (" << camera.getCameraPosition().x << ", " << camera.getCameraPosition().z << ", " << camera.getCameraPosition().z << ")!";
+	RenderTextOnScreen(meshList[GEO_TEXT], coordText.str(), Color(1, 1, 1), 2.5, 2, 2);
 
 	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(hp), Color(0, 0.5, 0), 3, 2, 29);
 

@@ -10,7 +10,6 @@
 #include "LoadTGA.h"
 #include <iomanip>
 #include <string>
-#include "removeMonospace.h"
 #include <vector>
 using std::vector;
 
