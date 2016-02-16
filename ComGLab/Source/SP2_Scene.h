@@ -128,7 +128,7 @@ public:
 
 	virtual void Init();
 	virtual void Update(double dt);
-	virtual void Render();
+	virtual void Render(double dt);
 	virtual void Exit();
 	float tweenVal;
 	float constRotation;
@@ -140,7 +140,7 @@ public:
 	bool rLimiter;
 	bool toggleLimiters;
 	bool limitersON;
-	float kyogreTranslation;
+	float constTranslation;
 	float DoorRot;
 	bool canUseDoor = true;
 
@@ -162,25 +162,13 @@ private:
 	unsigned m_programID;
 	unsigned m_parameters[U_TOTAL];
 	Mesh* meshList[NUM_GEOMETRY];
-	void RenderText(Mesh* mesh, std::string text, Color color);
-	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
+	
 	void initLights();
 
-
 	//Render Calls
-	void RenderRails();
-	void RenderTownBase();
-	void RenderBridges();
-	void RenderTrees();
-	void RenderInteractiveParts();
-	void RenderTownHouses();
-	void RenderText();
-
-	void getTreeCoords();
-	vector<float> treeCoords;
-
-	void initKyogreMeshes();
-	void renderKyogre(float x, float y, float z);
+	void RenderText(Mesh* mesh, std::string text, Color color);
+	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
+	void RenderImageOnScreen(Mesh* mesh, Color color, float Xsize, float Ysize, float Xpos, float Ypos);
 
 	//Interaction Values
 	bool InteractionBoundsCheck(Vector3 CameraPosition, int value);

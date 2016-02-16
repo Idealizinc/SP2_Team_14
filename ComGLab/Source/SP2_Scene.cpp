@@ -7,9 +7,6 @@
 #include "MeshBuilder.h"
 #include "Utility.h"
 
-bool plankBoundActive;
-bool doorBoundActive;
-
 ISoundEngine* engine;
 
 const std::string SoundName[] = {
@@ -45,7 +42,7 @@ void SP2_Scene::Init()
 	//Initiallising Variables For Translate, Rotate, Scale
 	tweenVal = 0;
 	constRotation = 0;
-	kyogreTranslation = 0;
+	constTranslation = 0;
 	DoorRot = 0;
 	translateX = 5;
 	scaleAll = 1;
@@ -211,6 +208,50 @@ void SP2_Scene::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, fl
 	glEnable(GL_DEPTH_TEST);
 }
 
+void SP2_Scene::RenderImageOnScreen(Mesh* mesh, Color color, float Xsize, float Ysize, float Xpos, float Ypos)
+{
+	if (!mesh || mesh->textureID <= 0) //Proper error check
+		return;
+
+	glDisable(GL_DEPTH_TEST);
+	//Add these code just after glDisable(GL_DEPTH_TEST);
+	Mtx44 ortho;
+	ortho.SetToOrtho(0, 160, 0, 90, -10, 10); //size of screen UI
+	projectionStack.PushMatrix();
+	projectionStack.LoadMatrix(ortho);
+	viewStack.PushMatrix();
+	viewStack.LoadIdentity(); //No need camera for ortho mode
+	modelStack.PushMatrix();
+	modelStack.LoadIdentity(); //Reset modelStack
+	modelStack.Scale(Xsize, Ysize, 1);
+	modelStack.Translate(Xpos, Ypos, 0);
+
+	//glUniform1i(m_parameters[U_TEXT_ENABLED], 1);
+	//glUniform3fv(m_parameters[U_TEXT_COLOR], 1, &color.r);
+	glUniform1i(m_parameters[U_LIGHTENABLED], 0);
+	//glUniform1i(m_parameters[U_COLOR_TEXTURE_ENABLED], 1);
+	glActiveTexture(GL_TEXTURE0);
+	glBindTexture(GL_TEXTURE_2D, mesh->textureID);
+	glUniform1i(m_parameters[U_COLOR_TEXTURE], 0);
+	//for (unsigned i = 0; i < text.length(); ++i)
+	//{
+	//	Mtx44 characterSpacing;
+	//	characterSpacing.SetToTranslation(i * 0.5f, 0, 0); //1.0f is the spacing of each character, you may change this value
+	//	Mtx44 MVP = projectionStack.Top() * viewStack.Top() * modelStack.Top() * characterSpacing;
+	//	glUniformMatrix4fv(m_parameters[U_MVP], 1, GL_FALSE, &MVP.a[0]);
+
+	//	mesh->Render((unsigned)text[i] * 6, 6);
+	//}
+	mesh->Render();
+	glBindTexture(GL_TEXTURE_2D, 0);
+	glUniform1i(m_parameters[U_TEXT_ENABLED], 0);
+	//Add these code just before glEnable(GL_DEPTH_TEST);
+	projectionStack.PopMatrix();
+	viewStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	glEnable(GL_DEPTH_TEST);
+}
 
 void SP2_Scene::RenderMesh(Mesh *mesh, bool enableLight)
 {
@@ -299,128 +340,18 @@ void SP2_Scene::initLights()
 	glUniform1f(m_parameters[U_LIGHT0_COSCUTOFF], light[0].cosCutoff);
 	glUniform1f(m_parameters[U_LIGHT0_COSINNER], light[0].cosInner);
 	glUniform1f(m_parameters[U_LIGHT0_EXPONENT], light[0].exponent);
-
-	/*////Light 1 - Town Light
-	//m_parameters[U_LIGHT1_POSITION] = glGetUniformLocation(m_programID, "lights[1].position_cameraspace");
-	//m_parameters[U_LIGHT1_COLOR] = glGetUniformLocation(m_programID, "lights[1].color");
-	//m_parameters[U_LIGHT1_POWER] = glGetUniformLocation(m_programID, "lights[1].power");
-	//m_parameters[U_LIGHT1_KC] = glGetUniformLocation(m_programID, "lights[1].kC");
-	//m_parameters[U_LIGHT1_KL] = glGetUniformLocation(m_programID, "lights[1].kL");
-	//m_parameters[U_LIGHT1_KQ] = glGetUniformLocation(m_programID, "lights[1].kQ");
-	//m_parameters[U_LIGHT1_TYPE] = glGetUniformLocation(m_programID, "lights[1].type");
-	//m_parameters[U_LIGHT1_SPOTDIRECTION] = glGetUniformLocation(m_programID, "lights[1].spotDirection");
-	//m_parameters[U_LIGHT1_COSCUTOFF] = glGetUniformLocation(m_programID, "lights[1].cosCutoff");
-	//m_parameters[U_LIGHT1_COSINNER] = glGetUniformLocation(m_programID, "lights[1].cosInner");
-	//m_parameters[U_LIGHT1_EXPONENT] = glGetUniformLocation(m_programID, "lights[1].exponent");
-
-	//TownLightPosition.Set(0, 3, -60);
-
-	//light[1].type = Light::LIGHT_SPOT;
-	//light[1].position.Set(0, 0, 0);
-	//light[1].color.Set(0,0, 0);
-	//light[1].power = 0;
-	//light[1].kC = 1.f;
-	//light[1].kL = 0.01f;
-	//light[1].kQ = 0.001f;
-	//light[1].cosCutoff = cos(Math::DegreeToRadian(180));
-	//light[1].cosInner = cos(Math::DegreeToRadian(30));
-	//light[1].exponent = 3.0f;
-	//light[1].spotDirection.Set(0.0f, 1.0f, 0.0f);
-
-	//glUniform1i(m_parameters[U_LIGHT1_TYPE], light[1].type);
-	//glUniform3fv(m_parameters[U_LIGHT1_COLOR], 1, &light[1].color.r);
-	//glUniform1f(m_parameters[U_LIGHT1_POWER], light[1].power);
-	//glUniform1f(m_parameters[U_LIGHT1_KC], light[1].kC);
-	//glUniform1f(m_parameters[U_LIGHT1_KL], light[1].kL);
-	//glUniform1f(m_parameters[U_LIGHT1_KQ], light[1].kQ);
-	//glUniform1f(m_parameters[U_LIGHT1_COSCUTOFF], light[1].cosCutoff);
-	//glUniform1f(m_parameters[U_LIGHT1_COSINNER], light[1].cosInner);
-	//glUniform1f(m_parameters[U_LIGHT1_EXPONENT], light[1].exponent);
-
-	////Light 3 - Room Light
-	//m_parameters[U_LIGHT2_POSITION] = glGetUniformLocation(m_programID, "lights[2].position_cameraspace");
-	//m_parameters[U_LIGHT2_COLOR] = glGetUniformLocation(m_programID, "lights[2].color");
-	//m_parameters[U_LIGHT2_POWER] = glGetUniformLocation(m_programID, "lights[2].power");
-	//m_parameters[U_LIGHT2_KC] = glGetUniformLocation(m_programID, "lights[2].kC");
-	//m_parameters[U_LIGHT2_KL] = glGetUniformLocation(m_programID, "lights[2].kL");
-	//m_parameters[U_LIGHT2_KQ] = glGetUniformLocation(m_programID, "lights[2].kQ");
-	//m_parameters[U_LIGHT2_TYPE] = glGetUniformLocation(m_programID, "lights[2].type");
-	//m_parameters[U_LIGHT2_SPOTDIRECTION] = glGetUniformLocation(m_programID, "lights[2].spotDirection");
-	//m_parameters[U_LIGHT2_COSCUTOFF] = glGetUniformLocation(m_programID, "lights[2].cosCutoff");
-	//m_parameters[U_LIGHT2_COSINNER] = glGetUniformLocation(m_programID, "lights[2].cosInner");
-	//m_parameters[U_LIGHT2_EXPONENT] = glGetUniformLocation(m_programID, "lights[2].exponent");
-
-	//RoomLightPosition.Set(-4.8, 2.75, -133.8);
-
-	//light[2].type = Light::LIGHT_POINT;
-	//light[2].position.Set(RoomLightPosition.x, RoomLightPosition.y, RoomLightPosition.z);
-	//light[2].color.Set(1, 0.95, 1);
-	//light[2].power = 1;
-	//light[2].kC = 1.f;
-	//light[2].kL = 0.01f;
-	//light[2].kQ = 0.001f;
-	//light[2].cosCutoff = cos(Math::DegreeToRadian(45));
-	//light[2].cosInner = cos(Math::DegreeToRadian(30));
-	//light[2].exponent = 3.0f;
-	//light[2].spotDirection.Set(0.0f, 1.0f, 0.0f);
-
-	//glUniform1i(m_parameters[U_LIGHT2_TYPE], light[2].type);
-	//glUniform3fv(m_parameters[U_LIGHT2_COLOR], 1, &light[2].color.r);
-	//glUniform1f(m_parameters[U_LIGHT2_POWER], light[2].power);
-	//glUniform1f(m_parameters[U_LIGHT2_KC], light[2].kC);
-	//glUniform1f(m_parameters[U_LIGHT2_KL], light[2].kL);
-	//glUniform1f(m_parameters[U_LIGHT2_KQ], light[2].kQ);
-	//glUniform1f(m_parameters[U_LIGHT2_COSCUTOFF], light[2].cosCutoff);
-	//glUniform1f(m_parameters[U_LIGHT2_COSINNER], light[2].cosInner);
-	//glUniform1f(m_parameters[U_LIGHT2_EXPONENT], light[2].exponent);*/
 }
 
 void SP2_Scene::initBounds()
 {
-	/*PlankIxB.set(-5.0f, 5.0f, -1.0f, 8.0f);
-	PlankIxB.type = 1;
-	KyogreIxB.set(63.0f, 72.0f, -73.0f, -64.0f);
-	KyogreIxB.type = 1;
-	DoorIxB.set(1, 5, -125, -116);
-	DoorIxB.type = 1;
-	LampIxB.set(-8, 1, -136.125, -126);
-	LampIxB.type = 1;*/
+	
 }
 
 void SP2_Scene::Update(double dt)
 {
 	camera.Update(dt);
-	plankBoundActive = plankPlaced;
-	doorBoundActive = DoorOpened;
-	////Updating bound data
-	//InteractionBoundsCheck(camera.getCameraPosition(), 1);
-	//canPlacePlank = PlankIxB.isWithin;
-	//InteractionBoundsCheck(camera.getCameraPosition(), 2);
-	//canInteractWithKyogre = KyogreIxB.isWithin;
-	//InteractionBoundsCheck(camera.getCameraPosition(), 3);
-	//canUseLamp = LampIxB.isWithin;
-	//InteractionBoundsCheck(camera.getCameraPosition(), 4);
-	//canOpenDoor = DoorIxB.isWithin;
-	////
-	//if (interactedWithKyogre && kyogreTranslation < 30)
-	//{
-	//	kyogreTranslation += (float)(10 * dt);
-	//}
-	//if (DoorOpened && DoorRot <= 120)
-	//{
-	//	canUseDoor = false;
-	//	DoorRot += (float)(120 * dt);
-	//}
-	//if (DoorOpened == false && DoorRot >= 0)
-	//{
-	//	canUseDoor = false;
-	//	DoorRot += (float)(-120 * dt);
-	//}
-	//if (DoorRot <= 0 || DoorRot >= 120)
-	//{
-	//	canUseDoor = true;
-	//}
 	constRotation += (float)(10 * dt);
+	constTranslation += (float)(10 * dt);
 	//Lerping Rotation
 	if ((rLimiter == true))
 	{
@@ -458,43 +389,6 @@ void SP2_Scene::Update(double dt)
 		scaleAll = 5;
 	}
 	scaleAll += (float)(2 * dt);
-	/*if (Application::IsKeyPressed(VK_SPACE) || Application::IsKeyPressed(VK_LBUTTON))
-	{
-		
-		if (canPlacePlank == true && plankPlaced == false)
-		{
-			plankPlaced = true;
-		}
-		if (canInteractWithKyogre == true && interactedWithKyogre == false)
-		{
-			interactedWithKyogre = true;
-		}
-		if (canOpenDoor == true && DoorOpened == false && canUseDoor == true)
-		{
-			DoorOpened = true;
-		}
-		else if (canOpenDoor == true && DoorOpened == true && canUseDoor == true)
-		{
-			DoorOpened = false;
-		}
-		if (canUseLamp == true && IsNight == false && LampActive == true)
-		{
-			LampActive = false;
-			IsNight = true;
-			timeCheck = 2;
-		}
-		else if (canUseLamp == true && IsNight == true && LampActive == true)
-		{
-			LampActive = false;
-			IsNight = false;
-			timeCheck = 2;
-		}
-	}*/
-	/*if (timeCheck <= 0)
-	{
-		LampActive = true;
-	}
-	else timeCheck -= dt;*/
 	if (Application::IsKeyPressed('1'))
 	{
 		glEnable(GL_CULL_FACE);
@@ -518,63 +412,6 @@ void SP2_Scene::Update(double dt)
 	light[1].position.Set(TownLightPosition.x, TownLightPosition.y, TownLightPosition.z);
 	RoomLightPosition.y += tweenVal / 150000;
 	light[2].position.Set(RoomLightPosition.x, RoomLightPosition.y, RoomLightPosition.z);
-
-	/*if (IsNight)
-	{
-		light[0].color.Set(0, 0, 0);
-		light[0].power = 0;
-		glUniform3fv(m_parameters[U_LIGHT0_COLOR], 1, &light[0].color.r);
-		glUniform1f(m_parameters[U_LIGHT0_POWER], light[0].power);
-		light[1].color.Set(0.6, 0.9, 0.9);
-		light[1].power = 1;
-		glUniform3fv(m_parameters[U_LIGHT1_COLOR], 1, &light[1].color.r);
-		glUniform1f(m_parameters[U_LIGHT1_POWER], light[1].power);
-		light[2].color.Set(0.6, 0.9, 0.9);
-		light[2].power = 1;
-		glUniform3fv(m_parameters[U_LIGHT2_COLOR], 1, &light[2].color.r);
-		glUniform1f(m_parameters[U_LIGHT2_POWER], light[2].power);
-
-		meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
-		meshList[GEO_FRONT]->textureID = SB_Nite_front;
-		meshList[GEO_BACK] = MeshBuilder::GenerateQuad("back", Color(1, 1, 1));
-		meshList[GEO_BACK]->textureID = SB_Nite_back;
-		meshList[GEO_TOP] = MeshBuilder::GenerateQuad("top", Color(1, 1, 1));
-		meshList[GEO_TOP]->textureID = SB_Nite_top;
-		meshList[GEO_BOTTOM] = MeshBuilder::GenerateQuad("bottom", Color(1, 1, 1));
-		meshList[GEO_BOTTOM]->textureID = SB_Nite_bottom;
-		meshList[GEO_LEFT] = MeshBuilder::GenerateQuad("left", Color(1, 1, 1));
-		meshList[GEO_LEFT]->textureID = SB_Nite_left;
-		meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1));
-		meshList[GEO_RIGHT]->textureID = SB_Nite_right;
-	}
-	else if (IsNight == false)
-	{
-		light[0].color.Set(1, 0.95, 1);
-		light[0].power = 1;
-		glUniform3fv(m_parameters[U_LIGHT0_COLOR], 1, &light[0].color.r);
-		glUniform1f(m_parameters[U_LIGHT0_POWER], light[0].power);
-		light[1].color.Set(0, 0, 0);
-		light[1].power = 0;
-		glUniform3fv(m_parameters[U_LIGHT1_COLOR], 1, &light[1].color.r);
-		glUniform1f(m_parameters[U_LIGHT1_POWER], light[1].power);
-		light[2].color.Set(0, 0, 0);
-		light[2].power = 0;
-		glUniform3fv(m_parameters[U_LIGHT2_COLOR], 1, &light[2].color.r);
-		glUniform1f(m_parameters[U_LIGHT2_POWER], light[2].power);
-
-		meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
-		meshList[GEO_FRONT]->textureID = SB_Day_front;
-		meshList[GEO_BACK] = MeshBuilder::GenerateQuad("back", Color(1, 1, 1));
-		meshList[GEO_BACK]->textureID = SB_Day_back;
-		meshList[GEO_TOP] = MeshBuilder::GenerateQuad("top", Color(1, 1, 1));
-		meshList[GEO_TOP]->textureID = SB_Day_top;
-		meshList[GEO_BOTTOM] = MeshBuilder::GenerateQuad("bottom", Color(1, 1, 1));
-		meshList[GEO_BOTTOM]->textureID = SB_Day_bottom;
-		meshList[GEO_LEFT] = MeshBuilder::GenerateQuad("left", Color(1, 1, 1));
-		meshList[GEO_LEFT]->textureID = SB_Day_left;
-		meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1));
-		meshList[GEO_RIGHT]->textureID = SB_Day_right;
-	}*/
 }
 
 void SP2_Scene::RenderSkybox(Vector3 Position)
@@ -633,7 +470,7 @@ void SP2_Scene::RenderSkybox(Vector3 Position)
 	modelStack.PopMatrix();
 }
 
-void SP2_Scene::Render()
+void SP2_Scene::Render(double dt)
 {
 	// Render VBO here
 	// Clear color buffer every frame
@@ -706,6 +543,10 @@ void SP2_Scene::Render()
 	modelStack.Translate(0,2,5);
 	modelStack.Scale(0.8, 0.8, 0.8);
 	RenderMesh(meshList[GEO_SNIPER], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	RenderImageOnScreen(meshList[GEO_TOP], Color(1,1,1), 1, 2, 2 ,2);
 	modelStack.PopMatrix();
 }
 
