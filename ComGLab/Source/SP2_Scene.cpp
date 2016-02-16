@@ -161,10 +161,13 @@ void SP2_Scene::Init()
 	meshList[GEO_RIGHT]->textureID = SB_Day_right;
 
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
-	meshList[GEO_TEXT]->textureID = LoadTGA("Image/courier.tga");
+	meshList[GEO_TEXT]->textureID = LoadTGA("Image/calibri.tga");
 
 	meshList[GEO_SNIPER] = MeshBuilder::GenerateOBJ("test", "OBJ//Sniper.obj");
 	meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Sniper.tga");
+
+	meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
+	meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
 
 	//meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	//meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
@@ -252,7 +255,6 @@ void SP2_Scene::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, fl
 	projectionStack.PopMatrix();
 	viewStack.PopMatrix();
 	modelStack.PopMatrix();
-
 	glEnable(GL_DEPTH_TEST);
 }
 
@@ -274,7 +276,7 @@ void SP2_Scene::RenderImageOnScreen(GLuint texture, float Xsize, float Ysize, fl
 	modelStack.LoadIdentity(); //Reset modelStack
 	modelStack.Translate(Xpos, Ypos, 0);
 	modelStack.Rotate(90, 1, 0, 0);
-	modelStack.Scale(Xsize, Ysize, 1);
+	modelStack.Scale(Xsize, 1, Ysize);
 	RenderMesh(meshList[GEO_AXES], false);
 	RenderMesh(mesh, false);
 	projectionStack.PopMatrix();
@@ -284,10 +286,10 @@ void SP2_Scene::RenderImageOnScreen(GLuint texture, float Xsize, float Ysize, fl
 }
 
 
-void SP2_Scene::RenderSniperInHand(Mesh* mesh, float size, float x, float y)
+void SP2_Scene::RenderWeaponInHand(unsigned short wepVal, float size, float x, float y)
 {
 	Mtx44 ortho;
-	ortho.SetToOrtho(0, 170, 0, 90, -70, 70); //size of screen UI
+	ortho.SetToOrtho(0, 170, 0, 90, -70, 140); //size of screen UI
 	projectionStack.PushMatrix();
 	projectionStack.LoadMatrix(ortho);
 	viewStack.PushMatrix();
@@ -298,7 +300,14 @@ void SP2_Scene::RenderSniperInHand(Mesh* mesh, float size, float x, float y)
 	modelStack.Rotate(200, 0, 1, 0);
 	modelStack.Rotate(5, -1, 0, 0);
 	modelStack.Scale(20, 20, 20);
-	RenderMesh(meshList[GEO_SNIPER], true);
+	if (wepVal == 1)
+	{
+		RenderMesh(meshList[GEO_SNIPER], true);
+	}
+	if (wepVal == 2)
+	{
+		RenderMesh(meshList[GEO_RIFLE], true);
+	}
 	projectionStack.PopMatrix();
 	viewStack.PopMatrix();
 	modelStack.PopMatrix();
@@ -554,6 +563,18 @@ void SP2_Scene::Update(double dt)
 	{
 		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	}
+	if (Application::IsKeyPressed('I'))
+	{
+		weaponValue = 1;
+	}
+	if (Application::IsKeyPressed('O'))
+	{
+		weaponValue = 2;
+	}
+	if (Application::IsKeyPressed('P'))
+	{
+		weaponValue = 3;
+	}
 
 	framesPerSecond = 1 / dt;
 
@@ -722,15 +743,16 @@ void SP2_Scene::Render(double dt)
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(0,2,5);
+	modelStack.Translate(0, 2, 5);
 	modelStack.Scale(0.8, 0.8, 0.8);
 	RenderMesh(meshList[GEO_SNIPER], true);
 	modelStack.PopMatrix();
 
-	RenderImageOnScreen(SB_Day_left, 10, 10, 1, 1);
+	RenderImageOnScreen(SB_Day_top, 10, 10, 15, 15);
 
 	modelStack.PushMatrix();
-	RenderSniperInHand(meshList[GEO_SNIPER], 5, 1, 1);
+	RenderWeaponInHand(weaponValue, 5, 1, 1);
+	modelStack.PushMatrix();
 	modelStack.PopMatrix();
 
 	std::stringstream fpsText;

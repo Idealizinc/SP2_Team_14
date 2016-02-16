@@ -147,6 +147,8 @@ public:
 	float constTranslation;
 	float DoorRot;
 	bool canUseDoor = true;
+	int weaponSelect;
+	bool sniper, rifle;
 
 	unsigned short skyboxID = 0;
 
@@ -159,6 +161,7 @@ public:
 	MS modelStack, viewStack, projectionStack;
 
 private:
+	unsigned short weaponValue = 1;
 	GLuint SB_Day_front, SB_Day_back, SB_Day_top, SB_Day_bottom, SB_Day_left, SB_Day_right;
 	GLuint SB_Nite_front, SB_Nite_back, SB_Nite_top, SB_Nite_bottom, SB_Nite_left, SB_Nite_right;
 	void RenderSkybox(Vector3 Position);
@@ -174,8 +177,8 @@ private:
 	void gamestate();
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
-	void SP2_Scene::RenderImageOnScreen(GLuint texture, float Xsize, float Ysize, float Xpos, float Ypos);
-	void RenderSniperInHand(Mesh* mesh, float size, float x, float y);
+	void RenderWeaponInHand(unsigned short wepVal, float size, float x, float y);
+	void RenderImageOnScreen(GLuint texture, float Xsize, float Ysize, float Xpos, float Ypos);
 
 	//Interaction Values
 	bool InteractionBoundsCheck(Vector3 CameraPosition, int value);
