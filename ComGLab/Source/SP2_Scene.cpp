@@ -81,7 +81,7 @@ void SP2_Scene::Init()
 	state = 0;
 	timer = 0;
 	weaponValue = 0;
-	weaponinterface = true;
+	weaponinterface = false;
 	buttonPress = true;
 	buttonValue = 0;
 	robotCount = 0;
