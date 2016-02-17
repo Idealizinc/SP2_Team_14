@@ -54,7 +54,7 @@ class SP2_Scene : public Scene
 		//GEO_MOTHERSHIP,
 		//GEO_DRONE,
 		//GEO_ROBOT1,
-		//GEO_GATE,
+		GEO_GATE,
 		//GEO_METEOR,
 		//GEO_COMPUTER,
 
@@ -191,14 +191,20 @@ private:
 	void RenderMeshOnScreen(Mesh* mesh, float Xsize = 1, float Ysize = 1, float Xpos = 0, float Ypos = 0, float Angle = 0, Vector3 RotationDir = Vector3(0, 0, 0));
 	void RenderWepScreen(bool render = false, Vector3 choices = Vector3(0, 0, 0));
 	void initBounds();
+	void Rendergate(bool render = false);
 
 	//Interaction Values
 	bool buttonPress;
 	int buttonValue;
+	float leftgate;
+	float rightgate;
+	bool openleftgate;
+	bool openrightgate;
 
 	//test on screen values
 	double fps;
-	int hp;
+	int basehp;
+	int gatehp;
 	int ammo;
 	int wave;
 	float framesPerSecond;
@@ -207,6 +213,13 @@ private:
 	int state;
 	float timer;
 	bool weaponinterface;
+	bool repairgate;
+
+	//robot dmg
+	int meleedmg = 5;
+	int rangedmg = 5;
+	int mixedmelee = 4;
+	int mixedrange = 4;
 
 	//Light Stuff
 	Vector3 TownLightPosition;

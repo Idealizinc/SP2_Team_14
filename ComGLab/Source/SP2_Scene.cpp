@@ -66,7 +66,7 @@ void SP2_Scene::Init()
 	constRotation = 0;
 	constTranslation = 0;
 	DoorRot = 0;
-	translateX = 5;
+	translateX = 0;
 	scaleAll = 1;
 	rotationalLimit = 180;
 	translationLimit = 5;
@@ -75,17 +75,21 @@ void SP2_Scene::Init()
 	toggleLimiters = true;
 	limitersON = true;
 	lightOff = false;
-	hp = 100;
+	basehp = 100;
+	gatehp = 20;
 	ammo = 100;
 	wave = 1;
 	state = 0;
 	timer = 0;
 	weaponValue = 0;
 	weaponinterface = false;
+	repairgate = false;
 	buttonPress = true;
 	buttonValue = 0;
 	robotCount = 0;
 	pause = 1;
+	leftgate = 0;
+	rightgate = 0;
 
 	// Enable depth Test
 	glEnable(GL_DEPTH_TEST);
@@ -194,8 +198,8 @@ void SP2_Scene::Init()
 	//meshList[GEO_ROBOT1] = MeshBuilder::GenerateOBJ("test", "OBJ//Robot1.obj");
 	////meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Robot1.tga");
 
-	/*meshList[GEO_GATE] = MeshBuilder::GenerateOBJ("test", "OBJ//gate.obj");
-	meshList[GEO_GATE]->textureID = LoadTGA("Image//gate.tga");*/
+	meshList[GEO_GATE] = MeshBuilder::GenerateOBJ("test", "OBJ//gate.obj");
+	meshList[GEO_GATE]->textureID = LoadTGA("Image//gate.tga");
 
 	/*meshList[GEO_METEOR] = MeshBuilder::GenerateOBJ("test", "OBJ//meteor.obj");
 	meshList[GEO_METEOR]->textureID = LoadTGA("Image//meteor.tga");*/
@@ -303,7 +307,6 @@ void SP2_Scene::RenderImageOnScreen(GLuint texture, float Xsize, float Ysize, fl
 	modelStack.PopMatrix();
 	glEnable(GL_DEPTH_TEST);
 }
-
 
 void SP2_Scene::RenderWeaponInHand(unsigned short wepVal, float size, float x, float y)
 {
@@ -455,80 +458,84 @@ void SP2_Scene::initBounds()
 {
 	
 }
-
+void SP2_Scene::Rendergate(bool render)
+{
+	if (render)
+	{
+		modelStack.PushMatrix();
+		//translation here once map is out
+		RenderMesh(meshList[GEO_GATE], true);
+		modelStack.PopMatrix();
+		gatehp = 20;
+	}
+}
 void SP2_Scene::gamestate()
 {
 	if (wave == 1)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1 clear", Color(1, 0, 0), 3, 20, 15); //appear for a few seconds
-
 		if (robotCount == 0)
 		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1 clear", Color(1, 0, 0), 3, 20, 15);
 			weaponinterface == true;
 		}
-		else if (hp == 0)
+		else if (basehp == 0)
 		{
 			//go back to start screen
 		}
 	}
 	if (wave == 2)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2 clear", Color(1, 0, 0), 3, 20, 15);
-
 		if (robotCount == 0)
 		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2 clear", Color(1, 0, 0), 3, 20, 15);
 			weaponinterface == true;
 		}
-		else if (hp == 0)
+		else if (basehp == 0)
 		{
 			//go back to start screen
 		}
 	}
 	if (wave == 3)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 20, 15);
-
 		if (robotCount == 0)
 		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 20, 15);
 			weaponinterface == true;
 		}
-		else if (hp == 0)
+		else if (basehp == 0)
 		{
 			//go back to start screen
 		}
 	}
 	if (wave == 4)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4 clear", Color(1, 0, 0), 3, 20, 15);
-
 		if (robotCount == 0)
 		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4 clear", Color(1, 0, 0), 3, 20, 15);
 			weaponinterface == true;
 		}
-		else if (hp == 0)
+		else if (basehp == 0)
 		{
 			//go back to start screen
 		}
 	}
 	if (wave == 5)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 20, 15);
-
 		if (robotCount == 0)
 		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 20, 15);
 			weaponinterface == true;
 		}
-		else if (hp == 0)
+		else if (basehp == 0)
 		{
 			//go back to start screen
 		}
 	}
 	if (wave == 6)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Boss Stage", Color(1, 0, 0), 3, 20, 15);
 		//if (//boss dead)
 		//{
-
+		RenderTextOnScreen(meshList[GEO_TEXT], "Boss Stage clear", Color(1, 0, 0), 3, 20, 15);
 		//}
 		//else if (hp == 0)
 		//{
@@ -536,6 +543,7 @@ void SP2_Scene::gamestate()
 		//}
 	}
 }
+
 void SP2_Scene::Update(double dt)
 {
 	camera.Update(dt);
@@ -570,6 +578,28 @@ void SP2_Scene::Update(double dt)
 		translateX = 40;
 	}
 	translateX += (float)(10 * pause  * dt /* EXTRA */ * 2);
+	if (repairgate == true)
+	{
+		openleftgate = true;
+		openrightgate = true;
+		if (openleftgate == true)
+		{
+			leftgate += (float)(8 * dt);
+			if (leftgate > 60)
+			{
+				openleftgate = false;
+			}
+		}
+		if (openrightgate == true)
+		{
+			rightgate += (float)(1.2 * dt);
+			if (rightgate > 6.5)
+			{
+				openrightgate = false;
+			}
+		}
+	}
+	translateX += (float)(5 * dt);
 	//End
 
 	//Resetting Scaling
@@ -594,7 +624,18 @@ void SP2_Scene::Update(double dt)
 	{
 		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	}
-
+	//gate
+	if (gatehp < 20)
+	{
+		repairgate = true;
+	}
+	if (repairgate == true)
+	{
+		if (gatehp == 20)
+		{
+			repairgate = false;
+		}
+	}
 	//Weapon
 	if (weaponinterface == true)
 	{
@@ -637,7 +678,10 @@ void SP2_Scene::Update(double dt)
 	{
 		weaponinterface = true;
 	}
-
+	if (Application::IsKeyPressed('U'))
+	{
+		weaponinterface = false;
+	}
 	//timer += (float)(1 * dt);
 
 	if (Application::IsKeyPressed('P') && pause == 1)
@@ -833,6 +877,10 @@ void SP2_Scene::Render(double dt)
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Boss: Defeat Mothership", Color(1, 0, 0), 3, 60, 87);
 	}
+	if (wave > 6)
+	{
+		//go to start screen, win game
+	}
 	readtextfile();
 
 	modelStack.PushMatrix();
@@ -847,6 +895,10 @@ void SP2_Scene::Render(double dt)
 
 	modelStack.PushMatrix();
 	RenderWeaponInHand(weaponValue, 5, 1, 1);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	RenderMesh(meshList[GEO_GATE], true);
 	modelStack.PopMatrix();
 
 	//INFO UI, STATS - BOTTOM LEFT
@@ -871,7 +923,7 @@ void SP2_Scene::Render(double dt)
 	
 	RenderWepScreen(weaponinterface);
 
-	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(hp), Color(0, 0.5, 0), 3, 2.5, 87);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(basehp), Color(0, 0.5, 0), 3, 2.5, 87);
 
 	RenderTextOnScreen(meshList[GEO_TEXT], "Ammo: " + std::to_string(ammo), Color(0, 0.5, 0), 3, 2.5, 84);
 
@@ -884,6 +936,10 @@ void SP2_Scene::Render(double dt)
 		RenderTextOnScreen(meshList[GEO_TEXT], "Paused", Color(0, 0.5, 0), 10, 68, 45);
 		modelStack.PopMatrix();
 	}
+	
+	gamestate();
+
+	Rendergate(repairgate);
 }
 
 void SP2_Scene::Exit()
