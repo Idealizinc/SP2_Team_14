@@ -11,6 +11,7 @@ struct Boundary
 	bool active = true;
 	bool isWithin = false;
 	void set(float xMin = 0, float xMax = 0, float zMin = 0, float zMax = 0);
+	bool BoundaryCheck(const float& playerCoordX, const float& playerCoordZ);
 };
 
 #endif //_BOUNDARY_H
