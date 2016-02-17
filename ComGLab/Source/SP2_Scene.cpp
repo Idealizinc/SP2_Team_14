@@ -472,10 +472,9 @@ void SP2_Scene::gamestate()
 {
 	if (wave == 1)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1 clear", Color(1, 0, 0), 3, 20, 15); //appear for a few seconds
-
 		if (robotCount == 0)
 		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1 clear", Color(1, 0, 0), 3, 20, 15);
 			weaponinterface == true;
 		}
 		else if (basehp == 0)
@@ -485,10 +484,9 @@ void SP2_Scene::gamestate()
 	}
 	if (wave == 2)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2 clear", Color(1, 0, 0), 3, 20, 15);
-
 		if (robotCount == 0)
 		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2 clear", Color(1, 0, 0), 3, 20, 15);
 			weaponinterface == true;
 		}
 		else if (basehp == 0)
@@ -498,10 +496,9 @@ void SP2_Scene::gamestate()
 	}
 	if (wave == 3)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 20, 15);
-
 		if (robotCount == 0)
 		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 20, 15);
 			weaponinterface == true;
 		}
 		else if (basehp == 0)
@@ -511,10 +508,9 @@ void SP2_Scene::gamestate()
 	}
 	if (wave == 4)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4 clear", Color(1, 0, 0), 3, 20, 15);
-
 		if (robotCount == 0)
 		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4 clear", Color(1, 0, 0), 3, 20, 15);
 			weaponinterface == true;
 		}
 		else if (basehp == 0)
@@ -524,10 +520,9 @@ void SP2_Scene::gamestate()
 	}
 	if (wave == 5)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 20, 15);
-
 		if (robotCount == 0)
 		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 20, 15);
 			weaponinterface == true;
 		}
 		else if (basehp == 0)
@@ -537,10 +532,9 @@ void SP2_Scene::gamestate()
 	}
 	if (wave == 6)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Boss Stage", Color(1, 0, 0), 3, 20, 15);
 		//if (//boss dead)
 		//{
-
+		RenderTextOnScreen(meshList[GEO_TEXT], "Boss Stage clear", Color(1, 0, 0), 3, 20, 15);
 		//}
 		//else if (hp == 0)
 		//{
@@ -886,6 +880,10 @@ void SP2_Scene::Render(double dt)
 
 	modelStack.PushMatrix();
 	RenderWeaponInHand(weaponValue, 5, 1, 1);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	RenderMesh(meshList[GEO_GATE], true);
 	modelStack.PopMatrix();
 
 	//INFO UI, STATS - BOTTOM LEFT
