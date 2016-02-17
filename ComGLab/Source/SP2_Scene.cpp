@@ -463,15 +463,6 @@ void SP2_Scene::initBounds()
 void SP2_Scene::gamestate()
 {
 	//outline for game state, will edit again next time
-	if (weaponinterface == true) //fighting 
-	{
-		//display screen UI
-	}
-
-	if (wave == 0)
-	{
-		
-	}
 	if (wave == 1)
 	{
 		wave1robots = true;
@@ -481,13 +472,6 @@ void SP2_Scene::gamestate()
 		//wait function here
 		//state = 1; 
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1 clear", Color(1, 0, 0), 3, 20, 15); //appear for a few seconds
-		weaponinterface = true;
-		if (Application::IsKeyPressed('Z'))
-		{
-			weaponinterface = false;
-			//state = 0;
-		}
-		wave++;
 	}
 	if (wave == 2)
 	{
@@ -498,13 +482,6 @@ void SP2_Scene::gamestate()
 		//wait function here
 		//state = 1; 
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2 clear", Color(1, 0, 0), 3, 20, 15);
-		weaponinterface = true;
-		if (Application::IsKeyPressed('Z'))
-		{
-			weaponinterface = false;
-			//state = 0;
-		}
-		wave++;
 	}
 	if (wave == 3)
 	{
@@ -515,13 +492,6 @@ void SP2_Scene::gamestate()
 		//wait function here
 		//state = 1;
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 20, 15);
-		weaponinterface = true;
-		if (Application::IsKeyPressed('Z'))
-		{
-			weaponinterface = false;
-			//state = 0;
-		}
-		wave++;
 	}
 	if (wave == 4)
 	{
@@ -532,13 +502,6 @@ void SP2_Scene::gamestate()
 		//wait function here
 		//state = 1;
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4 clear", Color(1, 0, 0), 3, 20, 15);
-		weaponinterface = true;
-		if (Application::IsKeyPressed('Z'))
-		{
-			weaponinterface = false;
-			//state = 0;
-		}
-		wave++;
 	}
 	if (wave == 5)
 	{
@@ -549,13 +512,6 @@ void SP2_Scene::gamestate()
 		//wait function here
 		//state = 1; //wave intermission state
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 20, 15);
-		weaponinterface = true;
-		if (Application::IsKeyPressed('Z'))
-		{
-			weaponinterface = false;
-			//state = 0;
-		}
-		wave++;
 	}
 }
 void SP2_Scene::Update(double dt)
