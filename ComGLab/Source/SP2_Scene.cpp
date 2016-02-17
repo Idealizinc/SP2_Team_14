@@ -85,6 +85,7 @@ void SP2_Scene::Init()
 	buttonPress = true;
 	buttonValue = 0;
 	robotCount = 0;
+	pause = 1;
 
 	// Enable depth Test
 	glEnable(GL_DEPTH_TEST);
@@ -248,8 +249,8 @@ void SP2_Scene::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, fl
 	viewStack.LoadIdentity(); //No need camera for ortho mode
 	modelStack.PushMatrix();
 	modelStack.LoadIdentity(); //Reset modelStack
-	modelStack.Scale(size, size, size);
 	modelStack.Translate(x, y, 0);
+	modelStack.Scale(size, size, size);
 
 	glUniform1i(m_parameters[U_TEXT_ENABLED], 1);
 	glUniform3fv(m_parameters[U_TEXT_COLOR], 1, &color.r);
@@ -261,7 +262,7 @@ void SP2_Scene::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, fl
 	for (unsigned i = 0; i < text.length(); ++i)
 	{
 		Mtx44 characterSpacing;
-		characterSpacing.SetToTranslation(i * 0.5f, 0, 0); //1.0f is the spacing of each character, you may change this value
+		characterSpacing.SetToTranslation(i * 0.55f, 0, 0); //1.0f is the spacing of each character, you may change this value
 		Mtx44 MVP = projectionStack.Top() * viewStack.Top() * modelStack.Top() * characterSpacing;
 		glUniformMatrix4fv(m_parameters[U_MVP], 1, GL_FALSE, &MVP.a[0]);
 
@@ -538,16 +539,16 @@ void SP2_Scene::gamestate()
 void SP2_Scene::Update(double dt)
 {
 	camera.Update(dt);
-	constRotation += (float)(10 * dt);
-	constTranslation += (float)(10 * dt);
+	constRotation += (float)(10 * pause * dt);
+	constTranslation += (float)(10 * pause  * dt);
 	//Lerping Rotation
 	if ((rLimiter == true))
 	{
-		tweenVal += (float)(50 * dt);
+		tweenVal += (float)(50 * pause  * dt);
 	}
 	else if ((rLimiter == false))
 	{
-		tweenVal -= (float)(50 * dt);
+		tweenVal -= (float)(50 * pause * dt);
 	}
 	if (tweenVal >= rotationalLimit)
 	{
@@ -568,7 +569,7 @@ void SP2_Scene::Update(double dt)
 	{
 		translateX = 40;
 	}
-	translateX += (float)(10 * dt /* EXTRA */ * 2);
+	translateX += (float)(10 * pause  * dt /* EXTRA */ * 2);
 	//End
 
 	//Resetting Scaling
@@ -576,7 +577,7 @@ void SP2_Scene::Update(double dt)
 	{
 		scaleAll = 5;
 	}
-	scaleAll += (float)(2 * dt);
+	scaleAll += (float)(2 * pause  * dt);
 	if (Application::IsKeyPressed('6'))
 	{
 		glEnable(GL_CULL_FACE);
@@ -625,8 +626,8 @@ void SP2_Scene::Update(double dt)
 
 	if (!buttonPress)
 	{
-		buttonValue += dt;
-		if (buttonValue >= 1)
+		buttonValue += 1 * pause * dt;
+		if (buttonValue >= 10)
 		{
 			buttonPress = true;
 		}
@@ -639,7 +640,20 @@ void SP2_Scene::Update(double dt)
 
 	//timer += (float)(1 * dt);
 
-	framesPerSecond = 1 / dt;
+	if (Application::IsKeyPressed('P') && pause == 1)
+	{
+		pause = 0;
+		buttonPress == false;
+		buttonValue = 0;
+	}
+	else if (Application::IsKeyPressed('O') && pause == 0)
+	{
+		pause = 1;
+		buttonPress == false;
+		buttonValue = 0;
+	}
+
+	framesPerSecond = 1 * pause / dt;
 
 	TownLightPosition.y += tweenVal / 15000;
 	light[1].position.Set(TownLightPosition.x, TownLightPosition.y, TownLightPosition.z);
@@ -711,13 +725,13 @@ void SP2_Scene::RenderWepScreen(bool render, Vector3 choices)
 		RenderImageOnScreen(UI_WepSel_BG, 130, 65, 80, 45);
 		//Left
 		RenderImageOnScreen(UI_BG, 30, 30, 40, 40);
-		RenderMeshOnScreen(meshList[GEO_RIFLE], 1, 1, 40, 40, constRotation * 5, Vector3(1, 1, 0));
+		RenderMeshOnScreen(meshList[GEO_RIFLE], 1, 1, 40, 40, constRotation * pause * 5, Vector3(1, 1, 0));
 		//Center
 		RenderImageOnScreen(UI_BG, 30, 30, 80, 40);
-		RenderMeshOnScreen(meshList[GEO_SNIPER], 1, 1, 85, 40, constRotation * 5, Vector3(1, 1, 0));
+		RenderMeshOnScreen(meshList[GEO_SNIPER], 1, 1, 85, 40, constRotation * pause * 5, Vector3(1, 1, 0));
 		//Right
 		RenderImageOnScreen(UI_BG, 30, 30, 120, 40);
-		RenderMeshOnScreen(meshList[GEO_SHOTGUN], 1, 1, 125, 40, constRotation * 5, Vector3(1, 1, 0));
+		RenderMeshOnScreen(meshList[GEO_SHOTGUN], 1, 1, 125, 40, constRotation * pause * 5, Vector3(1, 1, 0));
 		modelStack.PopMatrix();
 		//Wep Select UI END
 	}
@@ -792,32 +806,32 @@ void SP2_Scene::Render(double dt)
 
 	if (wave == 0)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Robot wave incoming", Color(1, 0, 0), 3, 20, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robot wave incoming", Color(1, 0, 0), 3, 60, 87);
 	}
 	if (wave == 1)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "*Robots coming from all directions*", Color(1, 0, 0), 3, 20, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "*Robots coming from all directions*", Color(1, 0, 0), 3, 60, 87);
 	}
 	if (wave == 2)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Robots now walk faster!!", Color(1, 0, 0), 3, 20, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robots now walk faster!!", Color(1, 0, 0), 3, 60, 87);
 	}
 	if (wave == 3)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Meteors incoming!!!", Color(1, 0, 1), 3, 20, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Meteors incoming!!!", Color(1, 0, 1), 3, 60, 87);
 	}
 	if (wave == 4)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Robots now fire weapons faster!!", Color(1, 0, 0), 3, 20, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robots now fire weapons faster!!", Color(1, 0, 0), 3, 60, 87);
 	}
 	if (wave == 5)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Robots are now in god mode!!", Color(1, 0, 0), 3, 20, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robots are now in god mode!!", Color(1, 0, 0), 3, 60, 87);
 	}
 	//boss wave 
 	if (wave == 6)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Boss: Defeat Mothership", Color(1, 0, 0), 3, 20, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Boss: Defeat Mothership", Color(1, 0, 0), 3, 60, 87);
 	}
 	readtextfile();
 
@@ -826,7 +840,7 @@ void SP2_Scene::Render(double dt)
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(0, 2, 5);
+	modelStack.Translate(constTranslation, 2, 5);
 	modelStack.Scale(0.8, 0.8, 0.8);
 	RenderMesh(meshList[GEO_SNIPER], true);
 	modelStack.PopMatrix();
@@ -840,10 +854,10 @@ void SP2_Scene::Render(double dt)
 	RenderImageOnScreen(UI_BG, 50, 10, 25, 5);
 	std::stringstream fpsText;
 	fpsText << std::fixed << std::setprecision(1) << "FPS = " << framesPerSecond;
-	RenderTextOnScreen(meshList[GEO_TEXT], fpsText.str(), Color(1, 1, 1), 2.5, 2, 3);
+	RenderTextOnScreen(meshList[GEO_TEXT], fpsText.str(), Color(1, 1, 1), 2.5, 5, 7.5);
 	std::stringstream coordText;
 	coordText << std::fixed << std::setprecision(1) << "Player Location = (" << camera.getCameraPosition().x << ", " << camera.getCameraPosition().y << ", " << camera.getCameraPosition().z << ")";
-	RenderTextOnScreen(meshList[GEO_TEXT], coordText.str(), Color(1, 1, 1), 2.5, 2, 2);
+	RenderTextOnScreen(meshList[GEO_TEXT], coordText.str(), Color(1, 1, 1), 2.5, 5, 5);
 	modelStack.PopMatrix();
 	//INFO UI, STATS END
 
@@ -857,11 +871,19 @@ void SP2_Scene::Render(double dt)
 	
 	RenderWepScreen(weaponinterface);
 
-	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(hp), Color(0, 0.5, 0), 3, 2, 29);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(hp), Color(0, 0.5, 0), 3, 2.5, 87);
 
-	RenderTextOnScreen(meshList[GEO_TEXT], "Ammo: " + std::to_string(ammo), Color(0, 0.5, 0), 3, 4, 28);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Ammo: " + std::to_string(ammo), Color(0, 0.5, 0), 3, 2.5, 84);
 
-	RenderTextOnScreen(meshList[GEO_TEXT], "Wave Number: " + std::to_string(wave), Color(0, 0.5, 0), 3, 4, 27);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Wave Number: " + std::to_string(wave), Color(0, 0.5, 0), 3, 2.5, 81);
+
+	if (pause == 0)
+	{
+		modelStack.PushMatrix();
+		RenderImageOnScreen(UI_BG, 50, 10, 80, 45);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Paused", Color(0, 0.5, 0), 10, 68, 45);
+		modelStack.PopMatrix();
+	}
 }
 
 void SP2_Scene::Exit()
