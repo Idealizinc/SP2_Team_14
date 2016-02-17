@@ -146,6 +146,12 @@ void SP2_Scene::Init()
 	SB_Day_left = LoadTGA("Image//Space_Left.tga");
 	SB_Day_right = LoadTGA("Image//Space_Right.tga");
 
+	//UI Elements
+	Crosshair = LoadTGA("Image//Crosshair.tga");
+	UI_BG = LoadTGA("Image//UI_BG_Black.tga");
+	UI_HP_Red = LoadTGA("Image//UI_HP_Red.tga");
+	UI_HP_Green = LoadTGA("Image//UI_HP_Green.tga");
+	UI_WepSel_BG = LoadTGA("Image//UI_WepSel_BG.tga");
 
 	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
 	meshList[GEO_FRONT]->textureID = SB_Day_front;
@@ -308,6 +314,28 @@ void SP2_Scene::RenderWeaponInHand(unsigned short wepVal, float size, float x, f
 	{
 		RenderMesh(meshList[GEO_RIFLE], true);
 	}
+	projectionStack.PopMatrix();
+	viewStack.PopMatrix();
+	modelStack.PopMatrix();
+}
+
+
+void SP2_Scene::RenderMeshOnScreen(Mesh* mesh, float Xsize, float Ysize, float Xpos, float Ypos, float Angle, Vector3 RotationDir)
+{
+	Mtx44 ortho;
+	ortho.SetToOrtho(0, 170, 0, 90, -70, 140); //size of screen UI
+	projectionStack.PushMatrix();
+	projectionStack.LoadMatrix(ortho);
+	viewStack.PushMatrix();
+	viewStack.LoadIdentity(); //No need camera for ortho mode
+	modelStack.PushMatrix();
+	modelStack.LoadIdentity(); //Reset modelStack
+	modelStack.Translate(Xpos, Ypos, 0);
+	modelStack.Rotate(90, 0, 1, 0);
+	modelStack.Rotate(Angle, RotationDir.x, RotationDir.y, RotationDir.z);
+	modelStack.Scale(3, 3, 3);
+	modelStack.Scale(Xsize, Ysize, Xsize);
+	RenderMesh(mesh, true);
 	projectionStack.PopMatrix();
 	viewStack.PopMatrix();
 	modelStack.PopMatrix();
@@ -640,6 +668,26 @@ void SP2_Scene::RenderSkybox(Vector3 Position)
 	modelStack.PopMatrix();
 }
 
+void SP2_Scene::RenderWepScreen(bool render, Vector3 choices)
+{
+	if (render){
+		//Wep Select UI - Overall
+		modelStack.PushMatrix();
+		RenderImageOnScreen(UI_WepSel_BG, 130, 65, 80, 45);
+		//Left
+		RenderImageOnScreen(UI_BG, 30, 50, 40, 40);
+		RenderMeshOnScreen(meshList[GEO_RIFLE], 1, 1, 40, 40, constRotation * 5, Vector3(1, 1, 0));
+		//Center
+		RenderImageOnScreen(UI_BG, 30, 50, 80, 40);
+		RenderMeshOnScreen(meshList[GEO_SNIPER], 1, 1, 85, 40, constRotation * 5, Vector3(1, 1, 0));
+		//Right
+		RenderImageOnScreen(UI_BG, 30, 50, 120, 40);
+		RenderMeshOnScreen(meshList[GEO_RIFLE], 1, 1, 125, 40, constRotation * 5, Vector3(1, 1, 0));
+		modelStack.PopMatrix();
+		//Wep Select UI END
+	}
+}
+
 void SP2_Scene::Render(double dt)
 {
 	// Render VBO here
@@ -748,20 +796,31 @@ void SP2_Scene::Render(double dt)
 	RenderMesh(meshList[GEO_SNIPER], true);
 	modelStack.PopMatrix();
 
-	RenderImageOnScreen(SB_Day_top, 10, 10, 15, 15);
-
 	modelStack.PushMatrix();
 	RenderWeaponInHand(weaponValue, 5, 1, 1);
-	modelStack.PushMatrix();
 	modelStack.PopMatrix();
 
+	//INFO UI, STATS - BOTTOM LEFT
+	modelStack.PushMatrix();
+	RenderImageOnScreen(UI_BG, 50, 10, 25, 5);
 	std::stringstream fpsText;
 	fpsText << std::fixed << std::setprecision(1) << "FPS = " << framesPerSecond;
 	RenderTextOnScreen(meshList[GEO_TEXT], fpsText.str(), Color(1, 1, 1), 2.5, 2, 3);
-
 	std::stringstream coordText;
-	coordText << std::fixed << std::setprecision(1) << "Player Location = (" << camera.getCameraPosition().x << ", " << camera.getCameraPosition().y << ", " << camera.getCameraPosition().z << ")!";
+	coordText << std::fixed << std::setprecision(1) << "Player Location = (" << camera.getCameraPosition().x << ", " << camera.getCameraPosition().y << ", " << camera.getCameraPosition().z << ")";
 	RenderTextOnScreen(meshList[GEO_TEXT], coordText.str(), Color(1, 1, 1), 2.5, 2, 2);
+	modelStack.PopMatrix();
+	//INFO UI, STATS END
+
+	//INFO UI, HP - CENTER
+	modelStack.PushMatrix();
+	RenderImageOnScreen(UI_BG, 50, 10, 80, 5);
+	modelStack.PopMatrix();
+	//INFO UI, HP END
+
+	RenderImageOnScreen(Crosshair, 10, 10, 80, 45);
+	
+	RenderWepScreen(true);
 
 	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(hp), Color(0, 0.5, 0), 3, 2, 29);
 

@@ -164,6 +164,8 @@ private:
 	unsigned short weaponValue = 1;
 	GLuint SB_Day_front, SB_Day_back, SB_Day_top, SB_Day_bottom, SB_Day_left, SB_Day_right;
 	GLuint SB_Nite_front, SB_Nite_back, SB_Nite_top, SB_Nite_bottom, SB_Nite_left, SB_Nite_right;
+	GLuint Crosshair;
+	GLuint UI_BG, UI_HP_Red, UI_HP_Green, UI_WepSel_BG;
 	void RenderSkybox(Vector3 Position);
 	unsigned m_vertexArrayID;
 	unsigned m_programID;
@@ -176,9 +178,11 @@ private:
 	void readtextfile();
 	void gamestate();
 	void RenderText(Mesh* mesh, std::string text, Color color);
-	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
-	void RenderWeaponInHand(unsigned short wepVal, float size, float x, float y);
-	void RenderImageOnScreen(GLuint texture, float Xsize, float Ysize, float Xpos, float Ypos);
+	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size = 1, float x = 0, float y = 0);
+	void RenderWeaponInHand(unsigned short wepVal = 0, float size = 1, float x = 0, float y = 0);
+	void RenderImageOnScreen(GLuint texture, float Xsize = 1, float Ysize = 1, float Xpos = 0, float Ypos = 0);
+	void RenderMeshOnScreen(Mesh* mesh, float Xsize = 1, float Ysize = 1, float Xpos = 0, float Ypos = 0, float Angle = 0, Vector3 RotationDir = Vector3(0, 0, 0));
+	void RenderWepScreen(bool render = false, Vector3 choices = Vector3(0, 0, 0));
 
 	//Interaction Values
 	bool InteractionBoundsCheck(Vector3 CameraPosition, int value);
