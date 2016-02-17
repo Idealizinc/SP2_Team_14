@@ -155,6 +155,7 @@ public:
 	int weaponSelect;
 	bool sniper, rifle;
 	unsigned int robotCount;
+	unsigned int pause;
 
 	unsigned short skyboxID = 0;
 
