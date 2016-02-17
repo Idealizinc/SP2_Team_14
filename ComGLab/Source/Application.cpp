@@ -83,7 +83,7 @@ void Application::Init()
 	//Set to be windowed at primary monitor's resolution;
 	m_window = glfwCreateWindow(S_Width, S_Height, "Computer Graphics", NULL, NULL);
 	//Set to fullscreen at primary monitor's resolution;
-		//m_window = glfwCreateWindow(S_Width, S_Height, "Computer Graphics", glfwGetPrimaryMonitor(), NULL);
+	//m_window = glfwCreateWindow(S_Width, S_Height, "Computer Graphics", glfwGetPrimaryMonitor(), NULL);
 	//
 
 	//Hide The Cursor Within the Application;
