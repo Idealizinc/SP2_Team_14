@@ -146,6 +146,8 @@ void SP2_Scene::Init()
 	SB_Day_left = LoadTGA("Image//Space_Left.tga");
 	SB_Day_right = LoadTGA("Image//Space_Right.tga");
 
+	Crosshair = LoadTGA("Image//Crosshair.tga");
+
 
 	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
 	meshList[GEO_FRONT]->textureID = SB_Day_front;
@@ -748,7 +750,7 @@ void SP2_Scene::Render(double dt)
 	RenderMesh(meshList[GEO_SNIPER], true);
 	modelStack.PopMatrix();
 
-	RenderImageOnScreen(SB_Day_top, 10, 10, 15, 15);
+	RenderImageOnScreen(Crosshair, 10, 10, 15, 15);
 
 	modelStack.PushMatrix();
 	RenderWeaponInHand(weaponValue, 5, 1, 1);
