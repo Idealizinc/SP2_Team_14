@@ -66,7 +66,7 @@ void SP2_Scene::Init()
 	constRotation = 0;
 	constTranslation = 0;
 	DoorRot = 0;
-	translateX = 5;
+	translateX = 0;
 	scaleAll = 1;
 	rotationalLimit = 180;
 	translationLimit = 5;
@@ -75,16 +75,20 @@ void SP2_Scene::Init()
 	toggleLimiters = true;
 	limitersON = true;
 	lightOff = false;
-	hp = 100;
+	basehp = 100;
+	gatehp = 20;
 	ammo = 100;
 	wave = 1;
 	state = 0;
 	timer = 0;
 	weaponValue = 0;
 	weaponinterface = false;
+	repairgate = false;
 	buttonPress = true;
 	buttonValue = 0;
 	robotCount = 0;
+	leftgate = 0;
+	rightgate = 0;
 
 	// Enable depth Test
 	glEnable(GL_DEPTH_TEST);
@@ -193,8 +197,8 @@ void SP2_Scene::Init()
 	//meshList[GEO_ROBOT1] = MeshBuilder::GenerateOBJ("test", "OBJ//Robot1.obj");
 	////meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Robot1.tga");
 
-	/*meshList[GEO_GATE] = MeshBuilder::GenerateOBJ("test", "OBJ//gate.obj");
-	meshList[GEO_GATE]->textureID = LoadTGA("Image//gate.tga");*/
+	meshList[GEO_GATE] = MeshBuilder::GenerateOBJ("test", "OBJ//gate.obj");
+	meshList[GEO_GATE]->textureID = LoadTGA("Image//gate.tga");
 
 	/*meshList[GEO_METEOR] = MeshBuilder::GenerateOBJ("test", "OBJ//meteor.obj");
 	meshList[GEO_METEOR]->textureID = LoadTGA("Image//meteor.tga");*/
@@ -302,7 +306,6 @@ void SP2_Scene::RenderImageOnScreen(GLuint texture, float Xsize, float Ysize, fl
 	modelStack.PopMatrix();
 	glEnable(GL_DEPTH_TEST);
 }
-
 
 void SP2_Scene::RenderWeaponInHand(unsigned short wepVal, float size, float x, float y)
 {
@@ -454,7 +457,17 @@ void SP2_Scene::initBounds()
 {
 	
 }
-
+void SP2_Scene::Rendergate(bool render)
+{
+	if (render)
+	{
+		modelStack.PushMatrix();
+		//translation here once map is out
+		RenderMesh(meshList[GEO_GATE], true);
+		modelStack.PopMatrix();
+		gatehp = 20;
+	}
+}
 void SP2_Scene::gamestate()
 {
 	if (wave == 1)
@@ -465,7 +478,7 @@ void SP2_Scene::gamestate()
 		{
 			weaponinterface == true;
 		}
-		else if (hp == 0)
+		else if (basehp == 0)
 		{
 			//go back to start screen
 		}
@@ -478,7 +491,7 @@ void SP2_Scene::gamestate()
 		{
 			weaponinterface == true;
 		}
-		else if (hp == 0)
+		else if (basehp == 0)
 		{
 			//go back to start screen
 		}
@@ -491,7 +504,7 @@ void SP2_Scene::gamestate()
 		{
 			weaponinterface == true;
 		}
-		else if (hp == 0)
+		else if (basehp == 0)
 		{
 			//go back to start screen
 		}
@@ -504,7 +517,7 @@ void SP2_Scene::gamestate()
 		{
 			weaponinterface == true;
 		}
-		else if (hp == 0)
+		else if (basehp == 0)
 		{
 			//go back to start screen
 		}
@@ -517,7 +530,7 @@ void SP2_Scene::gamestate()
 		{
 			weaponinterface == true;
 		}
-		else if (hp == 0)
+		else if (basehp == 0)
 		{
 			//go back to start screen
 		}
@@ -535,6 +548,7 @@ void SP2_Scene::gamestate()
 		//}
 	}
 }
+
 void SP2_Scene::Update(double dt)
 {
 	camera.Update(dt);
@@ -568,7 +582,28 @@ void SP2_Scene::Update(double dt)
 	{
 		translateX = 40;
 	}
-	translateX += (float)(10 * dt /* EXTRA */ * 2);
+	if (repairgate == true)
+	{
+		openleftgate = true;
+		openrightgate = true;
+		if (openleftgate == true)
+		{
+			leftgate += (float)(8 * dt);
+			if (leftgate > 60)
+			{
+				openleftgate = false;
+			}
+		}
+		if (openrightgate == true)
+		{
+			rightgate += (float)(1.2 * dt);
+			if (rightgate > 6.5)
+			{
+				openrightgate = false;
+			}
+		}
+	}
+	translateX += (float)(5 * dt);
 	//End
 
 	//Resetting Scaling
@@ -593,7 +628,18 @@ void SP2_Scene::Update(double dt)
 	{
 		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	}
-
+	//gate
+	if (gatehp < 20)
+	{
+		repairgate = true;
+	}
+	if (repairgate == true)
+	{
+		if (gatehp == 20)
+		{
+			repairgate = false;
+		}
+	}
 	//Weapon
 	if (weaponinterface == true)
 	{
@@ -636,7 +682,10 @@ void SP2_Scene::Update(double dt)
 	{
 		weaponinterface = true;
 	}
-
+	if (Application::IsKeyPressed('U'))
+	{
+		weaponinterface = false;
+	}
 	//timer += (float)(1 * dt);
 
 	framesPerSecond = 1 / dt;
@@ -819,6 +868,10 @@ void SP2_Scene::Render(double dt)
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Boss: Defeat Mothership", Color(1, 0, 0), 3, 20, 29);
 	}
+	if (wave > 6)
+	{
+		//go to start screen, win game
+	}
 	readtextfile();
 
 	modelStack.PushMatrix();
@@ -857,11 +910,15 @@ void SP2_Scene::Render(double dt)
 	
 	RenderWepScreen(weaponinterface);
 
-	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(hp), Color(0, 0.5, 0), 3, 2, 29);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(basehp), Color(0, 0.5, 0), 3, 2, 29);
 
 	RenderTextOnScreen(meshList[GEO_TEXT], "Ammo: " + std::to_string(ammo), Color(0, 0.5, 0), 3, 4, 28);
 
 	RenderTextOnScreen(meshList[GEO_TEXT], "Wave Number: " + std::to_string(wave), Color(0, 0.5, 0), 3, 4, 27);
+	
+	gamestate();
+
+	Rendergate(repairgate);
 }
 
 void SP2_Scene::Exit()
