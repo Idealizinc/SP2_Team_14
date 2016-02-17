@@ -81,7 +81,7 @@ void SP2_Scene::Init()
 	state = 0;
 	timer = 0;
 	weaponValue = 0;
-	weaponinterface = true;
+	weaponinterface = false;
 	wave1robots = false;
 	wave2robots = false;
 	meteor = false;
@@ -321,7 +321,7 @@ void SP2_Scene::RenderWeaponInHand(unsigned short wepVal, float size, float x, f
 	modelStack.LoadIdentity(); //Reset modelStack
 	modelStack.Translate(140, 5, -10);
 	modelStack.Rotate(200, 0, 1, 0);
-	modelStack.Rotate(5, -1, 0, 0);
+	modelStack.Rotate(10, -1, 0, 0);
 	modelStack.Scale(20, 20, 20);
 	if (wepVal == 0)
 	{
@@ -733,13 +733,13 @@ void SP2_Scene::RenderWepScreen(bool render, Vector3 choices)
 		modelStack.PushMatrix();
 		RenderImageOnScreen(UI_WepSel_BG, 130, 65, 80, 45);
 		//Left
-		RenderImageOnScreen(UI_BG, 30, 50, 40, 40);
+		RenderImageOnScreen(UI_BG, 30, 30, 40, 40);
 		RenderMeshOnScreen(meshList[GEO_RIFLE], 1, 1, 40, 40, constRotation * 5, Vector3(1, 1, 0));
 		//Center
-		RenderImageOnScreen(UI_BG, 30, 50, 80, 40);
+		RenderImageOnScreen(UI_BG, 30, 30, 80, 40);
 		RenderMeshOnScreen(meshList[GEO_SNIPER], 1, 1, 85, 40, constRotation * 5, Vector3(1, 1, 0));
 		//Right
-		RenderImageOnScreen(UI_BG, 30, 50, 120, 40);
+		RenderImageOnScreen(UI_BG, 30, 30, 120, 40);
 		RenderMeshOnScreen(meshList[GEO_SHOTGUN], 1, 1, 125, 40, constRotation * 5, Vector3(1, 1, 0));
 		modelStack.PopMatrix();
 		//Wep Select UI END
