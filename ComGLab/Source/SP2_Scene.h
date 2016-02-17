@@ -154,6 +154,7 @@ public:
 	bool canUseDoor = true;
 	int weaponSelect;
 	bool sniper, rifle;
+	unsigned int robotCount;
 
 	unsigned short skyboxID = 0;
 
