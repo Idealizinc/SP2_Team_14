@@ -52,6 +52,9 @@ class SP2_Scene : public Scene
 		//GEO_MOTHERSHIP,
 		//GEO_DRONE,
 		//GEO_ROBOT1,
+		//GEO_GATE,
+		//GEO_METEOR,
+		//GEO_COMPUTER,
 
 		//add these enum in GEOMETRY_TYPE before NUM_GEOMETRY
 		GEO_TEXT,

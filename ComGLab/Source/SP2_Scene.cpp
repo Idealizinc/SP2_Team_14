@@ -161,7 +161,7 @@ void SP2_Scene::Init()
 	meshList[GEO_RIGHT]->textureID = SB_Day_right;
 
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
-	meshList[GEO_TEXT]->textureID = LoadTGA("Image/calibri.tga");
+	meshList[GEO_TEXT]->textureID = LoadTGA("Image//calibri.tga");
 
 	meshList[GEO_SNIPER] = MeshBuilder::GenerateOBJ("test", "OBJ//Sniper.obj");
 	meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Sniper.tga");
@@ -183,6 +183,15 @@ void SP2_Scene::Init()
 
 	//meshList[GEO_ROBOT1] = MeshBuilder::GenerateOBJ("test", "OBJ//Robot1.obj");
 	////meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Robot1.tga");
+
+	/*meshList[GEO_GATE] = MeshBuilder::GenerateOBJ("test", "OBJ//gate.obj");
+	meshList[GEO_GATE]->textureID = LoadTGA("Image//gate.tga");*/
+
+	/*meshList[GEO_METEOR] = MeshBuilder::GenerateOBJ("test", "OBJ//meteor.obj");
+	meshList[GEO_METEOR]->textureID = LoadTGA("Image//meteor.tga");*/
+
+	/*meshList[GEO_COMPUTER] = MeshBuilder::GenerateOBJ("test", "OBJ//computer.obj");
+	meshList[GEO_COMPUTER]->textureID = LoadTGA("Image//computer.tga");*/
 
 	initBounds();
 }
@@ -411,7 +420,7 @@ void SP2_Scene::gamestate()
 	//outline for game state, will edit again next time
 	if (weaponinterface == true) //fighting 
 	{
-		//display screen
+		//display screen UI
 	}
 
 	if (wave == 0)
@@ -423,11 +432,11 @@ void SP2_Scene::gamestate()
 	{
 		wave1robots = true;
 		//to do: spawn robots
-		//if all robots dead, maybe after killing a certain number
+		//if spawn number a certain number of robots
 		wave1robots = false;
 		//wait function here
 		//state = 1; 
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1 clear", Color(1, 0, 0), 3, 22, 15); //appear for a few seconds
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1 clear", Color(1, 0, 0), 3, 20, 15); //appear for a few seconds
 		weaponinterface = true;
 		if (Application::IsKeyPressed('Z'))
 		{
@@ -440,11 +449,11 @@ void SP2_Scene::gamestate()
 	{
 		wave2robots = true;
 		//to do outside: spwan robots
-		//if kill robots
+		//if spawn number a certain number of robots
 		wave2robots = false;
 		//wait function here
 		//state = 1; 
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2 clear", Color(1, 0, 0), 3, 22, 15);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2 clear", Color(1, 0, 0), 3, 20, 15);
 		weaponinterface = true;
 		if (Application::IsKeyPressed('Z'))
 		{
@@ -457,11 +466,11 @@ void SP2_Scene::gamestate()
 	{
 		meteor = true;
 		//to do outside: spawn meteors
-		//if destroy meteor
+		//if spawn number a certain number of meteors
 		meteor = false;
 		//wait function here
 		//state = 1;
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 22, 15);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 20, 15);
 		weaponinterface = true;
 		if (Application::IsKeyPressed('Z'))
 		{
@@ -474,11 +483,11 @@ void SP2_Scene::gamestate()
 	{
 		wave4robots = true;
 		//to do:spawn robots
-		//if kill all robots
+		//if spawn number a certain number of robots
 		wave4robots = false;
 		//wait function here
 		//state = 1;
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4 clear", Color(1, 0, 0), 3, 22, 15);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4 clear", Color(1, 0, 0), 3, 20, 15);
 		weaponinterface = true;
 		if (Application::IsKeyPressed('Z'))
 		{
@@ -491,11 +500,11 @@ void SP2_Scene::gamestate()
 	{
 		wave5robots = true;
 		//to do:spawn robots
-		//if kill all robots
+		//if spawn number a certain number of robots
 		wave5robots = false;
 		//wait function here
 		//state = 1; //wave intermission state
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 22, 15);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 20, 15);
 		weaponinterface = true;
 		if (Application::IsKeyPressed('Z'))
 		{
@@ -709,32 +718,32 @@ void SP2_Scene::Render(double dt)
 
 	if (wave == 0)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Robot wave incoming", Color(1, 0, 0), 3, 22, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robot wave incoming", Color(1, 0, 0), 3, 20, 29);
 	}
 	if (wave == 1)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "*Robots coming from all directions*", Color(1, 0, 0), 3, 22, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "*Robots coming from all directions*", Color(1, 0, 0), 3, 20, 29);
 	}
 	if (wave == 2)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Robots now walk faster!!", Color(1, 0, 0), 3, 22, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robots now walk faster!!", Color(1, 0, 0), 3, 20, 29);
 	}
 	if (wave == 3)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Meteors incoming!!!", Color(1, 0, 1), 3, 22, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Meteors incoming!!!", Color(1, 0, 1), 3, 20, 29);
 	}
 	if (wave == 4)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Robots now fire weapons faster!!", Color(1, 0, 0), 3, 22, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robots now fire weapons faster!!", Color(1, 0, 0), 3, 20, 29);
 	}
 	if (wave == 5)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Robots are now in god mode!!", Color(1, 0, 0), 3, 22, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robots are now in god mode!!", Color(1, 0, 0), 3, 20, 29);
 	}
 	//boss wave 
 	if (wave == 6)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Boss: Defeat Mothership", Color(1, 0, 0), 3, 22, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Boss: Defeat Mothership", Color(1, 0, 0), 3, 20, 29);
 	}
 	readtextfile();
 
