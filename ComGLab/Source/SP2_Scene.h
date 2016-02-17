@@ -174,6 +174,7 @@ private:
 
 	//Render Calls
 	void readtextfile();
+	void gamestate();
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
 	void RenderWeaponInHand(unsigned short wepVal, float size, float x, float y);

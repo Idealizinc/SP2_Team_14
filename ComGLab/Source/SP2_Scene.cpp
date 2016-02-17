@@ -31,7 +31,7 @@ void SP2_Scene::readtextfile()
 {
 	std::string line;
 	std::ifstream startfile;
-	startfile.open("readme\\start.txt");
+	startfile.open("ComGLab\readme\\start.txt");
 	std::string file_contents;
 	if (startfile.is_open())
 	{
@@ -161,7 +161,7 @@ void SP2_Scene::Init()
 	meshList[GEO_RIGHT]->textureID = SB_Day_right;
 
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
-	meshList[GEO_TEXT]->textureID = LoadTGA("Image//calibri.tga");
+	meshList[GEO_TEXT]->textureID = LoadTGA("Image/calibri.tga");
 
 	meshList[GEO_SNIPER] = MeshBuilder::GenerateOBJ("test", "OBJ//Sniper.obj");
 	meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Sniper.tga");
@@ -406,7 +406,105 @@ void SP2_Scene::initBounds()
 {
 	
 }
+void SP2_Scene::gamestate()
+{
+	//outline for game state, will edit again next time
+	if (weaponinterface == true) //fighting 
+	{
+		//display screen
+	}
 
+	if (wave == 0)
+	{
+		//wait function here
+		wave++;
+	}
+	if (wave == 1)
+	{
+		wave1robots = true;
+		//to do: spawn robots
+		//if all robots dead, maybe after killing a certain number
+		wave1robots = false;
+		//wait function here
+		//state = 1; 
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1 clear", Color(1, 0, 0), 3, 22, 15); //appear for a few seconds
+		weaponinterface = true;
+		if (Application::IsKeyPressed('Z'))
+		{
+			weaponinterface = false;
+			//state = 0;
+		}
+		wave++;
+	}
+	if (wave == 2)
+	{
+		wave2robots = true;
+		//to do outside: spwan robots
+		//if kill robots
+		wave2robots = false;
+		//wait function here
+		//state = 1; 
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2 clear", Color(1, 0, 0), 3, 22, 15);
+		weaponinterface = true;
+		if (Application::IsKeyPressed('Z'))
+		{
+			weaponinterface = false;
+			//state = 0;
+		}
+		wave++;
+	}
+	if (wave == 3)
+	{
+		meteor = true;
+		//to do outside: spawn meteors
+		//if destroy meteor
+		meteor = false;
+		//wait function here
+		//state = 1;
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 22, 15);
+		weaponinterface = true;
+		if (Application::IsKeyPressed('Z'))
+		{
+			weaponinterface = false;
+			//state = 0;
+		}
+		wave++;
+	}
+	if (wave == 4)
+	{
+		wave4robots = true;
+		//to do:spawn robots
+		//if kill all robots
+		wave4robots = false;
+		//wait function here
+		//state = 1;
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4 clear", Color(1, 0, 0), 3, 22, 15);
+		weaponinterface = true;
+		if (Application::IsKeyPressed('Z'))
+		{
+			weaponinterface = false;
+			//state = 0;
+		}
+		wave++;
+	}
+	if (wave == 5)
+	{
+		wave5robots = true;
+		//to do:spawn robots
+		//if kill all robots
+		wave5robots = false;
+		//wait function here
+		//state = 1; //wave intermission state
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 22, 15);
+		weaponinterface = true;
+		if (Application::IsKeyPressed('Z'))
+		{
+			weaponinterface = false;
+			//state = 0;
+		}
+		wave++;
+	}
+}
 void SP2_Scene::Update(double dt)
 {
 	camera.Update(dt);
@@ -667,9 +765,9 @@ void SP2_Scene::Render(double dt)
 
 	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(hp), Color(0, 0.5, 0), 3, 2, 29);
 
-	RenderTextOnScreen(meshList[GEO_TEXT], "" + std::to_string(ammo), Color(0, 0.5, 0), 3, 4, 28);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Ammo: " + std::to_string(ammo), Color(0, 0.5, 0), 3, 4, 28);
 
-	RenderTextOnScreen(meshList[GEO_TEXT], "" + std::to_string(wave), Color(0, 0.5, 0), 3, 4, 27);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Wave Number: " + std::to_string(wave), Color(0, 0.5, 0), 3, 4, 27);
 }
 
 void SP2_Scene::Exit()
