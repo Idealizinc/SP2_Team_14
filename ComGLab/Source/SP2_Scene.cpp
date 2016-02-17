@@ -79,13 +79,17 @@ void SP2_Scene::Init()
 	ammo = 100;
 	wave = 0;
 	state = 0;
-	weaponinterface = false;
+	timer = 0;
+	weaponValue = 0;
+	weaponinterface = true;
 	wave1robots = false;
 	wave2robots = false;
 	meteor = false;
 	wave4robots = false;
 	wave5robots = false;
 	boss = false;
+	buttonPress = true;
+	buttonValue = 0;
 
 	// Enable depth Test
 	glEnable(GL_DEPTH_TEST);
@@ -165,14 +169,17 @@ void SP2_Scene::Init()
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image/calibri.tga");
 
+	meshList[GEO_SMG] = MeshBuilder::GenerateOBJ("test", "OBJ//SMG.obj");
+	meshList[GEO_SMG]->textureID = LoadTGA("Image//Tex_SMG.tga");
+
 	meshList[GEO_SNIPER] = MeshBuilder::GenerateOBJ("test", "OBJ//Sniper.obj");
 	meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Sniper.tga");
 
 	meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
 
-	//meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
-	//meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
+	meshList[GEO_SHOTGUN] = MeshBuilder::GenerateOBJ("test", "OBJ//Shotgun.obj");
+	meshList[GEO_SHOTGUN]->textureID = LoadTGA("Image//Tex_Shotgun.tga");
 
 	//meshList[GEO_PLAYERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//PlayerShip.obj");
 	//meshList[GEO_PLAYERSHIP]->textureID = LoadTGA("Image//Tex_PlayerShip.tga");
@@ -302,6 +309,10 @@ void SP2_Scene::RenderWeaponInHand(unsigned short wepVal, float size, float x, f
 	modelStack.Rotate(200, 0, 1, 0);
 	modelStack.Rotate(5, -1, 0, 0);
 	modelStack.Scale(20, 20, 20);
+	if (wepVal == 0)
+	{
+		RenderMesh(meshList[GEO_SMG], true);
+	}
 	if (wepVal == 1)
 	{
 		RenderMesh(meshList[GEO_SNIPER], true);
@@ -309,6 +320,10 @@ void SP2_Scene::RenderWeaponInHand(unsigned short wepVal, float size, float x, f
 	if (wepVal == 2)
 	{
 		RenderMesh(meshList[GEO_RIFLE], true);
+	}
+	if (wepVal == 3)
+	{
+		RenderMesh(meshList[GEO_SHOTGUN], true);
 	}
 	projectionStack.PopMatrix();
 	viewStack.PopMatrix();
@@ -408,6 +423,7 @@ void SP2_Scene::initBounds()
 {
 	
 }
+
 void SP2_Scene::gamestate()
 {
 	//outline for game state, will edit again next time
@@ -418,8 +434,7 @@ void SP2_Scene::gamestate()
 
 	if (wave == 0)
 	{
-		//wait function here
-		wave++;
+		
 	}
 	if (wave == 1)
 	{
@@ -549,34 +564,67 @@ void SP2_Scene::Update(double dt)
 		scaleAll = 5;
 	}
 	scaleAll += (float)(2 * dt);
-	if (Application::IsKeyPressed('1'))
+	if (Application::IsKeyPressed('6'))
 	{
 		glEnable(GL_CULL_FACE);
 	}
-	if (Application::IsKeyPressed('2'))
+	if (Application::IsKeyPressed('7'))
 	{
 		glDisable(GL_CULL_FACE);
 	}
-	if (Application::IsKeyPressed('3'))
+	if (Application::IsKeyPressed('8'))
 	{
 		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 	}
-	if (Application::IsKeyPressed('4'))
+	if (Application::IsKeyPressed('9'))
 	{
 		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	}
+
+	//Weapon
+	if (weaponinterface == true)
+	{
+		if (buttonPress == true && Application::IsKeyPressed('1'))
+		{
+			weaponValue = 1;
+			wave += 1;
+			buttonPress == false;
+			buttonValue = 0;
+			weaponinterface = false;
+		}
+		else if (buttonPress == true && Application::IsKeyPressed('2'))
+		{
+			weaponValue = 2;
+			wave += 1;
+			buttonPress == false;
+			buttonValue = 0;
+			weaponinterface = false;
+		}
+		else if (buttonPress == true && Application::IsKeyPressed('3'))
+		{
+			weaponValue = 3;
+			wave += 1;
+			buttonPress == false;
+			buttonValue = 0;
+			weaponinterface = false;
+		}
+	}
+
+	if (!buttonPress)
+	{
+		buttonValue += dt;
+		if (buttonValue >= 1)
+		{
+			buttonPress = true;
+		}
+	}
+
 	if (Application::IsKeyPressed('I'))
 	{
-		weaponValue = 1;
+		weaponinterface = true;
 	}
-	if (Application::IsKeyPressed('O'))
-	{
-		weaponValue = 2;
-	}
-	if (Application::IsKeyPressed('P'))
-	{
-		weaponValue = 3;
-	}
+
+	//timer += (float)(1 * dt);
 
 	framesPerSecond = 1 / dt;
 
