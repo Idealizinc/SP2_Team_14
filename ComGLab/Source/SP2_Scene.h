@@ -154,6 +154,7 @@ public:
 	bool canUseDoor = true;
 	int weaponSelect;
 	bool sniper, rifle;
+	unsigned int robotCount;
 
 	unsigned short skyboxID = 0;
 
@@ -205,12 +206,6 @@ private:
 	int state;
 	float timer;
 	bool weaponinterface;
-	bool wave1robots;
-	bool wave2robots;
-	bool meteor;
-	bool wave4robots;
-	bool wave5robots;
-	bool boss;
 
 	//Light Stuff
 	Vector3 TownLightPosition;

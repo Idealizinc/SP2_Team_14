@@ -77,19 +77,14 @@ void SP2_Scene::Init()
 	lightOff = false;
 	hp = 100;
 	ammo = 100;
-	wave = 0;
+	wave = 1;
 	state = 0;
 	timer = 0;
 	weaponValue = 0;
 	weaponinterface = false;
-	wave1robots = false;
-	wave2robots = false;
-	meteor = false;
-	wave4robots = false;
-	wave5robots = false;
-	boss = false;
 	buttonPress = true;
 	buttonValue = 0;
+	robotCount = 0;
 
 	// Enable depth Test
 	glEnable(GL_DEPTH_TEST);
@@ -462,100 +457,82 @@ void SP2_Scene::initBounds()
 
 void SP2_Scene::gamestate()
 {
-	//outline for game state, will edit again next time
-	if (weaponinterface == true) //fighting 
-	{
-		//display screen UI
-	}
-
-	if (wave == 0)
-	{
-		
-	}
 	if (wave == 1)
 	{
-		wave1robots = true;
-		//to do: spawn robots
-		//if spawn number a certain number of robots
-		wave1robots = false;
-		//wait function here
-		//state = 1; 
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1 clear", Color(1, 0, 0), 3, 20, 15); //appear for a few seconds
-		weaponinterface = true;
-		if (Application::IsKeyPressed('Z'))
+
+		if (robotCount == 0)
 		{
-			weaponinterface = false;
-			//state = 0;
+			weaponinterface == true;
 		}
-		wave++;
+		else if (hp == 0)
+		{
+			//go back to start screen
+		}
 	}
 	if (wave == 2)
 	{
-		wave2robots = true;
-		//to do outside: spwan robots
-		//if spawn number a certain number of robots
-		wave2robots = false;
-		//wait function here
-		//state = 1; 
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2 clear", Color(1, 0, 0), 3, 20, 15);
-		weaponinterface = true;
-		if (Application::IsKeyPressed('Z'))
+
+		if (robotCount == 0)
 		{
-			weaponinterface = false;
-			//state = 0;
+			weaponinterface == true;
 		}
-		wave++;
+		else if (hp == 0)
+		{
+			//go back to start screen
+		}
 	}
 	if (wave == 3)
 	{
-		meteor = true;
-		//to do outside: spawn meteors
-		//if spawn number a certain number of meteors
-		meteor = false;
-		//wait function here
-		//state = 1;
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 20, 15);
-		weaponinterface = true;
-		if (Application::IsKeyPressed('Z'))
+
+		if (robotCount == 0)
 		{
-			weaponinterface = false;
-			//state = 0;
+			weaponinterface == true;
 		}
-		wave++;
+		else if (hp == 0)
+		{
+			//go back to start screen
+		}
 	}
 	if (wave == 4)
 	{
-		wave4robots = true;
-		//to do:spawn robots
-		//if spawn number a certain number of robots
-		wave4robots = false;
-		//wait function here
-		//state = 1;
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4 clear", Color(1, 0, 0), 3, 20, 15);
-		weaponinterface = true;
-		if (Application::IsKeyPressed('Z'))
+
+		if (robotCount == 0)
 		{
-			weaponinterface = false;
-			//state = 0;
+			weaponinterface == true;
 		}
-		wave++;
+		else if (hp == 0)
+		{
+			//go back to start screen
+		}
 	}
 	if (wave == 5)
 	{
-		wave5robots = true;
-		//to do:spawn robots
-		//if spawn number a certain number of robots
-		wave5robots = false;
-		//wait function here
-		//state = 1; //wave intermission state
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 20, 15);
-		weaponinterface = true;
-		if (Application::IsKeyPressed('Z'))
+
+		if (robotCount == 0)
 		{
-			weaponinterface = false;
-			//state = 0;
+			weaponinterface == true;
 		}
-		wave++;
+		else if (hp == 0)
+		{
+			//go back to start screen
+		}
+	}
+	if (wave == 6)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Boss Stage", Color(1, 0, 0), 3, 20, 15);
+		//if (//boss dead)
+		//{
+
+		//}
+		//else if (hp == 0)
+		//{
+		//	//go back to start screen
+		//}
 	}
 }
 void SP2_Scene::Update(double dt)
