@@ -81,7 +81,7 @@ void SP2_Scene::Init()
 	state = 0;
 	timer = 0;
 	weaponValue = 0;
-	weaponinterface = true;
+	weaponinterface = false;
 	buttonPress = true;
 	buttonValue = 0;
 	robotCount = 0;
@@ -465,6 +465,10 @@ void SP2_Scene::gamestate()
 		{
 			weaponinterface == true;
 		}
+		else if (hp == 0)
+		{
+			//go back to start screen
+		}
 	}
 	if (wave == 2)
 	{
@@ -473,6 +477,10 @@ void SP2_Scene::gamestate()
 		if (robotCount == 0)
 		{
 			weaponinterface == true;
+		}
+		else if (hp == 0)
+		{
+			//go back to start screen
 		}
 	}
 	if (wave == 3)
@@ -483,6 +491,10 @@ void SP2_Scene::gamestate()
 		{
 			weaponinterface == true;
 		}
+		else if (hp == 0)
+		{
+			//go back to start screen
+		}
 	}
 	if (wave == 4)
 	{
@@ -491,6 +503,10 @@ void SP2_Scene::gamestate()
 		if (robotCount == 0)
 		{
 			weaponinterface == true;
+		}
+		else if (hp == 0)
+		{
+			//go back to start screen
 		}
 	}
 	if (wave == 5)
@@ -501,6 +517,22 @@ void SP2_Scene::gamestate()
 		{
 			weaponinterface == true;
 		}
+		else if (hp == 0)
+		{
+			//go back to start screen
+		}
+	}
+	if (wave == 6)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Boss Stage", Color(1, 0, 0), 3, 20, 15);
+		//if (//boss dead)
+		//{
+
+		//}
+		//else if (hp == 0)
+		//{
+		//	//go back to start screen
+		//}
 	}
 }
 void SP2_Scene::Update(double dt)
