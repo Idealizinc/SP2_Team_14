@@ -52,7 +52,7 @@ class SP2_Scene : public Scene
 		GEO_SHOTGUN,
 		//GEO_PLAYERSHIP,
 		//GEO_MOTHERSHIP,
-		//GEO_DRONE,
+		GEO_DRONE,
 		//GEO_ROBOT1,
 		GEO_GATE,
 		//GEO_METEOR,

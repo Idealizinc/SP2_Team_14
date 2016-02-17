@@ -191,8 +191,8 @@ void SP2_Scene::Init()
 	//meshList[GEO_MOTHERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//Mothership.obj");
 	//meshList[GEO_MOTHERSHIP]->textureID = LoadTGA("Image//Tex_Mothership.tga");
 
-	//meshList[GEO_DRONE] = MeshBuilder::GenerateOBJ("test", "OBJ//Drone.obj");
-	//meshList[GEO_DRONE]->textureID = LoadTGA("Image//Tex_Drone.tga");
+	meshList[GEO_DRONE] = MeshBuilder::GenerateOBJ("test", "OBJ//Drone.obj");
+	meshList[GEO_DRONE]->textureID = LoadTGA("Image//Tex_Drone.tga");
 
 	//meshList[GEO_ROBOT1] = MeshBuilder::GenerateOBJ("test", "OBJ//Robot1.obj");
 	////meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Robot1.tga");
@@ -576,6 +576,7 @@ void SP2_Scene::Update(double dt)
 	{
 		translateX = 40;
 	}
+	translateX += (float)(5 * dt);
 	if (repairgate == true)
 	{
 		openleftgate = true;
@@ -597,7 +598,7 @@ void SP2_Scene::Update(double dt)
 			}
 		}
 	}
-	translateX += (float)(5 * dt);
+	
 	//End
 
 	//Resetting Scaling
@@ -883,7 +884,7 @@ void SP2_Scene::Render(double dt)
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	RenderMesh(meshList[GEO_GATE], true);
+	RenderMesh(meshList[GEO_DRONE], true);
 	modelStack.PopMatrix();
 
 	//INFO UI, STATS - BOTTOM LEFT
