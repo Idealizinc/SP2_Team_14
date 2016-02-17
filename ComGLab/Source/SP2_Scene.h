@@ -46,12 +46,17 @@ class SP2_Scene : public Scene
 		GEO_BACK,
 
 		//Custom Models
+		GEO_SMG,
 		GEO_SNIPER,
 		GEO_RIFLE,
+		GEO_SHOTGUN,
 		//GEO_PLAYERSHIP,
 		//GEO_MOTHERSHIP,
 		//GEO_DRONE,
 		//GEO_ROBOT1,
+		//GEO_GATE,
+		//GEO_METEOR,
+		//GEO_COMPUTER,
 
 		//add these enum in GEOMETRY_TYPE before NUM_GEOMETRY
 		GEO_TEXT,
@@ -161,7 +166,7 @@ public:
 	MS modelStack, viewStack, projectionStack;
 
 private:
-	unsigned short weaponValue = 1;
+	unsigned short weaponValue;
 	GLuint SB_Day_front, SB_Day_back, SB_Day_top, SB_Day_bottom, SB_Day_left, SB_Day_right;
 	GLuint SB_Nite_front, SB_Nite_back, SB_Nite_top, SB_Nite_bottom, SB_Nite_left, SB_Nite_right;
 	GLuint Crosshair;
@@ -183,34 +188,22 @@ private:
 	void RenderImageOnScreen(GLuint texture, float Xsize = 1, float Ysize = 1, float Xpos = 0, float Ypos = 0);
 	void RenderMeshOnScreen(Mesh* mesh, float Xsize = 1, float Ysize = 1, float Xpos = 0, float Ypos = 0, float Angle = 0, Vector3 RotationDir = Vector3(0, 0, 0));
 	void RenderWepScreen(bool render = false, Vector3 choices = Vector3(0, 0, 0));
+	void initBounds();
 
 	//Interaction Values
-	bool InteractionBoundsCheck(Vector3 CameraPosition, int value);
-	bool canPlacePlank = false;
-	bool plankPlaced = false;
-	Boundary PlankIxB;
-	bool canInteractWithKyogre = false;
-	bool interactedWithKyogre = false;
-	Boundary KyogreIxB;
-	void SP2_Scene::initBounds();
-	float framesPerSecond;
-	Boundary DoorIxB;
-	bool canOpenDoor = false;
-	bool DoorOpened = false;
-
-	Boundary LampIxB;
-	bool canUseLamp = false;
-	bool IsNight = false;
-	bool LampActive = true;
-	float timeCheck = 0;
+	bool buttonPress;
+	int buttonValue;
 
 	//test on screen values
 	double fps;
 	int hp;
 	int ammo;
 	int wave;
+	float framesPerSecond;
+
 	//check game state
 	int state;
+	float timer;
 	bool weaponinterface;
 	bool wave1robots;
 	bool wave2robots;

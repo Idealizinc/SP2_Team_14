@@ -79,13 +79,17 @@ void SP2_Scene::Init()
 	ammo = 100;
 	wave = 0;
 	state = 0;
-	weaponinterface = false;
+	timer = 0;
+	weaponValue = 0;
+	weaponinterface = true;
 	wave1robots = false;
 	wave2robots = false;
 	meteor = false;
 	wave4robots = false;
 	wave5robots = false;
 	boss = false;
+	buttonPress = true;
+	buttonValue = 0;
 
 	// Enable depth Test
 	glEnable(GL_DEPTH_TEST);
@@ -152,6 +156,7 @@ void SP2_Scene::Init()
 	UI_HP_Red = LoadTGA("Image//UI_HP_Red.tga");
 	UI_HP_Green = LoadTGA("Image//UI_HP_Green.tga");
 	UI_WepSel_BG = LoadTGA("Image//UI_WepSel_BG.tga");
+	Crosshair = LoadTGA("Image//Crosshair.tga");
 
 	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
 	meshList[GEO_FRONT]->textureID = SB_Day_front;
@@ -167,7 +172,10 @@ void SP2_Scene::Init()
 	meshList[GEO_RIGHT]->textureID = SB_Day_right;
 
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
-	meshList[GEO_TEXT]->textureID = LoadTGA("Image/calibri.tga");
+	meshList[GEO_TEXT]->textureID = LoadTGA("Image//calibri.tga");
+
+	meshList[GEO_SMG] = MeshBuilder::GenerateOBJ("test", "OBJ//SMG.obj");
+	meshList[GEO_SMG]->textureID = LoadTGA("Image//Tex_SMG.tga");
 
 	meshList[GEO_SNIPER] = MeshBuilder::GenerateOBJ("test", "OBJ//Sniper.obj");
 	meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Sniper.tga");
@@ -175,8 +183,8 @@ void SP2_Scene::Init()
 	meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
 
-	//meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
-	//meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
+	meshList[GEO_SHOTGUN] = MeshBuilder::GenerateOBJ("test", "OBJ//Shotgun.obj");
+	meshList[GEO_SHOTGUN]->textureID = LoadTGA("Image//Tex_Shotgun.tga");
 
 	//meshList[GEO_PLAYERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//PlayerShip.obj");
 	//meshList[GEO_PLAYERSHIP]->textureID = LoadTGA("Image//Tex_PlayerShip.tga");
@@ -189,6 +197,15 @@ void SP2_Scene::Init()
 
 	//meshList[GEO_ROBOT1] = MeshBuilder::GenerateOBJ("test", "OBJ//Robot1.obj");
 	////meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Robot1.tga");
+
+	/*meshList[GEO_GATE] = MeshBuilder::GenerateOBJ("test", "OBJ//gate.obj");
+	meshList[GEO_GATE]->textureID = LoadTGA("Image//gate.tga");*/
+
+	/*meshList[GEO_METEOR] = MeshBuilder::GenerateOBJ("test", "OBJ//meteor.obj");
+	meshList[GEO_METEOR]->textureID = LoadTGA("Image//meteor.tga");*/
+
+	/*meshList[GEO_COMPUTER] = MeshBuilder::GenerateOBJ("test", "OBJ//computer.obj");
+	meshList[GEO_COMPUTER]->textureID = LoadTGA("Image//computer.tga");*/
 
 	initBounds();
 }
@@ -306,6 +323,10 @@ void SP2_Scene::RenderWeaponInHand(unsigned short wepVal, float size, float x, f
 	modelStack.Rotate(200, 0, 1, 0);
 	modelStack.Rotate(5, -1, 0, 0);
 	modelStack.Scale(20, 20, 20);
+	if (wepVal == 0)
+	{
+		RenderMesh(meshList[GEO_SMG], true);
+	}
 	if (wepVal == 1)
 	{
 		RenderMesh(meshList[GEO_SNIPER], true);
@@ -313,6 +334,10 @@ void SP2_Scene::RenderWeaponInHand(unsigned short wepVal, float size, float x, f
 	if (wepVal == 2)
 	{
 		RenderMesh(meshList[GEO_RIFLE], true);
+	}
+	if (wepVal == 3)
+	{
+		RenderMesh(meshList[GEO_SHOTGUN], true);
 	}
 	projectionStack.PopMatrix();
 	viewStack.PopMatrix();
@@ -434,28 +459,28 @@ void SP2_Scene::initBounds()
 {
 	
 }
+
 void SP2_Scene::gamestate()
 {
 	//outline for game state, will edit again next time
 	if (weaponinterface == true) //fighting 
 	{
-		//display screen
+		//display screen UI
 	}
 
 	if (wave == 0)
 	{
-		//wait function here
-		wave++;
+		
 	}
 	if (wave == 1)
 	{
 		wave1robots = true;
 		//to do: spawn robots
-		//if all robots dead, maybe after killing a certain number
+		//if spawn number a certain number of robots
 		wave1robots = false;
 		//wait function here
 		//state = 1; 
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1 clear", Color(1, 0, 0), 3, 22, 15); //appear for a few seconds
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1 clear", Color(1, 0, 0), 3, 20, 15); //appear for a few seconds
 		weaponinterface = true;
 		if (Application::IsKeyPressed('Z'))
 		{
@@ -468,11 +493,11 @@ void SP2_Scene::gamestate()
 	{
 		wave2robots = true;
 		//to do outside: spwan robots
-		//if kill robots
+		//if spawn number a certain number of robots
 		wave2robots = false;
 		//wait function here
 		//state = 1; 
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2 clear", Color(1, 0, 0), 3, 22, 15);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2 clear", Color(1, 0, 0), 3, 20, 15);
 		weaponinterface = true;
 		if (Application::IsKeyPressed('Z'))
 		{
@@ -485,11 +510,11 @@ void SP2_Scene::gamestate()
 	{
 		meteor = true;
 		//to do outside: spawn meteors
-		//if destroy meteor
+		//if spawn number a certain number of meteors
 		meteor = false;
 		//wait function here
 		//state = 1;
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 22, 15);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 20, 15);
 		weaponinterface = true;
 		if (Application::IsKeyPressed('Z'))
 		{
@@ -502,11 +527,11 @@ void SP2_Scene::gamestate()
 	{
 		wave4robots = true;
 		//to do:spawn robots
-		//if kill all robots
+		//if spawn number a certain number of robots
 		wave4robots = false;
 		//wait function here
 		//state = 1;
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4 clear", Color(1, 0, 0), 3, 22, 15);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4 clear", Color(1, 0, 0), 3, 20, 15);
 		weaponinterface = true;
 		if (Application::IsKeyPressed('Z'))
 		{
@@ -519,11 +544,11 @@ void SP2_Scene::gamestate()
 	{
 		wave5robots = true;
 		//to do:spawn robots
-		//if kill all robots
+		//if spawn number a certain number of robots
 		wave5robots = false;
 		//wait function here
 		//state = 1; //wave intermission state
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 22, 15);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 20, 15);
 		weaponinterface = true;
 		if (Application::IsKeyPressed('Z'))
 		{
@@ -575,34 +600,67 @@ void SP2_Scene::Update(double dt)
 		scaleAll = 5;
 	}
 	scaleAll += (float)(2 * dt);
-	if (Application::IsKeyPressed('1'))
+	if (Application::IsKeyPressed('6'))
 	{
 		glEnable(GL_CULL_FACE);
 	}
-	if (Application::IsKeyPressed('2'))
+	if (Application::IsKeyPressed('7'))
 	{
 		glDisable(GL_CULL_FACE);
 	}
-	if (Application::IsKeyPressed('3'))
+	if (Application::IsKeyPressed('8'))
 	{
 		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 	}
-	if (Application::IsKeyPressed('4'))
+	if (Application::IsKeyPressed('9'))
 	{
 		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	}
+
+	//Weapon
+	if (weaponinterface == true)
+	{
+		if (buttonPress == true && Application::IsKeyPressed('1'))
+		{
+			weaponValue = 1;
+			wave += 1;
+			buttonPress == false;
+			buttonValue = 0;
+			weaponinterface = false;
+		}
+		else if (buttonPress == true && Application::IsKeyPressed('2'))
+		{
+			weaponValue = 2;
+			wave += 1;
+			buttonPress == false;
+			buttonValue = 0;
+			weaponinterface = false;
+		}
+		else if (buttonPress == true && Application::IsKeyPressed('3'))
+		{
+			weaponValue = 3;
+			wave += 1;
+			buttonPress == false;
+			buttonValue = 0;
+			weaponinterface = false;
+		}
+	}
+
+	if (!buttonPress)
+	{
+		buttonValue += dt;
+		if (buttonValue >= 1)
+		{
+			buttonPress = true;
+		}
+	}
+
 	if (Application::IsKeyPressed('I'))
 	{
-		weaponValue = 1;
+		weaponinterface = true;
 	}
-	if (Application::IsKeyPressed('O'))
-	{
-		weaponValue = 2;
-	}
-	if (Application::IsKeyPressed('P'))
-	{
-		weaponValue = 3;
-	}
+
+	//timer += (float)(1 * dt);
 
 	framesPerSecond = 1 / dt;
 
@@ -682,7 +740,7 @@ void SP2_Scene::RenderWepScreen(bool render, Vector3 choices)
 		RenderMeshOnScreen(meshList[GEO_SNIPER], 1, 1, 85, 40, constRotation * 5, Vector3(1, 1, 0));
 		//Right
 		RenderImageOnScreen(UI_BG, 30, 50, 120, 40);
-		RenderMeshOnScreen(meshList[GEO_RIFLE], 1, 1, 125, 40, constRotation * 5, Vector3(1, 1, 0));
+		RenderMeshOnScreen(meshList[GEO_SHOTGUN], 1, 1, 125, 40, constRotation * 5, Vector3(1, 1, 0));
 		modelStack.PopMatrix();
 		//Wep Select UI END
 	}
@@ -757,32 +815,32 @@ void SP2_Scene::Render(double dt)
 
 	if (wave == 0)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Robot wave incoming", Color(1, 0, 0), 3, 22, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robot wave incoming", Color(1, 0, 0), 3, 20, 29);
 	}
 	if (wave == 1)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "*Robots coming from all directions*", Color(1, 0, 0), 3, 22, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "*Robots coming from all directions*", Color(1, 0, 0), 3, 20, 29);
 	}
 	if (wave == 2)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Robots now walk faster!!", Color(1, 0, 0), 3, 22, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robots now walk faster!!", Color(1, 0, 0), 3, 20, 29);
 	}
 	if (wave == 3)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Meteors incoming!!!", Color(1, 0, 1), 3, 22, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Meteors incoming!!!", Color(1, 0, 1), 3, 20, 29);
 	}
 	if (wave == 4)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Robots now fire weapons faster!!", Color(1, 0, 0), 3, 22, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robots now fire weapons faster!!", Color(1, 0, 0), 3, 20, 29);
 	}
 	if (wave == 5)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Robots are now in god mode!!", Color(1, 0, 0), 3, 22, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robots are now in god mode!!", Color(1, 0, 0), 3, 20, 29);
 	}
 	//boss wave 
 	if (wave == 6)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Boss: Defeat Mothership", Color(1, 0, 0), 3, 22, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Boss: Defeat Mothership", Color(1, 0, 0), 3, 20, 29);
 	}
 	readtextfile();
 
@@ -820,7 +878,7 @@ void SP2_Scene::Render(double dt)
 
 	RenderImageOnScreen(Crosshair, 10, 10, 80, 45);
 	
-	RenderWepScreen(true);
+	RenderWepScreen(weaponinterface);
 
 	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(hp), Color(0, 0.5, 0), 3, 2, 29);
 
