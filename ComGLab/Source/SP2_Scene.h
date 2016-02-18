@@ -172,6 +172,7 @@ public:
 	float rotationalLimit;
 	float translationLimit;
 	float scalingLimit;
+	float rotateAngle;
 	bool rLimiter;
 	bool toggleLimiters;
 	bool limitersON;

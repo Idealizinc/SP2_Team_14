@@ -192,10 +192,7 @@ void SP2_Scene::Init()
 
 	//meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	//meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
-<<<<<<< HEAD
 
-=======
->>>>>>> 5aadd723ac878552403be2e634d3219d2a08cab9
 	meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
 
@@ -613,6 +610,13 @@ void SP2_Scene::Update(double dt)
 	camera.Update(dt);
 	constRotation += (float)(10 * pause * dt);
 	constTranslation += (float)(10 * pause  * dt);
+
+	rotateAngle += (float)(2 * dt);
+	if (rotateAngle > 30)
+	{
+		rotateAngle = 30;
+	}
+
 	//Lerping Rotation
 	if ((rLimiter == true))
 	{
@@ -966,15 +970,6 @@ void SP2_Scene::Render(double dt)
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-<<<<<<< HEAD
-=======
-	modelStack.Translate(0, 0, 0);
-	modelStack.Scale(1, 1, 1.3);
-	RenderMesh(meshList[GEO_GATE_MAIN], true);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
->>>>>>> 5aadd723ac878552403be2e634d3219d2a08cab9
 	modelStack.Translate(constTranslation, 2, 5);
 	modelStack.Scale(0.8, 0.8, 0.8);
 	RenderMesh(meshList[GEO_SNIPER], true);
@@ -984,14 +979,11 @@ void SP2_Scene::Render(double dt)
 	RenderWeaponInHand(weaponValue, 5, 1, 1);
 	modelStack.PopMatrix();
 
-<<<<<<< HEAD
 	/*modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_DRONE], true);
 	modelStack.PopMatrix();*/
 
 	//drone
-=======
->>>>>>> 5aadd723ac878552403be2e634d3219d2a08cab9
 	modelStack.PushMatrix();
 	modelStack.Translate(0, 0, -10);
 	RenderMesh(meshList[GEO_DRONEBODY], true);
@@ -1008,6 +1000,7 @@ void SP2_Scene::Render(double dt)
 	modelStack.Translate(0, 0, 10);
 	RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
 		modelStack.PushMatrix();
+		modelStack.Rotate(rotateAngle, 0, 0, 1);
 		RenderMesh(meshList[GEO_MELEEROBOTLEFTARM], true);
 		modelStack.PopMatrix();
 			modelStack.PushMatrix();
@@ -1068,13 +1061,10 @@ void SP2_Scene::Render(double dt)
 
 	RenderImageOnScreen(SB_Day_left, 10, 10, 1, 1);
 
-<<<<<<< HEAD
 	/*modelStack.PushMatrix();
 	RenderSniperInHand(meshList[GEO_SNIPER], 5, 1, 1);
 	modelStack.PopMatrix();*/
 
-=======
->>>>>>> 5aadd723ac878552403be2e634d3219d2a08cab9
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_METEOR], true);
 	modelStack.PopMatrix();
