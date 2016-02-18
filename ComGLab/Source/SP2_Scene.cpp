@@ -98,6 +98,10 @@ void SP2_Scene::Init()
 	rightgate = 0;
 	armrotate = true;
 	rotateAngle = 0;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 543999b029761b0b4253a8d8044b7cf52c15157c
 	WepItf_Choices = Vector3(0, 0, 0);
 
 	// Enable depth Test
@@ -192,8 +196,11 @@ void SP2_Scene::Init()
 	meshList[GEO_GATE_SIDE] = MeshBuilder::GenerateOBJ("gate_side", "OBJ//gate_side.obj");
 	meshList[GEO_GATE_SIDE]->textureID = LoadTGA("Image//bullet.tga"); // temporary texture
 
+<<<<<<< HEAD
 	//meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	//meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
+=======
+>>>>>>> 543999b029761b0b4253a8d8044b7cf52c15157c
 	//meshList[GEO_PLAYERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//PlayerShip.obj");
 	//meshList[GEO_PLAYERSHIP]->textureID = LoadTGA("Image//Tex_PlayerShip.tga");
 
@@ -1043,6 +1050,52 @@ void SP2_Scene::RenderWepScreen(bool render, Vector3 choices)
 	}
 }
 
+void SP2_Scene::RenderUI()
+{
+	//Render In-Hand Weapon
+	modelStack.PushMatrix();
+	RenderWeaponInHand(weaponValue, 5, 1, 1);
+	modelStack.PopMatrix();
+
+	//INFO UI, STATS - BOTTOM LEFT
+	modelStack.PushMatrix();
+	RenderImageOnScreen(UI_BG, 50, 10, 25, 5);
+	std::stringstream fpsText;
+	fpsText << std::fixed << std::setprecision(1) << "FPS = " << framesPerSecond;
+	RenderTextOnScreen(meshList[GEO_TEXT], fpsText.str(), Color(1, 1, 1), 2.5, 5, 7.5);
+	std::stringstream coordText;
+	coordText << std::fixed << std::setprecision(1) << "Player Location = (" << camera.getCameraPosition().x << ", " << camera.getCameraPosition().y << ", " << camera.getCameraPosition().z << ")";
+	RenderTextOnScreen(meshList[GEO_TEXT], coordText.str(), Color(1, 1, 1), 2.5, 5, 5);
+	modelStack.PopMatrix();
+	//INFO UI, STATS END
+
+	//INFO UI, HP - CENTER
+	modelStack.PushMatrix();
+	RenderImageOnScreen(UI_BG, 50, 10, 80, 5);
+	modelStack.PopMatrix();
+	//INFO UI, HP END
+
+	RenderImageOnScreen(Crosshair, 10, 10, 80, 45);
+
+	RenderWepScreen(weaponinterface, WepItf_Choices);
+
+	Rendergate(repairgate);
+
+	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(basehp), Color(0, 0.5, 0), 3, 2.5, 87);
+
+	RenderTextOnScreen(meshList[GEO_TEXT], "Ammo: " + std::to_string(ammo), Color(0, 0.5, 0), 3, 2.5, 84);
+
+	RenderTextOnScreen(meshList[GEO_TEXT], "Wave Number: " + std::to_string(wave), Color(0, 0.5, 0), 3, 2.5, 81);
+
+	if (pause == 0)
+	{
+		modelStack.PushMatrix();
+		RenderImageOnScreen(UI_BG, 50, 10, 80, 45);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Paused", Color(0, 0.5, 0), 10, 68, 45);
+		modelStack.PopMatrix();
+	}
+}
+
 void SP2_Scene::Render(double dt)
 {
 	// Render VBO here
@@ -1165,6 +1218,7 @@ void SP2_Scene::Render(double dt)
 	modelStack.PopMatrix();
 	//RB End
 
+<<<<<<< HEAD
 	modelStack.PushMatrix();
 	modelStack.Translate(-0.3, 2, 10);
 	modelStack.Rotate(90, 0, 0, 1);
@@ -1277,60 +1331,97 @@ void SP2_Scene::Render(double dt)
 					modelStack.PopMatrix();
 	modelStack.PopMatrix();
 
-
+=======
+	////drone
 	//modelStack.PushMatrix();
-	//modelStack.Translate(0,2,5);
-	//modelStack.Scale(0.8, 0.8, 0.8);
-	//RenderMesh(meshList[GEO_SNIPER], true);
+	//modelStack.Translate(0, 0, -10);
+	//RenderMesh(meshList[GEO_DRONEBODY], true);
+	//	modelStack.PushMatrix();
+	//	RenderMesh(meshList[GEO_DRONELEFTUPPERARM], true);
+	//		modelStack.PushMatrix();
+	//		RenderMesh(meshList[GEO_DRONELEFTLOWERARM], true);
+	//		modelStack.PopMatrix();
+	//	modelStack.PopMatrix();
+	//		modelStack.PushMatrix();
+	//		RenderMesh(meshList[GEO_DRONERIGHTUPPERARM], true);
+	//			modelStack.PushMatrix();
+	//			RenderMesh(meshList[GEO_DRONERIGHTLOWERARM], true);
+	//			modelStack.PopMatrix();
+	//		modelStack.PopMatrix();
+	//modelStack.PopMatrix();
+>>>>>>> 543999b029761b0b4253a8d8044b7cf52c15157c
+
+	////melee robot
+	//modelStack.PushMatrix();
+	//modelStack.Translate(0, 0, 10);
+	//RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
+	//	modelStack.PushMatrix();
+	//	modelStack.Rotate(rotateAngle, 1, 0, 0);
+	//	modelStack.Translate(0, 0, -10);
+	//	modelStack.Translate(0, 0, 10);
+	//	modelStack.Translate(0.3, 0, 0);
+	//	RenderMesh(meshList[GEO_MELEEROBOTLEFTUPPERARM], true);
+	//		modelStack.PushMatrix();
+	//		modelStack.Rotate(rotateAngle, 1, 0, 0);
+	//		RenderMesh(meshList[GEO_MELEEROBOTLEFTLOWERARM], true);
+	//		modelStack.PopMatrix();
+	//	modelStack.PopMatrix();
+	//		modelStack.PushMatrix();
+	//		modelStack.Rotate(rotateAngle, 1, 0, 0);
+	//		modelStack.Translate(0, 0, -10);
+	//		modelStack.Translate(0, 0, 10);
+	//		modelStack.Translate(-0.3, 0, 0);
+	//		RenderMesh(meshList[GEO_MELEEROBOTRIGHTARM], true);
+	//		modelStack.PopMatrix();
+	//				modelStack.PushMatrix();
+	//				RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
+	//				modelStack.PopMatrix();
+	//					modelStack.PushMatrix();
+	//					RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
+	//					modelStack.PopMatrix();
 	//modelStack.PopMatrix();
 
-	RenderImageOnScreen(SB_Day_left, 10, 10, 1, 1);
+	////range robot
+	//modelStack.PushMatrix();
+	//modelStack.Translate(10, 0, 0);
+	//modelStack.Rotate(90, 0, 1, 0);
+	//RenderMesh(meshList[GEO_RANGEROBOTBODY], true);
+	//	modelStack.PushMatrix();
+	//	RenderMesh(meshList[GEO_RANGEROBOTLEFTARM], true);
+	//	modelStack.PopMatrix();
+	//		modelStack.PushMatrix();
+	//		RenderMesh(meshList[GEO_RANGEROBOTRIGHTARM], true);
+	//		modelStack.PopMatrix();
+	//			modelStack.PushMatrix();
+	//			RenderMesh(meshList[GEO_RANGEROBOTLEFTLEG], true);
+	//			modelStack.PopMatrix();
+	//				modelStack.PushMatrix();
+	//				RenderMesh(meshList[GEO_RANGEROBOTRIGHTLEG], true);
+	//				modelStack.PopMatrix();
+	//modelStack.PopMatrix();
 
-	/*modelStack.PushMatrix();
-	RenderSniperInHand(meshList[GEO_SNIPER], 5, 1, 1);
-	modelStack.PopMatrix();*/
+	////mixed robot
+	//modelStack.PushMatrix();
+	//modelStack.Translate(-10, 0, 0);
+	//modelStack.Rotate(-90, 0, 1, 0);
+	//RenderMesh(meshList[GEO_MIXEDROBOTBODY], true);
+	//	modelStack.PushMatrix();
+	//	RenderMesh(meshList[GEO_MIXEDROBOTLEFTARM], true);
+	//	modelStack.PopMatrix();
+	//		modelStack.PushMatrix();
+	//		RenderMesh(meshList[GEO_MIXEDROBOTRIGHTARM], true);
+	//		modelStack.PopMatrix();
+	//			modelStack.PushMatrix();
+	//			RenderMesh(meshList[GEO_MIXEDROBOTLEFTLEG], true);
+	//			modelStack.PopMatrix();
+	//				modelStack.PushMatrix();
+	//				RenderMesh(meshList[GEO_MIXEDROBOTRIGHTLEG], true);
+	//				modelStack.PopMatrix();
+	//modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_METEOR], true);
 	modelStack.PopMatrix();
-
-	//INFO UI, STATS - BOTTOM LEFT
-	modelStack.PushMatrix();
-	RenderImageOnScreen(UI_BG, 50, 10, 25, 5);
-	std::stringstream fpsText;
-	fpsText << std::fixed << std::setprecision(1) << "FPS = " << framesPerSecond;
-	RenderTextOnScreen(meshList[GEO_TEXT], fpsText.str(), Color(1, 1, 1), 2.5, 5, 7.5);
-	std::stringstream coordText;
-	coordText << std::fixed << std::setprecision(1) << "Player Location = (" << camera.getCameraPosition().x << ", " << camera.getCameraPosition().y << ", " << camera.getCameraPosition().z << ")";
-	RenderTextOnScreen(meshList[GEO_TEXT], coordText.str(), Color(1, 1, 1), 2.5, 5, 5);
-	modelStack.PopMatrix();
-	//INFO UI, STATS END
-
-	//INFO UI, HP - CENTER
-	modelStack.PushMatrix();
-	RenderImageOnScreen(UI_BG, 50, 10, 80, 5);
-	modelStack.PopMatrix();
-	//INFO UI, HP END
-
-	RenderImageOnScreen(Crosshair, 10, 10, 80, 45);
-
-	RenderWepScreen(weaponinterface, WepItf_Choices);
-
-	Rendergate(repairgate);
-
-	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(basehp), Color(0, 0.5, 0), 3, 2.5, 87);
-
-	RenderTextOnScreen(meshList[GEO_TEXT], "Ammo: " + std::to_string(ammo), Color(0, 0.5, 0), 3, 2.5, 84);
-
-	RenderTextOnScreen(meshList[GEO_TEXT], "Wave Number: " + std::to_string(wave), Color(0, 0.5, 0), 3, 2.5, 81);
-
-	if (pause == 0)
-	{
-		modelStack.PushMatrix();
-		RenderImageOnScreen(UI_BG, 50, 10, 80, 45);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Paused", Color(0, 0.5, 0), 10, 68, 45);
-		modelStack.PopMatrix();
-	}
 
 	gamestate();
 
@@ -1376,6 +1467,11 @@ void SP2_Scene::Render(double dt)
 		modelStack.PopMatrix();
 	modelStack.PopMatrix();
 	
+<<<<<<< HEAD
+=======
+	//DO NOT RENDER ANYTHING UNDER THIS//
+	RenderUI();
+>>>>>>> 543999b029761b0b4253a8d8044b7cf52c15157c
 }
 
 void SP2_Scene::Exit()
