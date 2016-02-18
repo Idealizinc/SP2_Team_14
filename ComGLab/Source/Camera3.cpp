@@ -145,6 +145,7 @@ void Camera3::cameraMovement2(double dt)
 	// Movement increments
 	float walkingX = 0;
 	float walkingZ = 0;
+	float walkingY = 0;
 	if (Application::IsKeyPressed(VK_LSHIFT) || Application::IsKeyPressed(VK_RSHIFT))
 	{
 		walkingSpeed = 2.5;
@@ -171,6 +172,10 @@ void Camera3::cameraMovement2(double dt)
 		walkingX += (float)(sin(Math::DegreeToRadian(CameraYrotation + 270)) / walkingSpeed);
 		walkingZ += (float)(cos(Math::DegreeToRadian(CameraYrotation + 270)) / walkingSpeed);
 	}
+	if (Application::IsKeyPressed(' ') || Application::IsKeyPressed(VK_SPACE))
+	{
+		//walkingY += 
+	}
 	if (walkingX != 0 /*&& BoatBack.BoundaryCheck(walkingX + position.x, position.z)*/)
 	{
 		position.x += walkingX;
@@ -179,21 +184,6 @@ void Camera3::cameraMovement2(double dt)
 	{
 		position.z += walkingZ;
 	}
-}
-bool Camera3::boundsCheckXaxis(const int& x, const float& posX) {
-	if (posX < x && posX > -x)
-	{
-		return true;
-	}
-	else return false;
-}
-
-bool Camera3::boundsCheckZaxis(const int& z, const float& posZ) {
-	if (posZ < z && posZ > -z)
-	{
-		return true;
-	}
-	else return false;
 }
 
 void Camera3::initBoundVec()
@@ -236,198 +226,4 @@ void Camera3::initBoundVec()
 	Tower1.set(-3, 3, -63, -57);
 }
 
-
-bool Camera3::boundsCheckXY(const float& posX, const float& posZ)
-{
-	// Check if player will get into a box they aren't allowed to be within
-	// Return true if not in any of such boxes
-	/*if (BoatBack.active == true &&
-		posX < BoatBack.xMax && posX > BoatBack.xMin &&
-		posZ < BoatBack.zMax && posZ > BoatBack.zMin)
-	{
-		return false;
-	}
-	if (BoatLeft.active == true &&
-		posX < BoatLeft.xMax && posX > BoatLeft.xMin &&
-		posZ < BoatLeft.zMax && posZ > BoatLeft.zMin)
-	{
-		return false;
-	}
-	if (BoatRight.active == true &&
-		posX < BoatRight.xMax && posX > BoatRight.xMin &&
-		posZ < BoatRight.zMax && posZ > BoatRight.zMin)
-	{
-		return false;
-	}
-	if (BoatFrontL.active == true &&
-		posX < BoatFrontL.xMax && posX > BoatFrontL.xMin &&
-		posZ < BoatFrontL.zMax && posZ > BoatFrontL.zMin)
-	{
-		return false;
-	}
-	if (BoatFrontR.active == true &&
-		posX < BoatFrontR.xMax && posX > BoatFrontR.xMin &&
-		posZ < BoatFrontR.zMax && posZ > BoatFrontR.zMin)
-	{
-		return false;
-	}
-	if (BoatPlank.active == false &&
-		posX < BoatPlank.xMax && posX > BoatPlank.xMin &&
-		posZ < BoatPlank.zMax && posZ > BoatPlank.zMin)
-	{
-		return false;
-	}
-	if (BaseR1.active == true &&
-		posX < BaseR1.xMax && posX > BaseR1.xMin &&
-		posZ < BaseR1.zMax && posZ > BaseR1.zMin)
-	{
-		return false;
-	}
-	if (BaseL1.active == true &&
-		posX < BaseL1.xMax && posX > BaseL1.xMin &&
-		posZ < BaseL1.zMax && posZ > BaseL1 .zMin)
-	{
-		return false;
-	}
-	if (BaseL2.active == true &&
-		posX < BaseL2.xMax && posX > BaseL2.xMin &&
-		posZ < BaseL2.zMax && posZ > BaseL2.zMin)
-	{
-		return false;
-	}
-	if (BaseR2.active == true &&
-		posX < BaseR2.xMax && posX > BaseR2.xMin &&
-		posZ < BaseR2.zMax && posZ > BaseR2.zMin)
-	{
-		return false;
-	}
-	if (BaseR3.active == true &&
-		posX < BaseR3.xMax && posX > BaseR3.xMin &&
-		posZ < BaseR3.zMax && posZ > BaseR3.zMin)
-	{
-		return false;
-	}
-	if (BaseR4.active == true &&
-		posX < BaseR4.xMax && posX > BaseR4.xMin &&
-		posZ < BaseR4.zMax && posZ > BaseR4.zMin)
-	{
-		return false;
-	}
-	if (GrassR.active == true &&
-		posX < GrassR.xMax && posX > GrassR.xMin &&
-		posZ < GrassR.zMax && posZ > GrassR.zMin)
-	{
-		return false;
-	}
-	if (GrassL.active == true &&
-		posX < GrassL.xMax && posX > GrassL.xMin &&
-		posZ < GrassL.zMax && posZ > GrassL.zMin)
-	{
-		return false;
-	}
-	if (GrassC.active == true &&
-		posX < GrassC.xMax && posX > GrassC.xMin &&
-		posZ < GrassC.zMax && posZ > GrassC.zMin)
-	{
-		return false;
-	}
-	if (HomeB.active == true &&
-		posX < HomeB.xMax && posX > HomeB.xMin &&
-		posZ < HomeB.zMax && posZ > HomeB.zMin)
-	{
-		return false;
-	}
-	if (HomeL.active == true &&
-		posX < HomeL.xMax && posX > HomeL.xMin &&
-		posZ < HomeL.zMax && posZ > HomeL.zMin)
-	{
-		return false;
-	}
-	if (HomeR.active == true &&
-		posX < HomeR.xMax && posX > HomeR.xMin &&
-		posZ < HomeR.zMax && posZ > HomeR.zMin)
-	{
-		return false;
-	}
-	if (HomeTable.active == true &&
-		posX < HomeTable.xMax && posX > HomeTable.xMin &&
-		posZ < HomeTable.zMax && posZ > HomeTable.zMin)
-	{
-		return false;
-	}
-	if (HomeFL.active == true &&
-		posX < HomeFL.xMax && posX > HomeFL.xMin &&
-		posZ < HomeFL.zMax && posZ > HomeFL.zMin)
-	{
-		return false;
-	}
-	if (HomeFR.active == true &&
-		posX < HomeFR.xMax && posX > HomeFR.xMin &&
-		posZ < HomeFR.zMax && posZ > HomeFR.zMin)
-	{
-		return false;
-	}
-	if (HomeDoor.active == false &&
-		posX < HomeDoor.xMax && posX > HomeDoor.xMin &&
-		posZ < HomeDoor.zMax && posZ > HomeDoor.zMin)
-	{
-		return false;
-	}
-	if (HousesL.active == true &&
-		posX < HousesL.xMax && posX > HousesL.xMin &&
-		posZ < HousesL.zMax && posZ > HousesL.zMin)
-	{
-		return false;
-	}
-	if (HousesL2.active == true &&
-		posX < HousesL2.xMax && posX > HousesL2.xMin &&
-		posZ < HousesL2.zMax && posZ > HousesL2.zMin)
-	{
-		return false;
-	}
-	if (HousesR.active == true &&
-		posX < HousesR.xMax && posX > HousesR.xMin &&
-		posZ < HousesR.zMax && posZ > HousesR.zMin)
-	{
-		return false;
-	}
-	if (HousesR2.active == true &&
-		posX < HousesR2.xMax && posX > HousesR2.xMin &&
-		posZ < HousesR2.zMax && posZ > HousesR2.zMin)
-	{
-		return false;
-	}
-	if (HousesL3.active == true &&
-		posX < HousesL3.xMax && posX > HousesL3.xMin &&
-		posZ < HousesL3.zMax && posZ > HousesL3.zMin)
-	{
-		return false;
-	}
-	if (HousesR3.active == true &&
-		posX < HousesR3.xMax && posX > HousesR3.xMin &&
-		posZ < HousesR3.zMax && posZ > HousesR3.zMin)
-	{
-		return false;
-	}
-	if (HousesL4.active == true &&
-		posX < HousesL4.xMax && posX > HousesL4.xMin &&
-		posZ < HousesL4.zMax && posZ > HousesL4.zMin)
-	{
-		return false;
-	}
-	if (HousesR4.active == true &&
-		posX < HousesR4.xMax && posX > HousesR4.xMin &&
-		posZ < HousesR4.zMax && posZ > HousesR4.zMin)
-	{
-		return false;
-	}
-	if (Tower1.active == true &&
-		posX < Tower1.xMax && posX > Tower1.xMin &&
-		posZ < Tower1.zMax && posZ > Tower1.zMin)
-	{
-		return false;
-	}
-	else*/
-	return true;
-}
 

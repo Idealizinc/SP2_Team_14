@@ -198,8 +198,8 @@ void SP2_Scene::Init()
 	//meshList[GEO_ROBOT1] = MeshBuilder::GenerateOBJ("test", "OBJ//Robot1.obj");
 	////meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Robot1.tga");
 
-	meshList[GEO_GATE] = MeshBuilder::GenerateOBJ("test", "OBJ//gate.obj");
-	meshList[GEO_GATE]->textureID = LoadTGA("Image//gate.tga");
+	meshList[GEO_GATE] = MeshBuilder::GenerateOBJ("test", "OBJ//Gate_Door.obj");
+	meshList[GEO_GATE]->textureID = LoadTGA("Image//Tex_Gate2.tga");
 
 	/*meshList[GEO_METEOR] = MeshBuilder::GenerateOBJ("test", "OBJ//meteor.obj");
 	meshList[GEO_METEOR]->textureID = LoadTGA("Image//meteor.tga");*/
@@ -697,7 +697,7 @@ void SP2_Scene::Update(double dt)
 		buttonValue = 0;
 	}
 
-	framesPerSecond = 1 * pause / dt;
+	framesPerSecond = 1 / dt;
 
 	TownLightPosition.y += tweenVal / 15000;
 	light[1].position.Set(TownLightPosition.x, TownLightPosition.y, TownLightPosition.z);
@@ -939,7 +939,11 @@ void SP2_Scene::Render(double dt)
 	
 	gamestate();
 
-	Rendergate(repairgate);
+	modelStack.PushMatrix();
+	modelStack.Translate(0, 10, 0);
+	Rendergate(true);
+	modelStack.PopMatrix();
+	
 }
 
 void SP2_Scene::Exit()
