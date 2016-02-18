@@ -197,12 +197,6 @@ void SP2_Scene::Init()
 	meshList[GEO_GATE_SIDE] = MeshBuilder::GenerateOBJ("gate_side", "OBJ//gate_side.obj");
 	meshList[GEO_GATE_SIDE]->textureID = LoadTGA("Image//bullet.tga"); // temporary texture
 
-	//meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
-	//meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
-<<<<<<< HEAD
-
-=======
->>>>>>> 87032e2d6e9c31a29b42a719a72eae532ab2fac7
 	meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
 
@@ -944,10 +938,7 @@ void SP2_Scene::Render(double dt)
 	RenderMesh(meshList[GEO_GATE_MAIN], true);
 	modelStack.PopMatrix();
 
-<<<<<<< HEAD
-=======
 	modelStack.PushMatrix();
->>>>>>> 87032e2d6e9c31a29b42a719a72eae532ab2fac7
 	modelStack.Translate(constTranslation, 2, 5);
 	modelStack.Scale(0.8, 0.8, 0.8);
 	RenderMesh(meshList[GEO_SNIPER], true);
@@ -957,13 +948,6 @@ void SP2_Scene::Render(double dt)
 	RenderWeaponInHand(weaponValue, 5, 1, 1);
 	modelStack.PopMatrix();
 
-<<<<<<< HEAD
-	/*modelStack.PushMatrix();
-	RenderMesh(meshList[GEO_DRONE], true);
-	modelStack.PopMatrix();*/
-	
-=======
->>>>>>> 87032e2d6e9c31a29b42a719a72eae532ab2fac7
 	modelStack.PushMatrix();
 	modelStack.Translate(0, 20, 0);
 	//modelStack.Rotate(270, 0, 0, 1);
@@ -978,13 +962,6 @@ void SP2_Scene::Render(double dt)
 
 	RenderImageOnScreen(SB_Day_left, 10, 10, 1, 1);
 
-<<<<<<< HEAD
-	/*modelStack.PushMatrix();
-	RenderSniperInHand(meshList[GEO_SNIPER], 5, 1, 1);
-	modelStack.PopMatrix();*/
-
-=======
->>>>>>> 87032e2d6e9c31a29b42a719a72eae532ab2fac7
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_METEOR], true);
 	modelStack.PopMatrix();

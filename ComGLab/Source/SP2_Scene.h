@@ -210,6 +210,7 @@ private:
 	double fps;
 	unsigned int basehp;
 	unsigned int gatehp;
+	unsigned int playerhp;
 	unsigned int bosshp;
 	unsigned int ammo;
 	unsigned int wave;
