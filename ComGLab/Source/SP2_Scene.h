@@ -208,6 +208,7 @@ private:
 	double fps;
 	unsigned int basehp;
 	unsigned int gatehp;
+	unsigned int bosshp;
 	unsigned int ammo;
 	unsigned int wave;
 	float framesPerSecond;

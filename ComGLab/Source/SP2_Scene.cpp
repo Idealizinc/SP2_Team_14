@@ -77,23 +77,16 @@ void SP2_Scene::Init()
 	lightOff = false;
 	basehp = 100;
 	gatehp = 20;
+	bosshp = 100;
 	ammo = 100;
 	wave = 1;
 	state = 0;
 	timer = 0;
 	weaponValue = 0;
 	weaponinterface = false;
-<<<<<<< HEAD
-	wave1robots = false;
-	wave2robots = false;
-	meteor = false;
-	wave4robots = false;
-	wave5robots = false;
-	boss = false;
 	basePosition.x = 4;
 	basePosition.y = 3.2;
 	basePosition.z = 0;
-=======
 	repairgate = false;
 	buttonPress = true;
 	buttonValue = 0;
@@ -101,7 +94,6 @@ void SP2_Scene::Init()
 	pause = 1;
 	leftgate = 0;
 	rightgate = 0;
->>>>>>> 78159ce922499a8038798029e11bc0030f9c4b19
 
 	// Enable depth Test
 	glEnable(GL_DEPTH_TEST);
@@ -192,7 +184,6 @@ void SP2_Scene::Init()
 	meshList[GEO_SNIPER] = MeshBuilder::GenerateOBJ("test", "OBJ//Sniper.obj");
 	meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Sniper.tga");
 
-<<<<<<< HEAD
 	meshList[GEO_BASE] = MeshBuilder::GenerateOBJ("base", "OBJ//base.obj");
 	//meshList[GEO_BASE]->textureID = LoadTGA("Image//tex_base.tga");
 
@@ -204,13 +195,12 @@ void SP2_Scene::Init()
 
 	//meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	//meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
-=======
+
 	meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
 
 	meshList[GEO_SHOTGUN] = MeshBuilder::GenerateOBJ("test", "OBJ//Shotgun.obj");
 	meshList[GEO_SHOTGUN]->textureID = LoadTGA("Image//Tex_Shotgun.tga");
->>>>>>> 78159ce922499a8038798029e11bc0030f9c4b19
 
 	//meshList[GEO_PLAYERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//PlayerShip.obj");
 	//meshList[GEO_PLAYERSHIP]->textureID = LoadTGA("Image//Tex_PlayerShip.tga");
@@ -225,10 +215,10 @@ void SP2_Scene::Init()
 	////meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Robot1.tga");
 
 	meshList[GEO_GATE] = MeshBuilder::GenerateOBJ("test", "OBJ//gate.obj");
-	meshList[GEO_GATE]->textureID = LoadTGA("Image//gate.tga");
+	meshList[GEO_GATE]->textureID = LoadTGA("Image//Tex_Gate.tga");
 
 	meshList[GEO_METEOR] = MeshBuilder::GenerateOBJ("test", "OBJ//meteor.obj");
-	meshList[GEO_METEOR]->textureID = LoadTGA("Image//meteor.tga");
+	meshList[GEO_METEOR]->textureID = LoadTGA("Image//Tex_Meteor.tga");
 
 	/*meshList[GEO_COMPUTER] = MeshBuilder::GenerateOBJ("test", "OBJ//computer.obj");
 	meshList[GEO_COMPUTER]->textureID = LoadTGA("Image//computer.tga");*/
@@ -559,10 +549,12 @@ void SP2_Scene::gamestate()
 	}
 	if (wave == 6)
 	{
-		//if (//boss dead)
-		//{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Boss HP: " + std::to_string(bosshp), Color(0, 0.5, 0), 3, 65, 81);
+		if (bosshp==0)
+		{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Boss Stage clear", Color(1, 0, 0), 3, 20, 15);
-		//}
+		//game won, go back to start screen
+		}
 		//else if (hp == 0)
 		//{
 		//	//go back to start screen
@@ -914,7 +906,6 @@ void SP2_Scene::Render(double dt)
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-<<<<<<< HEAD
 	modelStack.Translate(basePosition.x, basePosition.y, basePosition.z);
 	modelStack.Scale(2, 5, 2);
 	RenderMesh(meshList[GEO_BASE], true);
@@ -931,7 +922,6 @@ void SP2_Scene::Render(double dt)
 	modelStack.Translate(0, 0, 0);
 	modelStack.Scale(1, 1, 1.3);
 	RenderMesh(meshList[GEO_GATE_MAIN], true);
-=======
 	modelStack.Translate(constTranslation, 2, 5);
 	modelStack.Scale(0.8, 0.8, 0.8);
 	RenderMesh(meshList[GEO_SNIPER], true);
@@ -941,11 +931,10 @@ void SP2_Scene::Render(double dt)
 	RenderWeaponInHand(weaponValue, 5, 1, 1);
 	modelStack.PopMatrix();
 
-	modelStack.PushMatrix();
+	/*modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_DRONE], true);
->>>>>>> 78159ce922499a8038798029e11bc0030f9c4b19
-	modelStack.PopMatrix();
-	modelStack.PopMatrix();
+	modelStack.PopMatrix();*/
+	
 
 	//modelStack.PushMatrix();
 	//modelStack.Translate(0,2,5);
@@ -953,28 +942,16 @@ void SP2_Scene::Render(double dt)
 	//RenderMesh(meshList[GEO_SNIPER], true);
 	//modelStack.PopMatrix();
 
-<<<<<<< HEAD
 	RenderImageOnScreen(SB_Day_left, 10, 10, 1, 1);
 
-	modelStack.PushMatrix();
+	/*modelStack.PushMatrix();
 	RenderSniperInHand(meshList[GEO_SNIPER], 5, 1, 1);
-	modelStack.PopMatrix();
+	modelStack.PopMatrix();*/
 
-<<<<<<< HEAD
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_METEOR], true);
 	modelStack.PopMatrix();
 
-=======
-	std::stringstream fpsText;
-	fpsText << std::fixed << std::setprecision(1) << "FPS = " << framesPerSecond;
-	RenderTextOnScreen(meshList[GEO_TEXT], fpsText.str(), Color(1, 1, 1), 2.5, 2, 3);
-
-	std::stringstream coordText;
-	coordText << std::fixed << std::setprecision(1) << "Player Location = (" << camera.getCameraPosition().x << ", " << camera.getCameraPosition().z << ", " << camera.getCameraPosition().z << ")!";
-	RenderTextOnScreen(meshList[GEO_TEXT], coordText.str(), Color(1, 1, 1), 2.5, 2, 2);
-=======
->>>>>>> 6f6dfb57b1f6a40161b90e9142b3695f66ac4bcf
 	//INFO UI, STATS - BOTTOM LEFT
 	modelStack.PushMatrix();
 	RenderImageOnScreen(UI_BG, 50, 10, 25, 5);
@@ -1002,7 +979,6 @@ void SP2_Scene::Render(double dt)
 	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(basehp), Color(0, 0.5, 0), 3, 2.5, 87);
 
 	RenderTextOnScreen(meshList[GEO_TEXT], "Ammo: " + std::to_string(ammo), Color(0, 0.5, 0), 3, 2.5, 84);
->>>>>>> 78159ce922499a8038798029e11bc0030f9c4b19
 
 	RenderTextOnScreen(meshList[GEO_TEXT], "Wave Number: " + std::to_string(wave), Color(0, 0.5, 0), 3, 2.5, 81);
 
