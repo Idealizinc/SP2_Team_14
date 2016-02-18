@@ -45,11 +45,29 @@ class SP2_Scene : public Scene
 		GEO_FRONT,
 		GEO_BACK,
 
-		//Custom Models
+		//Weapons
 		GEO_SMG,
 		GEO_SNIPER,
 		GEO_RIFLE,
 		GEO_SHOTGUN,
+
+		GEO_RED_SMG,
+		GEO_RED_SNIPER,
+		GEO_RED_RIFLE,
+		GEO_RED_SHOTGUN,
+
+		GEO_GREEN_SMG,
+		GEO_GREEN_SNIPER,
+		GEO_GREEN_RIFLE,
+		GEO_GREEN_SHOTGUN,
+
+		GEO_BLUE_SMG,
+		GEO_BLUE_SNIPER,
+		GEO_BLUE_RIFLE,
+		GEO_BLUE_SHOTGUN,
+		
+
+		//Ships
 		//GEO_PLAYERSHIP,
 		//GEO_MOTHERSHIP,
 
@@ -80,12 +98,13 @@ class SP2_Scene : public Scene
 		GEO_MIXEDROBOTLEFTLEG,
 		GEO_MIXEDROBOTRIGHTLEG,
 
-
+		// UNCLASSIFIED
 		GEO_GATE,
 		GEO_METEOR,
 		//GEO_COMPUTER,
 		GEO_CRYSTAL,
 		GEO_CRYSTALBASE,
+		GEO_MOONFLOOR,
 
 		//add these enum in GEOMETRY_TYPE before NUM_GEOMETRY
 		GEO_TEXT,
@@ -214,7 +233,10 @@ private:
 	unsigned m_parameters[U_TOTAL];
 	Mesh* meshList[NUM_GEOMETRY];
 	
+	//INIT Calls
 	void initLights();
+	void InitWeaponModels();
+	void InitRobots();
 
 	//Render Calls
 	void readtextfile();
@@ -246,6 +268,10 @@ private:
 	unsigned int wave;
 	float framesPerSecond;
 
+	// Weapon Interface Stuff
+	Vector3 WepItf_Choices;
+	bool randWepChoices = true;
+
 	//check game state
 	int state;
 	float timer;
@@ -265,7 +291,6 @@ private:
 	// Base Stuff
 	Vector3 basePosition;
 };
-
 
 
 #endif
