@@ -78,6 +78,7 @@ void SP2_Scene::Init()
 	basehp = 100;
 	gatehp = 20;
 	bosshp = 100;
+	playerhp = 100;
 	ammo = 100;
 	wave = 1;
 	state = 0;
@@ -184,15 +185,21 @@ void SP2_Scene::Init()
 	meshList[GEO_SNIPER] = MeshBuilder::GenerateOBJ("test", "OBJ//Sniper.obj");
 	meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Sniper.tga");
 
+	meshList[GEO_GATE] = MeshBuilder::GenerateOBJ("test", "OBJ//Gate_Door.obj");
+	meshList[GEO_GATE]->textureID = LoadTGA("Image//Tex_Gate2.tga");
+
 	meshList[GEO_BASE] = MeshBuilder::GenerateOBJ("base", "OBJ//base.obj");
-	//meshList[GEO_BASE]->textureID = LoadTGA("Image//tex_base.tga");
+	meshList[GEO_BASE]->textureID = meshList[GEO_GATE]->textureID;
 
 	meshList[GEO_GATE_SIDE] = MeshBuilder::GenerateOBJ("gate_side", "OBJ//gate_side.obj");
 	meshList[GEO_GATE_SIDE]->textureID = LoadTGA("Image//bullet.tga"); // temporary texture
 
+<<<<<<< HEAD
 	//meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	//meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
 
+=======
+>>>>>>> 7093620aed236b53954eb1e2eb298ac92d2056b2
 	meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
 
@@ -257,11 +264,14 @@ void SP2_Scene::Init()
 	//meshList[GEO_ROBOT1] = MeshBuilder::GenerateOBJ("test", "OBJ//Robot1.obj");
 	////meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Robot1.tga");
 
-	meshList[GEO_GATE] = MeshBuilder::GenerateOBJ("test", "OBJ//Gate_Door.obj");
-	meshList[GEO_GATE]->textureID = LoadTGA("Image//Tex_Gate2.tga");
-
 	meshList[GEO_METEOR] = MeshBuilder::GenerateOBJ("test", "OBJ//meteor.obj");
 	meshList[GEO_METEOR]->textureID = LoadTGA("Image//Tex_Meteor.tga");
+
+	meshList[GEO_CRYSTALBASE] = MeshBuilder::GenerateOBJ("Core Platform", "OBJ//Core_Platform.obj");
+	meshList[GEO_CRYSTALBASE]->textureID = LoadTGA("Image//Tex_Core_Platform.tga");
+
+	meshList[GEO_CRYSTAL] = MeshBuilder::GenerateOBJ("Core Crystal", "OBJ//Core_Crystal.obj");
+	meshList[GEO_CRYSTAL]->textureID = LoadTGA("Image//Tex_LightOrb.tga");
 
 	/*meshList[GEO_COMPUTER] = MeshBuilder::GenerateOBJ("test", "OBJ//computer.obj");
 	meshList[GEO_COMPUTER]->textureID = LoadTGA("Image//computer.tga");*/
@@ -955,11 +965,19 @@ void SP2_Scene::Render(double dt)
 	RenderMesh(meshList[GEO_AXES], false);
 	modelStack.PopMatrix();
 
+	//RenderBase
 	modelStack.PushMatrix();
-	modelStack.Translate(basePosition.x, basePosition.y, basePosition.z);
-	modelStack.Scale(2, 5, 2);
+	//modelStack.Translate(basePosition.x, basePosition.y, basePosition.z);
+	//modelStack.Scale(2, 5, 2);
 	RenderMesh(meshList[GEO_BASE], true);
+	RenderMesh(meshList[GEO_CRYSTALBASE], true);
+		modelStack.PushMatrix();
+			modelStack.Translate(0, tweenVal/1000, 0);
+			modelStack.Rotate(constRotation*3, 0, 1, 0);
+			RenderMesh(meshList[GEO_CRYSTAL], false);
+		modelStack.PopMatrix();
 	modelStack.PopMatrix();
+	//RB End
 
 	modelStack.PushMatrix();
 	modelStack.Translate(-0.3, 2, 10);
@@ -979,11 +997,14 @@ void SP2_Scene::Render(double dt)
 	RenderWeaponInHand(weaponValue, 5, 1, 1);
 	modelStack.PopMatrix();
 
+<<<<<<< HEAD
 	/*modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_DRONE], true);
 	modelStack.PopMatrix();*/
 
 	//drone
+=======
+>>>>>>> 7093620aed236b53954eb1e2eb298ac92d2056b2
 	modelStack.PushMatrix();
 	modelStack.Translate(0, 0, -10);
 	RenderMesh(meshList[GEO_DRONEBODY], true);
@@ -1059,12 +1080,15 @@ void SP2_Scene::Render(double dt)
 	//RenderMesh(meshList[GEO_SNIPER], true);
 	//modelStack.PopMatrix();
 
+<<<<<<< HEAD
 	RenderImageOnScreen(SB_Day_left, 10, 10, 1, 1);
 
 	/*modelStack.PushMatrix();
 	RenderSniperInHand(meshList[GEO_SNIPER], 5, 1, 1);
 	modelStack.PopMatrix();*/
 
+=======
+>>>>>>> 7093620aed236b53954eb1e2eb298ac92d2056b2
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_METEOR], true);
 	modelStack.PopMatrix();

@@ -81,6 +81,8 @@ class SP2_Scene : public Scene
 		GEO_GATE,
 		GEO_METEOR,
 		//GEO_COMPUTER,
+		GEO_CRYSTAL,
+		GEO_CRYSTALBASE,
 
 		//add these enum in GEOMETRY_TYPE before NUM_GEOMETRY
 		GEO_TEXT,
