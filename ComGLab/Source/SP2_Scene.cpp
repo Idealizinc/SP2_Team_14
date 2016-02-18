@@ -86,7 +86,7 @@ void SP2_Scene::Init()
 	weaponValue = 0;
 	weaponinterface = false;
 	basePosition.x = 4;
-	basePosition.y = 3.2;
+	basePosition.y = -2;
 	basePosition.z = 0;
 	repairgate = false;
 	buttonPress = true;
@@ -191,9 +191,6 @@ void SP2_Scene::Init()
 	meshList[GEO_BASE] = MeshBuilder::GenerateOBJ("base", "OBJ//base.obj");
 	meshList[GEO_BASE]->textureID = meshList[GEO_GATE]->textureID;
 
-	meshList[GEO_GATE_MAIN] = MeshBuilder::GenerateOBJ("gate_main", "OBJ//gate_main.obj");
-	//meshList[GEO_GATE_MAIN]->textureID = LoadTGA("Image//gate_main.tga");
-
 	meshList[GEO_GATE_SIDE] = MeshBuilder::GenerateOBJ("gate_side", "OBJ//gate_side.obj");
 	meshList[GEO_GATE_SIDE]->textureID = LoadTGA("Image//bullet.tga"); // temporary texture
 
@@ -208,9 +205,55 @@ void SP2_Scene::Init()
 
 	//meshList[GEO_MOTHERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//Mothership.obj");
 	//meshList[GEO_MOTHERSHIP]->textureID = LoadTGA("Image//Tex_Mothership.tga");
+	
+	//drone
+	meshList[GEO_DRONEBODY] = MeshBuilder::GenerateOBJ("test", "OBJ//Drone_body.obj");
+	GLuint texGD = LoadTGA("Image//Tex_Drone.tga");
+	meshList[GEO_DRONEBODY]->textureID = texGD;
+	meshList[GEO_DRONELEFTARM] = MeshBuilder::GenerateOBJ("test", "OBJ//Drone_leftarm.obj");
+	meshList[GEO_DRONELEFTARM]->textureID = texGD;
+	meshList[GEO_DRONERIGHTARM] = MeshBuilder::GenerateOBJ("test", "OBJ//Drone_rightarm.obj");
+	meshList[GEO_DRONERIGHTARM]->textureID = texGD;
 
-	meshList[GEO_DRONE] = MeshBuilder::GenerateOBJ("test", "OBJ//Drone.obj");
-	meshList[GEO_DRONE]->textureID = LoadTGA("Image//Tex_Drone.tga");
+	//melee robot
+	meshList[GEO_MELEEROBOTBODY] = MeshBuilder::GenerateOBJ("test", "OBJ//MeleeRobot_body.obj");
+	GLuint texGD1 = LoadTGA("Image//Tex_Robot1.tga");
+	meshList[GEO_MELEEROBOTBODY]->textureID = texGD1;
+	meshList[GEO_MELEEROBOTLEFTARM] = MeshBuilder::GenerateOBJ("test", "OBJ//MeleeRobot_leftarm.obj");
+	meshList[GEO_MELEEROBOTLEFTARM]->textureID = texGD1;
+	meshList[GEO_MELEEROBOTLEFTLEG] = MeshBuilder::GenerateOBJ("test", "OBJ//MeleeRobot_leftleg.obj");
+	meshList[GEO_MELEEROBOTLEFTLEG]->textureID = texGD1;
+	meshList[GEO_MELEEROBOTRIGHTARM] = MeshBuilder::GenerateOBJ("test", "OBJ//MeleeRobot_rightarm.obj");
+	meshList[GEO_MELEEROBOTRIGHTARM]->textureID = texGD1;
+	meshList[GEO_MELEEROBOTRIGHTLEG] = MeshBuilder::GenerateOBJ("test", "OBJ//MeleeRobot_rightleg.obj");
+	meshList[GEO_MELEEROBOTRIGHTLEG]->textureID = texGD1;
+
+	//range robot
+	meshList[GEO_RANGEROBOTBODY] = MeshBuilder::GenerateOBJ("test", "OBJ//RangeRobot_body.obj");
+	GLuint texGD2 = LoadTGA("Image//Tex_Robot2.tga");
+	meshList[GEO_RANGEROBOTBODY]->textureID = texGD2;
+	meshList[GEO_RANGEROBOTLEFTARM] = MeshBuilder::GenerateOBJ("test", "OBJ//RangeRobot_leftarm.obj");
+	meshList[GEO_RANGEROBOTLEFTARM]->textureID = texGD2;
+	meshList[GEO_RANGEROBOTLEFTLEG] = MeshBuilder::GenerateOBJ("test", "OBJ//RangeRobot_leftleg.obj");
+	meshList[GEO_RANGEROBOTLEFTLEG]->textureID = texGD2;
+	meshList[GEO_RANGEROBOTRIGHTARM] = MeshBuilder::GenerateOBJ("test", "OBJ//RangeRobot_rightarm.obj");
+	meshList[GEO_RANGEROBOTRIGHTARM]->textureID = texGD2;
+	meshList[GEO_RANGEROBOTRIGHTLEG] = MeshBuilder::GenerateOBJ("test", "OBJ//RangeRobot_rightleg.obj");
+	meshList[GEO_RANGEROBOTRIGHTLEG]->textureID = texGD2;
+
+	//mixed robot (melee and range)
+	meshList[GEO_MIXEDROBOTBODY] = MeshBuilder::GenerateOBJ("test", "OBJ//MixedRobot_body.obj");
+	GLuint texGD3 = LoadTGA("Image//Tex_Robot3.tga");
+	meshList[GEO_MIXEDROBOTBODY]->textureID = texGD3;
+	meshList[GEO_MIXEDROBOTLEFTARM] = MeshBuilder::GenerateOBJ("test", "OBJ//MixedRobot_leftarm.obj");
+	meshList[GEO_MIXEDROBOTLEFTARM]->textureID = texGD3;
+	meshList[GEO_MIXEDROBOTLEFTLEG] = MeshBuilder::GenerateOBJ("test", "OBJ//MixedRobot_leftleg.obj");
+	meshList[GEO_MIXEDROBOTLEFTLEG]->textureID = texGD3;
+	meshList[GEO_MIXEDROBOTRIGHTARM] = MeshBuilder::GenerateOBJ("test", "OBJ//MixedRobot_rightarm.obj");
+	meshList[GEO_MIXEDROBOTRIGHTARM]->textureID = texGD3;
+	meshList[GEO_MIXEDROBOTRIGHTLEG] = MeshBuilder::GenerateOBJ("test", "OBJ//MixedRobot_rightleg.obj");
+	meshList[GEO_MIXEDROBOTRIGHTLEG]->textureID = texGD3;
+
 
 	//meshList[GEO_ROBOT1] = MeshBuilder::GenerateOBJ("test", "OBJ//Robot1.obj");
 	////meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Robot1.tga");
@@ -932,12 +975,6 @@ void SP2_Scene::Render(double dt)
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(0, 0, 0);
-	modelStack.Scale(1, 1, 1.3);
-	RenderMesh(meshList[GEO_GATE_MAIN], true);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
 	modelStack.Translate(constTranslation, 2, 5);
 	modelStack.Scale(0.8, 0.8, 0.8);
 	RenderMesh(meshList[GEO_SNIPER], true);
@@ -948,18 +985,78 @@ void SP2_Scene::Render(double dt)
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(0, 20, 0);
-	//modelStack.Rotate(270, 0, 0, 1);
-	RenderMesh(meshList[GEO_DRONE], true);
+	modelStack.Translate(0, 0, -10);
+	RenderMesh(meshList[GEO_DRONEBODY], true);
+		modelStack.PushMatrix();
+		RenderMesh(meshList[GEO_DRONELEFTARM], true);
+		modelStack.PopMatrix();
+			modelStack.PushMatrix();
+			RenderMesh(meshList[GEO_DRONERIGHTARM], true);
+			modelStack.PopMatrix();
 	modelStack.PopMatrix();
+
+	//melee robot
+	modelStack.PushMatrix();
+	modelStack.Translate(0, 0, 10);
+	RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
+		modelStack.PushMatrix();
+		RenderMesh(meshList[GEO_MELEEROBOTLEFTARM], true);
+		modelStack.PopMatrix();
+			modelStack.PushMatrix();
+			RenderMesh(meshList[GEO_MELEEROBOTRIGHTARM], true);
+			modelStack.PopMatrix();
+				modelStack.PushMatrix();
+				RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
+				modelStack.PopMatrix();
+					modelStack.PushMatrix();
+					RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
+					modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	//range robot
+	modelStack.PushMatrix();
+	modelStack.Translate(10, 0, 0);
+	modelStack.Rotate(90, 0, 1, 0);
+	RenderMesh(meshList[GEO_RANGEROBOTBODY], true);
+		modelStack.PushMatrix();
+		RenderMesh(meshList[GEO_RANGEROBOTLEFTARM], true);
+		modelStack.PopMatrix();
+			modelStack.PushMatrix();
+			RenderMesh(meshList[GEO_RANGEROBOTRIGHTARM], true);
+			modelStack.PopMatrix();
+				modelStack.PushMatrix();
+				RenderMesh(meshList[GEO_RANGEROBOTLEFTLEG], true);
+				modelStack.PopMatrix();
+					modelStack.PushMatrix();
+					RenderMesh(meshList[GEO_RANGEROBOTRIGHTLEG], true);
+					modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	//mixed robot
+	modelStack.PushMatrix();
+	modelStack.Translate(-10, 0, 0);
+	modelStack.Rotate(-90, 0, 1, 0);
+	RenderMesh(meshList[GEO_MIXEDROBOTBODY], true);
+		modelStack.PushMatrix();
+		RenderMesh(meshList[GEO_MIXEDROBOTLEFTARM], true);
+		modelStack.PopMatrix();
+			modelStack.PushMatrix();
+			RenderMesh(meshList[GEO_MIXEDROBOTRIGHTARM], true);
+			modelStack.PopMatrix();
+				modelStack.PushMatrix();
+				RenderMesh(meshList[GEO_MIXEDROBOTLEFTLEG], true);
+				modelStack.PopMatrix();
+					modelStack.PushMatrix();
+					RenderMesh(meshList[GEO_MIXEDROBOTRIGHTLEG], true);
+					modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
 
 	//modelStack.PushMatrix();
 	//modelStack.Translate(0,2,5);
 	//modelStack.Scale(0.8, 0.8, 0.8);
 	//RenderMesh(meshList[GEO_SNIPER], true);
 	//modelStack.PopMatrix();
-
-	RenderImageOnScreen(SB_Day_left, 10, 10, 1, 1);
 
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_METEOR], true);
@@ -1006,7 +1103,7 @@ void SP2_Scene::Render(double dt)
 	gamestate();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(0, 10, 0);
+	//modelStack.Translate(0, 10, 0);
 	Rendergate(true);
 	modelStack.PopMatrix();
 }
