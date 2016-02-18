@@ -82,6 +82,8 @@ class SP2_Scene : public Scene
 		GEO_MELEEROBOTBODY,
 		GEO_MELEEROBOTLEFTUPPERARM,
 		GEO_MELEEROBOTLEFTLOWERARM,
+		GEO_MELEEROBOTRIGHTUPPERARM,
+		GEO_MELEEROBOTRIGHTLOWERARM,
 		GEO_MELEEROBOTRIGHTARM,
 		GEO_MELEEROBOTLEFTLEG,
 		GEO_MELEEROBOTRIGHTLEG,
@@ -249,6 +251,7 @@ private:
 	void RenderWepScreen(bool render = false, Vector3 choices = Vector3(0, 0, 0));
 	void initBounds();
 	void Rendergate(bool render = false);
+	void RenderUI();
 
 	//Interaction Values
 	bool buttonPress;
