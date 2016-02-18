@@ -76,7 +76,6 @@ void SP2_Scene::Init()
 	limitersON = true;
 	lightOff = false;
 	basehp = 100;
-	playerhp = 100;
 	gatehp = 20;
 	bosshp = 100;
 	ammo = 100;
@@ -193,7 +192,10 @@ void SP2_Scene::Init()
 
 	//meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	//meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5aadd723ac878552403be2e634d3219d2a08cab9
 	meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
 
@@ -540,7 +542,7 @@ void SP2_Scene::gamestate()
 		}
 		else if (basehp == 0)
 		{
-			wave = 1; //restart wave
+			//go back to start screen
 		}
 	}
 	if (wave == 2)
@@ -552,7 +554,7 @@ void SP2_Scene::gamestate()
 		}
 		else if (basehp == 0)
 		{
-			wave = 2; 
+			//go back to start screen
 		}
 	}
 	if (wave == 3)
@@ -564,7 +566,7 @@ void SP2_Scene::gamestate()
 		}
 		else if (basehp == 0)
 		{
-			wave = 3;
+			//go back to start screen
 		}
 	}
 	if (wave == 4)
@@ -576,7 +578,7 @@ void SP2_Scene::gamestate()
 		}
 		else if (basehp == 0)
 		{
-			wave = 4;
+			//go back to start screen
 		}
 	}
 	if (wave == 5)
@@ -588,7 +590,7 @@ void SP2_Scene::gamestate()
 		}
 		else if (basehp == 0)
 		{
-			wave = 5;
+			//go back to start screen
 		}
 	}
 	if (wave == 6)
@@ -599,10 +601,10 @@ void SP2_Scene::gamestate()
 			RenderTextOnScreen(meshList[GEO_TEXT], "Boss Stage clear", Color(1, 0, 0), 3, 20, 15);
 			//game won, go back to start screen
 		}
-		else if (playerhp == 0)
-		{
-			wave = 6;
-		}
+		//else if (hp == 0)
+		//{
+		//	//go back to start screen
+		//}
 	}
 }
 
@@ -964,6 +966,15 @@ void SP2_Scene::Render(double dt)
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
+<<<<<<< HEAD
+=======
+	modelStack.Translate(0, 0, 0);
+	modelStack.Scale(1, 1, 1.3);
+	RenderMesh(meshList[GEO_GATE_MAIN], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+>>>>>>> 5aadd723ac878552403be2e634d3219d2a08cab9
 	modelStack.Translate(constTranslation, 2, 5);
 	modelStack.Scale(0.8, 0.8, 0.8);
 	RenderMesh(meshList[GEO_SNIPER], true);
@@ -973,11 +984,14 @@ void SP2_Scene::Render(double dt)
 	RenderWeaponInHand(weaponValue, 5, 1, 1);
 	modelStack.PopMatrix();
 
+<<<<<<< HEAD
 	/*modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_DRONE], true);
 	modelStack.PopMatrix();*/
 
 	//drone
+=======
+>>>>>>> 5aadd723ac878552403be2e634d3219d2a08cab9
 	modelStack.PushMatrix();
 	modelStack.Translate(0, 0, -10);
 	RenderMesh(meshList[GEO_DRONEBODY], true);
@@ -1054,10 +1068,13 @@ void SP2_Scene::Render(double dt)
 
 	RenderImageOnScreen(SB_Day_left, 10, 10, 1, 1);
 
+<<<<<<< HEAD
 	/*modelStack.PushMatrix();
 	RenderSniperInHand(meshList[GEO_SNIPER], 5, 1, 1);
 	modelStack.PopMatrix();*/
 
+=======
+>>>>>>> 5aadd723ac878552403be2e634d3219d2a08cab9
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_METEOR], true);
 	modelStack.PopMatrix();
