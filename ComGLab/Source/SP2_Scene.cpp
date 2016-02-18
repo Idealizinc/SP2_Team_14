@@ -47,10 +47,10 @@ void SP2_Scene::readtextfile()
 
 void SP2_Scene::Init()
 {
-	engine = createIrrKlangDevice();
+	/*engine = createIrrKlangDevice();
 	engine->addSoundSourceFromFile(SoundName[0].c_str());
 	Song = engine->play2D(SoundName[0].c_str(), true, false, true);
-	Song->setVolume(0.25);
+	Song->setVolume(0.25);*/
 
 	// Init VBO here
 	glClearColor(0.15f, 0.2f, 0.35f, 0.0f);
@@ -71,6 +71,8 @@ void SP2_Scene::Init()
 	rotationalLimit = 180;
 	translationLimit = 5;
 	scalingLimit = 10;
+	upperarmrotatelimit = -1;
+	//lowerarmrotatelimit = -1;
 	rLimiter = true;
 	toggleLimiters = true;
 	limitersON = true;
@@ -95,6 +97,8 @@ void SP2_Scene::Init()
 	pause = 1;
 	leftgate = 0;
 	rightgate = 0;
+	armrotate = true;
+	rotateAngle = 0;
 
 	// Enable depth Test
 	glEnable(GL_DEPTH_TEST);
@@ -194,12 +198,9 @@ void SP2_Scene::Init()
 	meshList[GEO_GATE_SIDE] = MeshBuilder::GenerateOBJ("gate_side", "OBJ//gate_side.obj");
 	meshList[GEO_GATE_SIDE]->textureID = LoadTGA("Image//bullet.tga"); // temporary texture
 
-<<<<<<< HEAD
 	//meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	//meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
 
-=======
->>>>>>> 7093620aed236b53954eb1e2eb298ac92d2056b2
 	meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
 
@@ -216,21 +217,29 @@ void SP2_Scene::Init()
 	meshList[GEO_DRONEBODY] = MeshBuilder::GenerateOBJ("test", "OBJ//Drone_body.obj");
 	GLuint texGD = LoadTGA("Image//Tex_Drone.tga");
 	meshList[GEO_DRONEBODY]->textureID = texGD;
-	meshList[GEO_DRONELEFTARM] = MeshBuilder::GenerateOBJ("test", "OBJ//Drone_leftarm.obj");
-	meshList[GEO_DRONELEFTARM]->textureID = texGD;
-	meshList[GEO_DRONERIGHTARM] = MeshBuilder::GenerateOBJ("test", "OBJ//Drone_rightarm.obj");
-	meshList[GEO_DRONERIGHTARM]->textureID = texGD;
+	meshList[GEO_DRONELEFTUPPERARM] = MeshBuilder::GenerateOBJ("test", "OBJ//Drone_leftupperarm.obj");
+	meshList[GEO_DRONELEFTUPPERARM]->textureID = texGD;
+	meshList[GEO_DRONELEFTLOWERARM] = MeshBuilder::GenerateOBJ("test", "OBJ//Drone_leftlowerarm.obj");
+	meshList[GEO_DRONELEFTLOWERARM]->textureID = texGD;
+	meshList[GEO_DRONERIGHTUPPERARM] = MeshBuilder::GenerateOBJ("test", "OBJ//Drone_rightupperarm.obj");
+	meshList[GEO_DRONERIGHTUPPERARM]->textureID = texGD;
+	meshList[GEO_DRONERIGHTLOWERARM] = MeshBuilder::GenerateOBJ("test", "OBJ//Drone_rightlowerarm.obj");
+	meshList[GEO_DRONERIGHTLOWERARM]->textureID = texGD;
 
 	//melee robot
 	meshList[GEO_MELEEROBOTBODY] = MeshBuilder::GenerateOBJ("test", "OBJ//MeleeRobot_body.obj");
 	GLuint texGD1 = LoadTGA("Image//Tex_Robot1.tga");
 	meshList[GEO_MELEEROBOTBODY]->textureID = texGD1;
-	meshList[GEO_MELEEROBOTLEFTARM] = MeshBuilder::GenerateOBJ("test", "OBJ//MeleeRobot_leftarm.obj");
-	meshList[GEO_MELEEROBOTLEFTARM]->textureID = texGD1;
+	meshList[GEO_MELEEROBOTLEFTUPPERARM] = MeshBuilder::GenerateOBJ("test", "OBJ//MeleeRobot_leftupperarm.obj");
+	meshList[GEO_MELEEROBOTLEFTUPPERARM]->textureID = texGD1;
+	meshList[GEO_MELEEROBOTLEFTLOWERARM] = MeshBuilder::GenerateOBJ("test", "OBJ//MeleeRobot_leftlowerarm.obj");
+	meshList[GEO_MELEEROBOTLEFTLOWERARM]->textureID = texGD1;
 	meshList[GEO_MELEEROBOTLEFTLEG] = MeshBuilder::GenerateOBJ("test", "OBJ//MeleeRobot_leftleg.obj");
 	meshList[GEO_MELEEROBOTLEFTLEG]->textureID = texGD1;
-	meshList[GEO_MELEEROBOTRIGHTARM] = MeshBuilder::GenerateOBJ("test", "OBJ//MeleeRobot_rightarm.obj");
-	meshList[GEO_MELEEROBOTRIGHTARM]->textureID = texGD1;
+	meshList[GEO_MELEEROBOTRIGHTUPPERARM] = MeshBuilder::GenerateOBJ("test", "OBJ//MeleeRobot_rightupperarm.obj");
+	meshList[GEO_MELEEROBOTRIGHTUPPERARM]->textureID = texGD1;
+	meshList[GEO_MELEEROBOTRIGHTLOWERARM] = MeshBuilder::GenerateOBJ("test", "OBJ//MeleeRobot_rightlowerarm.obj");
+	meshList[GEO_MELEEROBOTRIGHTLOWERARM]->textureID = texGD1;
 	meshList[GEO_MELEEROBOTRIGHTLEG] = MeshBuilder::GenerateOBJ("test", "OBJ//MeleeRobot_rightleg.obj");
 	meshList[GEO_MELEEROBOTRIGHTLEG]->textureID = texGD1;
 
@@ -621,12 +630,22 @@ void SP2_Scene::Update(double dt)
 	constRotation += (float)(10 * pause * dt);
 	constTranslation += (float)(10 * pause  * dt);
 
-	rotateAngle += (float)(2 * dt);
-	if (rotateAngle > 30)
+	if (armrotate == true)
 	{
-		rotateAngle = 30;
+		rotateAngle -= (float)(3* dt);
 	}
-
+	else if (armrotate == false)
+	{
+		rotateAngle += (float)(3 * dt);
+	}
+	if (rotateAngle <= upperarmrotatelimit)
+	{
+		armrotate = false;
+	}
+	else if (rotateAngle >= -upperarmrotatelimit + (1 - upperarmrotatelimit))
+	{
+		armrotate = true;
+	}
 	//Lerping Rotation
 	if ((rLimiter == true))
 	{
@@ -997,22 +1016,22 @@ void SP2_Scene::Render(double dt)
 	RenderWeaponInHand(weaponValue, 5, 1, 1);
 	modelStack.PopMatrix();
 
-<<<<<<< HEAD
-	/*modelStack.PushMatrix();
-	RenderMesh(meshList[GEO_DRONE], true);
-	modelStack.PopMatrix();*/
 
 	//drone
-=======
->>>>>>> 7093620aed236b53954eb1e2eb298ac92d2056b2
 	modelStack.PushMatrix();
 	modelStack.Translate(0, 0, -10);
 	RenderMesh(meshList[GEO_DRONEBODY], true);
 		modelStack.PushMatrix();
-		RenderMesh(meshList[GEO_DRONELEFTARM], true);
+		RenderMesh(meshList[GEO_DRONELEFTUPPERARM], true);
+			modelStack.PushMatrix();
+			RenderMesh(meshList[GEO_DRONELEFTLOWERARM], true);
+			modelStack.PopMatrix();
 		modelStack.PopMatrix();
 			modelStack.PushMatrix();
-			RenderMesh(meshList[GEO_DRONERIGHTARM], true);
+			RenderMesh(meshList[GEO_DRONERIGHTUPPERARM], true);
+				modelStack.PushMatrix();
+				RenderMesh(meshList[GEO_DRONERIGHTLOWERARM], true);
+				modelStack.PopMatrix();
 			modelStack.PopMatrix();
 	modelStack.PopMatrix();
 
@@ -1021,19 +1040,32 @@ void SP2_Scene::Render(double dt)
 	modelStack.Translate(0, 0, 10);
 	RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
 		modelStack.PushMatrix();
-		modelStack.Rotate(rotateAngle, 0, 0, 1);
-		RenderMesh(meshList[GEO_MELEEROBOTLEFTARM], true);
+		modelStack.Rotate(rotateAngle, 1, 0, 0);
+		modelStack.Translate(0, 0, -10);
+		modelStack.Translate(0, 0, 10);
+		modelStack.Translate(0.3, 0, 0);
+		RenderMesh(meshList[GEO_MELEEROBOTLEFTUPPERARM], true);
+			modelStack.PushMatrix();
+			modelStack.Rotate(rotateAngle, 1, 0, 0);
+			RenderMesh(meshList[GEO_MELEEROBOTLEFTLOWERARM], true);
+			modelStack.PopMatrix();
 		modelStack.PopMatrix();
 			modelStack.PushMatrix();
+			modelStack.Rotate(rotateAngle, 1, 0, 0);
+			modelStack.Translate(0, 0, -10);
+			modelStack.Translate(0, 0, 10);
+			modelStack.Translate(-0.3, 0, 0);
 			RenderMesh(meshList[GEO_MELEEROBOTRIGHTARM], true);
 			modelStack.PopMatrix();
-				modelStack.PushMatrix();
-				RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
-				modelStack.PopMatrix();
 					modelStack.PushMatrix();
-					RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
+					RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
 					modelStack.PopMatrix();
+						modelStack.PushMatrix();
+						RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
+						modelStack.PopMatrix();
 	modelStack.PopMatrix();
+
+	
 
 	//range robot
 	modelStack.PushMatrix();
@@ -1080,15 +1112,12 @@ void SP2_Scene::Render(double dt)
 	//RenderMesh(meshList[GEO_SNIPER], true);
 	//modelStack.PopMatrix();
 
-<<<<<<< HEAD
 	RenderImageOnScreen(SB_Day_left, 10, 10, 1, 1);
 
 	/*modelStack.PushMatrix();
 	RenderSniperInHand(meshList[GEO_SNIPER], 5, 1, 1);
 	modelStack.PopMatrix();*/
 
-=======
->>>>>>> 7093620aed236b53954eb1e2eb298ac92d2056b2
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_METEOR], true);
 	modelStack.PopMatrix();
@@ -1134,14 +1163,52 @@ void SP2_Scene::Render(double dt)
 	gamestate();
 
 	modelStack.PushMatrix();
-	//modelStack.Translate(0, 10, 0);
+	modelStack.Translate(17.2, 0.5, -2.15);
+	modelStack.Rotate(90, 0, 1, 0);
+	modelStack.Scale(1.55, 1.55, 2.5);
 	Rendergate(true);
+		modelStack.PushMatrix();
+		modelStack.Translate(-3, 0, 0);
+		Rendergate(true);
+		modelStack.PopMatrix();
 	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-17.2, 0.5, -2.15);
+	modelStack.Rotate(90, 0, 1, 0);
+	modelStack.Scale(1.55, 1.55, 2.5);
+	Rendergate(true);
+		modelStack.PushMatrix();
+		modelStack.Translate(-3, 0, 0);
+		Rendergate(true);
+		modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-2.15, 0.5, -17.2);
+	modelStack.Scale(1.55, 1.55, 2.5);
+	Rendergate(true);
+		modelStack.PushMatrix();
+		modelStack.Translate(3, 0, 0);
+		Rendergate(true);
+		modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-2.15, 0.5, 17.2);
+	modelStack.Scale(1.55, 1.55, 2.5);
+	Rendergate(true);
+		modelStack.PushMatrix();
+		modelStack.Translate(3, 0, 0);
+		Rendergate(true);
+		modelStack.PopMatrix();
+	modelStack.PopMatrix();
+	
 }
 
 void SP2_Scene::Exit()
 {
-	engine->drop();
+//	engine->drop();
 	// Cleanup VBO here
 	glDeleteVertexArrays(1, &m_vertexArrayID);
 	glDeleteProgram(m_programID);

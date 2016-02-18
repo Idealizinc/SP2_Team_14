@@ -55,12 +55,15 @@ class SP2_Scene : public Scene
 
 		//drone
 		GEO_DRONEBODY,
-		GEO_DRONELEFTARM,
-		GEO_DRONERIGHTARM,
+		GEO_DRONELEFTUPPERARM,
+		GEO_DRONELEFTLOWERARM,
+		GEO_DRONERIGHTUPPERARM,
+		GEO_DRONERIGHTLOWERARM,
 
 		//robots
 		GEO_MELEEROBOTBODY,
-		GEO_MELEEROBOTLEFTARM,
+		GEO_MELEEROBOTLEFTUPPERARM,
+		GEO_MELEEROBOTLEFTLOWERARM,
 		GEO_MELEEROBOTRIGHTARM,
 		GEO_MELEEROBOTLEFTLEG,
 		GEO_MELEEROBOTRIGHTLEG,
@@ -175,6 +178,9 @@ public:
 	float translationLimit;
 	float scalingLimit;
 	float rotateAngle;
+	float upperarmrotatelimit;
+	float lowerarmrotatelimit;
+	bool armrotate;
 	bool rLimiter;
 	bool toggleLimiters;
 	bool limitersON;
