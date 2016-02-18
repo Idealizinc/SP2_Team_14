@@ -203,6 +203,9 @@ void SP2_Scene::Init()
 	meshList[GEO_CRYSTAL] = MeshBuilder::GenerateOBJ("Core Crystal", "OBJ//Core_Crystal.obj");
 	meshList[GEO_CRYSTAL]->textureID = LoadTGA("Image//Tex_LightOrb.tga");
 
+	meshList[GEO_MOONFLOOR] = MeshBuilder::GenerateOBJ("Baseplate", "OBJ//Moon_Floor.obj");
+	meshList[GEO_MOONFLOOR]->textureID = LoadTGA("Image//Tex_Moon.tga");
+
 	/*meshList[GEO_COMPUTER] = MeshBuilder::GenerateOBJ("test", "OBJ//computer.obj");
 	meshList[GEO_COMPUTER]->textureID = LoadTGA("Image//computer.tga");*/
 
@@ -424,18 +427,55 @@ void SP2_Scene::RenderWeaponInHand(unsigned short wepVal, float size, float x, f
 	{
 		RenderMesh(meshList[GEO_SMG], true);
 	}
-	if (wepVal == 1)
+	else if (wepVal == 1)
+	{
+		RenderMesh(meshList[GEO_RIFLE], true); 
+	}
+	else if(wepVal == 2)
 	{
 		RenderMesh(meshList[GEO_SNIPER], true);
 	}
-	if (wepVal == 2)
-	{
-		RenderMesh(meshList[GEO_RIFLE], true);
-	}
-	if (wepVal == 3)
+	else if (wepVal == 3)
 	{
 		RenderMesh(meshList[GEO_SHOTGUN], true);
 	}
+	else if (wepVal == 4)
+	{
+		RenderMesh(meshList[GEO_RED_RIFLE], true);
+	}
+	else if (wepVal == 5)
+	{
+		RenderMesh(meshList[GEO_RED_SNIPER], true);
+	}
+	else if (wepVal == 6)
+	{
+		RenderMesh(meshList[GEO_RED_SHOTGUN], true);
+	}
+	else if (wepVal == 7)
+	{
+		RenderMesh(meshList[GEO_BLUE_RIFLE], true);
+	}
+	else if (wepVal == 8)
+	{
+		RenderMesh(meshList[GEO_BLUE_SNIPER], true);
+	}
+	else if (wepVal == 9)
+	{
+		RenderMesh(meshList[GEO_BLUE_SHOTGUN], true);
+	}
+	else if (wepVal == 10)
+	{
+		RenderMesh(meshList[GEO_GREEN_RIFLE], true);
+	}
+	else if (wepVal == 11)
+	{
+		RenderMesh(meshList[GEO_GREEN_SNIPER], true);
+	}
+	else if (wepVal == 12)
+	{
+		RenderMesh(meshList[GEO_GREEN_SHOTGUN], true);
+	}
+
 	projectionStack.PopMatrix();
 	viewStack.PopMatrix();
 	modelStack.PopMatrix();
@@ -737,21 +777,21 @@ void SP2_Scene::Update(double dt)
 		}
 	}
 	//Weapon
-	if (!weaponinterface){
-		randWepChoices = true;
-	}
 	if (weaponinterface && randWepChoices)
 	{
 		WepItf_Choices.x = rand() % 4;
 		WepItf_Choices.y = rand() % 4;
 		WepItf_Choices.z = rand() % 4;
-		randWepChoices == false;
+		randWepChoices = false;
 	}
 	if (weaponinterface == true)
 	{
 		if (buttonPress == true && Application::IsKeyPressed('1'))
 		{
-			weaponValue = 1;
+			if (WepItf_Choices.x == 0){ weaponValue = 1; }
+			else if (WepItf_Choices.x == 1){ weaponValue = 4; }
+			else if(WepItf_Choices.x == 2){ weaponValue = 7; }
+			else if(WepItf_Choices.x == 3){ weaponValue = 10; }
 			wave += 1;
 			buttonPress == false;
 			buttonValue = 0;
@@ -759,7 +799,10 @@ void SP2_Scene::Update(double dt)
 		}
 		else if (buttonPress == true && Application::IsKeyPressed('2'))
 		{
-			weaponValue = 2;
+			if (WepItf_Choices.y == 0){ weaponValue = 2; }
+			else if (WepItf_Choices.y == 1){ weaponValue = 5; }
+			else if (WepItf_Choices.y == 2){ weaponValue = 8; }
+			else if (WepItf_Choices.y == 3){ weaponValue = 11; }
 			wave += 1;
 			buttonPress == false;
 			buttonValue = 0;
@@ -767,12 +810,19 @@ void SP2_Scene::Update(double dt)
 		}
 		else if (buttonPress == true && Application::IsKeyPressed('3'))
 		{
-			weaponValue = 3;
+			if (WepItf_Choices.z == 0){ weaponValue = 3; }
+			else if (WepItf_Choices.z == 1){ weaponValue = 6; }
+			else if (WepItf_Choices.z == 2){ weaponValue = 9; }
+			else if (WepItf_Choices.z == 3){ weaponValue = 12; }
 			wave += 1;
 			buttonPress == false;
 			buttonValue = 0;
 			weaponinterface = false;
 		}
+	}
+	if (!weaponinterface)
+	{
+		randWepChoices = true;
 	}
 
 	if (!buttonPress)
@@ -1072,6 +1122,8 @@ void SP2_Scene::Render(double dt)
 			modelStack.Rotate(constRotation*3, 0, 1, 0);
 			RenderMesh(meshList[GEO_CRYSTAL], false);
 		modelStack.PopMatrix();
+	modelStack.Scale(20, 1, 20);
+	RenderMesh(meshList[GEO_MOONFLOOR], true);
 	modelStack.PopMatrix();
 	//RB End
 
@@ -1089,6 +1141,7 @@ void SP2_Scene::Render(double dt)
 	RenderMesh(meshList[GEO_SNIPER], true);
 	modelStack.PopMatrix();
 
+	//Render In-Hand Weapon
 	modelStack.PushMatrix();
 	RenderWeaponInHand(weaponValue, 5, 1, 1);
 	modelStack.PopMatrix();
@@ -1159,18 +1212,6 @@ void SP2_Scene::Render(double dt)
 					RenderMesh(meshList[GEO_MIXEDROBOTRIGHTLEG], true);
 					modelStack.PopMatrix();
 	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(0, 2, 2);
-	RenderMesh(meshList[GEO_RED_SNIPER], true);
-	modelStack.PopMatrix();
-
-
-	//modelStack.PushMatrix();
-	//modelStack.Translate(0,2,5);
-	//modelStack.Scale(0.8, 0.8, 0.8);
-	//RenderMesh(meshList[GEO_SNIPER], true);
-	//modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_METEOR], true);

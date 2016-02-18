@@ -95,11 +95,13 @@ class SP2_Scene : public Scene
 		GEO_MIXEDROBOTLEFTLEG,
 		GEO_MIXEDROBOTRIGHTLEG,
 
+		// UNCLASSIFIED
 		GEO_GATE,
 		GEO_METEOR,
 		//GEO_COMPUTER,
 		GEO_CRYSTAL,
 		GEO_CRYSTALBASE,
+		GEO_MOONFLOOR,
 
 		//add these enum in GEOMETRY_TYPE before NUM_GEOMETRY
 		GEO_TEXT,
@@ -261,7 +263,7 @@ private:
 
 	// Weapon Interface Stuff
 	Vector3 WepItf_Choices;
-	bool randWepChoices = false;
+	bool randWepChoices = true;
 
 	//check game state
 	int state;
