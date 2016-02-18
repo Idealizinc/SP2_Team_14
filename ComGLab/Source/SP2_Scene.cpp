@@ -84,9 +84,12 @@ void SP2_Scene::Init()
 	timer = 0;
 	weaponValue = 0;
 	weaponinterface = false;
+<<<<<<< HEAD
 	basePosition.x = 4;
 	basePosition.y = 3.2;
 	basePosition.z = 0;
+=======
+>>>>>>> 882c8f639d7cbc66b89a12f3ebeb5e5d954a9dcb
 	repairgate = false;
 	buttonPress = true;
 	buttonValue = 0;
@@ -195,7 +198,10 @@ void SP2_Scene::Init()
 
 	//meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	//meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
+<<<<<<< HEAD
 
+=======
+>>>>>>> 882c8f639d7cbc66b89a12f3ebeb5e5d954a9dcb
 	meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
 
@@ -917,11 +923,17 @@ void SP2_Scene::Render(double dt)
 	modelStack.Rotate(90, 1, 0, 0);
 	modelStack.Scale(0.3, 0.3, 0.3);
 	RenderMesh(meshList[GEO_GATE_SIDE], true);
+	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(0, 0, 0);
 	modelStack.Scale(1, 1, 1.3);
 	RenderMesh(meshList[GEO_GATE_MAIN], true);
+<<<<<<< HEAD
+=======
+	modelStack.PopMatrix();
+
+>>>>>>> 882c8f639d7cbc66b89a12f3ebeb5e5d954a9dcb
 	modelStack.Translate(constTranslation, 2, 5);
 	modelStack.Scale(0.8, 0.8, 0.8);
 	RenderMesh(meshList[GEO_SNIPER], true);
@@ -931,10 +943,18 @@ void SP2_Scene::Render(double dt)
 	RenderWeaponInHand(weaponValue, 5, 1, 1);
 	modelStack.PopMatrix();
 
+<<<<<<< HEAD
 	/*modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_DRONE], true);
 	modelStack.PopMatrix();*/
 	
+=======
+	modelStack.PushMatrix();
+	modelStack.Translate(0, 20, 0);
+	//modelStack.Rotate(270, 0, 0, 1);
+	RenderMesh(meshList[GEO_DRONE], true);
+	modelStack.PopMatrix();
+>>>>>>> 882c8f639d7cbc66b89a12f3ebeb5e5d954a9dcb
 
 	//modelStack.PushMatrix();
 	//modelStack.Translate(0,2,5);
@@ -944,6 +964,7 @@ void SP2_Scene::Render(double dt)
 
 	RenderImageOnScreen(SB_Day_left, 10, 10, 1, 1);
 
+<<<<<<< HEAD
 	/*modelStack.PushMatrix();
 	RenderSniperInHand(meshList[GEO_SNIPER], 5, 1, 1);
 	modelStack.PopMatrix();*/
@@ -952,6 +973,8 @@ void SP2_Scene::Render(double dt)
 	RenderMesh(meshList[GEO_METEOR], true);
 	modelStack.PopMatrix();
 
+=======
+>>>>>>> 882c8f639d7cbc66b89a12f3ebeb5e5d954a9dcb
 	//INFO UI, STATS - BOTTOM LEFT
 	modelStack.PushMatrix();
 	RenderImageOnScreen(UI_BG, 50, 10, 25, 5);

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  SP2_Scene.cpp
 c:\users\user\documents\sp2_team14\comglab\source\camera3.h(34): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
 c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(88): warning C4305: '=' : truncation from 'double' to 'float'
@@ -19,3 +20,14 @@ c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(918): warning C4
 c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(923): warning C4305: 'argument' : truncation from 'double' to 'float'
 c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(926): warning C4305: 'argument' : truncation from 'double' to 'float'
   ComGLab.vcxproj -> C:\Users\user\Documents\SP2_Team14\Debug\Mains.exe
+=======
+﻿Build started 2/18/2016 9:46:35 AM.
+     1>Project "C:\Users\Administrator\Desktop\SP2_Team14\ComGLab\ComGLab.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         ComGLab.vcxproj -> C:\Users\Administrator\Desktop\SP2_Team14\Debug\Mains.exe
+     1>Done Building Project "C:\Users\Administrator\Desktop\SP2_Team14\ComGLab\ComGLab.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.05
+>>>>>>> 882c8f639d7cbc66b89a12f3ebeb5e5d954a9dcb
