@@ -833,14 +833,31 @@ void SP2_Scene::RenderWepScreen(bool render, Vector3 choices)
 		modelStack.PushMatrix();
 		RenderImageOnScreen(UI_WepSel_BG, 130, 65, 80, 45);
 		//Left
-		RenderImageOnScreen(UI_BG, 30, 30, 40, 40);
-		RenderMeshOnScreen(meshList[GEO_RIFLE], 1, 1, 40, 40, constRotation * pause * 5, Vector3(1, 1, 0));
+		RenderImageOnScreen(UI_BG, 30, 30, 40, 45);
+		RenderMeshOnScreen(meshList[GEO_RIFLE], 1, 1, 40, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+		RenderImageOnScreen(UI_BG, 30, 10, 40, 67.5);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Gun 1", Color(0.000f, 0.808f, 0.820f), 4, 35, 70);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Type", Color(0.000f, 0.808f, 0.820f), 3, 35, 66);
+		RenderImageOnScreen(UI_BG, 30, 2.75, 40, 25);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press<1>to select", Color(0.000f, 0.808f, 0.820f), 2.75, 28.5, 25);
 		//Center
-		RenderImageOnScreen(UI_BG, 30, 30, 80, 40);
-		RenderMeshOnScreen(meshList[GEO_SNIPER], 1, 1, 85, 40, constRotation * pause * 5, Vector3(1, 1, 0));
+		RenderImageOnScreen(UI_BG, 30, 30, 80, 45);
+		RenderMeshOnScreen(meshList[GEO_SNIPER], 1, 1, 85, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+		RenderImageOnScreen(UI_BG, 30, 10, 80, 67.5);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Gun 2", Color(0.000f, 0.808f, 0.820f), 4, 75, 70);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Type", Color(0.000f, 0.808f, 0.820f), 3, 75, 66);
+		RenderImageOnScreen(UI_BG, 30, 2.75, 80, 25);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press<2>to select", Color(0.000f, 0.808f, 0.820f), 2.75, 68.5, 25);
+		RenderImageOnScreen(UI_BG, 50, 2.75, 80, 17.5);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press<4>to keep current weapon", Color(0.000f, 0.808f, 0.820f), 2.75, 58.5, 17.5);
 		//Right
-		RenderImageOnScreen(UI_BG, 30, 30, 120, 40);
-		RenderMeshOnScreen(meshList[GEO_SHOTGUN], 1, 1, 125, 40, constRotation * pause * 5, Vector3(1, 1, 0));
+		RenderImageOnScreen(UI_BG, 30, 30, 120, 45);
+		RenderMeshOnScreen(meshList[GEO_SHOTGUN], 1, 1, 125, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+		RenderImageOnScreen(UI_BG, 30, 10, 120, 67.5);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Gun 3", Color(0.000f, 0.808f, 0.820f), 4, 115, 70);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Type", Color(0.000f, 0.808f, 0.820f), 3, 115, 66);
+		RenderImageOnScreen(UI_BG, 30, 2.75, 120, 25);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press<3>to select", Color(0.000f, 0.808f, 0.820f), 2.75, 108.5, 25);
 		modelStack.PopMatrix();
 		//Wep Select UI END
 	}
