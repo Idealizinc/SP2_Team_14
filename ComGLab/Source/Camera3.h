@@ -42,16 +42,11 @@ private:
     int cameraMass;
 
 	void cameraMovement2(double dt);
-	bool boundsCheckXaxis(const int& x, const float& posX);
-	bool boundsCheckZaxis(const int& z, const float& posZ);
 
 	float walkVal;
 
 	std::vector<Boundary> BoundVec;
 	void initBoundVec();
-	bool boundsCheckXaxis(const float& posX);
-	bool boundsCheckZaxis(const float& posZ);
-	bool boundsCheckXY(const float& posX, const float& posZ);
 
 	//Bounds
 	//Refer to blueprints for bound location
