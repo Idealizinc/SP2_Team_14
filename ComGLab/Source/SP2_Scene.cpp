@@ -59,8 +59,8 @@ void SP2_Scene::Init()
 	projection.SetToPerspective(30.0f, static_cast < float >(S_Width) / static_cast < float >(S_Height), 0.1f, 3000.0f);
 	projectionStack.LoadMatrix(projection);
 
-	camera.Init(Vector3(0, 4, 8.5), Vector3(0, 4, 0), Vector3(0, 1, 0));
-
+	camera.Init(Vector3(0, 4, 1), Vector3(0, 4, 0), Vector3(0, 1, 0));
+	// 0, 4, 8.5
 	//Initiallising Variables For Translate, Rotate, Scale
 	tweenVal = 0;
 	constRotation = 0;
@@ -83,6 +83,17 @@ void SP2_Scene::Init()
 	timer = 0;
 	weaponValue = 0;
 	weaponinterface = false;
+<<<<<<< HEAD
+	wave1robots = false;
+	wave2robots = false;
+	meteor = false;
+	wave4robots = false;
+	wave5robots = false;
+	boss = false;
+	basePosition.x = 4;
+	basePosition.y = 3.2;
+	basePosition.z = 0;
+=======
 	repairgate = false;
 	buttonPress = true;
 	buttonValue = 0;
@@ -90,6 +101,7 @@ void SP2_Scene::Init()
 	pause = 1;
 	leftgate = 0;
 	rightgate = 0;
+>>>>>>> 78159ce922499a8038798029e11bc0030f9c4b19
 
 	// Enable depth Test
 	glEnable(GL_DEPTH_TEST);
@@ -180,11 +192,25 @@ void SP2_Scene::Init()
 	meshList[GEO_SNIPER] = MeshBuilder::GenerateOBJ("test", "OBJ//Sniper.obj");
 	meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Sniper.tga");
 
+<<<<<<< HEAD
+	meshList[GEO_BASE] = MeshBuilder::GenerateOBJ("base", "OBJ//base.obj");
+	//meshList[GEO_BASE]->textureID = LoadTGA("Image//tex_base.tga");
+
+	meshList[GEO_GATE_MAIN] = MeshBuilder::GenerateOBJ("gate_main", "OBJ//gate_main.obj");
+	//meshList[GEO_GATE_MAIN]->textureID = LoadTGA("Image//gate_main.tga");
+
+	meshList[GEO_GATE_SIDE] = MeshBuilder::GenerateOBJ("gate_side", "OBJ//gate_side.obj");
+	meshList[GEO_GATE_SIDE]->textureID = LoadTGA("Image//bullet.tga"); // temporary texture
+
+	//meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
+	//meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
+=======
 	meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
 
 	meshList[GEO_SHOTGUN] = MeshBuilder::GenerateOBJ("test", "OBJ//Shotgun.obj");
 	meshList[GEO_SHOTGUN]->textureID = LoadTGA("Image//Tex_Shotgun.tga");
+>>>>>>> 78159ce922499a8038798029e11bc0030f9c4b19
 
 	//meshList[GEO_PLAYERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//PlayerShip.obj");
 	//meshList[GEO_PLAYERSHIP]->textureID = LoadTGA("Image//Tex_PlayerShip.tga");
@@ -888,6 +914,24 @@ void SP2_Scene::Render(double dt)
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
+<<<<<<< HEAD
+	modelStack.Translate(basePosition.x, basePosition.y, basePosition.z);
+	modelStack.Scale(2, 5, 2);
+	RenderMesh(meshList[GEO_BASE], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-0.3, 2, 10);
+	modelStack.Rotate(90, 0, 0, 1);
+	modelStack.Rotate(90, 1, 0, 0);
+	modelStack.Scale(0.3, 0.3, 0.3);
+	RenderMesh(meshList[GEO_GATE_SIDE], true);
+
+	modelStack.PushMatrix();
+	modelStack.Translate(0, 0, 0);
+	modelStack.Scale(1, 1, 1.3);
+	RenderMesh(meshList[GEO_GATE_MAIN], true);
+=======
 	modelStack.Translate(constTranslation, 2, 5);
 	modelStack.Scale(0.8, 0.8, 0.8);
 	RenderMesh(meshList[GEO_SNIPER], true);
@@ -899,12 +943,38 @@ void SP2_Scene::Render(double dt)
 
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_DRONE], true);
+>>>>>>> 78159ce922499a8038798029e11bc0030f9c4b19
+	modelStack.PopMatrix();
 	modelStack.PopMatrix();
 
+	//modelStack.PushMatrix();
+	//modelStack.Translate(0,2,5);
+	//modelStack.Scale(0.8, 0.8, 0.8);
+	//RenderMesh(meshList[GEO_SNIPER], true);
+	//modelStack.PopMatrix();
+
+<<<<<<< HEAD
+	RenderImageOnScreen(SB_Day_left, 10, 10, 1, 1);
+
+	modelStack.PushMatrix();
+	RenderSniperInHand(meshList[GEO_SNIPER], 5, 1, 1);
+	modelStack.PopMatrix();
+
+<<<<<<< HEAD
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_METEOR], true);
 	modelStack.PopMatrix();
 
+=======
+	std::stringstream fpsText;
+	fpsText << std::fixed << std::setprecision(1) << "FPS = " << framesPerSecond;
+	RenderTextOnScreen(meshList[GEO_TEXT], fpsText.str(), Color(1, 1, 1), 2.5, 2, 3);
+
+	std::stringstream coordText;
+	coordText << std::fixed << std::setprecision(1) << "Player Location = (" << camera.getCameraPosition().x << ", " << camera.getCameraPosition().z << ", " << camera.getCameraPosition().z << ")!";
+	RenderTextOnScreen(meshList[GEO_TEXT], coordText.str(), Color(1, 1, 1), 2.5, 2, 2);
+=======
+>>>>>>> 6f6dfb57b1f6a40161b90e9142b3695f66ac4bcf
 	//INFO UI, STATS - BOTTOM LEFT
 	modelStack.PushMatrix();
 	RenderImageOnScreen(UI_BG, 50, 10, 25, 5);
@@ -932,6 +1002,7 @@ void SP2_Scene::Render(double dt)
 	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(basehp), Color(0, 0.5, 0), 3, 2.5, 87);
 
 	RenderTextOnScreen(meshList[GEO_TEXT], "Ammo: " + std::to_string(ammo), Color(0, 0.5, 0), 3, 2.5, 84);
+>>>>>>> 78159ce922499a8038798029e11bc0030f9c4b19
 
 	RenderTextOnScreen(meshList[GEO_TEXT], "Wave Number: " + std::to_string(wave), Color(0, 0.5, 0), 3, 2.5, 81);
 
