@@ -210,10 +210,10 @@ void SP2_Scene::Init()
 	////meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Robot1.tga");
 
 	meshList[GEO_GATE] = MeshBuilder::GenerateOBJ("test", "OBJ//gate.obj");
-	meshList[GEO_GATE]->textureID = LoadTGA("Image//gate.tga");
+	meshList[GEO_GATE]->textureID = LoadTGA("Image//Tex_Gate.tga");
 
 	meshList[GEO_METEOR] = MeshBuilder::GenerateOBJ("test", "OBJ//meteor.obj");
-	meshList[GEO_METEOR]->textureID = LoadTGA("Image//meteor.tga");
+	meshList[GEO_METEOR]->textureID = LoadTGA("Image//Tex_Meteor.tga");
 
 	/*meshList[GEO_COMPUTER] = MeshBuilder::GenerateOBJ("test", "OBJ//computer.obj");
 	meshList[GEO_COMPUTER]->textureID = LoadTGA("Image//computer.tga");*/
