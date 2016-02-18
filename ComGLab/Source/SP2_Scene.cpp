@@ -58,11 +58,7 @@ void SP2_Scene::Init()
 	projection.SetToPerspective(30.0f, static_cast < float >(S_Width) / static_cast < float >(S_Height), 0.1f, 3000.0f);
 	projectionStack.LoadMatrix(projection);
 
-<<<<<<< HEAD
-	camera.Init(Vector3(4, 4, 1), Vector3(0, 4, 0), Vector3(0, 1, 0));
-=======
 	camera.Init(Vector3(0, 5, 3), Vector3(0, 5, 0), Vector3(0, 1, 0));
->>>>>>> e27f3d3092bf545e5d1f11e68482a300b5973bdf
 	// 0, 4, 8.5
 	//Initiallising Variables For Translate, Rotate, Scale
 	tweenVal = 0;

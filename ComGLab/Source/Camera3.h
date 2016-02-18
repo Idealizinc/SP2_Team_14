@@ -50,7 +50,6 @@ private:
 
 	//Bounds
 	//Refer to blueprints for bound location
-<<<<<<< HEAD
 	
 	Boundary northwall1;
 	Boundary southwall1;
@@ -70,14 +69,6 @@ private:
 	Boundary westgate2;
 	Boundary corebase;
 	
-	
-
-	//Interactive
-	
-=======
-	Boundary BoatBack;
-	Boundary BoatFront;
-
 	Boundary WorldBot;
 	Boundary WorldTop;
 	Boundary WorldLeft;
@@ -93,7 +84,6 @@ private:
 	Boundary Floor2Back;
 	//Interactive
 
->>>>>>> e27f3d3092bf545e5d1f11e68482a300b5973bdf
 };
 
 #endif

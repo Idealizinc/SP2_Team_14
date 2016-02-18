@@ -177,14 +177,11 @@ void Camera3::cameraMovement2(double dt)
 	{
 		//walkingY += 
 	}
-<<<<<<< HEAD
-	if (walkingX != 0 && northwall1.BoundaryCheck(walkingX + position.x, position.z) && northwall2.BoundaryCheck(walkingX + position.x, position.z) && westwall1.BoundaryCheck(walkingX + position.x, position.z) && westwall2.BoundaryCheck(walkingX + position.x, position.z) && eastwall1.BoundaryCheck(walkingX + position.x, position.z) && eastwall2.BoundaryCheck(walkingX + position.x, position.z) && southwall1.BoundaryCheck(walkingX + position.x, position.z) && southwall2.BoundaryCheck(walkingX + position.x, position.z) && corebase.BoundaryCheck(walkingX + position.x, position.z))
-	{
-		position.x += walkingX;
-	}
-	if (walkingZ != 0 && northwall1.BoundaryCheck(position.x, position.z + walkingZ) && northwall2.BoundaryCheck(position.x, position.z + walkingZ) && westwall1.BoundaryCheck(position.x, position.z + walkingZ) && westwall2.BoundaryCheck(position.x, position.z + walkingZ) && eastwall1.BoundaryCheck(position.x, position.z + walkingZ) && eastwall2.BoundaryCheck(position.x, position.z + walkingZ) && southwall1.BoundaryCheck(position.x, position.z + walkingZ) && southwall1.BoundaryCheck(position.x, position.z + walkingZ) && corebase.BoundaryCheck(position.x, position.z + walkingZ))
-=======
-	if (walkingX != 0 && WorldBack.BoundaryCheck(walkingX + position.x, position.z) && WorldFront.BoundaryCheck(walkingX + position.x, position.z)
+	if (walkingX != 0 && northwall1.BoundaryCheck(walkingX + position.x, position.z) && northwall2.BoundaryCheck(walkingX + position.x, position.z)
+		&& westwall1.BoundaryCheck(walkingX + position.x, position.z) && westwall2.BoundaryCheck(walkingX + position.x, position.z)
+		&& eastwall1.BoundaryCheck(walkingX + position.x, position.z) && eastwall2.BoundaryCheck(walkingX + position.x, position.z)
+		&& southwall1.BoundaryCheck(walkingX + position.x, position.z) && southwall2.BoundaryCheck(walkingX + position.x, position.z) && corebase.BoundaryCheck(walkingX + position.x, position.z)
+		&& WorldBack.BoundaryCheck(walkingX + position.x, position.z) && WorldFront.BoundaryCheck(walkingX + position.x, position.z)
 		&& WorldLeft.BoundaryCheck(walkingX + position.x, position.z) && WorldRight.BoundaryCheck(walkingX + position.x, position.z)
 		&& WorldTop.BoundaryCheck(walkingX + position.x, position.z) && WorldBot.BoundaryCheck(walkingX + position.x, position.z)
 		&& Floor2Back.BoundaryCheck(walkingX + position.x, position.z) && Floor2Front.BoundaryCheck(walkingX + position.x, position.z)
@@ -193,26 +190,24 @@ void Camera3::cameraMovement2(double dt)
 	{
 		position.x += walkingX;
 	}
-	if (walkingZ != 0 && WorldBack.BoundaryCheck(position.x, position.z + walkingZ) && WorldFront.BoundaryCheck(position.x, position.z + walkingZ)
+	if (walkingZ != 0 && northwall1.BoundaryCheck(position.x, position.z + walkingZ) && northwall2.BoundaryCheck(position.x, position.z + walkingZ)
+		&& westwall1.BoundaryCheck(position.x, position.z + walkingZ) && westwall2.BoundaryCheck(position.x, position.z + walkingZ)
+		&& eastwall1.BoundaryCheck(position.x, position.z + walkingZ) && eastwall2.BoundaryCheck(position.x, position.z + walkingZ)
+		&& southwall1.BoundaryCheck(position.x, position.z + walkingZ) && southwall1.BoundaryCheck(position.x, position.z + walkingZ) && corebase.BoundaryCheck(position.x, position.z + walkingZ)
+		&& WorldBack.BoundaryCheck(position.x, position.z + walkingZ) && WorldFront.BoundaryCheck(position.x, position.z + walkingZ)
 		&& WorldLeft.BoundaryCheck(position.x, position.z + walkingZ) && WorldRight.BoundaryCheck(position.x, position.z + walkingZ)
 		&& WorldTop.BoundaryCheck(position.x, position.z + walkingZ) && WorldBot.BoundaryCheck(position.x, position.z + walkingZ)
 		&& Floor2Back.BoundaryCheck(position.x, position.z + walkingZ) && Floor2Front.BoundaryCheck(position.x, position.z + walkingZ)
 		&& Floor2Left.BoundaryCheck(position.x, position.z + walkingZ) && Floor2Right.BoundaryCheck(position.x, position.z + walkingZ)
 		&& Floor2Top.BoundaryCheck(position.x, position.z + walkingZ) && Floor2Bot.BoundaryCheck(position.x, position.z + walkingZ))
->>>>>>> e27f3d3092bf545e5d1f11e68482a300b5973bdf
 	{
 		position.z += walkingZ;
 	}
 	
-
-
-
 }
 
 void Camera3::initBoundVec()
-{
-<<<<<<< HEAD
-	
+{	
 	/*min =  trans - scale/2 ;
 	max =  trans + scale/2;*/
 	northwall1.set(15.0,18.8,4.6,18.0);
@@ -235,14 +230,6 @@ void Camera3::initBoundVec()
 
 	corebase.set(-1.3, 1.1, -1.4, 3.1);
 
-	
-=======
-	/*Note
-	min =  trans - scale/2 ;
-	max =  trans + scale/2;
-	*/
-	/*BoatBack.set(-150, 150, -160, -150);
-	BoatFront.set(-150, 150, 150, 160);*/
 	WorldBot.set(-150, 150, -150, 150, -5, 0);
 	WorldTop.set(-150, 150, -150, 150, 30, 40);
 	WorldFront.set(-150, 150, 150, 160, -5, 30);
@@ -255,7 +242,6 @@ void Camera3::initBoundVec()
 	Floor2Back.set(-11, 11, -17, -15, 10, 17);
 	Floor2Top.set(-11, 11, -17, 17, 15, 17);
 	Floor2Bot.set(-11, 11, -17, 17, 8, 10);
->>>>>>> e27f3d3092bf545e5d1f11e68482a300b5973bdf
 }
 
 
