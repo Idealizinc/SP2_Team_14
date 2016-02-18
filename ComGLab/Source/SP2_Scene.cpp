@@ -201,8 +201,8 @@ void SP2_Scene::Init()
 	meshList[GEO_GATE] = MeshBuilder::GenerateOBJ("test", "OBJ//gate.obj");
 	meshList[GEO_GATE]->textureID = LoadTGA("Image//gate.tga");
 
-	/*meshList[GEO_METEOR] = MeshBuilder::GenerateOBJ("test", "OBJ//meteor.obj");
-	meshList[GEO_METEOR]->textureID = LoadTGA("Image//meteor.tga");*/
+	meshList[GEO_METEOR] = MeshBuilder::GenerateOBJ("test", "OBJ//meteor.obj");
+	meshList[GEO_METEOR]->textureID = LoadTGA("Image//meteor.tga");
 
 	/*meshList[GEO_COMPUTER] = MeshBuilder::GenerateOBJ("test", "OBJ//computer.obj");
 	meshList[GEO_COMPUTER]->textureID = LoadTGA("Image//computer.tga");*/
@@ -901,6 +901,10 @@ void SP2_Scene::Render(double dt)
 	RenderMesh(meshList[GEO_DRONE], true);
 	modelStack.PopMatrix();
 
+	modelStack.PushMatrix();
+	RenderMesh(meshList[GEO_METEOR], true);
+	modelStack.PopMatrix();
+
 	//INFO UI, STATS - BOTTOM LEFT
 	modelStack.PushMatrix();
 	RenderImageOnScreen(UI_BG, 50, 10, 25, 5);
@@ -923,6 +927,8 @@ void SP2_Scene::Render(double dt)
 	
 	RenderWepScreen(weaponinterface);
 
+	Rendergate(repairgate);
+
 	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(basehp), Color(0, 0.5, 0), 3, 2.5, 87);
 
 	RenderTextOnScreen(meshList[GEO_TEXT], "Ammo: " + std::to_string(ammo), Color(0, 0.5, 0), 3, 2.5, 84);
@@ -939,7 +945,7 @@ void SP2_Scene::Render(double dt)
 	
 	gamestate();
 
-	Rendergate(repairgate);
+
 }
 
 void SP2_Scene::Exit()

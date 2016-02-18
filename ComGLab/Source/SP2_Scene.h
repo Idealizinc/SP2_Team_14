@@ -55,7 +55,7 @@ class SP2_Scene : public Scene
 		GEO_DRONE,
 		//GEO_ROBOT1,
 		GEO_GATE,
-		//GEO_METEOR,
+		GEO_METEOR,
 		//GEO_COMPUTER,
 
 		//add these enum in GEOMETRY_TYPE before NUM_GEOMETRY
@@ -203,10 +203,10 @@ private:
 
 	//test on screen values
 	double fps;
-	int basehp;
-	int gatehp;
-	int ammo;
-	int wave;
+	unsigned int basehp;
+	unsigned int gatehp;
+	unsigned int ammo;
+	unsigned int wave;
 	float framesPerSecond;
 
 	//check game state
@@ -216,10 +216,10 @@ private:
 	bool repairgate;
 
 	//robot dmg
-	int meleedmg = 5;
-	int rangedmg = 5;
-	int mixedmelee = 4;
-	int mixedrange = 4;
+	unsigned int meleedmg = 5;
+	unsigned int rangedmg = 5;
+	unsigned int mixedmelee = 4;
+	unsigned int mixedrange = 4;
 
 	//Light Stuff
 	Vector3 TownLightPosition;

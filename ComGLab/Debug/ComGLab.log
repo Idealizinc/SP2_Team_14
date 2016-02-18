@@ -1,48 +1,22 @@
-<<<<<<< HEAD
-﻿  ComGLab.vcxproj -> C:\Users\user\Documents\SP2_Team14\Debug\Mains.exe
-=======
-﻿Build started 2/17/2016 5:01:04 PM.
-     1>Project "C:\Users\Administrator\Desktop\SP2_Team14\ComGLab\ComGLab.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Administrator\Desktop\SP2_Team14\\irrKlang-1.5.0\include" /IC:\Users\Administrator\Desktop\SP2_Team14\\glew\include /IC:\Users\Administrator\Desktop\SP2_Team14\\glfw\include /IC:\Users\Administrator\Desktop\SP2_Team14\\Common\Source /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source\SP2_Scene.cpp
-         SP2_Scene.cpp
-     1>c:\users\administrator\desktop\sp2_team14\comglab\source\camera3.h(34): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\administrator\desktop\sp2_team14\comglab\source\sp2_scene.cpp(431): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\users\administrator\desktop\sp2_team14\comglab\source\sp2_scene.cpp(467): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>c:\users\administrator\desktop\sp2_team14\comglab\source\sp2_scene.cpp(480): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>c:\users\administrator\desktop\sp2_team14\comglab\source\sp2_scene.cpp(493): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>c:\users\administrator\desktop\sp2_team14\comglab\source\sp2_scene.cpp(506): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>c:\users\administrator\desktop\sp2_team14\comglab\source\sp2_scene.cpp(519): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>c:\users\administrator\desktop\sp2_team14\comglab\source\sp2_scene.cpp(605): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>c:\users\administrator\desktop\sp2_team14\comglab\source\sp2_scene.cpp(613): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>c:\users\administrator\desktop\sp2_team14\comglab\source\sp2_scene.cpp(621): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>c:\users\administrator\desktop\sp2_team14\comglab\source\sp2_scene.cpp(629): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\administrator\desktop\sp2_team14\comglab\source\sp2_scene.cpp(646): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>c:\users\administrator\desktop\sp2_team14\comglab\source\sp2_scene.cpp(652): warning C4553: '==' : operator has no effect; did you intend '='?
-     1>c:\users\administrator\desktop\sp2_team14\comglab\source\sp2_scene.cpp(656): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>c:\users\administrator\desktop\sp2_team14\comglab\source\sp2_scene.cpp(844): warning C4305: 'argument' : truncation from 'double' to 'float'
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Administrator\Desktop\SP2_Team14\Debug\Mains.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\Administrator\Desktop\SP2_Team14\\irrKlang-1.5.0\include" /LIBPATH:C:\Users\Administrator\Desktop\SP2_Team14\\glew\lib /LIBPATH:"C:\Users\Administrator\Desktop\SP2_Team14\\glfw\lib-msvc120" /LIBPATH:C:\Users\Administrator\Desktop\SP2_Team14\Debug glew32.lib glfw3.lib opengl32.lib winmm.lib Common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Administrator\Desktop\SP2_Team14\Debug\Mains.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Administrator\Desktop\SP2_Team14\Debug\Mains.lib" /MACHINE:X86 Debug\Application.obj
-         Debug\Particle.obj
-         Debug\SP2_Scene.obj
-         Debug\SoundSystem.obj
-         Debug\Boundary.obj
-         Debug\Camera.obj
-         Debug\Camera2.obj
-         Debug\Camera3.obj
-         Debug\Light.obj
-         Debug\LoadOBJ.obj
-         Debug\LoadTGA.obj
-         Debug\Material.obj
-         Debug\main.obj
-         Debug\Mesh.obj
-         Debug\MeshBuilder.obj
-         Debug\shader.obj
-         Debug\Utility.obj
-         ComGLab.vcxproj -> C:\Users\Administrator\Desktop\SP2_Team14\Debug\Mains.exe
-     1>Done Building Project "C:\Users\Administrator\Desktop\SP2_Team14\ComGLab\ComGLab.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:01.03
->>>>>>> f4a1e80f13eb4dbadddf2ec864b94abd44b30a47
+﻿  Application.cpp
+c:\users\user\documents\sp2_team14\comglab\source\camera3.h(34): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+  Generating Code...
+  Compiling...
+  SP2_Scene.cpp
+c:\users\user\documents\sp2_team14\comglab\source\camera3.h(34): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(434): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(479): warning C4553: '==' : operator has no effect; did you intend '='?
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(491): warning C4553: '==' : operator has no effect; did you intend '='?
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(503): warning C4553: '==' : operator has no effect; did you intend '='?
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(515): warning C4553: '==' : operator has no effect; did you intend '='?
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(527): warning C4553: '==' : operator has no effect; did you intend '='?
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(646): warning C4553: '==' : operator has no effect; did you intend '='?
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(654): warning C4553: '==' : operator has no effect; did you intend '='?
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(662): warning C4553: '==' : operator has no effect; did you intend '='?
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(670): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(690): warning C4553: '==' : operator has no effect; did you intend '='?
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(696): warning C4553: '==' : operator has no effect; did you intend '='?
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(700): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(892): warning C4305: 'argument' : truncation from 'double' to 'float'
+  Generating Code...
+  ComGLab.vcxproj -> C:\Users\user\Documents\SP2_Team14\Debug\Mains.exe
