@@ -149,7 +149,7 @@ void Camera3::cameraMovement2(double dt)
 	float walkingY = 0;
 	if (Application::IsKeyPressed(VK_LSHIFT) || Application::IsKeyPressed(VK_RSHIFT))
 	{
-		walkingSpeed = 2.5;
+		walkingSpeed = 0.5;
 	}
 	else walkingSpeed = 5;
 
@@ -177,11 +177,11 @@ void Camera3::cameraMovement2(double dt)
 	{
 		//walkingY += 
 	}
-	if (walkingX != 0 /*&& BoatBack.BoundaryCheck(walkingX + position.x, position.z)*/)
+	if (walkingX != 0 && BoatBack.BoundaryCheck(walkingX + position.x, position.z) && BoatLeft.BoundaryCheck(walkingX + position.x, position.z))
 	{
 		position.x += walkingX;
 	}
-	if (walkingZ != 0 /*&& BoatBack.BoundaryCheck(position.x, position.z + walkingZ)*/)
+	if (walkingZ != 0 && BoatBack.BoundaryCheck(position.x, position.z + walkingZ) && BoatLeft.BoundaryCheck(position.x, position.z + walkingZ))
 	{
 		position.z += walkingZ;
 	}
@@ -193,8 +193,8 @@ void Camera3::initBoundVec()
 	min =  trans - scale/2 ;
 	max =  trans + scale/2;
 	*/
-	BoatBack.set(-10, 15, 18, 19);
-	BoatLeft.set(-8, -6, 3, 27);
+	BoatBack.set(-150, 150, -160, -150);
+	BoatLeft.set(-150, 150, 150, 160);
 	BoatRight.set(12, 15, 3, 27);
 	BoatFrontL.set(-32,-2,-19.5,5.5);
 	BoatFrontR.set(1.4, 32.6, -19.5, 5.5);
