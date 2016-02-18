@@ -184,8 +184,11 @@ void SP2_Scene::Init()
 	meshList[GEO_SNIPER] = MeshBuilder::GenerateOBJ("test", "OBJ//Sniper.obj");
 	meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Sniper.tga");
 
+	meshList[GEO_GATE] = MeshBuilder::GenerateOBJ("test", "OBJ//Gate_Door.obj");
+	meshList[GEO_GATE]->textureID = LoadTGA("Image//Tex_Gate2.tga");
+
 	meshList[GEO_BASE] = MeshBuilder::GenerateOBJ("base", "OBJ//base.obj");
-	//meshList[GEO_BASE]->textureID = LoadTGA("Image//tex_base.tga");
+	meshList[GEO_BASE]->textureID = meshList[GEO_GATE]->textureID;
 
 	meshList[GEO_GATE_MAIN] = MeshBuilder::GenerateOBJ("gate_main", "OBJ//gate_main.obj");
 	//meshList[GEO_GATE_MAIN]->textureID = LoadTGA("Image//gate_main.tga");
@@ -213,11 +216,14 @@ void SP2_Scene::Init()
 	//meshList[GEO_ROBOT1] = MeshBuilder::GenerateOBJ("test", "OBJ//Robot1.obj");
 	////meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Robot1.tga");
 
-	meshList[GEO_GATE] = MeshBuilder::GenerateOBJ("test", "OBJ//Gate_Door.obj");
-	meshList[GEO_GATE]->textureID = LoadTGA("Image//Tex_Gate2.tga");
-
 	meshList[GEO_METEOR] = MeshBuilder::GenerateOBJ("test", "OBJ//meteor.obj");
 	meshList[GEO_METEOR]->textureID = LoadTGA("Image//Tex_Meteor.tga");
+
+	meshList[GEO_CRYSTALBASE] = MeshBuilder::GenerateOBJ("Crystal Platform", "OBJ//Core_Platform.obj");
+	meshList[GEO_CRYSTALBASE]->textureID = LoadTGA("Image//Tex_Core_Platform.tga");
+
+	meshList[GEO_CRYSTAL] = MeshBuilder::GenerateOBJ("Crystal Core", "OBJ//Core_Crystal.obj");
+	meshList[GEO_CRYSTAL]->textureID = LoadTGA("Image//Tex_LightOrb.tga");
 
 	/*meshList[GEO_COMPUTER] = MeshBuilder::GenerateOBJ("test", "OBJ//computer.obj");
 	meshList[GEO_COMPUTER]->textureID = LoadTGA("Image//computer.tga");*/
@@ -904,11 +910,20 @@ void SP2_Scene::Render(double dt)
 	RenderMesh(meshList[GEO_AXES], false);
 	modelStack.PopMatrix();
 
+	//RenderBase
 	modelStack.PushMatrix();
-	modelStack.Translate(basePosition.x, basePosition.y, basePosition.z);
-	modelStack.Scale(2, 5, 2);
-	RenderMesh(meshList[GEO_BASE], true);
+	//modelStack.Translate(basePosition.x, basePosition.y, basePosition.z);
+		modelStack.PushMatrix();
+			RenderMesh(meshList[GEO_BASE], true);
+			RenderMesh(meshList[GEO_CRYSTALBASE], true);
+			modelStack.PushMatrix();
+			modelStack.Rotate(constRotation*3, 0, 1, 0);
+			modelStack.Translate(0, tweenVal/1000, 0);
+			RenderMesh(meshList[GEO_CRYSTAL], false);
+			modelStack.PopMatrix();
+		modelStack.PopMatrix();
 	modelStack.PopMatrix();
+	//RB End
 
 	modelStack.PushMatrix();
 	modelStack.Translate(-0.3, 2, 10);
