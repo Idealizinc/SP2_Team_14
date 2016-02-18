@@ -65,7 +65,6 @@ void SP2_Scene::Init()
 	tweenVal = 0;
 	constRotation = 0;
 	constTranslation = 0;
-	DoorRot = 0;
 	translateX = 0;
 	scaleAll = 1;
 	rotationalLimit = 180;
@@ -179,12 +178,6 @@ void SP2_Scene::Init()
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//calibri.tga");
 
-	meshList[GEO_SMG] = MeshBuilder::GenerateOBJ("test", "OBJ//SMG.obj");
-	meshList[GEO_SMG]->textureID = LoadTGA("Image//Tex_SMG.tga");
-
-	meshList[GEO_SNIPER] = MeshBuilder::GenerateOBJ("test", "OBJ//Sniper.obj");
-	meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Sniper.tga");
-
 	meshList[GEO_GATE] = MeshBuilder::GenerateOBJ("test", "OBJ//Gate_Door.obj");
 	meshList[GEO_GATE]->textureID = LoadTGA("Image//Tex_Gate2.tga");
 
@@ -194,18 +187,77 @@ void SP2_Scene::Init()
 	meshList[GEO_GATE_SIDE] = MeshBuilder::GenerateOBJ("gate_side", "OBJ//gate_side.obj");
 	meshList[GEO_GATE_SIDE]->textureID = LoadTGA("Image//bullet.tga"); // temporary texture
 
+	//meshList[GEO_PLAYERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//PlayerShip.obj");
+	//meshList[GEO_PLAYERSHIP]->textureID = LoadTGA("Image//Tex_PlayerShip.tga");
+
+	//meshList[GEO_MOTHERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//Mothership.obj");
+	//meshList[GEO_MOTHERSHIP]->textureID = LoadTGA("Image//Tex_Mothership.tga");
+
+	meshList[GEO_METEOR] = MeshBuilder::GenerateOBJ("test", "OBJ//meteor.obj");
+	meshList[GEO_METEOR]->textureID = LoadTGA("Image//Tex_Meteor.tga");
+
+	meshList[GEO_CRYSTALBASE] = MeshBuilder::GenerateOBJ("Core Platform", "OBJ//Core_Platform.obj");
+	meshList[GEO_CRYSTALBASE]->textureID = LoadTGA("Image//Tex_Core_Platform.tga");
+
+	meshList[GEO_CRYSTAL] = MeshBuilder::GenerateOBJ("Core Crystal", "OBJ//Core_Crystal.obj");
+	meshList[GEO_CRYSTAL]->textureID = LoadTGA("Image//Tex_LightOrb.tga");
+
+	/*meshList[GEO_COMPUTER] = MeshBuilder::GenerateOBJ("test", "OBJ//computer.obj");
+	meshList[GEO_COMPUTER]->textureID = LoadTGA("Image//computer.tga");*/
+
+	initBounds();
+	InitWeaponModels();
+	InitRobots();
+}
+
+void SP2_Scene::InitWeaponModels()
+{
+	// Base
+	meshList[GEO_SMG] = MeshBuilder::GenerateOBJ("test", "OBJ//SMG.obj");
+	meshList[GEO_SMG]->textureID = LoadTGA("Image//Tex_SMG.tga");
+
+	meshList[GEO_SNIPER] = MeshBuilder::GenerateOBJ("test", "OBJ//Sniper.obj");
+	meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Sniper.tga");
+
 	meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
 
 	meshList[GEO_SHOTGUN] = MeshBuilder::GenerateOBJ("test", "OBJ//Shotgun.obj");
 	meshList[GEO_SHOTGUN]->textureID = LoadTGA("Image//Tex_Shotgun.tga");
 
-	//meshList[GEO_PLAYERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//PlayerShip.obj");
-	//meshList[GEO_PLAYERSHIP]->textureID = LoadTGA("Image//Tex_PlayerShip.tga");
+	// Damage
+	meshList[GEO_RED_SNIPER] = MeshBuilder::GenerateOBJ("test", "OBJ//Sniper.obj");
+	meshList[GEO_RED_SNIPER]->textureID = LoadTGA("Image//Tex_SniperDamage.tga");
 
-	//meshList[GEO_MOTHERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//Mothership.obj");
-	//meshList[GEO_MOTHERSHIP]->textureID = LoadTGA("Image//Tex_Mothership.tga");
-	
+	meshList[GEO_RED_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
+	meshList[GEO_RED_RIFLE]->textureID = LoadTGA("Image//Tex_RifleDamage.tga");
+
+	meshList[GEO_RED_SHOTGUN] = MeshBuilder::GenerateOBJ("test", "OBJ//Shotgun.obj");
+	meshList[GEO_RED_SHOTGUN]->textureID = LoadTGA("Image//Tex_ShotgunDamage.tga");
+
+	// Ammo
+	meshList[GEO_BLUE_SNIPER] = MeshBuilder::GenerateOBJ("test", "OBJ//Sniper.obj");
+	meshList[GEO_BLUE_SNIPER]->textureID = LoadTGA("Image//Tex_SniperAmmo.tga");
+
+	meshList[GEO_BLUE_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
+	meshList[GEO_BLUE_RIFLE]->textureID = LoadTGA("Image//Tex_RifleAmmo.tga");
+
+	meshList[GEO_BLUE_SHOTGUN] = MeshBuilder::GenerateOBJ("test", "OBJ//Shotgun.obj");
+	meshList[GEO_BLUE_SHOTGUN]->textureID = LoadTGA("Image//Tex_ShotgunAmmo.tga");
+
+	// Fast
+	meshList[GEO_GREEN_SNIPER] = MeshBuilder::GenerateOBJ("test", "OBJ//Sniper.obj");
+	meshList[GEO_GREEN_SNIPER]->textureID = LoadTGA("Image//Tex_SniperFast.tga");
+
+	meshList[GEO_GREEN_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
+	meshList[GEO_GREEN_RIFLE]->textureID = LoadTGA("Image//Tex_RifleFast.tga");
+
+	meshList[GEO_GREEN_SHOTGUN] = MeshBuilder::GenerateOBJ("test", "OBJ//Shotgun.obj");
+	meshList[GEO_GREEN_SHOTGUN]->textureID = LoadTGA("Image//Tex_ShotgunFast.tga");
+}
+
+void SP2_Scene::InitRobots()
+{
 	//drone
 	meshList[GEO_DRONEBODY] = MeshBuilder::GenerateOBJ("test", "OBJ//Drone_body.obj");
 	GLuint texGD = LoadTGA("Image//Tex_Drone.tga");
@@ -253,24 +305,6 @@ void SP2_Scene::Init()
 	meshList[GEO_MIXEDROBOTRIGHTARM]->textureID = texGD3;
 	meshList[GEO_MIXEDROBOTRIGHTLEG] = MeshBuilder::GenerateOBJ("test", "OBJ//MixedRobot_rightleg.obj");
 	meshList[GEO_MIXEDROBOTRIGHTLEG]->textureID = texGD3;
-
-
-	//meshList[GEO_ROBOT1] = MeshBuilder::GenerateOBJ("test", "OBJ//Robot1.obj");
-	////meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Robot1.tga");
-
-	meshList[GEO_METEOR] = MeshBuilder::GenerateOBJ("test", "OBJ//meteor.obj");
-	meshList[GEO_METEOR]->textureID = LoadTGA("Image//Tex_Meteor.tga");
-
-	meshList[GEO_CRYSTALBASE] = MeshBuilder::GenerateOBJ("Core Platform", "OBJ//Core_Platform.obj");
-	meshList[GEO_CRYSTALBASE]->textureID = LoadTGA("Image//Tex_Core_Platform.tga");
-
-	meshList[GEO_CRYSTAL] = MeshBuilder::GenerateOBJ("Core Crystal", "OBJ//Core_Crystal.obj");
-	meshList[GEO_CRYSTAL]->textureID = LoadTGA("Image//Tex_LightOrb.tga");
-
-	/*meshList[GEO_COMPUTER] = MeshBuilder::GenerateOBJ("test", "OBJ//computer.obj");
-	meshList[GEO_COMPUTER]->textureID = LoadTGA("Image//computer.tga");*/
-
-	initBounds();
 }
 
 void SP2_Scene::RenderText(Mesh* mesh, std::string text, Color color)
@@ -832,15 +866,60 @@ void SP2_Scene::RenderWepScreen(bool render, Vector3 choices)
 		//Wep Select UI - Overall
 		modelStack.PushMatrix();
 		RenderImageOnScreen(UI_WepSel_BG, 130, 65, 80, 45);
-		//Left
-		RenderImageOnScreen(UI_BG, 30, 30, 40, 40);
-		RenderMeshOnScreen(meshList[GEO_RIFLE], 1, 1, 40, 40, constRotation * pause * 5, Vector3(1, 1, 0));
-		//Center
-		RenderImageOnScreen(UI_BG, 30, 30, 80, 40);
-		RenderMeshOnScreen(meshList[GEO_SNIPER], 1, 1, 85, 40, constRotation * pause * 5, Vector3(1, 1, 0));
-		//Right
-		RenderImageOnScreen(UI_BG, 30, 30, 120, 40);
-		RenderMeshOnScreen(meshList[GEO_SHOTGUN], 1, 1, 125, 40, constRotation * pause * 5, Vector3(1, 1, 0));
+		//Left - Choice 1
+		RenderImageOnScreen(UI_BG, 30, 30, 40, 45);
+		if (choices.x == 0)
+		{
+			RenderMeshOnScreen(meshList[GEO_RIFLE], 1, 1, 40, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+		}
+		if (choices.x == 1)
+		{
+			RenderMeshOnScreen(meshList[GEO_RED_RIFLE], 1, 1, 40, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+		}
+		if (choices.x == 2)
+		{
+			RenderMeshOnScreen(meshList[GEO_BLUE_RIFLE], 1, 1, 40, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+		}
+		if (choices.x == 3)
+		{
+			RenderMeshOnScreen(meshList[GEO_GREEN_RIFLE], 1, 1, 40, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+		}
+		//Center - Choice 2
+		RenderImageOnScreen(UI_BG, 30, 30, 80, 45);
+		if (choices.y == 0)
+		{
+			RenderMeshOnScreen(meshList[GEO_SNIPER], 1, 1, 85, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+		}
+		if (choices.y == 1)
+		{
+			RenderMeshOnScreen(meshList[GEO_RED_SNIPER], 1, 1, 85, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+		}
+		if (choices.y == 2)
+		{
+			RenderMeshOnScreen(meshList[GEO_BLUE_SNIPER], 1, 1, 85, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+		}
+		if (choices.y == 3)
+		{
+			RenderMeshOnScreen(meshList[GEO_GREEN_SNIPER], 1, 1, 85, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+		}
+		//Right - Choice 3
+		RenderImageOnScreen(UI_BG, 30, 30, 120, 45);
+		if (choices.z == 0)
+		{
+			RenderMeshOnScreen(meshList[GEO_SHOTGUN], 1, 1, 125, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+		}
+		if (choices.z == 1)
+		{
+			RenderMeshOnScreen(meshList[GEO_RED_SHOTGUN], 1, 1, 125, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+		}
+		if (choices.z == 2)
+		{
+			RenderMeshOnScreen(meshList[GEO_BLUE_SHOTGUN], 1, 1, 125, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+		}
+		if (choices.z == 3)
+		{
+			RenderMeshOnScreen(meshList[GEO_GREEN_SHOTGUN], 1, 1, 125, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+		}
 		modelStack.PopMatrix();
 		//Wep Select UI END
 	}
@@ -1051,6 +1130,11 @@ void SP2_Scene::Render(double dt)
 					modelStack.PopMatrix();
 	modelStack.PopMatrix();
 
+	modelStack.PushMatrix();
+	modelStack.Translate(0, 2, 2);
+	RenderMesh(meshList[GEO_RED_SNIPER], true);
+	modelStack.PopMatrix();
+
 
 	//modelStack.PushMatrix();
 	//modelStack.Translate(0,2,5);
@@ -1082,7 +1166,7 @@ void SP2_Scene::Render(double dt)
 
 	RenderImageOnScreen(Crosshair, 10, 10, 80, 45);
 
-	RenderWepScreen(weaponinterface);
+	RenderWepScreen(weaponinterface, WepItf_Choices);
 
 	Rendergate(repairgate);
 
