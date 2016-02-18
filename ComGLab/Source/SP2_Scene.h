@@ -242,7 +242,7 @@ private:
 
 	//Render Calls
 	void readtextfile();
-	void gamestate();
+	void GameState();
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size = 1, float x = 0, float y = 0);
 	void RenderWeaponInHand(unsigned short wepVal = 0, float size = 1, float x = 0, float y = 0);
@@ -250,7 +250,7 @@ private:
 	void RenderMeshOnScreen(Mesh* mesh, float Xsize = 1, float Ysize = 1, float Xpos = 0, float Ypos = 0, float Angle = 0, Vector3 RotationDir = Vector3(0, 0, 0));
 	void RenderWepScreen(bool render = false, Vector3 choices = Vector3(0, 0, 0));
 	void initBounds();
-	void Rendergate(bool render = false);
+	void RenderGate(bool render = false);
 	void RenderUI();
 
 	//Interaction Values

@@ -608,7 +608,7 @@ void SP2_Scene::initBounds()
 {
 
 }
-void SP2_Scene::Rendergate(bool render)
+void SP2_Scene::RenderGate(bool render)
 {
 	if (render)
 	{
@@ -619,7 +619,7 @@ void SP2_Scene::Rendergate(bool render)
 		gatehp = 20;
 	}
 }
-void SP2_Scene::gamestate()
+void SP2_Scene::GameState()
 {
 	if (wave == 1)
 	{
@@ -1083,8 +1083,6 @@ void SP2_Scene::RenderUI()
 
 	RenderWepScreen(weaponinterface, WepItf_Choices);
 
-	Rendergate(repairgate);
-
 	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(basehp), Color(0, 0.5, 0), 3, 2.5, 87);
 
 	RenderTextOnScreen(meshList[GEO_TEXT], "Ammo: " + std::to_string(ammo), Color(0, 0.5, 0), 3, 2.5, 84);
@@ -1166,6 +1164,8 @@ void SP2_Scene::Render(double dt)
 	{
 		RenderSkybox(camera.getCameraPosition());
 	}
+
+	GameState();
 
 	if (wave == 0)
 	{
@@ -1312,16 +1312,14 @@ void SP2_Scene::Render(double dt)
 	RenderMesh(meshList[GEO_METEOR], true);
 	modelStack.PopMatrix();
 
-	gamestate();
-
 	modelStack.PushMatrix();
 	modelStack.Translate(17.2, 0.5, -2.15);
 	modelStack.Rotate(90, 0, 1, 0);
 	modelStack.Scale(1.55, 1.55, 2.5);
-	Rendergate(true);
+	RenderGate(true);
 		modelStack.PushMatrix();
 		modelStack.Translate(-3, 0, 0);
-		Rendergate(true);
+		RenderGate(true);
 		modelStack.PopMatrix();
 	modelStack.PopMatrix();
 
@@ -1329,30 +1327,30 @@ void SP2_Scene::Render(double dt)
 	modelStack.Translate(-17.2, 0.5, -2.15);
 	modelStack.Rotate(90, 0, 1, 0);
 	modelStack.Scale(1.55, 1.55, 2.5);
-	Rendergate(true);
+	RenderGate(true);
 		modelStack.PushMatrix();
 		modelStack.Translate(-3, 0, 0);
-		Rendergate(true);
+		RenderGate(true);
 		modelStack.PopMatrix();
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(-2.15, 0.5, -17.2);
 	modelStack.Scale(1.55, 1.55, 2.5);
-	Rendergate(true);
+	RenderGate(true);
 		modelStack.PushMatrix();
 		modelStack.Translate(3, 0, 0);
-		Rendergate(true);
+		RenderGate(true);
 		modelStack.PopMatrix();
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(-2.15, 0.5, 17.2);
 	modelStack.Scale(1.55, 1.55, 2.5);
-	Rendergate(true);
+	RenderGate(true);
 		modelStack.PushMatrix();
 		modelStack.Translate(3, 0, 0);
-		Rendergate(true);
+		RenderGate(true);
 		modelStack.PopMatrix();
 	modelStack.PopMatrix();
 	
