@@ -147,7 +147,7 @@ void Camera3::cameraMovement2(double dt)
 	float walkingZ = 0;
 	if (Application::IsKeyPressed(VK_LSHIFT) || Application::IsKeyPressed(VK_RSHIFT))
 	{
-		walkingSpeed = 3;
+		walkingSpeed = 2.5;
 	}
 	else walkingSpeed = 5;
 
@@ -171,9 +171,12 @@ void Camera3::cameraMovement2(double dt)
 		walkingX += (float)(sin(Math::DegreeToRadian(CameraYrotation + 270)) / walkingSpeed);
 		walkingZ += (float)(cos(Math::DegreeToRadian(CameraYrotation + 270)) / walkingSpeed);
 	}
-	if (boundsCheckXY(walkingX + position.x, walkingZ + position.z))
+	if (walkingX != 0 /*&& BoatBack.BoundaryCheck(walkingX + position.x, position.z)*/)
 	{
 		position.x += walkingX;
+	}
+	if (walkingZ != 0 /*&& BoatBack.BoundaryCheck(position.x, position.z + walkingZ)*/)
+	{
 		position.z += walkingZ;
 	}
 }

@@ -1,2 +1,10 @@
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v120:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit
+<<<<<<< HEAD
 Debug|Win32|C:\Users\Rayner\Desktop\SP2_CGP_V1.1\|
+=======
+<<<<<<< HEAD
+Debug|Win32|C:\Users\Administrator\Desktop\SP2_Team14\|
+=======
+Debug|Win32|C:\Users\user\Documents\SP2_Team14\|
+>>>>>>> 3ea904faf6b2fc7eea36a62991850581b84532b9
+>>>>>>> 78159ce922499a8038798029e11bc0030f9c4b19

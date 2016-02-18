@@ -31,7 +31,7 @@ void SP2_Scene::readtextfile()
 {
 	std::string line;
 	std::ifstream startfile;
-	startfile.open("readme\\start.txt");
+	startfile.open("ComGLab\readme\\start.txt");
 	std::string file_contents;
 	if (startfile.is_open())
 	{
@@ -66,7 +66,7 @@ void SP2_Scene::Init()
 	constRotation = 0;
 	constTranslation = 0;
 	DoorRot = 0;
-	translateX = 5;
+	translateX = 0;
 	scaleAll = 1;
 	rotationalLimit = 180;
 	translationLimit = 5;
@@ -75,11 +75,15 @@ void SP2_Scene::Init()
 	toggleLimiters = true;
 	limitersON = true;
 	lightOff = false;
-	hp = 100;
+	basehp = 100;
+	gatehp = 20;
 	ammo = 100;
-	wave = 0;
+	wave = 1;
 	state = 0;
+	timer = 0;
+	weaponValue = 0;
 	weaponinterface = false;
+<<<<<<< HEAD
 	wave1robots = false;
 	wave2robots = false;
 	meteor = false;
@@ -89,6 +93,15 @@ void SP2_Scene::Init()
 	basePosition.x = 4;
 	basePosition.y = 3.2;
 	basePosition.z = 0;
+=======
+	repairgate = false;
+	buttonPress = true;
+	buttonValue = 0;
+	robotCount = 0;
+	pause = 1;
+	leftgate = 0;
+	rightgate = 0;
+>>>>>>> 78159ce922499a8038798029e11bc0030f9c4b19
 
 	// Enable depth Test
 	glEnable(GL_DEPTH_TEST);
@@ -149,6 +162,13 @@ void SP2_Scene::Init()
 	SB_Day_left = LoadTGA("Image//Space_Left.tga");
 	SB_Day_right = LoadTGA("Image//Space_Right.tga");
 
+	//UI Elements
+	Crosshair = LoadTGA("Image//Crosshair.tga");
+	UI_BG = LoadTGA("Image//UI_BG_Black.tga");
+	UI_HP_Red = LoadTGA("Image//UI_HP_Red.tga");
+	UI_HP_Green = LoadTGA("Image//UI_HP_Green.tga");
+	UI_WepSel_BG = LoadTGA("Image//UI_WepSel_BG.tga");
+	Crosshair = LoadTGA("Image//Crosshair.tga");
 
 	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
 	meshList[GEO_FRONT]->textureID = SB_Day_front;
@@ -166,9 +186,13 @@ void SP2_Scene::Init()
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//calibri.tga");
 
+	meshList[GEO_SMG] = MeshBuilder::GenerateOBJ("test", "OBJ//SMG.obj");
+	meshList[GEO_SMG]->textureID = LoadTGA("Image//Tex_SMG.tga");
+
 	meshList[GEO_SNIPER] = MeshBuilder::GenerateOBJ("test", "OBJ//Sniper.obj");
 	meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Sniper.tga");
 
+<<<<<<< HEAD
 	meshList[GEO_BASE] = MeshBuilder::GenerateOBJ("base", "OBJ//base.obj");
 	//meshList[GEO_BASE]->textureID = LoadTGA("Image//tex_base.tga");
 
@@ -180,6 +204,13 @@ void SP2_Scene::Init()
 
 	//meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	//meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
+=======
+	meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
+	meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
+
+	meshList[GEO_SHOTGUN] = MeshBuilder::GenerateOBJ("test", "OBJ//Shotgun.obj");
+	meshList[GEO_SHOTGUN]->textureID = LoadTGA("Image//Tex_Shotgun.tga");
+>>>>>>> 78159ce922499a8038798029e11bc0030f9c4b19
 
 	//meshList[GEO_PLAYERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//PlayerShip.obj");
 	//meshList[GEO_PLAYERSHIP]->textureID = LoadTGA("Image//Tex_PlayerShip.tga");
@@ -187,11 +218,20 @@ void SP2_Scene::Init()
 	//meshList[GEO_MOTHERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//Mothership.obj");
 	//meshList[GEO_MOTHERSHIP]->textureID = LoadTGA("Image//Tex_Mothership.tga");
 
-	//meshList[GEO_DRONE] = MeshBuilder::GenerateOBJ("test", "OBJ//Drone.obj");
-	//meshList[GEO_DRONE]->textureID = LoadTGA("Image//Tex_Drone.tga");
+	meshList[GEO_DRONE] = MeshBuilder::GenerateOBJ("test", "OBJ//Drone.obj");
+	meshList[GEO_DRONE]->textureID = LoadTGA("Image//Tex_Drone.tga");
 
 	//meshList[GEO_ROBOT1] = MeshBuilder::GenerateOBJ("test", "OBJ//Robot1.obj");
 	////meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Robot1.tga");
+
+	meshList[GEO_GATE] = MeshBuilder::GenerateOBJ("test", "OBJ//gate.obj");
+	meshList[GEO_GATE]->textureID = LoadTGA("Image//gate.tga");
+
+	/*meshList[GEO_METEOR] = MeshBuilder::GenerateOBJ("test", "OBJ//meteor.obj");
+	meshList[GEO_METEOR]->textureID = LoadTGA("Image//meteor.tga");*/
+
+	/*meshList[GEO_COMPUTER] = MeshBuilder::GenerateOBJ("test", "OBJ//computer.obj");
+	meshList[GEO_COMPUTER]->textureID = LoadTGA("Image//computer.tga");*/
 
 	initBounds();
 }
@@ -239,8 +279,8 @@ void SP2_Scene::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, fl
 	viewStack.LoadIdentity(); //No need camera for ortho mode
 	modelStack.PushMatrix();
 	modelStack.LoadIdentity(); //Reset modelStack
-	modelStack.Scale(size, size, size);
 	modelStack.Translate(x, y, 0);
+	modelStack.Scale(size, size, size);
 
 	glUniform1i(m_parameters[U_TEXT_ENABLED], 1);
 	glUniform3fv(m_parameters[U_TEXT_COLOR], 1, &color.r);
@@ -252,7 +292,7 @@ void SP2_Scene::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, fl
 	for (unsigned i = 0; i < text.length(); ++i)
 	{
 		Mtx44 characterSpacing;
-		characterSpacing.SetToTranslation(i * 0.5f, 0, 0); //1.0f is the spacing of each character, you may change this value
+		characterSpacing.SetToTranslation(i * 0.55f, 0, 0); //1.0f is the spacing of each character, you may change this value
 		Mtx44 MVP = projectionStack.Top() * viewStack.Top() * modelStack.Top() * characterSpacing;
 		glUniformMatrix4fv(m_parameters[U_MVP], 1, GL_FALSE, &MVP.a[0]);
 
@@ -264,7 +304,6 @@ void SP2_Scene::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, fl
 	projectionStack.PopMatrix();
 	viewStack.PopMatrix();
 	modelStack.PopMatrix();
-
 	glEnable(GL_DEPTH_TEST);
 }
 
@@ -286,7 +325,7 @@ void SP2_Scene::RenderImageOnScreen(GLuint texture, float Xsize, float Ysize, fl
 	modelStack.LoadIdentity(); //Reset modelStack
 	modelStack.Translate(Xpos, Ypos, 0);
 	modelStack.Rotate(90, 1, 0, 0);
-	modelStack.Scale(Xsize, Ysize, 1);
+	modelStack.Scale(Xsize, 1, Ysize);
 	RenderMesh(meshList[GEO_AXES], false);
 	RenderMesh(mesh, false);
 	projectionStack.PopMatrix();
@@ -295,11 +334,10 @@ void SP2_Scene::RenderImageOnScreen(GLuint texture, float Xsize, float Ysize, fl
 	glEnable(GL_DEPTH_TEST);
 }
 
-
-void SP2_Scene::RenderSniperInHand(Mesh* mesh, float size, float x, float y)
+void SP2_Scene::RenderWeaponInHand(unsigned short wepVal, float size, float x, float y)
 {
 	Mtx44 ortho;
-	ortho.SetToOrtho(0, 170, 0, 90, -70, 70); //size of screen UI
+	ortho.SetToOrtho(0, 170, 0, 90, -70, 140); //size of screen UI
 	projectionStack.PushMatrix();
 	projectionStack.LoadMatrix(ortho);
 	viewStack.PushMatrix();
@@ -308,9 +346,46 @@ void SP2_Scene::RenderSniperInHand(Mesh* mesh, float size, float x, float y)
 	modelStack.LoadIdentity(); //Reset modelStack
 	modelStack.Translate(140, 5, -10);
 	modelStack.Rotate(200, 0, 1, 0);
-	modelStack.Rotate(5, -1, 0, 0);
+	modelStack.Rotate(10, -1, 0, 0);
 	modelStack.Scale(20, 20, 20);
-	RenderMesh(meshList[GEO_SNIPER], true);
+	if (wepVal == 0)
+	{
+		RenderMesh(meshList[GEO_SMG], true);
+	}
+	if (wepVal == 1)
+	{
+		RenderMesh(meshList[GEO_SNIPER], true);
+	}
+	if (wepVal == 2)
+	{
+		RenderMesh(meshList[GEO_RIFLE], true);
+	}
+	if (wepVal == 3)
+	{
+		RenderMesh(meshList[GEO_SHOTGUN], true);
+	}
+	projectionStack.PopMatrix();
+	viewStack.PopMatrix();
+	modelStack.PopMatrix();
+}
+
+
+void SP2_Scene::RenderMeshOnScreen(Mesh* mesh, float Xsize, float Ysize, float Xpos, float Ypos, float Angle, Vector3 RotationDir)
+{
+	Mtx44 ortho;
+	ortho.SetToOrtho(0, 170, 0, 90, -70, 140); //size of screen UI
+	projectionStack.PushMatrix();
+	projectionStack.LoadMatrix(ortho);
+	viewStack.PushMatrix();
+	viewStack.LoadIdentity(); //No need camera for ortho mode
+	modelStack.PushMatrix();
+	modelStack.LoadIdentity(); //Reset modelStack
+	modelStack.Translate(Xpos, Ypos, 0);
+	modelStack.Rotate(90, 0, 1, 0);
+	modelStack.Rotate(Angle, RotationDir.x, RotationDir.y, RotationDir.z);
+	modelStack.Scale(3, 3, 3);
+	modelStack.Scale(Xsize, Ysize, Xsize);
+	RenderMesh(mesh, true);
 	projectionStack.PopMatrix();
 	viewStack.PopMatrix();
 	modelStack.PopMatrix();
@@ -409,20 +484,105 @@ void SP2_Scene::initBounds()
 {
 	
 }
+void SP2_Scene::Rendergate(bool render)
+{
+	if (render)
+	{
+		modelStack.PushMatrix();
+		//translation here once map is out
+		RenderMesh(meshList[GEO_GATE], true);
+		modelStack.PopMatrix();
+		gatehp = 20;
+	}
+}
+void SP2_Scene::gamestate()
+{
+	if (wave == 1)
+	{
+		if (robotCount == 0)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1 clear", Color(1, 0, 0), 3, 20, 15);
+			weaponinterface == true;
+		}
+		else if (basehp == 0)
+		{
+			//go back to start screen
+		}
+	}
+	if (wave == 2)
+	{
+		if (robotCount == 0)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2 clear", Color(1, 0, 0), 3, 20, 15);
+			weaponinterface == true;
+		}
+		else if (basehp == 0)
+		{
+			//go back to start screen
+		}
+	}
+	if (wave == 3)
+	{
+		if (robotCount == 0)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 20, 15);
+			weaponinterface == true;
+		}
+		else if (basehp == 0)
+		{
+			//go back to start screen
+		}
+	}
+	if (wave == 4)
+	{
+		if (robotCount == 0)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4 clear", Color(1, 0, 0), 3, 20, 15);
+			weaponinterface == true;
+		}
+		else if (basehp == 0)
+		{
+			//go back to start screen
+		}
+	}
+	if (wave == 5)
+	{
+		if (robotCount == 0)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 20, 15);
+			weaponinterface == true;
+		}
+		else if (basehp == 0)
+		{
+			//go back to start screen
+		}
+	}
+	if (wave == 6)
+	{
+		//if (//boss dead)
+		//{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Boss Stage clear", Color(1, 0, 0), 3, 20, 15);
+		//}
+		//else if (hp == 0)
+		//{
+		//	//go back to start screen
+		//}
+	}
+}
 
 void SP2_Scene::Update(double dt)
 {
 	camera.Update(dt);
-	constRotation += (float)(10 * dt);
-	constTranslation += (float)(10 * dt);
+	constRotation += (float)(10 * pause * dt);
+	constTranslation += (float)(10 * pause  * dt);
 	//Lerping Rotation
 	if ((rLimiter == true))
 	{
-		tweenVal += (float)(50 * dt);
+		tweenVal += (float)(50 * pause  * dt);
 	}
 	else if ((rLimiter == false))
 	{
-		tweenVal -= (float)(50 * dt);
+		tweenVal -= (float)(50 * pause * dt);
 	}
 	if (tweenVal >= rotationalLimit)
 	{
@@ -443,7 +603,29 @@ void SP2_Scene::Update(double dt)
 	{
 		translateX = 40;
 	}
-	translateX += (float)(10 * dt /* EXTRA */ * 2);
+	translateX += (float)(10 * pause  * dt);
+	if (repairgate == true)
+	{
+		openleftgate = true;
+		openrightgate = true;
+		if (openleftgate == true)
+		{
+			leftgate += (float)(8 * dt);
+			if (leftgate > 60)
+			{
+				openleftgate = false;
+			}
+		}
+		if (openrightgate == true)
+		{
+			rightgate += (float)(1.2 * dt);
+			if (rightgate > 6.5)
+			{
+				openrightgate = false;
+			}
+		}
+	}
+	
 	//End
 
 	//Resetting Scaling
@@ -451,25 +633,97 @@ void SP2_Scene::Update(double dt)
 	{
 		scaleAll = 5;
 	}
-	scaleAll += (float)(2 * dt);
-	if (Application::IsKeyPressed('1'))
+	scaleAll += (float)(2 * pause  * dt);
+	if (Application::IsKeyPressed('6'))
 	{
 		glEnable(GL_CULL_FACE);
 	}
-	if (Application::IsKeyPressed('2'))
+	if (Application::IsKeyPressed('7'))
 	{
 		glDisable(GL_CULL_FACE);
 	}
-	if (Application::IsKeyPressed('3'))
+	if (Application::IsKeyPressed('8'))
 	{
 		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 	}
-	if (Application::IsKeyPressed('4'))
+	if (Application::IsKeyPressed('9'))
 	{
 		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	}
+	//gate
+	if (gatehp < 20)
+	{
+		repairgate = true;
+	}
+	if (repairgate == true)
+	{
+		if (gatehp == 20)
+		{
+			repairgate = false;
+		}
+	}
+	//Weapon
+	if (weaponinterface == true)
+	{
+		if (buttonPress == true && Application::IsKeyPressed('1'))
+		{
+			weaponValue = 1;
+			wave += 1;
+			buttonPress == false;
+			buttonValue = 0;
+			weaponinterface = false;
+		}
+		else if (buttonPress == true && Application::IsKeyPressed('2'))
+		{
+			weaponValue = 2;
+			wave += 1;
+			buttonPress == false;
+			buttonValue = 0;
+			weaponinterface = false;
+		}
+		else if (buttonPress == true && Application::IsKeyPressed('3'))
+		{
+			weaponValue = 3;
+			wave += 1;
+			buttonPress == false;
+			buttonValue = 0;
+			weaponinterface = false;
+		}
+	}
 
-	framesPerSecond = 1 / dt;
+	if (!buttonPress)
+	{
+		buttonValue += 1 * pause * dt;
+		if (buttonValue >= 10)
+		{
+			buttonPress = true;
+		}
+	}
+
+	if (Application::IsKeyPressed('I'))
+	{
+		weaponinterface = true;
+	}
+	if (Application::IsKeyPressed('U'))
+	{
+		weaponinterface = false;
+	}
+	//timer += (float)(1 * dt);
+
+	if (Application::IsKeyPressed('P') && pause == 1)
+	{
+		pause = 0;
+		buttonPress == false;
+		buttonValue = 0;
+	}
+	else if (Application::IsKeyPressed('O') && pause == 0)
+	{
+		pause = 1;
+		buttonPress == false;
+		buttonValue = 0;
+	}
+
+	framesPerSecond = 1 * pause / dt;
 
 	TownLightPosition.y += tweenVal / 15000;
 	light[1].position.Set(TownLightPosition.x, TownLightPosition.y, TownLightPosition.z);
@@ -531,6 +785,26 @@ void SP2_Scene::RenderSkybox(Vector3 Position)
 	RenderMesh(meshList[GEO_RIGHT], false);
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
+}
+
+void SP2_Scene::RenderWepScreen(bool render, Vector3 choices)
+{
+	if (render){
+		//Wep Select UI - Overall
+		modelStack.PushMatrix();
+		RenderImageOnScreen(UI_WepSel_BG, 130, 65, 80, 45);
+		//Left
+		RenderImageOnScreen(UI_BG, 30, 30, 40, 40);
+		RenderMeshOnScreen(meshList[GEO_RIFLE], 1, 1, 40, 40, constRotation * pause * 5, Vector3(1, 1, 0));
+		//Center
+		RenderImageOnScreen(UI_BG, 30, 30, 80, 40);
+		RenderMeshOnScreen(meshList[GEO_SNIPER], 1, 1, 85, 40, constRotation * pause * 5, Vector3(1, 1, 0));
+		//Right
+		RenderImageOnScreen(UI_BG, 30, 30, 120, 40);
+		RenderMeshOnScreen(meshList[GEO_SHOTGUN], 1, 1, 125, 40, constRotation * pause * 5, Vector3(1, 1, 0));
+		modelStack.PopMatrix();
+		//Wep Select UI END
+	}
 }
 
 void SP2_Scene::Render(double dt)
@@ -602,32 +876,36 @@ void SP2_Scene::Render(double dt)
 
 	if (wave == 0)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Robot wave incoming", Color(1, 0, 0), 3, 22, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robot wave incoming", Color(1, 0, 0), 3, 60, 87);
 	}
 	if (wave == 1)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "*Robots coming from all directions*", Color(1, 0, 0), 3, 22, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "*Robots coming from all directions*", Color(1, 0, 0), 3, 60, 87);
 	}
 	if (wave == 2)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Robots now walk faster!!", Color(1, 0, 0), 3, 22, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robots now walk faster!!", Color(1, 0, 0), 3, 60, 87);
 	}
 	if (wave == 3)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Meteors incoming!!!", Color(1, 0, 1), 3, 22, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Meteors incoming!!!", Color(1, 0, 1), 3, 60, 87);
 	}
 	if (wave == 4)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Robots now fire weapons faster!!", Color(1, 0, 0), 3, 22, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robots now fire weapons faster!!", Color(1, 0, 0), 3, 60, 87);
 	}
 	if (wave == 5)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Robots are now in god mode!!", Color(1, 0, 0), 3, 22, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robots are now in god mode!!", Color(1, 0, 0), 3, 60, 87);
 	}
 	//boss wave 
 	if (wave == 6)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Boss: Defeat Mothership", Color(1, 0, 0), 3, 22, 29);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Boss: Defeat Mothership", Color(1, 0, 0), 3, 60, 87);
+	}
+	if (wave > 6)
+	{
+		//go to start screen, win game
 	}
 	readtextfile();
 
@@ -636,6 +914,7 @@ void SP2_Scene::Render(double dt)
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
+<<<<<<< HEAD
 	modelStack.Translate(basePosition.x, basePosition.y, basePosition.z);
 	modelStack.Scale(2, 5, 2);
 	RenderMesh(meshList[GEO_BASE], true);
@@ -652,6 +931,19 @@ void SP2_Scene::Render(double dt)
 	modelStack.Translate(0, 0, 0);
 	modelStack.Scale(1, 1, 1.3);
 	RenderMesh(meshList[GEO_GATE_MAIN], true);
+=======
+	modelStack.Translate(constTranslation, 2, 5);
+	modelStack.Scale(0.8, 0.8, 0.8);
+	RenderMesh(meshList[GEO_SNIPER], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	RenderWeaponInHand(weaponValue, 5, 1, 1);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	RenderMesh(meshList[GEO_DRONE], true);
+>>>>>>> 78159ce922499a8038798029e11bc0030f9c4b19
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
 
@@ -661,6 +953,7 @@ void SP2_Scene::Render(double dt)
 	//RenderMesh(meshList[GEO_SNIPER], true);
 	//modelStack.PopMatrix();
 
+<<<<<<< HEAD
 	RenderImageOnScreen(SB_Day_left, 10, 10, 1, 1);
 
 	modelStack.PushMatrix();
@@ -674,12 +967,47 @@ void SP2_Scene::Render(double dt)
 	std::stringstream coordText;
 	coordText << std::fixed << std::setprecision(1) << "Player Location = (" << camera.getCameraPosition().x << ", " << camera.getCameraPosition().z << ", " << camera.getCameraPosition().z << ")!";
 	RenderTextOnScreen(meshList[GEO_TEXT], coordText.str(), Color(1, 1, 1), 2.5, 2, 2);
+=======
+	//INFO UI, STATS - BOTTOM LEFT
+	modelStack.PushMatrix();
+	RenderImageOnScreen(UI_BG, 50, 10, 25, 5);
+	std::stringstream fpsText;
+	fpsText << std::fixed << std::setprecision(1) << "FPS = " << framesPerSecond;
+	RenderTextOnScreen(meshList[GEO_TEXT], fpsText.str(), Color(1, 1, 1), 2.5, 5, 7.5);
+	std::stringstream coordText;
+	coordText << std::fixed << std::setprecision(1) << "Player Location = (" << camera.getCameraPosition().x << ", " << camera.getCameraPosition().y << ", " << camera.getCameraPosition().z << ")";
+	RenderTextOnScreen(meshList[GEO_TEXT], coordText.str(), Color(1, 1, 1), 2.5, 5, 5);
+	modelStack.PopMatrix();
+	//INFO UI, STATS END
 
-	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(hp), Color(0, 0.5, 0), 3, 2, 29);
+	//INFO UI, HP - CENTER
+	modelStack.PushMatrix();
+	RenderImageOnScreen(UI_BG, 50, 10, 80, 5);
+	modelStack.PopMatrix();
+	//INFO UI, HP END
 
-	RenderTextOnScreen(meshList[GEO_TEXT], "" + std::to_string(ammo), Color(0, 0.5, 0), 3, 4, 28);
+	RenderImageOnScreen(Crosshair, 10, 10, 80, 45);
+	
+	RenderWepScreen(weaponinterface);
 
-	RenderTextOnScreen(meshList[GEO_TEXT], "" + std::to_string(wave), Color(0, 0.5, 0), 3, 4, 27);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(basehp), Color(0, 0.5, 0), 3, 2.5, 87);
+
+	RenderTextOnScreen(meshList[GEO_TEXT], "Ammo: " + std::to_string(ammo), Color(0, 0.5, 0), 3, 2.5, 84);
+>>>>>>> 78159ce922499a8038798029e11bc0030f9c4b19
+
+	RenderTextOnScreen(meshList[GEO_TEXT], "Wave Number: " + std::to_string(wave), Color(0, 0.5, 0), 3, 2.5, 81);
+
+	if (pause == 0)
+	{
+		modelStack.PushMatrix();
+		RenderImageOnScreen(UI_BG, 50, 10, 80, 45);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Paused", Color(0, 0.5, 0), 10, 68, 45);
+		modelStack.PopMatrix();
+	}
+	
+	gamestate();
+
+	Rendergate(repairgate);
 }
 
 void SP2_Scene::Exit()

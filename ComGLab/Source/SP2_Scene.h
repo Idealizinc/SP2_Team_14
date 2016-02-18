@@ -46,12 +46,17 @@ class SP2_Scene : public Scene
 		GEO_BACK,
 
 		//Custom Models
+		GEO_SMG,
 		GEO_SNIPER,
 		GEO_RIFLE,
+		GEO_SHOTGUN,
 		//GEO_PLAYERSHIP,
 		//GEO_MOTHERSHIP,
-		//GEO_DRONE,
+		GEO_DRONE,
 		//GEO_ROBOT1,
+		GEO_GATE,
+		//GEO_METEOR,
+		//GEO_COMPUTER,
 
 		//add these enum in GEOMETRY_TYPE before NUM_GEOMETRY
 		GEO_TEXT,
@@ -150,6 +155,10 @@ public:
 	float constTranslation;
 	float DoorRot;
 	bool canUseDoor = true;
+	int weaponSelect;
+	bool sniper, rifle;
+	unsigned int robotCount;
+	unsigned int pause;
 
 	unsigned short skyboxID = 0;
 
@@ -162,8 +171,11 @@ public:
 	MS modelStack, viewStack, projectionStack;
 
 private:
+	unsigned short weaponValue;
 	GLuint SB_Day_front, SB_Day_back, SB_Day_top, SB_Day_bottom, SB_Day_left, SB_Day_right;
 	GLuint SB_Nite_front, SB_Nite_back, SB_Nite_top, SB_Nite_bottom, SB_Nite_left, SB_Nite_right;
+	GLuint Crosshair;
+	GLuint UI_BG, UI_HP_Red, UI_HP_Green, UI_WepSel_BG;
 	void RenderSkybox(Vector3 Position);
 	unsigned m_vertexArrayID;
 	unsigned m_programID;
@@ -174,45 +186,43 @@ private:
 
 	//Render Calls
 	void readtextfile();
+	void gamestate();
 	void RenderText(Mesh* mesh, std::string text, Color color);
-	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
-	void SP2_Scene::RenderImageOnScreen(GLuint texture, float Xsize, float Ysize, float Xpos, float Ypos);
-	void RenderSniperInHand(Mesh* mesh, float size, float x, float y);
+	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size = 1, float x = 0, float y = 0);
+	void RenderWeaponInHand(unsigned short wepVal = 0, float size = 1, float x = 0, float y = 0);
+	void RenderImageOnScreen(GLuint texture, float Xsize = 1, float Ysize = 1, float Xpos = 0, float Ypos = 0);
+	void RenderMeshOnScreen(Mesh* mesh, float Xsize = 1, float Ysize = 1, float Xpos = 0, float Ypos = 0, float Angle = 0, Vector3 RotationDir = Vector3(0, 0, 0));
+	void RenderWepScreen(bool render = false, Vector3 choices = Vector3(0, 0, 0));
+	void initBounds();
+	void Rendergate(bool render = false);
 
 	//Interaction Values
-	bool InteractionBoundsCheck(Vector3 CameraPosition, int value);
-	bool canPlacePlank = false;
-	bool plankPlaced = false;
-	Boundary PlankIxB;
-	bool canInteractWithKyogre = false;
-	bool interactedWithKyogre = false;
-	Boundary KyogreIxB;
-	void SP2_Scene::initBounds();
-	float framesPerSecond;
-	Boundary DoorIxB;
-	bool canOpenDoor = false;
-	bool DoorOpened = false;
-
-	Boundary LampIxB;
-	bool canUseLamp = false;
-	bool IsNight = false;
-	bool LampActive = true;
-	float timeCheck = 0;
+	bool buttonPress;
+	int buttonValue;
+	float leftgate;
+	float rightgate;
+	bool openleftgate;
+	bool openrightgate;
 
 	//test on screen values
 	double fps;
-	int hp;
+	int basehp;
+	int gatehp;
 	int ammo;
 	int wave;
+	float framesPerSecond;
+
 	//check game state
 	int state;
+	float timer;
 	bool weaponinterface;
-	bool wave1robots;
-	bool wave2robots;
-	bool meteor;
-	bool wave4robots;
-	bool wave5robots;
-	bool boss;
+	bool repairgate;
+
+	//robot dmg
+	int meleedmg = 5;
+	int rangedmg = 5;
+	int mixedmelee = 4;
+	int mixedrange = 4;
 
 	//Light Stuff
 	Vector3 TownLightPosition;
