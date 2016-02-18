@@ -67,6 +67,7 @@ private:
 	Boundary southgate2;
 	Boundary eastgate2;
 	Boundary westgate2;
+	Boundary corebase;
 	
 	
 

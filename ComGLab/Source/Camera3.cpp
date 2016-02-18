@@ -177,11 +177,11 @@ void Camera3::cameraMovement2(double dt)
 	{
 		//walkingY += 
 	}
-	if (walkingX != 0 && northwall1.BoundaryCheck(walkingX + position.x, position.z) && northwall2.BoundaryCheck(walkingX + position.x, position.z) && westwall1.BoundaryCheck(walkingX + position.x, position.z) && westwall2.BoundaryCheck(walkingX + position.x, position.z) && eastwall1.BoundaryCheck(walkingX + position.x, position.z) && eastwall2.BoundaryCheck(walkingX + position.x, position.z) && southwall1.BoundaryCheck(walkingX + position.x, position.z) && southwall2.BoundaryCheck(walkingX + position.x, position.z))
+	if (walkingX != 0 && northwall1.BoundaryCheck(walkingX + position.x, position.z) && northwall2.BoundaryCheck(walkingX + position.x, position.z) && westwall1.BoundaryCheck(walkingX + position.x, position.z) && westwall2.BoundaryCheck(walkingX + position.x, position.z) && eastwall1.BoundaryCheck(walkingX + position.x, position.z) && eastwall2.BoundaryCheck(walkingX + position.x, position.z) && southwall1.BoundaryCheck(walkingX + position.x, position.z) && southwall2.BoundaryCheck(walkingX + position.x, position.z) && corebase.BoundaryCheck(walkingX + position.x, position.z))
 	{
 		position.x += walkingX;
 	}
-	if (walkingZ != 0 && northwall1.BoundaryCheck(position.x, position.z + walkingZ) && northwall2.BoundaryCheck(position.x, position.z + walkingZ) && westwall1.BoundaryCheck(position.x, position.z + walkingZ) && westwall2.BoundaryCheck(position.x, position.z + walkingZ) && eastwall1.BoundaryCheck(position.x, position.z + walkingZ) && eastwall2.BoundaryCheck(position.x, position.z + walkingZ) && southwall1.BoundaryCheck(position.x, position.z + walkingZ) && southwall1.BoundaryCheck(position.x, position.z + walkingZ))
+	if (walkingZ != 0 && northwall1.BoundaryCheck(position.x, position.z + walkingZ) && northwall2.BoundaryCheck(position.x, position.z + walkingZ) && westwall1.BoundaryCheck(position.x, position.z + walkingZ) && westwall2.BoundaryCheck(position.x, position.z + walkingZ) && eastwall1.BoundaryCheck(position.x, position.z + walkingZ) && eastwall2.BoundaryCheck(position.x, position.z + walkingZ) && southwall1.BoundaryCheck(position.x, position.z + walkingZ) && southwall1.BoundaryCheck(position.x, position.z + walkingZ) && corebase.BoundaryCheck(position.x, position.z + walkingZ))
 	{
 		position.z += walkingZ;
 	}
@@ -213,6 +213,8 @@ void Camera3::initBoundVec()
 	southgate2.set();
 	eastgate2.set();
 	westgate2.set();
+
+	corebase.set(-1.3, 1.1, -1.4, 3.1);
 
 	
 }

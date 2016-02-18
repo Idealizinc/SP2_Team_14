@@ -10,4 +10,5 @@ c:\users\user\documents\sp2_team14\comglab\source\camera3.cpp(203): warning C430
 c:\users\user\documents\sp2_team14\comglab\source\camera3.cpp(204): warning C4305: 'argument' : truncation from 'double' to 'float'
 c:\users\user\documents\sp2_team14\comglab\source\camera3.cpp(205): warning C4305: 'argument' : truncation from 'double' to 'float'
 c:\users\user\documents\sp2_team14\comglab\source\camera3.cpp(206): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\camera3.cpp(217): warning C4305: 'argument' : truncation from 'double' to 'float'
   ComGLab.vcxproj -> C:\Users\user\Documents\SP2_Team14\Debug\Mains.exe
