@@ -261,6 +261,7 @@ private:
 
 	// Weapon Interface Stuff
 	Vector3 WepItf_Choices;
+	bool randWepChoices = false;
 
 	//check game state
 	int state;

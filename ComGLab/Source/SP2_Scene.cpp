@@ -94,6 +94,7 @@ void SP2_Scene::Init()
 	pause = 1;
 	leftgate = 0;
 	rightgate = 0;
+	WepItf_Choices = Vector3(0, 0, 0);
 
 	// Enable depth Test
 	glEnable(GL_DEPTH_TEST);
@@ -736,6 +737,16 @@ void SP2_Scene::Update(double dt)
 		}
 	}
 	//Weapon
+	if (!weaponinterface){
+		randWepChoices = true;
+	}
+	if (weaponinterface && randWepChoices)
+	{
+		WepItf_Choices.x = rand() % 4;
+		WepItf_Choices.y = rand() % 4;
+		WepItf_Choices.z = rand() % 4;
+		randWepChoices == false;
+	}
 	if (weaponinterface == true)
 	{
 		if (buttonPress == true && Application::IsKeyPressed('1'))
@@ -1185,7 +1196,6 @@ void SP2_Scene::Render(double dt)
 
 	RenderImageOnScreen(Crosshair, 10, 10, 80, 45);
 
-	WepItf_Choices = Vector3(1, 1, 1);
 	RenderWepScreen(weaponinterface, WepItf_Choices);
 
 	Rendergate(repairgate);
