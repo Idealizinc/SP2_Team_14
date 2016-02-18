@@ -51,40 +51,23 @@ private:
 	//Bounds
 	//Refer to blueprints for bound location
 	Boundary BoatBack;
-	Boundary BoatLeft;
-	Boundary BoatRight;
-	Boundary BoatFrontL;
-	Boundary BoatFrontR;
-	Boundary Bridge;
-	Boundary BaseR1;
-	Boundary BaseL1;
-	Boundary BaseR2;
-	Boundary BaseL2;
-	Boundary BaseR3;
-	Boundary BaseR4;
-	Boundary GrassR;
-	Boundary GrassL;
-	Boundary GrassC;
-	Boundary HomeB;
-	Boundary HomeL;
-	Boundary HomeR;
-	Boundary HomeFL;
-	Boundary HomeFR;
-	Boundary HomeTable;
+	Boundary BoatFront;
 
-	Boundary HousesL;
-	Boundary HousesR;
-	Boundary HousesL2;
-	Boundary HousesR2;
-	Boundary HousesL3;
-	Boundary HousesR3;
-	Boundary HousesL4;
-	Boundary HousesR4;
-	Boundary Tower1;
+	Boundary WorldBot;
+	Boundary WorldTop;
+	Boundary WorldLeft;
+	Boundary WorldRight;
+	Boundary WorldFront;
+	Boundary WorldBack;
 
+	Boundary Floor2Bot;
+	Boundary Floor2Top;
+	Boundary Floor2Left;
+	Boundary Floor2Right;
+	Boundary Floor2Front;
+	Boundary Floor2Back;
 	//Interactive
-	Boundary BoatPlank;
-	Boundary HomeDoor;
+
 };
 
 #endif

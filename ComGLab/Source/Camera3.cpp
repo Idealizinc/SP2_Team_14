@@ -149,7 +149,7 @@ void Camera3::cameraMovement2(double dt)
 	float walkingY = 0;
 	if (Application::IsKeyPressed(VK_LSHIFT) || Application::IsKeyPressed(VK_RSHIFT))
 	{
-		walkingSpeed = 2.5;
+		walkingSpeed = 0.5;
 	}
 	else walkingSpeed = 5;
 
@@ -177,11 +177,21 @@ void Camera3::cameraMovement2(double dt)
 	{
 		//walkingY += 
 	}
-	if (walkingX != 0 /*&& BoatBack.BoundaryCheck(walkingX + position.x, position.z)*/)
+	if (walkingX != 0 && WorldBack.BoundaryCheck(walkingX + position.x, position.z) && WorldFront.BoundaryCheck(walkingX + position.x, position.z)
+		&& WorldLeft.BoundaryCheck(walkingX + position.x, position.z) && WorldRight.BoundaryCheck(walkingX + position.x, position.z)
+		&& WorldTop.BoundaryCheck(walkingX + position.x, position.z) && WorldBot.BoundaryCheck(walkingX + position.x, position.z)
+		&& Floor2Back.BoundaryCheck(walkingX + position.x, position.z) && Floor2Front.BoundaryCheck(walkingX + position.x, position.z)
+		&& Floor2Left.BoundaryCheck(walkingX + position.x, position.z) && Floor2Right.BoundaryCheck(walkingX + position.x, position.z)
+		&& Floor2Top.BoundaryCheck(walkingX + position.x, position.z) && Floor2Bot.BoundaryCheck(walkingX + position.x, position.z))
 	{
 		position.x += walkingX;
 	}
-	if (walkingZ != 0 /*&& BoatBack.BoundaryCheck(position.x, position.z + walkingZ)*/)
+	if (walkingZ != 0 && WorldBack.BoundaryCheck(position.x, position.z + walkingZ) && WorldFront.BoundaryCheck(position.x, position.z + walkingZ)
+		&& WorldLeft.BoundaryCheck(position.x, position.z + walkingZ) && WorldRight.BoundaryCheck(position.x, position.z + walkingZ)
+		&& WorldTop.BoundaryCheck(position.x, position.z + walkingZ) && WorldBot.BoundaryCheck(position.x, position.z + walkingZ)
+		&& Floor2Back.BoundaryCheck(position.x, position.z + walkingZ) && Floor2Front.BoundaryCheck(position.x, position.z + walkingZ)
+		&& Floor2Left.BoundaryCheck(position.x, position.z + walkingZ) && Floor2Right.BoundaryCheck(position.x, position.z + walkingZ)
+		&& Floor2Top.BoundaryCheck(position.x, position.z + walkingZ) && Floor2Bot.BoundaryCheck(position.x, position.z + walkingZ))
 	{
 		position.z += walkingZ;
 	}
@@ -193,38 +203,20 @@ void Camera3::initBoundVec()
 	min =  trans - scale/2 ;
 	max =  trans + scale/2;
 	*/
-	BoatBack.set(-10, 15, 18, 19);
-	BoatLeft.set(-8, -6, 3, 27);
-	BoatRight.set(12, 15, 3, 27);
-	BoatFrontL.set(-32,-2,-19.5,5.5);
-	BoatFrontR.set(1.4, 32.6, -19.5, 5.5);
-	BoatPlank.set(-3, 3, -5.5, 5.5);
-	Bridge.set(-3, 3, -15, 5);
-	BaseL1.set(-59, -29, -39.5, 14.5);
-	BaseL2.set(-79, -49, -157.5, -37.5);
-	BaseR1.set(29, 59, -39.5, 14.5);
-	BaseR2.set(49, 79, -66.2, -36.2);
-	BaseR3.set(49, 79, -139.9, -69.9);
-	BaseR4.set(69, 79, -71.2, -51.2);
-	GrassR.set(9.5, 54.5, -143, -118);
-	GrassL.set(-54.5, -9.5, -143, -118);
-	GrassC.set(-45, 45, -163, -135);
-	HomeB.set(-20, 20, -136.5, -136);
-	HomeL.set(-10, -7.35, -136, -120);
-	HomeR.set(7.4, 10, -136, -120);
-	HomeFL.set(-7.75, 1.75, -120.6, -119.2);
-	HomeFR.set(4.45, 8.45, -120.6, -119.2);
-	HomeTable.set(-8, -2, -136.125, -131.875);
-	HomeDoor.set(1, 5, -120.6, -119.8);
-	HousesL.set(-54.5, -9.5, -116, -104);
-	HousesR.set(9.5, 54.5, -116, -104);
-	HousesL2.set(-54.5, -9.5, -86, -74);
-	HousesR2.set(20.5, 54.5, -86, -74);
-	HousesL3.set(-50, -38, -57, -41);
-	HousesR3.set(38, 50, -57, -41);
-	HousesL4.set(-30, -15, -30.5, -19.5);
-	HousesR4.set(15, 30, -30.5, -19.5);
-	Tower1.set(-3, 3, -63, -57);
+	/*BoatBack.set(-150, 150, -160, -150);
+	BoatFront.set(-150, 150, 150, 160);*/
+	WorldBot.set(-150, 150, -150, 150, -5, 0);
+	WorldTop.set(-150, 150, -150, 150, 30, 40);
+	WorldFront.set(-150, 150, 150, 160, -5, 30);
+	WorldBack.set(-150, 150, -160, -150, -5, 30);
+	WorldLeft.set(150, 160, -150, 150, -5, 30);
+	WorldRight.set(-160, -150, -150, 150, -5, 30);
+	Floor2Left.set(11, 13, -17, 17, 10, 17);
+	Floor2Right.set(-13, 11, -17, 17, 10, 17);
+	Floor2Front.set(-11, 11, 15, 17, 10, 17);
+	Floor2Back.set(-11, 11, -17, -15, 10, 17);
+	Floor2Top.set(-11, 11, -17, 17, 15, 17);
+	Floor2Bot.set(-11, 11, -17, 17, 8, 10);
 }
 
 

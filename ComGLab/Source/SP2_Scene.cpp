@@ -51,7 +51,6 @@ void SP2_Scene::Init()
 	engine->addSoundSourceFromFile(SoundName[0].c_str());
 	Song = engine->play2D(SoundName[0].c_str(), true, false, true);
 	Song->setVolume(0.25);*/
-
 	// Init VBO here
 	glClearColor(0.15f, 0.2f, 0.35f, 0.0f);
 
@@ -59,7 +58,7 @@ void SP2_Scene::Init()
 	projection.SetToPerspective(30.0f, static_cast < float >(S_Width) / static_cast < float >(S_Height), 0.1f, 3000.0f);
 	projectionStack.LoadMatrix(projection);
 
-	camera.Init(Vector3(0, 4, 1), Vector3(0, 4, 0), Vector3(0, 1, 0));
+	camera.Init(Vector3(0, 5, 3), Vector3(0, 5, 0), Vector3(0, 1, 0));
 	// 0, 4, 8.5
 	//Initiallising Variables For Translate, Rotate, Scale
 	tweenVal = 0;
@@ -961,6 +960,11 @@ void SP2_Scene::RenderSkybox(Vector3 Position)
 void SP2_Scene::RenderWepScreen(bool render, Vector3 choices)
 {
 	if (render){
+		std::string Type1, Type2, Type3;
+		if (choices.x == 0){ Type1 = "Type: <Normal>"; }
+		else if (choices.x == 1){ Type1 = "Type: <Damage>"; }
+		else if (choices.x == 2){ Type1 = "Type: <Capacity>"; }
+		else if (choices.x == 3){ Type1 = "Type: <Speed>"; }
 		//Wep Select UI - Overall
 		modelStack.PushMatrix();
 		RenderImageOnScreen(UI_WepSel_BG, 130, 65, 80, 45);
@@ -970,73 +974,81 @@ void SP2_Scene::RenderWepScreen(bool render, Vector3 choices)
 		{
 			RenderMeshOnScreen(meshList[GEO_RIFLE], 1, 1, 40, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
-		if (choices.x == 1)
+		else if (choices.x == 1)
 		{
 			RenderMeshOnScreen(meshList[GEO_RED_RIFLE], 1, 1, 40, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
-		if (choices.x == 2)
+		else if (choices.x == 2)
 		{
 			RenderMeshOnScreen(meshList[GEO_BLUE_RIFLE], 1, 1, 40, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
-		if (choices.x == 3)
+		else if (choices.x == 3)
 		{
 			RenderMeshOnScreen(meshList[GEO_GREEN_RIFLE], 1, 1, 40, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
 		RenderImageOnScreen(UI_BG, 30, 10, 40, 67.5);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Gun 1", Color(0.000f, 0.808f, 0.820f), 4, 35, 70);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Type", Color(0.000f, 0.808f, 0.820f), 3, 35, 66);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Gun: Rifle", Color(0.000f, 0.808f, 0.820f), 4, 29, 70);
+		RenderTextOnScreen(meshList[GEO_TEXT], Type1, Color(0.000f, 0.808f, 0.820f), 3, 29, 66);
 		RenderImageOnScreen(UI_BG, 30, 2.75, 40, 25);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Press<1>to select", Color(0.000f, 0.808f, 0.820f), 2.75, 28.5, 25);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press <1> to select", Color(0.000f, 0.808f, 0.820f), 2.5, 28.5, 25);
 	
+		if (choices.y == 0){ Type2 = "Type: <Normal>"; }
+		else if (choices.y == 1){ Type2 = "Type: <Damage>"; }
+		else if (choices.y == 2){ Type2 = "Type: <Capacity>"; }
+		else if (choices.y == 3){ Type2 = "Type: <Speed>"; }
 		//Center
 		RenderImageOnScreen(UI_BG, 30, 30, 80, 45);
 		if (choices.y == 0)
 		{
 			RenderMeshOnScreen(meshList[GEO_SNIPER], 1, 1, 85, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
-		if (choices.y == 1)
+		else if (choices.y == 1)
 		{
 			RenderMeshOnScreen(meshList[GEO_RED_SNIPER], 1, 1, 85, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
-		if (choices.y == 2)
+		else if (choices.y == 2)
 		{
 			RenderMeshOnScreen(meshList[GEO_BLUE_SNIPER], 1, 1, 85, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
-		if (choices.y == 3)
+		else if (choices.y == 3)
 		{
 			RenderMeshOnScreen(meshList[GEO_GREEN_SNIPER], 1, 1, 85, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
 		RenderImageOnScreen(UI_BG, 30, 10, 80, 67.5);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Gun 2", Color(0.000f, 0.808f, 0.820f), 4, 75, 70);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Type", Color(0.000f, 0.808f, 0.820f), 3, 75, 66);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Gun: Sniper", Color(0.000f, 0.808f, 0.820f), 4, 69, 70);
+		RenderTextOnScreen(meshList[GEO_TEXT], Type2, Color(0.000f, 0.808f, 0.820f), 3, 69, 66);
 		RenderImageOnScreen(UI_BG, 30, 2.75, 80, 25);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Press<2>to select", Color(0.000f, 0.808f, 0.820f), 2.75, 68.5, 25);
-		RenderImageOnScreen(UI_BG, 50, 2.75, 80, 17.5);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Press<4>to keep current weapon", Color(0.000f, 0.808f, 0.820f), 2.75, 58.5, 17.5);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press <2> to select", Color(0.000f, 0.808f, 0.820f), 2.5, 68.5, 25);
 		
+		if (choices.z == 0){ Type3 = "Type: <Normal>"; }
+		else if (choices.z == 1){ Type3 = "Type: <Damage>"; }
+		else if (choices.z == 2){ Type3 = "Type: <Capacity>"; }
+		else if (choices.z == 3){ Type3 = "Type: <Speed>"; }
 		//Right
 		RenderImageOnScreen(UI_BG, 30, 30, 120, 45);
 		if (choices.z == 0)
 		{
 			RenderMeshOnScreen(meshList[GEO_SHOTGUN], 1, 1, 125, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
-		if (choices.z == 1)
+		else if (choices.z == 1)
 		{
 			RenderMeshOnScreen(meshList[GEO_RED_SHOTGUN], 1, 1, 125, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
-		if (choices.z == 2)
+		else if (choices.z == 2)
 		{
 			RenderMeshOnScreen(meshList[GEO_BLUE_SHOTGUN], 1, 1, 125, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
-		if (choices.z == 3)
+		else if (choices.z == 3)
 		{
 			RenderMeshOnScreen(meshList[GEO_GREEN_SHOTGUN], 1, 1, 125, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
 		RenderImageOnScreen(UI_BG, 30, 10, 120, 67.5);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Gun 3", Color(0.000f, 0.808f, 0.820f), 4, 115, 70);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Type", Color(0.000f, 0.808f, 0.820f), 3, 115, 66);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Gun: Shotgun", Color(0.000f, 0.808f, 0.820f), 4, 109, 70);
+		RenderTextOnScreen(meshList[GEO_TEXT], Type3, Color(0.000f, 0.808f, 0.820f), 3, 109, 66);
 		RenderImageOnScreen(UI_BG, 30, 2.75, 120, 25);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Press<3>to select", Color(0.000f, 0.808f, 0.820f), 2.75, 108.5, 25);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press <3> to select", Color(0.000f, 0.808f, 0.820f), 2.5, 108.5, 25);
+		RenderImageOnScreen(UI_BG, 50, 2.75, 80, 17.5);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press <4> to keep current weapon", Color(0.000f, 0.808f, 0.820f), 2.5, 59.5, 17.5);
 		modelStack.PopMatrix();
 		//Wep Select UI END
 	}
@@ -1350,7 +1362,7 @@ void SP2_Scene::Render(double dt)
 
 void SP2_Scene::Exit()
 {
-//	engine->drop();
+	//engine->drop();
 	// Cleanup VBO here
 	glDeleteVertexArrays(1, &m_vertexArrayID);
 	glDeleteProgram(m_programID);
