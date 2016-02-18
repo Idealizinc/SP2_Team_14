@@ -57,8 +57,8 @@ class SP2_Scene : public Scene
 		GEO_GATE,
 		GEO_METEOR,
 		//GEO_COMPUTER,
-		GEO_CRYSTALBASE,
 		GEO_CRYSTAL,
+		GEO_CRYSTALBASE,
 
 		//add these enum in GEOMETRY_TYPE before NUM_GEOMETRY
 		GEO_TEXT,
@@ -210,8 +210,8 @@ private:
 	double fps;
 	unsigned int basehp;
 	unsigned int gatehp;
-	unsigned int playerhp;
 	unsigned int bosshp;
+	unsigned int playerhp;
 	unsigned int ammo;
 	unsigned int wave;
 	float framesPerSecond;

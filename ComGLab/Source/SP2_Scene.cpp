@@ -76,9 +76,9 @@ void SP2_Scene::Init()
 	limitersON = true;
 	lightOff = false;
 	basehp = 100;
-	playerhp = 100;
 	gatehp = 20;
 	bosshp = 100;
+	playerhp = 100;
 	ammo = 100;
 	wave = 1;
 	state = 0;
@@ -218,10 +218,10 @@ void SP2_Scene::Init()
 	meshList[GEO_METEOR] = MeshBuilder::GenerateOBJ("test", "OBJ//meteor.obj");
 	meshList[GEO_METEOR]->textureID = LoadTGA("Image//Tex_Meteor.tga");
 
-	meshList[GEO_CRYSTALBASE] = MeshBuilder::GenerateOBJ("Crystal Platform", "OBJ//Core_Platform.obj");
+	meshList[GEO_CRYSTALBASE] = MeshBuilder::GenerateOBJ("Core Platform", "OBJ//Core_Platform.obj");
 	meshList[GEO_CRYSTALBASE]->textureID = LoadTGA("Image//Tex_Core_Platform.tga");
 
-	meshList[GEO_CRYSTAL] = MeshBuilder::GenerateOBJ("Crystal Core", "OBJ//Core_Crystal.obj");
+	meshList[GEO_CRYSTAL] = MeshBuilder::GenerateOBJ("Core Crystal", "OBJ//Core_Crystal.obj");
 	meshList[GEO_CRYSTAL]->textureID = LoadTGA("Image//Tex_LightOrb.tga");
 
 	/*meshList[GEO_COMPUTER] = MeshBuilder::GenerateOBJ("test", "OBJ//computer.obj");
@@ -500,7 +500,7 @@ void SP2_Scene::gamestate()
 		}
 		else if (basehp == 0)
 		{
-			wave = 1; //restart wave
+			//go back to start screen
 		}
 	}
 	if (wave == 2)
@@ -512,7 +512,7 @@ void SP2_Scene::gamestate()
 		}
 		else if (basehp == 0)
 		{
-			wave = 2; 
+			//go back to start screen
 		}
 	}
 	if (wave == 3)
@@ -524,7 +524,7 @@ void SP2_Scene::gamestate()
 		}
 		else if (basehp == 0)
 		{
-			wave = 3;
+			//go back to start screen
 		}
 	}
 	if (wave == 4)
@@ -536,7 +536,7 @@ void SP2_Scene::gamestate()
 		}
 		else if (basehp == 0)
 		{
-			wave = 4;
+			//go back to start screen
 		}
 	}
 	if (wave == 5)
@@ -548,7 +548,7 @@ void SP2_Scene::gamestate()
 		}
 		else if (basehp == 0)
 		{
-			wave = 5;
+			//go back to start screen
 		}
 	}
 	if (wave == 6)
@@ -559,10 +559,10 @@ void SP2_Scene::gamestate()
 			RenderTextOnScreen(meshList[GEO_TEXT], "Boss Stage clear", Color(1, 0, 0), 3, 20, 15);
 			//game won, go back to start screen
 		}
-		else if (playerhp == 0)
-		{
-			wave = 6;
-		}
+		//else if (hp == 0)
+		//{
+		//	//go back to start screen
+		//}
 	}
 }
 
@@ -912,14 +912,13 @@ void SP2_Scene::Render(double dt)
 	//RenderBase
 	modelStack.PushMatrix();
 	//modelStack.Translate(basePosition.x, basePosition.y, basePosition.z);
+	//modelStack.Scale(2, 5, 2);
+	RenderMesh(meshList[GEO_BASE], true);
+	RenderMesh(meshList[GEO_CRYSTALBASE], true);
 		modelStack.PushMatrix();
-			RenderMesh(meshList[GEO_BASE], true);
-			RenderMesh(meshList[GEO_CRYSTALBASE], true);
-			modelStack.PushMatrix();
-			modelStack.Rotate(constRotation*3, 0, 1, 0);
 			modelStack.Translate(0, tweenVal/1000, 0);
+			modelStack.Rotate(constRotation*3, 0, 1, 0);
 			RenderMesh(meshList[GEO_CRYSTAL], false);
-			modelStack.PopMatrix();
 		modelStack.PopMatrix();
 	modelStack.PopMatrix();
 	//RB End
