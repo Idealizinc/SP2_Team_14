@@ -260,7 +260,7 @@ private:
 	float framesPerSecond;
 
 	// Weapon Interface Stuff
-	Vector3 WepItf_Choices = (1, 1, 1);
+	Vector3 WepItf_Choices;
 
 	//check game state
 	int state;
