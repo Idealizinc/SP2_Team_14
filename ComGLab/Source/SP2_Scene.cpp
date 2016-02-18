@@ -77,12 +77,16 @@ void SP2_Scene::Init()
 	lightOff = false;
 	basehp = 100;
 	gatehp = 20;
+	bosshp = 100;
 	ammo = 100;
 	wave = 1;
 	state = 0;
 	timer = 0;
 	weaponValue = 0;
 	weaponinterface = false;
+	basePosition.x = 4;
+	basePosition.y = 3.2;
+	basePosition.z = 0;
 	repairgate = false;
 	buttonPress = true;
 	buttonValue = 0;
@@ -213,7 +217,7 @@ void SP2_Scene::Init()
 	meshList[GEO_GATE]->textureID = LoadTGA("Image//Tex_Gate2.tga");
 
 	meshList[GEO_METEOR] = MeshBuilder::GenerateOBJ("test", "OBJ//meteor.obj");
-	meshList[GEO_METEOR]->textureID = LoadTGA("Image//meteor.tga");
+	meshList[GEO_METEOR]->textureID = LoadTGA("Image//Tex_Meteor.tga");
 
 	/*meshList[GEO_COMPUTER] = MeshBuilder::GenerateOBJ("test", "OBJ//computer.obj");
 	meshList[GEO_COMPUTER]->textureID = LoadTGA("Image//computer.tga");*/
@@ -544,10 +548,12 @@ void SP2_Scene::gamestate()
 	}
 	if (wave == 6)
 	{
-		//if (//boss dead)
-		//{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Boss HP: " + std::to_string(bosshp), Color(0, 0.5, 0), 3, 65, 81);
+		if (bosshp==0)
+		{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Boss Stage clear", Color(1, 0, 0), 3, 20, 15);
-		//}
+		//game won, go back to start screen
+		}
 		//else if (hp == 0)
 		//{
 		//	//go back to start screen
@@ -918,6 +924,7 @@ void SP2_Scene::Render(double dt)
 	RenderMesh(meshList[GEO_GATE_MAIN], true);
 	modelStack.PopMatrix();
 
+	modelStack.PushMatrix();
 	modelStack.Translate(constTranslation, 2, 5);
 	modelStack.Scale(0.8, 0.8, 0.8);
 	RenderMesh(meshList[GEO_SNIPER], true);
@@ -940,6 +947,10 @@ void SP2_Scene::Render(double dt)
 	//modelStack.PopMatrix();
 
 	RenderImageOnScreen(SB_Day_left, 10, 10, 1, 1);
+
+	modelStack.PushMatrix();
+	RenderMesh(meshList[GEO_METEOR], true);
+	modelStack.PopMatrix();
 
 	//INFO UI, STATS - BOTTOM LEFT
 	modelStack.PushMatrix();
@@ -981,15 +992,10 @@ void SP2_Scene::Render(double dt)
 	
 	gamestate();
 
-<<<<<<< HEAD
 	modelStack.PushMatrix();
 	modelStack.Translate(0, 10, 0);
 	Rendergate(true);
 	modelStack.PopMatrix();
-	
-=======
-
->>>>>>> 882c8f639d7cbc66b89a12f3ebeb5e5d954a9dcb
 }
 
 void SP2_Scene::Exit()
