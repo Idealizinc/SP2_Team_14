@@ -50,6 +50,7 @@ private:
 
 	//Bounds
 	//Refer to blueprints for bound location
+<<<<<<< HEAD
 	
 	Boundary northwall1;
 	Boundary southwall1;
@@ -73,6 +74,26 @@ private:
 
 	//Interactive
 	
+=======
+	Boundary BoatBack;
+	Boundary BoatFront;
+
+	Boundary WorldBot;
+	Boundary WorldTop;
+	Boundary WorldLeft;
+	Boundary WorldRight;
+	Boundary WorldFront;
+	Boundary WorldBack;
+
+	Boundary Floor2Bot;
+	Boundary Floor2Top;
+	Boundary Floor2Left;
+	Boundary Floor2Right;
+	Boundary Floor2Front;
+	Boundary Floor2Back;
+	//Interactive
+
+>>>>>>> e27f3d3092bf545e5d1f11e68482a300b5973bdf
 };
 
 #endif
