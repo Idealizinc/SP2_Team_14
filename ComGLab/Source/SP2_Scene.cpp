@@ -96,12 +96,9 @@ void SP2_Scene::Init()
 	pause = 1;
 	leftgate = 0;
 	rightgate = 0;
-<<<<<<< HEAD
 	armrotate = true;
 	rotateAngle = 0;
-=======
 	WepItf_Choices = Vector3(0, 0, 0);
->>>>>>> c0254bcefac1f54edab8caaeb4795e42f8ba44a3
 
 	// Enable depth Test
 	glEnable(GL_DEPTH_TEST);
@@ -195,10 +192,8 @@ void SP2_Scene::Init()
 	meshList[GEO_GATE_SIDE] = MeshBuilder::GenerateOBJ("gate_side", "OBJ//gate_side.obj");
 	meshList[GEO_GATE_SIDE]->textureID = LoadTGA("Image//bullet.tga"); // temporary texture
 
-<<<<<<< HEAD
 	//meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	//meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
-=======
 	//meshList[GEO_PLAYERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//PlayerShip.obj");
 	//meshList[GEO_PLAYERSHIP]->textureID = LoadTGA("Image//Tex_PlayerShip.tga");
 
@@ -233,7 +228,6 @@ void SP2_Scene::InitWeaponModels()
 
 	meshList[GEO_SNIPER] = MeshBuilder::GenerateOBJ("test", "OBJ//Sniper.obj");
 	meshList[GEO_SNIPER]->textureID = LoadTGA("Image//Tex_Sniper.tga");
->>>>>>> c0254bcefac1f54edab8caaeb4795e42f8ba44a3
 
 	meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
@@ -614,7 +608,7 @@ void SP2_Scene::initLights()
 
 void SP2_Scene::initBounds()
 {
-
+	camera.initBoundVec();
 }
 void SP2_Scene::Rendergate(bool render)
 {
@@ -900,7 +894,7 @@ void SP2_Scene::Update(double dt)
 		buttonPress == false;
 		buttonValue = 0;
 	}
-
+	initBounds();
 	framesPerSecond = 1 / dt;
 
 	TownLightPosition.y += tweenVal / 15000;
@@ -1229,7 +1223,11 @@ void SP2_Scene::Render(double dt)
 			modelStack.Translate(0, 0, -10);
 			modelStack.Translate(0, 0, 10);
 			modelStack.Translate(-0.3, 0, 0);
-			RenderMesh(meshList[GEO_MELEEROBOTRIGHTARM], true);
+			RenderMesh(meshList[GEO_MELEEROBOTRIGHTUPPERARM], true);
+				modelStack.PushMatrix();
+				modelStack.Rotate(rotateAngle, 1, 0, 0);
+				RenderMesh(meshList[GEO_MELEEROBOTRIGHTLOWERARM], true);
+				modelStack.PopMatrix();
 			modelStack.PopMatrix();
 					modelStack.PushMatrix();
 					RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
@@ -1279,7 +1277,6 @@ void SP2_Scene::Render(double dt)
 					modelStack.PopMatrix();
 	modelStack.PopMatrix();
 
-<<<<<<< HEAD
 
 	//modelStack.PushMatrix();
 	//modelStack.Translate(0,2,5);
@@ -1293,8 +1290,6 @@ void SP2_Scene::Render(double dt)
 	RenderSniperInHand(meshList[GEO_SNIPER], 5, 1, 1);
 	modelStack.PopMatrix();*/
 
-=======
->>>>>>> c0254bcefac1f54edab8caaeb4795e42f8ba44a3
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_METEOR], true);
 	modelStack.PopMatrix();
@@ -1338,7 +1333,6 @@ void SP2_Scene::Render(double dt)
 	}
 
 	gamestate();
-<<<<<<< HEAD
 
 	modelStack.PushMatrix();
 	modelStack.Translate(17.2, 0.5, -2.15);
@@ -1382,8 +1376,6 @@ void SP2_Scene::Render(double dt)
 		modelStack.PopMatrix();
 	modelStack.PopMatrix();
 	
-=======
->>>>>>> c0254bcefac1f54edab8caaeb4795e42f8ba44a3
 }
 
 void SP2_Scene::Exit()

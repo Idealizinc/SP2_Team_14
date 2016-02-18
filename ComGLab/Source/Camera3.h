@@ -25,7 +25,7 @@ public:
 	Vector3 getCameraPosition();
 
     bool isOutofBounds();
-
+	void initBoundVec();
 private:
     void rotateCamera(double dt);
     float CameraXrotation;
@@ -46,7 +46,7 @@ private:
 	float walkVal;
 
 	std::vector<Boundary> BoundVec;
-	void initBoundVec();
+	
 
 	//Bounds
 	//Refer to blueprints for bound location

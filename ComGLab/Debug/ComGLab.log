@@ -1,29 +1,57 @@
 ﻿  SP2_Scene.cpp
 c:\users\user\documents\sp2_team14\comglab\source\camera3.h(34): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(509): warning C4305: 'argument' : truncation from 'double' to 'float'
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(554): warning C4553: '==' : operator has no effect; did you intend '='?
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(566): warning C4553: '==' : operator has no effect; did you intend '='?
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(578): warning C4553: '==' : operator has no effect; did you intend '='?
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(590): warning C4553: '==' : operator has no effect; did you intend '='?
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(602): warning C4553: '==' : operator has no effect; did you intend '='?
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(740): warning C4553: '==' : operator has no effect; did you intend '='?
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(748): warning C4553: '==' : operator has no effect; did you intend '='?
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(756): warning C4553: '==' : operator has no effect; did you intend '='?
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(764): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(784): warning C4553: '==' : operator has no effect; did you intend '='?
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(790): warning C4553: '==' : operator has no effect; did you intend '='?
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(794): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(999): warning C4305: 'argument' : truncation from 'double' to 'float'
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1002): warning C4305: 'argument' : truncation from 'double' to 'float'
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1008): warning C4305: 'argument' : truncation from 'double' to 'float'
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1043): warning C4305: 'argument' : truncation from 'double' to 'float'
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1054): warning C4305: 'argument' : truncation from 'double' to 'float'
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1163): warning C4305: 'argument' : truncation from 'double' to 'float'
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1165): warning C4305: 'argument' : truncation from 'double' to 'float'
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1174): warning C4305: 'argument' : truncation from 'double' to 'float'
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1176): warning C4305: 'argument' : truncation from 'double' to 'float'
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1185): warning C4305: 'argument' : truncation from 'double' to 'float'
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1186): warning C4305: 'argument' : truncation from 'double' to 'float'
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1195): warning C4305: 'argument' : truncation from 'double' to 'float'
-c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1196): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(586): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(631): warning C4553: '==' : operator has no effect; did you intend '='?
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(643): warning C4553: '==' : operator has no effect; did you intend '='?
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(655): warning C4553: '==' : operator has no effect; did you intend '='?
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(667): warning C4553: '==' : operator has no effect; did you intend '='?
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(679): warning C4553: '==' : operator has no effect; did you intend '='?
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(813): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(814): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(815): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(827): warning C4553: '==' : operator has no effect; did you intend '='?
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(838): warning C4553: '==' : operator has no effect; did you intend '='?
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(849): warning C4553: '==' : operator has no effect; did you intend '='?
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(856): warning C4553: '==' : operator has no effect; did you intend '='?
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(868): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(888): warning C4553: '==' : operator has no effect; did you intend '='?
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(894): warning C4553: '==' : operator has no effect; did you intend '='?
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(898): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1169): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1172): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1178): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1214): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1225): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1338): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1340): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1349): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1351): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1360): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1361): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1370): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\sp2_scene.cpp(1371): warning C4305: 'argument' : truncation from 'double' to 'float'
+  Camera3.cpp
+c:\users\user\documents\sp2_team14\comglab\source\camera3.h(34): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\sp2_team14\comglab\source\camera3.cpp(109): warning C4101: 'offsetZ' : unreferenced local variable
+c:\users\user\documents\sp2_team14\comglab\source\camera3.cpp(109): warning C4101: 'offsetX' : unreferenced local variable
+c:\users\user\documents\sp2_team14\comglab\source\camera3.cpp(200): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\camera3.cpp(206): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\camera3.cpp(207): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\camera3.cpp(208): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\camera3.cpp(213): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\camera3.cpp(214): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\camera3.cpp(215): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\camera3.cpp(216): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\camera3.cpp(218): warning C4305: 'argument' : truncation from 'double' to 'float'
+  Boundary.cpp
+  Generating Code...
+  Compiling...
+  Particle.cpp
+c:\users\user\documents\sp2_team14\comglab\source\camera3.h(34): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\sp2_team14\comglab\source\particle.cpp(235): warning C4305: 'argument' : truncation from 'double' to 'float'
+c:\users\user\documents\sp2_team14\comglab\source\particle.cpp(283): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+  Application.cpp
+c:\users\user\documents\sp2_team14\comglab\source\camera3.h(34): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+  Generating Code...
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
   ComGLab.vcxproj -> C:\Users\user\Documents\SP2_Team14\Debug\Mains.exe
