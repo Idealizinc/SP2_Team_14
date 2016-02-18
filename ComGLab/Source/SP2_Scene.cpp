@@ -98,10 +98,7 @@ void SP2_Scene::Init()
 	rightgate = 0;
 	armrotate = true;
 	rotateAngle = 0;
-<<<<<<< HEAD
-=======
 
->>>>>>> 543999b029761b0b4253a8d8044b7cf52c15157c
 	WepItf_Choices = Vector3(0, 0, 0);
 
 	// Enable depth Test
@@ -196,11 +193,8 @@ void SP2_Scene::Init()
 	meshList[GEO_GATE_SIDE] = MeshBuilder::GenerateOBJ("gate_side", "OBJ//gate_side.obj");
 	meshList[GEO_GATE_SIDE]->textureID = LoadTGA("Image//bullet.tga"); // temporary texture
 
-<<<<<<< HEAD
 	//meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	//meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
-=======
->>>>>>> 543999b029761b0b4253a8d8044b7cf52c15157c
 	//meshList[GEO_PLAYERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//PlayerShip.obj");
 	//meshList[GEO_PLAYERSHIP]->textureID = LoadTGA("Image//Tex_PlayerShip.tga");
 
@@ -615,7 +609,7 @@ void SP2_Scene::initLights()
 
 void SP2_Scene::initBounds()
 {
-	camera.initBoundVec();
+	
 }
 void SP2_Scene::Rendergate(bool render)
 {
@@ -1218,7 +1212,6 @@ void SP2_Scene::Render(double dt)
 	modelStack.PopMatrix();
 	//RB End
 
-<<<<<<< HEAD
 	modelStack.PushMatrix();
 	modelStack.Translate(-0.3, 2, 10);
 	modelStack.Rotate(90, 0, 0, 1);
@@ -1331,7 +1324,6 @@ void SP2_Scene::Render(double dt)
 					modelStack.PopMatrix();
 	modelStack.PopMatrix();
 
-=======
 	////drone
 	//modelStack.PushMatrix();
 	//modelStack.Translate(0, 0, -10);
@@ -1349,7 +1341,6 @@ void SP2_Scene::Render(double dt)
 	//			modelStack.PopMatrix();
 	//		modelStack.PopMatrix();
 	//modelStack.PopMatrix();
->>>>>>> 543999b029761b0b4253a8d8044b7cf52c15157c
 
 	////melee robot
 	//modelStack.PushMatrix();
@@ -1467,11 +1458,8 @@ void SP2_Scene::Render(double dt)
 		modelStack.PopMatrix();
 	modelStack.PopMatrix();
 	
-<<<<<<< HEAD
-=======
 	//DO NOT RENDER ANYTHING UNDER THIS//
 	RenderUI();
->>>>>>> 543999b029761b0b4253a8d8044b7cf52c15157c
 }
 
 void SP2_Scene::Exit()

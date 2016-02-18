@@ -25,12 +25,12 @@ public:
 	Vector3 getCameraPosition();
 
     bool isOutofBounds();
-	void initBoundVec();
+	
 private:
     void rotateCamera(double dt);
     float CameraXrotation;
     float CameraYrotation, maxCameraXrotation, minCameraXrotation;
-
+	void initBoundVec();
 	float rotate_Sensitivity = S_Width / S_Height * 2;
 	float walkingSpeed = 5.f;
 
@@ -50,41 +50,28 @@ private:
 
 	//Bounds
 	//Refer to blueprints for bound location
-	Boundary BoatBack;
-	Boundary BoatLeft;
-	Boundary BoatRight;
-	Boundary BoatFrontL;
-	Boundary BoatFrontR;
-	Boundary Bridge;
-	Boundary BaseR1;
-	Boundary BaseL1;
-	Boundary BaseR2;
-	Boundary BaseL2;
-	Boundary BaseR3;
-	Boundary BaseR4;
-	Boundary GrassR;
-	Boundary GrassL;
-	Boundary GrassC;
-	Boundary HomeB;
-	Boundary HomeL;
-	Boundary HomeR;
-	Boundary HomeFL;
-	Boundary HomeFR;
-	Boundary HomeTable;
-
-	Boundary HousesL;
-	Boundary HousesR;
-	Boundary HousesL2;
-	Boundary HousesR2;
-	Boundary HousesL3;
-	Boundary HousesR3;
-	Boundary HousesL4;
-	Boundary HousesR4;
-	Boundary Tower1;
+	
+	Boundary northwall1;
+	Boundary southwall1;
+	Boundary eastwall1;
+	Boundary westwall1;
+	Boundary northwall2;
+	Boundary southwall2;
+	Boundary eastwall2;
+	Boundary westwall2;
+	Boundary northgate1;
+	Boundary southgate1;
+	Boundary eastgate1;
+	Boundary westgate1;
+	Boundary northgate2;
+	Boundary southgate2;
+	Boundary eastgate2;
+	Boundary westgate2;
+	
+	
 
 	//Interactive
-	Boundary BoatPlank;
-	Boundary HomeDoor;
+	
 };
 
 #endif
