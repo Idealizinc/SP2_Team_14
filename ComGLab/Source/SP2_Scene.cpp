@@ -819,6 +819,13 @@ void SP2_Scene::Update(double dt)
 			buttonValue = 0;
 			weaponinterface = false;
 		}
+		else if (buttonPress == true && Application::IsKeyPressed('4'))
+		{
+			wave += 1;
+			buttonPress == false;
+			buttonValue = 0;
+			weaponinterface = false;
+		}
 	}
 	if (!weaponinterface)
 	{
