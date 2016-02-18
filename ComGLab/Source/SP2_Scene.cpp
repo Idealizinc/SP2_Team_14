@@ -76,6 +76,7 @@ void SP2_Scene::Init()
 	limitersON = true;
 	lightOff = false;
 	basehp = 100;
+	playerhp = 100;
 	gatehp = 20;
 	bosshp = 100;
 	ammo = 100;
@@ -124,7 +125,7 @@ void SP2_Scene::Init()
 	m_parameters[U_MATERIAL_SHININESS] = glGetUniformLocation(m_programID, "material.kShininess");
 
 	initLights();
-	
+
 	// Get a handle for our "MVP" uniform
 	m_parameters[U_MVP] = glGetUniformLocation(m_programID, "MVP");
 
@@ -198,6 +199,10 @@ void SP2_Scene::Init()
 
 	//meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	//meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
+<<<<<<< HEAD
+
+=======
+>>>>>>> 87032e2d6e9c31a29b42a719a72eae532ab2fac7
 	meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
 	meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
 
@@ -477,7 +482,7 @@ void SP2_Scene::initLights()
 
 void SP2_Scene::initBounds()
 {
-	
+
 }
 void SP2_Scene::Rendergate(bool render)
 {
@@ -501,7 +506,7 @@ void SP2_Scene::gamestate()
 		}
 		else if (basehp == 0)
 		{
-			//go back to start screen
+			wave = 1; //restart wave
 		}
 	}
 	if (wave == 2)
@@ -513,7 +518,7 @@ void SP2_Scene::gamestate()
 		}
 		else if (basehp == 0)
 		{
-			//go back to start screen
+			wave = 2; 
 		}
 	}
 	if (wave == 3)
@@ -525,7 +530,7 @@ void SP2_Scene::gamestate()
 		}
 		else if (basehp == 0)
 		{
-			//go back to start screen
+			wave = 3;
 		}
 	}
 	if (wave == 4)
@@ -537,7 +542,7 @@ void SP2_Scene::gamestate()
 		}
 		else if (basehp == 0)
 		{
-			//go back to start screen
+			wave = 4;
 		}
 	}
 	if (wave == 5)
@@ -549,21 +554,21 @@ void SP2_Scene::gamestate()
 		}
 		else if (basehp == 0)
 		{
-			//go back to start screen
+			wave = 5;
 		}
 	}
 	if (wave == 6)
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Boss HP: " + std::to_string(bosshp), Color(0, 0.5, 0), 3, 65, 81);
-		if (bosshp==0)
+		if (bosshp == 0)
 		{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Boss Stage clear", Color(1, 0, 0), 3, 20, 15);
-		//game won, go back to start screen
+			RenderTextOnScreen(meshList[GEO_TEXT], "Boss Stage clear", Color(1, 0, 0), 3, 20, 15);
+			//game won, go back to start screen
 		}
-		//else if (hp == 0)
-		//{
-		//	//go back to start screen
-		//}
+		else if (playerhp == 0)
+		{
+			wave = 6;
+		}
 	}
 }
 
@@ -622,7 +627,7 @@ void SP2_Scene::Update(double dt)
 			}
 		}
 	}
-	
+
 	//End
 
 	//Resetting Scaling
@@ -939,7 +944,10 @@ void SP2_Scene::Render(double dt)
 	RenderMesh(meshList[GEO_GATE_MAIN], true);
 	modelStack.PopMatrix();
 
+<<<<<<< HEAD
+=======
 	modelStack.PushMatrix();
+>>>>>>> 87032e2d6e9c31a29b42a719a72eae532ab2fac7
 	modelStack.Translate(constTranslation, 2, 5);
 	modelStack.Scale(0.8, 0.8, 0.8);
 	RenderMesh(meshList[GEO_SNIPER], true);
@@ -949,6 +957,13 @@ void SP2_Scene::Render(double dt)
 	RenderWeaponInHand(weaponValue, 5, 1, 1);
 	modelStack.PopMatrix();
 
+<<<<<<< HEAD
+	/*modelStack.PushMatrix();
+	RenderMesh(meshList[GEO_DRONE], true);
+	modelStack.PopMatrix();*/
+	
+=======
+>>>>>>> 87032e2d6e9c31a29b42a719a72eae532ab2fac7
 	modelStack.PushMatrix();
 	modelStack.Translate(0, 20, 0);
 	//modelStack.Rotate(270, 0, 0, 1);
@@ -963,6 +978,13 @@ void SP2_Scene::Render(double dt)
 
 	RenderImageOnScreen(SB_Day_left, 10, 10, 1, 1);
 
+<<<<<<< HEAD
+	/*modelStack.PushMatrix();
+	RenderSniperInHand(meshList[GEO_SNIPER], 5, 1, 1);
+	modelStack.PopMatrix();*/
+
+=======
+>>>>>>> 87032e2d6e9c31a29b42a719a72eae532ab2fac7
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_METEOR], true);
 	modelStack.PopMatrix();
@@ -986,7 +1008,7 @@ void SP2_Scene::Render(double dt)
 	//INFO UI, HP END
 
 	RenderImageOnScreen(Crosshair, 10, 10, 80, 45);
-	
+
 	RenderWepScreen(weaponinterface);
 
 	Rendergate(repairgate);
@@ -1004,7 +1026,7 @@ void SP2_Scene::Render(double dt)
 		RenderTextOnScreen(meshList[GEO_TEXT], "Paused", Color(0, 0.5, 0), 10, 68, 45);
 		modelStack.PopMatrix();
 	}
-	
+
 	gamestate();
 
 	modelStack.PushMatrix();

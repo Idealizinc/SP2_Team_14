@@ -98,10 +98,10 @@
     <ClCompile Include="Source\SoundSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\SP2_Scene.cpp">
+    <ClCompile Include="Source\Particle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Particle.cpp">
+    <ClCompile Include="Source\SP2_Scene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
