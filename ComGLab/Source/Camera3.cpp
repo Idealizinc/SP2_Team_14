@@ -76,7 +76,7 @@ void Camera3::rotateCamera(double dt)
 	target = Vector3(sin(Math::DegreeToRadian(CameraYrotation)) * cos(Math::DegreeToRadian(CameraXrotation)) + position.x,
 		-sin(Math::DegreeToRadian(CameraXrotation)) + position.y,
 		cos(Math::DegreeToRadian(CameraYrotation)) * cos(Math::DegreeToRadian(CameraXrotation)) + position.z);
-	Vector3 view = (target - position).Normalized();
+	view = (target - position).Normalized();
 	Vector3 right = view.Cross(defaultUp);
 	up = right.Cross(view);
 }
@@ -140,6 +140,11 @@ void Camera3::cameraMovement(double dt)
 		position.x += (float)(sin(Math::DegreeToRadian(CameraYrotation + 270)) / walkingSpeed);
 		position.z += (float)(cos(Math::DegreeToRadian(CameraYrotation + 270)) / walkingSpeed);
 	}
+}
+
+Vector3 Camera3::getLookVector()
+{
+	return view;
 }
 
 Vector3 Camera3::getCameraPosition()

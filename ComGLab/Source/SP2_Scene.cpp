@@ -150,6 +150,7 @@ void SP2_Scene::Init()
 	meshList[GEO_CYLINDER] = MeshBuilder::GenerateCylinder("cylinder", white, 20);
 	meshList[GEO_CONE] = MeshBuilder::GenerateCone("cone", white, 20);
 	meshList[GEO_HEMISPHERE] = MeshBuilder::GenerateHemisphere("hemisphere", white, 20, 20);
+	meshList[GEO_SPHERE] = MeshBuilder::GenerateSphere("Sphere", white, 10, 10);
 
 	//Skybox
 	//Using the lower res skybox image
@@ -879,7 +880,7 @@ void SP2_Scene::Update(double dt)
 
 	if (Application::IsKeyPressed(VK_LBUTTON))
 	{
-		WepSys.BulletList.push_back(RayCast(camera.getCameraPosition(), camera.target, 1));
+		WepSys.BulletList.push_back(RayCast(camera.getCameraPosition(), camera.getLookVector(), 1));
 	}
  
 	framesPerSecond = 1 / dt;
@@ -1259,10 +1260,11 @@ void SP2_Scene::Render(double dt)
 	for (auto i : WepSys.BulletList)
 	{
 		modelStack.PushMatrix();
-		i.Move(dt);
+		i.Move();
+		Vector3 Pos = i.Position();
 		modelStack.Translate(i.Position().x, i.Position().y, i.Position().z);
-		modelStack.Scale(0.25, 0.25, 0.25);
-		RenderMesh(meshList[GEO_CUBE], false);
+		modelStack.Scale(0.005, 0.005, 0.005);
+		RenderMesh(meshList[GEO_SPHERE], false);
 		modelStack.PopMatrix();
 	}
 

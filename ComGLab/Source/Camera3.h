@@ -23,11 +23,14 @@ public:
     virtual void Reset();
 
 	Vector3 getCameraPosition();
+	Vector3 getLookVector();
 
     bool isOutofBounds();
 	bool teleCheck;
 	
 private:
+	Vector3 view;
+
     void rotateCamera(double dt);
     float CameraXrotation;
     float CameraYrotation, maxCameraXrotation, minCameraXrotation;
