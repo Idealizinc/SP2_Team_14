@@ -8,6 +8,7 @@
 #include "Utility.h"
 #include <fstream>
 #include <iostream>
+
 using std::cout;
 using std::endl;
 
@@ -18,6 +19,8 @@ const std::string SoundName[] = {
 };
 
 ISound* Song;
+
+int pause = 1;
 
 SP2_Scene::SP2_Scene()
 {
@@ -92,7 +95,6 @@ void SP2_Scene::Init()
 	buttonPress = true;
 	buttonValue = 0;
 	robotCount = 0;
-	pause = 1;
 	leftgate = 0;
 	rightgate = 0;
 	armrotate = true;
@@ -875,10 +877,11 @@ void SP2_Scene::Update(double dt)
 		buttonValue = 0;
 	}
 
-	//Teleporter
-
-
-	//Misecellaneous
+	if (Application::IsKeyPressed(VK_LBUTTON))
+	{
+		WepSys.BulletList.push_back(RayCast(camera.getCameraPosition(), camera.target, 1));
+	}
+ 
 	framesPerSecond = 1 / dt;
 
 	TownLightPosition.y += tweenVal / 15000;
@@ -1253,8 +1256,18 @@ void SP2_Scene::Render(double dt)
 	RenderWeaponInHand(weaponValue, 5, 1, 1);
 	modelStack.PopMatrix();
 
+	for (auto i : WepSys.BulletList)
+	{
+		modelStack.PushMatrix();
+		i.Move(dt);
+		modelStack.Translate(i.Position().x, i.Position().y, i.Position().z);
+		modelStack.Scale(0.25, 0.25, 0.25);
+		RenderMesh(meshList[GEO_CUBE], false);
+		modelStack.PopMatrix();
+	}
 
-	////drone
+
+	/*////drone
 	//modelStack.PushMatrix();
 	//modelStack.Translate(0, 0, -10);
 	//RenderMesh(meshList[GEO_DRONEBODY], true);
@@ -1344,7 +1357,7 @@ void SP2_Scene::Render(double dt)
 	//				modelStack.PushMatrix();
 	//				RenderMesh(meshList[GEO_MIXEDROBOTRIGHTLEG], true);
 	//				modelStack.PopMatrix();
-	//modelStack.PopMatrix();
+	//modelStack.PopMatrix();*/
 
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_METEOR], true);
@@ -1394,6 +1407,11 @@ void SP2_Scene::Render(double dt)
 	
 	//DO NOT RENDER ANYTHING UNDER THIS//
 	RenderUI();
+}
+
+void SP2_Scene::WeaponSystem(Vector3 LookVector)
+{
+
 }
 
 void SP2_Scene::Exit()

@@ -41,10 +41,10 @@ void Camera3::Update(double dt)
 	outOfBounds = false;
 	rotateCamera(dt);
 
-	if (!TeleporterF1NW.BoundaryCheck(position.x, position.z) || !TeleporterF1NE.BoundaryCheck(position.x, position.z)
-		|| !TeleporterF1SW.BoundaryCheck(position.x, position.z) || !TeleporterF1SE.BoundaryCheck(position.x, position.z)
-		|| !TeleporterF2NW.BoundaryCheck(position.x, position.z) || !TeleporterF2NE.BoundaryCheck(position.x, position.z)
-		|| !TeleporterF2SW.BoundaryCheck(position.x, position.z) || !TeleporterF2SE.BoundaryCheck(position.x, position.z))
+	if (!TeleporterF1NW.BoundaryCheck(position.x, position.z, position.y) || !TeleporterF1NE.BoundaryCheck(position.x, position.z, position.y)
+		|| !TeleporterF1SW.BoundaryCheck(position.x, position.z, position.y) || !TeleporterF1SE.BoundaryCheck(position.x, position.z, position.y)
+		|| !TeleporterF2NW.BoundaryCheck(position.x, position.z, position.y) || !TeleporterF2NE.BoundaryCheck(position.x, position.z, position.y)
+		|| !TeleporterF2SW.BoundaryCheck(position.x, position.z, position.y) || !TeleporterF2SE.BoundaryCheck(position.x, position.z, position.y))
 	{
 		teleCheck = true;
 	}
@@ -190,47 +190,47 @@ void Camera3::cameraMovement2(double dt)
 	{
 		//walkingY += 
 	}
-	if (walkingX != 0 && northwall1.BoundaryCheck(walkingX + position.x, position.z) && northwall2.BoundaryCheck(walkingX + position.x, position.z)
-		&& westwall1.BoundaryCheck(walkingX + position.x, position.z) && westwall2.BoundaryCheck(walkingX + position.x, position.z)
-		&& eastwall1.BoundaryCheck(walkingX + position.x, position.z) && eastwall2.BoundaryCheck(walkingX + position.x, position.z)
-		&& southwall1.BoundaryCheck(walkingX + position.x, position.z) && southwall2.BoundaryCheck(walkingX + position.x, position.z) && corebase.BoundaryCheck(walkingX + position.x, position.z)
-		&& WorldBack.BoundaryCheck(walkingX + position.x, position.z) && WorldFront.BoundaryCheck(walkingX + position.x, position.z)
-		&& WorldLeft.BoundaryCheck(walkingX + position.x, position.z) && WorldRight.BoundaryCheck(walkingX + position.x, position.z)
-		&& WorldTop.BoundaryCheck(walkingX + position.x, position.z) && WorldBot.BoundaryCheck(walkingX + position.x, position.z)
-		&& Floor2Back.BoundaryCheck(walkingX + position.x, position.z) && Floor2Front.BoundaryCheck(walkingX + position.x, position.z)
-		&& Floor2Left.BoundaryCheck(walkingX + position.x, position.z) && Floor2Right.BoundaryCheck(walkingX + position.x, position.z)
-		&& Floor2Top.BoundaryCheck(walkingX + position.x, position.z) && Floor2Bot.BoundaryCheck(walkingX + position.x, position.z))
+	if (walkingX != 0 && northwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && northwall2.BoundaryCheck(walkingX + position.x, position.z, position.y)
+		&& westwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && westwall2.BoundaryCheck(walkingX + position.x, position.z, position.y)
+		&& eastwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && eastwall2.BoundaryCheck(walkingX + position.x, position.z, position.y)
+		&& southwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && southwall2.BoundaryCheck(walkingX + position.x, position.z, position.y) && corebase.BoundaryCheck(walkingX + position.x, position.z, position.y)
+		&& WorldBack.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldFront.BoundaryCheck(walkingX + position.x, position.z, position.y)
+		&& WorldLeft.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldRight.BoundaryCheck(walkingX + position.x, position.z, position.y)
+		&& WorldTop.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldBot.BoundaryCheck(walkingX + position.x, position.z, position.y)
+		&& Floor2Back.BoundaryCheck(walkingX + position.x, position.z, position.y) && Floor2Front.BoundaryCheck(walkingX + position.x, position.z, position.y)
+		&& Floor2Left.BoundaryCheck(walkingX + position.x, position.z, position.y) && Floor2Right.BoundaryCheck(walkingX + position.x, position.z, position.y)
+		&& Floor2Top.BoundaryCheck(walkingX + position.x, position.z, position.y) && Floor2Bot.BoundaryCheck(walkingX + position.x, position.z, position.y))
 	{
 		position.x += walkingX;
 	}
-	if (walkingZ != 0 && northwall1.BoundaryCheck(position.x, position.z + walkingZ) && northwall2.BoundaryCheck(position.x, position.z + walkingZ)
-		&& westwall1.BoundaryCheck(position.x, position.z + walkingZ) && westwall2.BoundaryCheck(position.x, position.z + walkingZ)
-		&& eastwall1.BoundaryCheck(position.x, position.z + walkingZ) && eastwall2.BoundaryCheck(position.x, position.z + walkingZ)
-		&& southwall1.BoundaryCheck(position.x, position.z + walkingZ) && southwall1.BoundaryCheck(position.x, position.z + walkingZ) && corebase.BoundaryCheck(position.x, position.z + walkingZ)
-		&& WorldBack.BoundaryCheck(position.x, position.z + walkingZ) && WorldFront.BoundaryCheck(position.x, position.z + walkingZ)
-		&& WorldLeft.BoundaryCheck(position.x, position.z + walkingZ) && WorldRight.BoundaryCheck(position.x, position.z + walkingZ)
-		&& WorldTop.BoundaryCheck(position.x, position.z + walkingZ) && WorldBot.BoundaryCheck(position.x, position.z + walkingZ)
-		&& Floor2Back.BoundaryCheck(position.x, position.z + walkingZ) && Floor2Front.BoundaryCheck(position.x, position.z + walkingZ)
-		&& Floor2Left.BoundaryCheck(position.x, position.z + walkingZ) && Floor2Right.BoundaryCheck(position.x, position.z + walkingZ)
-		&& Floor2Top.BoundaryCheck(position.x, position.z + walkingZ) && Floor2Bot.BoundaryCheck(position.x, position.z + walkingZ))
+	if (walkingZ != 0 && northwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && northwall2.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+		&& westwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && westwall2.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+		&& eastwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && eastwall2.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+		&& southwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && southwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && corebase.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+		&& WorldBack.BoundaryCheck(position.x, position.z + walkingZ, position.y) && WorldFront.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+		&& WorldLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && WorldRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+		&& WorldTop.BoundaryCheck(position.x, position.z + walkingZ, position.y) && WorldBot.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+		&& Floor2Back.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2Front.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+		&& Floor2Left.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2Right.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+		&& Floor2Top.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2Bot.BoundaryCheck(position.x, position.z + walkingZ, position.y))
 	{
 		position.z += walkingZ;
 	}
 	
 	//Teleporter
-	if ((teleCheck == true && TeleporterF1NW.BoundaryCheck(position.x, position.z)
-		|| (teleCheck == true && TeleporterF1NE.BoundaryCheck(position.x, position.z))
-		|| (teleCheck == true && TeleporterF1SW.BoundaryCheck(position.x, position.z))
-		|| (teleCheck == true && TeleporterF1SE.BoundaryCheck(position.x, position.z))) && Application::IsKeyPressed('E'))
+	if ((teleCheck == true && TeleporterF1NW.BoundaryCheck(position.x, position.z, position.y)
+		|| (teleCheck == true && TeleporterF1NE.BoundaryCheck(position.x, position.z, position.y))
+		|| (teleCheck == true && TeleporterF1SW.BoundaryCheck(position.x, position.z, position.y))
+		|| (teleCheck == true && TeleporterF1SE.BoundaryCheck(position.x, position.z, position.y))) && Application::IsKeyPressed('E'))
 	{
 		position.x = 5;
 		position.y = 15;
 		position.z = 3;
 	}
-	/*if (teleCheck == true && TeleporterF2NW.BoundaryCheck(position.x, position.z) && Application::IsKeyPressed('E')
-		|| teleCheck == true && TeleporterF2NE.BoundaryCheck(position.x, position.z) && Application::IsKeyPressed('E')
-		|| teleCheck == true && TeleporterF2SW.BoundaryCheck(position.x, position.z) && Application::IsKeyPressed('E')
-		|| teleCheck == true && TeleporterF2SE.BoundaryCheck(position.x, position.z) && Application::IsKeyPressed('E'))
+	/*if (teleCheck == true && TeleporterF2NW.BoundaryCheck(position.x, position.z, position.y) && Application::IsKeyPressed('E')
+		|| teleCheck == true && TeleporterF2NE.BoundaryCheck(position.x, position.z, position.y) && Application::IsKeyPressed('E')
+		|| teleCheck == true && TeleporterF2SW.BoundaryCheck(position.x, position.z, position.y) && Application::IsKeyPressed('E')
+		|| teleCheck == true && TeleporterF2SE.BoundaryCheck(position.x, position.z, position.y) && Application::IsKeyPressed('E'))
 	{
 		position.x = 13;
 		position.y = 3;
