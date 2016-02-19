@@ -102,8 +102,8 @@ void SP2_Scene::Init()
 	moverobot = 0;
 	moveleftleg = 0;
 	moverightleg = 0;
-	leftleglimit = -0.5;
-	rightleglimit = -0.5;
+	leftleglimit = 3;
+	rightleglimit = 3;
 	leftleg = true;
 	rightleg = true;
 	WepItf_Choices = Vector3(0, 0, 0);
@@ -691,11 +691,11 @@ void SP2_Scene::RobotMovement(double dt)
 {
 	if (armrotate == true)
 	{
-		rotateAngle -= (float)(3 * dt);
+		rotateAngle -= (float)(5 * dt);
 	}
 	else if (armrotate == false)
 	{
-		rotateAngle += (float)(3 * dt);
+		rotateAngle += (float)(5 * dt);
 	}
 	if (rotateAngle <= upperarmrotatelimit)
 	{
@@ -705,44 +705,41 @@ void SP2_Scene::RobotMovement(double dt)
 	{
 		armrotate = true;
 	}
-	
+
+	if (leftleg == true)
+	{
+		moveleftleg -= (float)(5 * dt);
+	}
+	else if (leftleg == false)
+	{
+		moveleftleg += (float)(5 * dt);
+	}
+	if (moveleftleg >= leftleglimit)
+	{
+		leftleg = true;
+	}
+	else if (moveleftleg <= -leftleglimit + (0.5 - leftleglimit))
+	{
+		leftleg = false;
+	}
 
 	if (rightleg == true)
 	{
-		//leftleg = false;
 		moverightleg += (float)(3 * dt);
 	}
 	else if (rightleg == false)
 	{
 		moverightleg -= (float)(3 * dt);
 	}
-	if (rightleg <= rightleglimit)
+	if (moverightleg >= rightleglimit)
 	{
 		rightleg = false;
 	}
-	else if (rightleg >= -rightleglimit + (0.7 - rightleglimit))
+	else if (moverightleg <= -rightleglimit + (0.5 - rightleglimit))
 	{
 		rightleg = true;
 	}
 
-	if (leftleg == true)
-	{
-		//rightleg = false;
-		moveleftleg -= (float)(3 * dt);
-	}
-	else if (leftleg == false)
-	{
-		moveleftleg += (float)(3 * dt);
-		
-	}
-	if (leftleg <= leftleglimit)
-	{
-		leftleg = false;
-	}
-	else if (leftleg >= -leftleglimit + (0.7 - leftleglimit))
-	{
-		leftleg = true;
-	}
 	moverobot += (float)(2 * dt);
 }
 void SP2_Scene::Update(double dt)
@@ -1202,7 +1199,7 @@ void SP2_Scene::Render(double dt)
 		);
 
 	readtextfile();
-
+	RenderRocks();
 	modelStack.LoadIdentity();
 
 	if (light[0].type == Light::LIGHT_DIRECTIONAL)
@@ -1360,44 +1357,46 @@ void SP2_Scene::Render(double dt)
 	//		modelStack.PopMatrix();
 	//modelStack.PopMatrix();
 
-	////melee robot
-	//modelStack.PushMatrix();
-	//modelStack.Translate(0, 0, 10);
-	//modelStack.Translate(0, 0, -moverobot);
-	//RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
-	//	modelStack.PushMatrix();
-	//	modelStack.Rotate(rotateAngle, 1, 0, 0);
-	//	modelStack.Translate(0, 0, -10);
-	//	modelStack.Translate(0, 0, 10);
-	//	modelStack.Translate(0.3, 0, 0);
-	//	RenderMesh(meshList[GEO_MELEEROBOTLEFTUPPERARM], true);
-	//		modelStack.PushMatrix();
-	//		modelStack.Rotate(rotateAngle, 1, 0, 0);
-	//		RenderMesh(meshList[GEO_MELEEROBOTLEFTLOWERARM], true);
-	//		modelStack.PopMatrix();
-	//	modelStack.PopMatrix();
-	//		modelStack.PushMatrix();
-	//		modelStack.Rotate(rotateAngle, 1, 0, 0);
-	//		modelStack.Translate(0, 0, -10);
-	//		modelStack.Translate(0, 0, 10);
-	//		modelStack.Translate(-0.3, 0, 0);
-	//		RenderMesh(meshList[GEO_MELEEROBOTRIGHTUPPERARM], true);
-	//			modelStack.PushMatrix();
-	//			modelStack.Rotate(rotateAngle, 1, 0, 0);
-	//			RenderMesh(meshList[GEO_MELEEROBOTRIGHTLOWERARM], true);
-	//			modelStack.PopMatrix();
-	//		modelStack.PopMatrix();
-	//				modelStack.PushMatrix();
-	//				modelStack.Rotate(moveleftleg, 1, 0, 0);
-	//				modelStack.Translate(0, 0, -10);
-	//				modelStack.Translate(0, 0, 10);
-	//				RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
-	//				modelStack.PopMatrix();
-	//					modelStack.PushMatrix();
-	//					modelStack.Rotate(moverightleg, 1, 0, 0);
-	//					RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
-	//					modelStack.PopMatrix();
-	//modelStack.PopMatrix();
+	//melee robot
+	modelStack.PushMatrix();
+	modelStack.Translate(0, 1, 10);
+	modelStack.Translate(0, 0, -moverobot);
+	RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
+		modelStack.PushMatrix();
+		modelStack.Rotate(rotateAngle, 1, 0, 0);
+		modelStack.Translate(0, 0, -10);
+		modelStack.Translate(0, 0, 10);
+		modelStack.Translate(0.3, 0, 0);
+		RenderMesh(meshList[GEO_MELEEROBOTLEFTUPPERARM], true);
+			modelStack.PushMatrix();
+			modelStack.Rotate(rotateAngle, 1, 0, 0);
+			RenderMesh(meshList[GEO_MELEEROBOTLEFTLOWERARM], true);
+			modelStack.PopMatrix();
+		modelStack.PopMatrix();
+			modelStack.PushMatrix();
+			modelStack.Rotate(rotateAngle, 1, 0, 0);
+			modelStack.Translate(0, 0, -10);
+			modelStack.Translate(0, 0, 10);
+			modelStack.Translate(-0.3, 0, 0);
+			RenderMesh(meshList[GEO_MELEEROBOTRIGHTUPPERARM], true);
+				modelStack.PushMatrix();
+				modelStack.Rotate(rotateAngle, 1, 0, 0);
+				RenderMesh(meshList[GEO_MELEEROBOTRIGHTLOWERARM], true);
+				modelStack.PopMatrix();
+			modelStack.PopMatrix();
+					modelStack.PushMatrix();
+					modelStack.Rotate(moveleftleg, 1, 0, 0);
+					modelStack.Translate(0, 0, -10);
+					modelStack.Translate(0, 0, 10);
+					modelStack.Translate(0.2, 0, 0);
+					RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
+					modelStack.PopMatrix();
+						modelStack.PushMatrix();
+						modelStack.Rotate(moverightleg, 1, 0, 0);
+						modelStack.Translate(-0.4, 0, 0);
+						RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
+						modelStack.PopMatrix();
+	modelStack.PopMatrix();
 
 	////range robot
 	//modelStack.PushMatrix();
@@ -1437,7 +1436,7 @@ void SP2_Scene::Render(double dt)
 	//				modelStack.PopMatrix();
 	//modelStack.PopMatrix();*/
 
-	RenderRocks();
+	
 	modelStack.PushMatrix();
 	modelStack.Translate(17.2, 0.5, -2.15);
 	modelStack.Rotate(90, 0, 1, 0);
@@ -1480,7 +1479,7 @@ void SP2_Scene::Render(double dt)
 		modelStack.PopMatrix();
 	modelStack.PopMatrix();
 
-
+	
 	//DO NOT RENDER ANYTHING UNDER THIS//
 	RenderUI();
 }
