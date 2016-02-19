@@ -95,6 +95,7 @@
     <None Include="Shader\TransformVertexShader.vertexshader" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FileChecker.cpp" />
     <ClCompile Include="Source\Application.cpp" />
     <ClCompile Include="Source\Particle.cpp" />
     <ClCompile Include="Source\SoundSystem.cpp" />
@@ -114,6 +115,7 @@
     <ClCompile Include="Source\Utility.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FileChecker.h" />
     <ClInclude Include="Source\Application.h" />
     <ClInclude Include="Source\Particle.h" />
     <ClInclude Include="Source\SharedData.h" />

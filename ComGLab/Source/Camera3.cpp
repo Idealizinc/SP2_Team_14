@@ -31,6 +31,7 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up,
 	cameraMass = 1;
 	outOfBounds = false;
 	initBoundVec();
+	teleCheck = false;
 }
 
 void Camera3::Update(double dt)
@@ -39,6 +40,18 @@ void Camera3::Update(double dt)
 	cameraMovement2(dt);
 	outOfBounds = false;
 	rotateCamera(dt);
+
+	if (!TeleporterF1NW.BoundaryCheck(position.x, position.z) || !TeleporterF1NE.BoundaryCheck(position.x, position.z)
+		|| !TeleporterF1SW.BoundaryCheck(position.x, position.z) || !TeleporterF1SE.BoundaryCheck(position.x, position.z)
+		|| !TeleporterF2NW.BoundaryCheck(position.x, position.z) || !TeleporterF2NE.BoundaryCheck(position.x, position.z)
+		|| !TeleporterF2SW.BoundaryCheck(position.x, position.z) || !TeleporterF2SE.BoundaryCheck(position.x, position.z))
+	{
+		teleCheck = true;
+	}
+	else
+	{
+		teleCheck = false;
+	}
 }
 
 void Camera3::Reset()
@@ -204,6 +217,25 @@ void Camera3::cameraMovement2(double dt)
 		position.z += walkingZ;
 	}
 	
+	//Teleporter
+	if ((teleCheck == true && TeleporterF1NW.BoundaryCheck(position.x, position.z)
+		|| (teleCheck == true && TeleporterF1NE.BoundaryCheck(position.x, position.z))
+		|| (teleCheck == true && TeleporterF1SW.BoundaryCheck(position.x, position.z))
+		|| (teleCheck == true && TeleporterF1SE.BoundaryCheck(position.x, position.z))) && Application::IsKeyPressed('E'))
+	{
+		position.x = 5;
+		position.y = 15;
+		position.z = 3;
+	}
+	/*if (teleCheck == true && TeleporterF2NW.BoundaryCheck(position.x, position.z) && Application::IsKeyPressed('E')
+		|| teleCheck == true && TeleporterF2NE.BoundaryCheck(position.x, position.z) && Application::IsKeyPressed('E')
+		|| teleCheck == true && TeleporterF2SW.BoundaryCheck(position.x, position.z) && Application::IsKeyPressed('E')
+		|| teleCheck == true && TeleporterF2SE.BoundaryCheck(position.x, position.z) && Application::IsKeyPressed('E'))
+	{
+		position.x = 13;
+		position.y = 3;
+		position.z = 13;
+	}*/
 }
 
 void Camera3::initBoundVec()
@@ -242,6 +274,16 @@ void Camera3::initBoundVec()
 	Floor2Back.set(-11, 11, -17, -15, 10, 17);
 	Floor2Top.set(-11, 11, -17, 17, 15, 17);
 	Floor2Bot.set(-11, 11, -17, 17, 8, 10);*/
+
+	TeleporterF1NW.set(10, 17, 9, 17, -5, 5);
+	TeleporterF1NE.set(-17, -10, 9, 17, -5, 5);
+	TeleporterF1SW.set(10, 17, -17, -9, -5, 5);
+	TeleporterF1SE.set(-17, -10, -17, -9, -5, 5);
+	TeleporterF2NW.set(7, 13, 7, 13, 8, 12);
+	TeleporterF2NE.set(-13, -7, 7, 13, 8, 12);
+	TeleporterF2SW.set(7, 13, -13, -7, 8, 12);
+	TeleporterF2SE.set(-13, -7, -13, -7, 8, 12);
+
 }
 
 

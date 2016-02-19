@@ -25,6 +25,7 @@ public:
 	Vector3 getCameraPosition();
 
     bool isOutofBounds();
+	bool teleCheck;
 	
 private:
     void rotateCamera(double dt);
@@ -83,7 +84,14 @@ private:
 	Boundary Floor2Front;
 	Boundary Floor2Back;
 	//Interactive
-
+	Boundary TeleporterF1NW;
+	Boundary TeleporterF1NE;
+	Boundary TeleporterF1SW;
+	Boundary TeleporterF1SE;
+	Boundary TeleporterF2NW;
+	Boundary TeleporterF2NE;
+	Boundary TeleporterF2SW;
+	Boundary TeleporterF2SE;
 };
 
 #endif

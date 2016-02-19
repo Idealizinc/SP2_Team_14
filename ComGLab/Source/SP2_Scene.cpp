@@ -97,7 +97,6 @@ void SP2_Scene::Init()
 	rightgate = 0;
 	armrotate = true;
 	rotateAngle = 0;
-
 	WepItf_Choices = Vector3(0, 0, 0);
 
 	// Enable depth Test
@@ -211,6 +210,9 @@ void SP2_Scene::Init()
 
 	meshList[GEO_MOONFLOOR] = MeshBuilder::GenerateOBJ("Baseplate", "OBJ//Moon_Floor.obj");
 	meshList[GEO_MOONFLOOR]->textureID = LoadTGA("Image//Tex_Moon.tga");
+
+	meshList[GEO_TELEPORTER] = MeshBuilder::GenerateOBJ("Teleporter", "OBJ//Teleporter.obj");
+	meshList[GEO_TELEPORTER]->textureID = LoadTGA("Image//Tex_Lightorb.tga");
 
 	/*meshList[GEO_COMPUTER] = MeshBuilder::GenerateOBJ("test", "OBJ//computer.obj");
 	meshList[GEO_COMPUTER]->textureID = LoadTGA("Image//computer.tga");*/
@@ -872,6 +874,11 @@ void SP2_Scene::Update(double dt)
 		buttonPress == false;
 		buttonValue = 0;
 	}
+
+	//Teleporter
+
+
+	//Misecellaneous
 	framesPerSecond = 1 / dt;
 
 	TownLightPosition.y += tweenVal / 15000;
@@ -1045,6 +1052,17 @@ void SP2_Scene::RenderWepScreen(bool render, Vector3 choices)
 	}
 }
 
+void SP2_Scene::RenderTeleporter(bool render)
+{
+	if (render)
+	{
+		modelStack.PushMatrix();
+		RenderImageOnScreen(UI_BG, 30, 2.75, 80, 25);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press <E> to select", Color(0.000f, 0.808f, 0.820f), 2.5, 68.5, 25);
+		modelStack.PopMatrix();
+	}
+}
+
 void SP2_Scene::RenderUI()
 {
 	//Render In-Hand Weapon
@@ -1073,6 +1091,8 @@ void SP2_Scene::RenderUI()
 	RenderImageOnScreen(Crosshair, 10, 10, 80, 45);
 
 	RenderWepScreen(weaponinterface, WepItf_Choices);
+
+	RenderTeleporter(camera.teleCheck);
 
 	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(basehp), Color(0, 0.5, 0), 3, 2.5, 87);
 
@@ -1203,6 +1223,7 @@ void SP2_Scene::Render(double dt)
 	//modelStack.Scale(2, 5, 2);
 	RenderMesh(meshList[GEO_BASE], true);
 	RenderMesh(meshList[GEO_CRYSTALBASE], true);
+	RenderMesh(meshList[GEO_TELEPORTER], true);
 		modelStack.PushMatrix();
 			modelStack.Translate(0, tweenVal/1000, 0);
 			modelStack.Rotate(constRotation*3, 0, 1, 0);

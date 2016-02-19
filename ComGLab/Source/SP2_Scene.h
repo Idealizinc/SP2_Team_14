@@ -65,7 +65,7 @@ class SP2_Scene : public Scene
 		GEO_BLUE_SNIPER,
 		GEO_BLUE_RIFLE,
 		GEO_BLUE_SHOTGUN,
-		
+
 
 		//Ships
 		//GEO_PLAYERSHIP,
@@ -107,6 +107,7 @@ class SP2_Scene : public Scene
 		GEO_CRYSTAL,
 		GEO_CRYSTALBASE,
 		GEO_MOONFLOOR,
+		GEO_TELEPORTER,
 
 		//add these enum in GEOMETRY_TYPE before NUM_GEOMETRY
 		GEO_TEXT,
@@ -249,6 +250,7 @@ private:
 	void RenderImageOnScreen(GLuint texture, float Xsize = 1, float Ysize = 1, float Xpos = 0, float Ypos = 0);
 	void RenderMeshOnScreen(Mesh* mesh, float Xsize = 1, float Ysize = 1, float Xpos = 0, float Ypos = 0, float Angle = 0, Vector3 RotationDir = Vector3(0, 0, 0));
 	void RenderWepScreen(bool render = false, Vector3 choices = Vector3(0, 0, 0));
+	void RenderTeleporter(bool render = false);
 	void initBounds();
 	void RenderGate(bool render = false);
 	void RenderUI();
