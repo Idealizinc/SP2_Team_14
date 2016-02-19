@@ -215,9 +215,8 @@ void SP2_Scene::Init()
 	/*meshList[GEO_COMPUTER] = MeshBuilder::GenerateOBJ("test", "OBJ//computer.obj");
 	meshList[GEO_COMPUTER]->textureID = LoadTGA("Image//computer.tga");*/
 
-	initBounds();
 	InitWeaponModels();
-	InitRobots();
+	//InitRobots();
 }
 
 void SP2_Scene::InitWeaponModels()
@@ -234,36 +233,6 @@ void SP2_Scene::InitWeaponModels()
 
 	meshList[GEO_SHOTGUN] = MeshBuilder::GenerateOBJ("test", "OBJ//Shotgun.obj");
 	meshList[GEO_SHOTGUN]->textureID = LoadTGA("Image//Tex_Shotgun.tga");
-
-	// Damage
-	meshList[GEO_RED_SNIPER] = MeshBuilder::GenerateOBJ("test", "OBJ//Sniper.obj");
-	meshList[GEO_RED_SNIPER]->textureID = LoadTGA("Image//Tex_SniperDamage.tga");
-
-	meshList[GEO_RED_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
-	meshList[GEO_RED_RIFLE]->textureID = LoadTGA("Image//Tex_RifleDamage.tga");
-
-	meshList[GEO_RED_SHOTGUN] = MeshBuilder::GenerateOBJ("test", "OBJ//Shotgun.obj");
-	meshList[GEO_RED_SHOTGUN]->textureID = LoadTGA("Image//Tex_ShotgunDamage.tga");
-
-	// Ammo
-	meshList[GEO_BLUE_SNIPER] = MeshBuilder::GenerateOBJ("test", "OBJ//Sniper.obj");
-	meshList[GEO_BLUE_SNIPER]->textureID = LoadTGA("Image//Tex_SniperAmmo.tga");
-
-	meshList[GEO_BLUE_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
-	meshList[GEO_BLUE_RIFLE]->textureID = LoadTGA("Image//Tex_RifleAmmo.tga");
-
-	meshList[GEO_BLUE_SHOTGUN] = MeshBuilder::GenerateOBJ("test", "OBJ//Shotgun.obj");
-	meshList[GEO_BLUE_SHOTGUN]->textureID = LoadTGA("Image//Tex_ShotgunAmmo.tga");
-
-	// Fast
-	meshList[GEO_GREEN_SNIPER] = MeshBuilder::GenerateOBJ("test", "OBJ//Sniper.obj");
-	meshList[GEO_GREEN_SNIPER]->textureID = LoadTGA("Image//Tex_SniperFast.tga");
-
-	meshList[GEO_GREEN_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
-	meshList[GEO_GREEN_RIFLE]->textureID = LoadTGA("Image//Tex_RifleFast.tga");
-
-	meshList[GEO_GREEN_SHOTGUN] = MeshBuilder::GenerateOBJ("test", "OBJ//Shotgun.obj");
-	meshList[GEO_GREEN_SHOTGUN]->textureID = LoadTGA("Image//Tex_ShotgunFast.tga");
 }
 
 void SP2_Scene::InitRobots()
@@ -443,51 +412,63 @@ void SP2_Scene::RenderWeaponInHand(unsigned short wepVal, float size, float x, f
 	}
 	else if (wepVal == 1)
 	{
-		RenderMesh(meshList[GEO_RIFLE], true); 
+		meshList[GEO_RIFLE]->textureID = Normal_Rifle;
+		RenderMesh(meshList[GEO_RIFLE], true);
 	}
-	else if(wepVal == 2)
+	else if (wepVal == 2)
 	{
+		meshList[GEO_SNIPER]->textureID = Normal_Sniper;
 		RenderMesh(meshList[GEO_SNIPER], true);
 	}
 	else if (wepVal == 3)
 	{
+		meshList[GEO_SHOTGUN]->textureID = Normal_Shotgun;
 		RenderMesh(meshList[GEO_SHOTGUN], true);
 	}
 	else if (wepVal == 4)
 	{
-		RenderMesh(meshList[GEO_RED_RIFLE], true);
+		meshList[GEO_RIFLE]->textureID = Damage_Rifle;
+		RenderMesh(meshList[GEO_RIFLE], true);
 	}
 	else if (wepVal == 5)
 	{
-		RenderMesh(meshList[GEO_RED_SNIPER], true);
+		meshList[GEO_SNIPER]->textureID = Damage_Sniper;
+		RenderMesh(meshList[GEO_SNIPER], true);
 	}
 	else if (wepVal == 6)
 	{
-		RenderMesh(meshList[GEO_RED_SHOTGUN], true);
+		meshList[GEO_SHOTGUN]->textureID = Damage_Shotgun;
+		RenderMesh(meshList[GEO_SHOTGUN], true);
 	}
 	else if (wepVal == 7)
 	{
-		RenderMesh(meshList[GEO_BLUE_RIFLE], true);
+		meshList[GEO_RIFLE]->textureID = Capacity_Rifle;
+		RenderMesh(meshList[GEO_RIFLE], true);
 	}
 	else if (wepVal == 8)
 	{
-		RenderMesh(meshList[GEO_BLUE_SNIPER], true);
+		meshList[GEO_SNIPER]->textureID = Capacity_Sniper;
+		RenderMesh(meshList[GEO_SNIPER], true);
 	}
 	else if (wepVal == 9)
 	{
-		RenderMesh(meshList[GEO_BLUE_SHOTGUN], true);
+		meshList[GEO_SHOTGUN]->textureID = Capacity_Shotgun;
+		RenderMesh(meshList[GEO_SHOTGUN], true);
 	}
 	else if (wepVal == 10)
 	{
-		RenderMesh(meshList[GEO_GREEN_RIFLE], true);
+		meshList[GEO_RIFLE]->textureID = Fast_Rifle;
+		RenderMesh(meshList[GEO_RIFLE], true);
 	}
 	else if (wepVal == 11)
 	{
-		RenderMesh(meshList[GEO_GREEN_SNIPER], true);
+		meshList[GEO_SNIPER]->textureID = Fast_Sniper;
+		RenderMesh(meshList[GEO_SNIPER], true);
 	}
 	else if (wepVal == 12)
 	{
-		RenderMesh(meshList[GEO_GREEN_SHOTGUN], true);
+		meshList[GEO_SHOTGUN]->textureID = Fast_Shotgun;
+		RenderMesh(meshList[GEO_SHOTGUN], true);
 	}
 
 	projectionStack.PopMatrix();
@@ -606,10 +587,6 @@ void SP2_Scene::initLights()
 	glUniform1f(m_parameters[U_LIGHT0_EXPONENT], light[0].exponent);
 }
 
-void SP2_Scene::initBounds()
-{
-	
-}
 void SP2_Scene::RenderGate(bool render)
 {
 	if (render)
@@ -621,6 +598,7 @@ void SP2_Scene::RenderGate(bool render)
 		gatehp = 20;
 	}
 }
+
 void SP2_Scene::GameState()
 {
 	if (wave == 1)
@@ -894,7 +872,6 @@ void SP2_Scene::Update(double dt)
 		buttonPress == false;
 		buttonValue = 0;
 	}
-	initBounds();
 	framesPerSecond = 1 / dt;
 
 	TownLightPosition.y += tweenVal / 15000;
@@ -974,26 +951,30 @@ void SP2_Scene::RenderWepScreen(bool render, Vector3 choices)
 		RenderImageOnScreen(UI_BG, 30, 30, 40, 45);
 		if (choices.x == 0)
 		{
+			meshList[GEO_RIFLE]->textureID = Normal_Rifle;
 			RenderMeshOnScreen(meshList[GEO_RIFLE], 1, 1, 40, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
 		else if (choices.x == 1)
 		{
-			RenderMeshOnScreen(meshList[GEO_RED_RIFLE], 1, 1, 40, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+			meshList[GEO_RIFLE]->textureID = Damage_Rifle;
+			RenderMeshOnScreen(meshList[GEO_RIFLE], 1, 1, 40, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
 		else if (choices.x == 2)
 		{
-			RenderMeshOnScreen(meshList[GEO_BLUE_RIFLE], 1, 1, 40, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+			meshList[GEO_RIFLE]->textureID = Capacity_Rifle;
+			RenderMeshOnScreen(meshList[GEO_RIFLE], 1, 1, 40, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
 		else if (choices.x == 3)
 		{
-			RenderMeshOnScreen(meshList[GEO_GREEN_RIFLE], 1, 1, 40, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+			meshList[GEO_RIFLE]->textureID = Fast_Rifle;
+			RenderMeshOnScreen(meshList[GEO_RIFLE], 1, 1, 40, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
 		RenderImageOnScreen(UI_BG, 30, 10, 40, 67.5);
 		RenderTextOnScreen(meshList[GEO_TEXT], "Gun: Rifle", Color(0.000f, 0.808f, 0.820f), 4, 29, 70);
 		RenderTextOnScreen(meshList[GEO_TEXT], Type1, Color(0.000f, 0.808f, 0.820f), 3, 29, 66);
 		RenderImageOnScreen(UI_BG, 30, 2.75, 40, 25);
 		RenderTextOnScreen(meshList[GEO_TEXT], "Press <1> to select", Color(0.000f, 0.808f, 0.820f), 2.5, 28.5, 25);
-	
+
 		if (choices.y == 0){ Type2 = "Type: <Normal>"; }
 		else if (choices.y == 1){ Type2 = "Type: <Damage>"; }
 		else if (choices.y == 2){ Type2 = "Type: <Capacity>"; }
@@ -1002,26 +983,30 @@ void SP2_Scene::RenderWepScreen(bool render, Vector3 choices)
 		RenderImageOnScreen(UI_BG, 30, 30, 80, 45);
 		if (choices.y == 0)
 		{
+			meshList[GEO_SNIPER]->textureID = Normal_Sniper;
 			RenderMeshOnScreen(meshList[GEO_SNIPER], 1, 1, 85, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
 		else if (choices.y == 1)
 		{
-			RenderMeshOnScreen(meshList[GEO_RED_SNIPER], 1, 1, 85, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+			meshList[GEO_SNIPER]->textureID = Damage_Sniper;
+			RenderMeshOnScreen(meshList[GEO_SNIPER], 1, 1, 85, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
 		else if (choices.y == 2)
 		{
-			RenderMeshOnScreen(meshList[GEO_BLUE_SNIPER], 1, 1, 85, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+			meshList[GEO_SNIPER]->textureID = Capacity_Sniper;
+			RenderMeshOnScreen(meshList[GEO_SNIPER], 1, 1, 85, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
 		else if (choices.y == 3)
 		{
-			RenderMeshOnScreen(meshList[GEO_GREEN_SNIPER], 1, 1, 85, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+			meshList[GEO_SNIPER]->textureID = Fast_Sniper;
+			RenderMeshOnScreen(meshList[GEO_SNIPER], 1, 1, 85, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
 		RenderImageOnScreen(UI_BG, 30, 10, 80, 67.5);
 		RenderTextOnScreen(meshList[GEO_TEXT], "Gun: Sniper", Color(0.000f, 0.808f, 0.820f), 4, 69, 70);
 		RenderTextOnScreen(meshList[GEO_TEXT], Type2, Color(0.000f, 0.808f, 0.820f), 3, 69, 66);
 		RenderImageOnScreen(UI_BG, 30, 2.75, 80, 25);
 		RenderTextOnScreen(meshList[GEO_TEXT], "Press <2> to select", Color(0.000f, 0.808f, 0.820f), 2.5, 68.5, 25);
-		
+
 		if (choices.z == 0){ Type3 = "Type: <Normal>"; }
 		else if (choices.z == 1){ Type3 = "Type: <Damage>"; }
 		else if (choices.z == 2){ Type3 = "Type: <Capacity>"; }
@@ -1030,19 +1015,23 @@ void SP2_Scene::RenderWepScreen(bool render, Vector3 choices)
 		RenderImageOnScreen(UI_BG, 30, 30, 120, 45);
 		if (choices.z == 0)
 		{
+			meshList[GEO_SHOTGUN]->textureID = Normal_Shotgun;
 			RenderMeshOnScreen(meshList[GEO_SHOTGUN], 1, 1, 125, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
 		else if (choices.z == 1)
 		{
-			RenderMeshOnScreen(meshList[GEO_RED_SHOTGUN], 1, 1, 125, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+			meshList[GEO_SHOTGUN]->textureID = Damage_Shotgun;
+			RenderMeshOnScreen(meshList[GEO_SHOTGUN], 1, 1, 125, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
 		else if (choices.z == 2)
 		{
-			RenderMeshOnScreen(meshList[GEO_BLUE_SHOTGUN], 1, 1, 125, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+			meshList[GEO_SHOTGUN]->textureID = Capacity_Shotgun;
+			RenderMeshOnScreen(meshList[GEO_SHOTGUN], 1, 1, 125, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
 		else if (choices.z == 3)
 		{
-			RenderMeshOnScreen(meshList[GEO_GREEN_SHOTGUN], 1, 1, 125, 45, constRotation * pause * 5, Vector3(1, 1, 0));
+			meshList[GEO_SHOTGUN]->textureID = Fast_Shotgun;
+			RenderMeshOnScreen(meshList[GEO_SHOTGUN], 1, 1, 125, 45, constRotation * pause * 5, Vector3(1, 1, 0));
 		}
 		RenderImageOnScreen(UI_BG, 30, 10, 120, 67.5);
 		RenderTextOnScreen(meshList[GEO_TEXT], "Gun: Shotgun", Color(0.000f, 0.808f, 0.820f), 4, 109, 70);
@@ -1244,98 +1233,6 @@ void SP2_Scene::Render(double dt)
 	modelStack.PopMatrix();
 
 
-	//drone
-	modelStack.PushMatrix();
-	modelStack.Translate(0, 0, -10);
-	RenderMesh(meshList[GEO_DRONEBODY], true);
-		modelStack.PushMatrix();
-		RenderMesh(meshList[GEO_DRONELEFTUPPERARM], true);
-			modelStack.PushMatrix();
-			RenderMesh(meshList[GEO_DRONELEFTLOWERARM], true);
-			modelStack.PopMatrix();
-		modelStack.PopMatrix();
-			modelStack.PushMatrix();
-			RenderMesh(meshList[GEO_DRONERIGHTUPPERARM], true);
-				modelStack.PushMatrix();
-				RenderMesh(meshList[GEO_DRONERIGHTLOWERARM], true);
-				modelStack.PopMatrix();
-			modelStack.PopMatrix();
-	modelStack.PopMatrix();
-
-	//melee robot
-	modelStack.PushMatrix();
-	modelStack.Translate(0, 0, 10);
-	RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
-		modelStack.PushMatrix();
-		modelStack.Rotate(rotateAngle, 1, 0, 0);
-		modelStack.Translate(0, 0, -10);
-		modelStack.Translate(0, 0, 10);
-		modelStack.Translate(0.3, 0, 0);
-		RenderMesh(meshList[GEO_MELEEROBOTLEFTUPPERARM], true);
-			modelStack.PushMatrix();
-			modelStack.Rotate(rotateAngle, 1, 0, 0);
-			RenderMesh(meshList[GEO_MELEEROBOTLEFTLOWERARM], true);
-			modelStack.PopMatrix();
-		modelStack.PopMatrix();
-			modelStack.PushMatrix();
-			modelStack.Rotate(rotateAngle, 1, 0, 0);
-			modelStack.Translate(0, 0, -10);
-			modelStack.Translate(0, 0, 10);
-			modelStack.Translate(-0.3, 0, 0);
-			RenderMesh(meshList[GEO_MELEEROBOTRIGHTUPPERARM], true);
-				modelStack.PushMatrix();
-				modelStack.Rotate(rotateAngle, 1, 0, 0);
-				RenderMesh(meshList[GEO_MELEEROBOTRIGHTLOWERARM], true);
-				modelStack.PopMatrix();
-			modelStack.PopMatrix();
-					modelStack.PushMatrix();
-					RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
-					modelStack.PopMatrix();
-						modelStack.PushMatrix();
-						RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
-						modelStack.PopMatrix();
-	modelStack.PopMatrix();
-
-	
-
-	//range robot
-	modelStack.PushMatrix();
-	modelStack.Translate(10, 0, 0);
-	modelStack.Rotate(90, 0, 1, 0);
-	RenderMesh(meshList[GEO_RANGEROBOTBODY], true);
-		modelStack.PushMatrix();
-		RenderMesh(meshList[GEO_RANGEROBOTLEFTARM], true);
-		modelStack.PopMatrix();
-			modelStack.PushMatrix();
-			RenderMesh(meshList[GEO_RANGEROBOTRIGHTARM], true);
-			modelStack.PopMatrix();
-				modelStack.PushMatrix();
-				RenderMesh(meshList[GEO_RANGEROBOTLEFTLEG], true);
-				modelStack.PopMatrix();
-					modelStack.PushMatrix();
-					RenderMesh(meshList[GEO_RANGEROBOTRIGHTLEG], true);
-					modelStack.PopMatrix();
-	modelStack.PopMatrix();
-
-	//mixed robot
-	modelStack.PushMatrix();
-	modelStack.Translate(-10, 0, 0);
-	modelStack.Rotate(-90, 0, 1, 0);
-	RenderMesh(meshList[GEO_MIXEDROBOTBODY], true);
-		modelStack.PushMatrix();
-		RenderMesh(meshList[GEO_MIXEDROBOTLEFTARM], true);
-		modelStack.PopMatrix();
-			modelStack.PushMatrix();
-			RenderMesh(meshList[GEO_MIXEDROBOTRIGHTARM], true);
-			modelStack.PopMatrix();
-				modelStack.PushMatrix();
-				RenderMesh(meshList[GEO_MIXEDROBOTLEFTLEG], true);
-				modelStack.PopMatrix();
-					modelStack.PushMatrix();
-					RenderMesh(meshList[GEO_MIXEDROBOTRIGHTLEG], true);
-					modelStack.PopMatrix();
-	modelStack.PopMatrix();
-
 	////drone
 	//modelStack.PushMatrix();
 	//modelStack.Translate(0, 0, -10);
@@ -1374,7 +1271,11 @@ void SP2_Scene::Render(double dt)
 	//		modelStack.Translate(0, 0, -10);
 	//		modelStack.Translate(0, 0, 10);
 	//		modelStack.Translate(-0.3, 0, 0);
-	//		RenderMesh(meshList[GEO_MELEEROBOTRIGHTARM], true);
+	//		RenderMesh(meshList[GEO_MELEEROBOTRIGHTUPPERARM], true);
+	//			modelStack.PushMatrix();
+	//			modelStack.Rotate(rotateAngle, 1, 0, 0);
+	//			RenderMesh(meshList[GEO_MELEEROBOTRIGHTLOWERARM], true);
+	//			modelStack.PopMatrix();
 	//		modelStack.PopMatrix();
 	//				modelStack.PushMatrix();
 	//				RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
@@ -1383,6 +1284,8 @@ void SP2_Scene::Render(double dt)
 	//					RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
 	//					modelStack.PopMatrix();
 	//modelStack.PopMatrix();
+
+	//
 
 	////range robot
 	//modelStack.PushMatrix();
