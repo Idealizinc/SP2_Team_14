@@ -1111,7 +1111,76 @@ void SP2_Scene::RenderUI()
 		modelStack.PopMatrix();
 	}
 }
+void SP2_Scene::RenderRocks()
+{
+	for (int i = -35; i < 35; i += 10)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(8 * i + 5, -0.7, 4);
+		modelStack.Rotate(-60, 0, 1, 0);
+		modelStack.Scale(2, 1, 2);
+		RenderMesh(meshList[GEO_METEOR], true);
+		modelStack.PopMatrix();
+	}
+	for (int i = -35; i < 40; i += 15)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(20, -0.7, 4 * i + 10);
+		modelStack.Rotate(70, 0, 1, 0);
+		modelStack.Scale(2, 1, 2);
+		RenderMesh(meshList[GEO_METEOR], true);
+		modelStack.PopMatrix();
+	}
+	for (int i = -8; i < 8; i += 4)
+	{
+		for (int j = -30; j < 30; j += 15)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(8 * i + 5, -0.7, 4 * j - 25);
+			modelStack.Rotate(-40, 0, 1, 0);
+			modelStack.Scale(2, 1, 2);
+			RenderMesh(meshList[GEO_METEOR], true);
+			modelStack.PopMatrix();
+		}
+	}
+	for (int i = -4; i < 4; i += 4)
+	{
+		for (int j = -20; j < 30; j += 25)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(8 * i + 5, -0.7, 4 * j);
+			modelStack.Rotate(-20, 0, 1, 0);
+			modelStack.Scale(2, 1, 2);
+			RenderMesh(meshList[GEO_METEOR], true);
+			modelStack.PopMatrix();
+		}
+	}
+	for (int i = -6; i < 6; i += 5)
+	{
+		for (int j = -15; j < 25; j += 15)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(8 * i + 5, -0.7, 6 * j - 25);
+			modelStack.Rotate(10, 0, 1, 0);
+			modelStack.Scale(2, 1, 2);
+			RenderMesh(meshList[GEO_METEOR], true);
+			modelStack.PopMatrix();
+		}
+	}
 
+	for (int i = -2; i < 10; i += 4)
+	{
+		for (int j = -25; j < 25; j += 10)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(5 * i + 35, -0.7, 6 * j - 40);
+			modelStack.Rotate(60, 0, 1, 0);
+			modelStack.Scale(2, 1, 2);
+			RenderMesh(meshList[GEO_METEOR], true);
+			modelStack.PopMatrix();
+		}
+	}
+}
 void SP2_Scene::Render(double dt)
 {
 	// Render VBO here
@@ -1358,11 +1427,7 @@ void SP2_Scene::Render(double dt)
 	//				RenderMesh(meshList[GEO_MIXEDROBOTRIGHTLEG], true);
 	//				modelStack.PopMatrix();
 	//modelStack.PopMatrix();*/
-
-	modelStack.PushMatrix();
-	RenderMesh(meshList[GEO_METEOR], true);
-	modelStack.PopMatrix();
-
+	RenderRocks();
 	modelStack.PushMatrix();
 	modelStack.Translate(17.2, 0.5, -2.15);
 	modelStack.Rotate(90, 0, 1, 0);
