@@ -5,12 +5,18 @@ RayCast::~RayCast()
 
 }
 
-void RayCast::Move()
+void RayCast::CalcIncrement(float val)
 {
-	RayPos.x = RayPos.x + StoredDirVec.x * Speed;
-	RayPos.y = RayPos.y + StoredDirVec.y * Speed;
-	RayPos.z = RayPos.z + StoredDirVec.z * Speed;
+	increment += Speed * val;
+}
 
+Vector3 RayCast::Move(float val)
+{
+	//CalcIncrement(val);
+	RayPos.x += StoredDirVec.x * Speed;
+	RayPos.y += StoredDirVec.y * Speed;
+	RayPos.z += StoredDirVec.z * Speed;
+	return RayPos;
 }
 
 Vector3 RayCast::Position()

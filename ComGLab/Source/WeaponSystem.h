@@ -1,7 +1,7 @@
 #ifndef _WEAPONSYSTEM_H
 #define _WEAPONSYSTEM_H
 
-#include <vector>
+#include <list>
 #include "RayCast.h"
 
 class WeaponSystem
@@ -9,9 +9,7 @@ class WeaponSystem
 public:
 	WeaponSystem(){};
 	~WeaponSystem();
-	static unsigned short BulletCount;
-	void RenderBulletList();
-	std::vector<RayCast> BulletList;
+	std::list<RayCast> BulletList;
 
 };
 

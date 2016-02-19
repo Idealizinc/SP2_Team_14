@@ -228,6 +228,7 @@ public:
 	MS modelStack, viewStack, projectionStack;
 
 	WeaponSystem WepSys;
+	unsigned short MaxBulletCount = 500;
 
 private:
 	unsigned short weaponValue;

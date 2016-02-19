@@ -885,7 +885,11 @@ void SP2_Scene::Update(double dt)
 
 	if (Application::IsKeyPressed(VK_LBUTTON))
 	{
-		WepSys.BulletList.push_back(RayCast(camera.getCameraPosition(), camera.getLookVector(), 1));
+		WepSys.BulletList.push_back(RayCast(camera.getCameraPosition(), camera.getLookVector(), 2));
+	}
+	if (WepSys.BulletList.size() > MaxBulletCount)
+	{
+		WepSys.BulletList.pop_front();
 	}
  
 	framesPerSecond = 1 / dt;
@@ -1335,16 +1339,14 @@ void SP2_Scene::Render(double dt)
 	for (auto i : WepSys.BulletList)
 	{
 		modelStack.PushMatrix();
-		i.Move();
-		Vector3 Pos = i.Position();
+		i.Move(dt);
 		modelStack.Translate(i.Position().x, i.Position().y, i.Position().z);
-		modelStack.Scale(0.005, 0.005, 0.005);
-		RenderMesh(meshList[GEO_SPHERE], false);
+		modelStack.Scale(0.1, 0.1, 0.1);
+		RenderMesh(meshList[GEO_SPHERE], true);
 		modelStack.PopMatrix();
 	}
 
-
-	////drone
+	/*////drone
 	//modelStack.PushMatrix();
 	//modelStack.Translate(0, 0, -10);
 	//RenderMesh(meshList[GEO_DRONEBODY], true);
@@ -1433,7 +1435,7 @@ void SP2_Scene::Render(double dt)
 	//				modelStack.PushMatrix();
 	//				RenderMesh(meshList[GEO_MIXEDROBOTRIGHTLEG], true);
 	//				modelStack.PopMatrix();
-	//modelStack.PopMatrix();
+	//modelStack.PopMatrix();*/
 
 	RenderRocks();
 	modelStack.PushMatrix();
@@ -1480,11 +1482,6 @@ void SP2_Scene::Render(double dt)
 	
 	//DO NOT RENDER ANYTHING UNDER THIS//
 	RenderUI();
-}
-
-void SP2_Scene::WeaponSystem(Vector3 LookVector)
-{
-
 }
 
 void SP2_Scene::Exit()
