@@ -99,7 +99,13 @@ void SP2_Scene::Init()
 	rightgate = 0;
 	armrotate = true;
 	rotateAngle = 0;
-	moveleg = 0;
+	moverobot = 0;
+	moveleftleg = 0;
+	moverightleg = 0;
+	leftleglimit = -0.5;
+	rightleglimit = -0.5;
+	leftleg = true;
+	rightleg = true;
 	WepItf_Choices = Vector3(0, 0, 0);
 
 	// Enable depth Test
@@ -222,7 +228,7 @@ void SP2_Scene::Init()
 	meshList[GEO_COMPUTER]->textureID = LoadTGA("Image//computer.tga");*/
 
 	InitWeaponModels();
-	//InitRobots();
+	InitRobots();
 }
 
 void SP2_Scene::InitWeaponModels()
@@ -699,15 +705,52 @@ void SP2_Scene::RobotMovement(double dt)
 	{
 		armrotate = true;
 	}
-	moveleg += (float)(2 * dt);
+	
+
+	if (rightleg == true)
+	{
+		//leftleg = false;
+		moverightleg += (float)(3 * dt);
+	}
+	else if (rightleg == false)
+	{
+		moverightleg -= (float)(3 * dt);
+	}
+	if (rightleg <= rightleglimit)
+	{
+		rightleg = false;
+	}
+	else if (rightleg >= -rightleglimit + (0.7 - rightleglimit))
+	{
+		rightleg = true;
+	}
+
+	if (leftleg == true)
+	{
+		//rightleg = false;
+		moveleftleg -= (float)(3 * dt);
+	}
+	else if (leftleg == false)
+	{
+		moveleftleg += (float)(3 * dt);
+		
+	}
+	if (leftleg <= leftleglimit)
+	{
+		leftleg = false;
+	}
+	else if (leftleg >= -leftleglimit + (0.7 - leftleglimit))
+	{
+		leftleg = true;
+	}
+	moverobot += (float)(2 * dt);
 }
 void SP2_Scene::Update(double dt)
 {
 	camera.Update(dt);
 	constRotation += (float)(10 * pause * dt);
 	constTranslation += (float)(10 * pause  * dt);
-
-	
+	RobotMovement(dt);
 	//Lerping Rotation
 	if ((rLimiter == true))
 	{
@@ -891,14 +934,14 @@ void SP2_Scene::Update(double dt)
 	{
 		WepSys.BulletList.pop_front();
 	}
- 
+	
 	framesPerSecond = 1 / dt;
 
 	TownLightPosition.y += tweenVal / 15000;
 	light[1].position.Set(TownLightPosition.x, TownLightPosition.y, TownLightPosition.z);
 	RoomLightPosition.y += tweenVal / 150000;
 	light[2].position.Set(RoomLightPosition.x, RoomLightPosition.y, RoomLightPosition.z);
-	RobotMovement(dt);
+	
 }
 
 void SP2_Scene::RenderSkybox(Vector3 Position)
@@ -1124,73 +1167,26 @@ void SP2_Scene::RenderUI()
 }
 void SP2_Scene::RenderRocks()
 {
-	for (int i = -35; i < 35; i += 10)
+	modelStack.PushMatrix();
+	int range = 5;
+	for (int detailLevel = 1; detailLevel <= range; detailLevel++)
 	{
-		modelStack.PushMatrix();
-		modelStack.Translate(8 * i + 5, -0.7, 4);
-		modelStack.Rotate(-60, 0, 1, 0);
-		modelStack.Scale(2, 2, 2);
-		RenderMesh(meshList[GEO_METEOR], true);
-		modelStack.PopMatrix();
-	}
-	for (int i = -35; i < 40; i += 15)
-	{
-		modelStack.PushMatrix();
-		modelStack.Translate(20, -0.7, 4 * i + 10);
-		modelStack.Rotate(70, 0, 1, 0);
-		modelStack.Scale(2, 2, 2);
-		RenderMesh(meshList[GEO_METEOR], true);
-		modelStack.PopMatrix();
-	}
-	for (int i = -8; i < 8; i += 4)
-	{
-		for (int j = -30; j < 30; j += 15)
+		for (int i = 1; i <= 360; i += 60 - range * 5)
 		{
 			modelStack.PushMatrix();
-			modelStack.Translate(8 * i + 5, -0.7, 4 * j - 25);
-			modelStack.Rotate(-40, 0, 1, 0);
-			modelStack.Scale(2, 2, 2);
-			RenderMesh(meshList[GEO_METEOR], true);
-			modelStack.PopMatrix();
-		}
-	}
-	for (int i = -4; i < 4; i += 4)
-	{
-		for (int j = -20; j < 30; j += 25)
-		{
-			modelStack.PushMatrix();
-			modelStack.Translate(8 * i + 5, -0.7, 4 * j);
-			modelStack.Rotate(-20, 0, 1, 0);
-			modelStack.Scale(2, 2, 2);
-			RenderMesh(meshList[GEO_METEOR], true);
-			modelStack.PopMatrix();
-		}
-	}
-	for (int i = -6; i < 6; i += 5)
-	{
-		for (int j = -15; j < 25; j += 15)
-		{
-			modelStack.PushMatrix();
-			modelStack.Translate(8 * i + 5, -0.7, 6 * j - 25);
-			modelStack.Rotate(10, 0, 1, 0);
-			modelStack.Scale(2, 2, 2);
-			RenderMesh(meshList[GEO_METEOR], true);
-			modelStack.PopMatrix();
-		}
-	}
+			modelStack.Translate((detailLevel * 70 + 50) * cos(Math::DegreeToRadian(i + detailLevel * 20)), -5, (detailLevel*  70 + 50) * sin(Math::DegreeToRadian(i + detailLevel * 20)));
+			modelStack.Rotate(5 * i, 0, 1, 0);
 
-	for (int i = -2; i < 10; i += 4)
-	{
-		for (int j = -25; j < 25; j += 10)
-		{
 			modelStack.PushMatrix();
-			modelStack.Translate(5 * i + 35, -0.7, 6 * j - 40);
-			modelStack.Rotate(60, 0, 1, 0);
-			modelStack.Scale(2, 2, 2);
+			modelStack.Rotate(20 + 5 * (i + i * detailLevel), 1, 1, 1);
+			modelStack.Scale(15, 10, 15);
 			RenderMesh(meshList[GEO_METEOR], true);
+			modelStack.PopMatrix();
+
 			modelStack.PopMatrix();
 		}
 	}
+	modelStack.PopMatrix();
 }
 void SP2_Scene::Render(double dt)
 {
@@ -1367,7 +1363,7 @@ void SP2_Scene::Render(double dt)
 	////melee robot
 	//modelStack.PushMatrix();
 	//modelStack.Translate(0, 0, 10);
-	//modelStack.Translate(0, 0, moveleg);
+	//modelStack.Translate(0, 0, -moverobot);
 	//RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
 	//	modelStack.PushMatrix();
 	//	modelStack.Rotate(rotateAngle, 1, 0, 0);
@@ -1392,9 +1388,13 @@ void SP2_Scene::Render(double dt)
 	//			modelStack.PopMatrix();
 	//		modelStack.PopMatrix();
 	//				modelStack.PushMatrix();
+	//				modelStack.Rotate(moveleftleg, 1, 0, 0);
+	//				modelStack.Translate(0, 0, -10);
+	//				modelStack.Translate(0, 0, 10);
 	//				RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
 	//				modelStack.PopMatrix();
 	//					modelStack.PushMatrix();
+	//					modelStack.Rotate(moverightleg, 1, 0, 0);
 	//					RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
 	//					modelStack.PopMatrix();
 	//modelStack.PopMatrix();
@@ -1479,7 +1479,8 @@ void SP2_Scene::Render(double dt)
 		RenderGate(true);
 		modelStack.PopMatrix();
 	modelStack.PopMatrix();
-	
+
+
 	//DO NOT RENDER ANYTHING UNDER THIS//
 	RenderUI();
 }
