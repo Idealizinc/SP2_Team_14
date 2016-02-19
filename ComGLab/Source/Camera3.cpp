@@ -228,7 +228,7 @@ void Camera3::initBoundVec()
 	eastgate2.set();
 	westgate2.set();
 
-	corebase.set(-1.3, 1.1, -1.4, 2.7);
+	corebase.set(-1.5, 1.5, -1.5, 1.5, -5 , 5);
 
 	//WorldBot.set(-150, 150, -150, 150, -5, 0);
 	//WorldTop.set(-150, 150, -150, 150, 30, 40);

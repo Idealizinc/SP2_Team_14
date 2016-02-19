@@ -294,6 +294,25 @@ private:
 	// Base Stuff
 	Vector3 basePosition;
 
+	// Base
+	GLuint Normal_Sniper = LoadTGA("Image//Tex_Sniper.tga");
+	GLuint Normal_Rifle = LoadTGA("Image//Tex_Rifle.tga");
+	GLuint Normal_Shotgun = LoadTGA("Image//Tex_Shotgun.tga");
+
+	// Damage
+	GLuint Damage_Sniper = LoadTGA("Image//Tex_SniperDamage.tga");
+	GLuint Damage_Rifle = LoadTGA("Image//Tex_RifleDamage.tga");
+	GLuint Damage_Shotgun = LoadTGA("Image//Tex_ShotgunDamage.tga");
+
+	// Ammo
+	GLuint Capacity_Sniper = LoadTGA("Image//Tex_SniperAmmo.tga");
+	GLuint Capacity_Rifle = LoadTGA("Image//Tex_RifleAmmo.tga");
+	GLuint Capacity_Shotgun = LoadTGA("Image//Tex_ShotgunAmmo.tga");
+
+	// Fast
+	GLuint Fast_Sniper = LoadTGA("Image//Tex_SniperFast.tga");
+	GLuint Fast_Rifle = LoadTGA("Image//Tex_RifleFast.tga");
+	GLuint Fast_Shotgun = LoadTGA("Image//Tex_ShotgunFast.tga");
 
 };
 
