@@ -205,6 +205,7 @@ public:
 	float upperarmrotatelimit;
 	float lowerarmrotatelimit;
 	bool armrotate;
+	float moveleg;
 	bool rLimiter;
 	bool toggleLimiters;
 	bool limitersON;
@@ -259,6 +260,7 @@ private:
 	void initBounds();
 	void RenderGate(bool render = false);
 	void RenderUI();
+	void RobotMovement(double dt);
 
 	//Interaction Values
 	bool buttonPress;

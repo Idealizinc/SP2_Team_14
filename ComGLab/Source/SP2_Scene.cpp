@@ -99,6 +99,7 @@ void SP2_Scene::Init()
 	rightgate = 0;
 	armrotate = true;
 	rotateAngle = 0;
+	moveleg = 0;
 	WepItf_Choices = Vector3(0, 0, 0);
 
 	// Enable depth Test
@@ -680,16 +681,11 @@ void SP2_Scene::GameState()
 		}
 	}
 }
-
-void SP2_Scene::Update(double dt)
+void SP2_Scene::RobotMovement(double dt)
 {
-	camera.Update(dt);
-	constRotation += (float)(10 * pause * dt);
-	constTranslation += (float)(10 * pause  * dt);
-
 	if (armrotate == true)
 	{
-		rotateAngle -= (float)(3* dt);
+		rotateAngle -= (float)(3 * dt);
 	}
 	else if (armrotate == false)
 	{
@@ -703,6 +699,15 @@ void SP2_Scene::Update(double dt)
 	{
 		armrotate = true;
 	}
+	moveleg += (float)(2 * dt);
+}
+void SP2_Scene::Update(double dt)
+{
+	camera.Update(dt);
+	constRotation += (float)(10 * pause * dt);
+	constTranslation += (float)(10 * pause  * dt);
+
+	
 	//Lerping Rotation
 	if ((rLimiter == true))
 	{
@@ -889,6 +894,7 @@ void SP2_Scene::Update(double dt)
 	light[1].position.Set(TownLightPosition.x, TownLightPosition.y, TownLightPosition.z);
 	RoomLightPosition.y += tweenVal / 150000;
 	light[2].position.Set(RoomLightPosition.x, RoomLightPosition.y, RoomLightPosition.z);
+	RobotMovement(dt);
 }
 
 void SP2_Scene::RenderSkybox(Vector3 Position)
@@ -1119,7 +1125,7 @@ void SP2_Scene::RenderRocks()
 		modelStack.PushMatrix();
 		modelStack.Translate(8 * i + 5, -0.7, 4);
 		modelStack.Rotate(-60, 0, 1, 0);
-		modelStack.Scale(2, 1, 2);
+		modelStack.Scale(2, 2, 2);
 		RenderMesh(meshList[GEO_METEOR], true);
 		modelStack.PopMatrix();
 	}
@@ -1128,7 +1134,7 @@ void SP2_Scene::RenderRocks()
 		modelStack.PushMatrix();
 		modelStack.Translate(20, -0.7, 4 * i + 10);
 		modelStack.Rotate(70, 0, 1, 0);
-		modelStack.Scale(2, 1, 2);
+		modelStack.Scale(2, 2, 2);
 		RenderMesh(meshList[GEO_METEOR], true);
 		modelStack.PopMatrix();
 	}
@@ -1139,7 +1145,7 @@ void SP2_Scene::RenderRocks()
 			modelStack.PushMatrix();
 			modelStack.Translate(8 * i + 5, -0.7, 4 * j - 25);
 			modelStack.Rotate(-40, 0, 1, 0);
-			modelStack.Scale(2, 1, 2);
+			modelStack.Scale(2, 2, 2);
 			RenderMesh(meshList[GEO_METEOR], true);
 			modelStack.PopMatrix();
 		}
@@ -1151,7 +1157,7 @@ void SP2_Scene::RenderRocks()
 			modelStack.PushMatrix();
 			modelStack.Translate(8 * i + 5, -0.7, 4 * j);
 			modelStack.Rotate(-20, 0, 1, 0);
-			modelStack.Scale(2, 1, 2);
+			modelStack.Scale(2, 2, 2);
 			RenderMesh(meshList[GEO_METEOR], true);
 			modelStack.PopMatrix();
 		}
@@ -1163,7 +1169,7 @@ void SP2_Scene::RenderRocks()
 			modelStack.PushMatrix();
 			modelStack.Translate(8 * i + 5, -0.7, 6 * j - 25);
 			modelStack.Rotate(10, 0, 1, 0);
-			modelStack.Scale(2, 1, 2);
+			modelStack.Scale(2, 2, 2);
 			RenderMesh(meshList[GEO_METEOR], true);
 			modelStack.PopMatrix();
 		}
@@ -1176,7 +1182,7 @@ void SP2_Scene::RenderRocks()
 			modelStack.PushMatrix();
 			modelStack.Translate(5 * i + 35, -0.7, 6 * j - 40);
 			modelStack.Rotate(60, 0, 1, 0);
-			modelStack.Scale(2, 1, 2);
+			modelStack.Scale(2, 2, 2);
 			RenderMesh(meshList[GEO_METEOR], true);
 			modelStack.PopMatrix();
 		}
@@ -1356,41 +1362,40 @@ void SP2_Scene::Render(double dt)
 	//		modelStack.PopMatrix();
 	//modelStack.PopMatrix();
 
-	//melee robot
-	/*modelStack.PushMatrix();
-	modelStack.Translate(0, 0, 10);
-	RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
-		modelStack.PushMatrix();
-		modelStack.Rotate(rotateAngle, 1, 0, 0);
-		modelStack.Translate(0, 0, -10);
-		modelStack.Translate(0, 0, 10);
-		modelStack.Translate(0.3, 0, 0);
-		RenderMesh(meshList[GEO_MELEEROBOTLEFTUPPERARM], true);
-			modelStack.PushMatrix();
-			modelStack.Rotate(rotateAngle, 1, 0, 0);
-			RenderMesh(meshList[GEO_MELEEROBOTLEFTLOWERARM], true);
-			modelStack.PopMatrix();
-		modelStack.PopMatrix();
-			modelStack.PushMatrix();
-			modelStack.Rotate(rotateAngle, 1, 0, 0);
-			modelStack.Translate(0, 0, -10);
-			modelStack.Translate(0, 0, 10);
-			modelStack.Translate(-0.3, 0, 0);
-			RenderMesh(meshList[GEO_MELEEROBOTRIGHTUPPERARM], true);
-				modelStack.PushMatrix();
-				modelStack.Rotate(rotateAngle, 1, 0, 0);
-				RenderMesh(meshList[GEO_MELEEROBOTRIGHTLOWERARM], true);
-				modelStack.PopMatrix();
-			modelStack.PopMatrix();
-					modelStack.PushMatrix();
-					RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
-					modelStack.PopMatrix();
-						modelStack.PushMatrix();
-						RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
-						modelStack.PopMatrix();
-	modelStack.PopMatrix();*/
-
-	//
+	////melee robot
+	//modelStack.PushMatrix();
+	//modelStack.Translate(0, 0, 10);
+	//modelStack.Translate(0, 0, moveleg);
+	//RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
+	//	modelStack.PushMatrix();
+	//	modelStack.Rotate(rotateAngle, 1, 0, 0);
+	//	modelStack.Translate(0, 0, -10);
+	//	modelStack.Translate(0, 0, 10);
+	//	modelStack.Translate(0.3, 0, 0);
+	//	RenderMesh(meshList[GEO_MELEEROBOTLEFTUPPERARM], true);
+	//		modelStack.PushMatrix();
+	//		modelStack.Rotate(rotateAngle, 1, 0, 0);
+	//		RenderMesh(meshList[GEO_MELEEROBOTLEFTLOWERARM], true);
+	//		modelStack.PopMatrix();
+	//	modelStack.PopMatrix();
+	//		modelStack.PushMatrix();
+	//		modelStack.Rotate(rotateAngle, 1, 0, 0);
+	//		modelStack.Translate(0, 0, -10);
+	//		modelStack.Translate(0, 0, 10);
+	//		modelStack.Translate(-0.3, 0, 0);
+	//		RenderMesh(meshList[GEO_MELEEROBOTRIGHTUPPERARM], true);
+	//			modelStack.PushMatrix();
+	//			modelStack.Rotate(rotateAngle, 1, 0, 0);
+	//			RenderMesh(meshList[GEO_MELEEROBOTRIGHTLOWERARM], true);
+	//			modelStack.PopMatrix();
+	//		modelStack.PopMatrix();
+	//				modelStack.PushMatrix();
+	//				RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
+	//				modelStack.PopMatrix();
+	//					modelStack.PushMatrix();
+	//					RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
+	//					modelStack.PopMatrix();
+	//modelStack.PopMatrix();
 
 	////range robot
 	//modelStack.PushMatrix();
@@ -1429,6 +1434,7 @@ void SP2_Scene::Render(double dt)
 	//				RenderMesh(meshList[GEO_MIXEDROBOTRIGHTLEG], true);
 	//				modelStack.PopMatrix();
 	//modelStack.PopMatrix();
+
 	RenderRocks();
 	modelStack.PushMatrix();
 	modelStack.Translate(17.2, 0.5, -2.15);
