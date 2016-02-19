@@ -201,11 +201,23 @@ public:
 	float rotationalLimit;
 	float translationLimit;
 	float scalingLimit;
+
+	//robot movement
+	float moverobot;
 	float rotateAngle;
 	float upperarmrotatelimit;
 	float lowerarmrotatelimit;
 	bool armrotate;
-	float moveleg;
+
+	float leftleglimit;
+	float rightleglimit;
+	float moveleftleg;
+	float moverightleg;
+	bool leftleg;
+	bool rightleg;
+
+	
+
 	bool rLimiter;
 	bool toggleLimiters;
 	bool limitersON;
