@@ -10,11 +10,13 @@ void Boundary::set(float xMin, float xMax, float zMin, float zMax, float yMin, f
 	this->yMax = yMax;
 }
 
-bool Boundary::BoundaryCheck(const float& playerCoordX, const float& playerCoordZ) {
+bool Boundary::BoundaryCheck(const float& playerCoordX, const float& playerCoordZ, const float& playerCoordY) {
 	if (xMax > playerCoordX &&
 		xMin < playerCoordX &&
 		zMax > playerCoordZ &&
-		zMin < playerCoordZ)
+		zMin < playerCoordZ &&
+		yMax > playerCoordY &&
+		yMin < playerCoordY)
 	{
 		return false;
 	}

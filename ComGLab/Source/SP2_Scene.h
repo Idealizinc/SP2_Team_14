@@ -11,6 +11,8 @@
 #include <iomanip>
 #include <string>
 #include <vector>
+#include "WeaponSystem.h"
+
 using std::vector;
 
 #include <sstream>
@@ -211,7 +213,7 @@ public:
 	int weaponSelect;
 	bool sniper, rifle;
 	unsigned int robotCount;
-	unsigned int pause;
+	//unsigned int pause;
 
 	unsigned short skyboxID = 0;
 
@@ -222,6 +224,8 @@ public:
 	Camera3 camera;
 
 	MS modelStack, viewStack, projectionStack;
+
+	WeaponSystem WepSys;
 
 private:
 	unsigned short weaponValue;
@@ -314,6 +318,9 @@ private:
 	GLuint Fast_Rifle = LoadTGA("Image//Tex_RifleFast.tga");
 	GLuint Fast_Shotgun = LoadTGA("Image//Tex_ShotgunFast.tga");
 
+	//Weapon System
+
+	void WeaponSystem(Vector3 LookVector);
 };
 
 
