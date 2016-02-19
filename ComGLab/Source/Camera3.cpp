@@ -163,6 +163,7 @@ void Camera3::cameraMovement2(double dt)
 	float walkingX = 0;
 	float walkingZ = 0;
 	float walkingY = 0;
+	float gravity = dt * 10;
 	if (Application::IsKeyPressed(VK_LSHIFT) || Application::IsKeyPressed(VK_RSHIFT))
 	{
 		walkingSpeed = 0.5;
@@ -218,9 +219,25 @@ void Camera3::cameraMovement2(double dt)
 		&& Floor2BackLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2BackRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
 		&& Floor2FrontLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2FrontRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
 		&& Floor2WestLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2WestRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
-		&& Floor2EastLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2EastRight.BoundaryCheck(position.x, position.z + walkingZ, position.y))
+		&& Floor2EastLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2EastRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+		&& Floor2Top.BoundaryCheck(walkingX, position.z + walkingZ, position.y) && Floor2Bot.BoundaryCheck(walkingX, position.z + walkingZ, position.y))
 	{
 		position.z += walkingZ;
+	}
+	if (gravity != 0 && northwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && northwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+		&& westwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && westwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+		&& eastwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && eastwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+		&& southwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && southwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && corebase.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+		&& WorldBack.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldFront.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+		&& WorldLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+		&& WorldTop.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldBot.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+		&& Floor2BackLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2BackRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+		&& Floor2FrontLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2FrontRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+		&& Floor2WestLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2WestRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+		&& Floor2EastLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2EastRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+		&& Floor2Top.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2Bot.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity))
+	{
+		position.y -= gravity;
 	}
 	
 	//Teleporter
@@ -230,7 +247,7 @@ void Camera3::cameraMovement2(double dt)
 		|| (teleCheck == true && TeleporterF1SE.BoundaryCheck(position.x, position.z, position.y))) && Application::IsKeyPressed('E'))
 	{
 		position.x = 5;
-		position.y = 15;
+		position.y = 16;
 		position.z = 3;
 	}
 }
