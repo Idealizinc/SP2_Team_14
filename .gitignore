@@ -10,6 +10,8 @@ ComGLab/Debug/vc120.idb
 ComGLab/Debug/Mains.tlog/CL.read.1.tlog
 ComGLab/ComGLab.vcxproj
 ComGLab/ComGLab.vcxproj.filters
+<<<<<<< HEAD
+=======
 ComGLab/Debug/Application.obj
 ComGLab/Debug/Boundary.obj
 ComGLab/Debug/Camera.obj
@@ -54,6 +56,7 @@ ComGLab/Release/shader.obj
 ComGLab/Release/vc120.pdb
 ComG_Framework.v12.suo
 Common/Debug/Common.log
+>>>>>>> 27415f0521481099d688cd404b549838e5fa54e9
 Common/Debug/Common.tlog/CL.read.1.tlog
 Common/Debug/Common.tlog/CL.write.1.tlog
 Common/Debug/Common.tlog/Common.lastbuildstate
@@ -61,6 +64,9 @@ Common/Debug/Common.tlog/Lib-link.read.1.tlog
 Common/Debug/Common.tlog/Lib-link.write.1.tlog
 Common/Debug/Common.tlog/cl.command.1.tlog
 Common/Debug/Common.tlog/lib.command.1.tlog
+<<<<<<< HEAD
+Common/Debug/vc120.idb
+=======
 Common/Debug/MatrixStack.obj
 Common/Debug/Mtx44.obj
 Common/Debug/Vector3.obj
@@ -80,3 +86,4 @@ Debug/Mains.pdb
 Release/Common.lib
 Release/Mains.exe
 Release/Mains.pdb
+>>>>>>> 27415f0521481099d688cd404b549838e5fa54e9

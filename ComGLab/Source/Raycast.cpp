@@ -5,9 +5,12 @@ RayCast::~RayCast()
 
 }
 
-void RayCast::Move(float dt)
+void RayCast::Move()
 {
-	RayPos += StoredDirVec * dt * Speed;
+	RayPos.x = RayPos.x + StoredDirVec.x * Speed;
+	RayPos.y = RayPos.y + StoredDirVec.y * Speed;
+	RayPos.z = RayPos.z + StoredDirVec.z * Speed;
+
 }
 
 Vector3 RayCast::Position()

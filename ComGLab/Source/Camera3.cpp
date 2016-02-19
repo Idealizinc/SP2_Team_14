@@ -42,9 +42,7 @@ void Camera3::Update(double dt)
 	rotateCamera(dt);
 
 	if (!TeleporterF1NW.BoundaryCheck(position.x, position.z, position.y) || !TeleporterF1NE.BoundaryCheck(position.x, position.z, position.y)
-		|| !TeleporterF1SW.BoundaryCheck(position.x, position.z, position.y) || !TeleporterF1SE.BoundaryCheck(position.x, position.z, position.y)
-		|| !TeleporterF2NW.BoundaryCheck(position.x, position.z, position.y) || !TeleporterF2NE.BoundaryCheck(position.x, position.z, position.y)
-		|| !TeleporterF2SW.BoundaryCheck(position.x, position.z, position.y) || !TeleporterF2SE.BoundaryCheck(position.x, position.z, position.y))
+		|| !TeleporterF1SW.BoundaryCheck(position.x, position.z, position.y) || !TeleporterF1SE.BoundaryCheck(position.x, position.z, position.y))
 	{
 		teleCheck = true;
 	}
@@ -76,7 +74,7 @@ void Camera3::rotateCamera(double dt)
 	target = Vector3(sin(Math::DegreeToRadian(CameraYrotation)) * cos(Math::DegreeToRadian(CameraXrotation)) + position.x,
 		-sin(Math::DegreeToRadian(CameraXrotation)) + position.y,
 		cos(Math::DegreeToRadian(CameraYrotation)) * cos(Math::DegreeToRadian(CameraXrotation)) + position.z);
-	Vector3 view = (target - position).Normalized();
+	view = (target - position).Normalized();
 	Vector3 right = view.Cross(defaultUp);
 	up = right.Cross(view);
 }
@@ -142,6 +140,11 @@ void Camera3::cameraMovement(double dt)
 	}
 }
 
+Vector3 Camera3::getLookVector()
+{
+	return view;
+}
+
 Vector3 Camera3::getCameraPosition()
 {
 	return position;
@@ -197,8 +200,10 @@ void Camera3::cameraMovement2(double dt)
 		&& WorldBack.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldFront.BoundaryCheck(walkingX + position.x, position.z, position.y)
 		&& WorldLeft.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldRight.BoundaryCheck(walkingX + position.x, position.z, position.y)
 		&& WorldTop.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldBot.BoundaryCheck(walkingX + position.x, position.z, position.y)
-		&& Floor2Back.BoundaryCheck(walkingX + position.x, position.z, position.y) && Floor2Front.BoundaryCheck(walkingX + position.x, position.z, position.y)
-		&& Floor2Left.BoundaryCheck(walkingX + position.x, position.z, position.y) && Floor2Right.BoundaryCheck(walkingX + position.x, position.z, position.y)
+		&& Floor2BackLeft.BoundaryCheck(walkingX + position.x, position.z, position.y) && Floor2BackRight.BoundaryCheck(walkingX + position.x, position.z, position.y)
+		&& Floor2FrontLeft.BoundaryCheck(walkingX + position.x, position.z, position.y) && Floor2FrontRight.BoundaryCheck(walkingX + position.x, position.z, position.y)
+		&& Floor2WestLeft.BoundaryCheck(walkingX + position.x, position.z, position.y) && Floor2WestRight.BoundaryCheck(walkingX + position.x, position.z, position.y)
+		&& Floor2EastLeft.BoundaryCheck(walkingX + position.x, position.z, position.y) && Floor2EastRight.BoundaryCheck(walkingX + position.x, position.z, position.y)
 		&& Floor2Top.BoundaryCheck(walkingX + position.x, position.z, position.y) && Floor2Bot.BoundaryCheck(walkingX + position.x, position.z, position.y))
 	{
 		position.x += walkingX;
@@ -210,9 +215,10 @@ void Camera3::cameraMovement2(double dt)
 		&& WorldBack.BoundaryCheck(position.x, position.z + walkingZ, position.y) && WorldFront.BoundaryCheck(position.x, position.z + walkingZ, position.y)
 		&& WorldLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && WorldRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
 		&& WorldTop.BoundaryCheck(position.x, position.z + walkingZ, position.y) && WorldBot.BoundaryCheck(position.x, position.z + walkingZ, position.y)
-		&& Floor2Back.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2Front.BoundaryCheck(position.x, position.z + walkingZ, position.y)
-		&& Floor2Left.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2Right.BoundaryCheck(position.x, position.z + walkingZ, position.y)
-		&& Floor2Top.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2Bot.BoundaryCheck(position.x, position.z + walkingZ, position.y))
+		&& Floor2BackLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2BackRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+		&& Floor2FrontLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2FrontRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+		&& Floor2WestLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2WestRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+		&& Floor2EastLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2EastRight.BoundaryCheck(position.x, position.z + walkingZ, position.y))
 	{
 		position.z += walkingZ;
 	}
@@ -227,29 +233,20 @@ void Camera3::cameraMovement2(double dt)
 		position.y = 15;
 		position.z = 3;
 	}
-	/*if (teleCheck == true && TeleporterF2NW.BoundaryCheck(position.x, position.z, position.y) && Application::IsKeyPressed('E')
-		|| teleCheck == true && TeleporterF2NE.BoundaryCheck(position.x, position.z, position.y) && Application::IsKeyPressed('E')
-		|| teleCheck == true && TeleporterF2SW.BoundaryCheck(position.x, position.z, position.y) && Application::IsKeyPressed('E')
-		|| teleCheck == true && TeleporterF2SE.BoundaryCheck(position.x, position.z, position.y) && Application::IsKeyPressed('E'))
-	{
-		position.x = 13;
-		position.y = 3;
-		position.z = 13;
-	}*/
 }
 
 void Camera3::initBoundVec()
 {	
 	/*min =  trans - scale/2 ;
 	max =  trans + scale/2;*/
-	northwall1.set(15.0,18.8,4.6,18.0);
-	southwall1.set(-18.3,-16.1, -18.0,-4.5);
-	eastwall1.set(-17.9,-4.6,16.4,19.0);
-	westwall1.set(4.5,18.1,-19.3, -16.1);
-	northwall2.set(15.6, 18.8, -18.0,-4.6);
-	southwall2.set(-18.3,-15.9,4.6,18.0);
-	eastwall2.set(4.6,18.0,15.3,19.0);
-	westwall2.set(-18.0,-4.6,-19.3,-14.8);
+	northwall1.set(15.0, 18.8, 4.6, 18.0, -5, 10);
+	southwall1.set(-18.3, -16.1, -18.0, -4.5, -5, 10);
+	eastwall1.set(-17.9, -4.6, 16.4, 19.0, -5, 10);
+	westwall1.set(4.5, 18.1, -19.3, -16.1, -5, 10);
+	northwall2.set(15.6, 18.8, -18.0, -4.6, -5, 10);
+	southwall2.set(-18.3, -15.9, 4.6, 18.0, -5, 10);
+	eastwall2.set(4.6, 18.0, 15.3, 19.0, -5, 10);
+	westwall2.set(-18.0, -4.6, -19.3, -14.8, -5, 10);
 
 	northgate1.set();
 	southgate1.set();
@@ -260,30 +257,29 @@ void Camera3::initBoundVec()
 	eastgate2.set();
 	westgate2.set();
 
-	corebase.set(-1.5, 1.5, -1.5, 1.5, -5 , 5);
+	corebase.set(-1.5, 1.5, -1.5, 1.5, -5 , 10);
 
-	//WorldBot.set(-150, 150, -150, 150, -5, 0);
-	//WorldTop.set(-150, 150, -150, 150, 30, 40);
+	WorldBot.set(-150, 150, -150, 150, -5, 0);
+	WorldTop.set(-150, 150, -150, 150, 30, 40);
 	WorldFront.set(-150, 150, 150, 160, -5, 30);
 	WorldBack.set(-150, 150, -160, -150, -5, 30);
 	WorldLeft.set(150, 160, -150, 150, -5, 30);
 	WorldRight.set(-160, -150, -150, 150, -5, 30);
-	/*Floor2Left.set(11, 13, -17, 17, 10, 17);
-	Floor2Right.set(-13, 11, -17, 17, 10, 17);
-	Floor2Front.set(-11, 11, 15, 17, 10, 17);
-	Floor2Back.set(-11, 11, -17, -15, 10, 17);
-	Floor2Top.set(-11, 11, -17, 17, 15, 17);
-	Floor2Bot.set(-11, 11, -17, 17, 8, 10);*/
+	Floor2WestLeft.set(12, 14, -14, -3, 10, 23);
+	Floor2WestRight.set(12, 14, 3, 14, 10, 23);
+	Floor2EastLeft.set(-14, -12, -14, -3, 10, 23);
+	Floor2EastRight.set(-14, -12, 3, 14, 10, 23);
+	Floor2FrontLeft.set(3, 12, 11.5, 14, 10, 23);
+	Floor2FrontRight.set(-12, -3, 11.5, 14, 10, 23);
+	Floor2BackLeft.set(3, 12, -14, -11.5, 10, 23);
+	Floor2BackRight.set(-12, -3, -14, -11.5, 10, 23);
+	Floor2Top.set(-14, 14, -14, 14, 20, 23);
+	Floor2Bot.set(-18, 18, -18, 18, 8, 10);
 
-	TeleporterF1NW.set(10, 17, 9, 17, -5, 5);
-	TeleporterF1NE.set(-17, -10, 9, 17, -5, 5);
-	TeleporterF1SW.set(10, 17, -17, -9, -5, 5);
-	TeleporterF1SE.set(-17, -10, -17, -9, -5, 5);
-	TeleporterF2NW.set(7, 13, 7, 13, 8, 12);
-	TeleporterF2NE.set(-13, -7, 7, 13, 8, 12);
-	TeleporterF2SW.set(7, 13, -13, -7, 8, 12);
-	TeleporterF2SE.set(-13, -7, -13, -7, 8, 12);
-
+	TeleporterF1NW.set(10, 17, 9, 17, -5, 10);
+	TeleporterF1NE.set(-17, -10, 9, 17, -5, 10);
+	TeleporterF1SW.set(10, 17, -17, -9, -5, 10);
+	TeleporterF1SE.set(-17, -10, -17, -9, -5, 10);
 }
 
 

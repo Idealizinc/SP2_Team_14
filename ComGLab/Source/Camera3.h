@@ -23,11 +23,14 @@ public:
     virtual void Reset();
 
 	Vector3 getCameraPosition();
+	Vector3 getLookVector();
 
     bool isOutofBounds();
 	bool teleCheck;
 	
 private:
+	Vector3 view;
+
     void rotateCamera(double dt);
     float CameraXrotation;
     float CameraYrotation, maxCameraXrotation, minCameraXrotation;
@@ -79,19 +82,19 @@ private:
 
 	Boundary Floor2Bot;
 	Boundary Floor2Top;
-	Boundary Floor2Left;
-	Boundary Floor2Right;
-	Boundary Floor2Front;
-	Boundary Floor2Back;
+	Boundary Floor2WestLeft;
+	Boundary Floor2WestRight;
+	Boundary Floor2EastLeft;
+	Boundary Floor2EastRight;
+	Boundary Floor2FrontLeft;
+	Boundary Floor2FrontRight;
+	Boundary Floor2BackLeft;
+	Boundary Floor2BackRight;
 	//Interactive
 	Boundary TeleporterF1NW;
 	Boundary TeleporterF1NE;
 	Boundary TeleporterF1SW;
 	Boundary TeleporterF1SE;
-	Boundary TeleporterF2NW;
-	Boundary TeleporterF2NE;
-	Boundary TeleporterF2SW;
-	Boundary TeleporterF2SE;
 };
 
 #endif

@@ -9,7 +9,7 @@ class RayCast
 public:
 	RayCast(Vector3 Position, Vector3 DVector, float velocity, Boundary BBox = 0) : RayPos(Position), StoredDirVec(DVector), Speed(velocity), BoundingBox(BBox){ };
 	~RayCast();
-	void Move(float dt);
+	void Move();
 	Vector3 Position();
 	void RenderRay();
 
