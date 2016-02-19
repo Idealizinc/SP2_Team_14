@@ -228,20 +228,20 @@ void Camera3::initBoundVec()
 	eastgate2.set();
 	westgate2.set();
 
-	corebase.set(-1.3, 1.1, -1.4, 3.1);
+	corebase.set(-1.3, 1.1, -1.4, 2.7);
 
-	WorldBot.set(-150, 150, -150, 150, -5, 0);
-	WorldTop.set(-150, 150, -150, 150, 30, 40);
+	//WorldBot.set(-150, 150, -150, 150, -5, 0);
+	//WorldTop.set(-150, 150, -150, 150, 30, 40);
 	WorldFront.set(-150, 150, 150, 160, -5, 30);
 	WorldBack.set(-150, 150, -160, -150, -5, 30);
 	WorldLeft.set(150, 160, -150, 150, -5, 30);
 	WorldRight.set(-160, -150, -150, 150, -5, 30);
-	Floor2Left.set(11, 13, -17, 17, 10, 17);
+	/*Floor2Left.set(11, 13, -17, 17, 10, 17);
 	Floor2Right.set(-13, 11, -17, 17, 10, 17);
 	Floor2Front.set(-11, 11, 15, 17, 10, 17);
 	Floor2Back.set(-11, 11, -17, -15, 10, 17);
 	Floor2Top.set(-11, 11, -17, 17, 15, 17);
-	Floor2Bot.set(-11, 11, -17, 17, 8, 10);
+	Floor2Bot.set(-11, 11, -17, 17, 8, 10);*/
 }
 
 
