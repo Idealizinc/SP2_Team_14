@@ -614,7 +614,7 @@ void SP2_Scene::GameState()
 		}
 		else if (basehp == 0)
 		{
-			//go back to start screen
+			wave = 1;
 		}
 	}
 	if (wave == 2)
@@ -626,7 +626,7 @@ void SP2_Scene::GameState()
 		}
 		else if (basehp == 0)
 		{
-			//go back to start screen
+			wave = 2;
 		}
 	}
 	if (wave == 3)
@@ -638,7 +638,7 @@ void SP2_Scene::GameState()
 		}
 		else if (basehp == 0)
 		{
-			//go back to start screen
+			wave = 3;
 		}
 	}
 	if (wave == 4)
@@ -650,7 +650,7 @@ void SP2_Scene::GameState()
 		}
 		else if (basehp == 0)
 		{
-			//go back to start screen
+			wave = 4;
 		}
 	}
 	if (wave == 5)
@@ -662,7 +662,7 @@ void SP2_Scene::GameState()
 		}
 		else if (basehp == 0)
 		{
-			//go back to start screen
+			wave = 5;
 		}
 	}
 	if (wave == 6)
@@ -673,10 +673,10 @@ void SP2_Scene::GameState()
 			RenderTextOnScreen(meshList[GEO_TEXT], "Boss Stage clear", Color(1, 0, 0), 3, 20, 15);
 			//game won, go back to start screen
 		}
-		//else if (hp == 0)
-		//{
-		//	//go back to start screen
-		//}
+		else if (playerhp == 0)
+		{
+			wave = 6;
+		}
 	}
 }
 
@@ -1336,7 +1336,7 @@ void SP2_Scene::Render(double dt)
 	}
 
 
-	/*////drone
+	////drone
 	//modelStack.PushMatrix();
 	//modelStack.Translate(0, 0, -10);
 	//RenderMesh(meshList[GEO_DRONEBODY], true);
@@ -1354,39 +1354,39 @@ void SP2_Scene::Render(double dt)
 	//		modelStack.PopMatrix();
 	//modelStack.PopMatrix();
 
-	////melee robot
-	//modelStack.PushMatrix();
-	//modelStack.Translate(0, 0, 10);
-	//RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
-	//	modelStack.PushMatrix();
-	//	modelStack.Rotate(rotateAngle, 1, 0, 0);
-	//	modelStack.Translate(0, 0, -10);
-	//	modelStack.Translate(0, 0, 10);
-	//	modelStack.Translate(0.3, 0, 0);
-	//	RenderMesh(meshList[GEO_MELEEROBOTLEFTUPPERARM], true);
-	//		modelStack.PushMatrix();
-	//		modelStack.Rotate(rotateAngle, 1, 0, 0);
-	//		RenderMesh(meshList[GEO_MELEEROBOTLEFTLOWERARM], true);
-	//		modelStack.PopMatrix();
-	//	modelStack.PopMatrix();
-	//		modelStack.PushMatrix();
-	//		modelStack.Rotate(rotateAngle, 1, 0, 0);
-	//		modelStack.Translate(0, 0, -10);
-	//		modelStack.Translate(0, 0, 10);
-	//		modelStack.Translate(-0.3, 0, 0);
-	//		RenderMesh(meshList[GEO_MELEEROBOTRIGHTUPPERARM], true);
-	//			modelStack.PushMatrix();
-	//			modelStack.Rotate(rotateAngle, 1, 0, 0);
-	//			RenderMesh(meshList[GEO_MELEEROBOTRIGHTLOWERARM], true);
-	//			modelStack.PopMatrix();
-	//		modelStack.PopMatrix();
-	//				modelStack.PushMatrix();
-	//				RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
-	//				modelStack.PopMatrix();
-	//					modelStack.PushMatrix();
-	//					RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
-	//					modelStack.PopMatrix();
-	//modelStack.PopMatrix();
+	//melee robot
+	/*modelStack.PushMatrix();
+	modelStack.Translate(0, 0, 10);
+	RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
+		modelStack.PushMatrix();
+		modelStack.Rotate(rotateAngle, 1, 0, 0);
+		modelStack.Translate(0, 0, -10);
+		modelStack.Translate(0, 0, 10);
+		modelStack.Translate(0.3, 0, 0);
+		RenderMesh(meshList[GEO_MELEEROBOTLEFTUPPERARM], true);
+			modelStack.PushMatrix();
+			modelStack.Rotate(rotateAngle, 1, 0, 0);
+			RenderMesh(meshList[GEO_MELEEROBOTLEFTLOWERARM], true);
+			modelStack.PopMatrix();
+		modelStack.PopMatrix();
+			modelStack.PushMatrix();
+			modelStack.Rotate(rotateAngle, 1, 0, 0);
+			modelStack.Translate(0, 0, -10);
+			modelStack.Translate(0, 0, 10);
+			modelStack.Translate(-0.3, 0, 0);
+			RenderMesh(meshList[GEO_MELEEROBOTRIGHTUPPERARM], true);
+				modelStack.PushMatrix();
+				modelStack.Rotate(rotateAngle, 1, 0, 0);
+				RenderMesh(meshList[GEO_MELEEROBOTRIGHTLOWERARM], true);
+				modelStack.PopMatrix();
+			modelStack.PopMatrix();
+					modelStack.PushMatrix();
+					RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
+					modelStack.PopMatrix();
+						modelStack.PushMatrix();
+						RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
+						modelStack.PopMatrix();
+	modelStack.PopMatrix();*/
 
 	//
 
@@ -1426,7 +1426,7 @@ void SP2_Scene::Render(double dt)
 	//				modelStack.PushMatrix();
 	//				RenderMesh(meshList[GEO_MIXEDROBOTRIGHTLEG], true);
 	//				modelStack.PopMatrix();
-	//modelStack.PopMatrix();*/
+	//modelStack.PopMatrix();
 	RenderRocks();
 	modelStack.PushMatrix();
 	modelStack.Translate(17.2, 0.5, -2.15);
