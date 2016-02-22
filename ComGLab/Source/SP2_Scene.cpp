@@ -34,7 +34,7 @@ void SP2_Scene::readtextfile()
 {
 	std::string line;
 	std::ifstream startfile;
-	startfile.open("ComGLab\readme\\start.txt");
+	startfile.open("ComGLab\\readme\\start.txt");
 	std::string file_contents;
 	if (startfile.is_open())
 	{
@@ -86,9 +86,6 @@ void SP2_Scene::Init()
 	timer = 0;
 	weaponValue = 0;
 	weaponinterface = false;
-	basePosition.x = 4;
-	basePosition.y = -2;
-	basePosition.z = 0;
 	repairgate = false;
 	buttonPress = true;
 	buttonValue = 0;
@@ -258,10 +255,10 @@ void SP2_Scene::InitMapModels()
 	meshList[GEO_TELEPORTER]->textureID = LoadTGA("Image//Tex_Lightorb.tga");
 
 	meshList[GEO_GATE] = MeshBuilder::GenerateOBJ("test", "OBJ//Gate_Door.obj");
-	meshList[GEO_GATE]->textureID = LoadTGA("Image//Tex_Gate2.tga");
+	meshList[GEO_GATE]->textureID = LoadTGA("Image//Tex_Gate.tga");
 
 	meshList[GEO_BASE] = MeshBuilder::GenerateOBJ("base", "OBJ//base.obj");
-	meshList[GEO_BASE]->textureID = meshList[GEO_GATE]->textureID;
+	meshList[GEO_BASE]->textureID = LoadTGA("Image//Tex_Gate2.tga");
 }
 
 void SP2_Scene::InitRobots()
@@ -647,7 +644,7 @@ void SP2_Scene::GameState()
 		if (robotCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1 clear", Color(1, 0, 0), 3, 20, 15);
-			weaponinterface == true;
+			weaponinterface = true;
 		}
 		else if (basehp == 0)
 		{
@@ -659,7 +656,7 @@ void SP2_Scene::GameState()
 		if (robotCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2 clear", Color(1, 0, 0), 3, 20, 15);
-			weaponinterface == true;
+			weaponinterface = true;
 		}
 		else if (basehp == 0)
 		{
@@ -671,7 +668,7 @@ void SP2_Scene::GameState()
 		if (robotCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 20, 15);
-			weaponinterface == true;
+			weaponinterface = true;
 		}
 		else if (basehp == 0)
 		{
@@ -683,7 +680,7 @@ void SP2_Scene::GameState()
 		if (robotCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4 clear", Color(1, 0, 0), 3, 20, 15);
-			weaponinterface == true;
+			weaponinterface = true;
 		}
 		else if (basehp == 0)
 		{
@@ -695,7 +692,7 @@ void SP2_Scene::GameState()
 		if (robotCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 20, 15);
-			weaponinterface == true;
+			weaponinterface = true;
 		}
 		else if (basehp == 0)
 		{
@@ -1027,13 +1024,14 @@ void SP2_Scene::Update(double dt)
 		{
 			if (WepItf_Choices.x == 0){ weaponValue = 1; }
 			else if (WepItf_Choices.x == 1){ weaponValue = 4; }
-			else if(WepItf_Choices.x == 2){ weaponValue = 7; }
-			else if(WepItf_Choices.x == 3){ weaponValue = 10; }
+			else if (WepItf_Choices.x == 2){ weaponValue = 7; }
+			else if (WepItf_Choices.x == 3){ weaponValue = 10; }
 			WepSys.ClearList();
 			wave += 1;
 			buttonPress == false;
 			buttonValue = 0;
 			weaponinterface = false;
+			playerhp--;
 		}
 		else if (buttonPress == true && Application::IsKeyPressed('2'))
 		{
@@ -1095,13 +1093,13 @@ void SP2_Scene::Update(double dt)
 	if (Application::IsKeyPressed('P') && pause == 1)
 	{
 		pause = 0;
-		buttonPress == false;
+		buttonPress = false;
 		buttonValue = 0;
 	}
 	else if (Application::IsKeyPressed('O') && pause == 0)
 	{
 		pause = 1;
-		buttonPress == false;
+		buttonPress = false;
 		buttonValue = 0;
 	}
 	
@@ -1127,7 +1125,7 @@ void SP2_Scene::Update(double dt)
 		CanFire = false;
 		GunWaitTime = 0;
 	}
-	if (Application::IsKeyPressed(VK_RBUTTON))
+	if (Application::IsKeyPressed(VK_RBUTTON) && (weaponValue == 2 || weaponValue == 5 || weaponValue == 8 || weaponValue == 11))
 	{
 		Mtx44 projection;
 		projection.SetToPerspective(20.0f, static_cast < float >(S_Width) / static_cast < float >(S_Height), 0.1f, 3000.0f);
@@ -1340,9 +1338,11 @@ void SP2_Scene::RenderUI()
 	//INFO UI, HP - CENTER
 	modelStack.PushMatrix();
 	RenderImageOnScreen(UI_BG, 50, 10, 80, 5);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(basehp), Color(1, 0, 0), 3, 60, 8);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Ammo: " + std::to_string(ammo), Color(1, 0, 0), 3, 60, 5.5);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Wave Number: " + std::to_string(wave), Color(1, 0, 0), 3, 60, 3);
+	RenderTextOnScreen(meshList[GEO_TEXT], "<Player Health>", Color(0, 1, 0), 3, 70, 7);
+	RenderImageOnScreen(UI_HP_Red, 40, 3, 80, 2);
+	float Dividend = playerhp * 0.4;
+	if (playerhp <= 0){ playerhp = 1; }
+	RenderImageOnScreen(UI_HP_Green, Dividend, 3, 80, 2); 
 	modelStack.PopMatrix();
 	//INFO UI, HP END
 
@@ -1403,9 +1403,6 @@ void SP2_Scene::Render(double dt)
 		camera.target.x, camera.target.y, camera.target.z,
 		camera.up.x, camera.up.y, camera.up.z
 		);
-
-	readtextfile();
-	RenderRocks();
 	modelStack.LoadIdentity();
 
 	if (light[0].type == Light::LIGHT_DIRECTIONAL)
@@ -1498,23 +1495,6 @@ void SP2_Scene::Render(double dt)
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_AXES], false);
 	modelStack.PopMatrix();
-
-	//RenderBase
-	modelStack.PushMatrix();
-	//modelStack.Translate(basePosition.x, basePosition.y, basePosition.z);
-	//modelStack.Scale(2, 5, 2);
-	RenderMesh(meshList[GEO_BASE], true);
-	RenderMesh(meshList[GEO_CRYSTALBASE], true);
-	RenderMesh(meshList[GEO_TELEPORTER], true);
-		modelStack.PushMatrix();
-			modelStack.Translate(0, tweenVal/1000, 0);
-			modelStack.Rotate(constRotation*3, 0, 1, 0);
-			RenderMesh(meshList[GEO_CRYSTAL], false);
-		modelStack.PopMatrix();
-	modelStack.Scale(20, 1, 20);
-	RenderMesh(meshList[GEO_MOONFLOOR], true);
-	modelStack.PopMatrix();
-	//RB End
 
 	//Render In-Hand Weapon
 	modelStack.PushMatrix();
@@ -1671,7 +1651,23 @@ void SP2_Scene::Render(double dt)
 		modelStack.PopMatrix();
 	modelStack.PopMatrix();
 
+	RenderRocks();
 	
+	//RenderBase
+	modelStack.PushMatrix();
+	RenderMesh(meshList[GEO_BASE], true);
+	RenderMesh(meshList[GEO_CRYSTALBASE], true);
+	RenderMesh(meshList[GEO_TELEPORTER], true);
+	modelStack.PushMatrix();
+	modelStack.Translate(0, tweenVal / 1000, 0);
+	modelStack.Rotate(constRotation * 3, 0, 1, 0);
+	RenderMesh(meshList[GEO_CRYSTAL], false);
+	modelStack.PopMatrix();
+	modelStack.Scale(20, 1, 20);
+	RenderMesh(meshList[GEO_MOONFLOOR], true);
+	modelStack.PopMatrix();
+	//RB End
+
 	//DO NOT RENDER ANYTHING UNDER THIS//
 	RenderUI();
 }
