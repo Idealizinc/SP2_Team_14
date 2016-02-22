@@ -12,6 +12,7 @@
 #include <string>
 #include <vector>
 #include "WeaponSystem.h"
+#include "Robotsystem.h"
 
 using std::vector;
 
@@ -91,14 +92,18 @@ class SP2_Scene : public Scene
 		GEO_MELEEROBOTRIGHTLEG,
 
 		GEO_RANGEROBOTBODY,
-		GEO_RANGEROBOTLEFTARM,
-		GEO_RANGEROBOTRIGHTARM,
+		GEO_RANGEROBOTLEFTUPPERARM,
+		GEO_RANGEROBOTLEFTLOWERARM,
+		GEO_RANGEROBOTRIGHTUPPERARM,
+		GEO_RANGEROBOTRIGHTLOWERARM,
 		GEO_RANGEROBOTLEFTLEG,
 		GEO_RANGEROBOTRIGHTLEG,
 
 		GEO_MIXEDROBOTBODY,
-		GEO_MIXEDROBOTLEFTARM,
-		GEO_MIXEDROBOTRIGHTARM,
+		GEO_MIXEDROBOTLEFTUPPERARM,
+		GEO_MIXEDROBOTLEFTLOWERARM,
+		GEO_MIXEDROBOTRIGHTUPPERARM,
+		GEO_MIXEDROBOTRIGHTLOWERARM,
 		GEO_MIXEDROBOTLEFTLEG,
 		GEO_MIXEDROBOTRIGHTLEG,
 
@@ -242,7 +247,7 @@ public:
 	bool canUseDoor = true;
 	int weaponSelect;
 	bool sniper, rifle;
-	unsigned int robotCount;
+	unsigned int numrobots;
 	//unsigned int pause;
 
 	unsigned short skyboxID = 0;
@@ -256,6 +261,7 @@ public:
 	MS modelStack, viewStack, projectionStack;
 
 	WeaponSystem WepSys;
+	Robotsystem RobotSys;
 
 	//Gun Stuff
 	bool CanFire = true;
@@ -328,7 +334,6 @@ private:
 	unsigned int gatehp;
 	unsigned int bosshp;
 	unsigned int playerhp;
-	unsigned int robothp;
 	unsigned int ammo;
 	unsigned int wave;
 	float framesPerSecond;
@@ -342,12 +347,6 @@ private:
 	float timer;
 	bool weaponinterface;
 	bool repairgate;
-
-	//robot dmg
-	unsigned int meleedmg = 5;
-	unsigned int rangedmg = 5;
-	unsigned int mixedmelee = 4;
-	unsigned int mixedrange = 4;
 
 	//Light Stuff
 	Vector3 TownLightPosition;
