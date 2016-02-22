@@ -229,9 +229,6 @@ public:
 
 	float collapse;
 	bool die;
-	
-	
-
 	bool rLimiter;
 	bool toggleLimiters;
 	bool limitersON;
@@ -299,6 +296,7 @@ private:
 	//Render Calls
 	void readtextfile();
 	void GameState();
+	void RenderBase();
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size = 1, float x = 0, float y = 0);
 	void RenderWeaponInHand(unsigned short wepVal = 0, float size = 1, float x = 0, float y = 0);

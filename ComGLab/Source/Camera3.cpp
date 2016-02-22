@@ -220,14 +220,17 @@ void Camera3::cameraMovement2(double dt)
 		&& Floor2FrontLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2FrontRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
 		&& Floor2WestLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2WestRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
 		&& Floor2EastLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2EastRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
-		&& Floor2Top.BoundaryCheck(walkingX, position.z + walkingZ, position.y) && Floor2Bot.BoundaryCheck(walkingX, position.z + walkingZ, position.y))
+		&& Floor2Top.BoundaryCheck(walkingX, position.z + walkingZ, position.y) && Floor2Bot.BoundaryCheck(walkingX, position.z + walkingZ, position.y)
+		&& Rock1a.BoundaryCheck(walkingX, position.z + walkingZ, position.y) && Rock1b.BoundaryCheck(walkingX, position.z + walkingZ, position.y)
+		&& Rock1c.BoundaryCheck(walkingX, position.z + walkingZ, position.y) && Rock1d.BoundaryCheck(walkingX, position.z + walkingZ, position.y))
 	{
 		position.z += walkingZ;
 	}
 	if (gravity != 0 && northwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && northwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
 		&& westwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && westwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
 		&& eastwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && eastwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-		&& southwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && southwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && corebase.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+		&& southwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && southwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+		&& corebase.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
 		&& WorldBack.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldFront.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
 		&& WorldLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
 		&& WorldTop.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldBot.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
@@ -235,7 +238,9 @@ void Camera3::cameraMovement2(double dt)
 		&& Floor2FrontLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2FrontRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
 		&& Floor2WestLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2WestRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
 		&& Floor2EastLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2EastRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-		&& Floor2Top.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2Bot.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity))
+		&& Floor2Top.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2Bot.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+		&& Rock1a.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Rock1b.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+		&& Rock1c.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Rock1d.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity))
 	{
 		position.y -= gravity;
 	}
@@ -292,6 +297,11 @@ void Camera3::initBoundVec()
 	Floor2BackRight.set(-12, -3, -14, -11.5, 10, 23);
 	Floor2Top.set(-14, 14, -14, 14, 20, 23);
 	Floor2Bot.set(-18, 18, -18, 18, 8, 10);
+
+	Rock1a.set(-14.2, 4.2, 94, 98, 0, 20);
+	Rock1b.set(-14.2, 12.2, 94, 124, 0, 20);
+	Rock1c.set(2.2, 4.2, 94, 124, 0, 20);
+	Rock1d.set(-14.2, 4.2, 122, 124, 0, 20);
 
 	TeleporterF1NW.set(10, 17, 9, 17, -5, 10);
 	TeleporterF1NE.set(-17, -10, 9, 17, -5, 10);
