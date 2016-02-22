@@ -52,6 +52,7 @@ private:
 
 	std::vector<Boundary> BoundVec;
 	
+	float velocityY = 0;
 
 	//Bounds
 	//Refer to blueprints for bound location
