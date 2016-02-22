@@ -839,60 +839,61 @@ void SP2_Scene::RobotAnimation(double dt)
 	{
 		robotrightattack = false;
 	}
-		if (walk == false)
-		{
-			/*robotleftattack = true;
-			robotrightattack = true;*/
-			rotatelefthand = 0;
-			rotaterighthand = 0;
-		}
-		if (robotleftattack == true)
-		{
-			leftarmattack -= (float)(8 * dt);
-		}
-		else if (robotleftattack == false)
-		{
-			leftarmattack += (float)(8 * dt);
-		}
-		if (leftarmattack >= leftarmattacklimit)
-		{
-			robotleftattack = true;
-		}
-		else if (leftarmattack <= -leftarmattacklimit)
-		{
-			robotleftattack = false;
-		}
-		if (robotrightattack == true)
-		{
-			rightarmattack += (float)(8 * dt);
-		}
-		else if (robotrightattack == false)
-		{
-			rightarmattack -= (float)(8 * dt);
-		}
-		if (rightarmattack >= rightarmattacklimit)
-		{
-			robotrightattack = false;
-		}
-		else if (rightarmattack <= -rightarmattacklimit)
-		{
-			robotrightattack = true;
-		}
 
-		if (robothp == 0)
+	if (walk == false)
+	{
+		/*robotleftattack = true;
+		robotrightattack = true;*/
+		rotatelefthand = 0;
+		rotaterighthand = 0;
+	}
+	if (robotleftattack == true)
+	{
+		leftarmattack -= (float)(8 * dt);
+	}
+	else if (robotleftattack == false)
+	{
+		leftarmattack += (float)(8 * dt);
+	}
+	if (leftarmattack >= leftarmattacklimit)
+	{
+		robotleftattack = true;
+	}
+	else if (leftarmattack <= -leftarmattacklimit)
+	{
+		robotleftattack = false;
+	}
+	if (robotrightattack == true)
+	{
+		rightarmattack += (float)(8 * dt);
+	}
+	else if (robotrightattack == false)
+	{
+		rightarmattack -= (float)(8 * dt);
+	}
+	if (rightarmattack >= rightarmattacklimit)
+	{
+		robotrightattack = false;
+	}
+	else if (rightarmattack <= -rightarmattacklimit)
+	{
+		robotrightattack = true;
+	}
+
+	if (robothp == 0)
+	{
+		die = true;
+		robotCount--;
+	}
+	if (die == true)
+	{
+		collapse += (float)(15 * dt);
+		if (collapse > 85)
 		{
-			die = true;
-			robotCount--;
+			die = false;
+			collapse -= (float)(15 * dt);
 		}
-		if (die == true)
-		{
-			collapse += (float)(15 * dt);
-			if (collapse > 85)
-			{
-				die = false;
-				collapse -= (float)(15 * dt);
-			}
-		}
+	}
 	
 	//droid repair animation
 	if (repairgate == true)
