@@ -203,12 +203,15 @@ public:
 	float translationLimit;
 	float scalingLimit;
 
-	//robot movement
+	//robot animation
+	bool walk;
 	float moverobot;
-	float rotateAngle;
-	float upperarmrotatelimit;
-	float lowerarmrotatelimit;
-	bool armrotate;
+	float rotatelefthand;
+	float rotaterighthand;
+	float leftarmrotatelimit;
+	float rightarmrotatelimit;
+	bool leftarmrotate;
+	bool rightarmrotate;
 
 	float leftleglimit;
 	float rightleglimit;
@@ -217,6 +220,15 @@ public:
 	bool leftleg;
 	bool rightleg;
 
+	bool robotleftattack;
+	bool robotrightattack;
+	float rightarmattack;
+	float rightarmattacklimit;
+	float leftarmattack;
+	float leftarmattacklimit;
+
+	float collapse;
+	bool die;
 	bool rLimiter;
 	bool toggleLimiters;
 	bool limitersON;
@@ -295,7 +307,7 @@ private:
 	void initBounds();
 	void RenderGate(bool render = false);
 	void RenderUI();
-	void RobotMovement(double dt);
+	void RobotAnimation(double dt);
 
 	//Interaction Values
 	bool buttonPress;
@@ -311,6 +323,7 @@ private:
 	unsigned int gatehp;
 	unsigned int bosshp;
 	unsigned int playerhp;
+	unsigned int robothp;
 	unsigned int ammo;
 	unsigned int wave;
 	float framesPerSecond;
