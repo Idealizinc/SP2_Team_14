@@ -157,7 +157,9 @@ void SP2_Scene::Init()
 	meshList[GEO_CYLINDER] = MeshBuilder::GenerateCylinder("cylinder", white, 20);
 	meshList[GEO_CONE] = MeshBuilder::GenerateCone("cone", white, 20);
 	meshList[GEO_HEMISPHERE] = MeshBuilder::GenerateHemisphere("hemisphere", white, 20, 20);
-	meshList[GEO_SPHERE] = MeshBuilder::GenerateSphere("Sphere", white, 10, 10);
+	meshList[GEO_SPHERE] = MeshBuilder::GenerateSphere("Sphere", white, 20, 20);
+
+	meshList[GEO_BULLET] = MeshBuilder::GenerateSphere("Bullet", white, 8, 8);
 
 	//Skybox
 	//Using the lower res skybox image
@@ -228,7 +230,7 @@ void SP2_Scene::Init()
 	meshList[GEO_COMPUTER]->textureID = LoadTGA("Image//computer.tga");*/
 
 	InitWeaponModels();
-	InitRobots();
+	//InitRobots();
 }
 
 void SP2_Scene::InitWeaponModels()
@@ -420,65 +422,78 @@ void SP2_Scene::RenderWeaponInHand(unsigned short wepVal, float size, float x, f
 	modelStack.Scale(20, 20, 20);
 	if (wepVal == 0)
 	{
+		meshList[GEO_BULLET] = MeshBuilder::GenerateSphere("Bullet", Color(1, 1, 1), 8, 8);
 		RenderMesh(meshList[GEO_SMG], true);
 	}
 	else if (wepVal == 1)
 	{
+		meshList[GEO_BULLET] = MeshBuilder::GenerateSphere("Bullet", Color(1, 1, 1), 8, 8);
 		meshList[GEO_RIFLE]->textureID = Normal_Rifle;
 		RenderMesh(meshList[GEO_RIFLE], true);
 	}
 	else if (wepVal == 2)
 	{
+		meshList[GEO_BULLET] = MeshBuilder::GenerateSphere("Bullet", Color(1, 1, 1), 8, 8);
 		meshList[GEO_SNIPER]->textureID = Normal_Sniper;
 		RenderMesh(meshList[GEO_SNIPER], true);
 	}
 	else if (wepVal == 3)
 	{
+		meshList[GEO_BULLET] = MeshBuilder::GenerateSphere("Bullet", Color(1, 1, 1), 8, 8);
 		meshList[GEO_SHOTGUN]->textureID = Normal_Shotgun;
 		RenderMesh(meshList[GEO_SHOTGUN], true);
 	}
 	else if (wepVal == 4)
 	{
+		meshList[GEO_BULLET] = MeshBuilder::GenerateSphere("Bullet", Color(1, 0, 0), 8, 8);
 		meshList[GEO_RIFLE]->textureID = Damage_Rifle;
 		RenderMesh(meshList[GEO_RIFLE], true);
 	}
 	else if (wepVal == 5)
 	{
+		meshList[GEO_BULLET] = MeshBuilder::GenerateSphere("Bullet", Color(1, 0, 0), 8, 8);
 		meshList[GEO_SNIPER]->textureID = Damage_Sniper;
 		RenderMesh(meshList[GEO_SNIPER], true);
 	}
 	else if (wepVal == 6)
 	{
+		meshList[GEO_BULLET] = MeshBuilder::GenerateSphere("Bullet", Color(1, 0, 0), 8, 8);
 		meshList[GEO_SHOTGUN]->textureID = Damage_Shotgun;
 		RenderMesh(meshList[GEO_SHOTGUN], true);
 	}
 	else if (wepVal == 7)
 	{
+		meshList[GEO_BULLET] = MeshBuilder::GenerateSphere("Bullet", Color(0, 0, 1), 8, 8);
 		meshList[GEO_RIFLE]->textureID = Capacity_Rifle;
 		RenderMesh(meshList[GEO_RIFLE], true);
 	}
 	else if (wepVal == 8)
 	{
+		meshList[GEO_BULLET] = MeshBuilder::GenerateSphere("Bullet", Color(0, 0, 1), 8, 8);
 		meshList[GEO_SNIPER]->textureID = Capacity_Sniper;
 		RenderMesh(meshList[GEO_SNIPER], true);
 	}
 	else if (wepVal == 9)
 	{
+		meshList[GEO_BULLET] = MeshBuilder::GenerateSphere("Bullet", Color(0, 0, 1), 8, 8);
 		meshList[GEO_SHOTGUN]->textureID = Capacity_Shotgun;
 		RenderMesh(meshList[GEO_SHOTGUN], true);
 	}
 	else if (wepVal == 10)
 	{
+		meshList[GEO_BULLET] = MeshBuilder::GenerateSphere("Bullet", Color(0, 1, 0), 8, 8);
 		meshList[GEO_RIFLE]->textureID = Fast_Rifle;
 		RenderMesh(meshList[GEO_RIFLE], true);
 	}
 	else if (wepVal == 11)
 	{
+		meshList[GEO_BULLET] = MeshBuilder::GenerateSphere("Bullet", Color(0, 1, 0), 8, 8);
 		meshList[GEO_SNIPER]->textureID = Fast_Sniper;
 		RenderMesh(meshList[GEO_SNIPER], true);
 	}
 	else if (wepVal == 12)
 	{
+		meshList[GEO_BULLET] = MeshBuilder::GenerateSphere("Bullet", Color(0, 1, 0), 8, 8);
 		meshList[GEO_SHOTGUN]->textureID = Fast_Shotgun;
 		RenderMesh(meshList[GEO_SHOTGUN], true);
 	}
@@ -885,6 +900,7 @@ void SP2_Scene::Update(double dt)
 			else if (WepItf_Choices.x == 1){ weaponValue = 4; }
 			else if(WepItf_Choices.x == 2){ weaponValue = 7; }
 			else if(WepItf_Choices.x == 3){ weaponValue = 10; }
+			WepSys.ClearList();
 			wave += 1;
 			buttonPress == false;
 			buttonValue = 0;
@@ -896,6 +912,7 @@ void SP2_Scene::Update(double dt)
 			else if (WepItf_Choices.y == 1){ weaponValue = 5; }
 			else if (WepItf_Choices.y == 2){ weaponValue = 8; }
 			else if (WepItf_Choices.y == 3){ weaponValue = 11; }
+			WepSys.ClearList();
 			wave += 1;
 			buttonPress == false;
 			buttonValue = 0;
@@ -907,6 +924,7 @@ void SP2_Scene::Update(double dt)
 			else if (WepItf_Choices.z == 1){ weaponValue = 6; }
 			else if (WepItf_Choices.z == 2){ weaponValue = 9; }
 			else if (WepItf_Choices.z == 3){ weaponValue = 12; }
+			WepSys.ClearList();
 			wave += 1;
 			buttonPress == false;
 			buttonValue = 0;
@@ -914,6 +932,7 @@ void SP2_Scene::Update(double dt)
 		}
 		else if (buttonPress == true && Application::IsKeyPressed('4'))
 		{
+			WepSys.ClearList();
 			wave += 1;
 			buttonPress == false;
 			buttonValue = 0;
@@ -956,15 +975,6 @@ void SP2_Scene::Update(double dt)
 		buttonPress == false;
 		buttonValue = 0;
 	}
-
-	if (Application::IsKeyPressed(VK_LBUTTON))
-	{
-		WepSys.BulletList.push_back(RayCast(camera.getCameraPosition(), camera.getLookVector(), 2));
-	}
-	if (WepSys.BulletList.size() > MaxBulletCount)
-	{
-		WepSys.BulletList.pop_front();
-	}
 	
 	framesPerSecond = 1 / dt;
 
@@ -973,6 +983,23 @@ void SP2_Scene::Update(double dt)
 	RoomLightPosition.y += tweenVal / 150000;
 	light[2].position.Set(RoomLightPosition.x, RoomLightPosition.y, RoomLightPosition.z);
 	
+	if (!CanFire)
+	{
+		RateOfFire = 0.3;
+		GunWaitTime += pause * dt;
+		if (GunWaitTime >= RateOfFire)
+		{
+			CanFire = true;
+		}
+	}
+	if (CanFire && Application::IsKeyPressed(VK_LBUTTON))
+	{
+		WepSys.BulletList.push_back(RayCast(camera.getCameraPosition(), camera.getLookVector(), 4));
+		CanFire = false;
+		GunWaitTime = 0;
+	}
+	WepSys.IncrementPosition();
+	WepSys.CleanUp();
 }
 
 void SP2_Scene::RenderSkybox(Vector3 Position)
@@ -1375,10 +1402,10 @@ void SP2_Scene::Render(double dt)
 	for (auto i : WepSys.BulletList)
 	{
 		modelStack.PushMatrix();
-		i.Move(dt);
+		i.Move();
 		modelStack.Translate(i.Position().x, i.Position().y, i.Position().z);
 		modelStack.Scale(0.1, 0.1, 0.1);
-		RenderMesh(meshList[GEO_SPHERE], true);
+		RenderMesh(meshList[GEO_BULLET], false);
 		modelStack.PopMatrix();
 	}
 

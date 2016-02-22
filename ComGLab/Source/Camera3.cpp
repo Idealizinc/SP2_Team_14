@@ -163,7 +163,7 @@ void Camera3::cameraMovement2(double dt)
 	float walkingX = 0;
 	float walkingZ = 0;
 	float walkingY = 0;
-	float gravity = dt * 10;
+	float gravity = 9.8 * dt;
 	if (Application::IsKeyPressed(VK_LSHIFT) || Application::IsKeyPressed(VK_RSHIFT))
 	{
 		walkingSpeed = 0.5;

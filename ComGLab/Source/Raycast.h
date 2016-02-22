@@ -9,9 +9,9 @@ class RayCast
 public:
 	RayCast(Vector3 Position, Vector3 DVector, float velocity, Boundary BBox = 0) : RayPos(Position), StoredDirVec(DVector), Speed(velocity), BoundingBox(BBox){ };
 	~RayCast();
-	Vector3 Move(float val);
-	void CalcIncrement(float val);
+	Vector3 Move();
 	Vector3 Position();
+	void BoundsCheck();
 
 private:
 	float Speed;
