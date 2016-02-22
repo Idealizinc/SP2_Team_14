@@ -609,6 +609,40 @@ void SP2_Scene::RenderGate(bool render)
 		modelStack.PopMatrix();
 		gatehp = 20;
 	}
+	if (wave == 0)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robot wave incoming", Color(1, 0, 0), 3, 60, 87);
+	}
+	if (wave == 1)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "*Robots coming from all directions*", Color(1, 0, 0), 3, 60, 87);
+	}
+	if (wave == 2)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robots now walk faster!!", Color(1, 0, 0), 3, 60, 87);
+	}
+	if (wave == 3)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Meteors incoming!!!", Color(1, 0, 1), 3, 60, 87);
+	}
+	if (wave == 4)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robots now fire weapons faster!!", Color(1, 0, 0), 3, 60, 87);
+	}
+	if (wave == 5)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Robots are now in god mode!!", Color(1, 0, 0), 3, 60, 87);
+	}
+	//boss wave 
+	if (wave == 6)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Boss: Defeat Mothership", Color(1, 0, 0), 3, 60, 87);
+	}
+	if (wave > 6)
+	{
+		//go to start screen, win game
+	}
+
 }
 
 void SP2_Scene::GameState()
@@ -1185,6 +1219,64 @@ void SP2_Scene::RenderRocks()
 	}
 	modelStack.PopMatrix();
 }
+
+void SP2_Scene::RenderBase()
+{
+	modelStack.PushMatrix();
+	//modelStack.Translate(basePosition.x, basePosition.y, basePosition.z);
+	//modelStack.Scale(2, 5, 2);
+	RenderMesh(meshList[GEO_BASE], true);
+	RenderMesh(meshList[GEO_CRYSTALBASE], true);
+	RenderMesh(meshList[GEO_TELEPORTER], true);
+	modelStack.PushMatrix();
+	modelStack.Translate(0, tweenVal / 1000, 0);
+	modelStack.Rotate(constRotation * 3, 0, 1, 0);
+	RenderMesh(meshList[GEO_CRYSTAL], false);
+
+	//Gates
+	modelStack.PushMatrix();
+	modelStack.Translate(17.2, 0.5, -2.15);
+	modelStack.Rotate(90, 0, 1, 0);
+	modelStack.Scale(1.55, 1.55, 2.5);
+	RenderGate(true);
+	modelStack.PushMatrix();
+	modelStack.Translate(-3, 0, 0);
+	RenderGate(true);
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-17.2, 0.5, -2.15);
+	modelStack.Rotate(90, 0, 1, 0);
+	modelStack.Scale(1.55, 1.55, 2.5);
+	RenderGate(true);
+	modelStack.PushMatrix();
+	modelStack.Translate(-3, 0, 0);
+	RenderGate(true);
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-2.15, 0.5, -17.2);
+	modelStack.Scale(1.55, 1.55, 2.5);
+	RenderGate(true);
+	modelStack.PushMatrix();
+	modelStack.Translate(3, 0, 0);
+	RenderGate(true);
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-2.15, 0.5, 17.2);
+	modelStack.Scale(1.55, 1.55, 2.5);
+	RenderGate(true);
+	modelStack.PushMatrix();
+	modelStack.Translate(3, 0, 0);
+	RenderGate(true);
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+}
+
 void SP2_Scene::Render(double dt)
 {
 	// Render VBO here
@@ -1254,69 +1346,20 @@ void SP2_Scene::Render(double dt)
 
 	GameState();
 
-	if (wave == 0)
-	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Robot wave incoming", Color(1, 0, 0), 3, 60, 87);
-	}
-	if (wave == 1)
-	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "*Robots coming from all directions*", Color(1, 0, 0), 3, 60, 87);
-	}
-	if (wave == 2)
-	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Robots now walk faster!!", Color(1, 0, 0), 3, 60, 87);
-	}
-	if (wave == 3)
-	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Meteors incoming!!!", Color(1, 0, 1), 3, 60, 87);
-	}
-	if (wave == 4)
-	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Robots now fire weapons faster!!", Color(1, 0, 0), 3, 60, 87);
-	}
-	if (wave == 5)
-	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Robots are now in god mode!!", Color(1, 0, 0), 3, 60, 87);
-	}
-	//boss wave 
-	if (wave == 6)
-	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Boss: Defeat Mothership", Color(1, 0, 0), 3, 60, 87);
-	}
-	if (wave > 6)
-	{
-		//go to start screen, win game
-	}
 	readtextfile();
 
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_AXES], false);
 	modelStack.PopMatrix();
 
-	//RenderBase
-	modelStack.PushMatrix();
-	//modelStack.Translate(basePosition.x, basePosition.y, basePosition.z);
-	//modelStack.Scale(2, 5, 2);
-	RenderMesh(meshList[GEO_BASE], true);
-	RenderMesh(meshList[GEO_CRYSTALBASE], true);
-	RenderMesh(meshList[GEO_TELEPORTER], true);
-		modelStack.PushMatrix();
-			modelStack.Translate(0, tweenVal/1000, 0);
-			modelStack.Rotate(constRotation*3, 0, 1, 0);
-			RenderMesh(meshList[GEO_CRYSTAL], false);
-		modelStack.PopMatrix();
+	//Floor
+	modelStack.PopMatrix();
 	modelStack.Scale(20, 1, 20);
 	RenderMesh(meshList[GEO_MOONFLOOR], true);
 	modelStack.PopMatrix();
-	//RB End
+	//Floor
 
-	modelStack.PushMatrix();
-	modelStack.Translate(-0.3, 2, 10);
-	modelStack.Rotate(90, 0, 0, 1);
-	modelStack.Rotate(90, 1, 0, 0);
-	modelStack.Scale(0.3, 0.3, 0.3);
-	RenderMesh(meshList[GEO_GATE_SIDE], true);
-	modelStack.PopMatrix();
+	RenderBase();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(constTranslation, 2, 5);
@@ -1435,50 +1478,6 @@ void SP2_Scene::Render(double dt)
 	//				RenderMesh(meshList[GEO_MIXEDROBOTRIGHTLEG], true);
 	//				modelStack.PopMatrix();
 	//modelStack.PopMatrix();*/
-
-	
-	modelStack.PushMatrix();
-	modelStack.Translate(17.2, 0.5, -2.15);
-	modelStack.Rotate(90, 0, 1, 0);
-	modelStack.Scale(1.55, 1.55, 2.5);
-	RenderGate(true);
-		modelStack.PushMatrix();
-		modelStack.Translate(-3, 0, 0);
-		RenderGate(true);
-		modelStack.PopMatrix();
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-17.2, 0.5, -2.15);
-	modelStack.Rotate(90, 0, 1, 0);
-	modelStack.Scale(1.55, 1.55, 2.5);
-	RenderGate(true);
-		modelStack.PushMatrix();
-		modelStack.Translate(-3, 0, 0);
-		RenderGate(true);
-		modelStack.PopMatrix();
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-2.15, 0.5, -17.2);
-	modelStack.Scale(1.55, 1.55, 2.5);
-	RenderGate(true);
-		modelStack.PushMatrix();
-		modelStack.Translate(3, 0, 0);
-		RenderGate(true);
-		modelStack.PopMatrix();
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-2.15, 0.5, 17.2);
-	modelStack.Scale(1.55, 1.55, 2.5);
-	RenderGate(true);
-		modelStack.PushMatrix();
-		modelStack.Translate(3, 0, 0);
-		RenderGate(true);
-		modelStack.PopMatrix();
-	modelStack.PopMatrix();
-
 	
 	//DO NOT RENDER ANYTHING UNDER THIS//
 	RenderUI();
