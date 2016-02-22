@@ -1753,23 +1753,24 @@ void SP2_Scene::Render(double dt)
 	//	modelStack.PopMatrix();
 	//}
 
-	////drone
-	//modelStack.PushMatrix();
-	//modelStack.Translate(0, 0, -10);
-	//RenderMesh(meshList[GEO_DRONEBODY], true);
-	//	modelStack.PushMatrix();
-	//	RenderMesh(meshList[GEO_DRONELEFTUPPERARM], true);
-	//		modelStaack.PushMatrix();
-	//		RenderMesh(meshList[GEO_DRONELEFTLOWERARM], true);
-	//		modelStack.PopMatrix();
-	//	modelStack.PopMatrix();
-	//		modelStack.PushMatrix();
-	//		RenderMesh(meshList[GEO_DRONERIGHTUPPERARM], true);
-	//			modelStack.PushMatrix();
-	//			RenderMesh(meshList[GEO_DRONERIGHTLOWERARM], true);
-	//			modelStack.PopMatrix();
-	//		modelStack.PopMatrix();
-	//modelStack.PopMatrix();
+	//drone
+	modelStack.PushMatrix();
+	modelStack.Translate(0, 0, -12);
+	modelStack.Rotate(180, 0, 1, 0);
+	RenderMesh(meshList[GEO_DRONEBODY], true);
+		modelStack.PushMatrix();
+		RenderMesh(meshList[GEO_DRONELEFTUPPERARM], true);
+			modelStack.PushMatrix();
+			RenderMesh(meshList[GEO_DRONELEFTLOWERARM], true);
+			modelStack.PopMatrix();
+		modelStack.PopMatrix();
+			modelStack.PushMatrix();
+			RenderMesh(meshList[GEO_DRONERIGHTUPPERARM], true);
+				modelStack.PushMatrix();
+				RenderMesh(meshList[GEO_DRONERIGHTLOWERARM], true);
+				modelStack.PopMatrix();
+			modelStack.PopMatrix();
+	modelStack.PopMatrix();
 
 	////mixed robot
 	//modelStack.PushMatrix();
