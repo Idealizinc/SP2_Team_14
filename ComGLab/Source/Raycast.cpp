@@ -5,12 +5,7 @@ RayCast::~RayCast()
 
 }
 
-void RayCast::CalcIncrement(float val)
-{
-	increment += Speed * val;
-}
-
-Vector3 RayCast::Move(float val)
+Vector3 RayCast::Move()
 {
 	//CalcIncrement(val);
 	RayPos.x += StoredDirVec.x * Speed;
@@ -22,4 +17,12 @@ Vector3 RayCast::Move(float val)
 Vector3 RayCast::Position()
 {
 	return RayPos;
+}
+
+void RayCast::BoundsCheck()
+{
+	// If Bullet in specific bounds, Wall Collision
+	// Pop Bullet. 
+	// If Bullet in Robot Bounds, Damage Robot
+	// Pop Bullet
 }
