@@ -264,6 +264,7 @@ public:
 	float Damage = 0;
 	float MaxAmmo = 0;
 	float CurrAmmo = MaxAmmo;
+
 private:
 	unsigned short weaponValue;
 	GLuint SB_Day_front, SB_Day_back, SB_Day_top, SB_Day_bottom, SB_Day_left, SB_Day_right;
@@ -280,6 +281,7 @@ private:
 	void initLights();
 	void InitWeaponModels();
 	void InitRobots();
+	void InitMapModels();
 
 	//Render Calls
 	void readtextfile();

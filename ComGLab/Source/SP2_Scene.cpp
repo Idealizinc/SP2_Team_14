@@ -58,7 +58,7 @@ void SP2_Scene::Init()
 	glClearColor(0.15f, 0.2f, 0.35f, 0.0f);
 
 	Mtx44 projection;
-	projection.SetToPerspective(30.0f, static_cast < float >(S_Width) / static_cast < float >(S_Height), 0.1f, 3000.0f);
+	projection.SetToPerspective(40.0f, static_cast < float >(S_Width) / static_cast < float >(S_Height), 0.1f, 3000.0f);
 	projectionStack.LoadMatrix(projection);
 
 	camera.Init(Vector3(0, 5, 3), Vector3(0, 5, 0), Vector3(0, 1, 0));
@@ -194,17 +194,6 @@ void SP2_Scene::Init()
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//calibri.tga");
 
-	meshList[GEO_GATE] = MeshBuilder::GenerateOBJ("test", "OBJ//Gate_Door.obj");
-	meshList[GEO_GATE]->textureID = LoadTGA("Image//Tex_Gate2.tga");
-
-	meshList[GEO_BASE] = MeshBuilder::GenerateOBJ("base", "OBJ//base.obj");
-	meshList[GEO_BASE]->textureID = meshList[GEO_GATE]->textureID;
-
-	meshList[GEO_GATE_SIDE] = MeshBuilder::GenerateOBJ("gate_side", "OBJ//gate_side.obj");
-	meshList[GEO_GATE_SIDE]->textureID = LoadTGA("Image//bullet.tga"); // temporary texture
-
-	//meshList[GEO_RIFLE] = MeshBuilder::GenerateOBJ("test", "OBJ//Rifle.obj");
-	//meshList[GEO_RIFLE]->textureID = LoadTGA("Image//Tex_Rifle.tga");
 	//meshList[GEO_PLAYERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//PlayerShip.obj");
 	//meshList[GEO_PLAYERSHIP]->textureID = LoadTGA("Image//Tex_PlayerShip.tga");
 
@@ -214,22 +203,11 @@ void SP2_Scene::Init()
 	meshList[GEO_METEOR] = MeshBuilder::GenerateOBJ("test", "OBJ//meteor.obj");
 	meshList[GEO_METEOR]->textureID = LoadTGA("Image//Tex_Meteor.tga");
 
-	meshList[GEO_CRYSTALBASE] = MeshBuilder::GenerateOBJ("Core Platform", "OBJ//Core_Platform.obj");
-	meshList[GEO_CRYSTALBASE]->textureID = LoadTGA("Image//Tex_Core_Platform.tga");
-
-	meshList[GEO_CRYSTAL] = MeshBuilder::GenerateOBJ("Core Crystal", "OBJ//Core_Crystal.obj");
-	meshList[GEO_CRYSTAL]->textureID = LoadTGA("Image//Tex_LightOrb.tga");
-
-	meshList[GEO_MOONFLOOR] = MeshBuilder::GenerateOBJ("Baseplate", "OBJ//Moon_Floor.obj");
-	meshList[GEO_MOONFLOOR]->textureID = LoadTGA("Image//Tex_Moon.tga");
-
-	meshList[GEO_TELEPORTER] = MeshBuilder::GenerateOBJ("Teleporter", "OBJ//Teleporter.obj");
-	meshList[GEO_TELEPORTER]->textureID = LoadTGA("Image//Tex_Lightorb.tga");
-
 	/*meshList[GEO_COMPUTER] = MeshBuilder::GenerateOBJ("test", "OBJ//computer.obj");
 	meshList[GEO_COMPUTER]->textureID = LoadTGA("Image//computer.tga");*/
 
 	InitWeaponModels();
+	InitMapModels();
 	//InitRobots();
 }
 
@@ -247,6 +225,27 @@ void SP2_Scene::InitWeaponModels()
 
 	meshList[GEO_SHOTGUN] = MeshBuilder::GenerateOBJ("test", "OBJ//Shotgun.obj");
 	meshList[GEO_SHOTGUN]->textureID = LoadTGA("Image//Tex_Shotgun.tga");
+}
+
+void SP2_Scene::InitMapModels()
+{
+	meshList[GEO_CRYSTALBASE] = MeshBuilder::GenerateOBJ("Core Platform", "OBJ//Core_Platform.obj");
+	meshList[GEO_CRYSTALBASE]->textureID = LoadTGA("Image//Tex_Core_Platform.tga");
+
+	meshList[GEO_CRYSTAL] = MeshBuilder::GenerateOBJ("Core Crystal", "OBJ//Core_Crystal.obj");
+	meshList[GEO_CRYSTAL]->textureID = LoadTGA("Image//Tex_LightOrb.tga");
+
+	meshList[GEO_MOONFLOOR] = MeshBuilder::GenerateOBJ("Baseplate", "OBJ//Moon_Floor.obj");
+	meshList[GEO_MOONFLOOR]->textureID = LoadTGA("Image//Tex_Moon.tga");
+
+	meshList[GEO_TELEPORTER] = MeshBuilder::GenerateOBJ("Teleporter", "OBJ//Teleporter.obj");
+	meshList[GEO_TELEPORTER]->textureID = LoadTGA("Image//Tex_Lightorb.tga");
+
+	meshList[GEO_GATE] = MeshBuilder::GenerateOBJ("test", "OBJ//Gate_Door.obj");
+	meshList[GEO_GATE]->textureID = LoadTGA("Image//Tex_Gate2.tga");
+
+	meshList[GEO_BASE] = MeshBuilder::GenerateOBJ("base", "OBJ//base.obj");
+	meshList[GEO_BASE]->textureID = meshList[GEO_GATE]->textureID;
 }
 
 void SP2_Scene::InitRobots()
@@ -503,7 +502,6 @@ void SP2_Scene::RenderWeaponInHand(unsigned short wepVal, float size, float x, f
 	modelStack.PopMatrix();
 }
 
-
 void SP2_Scene::RenderMeshOnScreen(Mesh* mesh, float Xsize, float Ysize, float Xpos, float Ypos, float Angle, Vector3 RotationDir)
 {
 	Mtx44 ortho;
@@ -702,6 +700,7 @@ void SP2_Scene::GameState()
 		}
 	}
 }
+
 void SP2_Scene::RobotMovement(double dt)
 {
 	if (armrotate == true)
@@ -757,6 +756,7 @@ void SP2_Scene::RobotMovement(double dt)
 
 	moverobot += (float)(2 * dt);
 }
+
 void SP2_Scene::Update(double dt)
 {
 	camera.Update(dt);
@@ -963,6 +963,17 @@ void SP2_Scene::Update(double dt)
 		WepSys.BulletList.push_back(RayCast(camera.getCameraPosition(), camera.getLookVector(), 4));
 		CanFire = false;
 		GunWaitTime = 0;
+	}
+	if (Application::IsKeyPressed(VK_RBUTTON))
+	{
+		Mtx44 projection;
+		projection.SetToPerspective(20.0f, static_cast < float >(S_Width) / static_cast < float >(S_Height), 0.1f, 3000.0f);
+		projectionStack.LoadMatrix(projection);
+	}
+	else {
+		Mtx44 projection;
+		projection.SetToPerspective(40.0f, static_cast < float >(S_Width) / static_cast < float >(S_Height), 0.1f, 3000.0f);
+		projectionStack.LoadMatrix(projection);
 	}
 	WepSys.IncrementPosition();
 	WepSys.CleanUp();
@@ -1189,6 +1200,7 @@ void SP2_Scene::RenderUI()
 		modelStack.PopMatrix();
 	}
 }
+
 void SP2_Scene::RenderRocks()
 {
 	modelStack.PushMatrix();
@@ -1212,6 +1224,7 @@ void SP2_Scene::RenderRocks()
 	}
 	modelStack.PopMatrix();
 }
+
 void SP2_Scene::Render(double dt)
 {
 	// Render VBO here
@@ -1336,20 +1349,6 @@ void SP2_Scene::Render(double dt)
 	RenderMesh(meshList[GEO_MOONFLOOR], true);
 	modelStack.PopMatrix();
 	//RB End
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-0.3, 2, 10);
-	modelStack.Rotate(90, 0, 0, 1);
-	modelStack.Rotate(90, 1, 0, 0);
-	modelStack.Scale(0.3, 0.3, 0.3);
-	RenderMesh(meshList[GEO_GATE_SIDE], true);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(constTranslation, 2, 5);
-	modelStack.Scale(0.8, 0.8, 0.8);
-	RenderMesh(meshList[GEO_SNIPER], true);
-	modelStack.PopMatrix();
 
 	//Render In-Hand Weapon
 	modelStack.PushMatrix();

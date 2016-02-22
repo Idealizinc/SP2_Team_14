@@ -164,6 +164,9 @@ void Camera3::cameraMovement2(double dt)
 	float walkingZ = 0;
 	float walkingY = 0;
 	float gravity = 9.8 * dt;
+	velocityY += gravity * dt;
+	walkingY = velocityY * dt;
+	
 	if (Application::IsKeyPressed(VK_LSHIFT) || Application::IsKeyPressed(VK_RSHIFT))
 	{
 		walkingSpeed = 0.5;
@@ -192,7 +195,7 @@ void Camera3::cameraMovement2(double dt)
 	}
 	if (Application::IsKeyPressed(' ') || Application::IsKeyPressed(VK_SPACE))
 	{
-		//walkingY += 
+		velocityY = 5.0f;
 	}
 	if (walkingX != 0 && northwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && northwall2.BoundaryCheck(walkingX + position.x, position.z, position.y)
 		&& westwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && westwall2.BoundaryCheck(walkingX + position.x, position.z, position.y)
@@ -224,6 +227,7 @@ void Camera3::cameraMovement2(double dt)
 	{
 		position.z += walkingZ;
 	}
+	//Gravity
 	if (gravity != 0 && northwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && northwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
 		&& westwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && westwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
 		&& eastwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && eastwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
@@ -239,7 +243,6 @@ void Camera3::cameraMovement2(double dt)
 	{
 		position.y -= gravity;
 	}
-	
 	//Teleporter
 	if ((teleCheck == true && TeleporterF1NW.BoundaryCheck(position.x, position.z, position.y)
 		|| (teleCheck == true && TeleporterF1NE.BoundaryCheck(position.x, position.z, position.y))
