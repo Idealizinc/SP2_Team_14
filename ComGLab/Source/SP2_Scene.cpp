@@ -1166,6 +1166,9 @@ void SP2_Scene::RenderUI()
 	//INFO UI, HP - CENTER
 	modelStack.PushMatrix();
 	RenderImageOnScreen(UI_BG, 50, 10, 80, 5);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(basehp), Color(1, 0, 0), 3, 60, 8);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Ammo: " + std::to_string(ammo), Color(1, 0, 0), 3, 60, 5.5);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Wave Number: " + std::to_string(wave), Color(1, 0, 0), 3, 60, 3);
 	modelStack.PopMatrix();
 	//INFO UI, HP END
 
