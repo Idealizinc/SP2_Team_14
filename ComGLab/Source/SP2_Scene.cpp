@@ -244,7 +244,7 @@ void SP2_Scene::Init()
 	meshList[GEO_COMPUTER]->textureID = LoadTGA("Image//computer.tga");*/
 
 	InitWeaponModels();
-	//InitRobots();
+	InitRobots();
 }
 
 void SP2_Scene::InitWeaponModels()
@@ -1452,7 +1452,7 @@ void SP2_Scene::Render(double dt)
 		modelStack.PopMatrix();
 	}
 
-	/*////drone
+	////drone
 	//modelStack.PushMatrix();
 	//modelStack.Translate(0, 0, -10);
 	//RenderMesh(meshList[GEO_DRONEBODY], true);
@@ -1471,54 +1471,54 @@ void SP2_Scene::Render(double dt)
 	//modelStack.PopMatrix();
 
 	//melee robot
-	//for (int j = -2; j > -4; j--)
-	//{
-	//	for (int i = 0; i < 10; i++)
-	//	{
-	//		modelStack.PushMatrix();
-	//		modelStack.Translate(10*j+27, 0.5, 10*i+140);
-	//		modelStack.Translate(0, 0, -moverobot);
-	//		modelStack.Rotate(collapse, 1, 0, 0);
-	//		RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
-	//			modelStack.PushMatrix();
-	//			//modelStack.Rotate(rotatelefthand, 1, 0, 0);
-	//			//modelStack.Rotate(leftarmattack, 1, 0, 0);
-	//			modelStack.Translate(0, 0, -10);
-	//			modelStack.Translate(0, 0, 10);
-	//			modelStack.Translate(0.3, 0, 0);
-	//			RenderMesh(meshList[GEO_MELEEROBOTLEFTUPPERARM], true);
-	//				modelStack.PushMatrix();
-	//				//modelStack.Rotate(rotatelefthand, 1, 0, 0);
-	//				//modelStack.Rotate(leftarmattack,1,0,0);
-	//				RenderMesh(meshList[GEO_MELEEROBOTLEFTLOWERARM], true);
-	//				modelStack.PopMatrix();
-	//		modelStack.PopMatrix();
-	//			modelStack.PushMatrix();
-	//			//modelStack.Rotate(rotaterighthand, 1, 0, 0);
-	//			//modelStack.Rotate(rightarmattack, 1, 0, 0);
-	//			modelStack.Translate(0, 0, -10);
-	//			modelStack.Translate(0, 0, 10);
-	//			modelStack.Translate(-0.3, 0, 0);
-	//			RenderMesh(meshList[GEO_MELEEROBOTRIGHTUPPERARM], true);
-	//				modelStack.PushMatrix();
-	//				//modelStack.Rotate(rotaterighthand, 1, 0, 0);
-	//				//modelStack.Rotate(rightarmattack,1,0,0);
-	//				RenderMesh(meshList[GEO_MELEEROBOTRIGHTLOWERARM], true);
-	//				modelStack.PopMatrix();
-	//			modelStack.PopMatrix();
-	//					modelStack.PushMatrix();
-	//					//modelStack.Rotate(moveleftleg, 1, 0, 0);
-	//					modelStack.Translate(0, 0, -10);
-	//					modelStack.Translate(0, 0, 10);
-	//					RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
-	//					modelStack.PopMatrix();
-	//						modelStack.PushMatrix();
-	//						//modelStack.Rotate(moverightleg, 1, 0, 0);
-	//						RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
-	//						modelStack.PopMatrix();
-	//		modelStack.PopMatrix();
-	//	}
-	//}
+	for (int j = -2; j > -4; j--)
+	{
+		for (int i = 0; i < 10; i++)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(10*j+27, 0.5, 10*i+140);
+			modelStack.Translate(0, 0, -moverobot);
+			modelStack.Rotate(collapse, 1, 0, 0);
+			RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
+				modelStack.PushMatrix();
+				//modelStack.Rotate(rotatelefthand, 1, 0, 0);
+				//modelStack.Rotate(leftarmattack, 1, 0, 0);
+				modelStack.Translate(0, 0, -10);
+				modelStack.Translate(0, 0, 10);
+				modelStack.Translate(0.3, 0, 0);
+				RenderMesh(meshList[GEO_MELEEROBOTLEFTUPPERARM], true);
+					modelStack.PushMatrix();
+					//modelStack.Rotate(rotatelefthand, 1, 0, 0);
+					//modelStack.Rotate(leftarmattack,1,0,0);
+					RenderMesh(meshList[GEO_MELEEROBOTLEFTLOWERARM], true);
+					modelStack.PopMatrix();
+			modelStack.PopMatrix();
+				modelStack.PushMatrix();
+				//modelStack.Rotate(rotaterighthand, 1, 0, 0);
+				//modelStack.Rotate(rightarmattack, 1, 0, 0);
+				modelStack.Translate(0, 0, -10);
+				modelStack.Translate(0, 0, 10);
+				modelStack.Translate(-0.3, 0, 0);
+				RenderMesh(meshList[GEO_MELEEROBOTRIGHTUPPERARM], true);
+					modelStack.PushMatrix();
+					//modelStack.Rotate(rotaterighthand, 1, 0, 0);
+					//modelStack.Rotate(rightarmattack,1,0,0);
+					RenderMesh(meshList[GEO_MELEEROBOTRIGHTLOWERARM], true);
+					modelStack.PopMatrix();
+				modelStack.PopMatrix();
+						modelStack.PushMatrix();
+						//modelStack.Rotate(moveleftleg, 1, 0, 0);
+						modelStack.Translate(0, 0, -10);
+						modelStack.Translate(0, 0, 10);
+						RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
+						modelStack.PopMatrix();
+							modelStack.PushMatrix();
+							//modelStack.Rotate(moverightleg, 1, 0, 0);
+							RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
+							modelStack.PopMatrix();
+			modelStack.PopMatrix();
+		}
+	}
 
 	////range robot
 	//modelStack.PushMatrix();
@@ -1556,7 +1556,7 @@ void SP2_Scene::Render(double dt)
 	//				modelStack.PushMatrix();
 	//				RenderMesh(meshList[GEO_MIXEDROBOTRIGHTLEG], true);
 	//				modelStack.PopMatrix();
-	//modelStack.PopMatrix();*/
+	//modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(17.2, 0.5, -2.15);

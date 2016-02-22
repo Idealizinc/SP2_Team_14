@@ -220,7 +220,6 @@ public:
 	bool leftleg;
 	bool rightleg;
 
-<<<<<<< HEAD
 	bool robotleftattack;
 	bool robotrightattack;
 	float rightarmattack;
@@ -233,8 +232,6 @@ public:
 	
 	
 
-=======
->>>>>>> 87c4671757f1f63fa2c0ac76635acacb22d7afc4
 	bool rLimiter;
 	bool toggleLimiters;
 	bool limitersON;
