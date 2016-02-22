@@ -72,8 +72,6 @@ void SP2_Scene::Init()
 	rotationalLimit = 180;
 	translationLimit = 5;
 	scalingLimit = 10;
-	upperarmrotatelimit = -1;
-	//lowerarmrotatelimit = -1;
 	rLimiter = true;
 	toggleLimiters = true;
 	limitersON = true;
@@ -97,15 +95,33 @@ void SP2_Scene::Init()
 	robotCount = 0;
 	leftgate = 0;
 	rightgate = 0;
-	armrotate = true;
-	rotateAngle = 0;
+	//droidrepair = false;
+	droidrepairgate = 0;
+
+	robothp = 0;
+	leftarmrotatelimit = -1;
+	rightarmrotatelimit = -1;
+	leftarmrotate = true;
+	rightarmrotate = true;
+	rotatelefthand = 0;
+	rotaterighthand = 0;
 	moverobot = 0;
 	moveleftleg = 0;
 	moverightleg = 0;
-	leftleglimit = 3;
-	rightleglimit = 3;
+	leftleglimit = 4;
+	rightleglimit = 4;
+	leftarmattack = 0;
+	rightarmattack = 0;
+	leftarmattacklimit = -4;
+	rightarmattacklimit = -4;
+	droidlimit = 3;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+	collapse = 0;
 	leftleg = true;
 	rightleg = true;
+	walk = true;
+	die = false;
+	//robotleftattack = false;
+	//robotrightattack = false;
 	WepItf_Choices = Vector3(0, 0, 0);
 
 	// Enable depth Test
@@ -208,7 +224,7 @@ void SP2_Scene::Init()
 
 	InitWeaponModels();
 	InitMapModels();
-	//InitRobots();
+	InitRobots();
 }
 
 void SP2_Scene::InitWeaponModels()
@@ -701,60 +717,204 @@ void SP2_Scene::GameState()
 	}
 }
 
-void SP2_Scene::RobotMovement(double dt)
+void SP2_Scene::RobotAnimation(double dt)
 {
-	if (armrotate == true)
+	//left arm
+	if (leftarmrotate == true)
 	{
-		rotateAngle -= (float)(5 * dt);
+		rotatelefthand -= (float)(5 * dt);
 	}
-	else if (armrotate == false)
+	else if (leftarmrotate == false)
 	{
-		rotateAngle += (float)(5 * dt);
+		rotatelefthand += (float)(5 * dt);
 	}
-	if (rotateAngle <= upperarmrotatelimit)
+	if (rotatelefthand <= leftarmrotatelimit)
 	{
-		armrotate = false;
+		leftarmrotate = false;
 	}
-	else if (rotateAngle >= -upperarmrotatelimit + (1 - upperarmrotatelimit))
+	else if (rotatelefthand >= -leftarmrotatelimit) //+ (1 - leftarmrotatelimit))
 	{
-		armrotate = true;
+		leftarmrotate = true;
 	}
 
+	//right arm
+	if (rightarmrotate == true)
+	{
+		rotaterighthand += (float)(5 * dt);
+	}
+	else if (rightarmrotate == false)
+	{
+		rotaterighthand -= (float)(5 * dt);
+	}
+	if (rotaterighthand <= rightarmrotatelimit)
+	{
+		rightarmrotate = true;
+	}
+	else if (rotaterighthand >= -rightarmrotatelimit) //+ (1 - rightarmrotatelimit))
+	{
+		rightarmrotate = false;
+	}
+	//left leg
 	if (leftleg == true)
 	{
-		moveleftleg -= (float)(5 * dt);
+		moveleftleg -= (float)(7 * dt);
 	}
 	else if (leftleg == false)
 	{
-		moveleftleg += (float)(5 * dt);
+		moveleftleg += (float)(7 * dt);
 	}
 	if (moveleftleg >= leftleglimit)
 	{
 		leftleg = true;
 	}
-	else if (moveleftleg <= -leftleglimit + (0.5 - leftleglimit))
+	else if (moveleftleg <= -leftleglimit) //+ (0.5 - leftleglimit))
 	{
 		leftleg = false;
 	}
 
+	//right leg
 	if (rightleg == true)
 	{
-		moverightleg += (float)(3 * dt);
+		moverightleg += (float)(7 * dt);
 	}
 	else if (rightleg == false)
 	{
-		moverightleg -= (float)(3 * dt);
+		moverightleg -= (float)(7 * dt);
 	}
 	if (moverightleg >= rightleglimit)
 	{
 		rightleg = false;
 	}
-	else if (moverightleg <= -rightleglimit + (0.5 - rightleglimit))
+	else if (moverightleg <= -rightleglimit) //+ (0.5 - rightleglimit))
 	{
 		rightleg = true;
 	}
+	//walking
+	if (walk == true)
+	{
+		moverobot += (float)(5 * dt);
+		if (moverobot > 120)
+		{
+			walk = false;
+		}
+	}
+	if (walk == false)
+	{
+		rotatelefthand = 0;
+		rotaterighthand = 0;
+		robotleftattack = true;
+		robotrightattack = true;
+	}
+	//attack
+	if (robotleftattack == true)
+	{
+		leftarmattack -= (float)(8 * dt);
+	}
+	else if (robotleftattack == false)
+	{
+		leftarmattack += (float)(8 * dt);
+	}
+	if (leftarmattack <= leftarmattacklimit)
+	{
+		robotleftattack = false;
+	}
+	else if (leftarmattack >= -leftarmattacklimit)
+	{
+		robotleftattack = true;
+	}
+	if (robotrightattack == true)
+	{
+		rightarmattack += (float)(8 * dt);
+	}
+	else if (robotrightattack == false)
+	{
+		rightarmattack -= (float)(8 * dt);
+	}
+	if (rightarmattack <= rightarmattacklimit)
+	{
+		robotrightattack = true;
+	}
+	else if (rightarmattack >= -rightarmattacklimit)
+	{
+		robotrightattack = false;
+	}
 
-	moverobot += (float)(2 * dt);
+	if (walk == false)
+	{
+		/*robotleftattack = true;
+		robotrightattack = true;*/
+		rotatelefthand = 0;
+		rotaterighthand = 0;
+	}
+	if (robotleftattack == true)
+	{
+		leftarmattack -= (float)(8 * dt);
+	}
+	else if (robotleftattack == false)
+	{
+		leftarmattack += (float)(8 * dt);
+	}
+	if (leftarmattack >= leftarmattacklimit)
+	{
+		robotleftattack = true;
+	}
+	else if (leftarmattack <= -leftarmattacklimit)
+	{
+		robotleftattack = false;
+	}
+	if (robotrightattack == true)
+	{
+		rightarmattack += (float)(8 * dt);
+	}
+	else if (robotrightattack == false)
+	{
+		rightarmattack -= (float)(8 * dt);
+	}
+	if (rightarmattack >= rightarmattacklimit)
+	{
+		robotrightattack = false;
+	}
+	else if (rightarmattack <= -rightarmattacklimit)
+	{
+		robotrightattack = true;
+	}
+
+	if (robothp == 0)
+	{
+		die = true;
+		robotCount--;
+	}
+	if (die == true)
+	{
+		collapse += (float)(15 * dt);
+		if (collapse > 85)
+		{
+			die = false;
+			collapse -= (float)(15 * dt);
+		}
+	}
+	
+	//droid repair animation
+	if (repairgate == true)
+	{
+		droidrepair = true;
+	}
+	if (droidrepair == true)
+	{
+		droidrepairgate += (float)(5 * dt);
+	}
+	else if (droidrepair == false)
+	{
+		droidrepairgate -= (float)(5 * dt);
+	}
+	if (droidrepairgate >= droidlimit)
+	{
+		droidrepair = false;
+	}
+	else if (droidrepairgate <= -droidlimit)
+	{
+		droidrepair = true;
+	}
 }
 
 void SP2_Scene::Update(double dt)
@@ -762,7 +922,7 @@ void SP2_Scene::Update(double dt)
 	camera.Update(dt);
 	constRotation += (float)(10 * pause * dt);
 	constTranslation += (float)(10 * pause  * dt);
-	RobotMovement(dt);
+	RobotAnimation(dt);
 	//Lerping Rotation
 	if ((rLimiter == true))
 	{
@@ -792,6 +952,20 @@ void SP2_Scene::Update(double dt)
 		translateX = 40;
 	}
 	translateX += (float)(10 * pause  * dt);
+
+	//gate
+	if (gatehp < 20)
+	{
+		repairgate = true;
+	}
+	if (repairgate == true)
+	{
+		if (gatehp == 20)
+		{
+			repairgate = false;
+		}
+	}
+
 	if (repairgate == true)
 	{
 		openleftgate = true;
@@ -838,18 +1012,7 @@ void SP2_Scene::Update(double dt)
 	{
 		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	}
-	//gate
-	if (gatehp < 20)
-	{
-		repairgate = true;
-	}
-	if (repairgate == true)
-	{
-		if (gatehp == 20)
-		{
-			repairgate = false;
-		}
-	}
+	
 	//Weapon
 	if (weaponinterface && randWepChoices)
 	{
@@ -1177,6 +1340,9 @@ void SP2_Scene::RenderUI()
 	//INFO UI, HP - CENTER
 	modelStack.PushMatrix();
 	RenderImageOnScreen(UI_BG, 50, 10, 80, 5);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(basehp), Color(1, 0, 0), 3, 60, 8);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Ammo: " + std::to_string(ammo), Color(1, 0, 0), 3, 60, 5.5);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Wave Number: " + std::to_string(wave), Color(1, 0, 0), 3, 60, 3);
 	modelStack.PopMatrix();
 	//INFO UI, HP END
 
@@ -1365,7 +1531,7 @@ void SP2_Scene::Render(double dt)
 		modelStack.PopMatrix();
 	}
 
-	/*////drone
+	////drone
 	//modelStack.PushMatrix();
 	//modelStack.Translate(0, 0, -10);
 	//RenderMesh(meshList[GEO_DRONEBODY], true);
@@ -1389,24 +1555,24 @@ void SP2_Scene::Render(double dt)
 	modelStack.Translate(0, 0, -moverobot);
 	RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
 		modelStack.PushMatrix();
-		modelStack.Rotate(rotateAngle, 1, 0, 0);
+		//modelStack.Rotate(rotateAngle, 1, 0, 0);
 		modelStack.Translate(0, 0, -10);
 		modelStack.Translate(0, 0, 10);
 		modelStack.Translate(0.3, 0, 0);
 		RenderMesh(meshList[GEO_MELEEROBOTLEFTUPPERARM], true);
 			modelStack.PushMatrix();
-			modelStack.Rotate(rotateAngle, 1, 0, 0);
+			//modelStack.Rotate(rotateAngle, 1, 0, 0);
 			RenderMesh(meshList[GEO_MELEEROBOTLEFTLOWERARM], true);
 			modelStack.PopMatrix();
 		modelStack.PopMatrix();
 			modelStack.PushMatrix();
-			modelStack.Rotate(rotateAngle, 1, 0, 0);
+			//modelStack.Rotate(rotateAngle, 1, 0, 0);
 			modelStack.Translate(0, 0, -10);
 			modelStack.Translate(0, 0, 10);
 			modelStack.Translate(-0.3, 0, 0);
 			RenderMesh(meshList[GEO_MELEEROBOTRIGHTUPPERARM], true);
 				modelStack.PushMatrix();
-				modelStack.Rotate(rotateAngle, 1, 0, 0);
+				//modelStack.Rotate(rotateAngle, 1, 0, 0);
 				RenderMesh(meshList[GEO_MELEEROBOTRIGHTLOWERARM], true);
 				modelStack.PopMatrix();
 			modelStack.PopMatrix();
@@ -1460,6 +1626,7 @@ void SP2_Scene::Render(double dt)
 	//				modelStack.PushMatrix();
 	//				RenderMesh(meshList[GEO_MIXEDROBOTRIGHTLEG], true);
 	//				modelStack.PopMatrix();
+	//modelStack.PopMatrix();
 	//modelStack.PopMatrix();*/
 
 	modelStack.PushMatrix();
