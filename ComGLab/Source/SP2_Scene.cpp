@@ -72,8 +72,6 @@ void SP2_Scene::Init()
 	rotationalLimit = 180;
 	translationLimit = 5;
 	scalingLimit = 10;
-	upperarmrotatelimit = -1;
-	//lowerarmrotatelimit = -1;
 	rLimiter = true;
 	toggleLimiters = true;
 	limitersON = true;
@@ -82,6 +80,7 @@ void SP2_Scene::Init()
 	gatehp = 20;
 	bosshp = 100;
 	playerhp = 100;
+	robothp = 0;
 	ammo = 100;
 	wave = 1;
 	state = 0;
@@ -97,15 +96,30 @@ void SP2_Scene::Init()
 	robotCount = 0;
 	leftgate = 0;
 	rightgate = 0;
-	armrotate = true;
-	rotateAngle = 0;
+
+	leftarmrotatelimit = -1;
+	rightarmrotatelimit = -1;
+	leftarmrotate = true;
+	rightarmrotate = true;
+	rotatelefthand = 0;
+	rotaterighthand = 0;
 	moverobot = 0;
 	moveleftleg = 0;
 	moverightleg = 0;
-	leftleglimit = 3;
-	rightleglimit = 3;
+	leftleglimit = 4;
+	rightleglimit = 4;
+	leftarmattack = 0;
+	rightarmattack = 0;
+	leftarmattacklimit = 4;
+	rightarmattacklimit = 4;
+	collapse = 0;
 	leftleg = true;
 	rightleg = true;
+	walk = true;
+	die = false;
+	//robotleftattack = false;
+	//robotrightattack = false;
+
 	WepItf_Choices = Vector3(0, 0, 0);
 
 	// Enable depth Test
@@ -604,7 +618,6 @@ void SP2_Scene::RenderGate(bool render)
 	if (render)
 	{
 		modelStack.PushMatrix();
-		//translation here once map is out
 		RenderMesh(meshList[GEO_GATE], true);
 		modelStack.PopMatrix();
 		gatehp = 20;
@@ -687,67 +700,145 @@ void SP2_Scene::GameState()
 		}
 	}
 }
-void SP2_Scene::RobotMovement(double dt)
+void SP2_Scene::RobotAnimation(double dt)
 {
-	if (armrotate == true)
+	//left arm
+	if (leftarmrotate == true)
 	{
-		rotateAngle -= (float)(5 * dt);
+		rotatelefthand -= (float)(5 * dt);
 	}
-	else if (armrotate == false)
+	else if (leftarmrotate == false)
 	{
-		rotateAngle += (float)(5 * dt);
+		rotatelefthand += (float)(5 * dt);
 	}
-	if (rotateAngle <= upperarmrotatelimit)
+	if (rotatelefthand <= leftarmrotatelimit)
 	{
-		armrotate = false;
+		leftarmrotate = false;
 	}
-	else if (rotateAngle >= -upperarmrotatelimit + (1 - upperarmrotatelimit))
+	else if (rotatelefthand >= -leftarmrotatelimit) //+ (1 - leftarmrotatelimit))
 	{
-		armrotate = true;
+		leftarmrotate = true;
 	}
-
+	//right arm
+	if (rightarmrotate == true)
+	{
+		rotaterighthand += (float)(5 * dt);
+	}
+	else if (rightarmrotate == false)
+	{
+		rotaterighthand -= (float)(5 * dt);
+	}
+	if (rotaterighthand <= rightarmrotatelimit)
+	{
+		rightarmrotate = true;
+	}
+	else if (rotaterighthand >= -rightarmrotatelimit) //+ (1 - rightarmrotatelimit))
+	{
+		rightarmrotate = false;
+	}
+	//left leg
 	if (leftleg == true)
 	{
-		moveleftleg -= (float)(5 * dt);
+		moveleftleg -= (float)(7 * dt);
 	}
 	else if (leftleg == false)
 	{
-		moveleftleg += (float)(5 * dt);
+		moveleftleg += (float)(7 * dt);
 	}
 	if (moveleftleg >= leftleglimit)
 	{
 		leftleg = true;
 	}
-	else if (moveleftleg <= -leftleglimit + (0.5 - leftleglimit))
+	else if (moveleftleg <= -leftleglimit) //+ (0.5 - leftleglimit))
 	{
 		leftleg = false;
 	}
-
+	//right leg
 	if (rightleg == true)
 	{
-		moverightleg += (float)(3 * dt);
+		moverightleg += (float)(7 * dt);
 	}
 	else if (rightleg == false)
 	{
-		moverightleg -= (float)(3 * dt);
+		moverightleg -= (float)(7 * dt);
 	}
 	if (moverightleg >= rightleglimit)
 	{
 		rightleg = false;
 	}
-	else if (moverightleg <= -rightleglimit + (0.5 - rightleglimit))
+	else if (moverightleg <= -rightleglimit) //+ (0.5 - rightleglimit))
 	{
 		rightleg = true;
 	}
+	if (walk == true)
+	{
+		moverobot += (float)(5 * dt);
+		if (moverobot > 120)
+		{
+			walk = false;
+		}
+	}
+	if (walk == false)
+	{
+		/*robotleftattack = true;
+		robotrightattack = true;*/
+		rotatelefthand = 0;
+		rotaterighthand = 0;
+	}
+	if (robotleftattack == true)
+	{
+		leftarmattack -= (float)(8 * dt);
+	}
+	else if (robotleftattack == false)
+	{
+		leftarmattack += (float)(8 * dt);
+	}
+	if (leftarmattack >= leftarmattacklimit)
+	{
+		robotleftattack = true;
+	}
+	else if (leftarmattack <= -leftarmattacklimit)
+	{
+		robotleftattack = false;
+	}
+	if (robotrightattack == true)
+	{
+		rightarmattack += (float)(8 * dt);
+	}
+	else if (robotrightattack == false)
+	{
+		rightarmattack -= (float)(8 * dt);
+	}
+	if (rightarmattack >= rightarmattacklimit)
+	{
+		robotrightattack = false;
+	}
+	else if (rightarmattack <= -rightarmattacklimit)
+	{
+		robotrightattack = true;
+	}
 
-	moverobot += (float)(2 * dt);
+	if (robothp == 0)
+	{
+		die = true;
+		robotCount--;
+	}
+	if (die == true)
+	{
+		collapse += (float)(15 * dt);
+		if (collapse > 85)
+		{
+			die = false;
+			collapse -= (float)(15 * dt);
+		}
+	}
 }
 void SP2_Scene::Update(double dt)
 {
 	camera.Update(dt);
 	constRotation += (float)(10 * pause * dt);
 	constTranslation += (float)(10 * pause  * dt);
-	RobotMovement(dt);
+	RobotAnimation(dt);
 	//Lerping Rotation
 	if ((rLimiter == true))
 	{
@@ -777,6 +868,8 @@ void SP2_Scene::Update(double dt)
 		translateX = 40;
 	}
 	translateX += (float)(10 * pause  * dt);
+
+
 	if (repairgate == true)
 	{
 		openleftgate = true;
@@ -1135,6 +1228,9 @@ void SP2_Scene::RenderUI()
 	//INFO UI, HP - CENTER
 	modelStack.PushMatrix();
 	RenderImageOnScreen(UI_BG, 50, 10, 80, 5);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(basehp), Color(1, 0, 0), 3, 60, 8);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Ammo: " + std::to_string(ammo), Color(1, 0, 0), 3, 60, 5.5);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Wave Number: " + std::to_string(wave), Color(1, 0, 0), 3, 60, 3);
 	modelStack.PopMatrix();
 	//INFO UI, HP END
 
@@ -1143,12 +1239,6 @@ void SP2_Scene::RenderUI()
 	RenderWepScreen(weaponinterface, WepItf_Choices);
 
 	RenderTeleporter(camera.teleCheck);
-
-	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(basehp), Color(0, 0.5, 0), 3, 2.5, 87);
-
-	RenderTextOnScreen(meshList[GEO_TEXT], "Ammo: " + std::to_string(ammo), Color(0, 0.5, 0), 3, 2.5, 84);
-
-	RenderTextOnScreen(meshList[GEO_TEXT], "Wave Number: " + std::to_string(wave), Color(0, 0.5, 0), 3, 2.5, 81);
 
 	if (pause == 0)
 	{
@@ -1250,10 +1340,6 @@ void SP2_Scene::Render(double dt)
 
 	GameState();
 
-	if (wave == 0)
-	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Robot wave incoming", Color(1, 0, 0), 3, 60, 87);
-	}
 	if (wave == 1)
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "*Robots coming from all directions*", Color(1, 0, 0), 3, 60, 87);
@@ -1356,45 +1442,54 @@ void SP2_Scene::Render(double dt)
 	//modelStack.PopMatrix();
 
 	//melee robot
-	modelStack.PushMatrix();
-	modelStack.Translate(0, 1, 10);
-	modelStack.Translate(0, 0, -moverobot);
-	RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
-		modelStack.PushMatrix();
-		modelStack.Rotate(rotateAngle, 1, 0, 0);
-		modelStack.Translate(0, 0, -10);
-		modelStack.Translate(0, 0, 10);
-		modelStack.Translate(0.3, 0, 0);
-		RenderMesh(meshList[GEO_MELEEROBOTLEFTUPPERARM], true);
-			modelStack.PushMatrix();
-			modelStack.Rotate(rotateAngle, 1, 0, 0);
-			RenderMesh(meshList[GEO_MELEEROBOTLEFTLOWERARM], true);
-			modelStack.PopMatrix();
-		modelStack.PopMatrix();
-			modelStack.PushMatrix();
-			modelStack.Rotate(rotateAngle, 1, 0, 0);
-			modelStack.Translate(0, 0, -10);
-			modelStack.Translate(0, 0, 10);
-			modelStack.Translate(-0.3, 0, 0);
-			RenderMesh(meshList[GEO_MELEEROBOTRIGHTUPPERARM], true);
-				modelStack.PushMatrix();
-				modelStack.Rotate(rotateAngle, 1, 0, 0);
-				RenderMesh(meshList[GEO_MELEEROBOTRIGHTLOWERARM], true);
-				modelStack.PopMatrix();
-			modelStack.PopMatrix();
-					modelStack.PushMatrix();
-					modelStack.Rotate(moveleftleg, 1, 0, 0);
-					modelStack.Translate(0, 0, -10);
-					modelStack.Translate(0, 0, 10);
-					modelStack.Translate(0.2, 0, 0);
-					RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
-					modelStack.PopMatrix();
-						modelStack.PushMatrix();
-						modelStack.Rotate(moverightleg, 1, 0, 0);
-						modelStack.Translate(-0.4, 0, 0);
-						RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
-						modelStack.PopMatrix();
-	modelStack.PopMatrix();
+	//for (int j = -2; j > -4; j--)
+	//{
+	//	for (int i = 0; i < 10; i++)
+	//	{
+	//		modelStack.PushMatrix();
+	//		modelStack.Translate(10*j+27, 0.5, 10*i+140);
+	//		modelStack.Translate(0, 0, -moverobot);
+	//		modelStack.Rotate(collapse, 1, 0, 0);
+	//		RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
+	//			modelStack.PushMatrix();
+	//			//modelStack.Rotate(rotatelefthand, 1, 0, 0);
+	//			//modelStack.Rotate(leftarmattack, 1, 0, 0);
+	//			modelStack.Translate(0, 0, -10);
+	//			modelStack.Translate(0, 0, 10);
+	//			modelStack.Translate(0.3, 0, 0);
+	//			RenderMesh(meshList[GEO_MELEEROBOTLEFTUPPERARM], true);
+	//				modelStack.PushMatrix();
+	//				//modelStack.Rotate(rotatelefthand, 1, 0, 0);
+	//				//modelStack.Rotate(leftarmattack,1,0,0);
+	//				RenderMesh(meshList[GEO_MELEEROBOTLEFTLOWERARM], true);
+	//				modelStack.PopMatrix();
+	//		modelStack.PopMatrix();
+	//			modelStack.PushMatrix();
+	//			//modelStack.Rotate(rotaterighthand, 1, 0, 0);
+	//			//modelStack.Rotate(rightarmattack, 1, 0, 0);
+	//			modelStack.Translate(0, 0, -10);
+	//			modelStack.Translate(0, 0, 10);
+	//			modelStack.Translate(-0.3, 0, 0);
+	//			RenderMesh(meshList[GEO_MELEEROBOTRIGHTUPPERARM], true);
+	//				modelStack.PushMatrix();
+	//				//modelStack.Rotate(rotaterighthand, 1, 0, 0);
+	//				//modelStack.Rotate(rightarmattack,1,0,0);
+	//				RenderMesh(meshList[GEO_MELEEROBOTRIGHTLOWERARM], true);
+	//				modelStack.PopMatrix();
+	//			modelStack.PopMatrix();
+	//					modelStack.PushMatrix();
+	//					//modelStack.Rotate(moveleftleg, 1, 0, 0);
+	//					modelStack.Translate(0, 0, -10);
+	//					modelStack.Translate(0, 0, 10);
+	//					RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
+	//					modelStack.PopMatrix();
+	//						modelStack.PushMatrix();
+	//						//modelStack.Rotate(moverightleg, 1, 0, 0);
+	//						RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
+	//						modelStack.PopMatrix();
+	//		modelStack.PopMatrix();
+	//	}
+	//}
 
 	////range robot
 	//modelStack.PushMatrix();
