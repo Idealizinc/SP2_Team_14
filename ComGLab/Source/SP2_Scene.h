@@ -229,6 +229,11 @@ public:
 
 	float collapse;
 	bool die;
+
+	bool droidrepair;
+	float droidrepairgate;
+	float droidlimit;
+
 	bool rLimiter;
 	bool toggleLimiters;
 	bool limitersON;
