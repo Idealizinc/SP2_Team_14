@@ -91,11 +91,6 @@ private:
 	Boundary Floor2FrontRight;
 	Boundary Floor2BackLeft;
 	Boundary Floor2BackRight;
-
-	Boundary Rock1a;
-	Boundary Rock1b;
-	Boundary Rock1c;
-	Boundary Rock1d;
 	//Interactive
 	Boundary TeleporterF1NW;
 	Boundary TeleporterF1NE;
