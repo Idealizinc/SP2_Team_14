@@ -37,6 +37,7 @@ private:
 	void initBoundVec();
 	float rotate_Sensitivity = S_Width / S_Height * 2;
 	float walkingSpeed = 5.f;
+	float gravity;
 
     void cameraMovement(double dt);
     int boxX, boxZ;

@@ -110,6 +110,7 @@ class SP2_Scene : public Scene
 		GEO_CRYSTALBASE,
 		GEO_MOONFLOOR,
 		GEO_TELEPORTER,
+		GEO_BULLET,
 
 		//add these enum in GEOMETRY_TYPE before NUM_GEOMETRY
 		GEO_TEXT,
@@ -219,6 +220,7 @@ public:
 	bool leftleg;
 	bool rightleg;
 
+<<<<<<< HEAD
 	bool robotleftattack;
 	bool robotrightattack;
 	float rightarmattack;
@@ -231,6 +233,8 @@ public:
 	
 	
 
+=======
+>>>>>>> 87c4671757f1f63fa2c0ac76635acacb22d7afc4
 	bool rLimiter;
 	bool toggleLimiters;
 	bool limitersON;
@@ -254,6 +258,30 @@ public:
 
 	WeaponSystem WepSys;
 
+	//Gun Stuff
+	bool CanFire = true;
+	float GunWaitTime = 0;
+	enum Gun_Type
+	{
+		N_SMG,
+		N_Rifle,
+		N_Sniper,
+		N_Shotgun,
+		D_Rifle,
+		D_Sniper,
+		D_Shotgun,
+		C_Rifle,
+		C_Sniper,
+		C_Shotgun,
+		F_Rifle,
+		F_Sniper,
+		F_Shotgun,
+	};
+	Gun_Type currentGun = N_SMG;
+	float RateOfFire = 10;
+	float Damage = 0;
+	float MaxAmmo = 0;
+	float CurrAmmo = MaxAmmo;
 private:
 	unsigned short weaponValue;
 	GLuint SB_Day_front, SB_Day_back, SB_Day_top, SB_Day_bottom, SB_Day_left, SB_Day_right;
