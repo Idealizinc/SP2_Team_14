@@ -822,6 +822,7 @@ void SP2_Scene::RobotAnimation(double dt)
 	{
 		rightleg = true;
 	}
+	//walking
 	if (walk == true)
 	{
 		moverobot += (float)(5 * dt);
