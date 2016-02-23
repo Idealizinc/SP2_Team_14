@@ -54,6 +54,11 @@ private:
 	
 	float velocityY = 0;
 
+	int jumpForce;
+	int groundlevel;
+	int jumpImpulse;
+	int jumpSpeed;
+
 	//Bounds
 	//Refer to blueprints for bound location
 	
