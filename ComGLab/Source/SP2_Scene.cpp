@@ -1220,6 +1220,15 @@ void SP2_Scene::Update(double dt)
 	}
 	WepSys.IncrementPosition();
 	WepSys.CleanUp();
+
+	if (curRobotCount < RobotManager.MaxRobotCount && Application::IsKeyPressed(VK_RBUTTON))
+	{
+		RobotManager.RobotList.push_back(Robot(0, Vector3(-100, 0, 0)));
+		curRobotCount++;
+	}
+
+	RobotManager.IncrementPosition();
+	RobotManager.CleanUp();
 }
 
 void SP2_Scene::RenderSkybox(Vector3 Position)
@@ -1640,6 +1649,46 @@ void SP2_Scene::Render(double dt)
 		modelStack.Translate(i.Position().x, i.Position().y, i.Position().z);
 		modelStack.Scale(0.1, 0.1, 0.1);
 		RenderMesh(meshList[GEO_BULLET], false);
+		modelStack.PopMatrix();
+	}
+
+	for (auto i : RobotManager.RobotList)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(i.Position().x, i.Position().y, i.Position().z);
+		RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
+		modelStack.PushMatrix();
+		//modelStack.Rotate(rotateAngle, 1, 0, 0);
+		modelStack.Translate(0, 0, -10);
+		modelStack.Translate(0, 0, 10);
+		modelStack.Translate(0.3, 0, 0);
+		RenderMesh(meshList[GEO_MELEEROBOTLEFTUPPERARM], true);
+			modelStack.PushMatrix();
+			//modelStack.Rotate(rotateAngle, 1, 0, 0);
+			RenderMesh(meshList[GEO_MELEEROBOTLEFTLOWERARM], true);
+			modelStack.PopMatrix();
+		modelStack.PopMatrix();
+			modelStack.PushMatrix();
+			//modelStack.Rotate(rotateAngle, 1, 0, 0);
+			modelStack.Translate(0, 0, -10);
+			modelStack.Translate(0, 0, 10);
+			modelStack.Translate(-0.3, 0, 0);
+			RenderMesh(meshList[GEO_MELEEROBOTRIGHTUPPERARM], true);
+				modelStack.PushMatrix();
+				//modelStack.Rotate(rotateAngle, 1, 0, 0);
+				RenderMesh(meshList[GEO_MELEEROBOTRIGHTLOWERARM], true);
+				modelStack.PopMatrix();
+			modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		modelStack.Rotate(moveleftleg, 1, 0, 0);
+		modelStack.Translate(0, 0, -10);
+		modelStack.Translate(0, 0, 10);
+		RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
+		modelStack.PopMatrix();
+			modelStack.PushMatrix();
+			modelStack.Rotate(moverightleg, 1, 0, 0);
+			RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
+			modelStack.PopMatrix();
 		modelStack.PopMatrix();
 	}
 

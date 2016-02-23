@@ -12,7 +12,8 @@
 #include <string>
 #include <vector>
 #include "WeaponSystem.h"
-//#include "Robot.h"
+#include "Robot.h"
+#include "RobotManager.h"
 
 using std::vector;
 
@@ -261,6 +262,7 @@ public:
 	MS modelStack, viewStack, projectionStack;
 
 	WeaponSystem WepSys;
+	RobotManager RobotManager;
 
 	//Gun Stuff
 	bool CanFire = true;
