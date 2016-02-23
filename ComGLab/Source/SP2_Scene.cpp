@@ -956,11 +956,11 @@ void SP2_Scene::RobotAnimation(double dt)
 		robotrightattack = true;
 	}
 
-	if (Robot::RobotHP == 0)
-	{
-		die = true;
-		curRobotCount--;
-	}
+	//if (Robot::RobotHP == 0)
+	//{
+	//	die = true;
+	//	curRobotCount--;
+	//}
 	if (die == true)
 	{
 		collapse += (float)(15 * dt);
