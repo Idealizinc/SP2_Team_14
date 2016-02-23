@@ -1,8 +1,28 @@
 #include "Robot.h"
 
+#define PI 3.1415926535
+
 Robot::~Robot()
 {
 
+}
+
+void Robot::findAngle()
+{
+	float A, B, C, total, rotateToTarget;
+	A = ((0 * DirVec.x) + (0 * DirVec.y) + (1 * DirVec.z));
+
+	B = pow(0, 2) + pow(0, 2), pow(1, 2);
+	B = sqrt(B);
+
+	C = pow(DirVec.x, 2) + pow(DirVec.y, 2) + pow(DirVec.z, 2);
+	C = sqrt(C);
+
+	total = (B * C);
+
+	rotateToTarget = A / total;
+
+	rotateToTarget = acos(rotateToTarget) * 180.0 / PI;
 }
 
 Vector3 Robot::Move()

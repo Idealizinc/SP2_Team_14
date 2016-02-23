@@ -1223,7 +1223,7 @@ void SP2_Scene::Update(double dt)
 
 	if (curRobotCount < RobotManager.MaxRobotCount && Application::IsKeyPressed(VK_RBUTTON))
 	{
-		RobotManager.RobotList.push_back(Robot(0, Vector3(-100, 0, 100)));
+		RobotManager.RobotList.push_back(Robot(0, Vector3(100, 0, -100)));
 		curRobotCount++;
 	}
 
@@ -1656,6 +1656,7 @@ void SP2_Scene::Render(double dt)
 	{
 		modelStack.PushMatrix();
 		modelStack.Translate(i.Position().x, i.Position().y, i.Position().z);
+		modelStack.Rotate(i.rotateToTarget, 0, 1, 0);
 		RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
 		modelStack.PushMatrix();
 		//modelStack.Rotate(rotateAngle, 1, 0, 0);

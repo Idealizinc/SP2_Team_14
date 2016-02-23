@@ -3,6 +3,8 @@
 
 #include "Vector3.h"
 #include "Boundary.h"
+#include <math.h>
+#include <cmath>
 
 class Robot
 {
@@ -21,6 +23,8 @@ public:
 	Boundary BoundingBox;
 	void SetHealth(float newHP);
 	bool checkHealth();
+	void findAngle();
+	float rotateToTarget;
 private:
 	Vector3 GetDirVec(Vector3 Target);
 	void SetStats(int Type);
