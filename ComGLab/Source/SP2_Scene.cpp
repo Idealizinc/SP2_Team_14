@@ -1223,7 +1223,7 @@ void SP2_Scene::Update(double dt)
 
 	if (curRobotCount < RobotManager.MaxRobotCount && Application::IsKeyPressed(VK_RBUTTON))
 	{
-		RobotManager.RobotList.push_back(Robot(0, Vector3(100, 0, -100)));
+		RobotManager.RobotList.push_back(Robot(0, Vector3(-100, 0, 100), Boundary(-3,3,-3,3,0,4)));
 		curRobotCount++;
 	}
 

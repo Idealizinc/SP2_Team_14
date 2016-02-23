@@ -2,6 +2,17 @@
 
 #define PI 3.1415926535
 
+Robot::Robot(int RobotType, Vector3 SpawnPos, Boundary BBox) : CurrPos(SpawnPos)
+{ 
+	SetStats(RobotType); 
+	BoundingBox.xMax = BBox.xMax;
+	BoundingBox.xMin = BBox.xMin;
+	BoundingBox.yMax = BBox.yMax;
+	BoundingBox.yMin = BBox.yMin;
+	BoundingBox.zMax = BBox.zMax;
+	BoundingBox.zMin = BBox.zMin;
+}
+
 Robot::~Robot()
 {
 
@@ -15,7 +26,10 @@ void Robot::findAngle()
 	B = pow(0, 2) + pow(0, 2), pow(1, 2);
 	B = sqrt(B);
 
-	C = pow(DirVec.x, 2) + pow(DirVec.y, 2) + pow(DirVec.z, 2);
+	B = pow(0, 2) + pow(1, 2), pow(0, 2);
+	B = sqrt(B);
+
+	C = pow(DirVec.x, 2) + pow(DirVec.z, 2) + pow(DirVec.y, 2);
 	C = sqrt(C);
 
 	total = (B * C);
@@ -32,7 +46,12 @@ Vector3 Robot::Move()
 	CurrPos.x += DirVec.x * Speed;
 	CurrPos.y += DirVec.y * Speed;
 	CurrPos.z += DirVec.z * Speed;
-	//BoundingBox.xMax += StoredDirVec.x * Speed;
+	BoundingBox.xMax += DirVec.x * Speed;
+	BoundingBox.xMin += DirVec.x * Speed;
+	BoundingBox.yMax += DirVec.y * Speed;
+	BoundingBox.yMin += DirVec.y * Speed;
+	BoundingBox.zMax += DirVec.z * Speed;
+	BoundingBox.zMin += DirVec.z * Speed;
 	return CurrPos;
 }
 

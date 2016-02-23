@@ -14,7 +14,7 @@ public:
 	{
 		Melee = 0, Ranged, Mixed,
 	};
-	Robot(int RobotType, Vector3 SpawnPos, Boundary BBox = 0) : CurrPos(SpawnPos), BoundingBox(BBox){ SetStats(RobotType); }
+	Robot(int RobotType, Vector3 SpawnPos, Boundary BBox = 0);
 	~Robot();
 	Vector3 Move();
 	Vector3 Position();
