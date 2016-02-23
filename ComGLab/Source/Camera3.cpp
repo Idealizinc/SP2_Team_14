@@ -1,7 +1,7 @@
 #include "Camera3.h"
 #include "Application.h"
 #include "Mtx44.h"
-
+#include "CameraPhysics.h"
 #include "MyMath.h"
 
 Camera3::Camera3()
@@ -28,10 +28,30 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up,
 	minCameraXrotation = -89;
 
 	rotate_Sensitivity = 2;
-	cameraMass = 1;
+	cameraMass = mass;
 	outOfBounds = false;
 	initBoundVec();
 	teleCheck = false;
+	leftGateA = -2.3;
+	leftGateB = 2.3;
+	rightGateA = 2.3;
+	rightGateB = -2.3;
+	frontGateA = 2.3;
+	frontGateB = -2.3;
+	backGateA = 2.3;
+	backGateB = -2.3;
+	checkLeftGate = false;
+	openLeftGate = false;
+	checkRightGate = false;
+	openRightGate = false;
+	checkFrontGate = false;
+	openFrontGate = false;
+	checkBackGate = false;
+	openBackGate = false;
+
+	jumpForce = 0;
+	groundlevel = 6;
+	jumpImpulse = 0;
 }
 
 void Camera3::Update(double dt)
@@ -49,6 +69,51 @@ void Camera3::Update(double dt)
 	else
 	{
 		teleCheck = false;
+	}
+
+	if (!leftGate.BoundaryCheck(position.x, position.z, position.y))
+	{
+		checkLeftGate = true;
+	}
+	else
+	{
+		checkLeftGate = false;
+	}
+	if (openLeftGate == true)
+	{
+		leftGateA -= 1;
+		leftGateB += 1;
+	}
+	if (leftGateA <= -5.3 && leftGateB >= 5.3)
+	{
+		openLeftGate = false;
+	}
+	if (openRightGate == true)
+	{
+		rightGateA += 1;
+		rightGateB -= 1;
+	}
+	if (rightGateA >= 5.3 && rightGateB <= -5.3)
+	{
+		openRightGate = false;
+	}
+	if (openFrontGate == true)
+	{
+		frontGateA += 1;
+		frontGateB -= 1;
+	}
+	if (frontGateA >= 5.3 && frontGateB <= -5.3)
+	{
+		openFrontGate = false;
+	}
+	if (openBackGate == true)
+	{
+		backGateA += 1;
+		backGateB -= 1;
+	}
+	if (backGateA >= 5.3 && backGateB <= -5.3)
+	{
+		openBackGate = false;
 	}
 }
 
@@ -193,9 +258,30 @@ void Camera3::cameraMovement2(double dt)
 		walkingX += (float)(sin(Math::DegreeToRadian(CameraYrotation + 270)) / walkingSpeed);
 		walkingZ += (float)(cos(Math::DegreeToRadian(CameraYrotation + 270)) / walkingSpeed);
 	}
-	if (Application::IsKeyPressed(' ') || Application::IsKeyPressed(VK_SPACE))
+	//if (Application::IsKeyPressed(' ') || Application::IsKeyPressed(VK_SPACE))
+	//{
+	//	/*position.y -= velocityY * 0.5;
+	//	velocityY -= gravity;*/
+	//}
+	if (Application::IsKeyPressed(VK_SPACE))
 	{
-		velocityY = 5.0f;
+		/*if (position.y <= groundlevel)
+		{*/
+			jumpImpulse = 2 * dt;
+			jumpForce = 15000;
+			jumpSpeed = static_cast<float>(Physics::getAcceleration(jumpForce, cameraMass));
+			position.y += jumpSpeed * (float)jumpImpulse;
+		//}
+	}
+	/*if (position.y > groundlevel)
+	{
+		jumpSpeed = Physics::gravitational_pulled(jumpSpeed, dt);
+		position.y += jumpSpeed * (float)dt;
+	}*/
+	rotateCamera(dt);
+	if (Application::IsKeyPressed('R'))
+	{
+	    Reset();
 	}
 	if (walkingX != 0 && northwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && northwall2.BoundaryCheck(walkingX + position.x, position.z, position.y)
 		&& westwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && westwall2.BoundaryCheck(walkingX + position.x, position.z, position.y)
@@ -228,7 +314,7 @@ void Camera3::cameraMovement2(double dt)
 		position.z += walkingZ;
 	}
 	//Gravity
-	if (gravity != 0 && northwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && northwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+	/*if (velocityY != 0 && northwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && northwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
 		&& westwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && westwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
 		&& eastwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && eastwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
 		&& southwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && southwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && corebase.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
@@ -242,7 +328,7 @@ void Camera3::cameraMovement2(double dt)
 		&& Floor2Top.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2Bot.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity))
 	{
 		position.y -= gravity;
-	}
+	}*/
 	//Teleporter
 	if ((teleCheck == true && TeleporterF1NW.BoundaryCheck(position.x, position.z, position.y)
 		|| (teleCheck == true && TeleporterF1NE.BoundaryCheck(position.x, position.z, position.y))
@@ -252,6 +338,11 @@ void Camera3::cameraMovement2(double dt)
 		position.x = 5;
 		position.y = 16;
 		position.z = 3;
+	}
+
+	if ((checkLeftGate == true && leftGate.BoundaryCheck(position.x, position.z, position.y)) && Application::IsKeyPressed('E'))
+	{
+		openLeftGate = true;
 	}
 }
 
@@ -267,15 +358,6 @@ void Camera3::initBoundVec()
 	southwall2.set(-18.3, -15.9, 4.6, 18.0, -5, 10);
 	eastwall2.set(4.6, 18.0, 15.3, 19.0, -5, 10);
 	westwall2.set(-18.0, -4.6, -19.3, -14.8, -5, 10);
-
-	northgate1.set();
-	southgate1.set();
-	eastgate1.set();
-	westgate1.set();
-	northgate2.set();
-	southgate2.set();
-	eastgate2.set();
-	westgate2.set();
 
 	corebase.set(-1.5, 1.5, -1.5, 1.5, -5 , 10);
 
@@ -300,6 +382,8 @@ void Camera3::initBoundVec()
 	TeleporterF1NE.set(-17, -10, 9, 17, -5, 10);
 	TeleporterF1SW.set(10, 17, -17, -9, -5, 10);
 	TeleporterF1SE.set(-17, -10, -17, -9, -5, 10);
+
+	leftGate.set(8, 26, -5, 5, -5, 10);
 }
 
 

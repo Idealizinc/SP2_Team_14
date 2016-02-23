@@ -19,10 +19,20 @@ Vector3 RayCast::Position()
 	return RayPos;
 }
 
-void RayCast::BoundsCheck()
+bool RayCast::BoundsCheck(std::list<Robot> RobotList)
 {
 	// If Bullet in specific bounds, Wall Collision
 	// Pop Bullet. 
-	// If Bullet in Robot Bounds, Damage Robot
-	// Pop Bullet
+
+	//Bot Bullet Trigger Check
+	for (auto i : RobotList)
+	{
+		if (!i.BoundingBox.BoundaryCheck(RayPos.x, RayPos.z, RayPos.y))
+		{
+			i.SetHealth(i.GetHealth() - Damage);
+			return true;
+			// Weapon Sys Detects if True, if so pop shot.
+		}
+	}
+	return false;
 }

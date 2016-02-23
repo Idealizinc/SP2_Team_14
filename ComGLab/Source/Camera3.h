@@ -27,6 +27,22 @@ public:
 
     bool isOutofBounds();
 	bool teleCheck;
+	float leftGateA;
+	float leftGateB;
+	float rightGateA;
+	float rightGateB;
+	float frontGateA;
+	float frontGateB;
+	float backGateA;
+	float backGateB;
+	bool checkLeftGate;
+	bool openLeftGate;
+	bool checkRightGate;
+	bool openRightGate;
+	bool checkFrontGate;
+	bool openFrontGate;
+	bool checkBackGate;
+	bool openBackGate;
 	
 private:
 	Vector3 view;
@@ -54,6 +70,11 @@ private:
 	
 	float velocityY = 0;
 
+	int jumpForce;
+	int groundlevel;
+	int jumpImpulse;
+	int jumpSpeed;
+
 	//Bounds
 	//Refer to blueprints for bound location
 	
@@ -65,14 +86,6 @@ private:
 	Boundary southwall2;
 	Boundary eastwall2;
 	Boundary westwall2;
-	Boundary northgate1;
-	Boundary southgate1;
-	Boundary eastgate1;
-	Boundary westgate1;
-	Boundary northgate2;
-	Boundary southgate2;
-	Boundary eastgate2;
-	Boundary westgate2;
 	Boundary corebase;
 	
 	Boundary WorldBot;
@@ -97,6 +110,11 @@ private:
 	Boundary TeleporterF1NE;
 	Boundary TeleporterF1SW;
 	Boundary TeleporterF1SE;
+
+	Boundary leftGate;
+	Boundary rightGate;
+	Boundary frontGate;
+	Boundary backGate;
 };
 
 #endif
