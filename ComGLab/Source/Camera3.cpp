@@ -32,6 +32,23 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up,
 	outOfBounds = false;
 	initBoundVec();
 	teleCheck = false;
+	leftGateA = -2.3;
+	leftGateB = 2.3;
+	rightGateA = 2.3;
+	rightGateB = -2.3;
+	frontGateA = 2.3;
+	frontGateB = -2.3;
+	backGateA = 2.3;
+	backGateB = -2.3;
+	checkLeftGate = false;
+	openLeftGate = false;
+	checkRightGate = false;
+	openRightGate = false;
+	checkFrontGate = false;
+	openFrontGate = false;
+	checkBackGate = false;
+	openBackGate = false;
+
 	jumpForce = 0;
 	groundlevel = 6;
 	jumpImpulse = 0;
@@ -52,6 +69,51 @@ void Camera3::Update(double dt)
 	else
 	{
 		teleCheck = false;
+	}
+
+	if (!leftGate.BoundaryCheck(position.x, position.z, position.y))
+	{
+		checkLeftGate = true;
+	}
+	else
+	{
+		checkLeftGate = false;
+	}
+	if (openLeftGate == true)
+	{
+		leftGateA -= 1;
+		leftGateB += 1;
+	}
+	if (leftGateA <= -5.3 && leftGateB >= 5.3)
+	{
+		openLeftGate = false;
+	}
+	if (openRightGate == true)
+	{
+		rightGateA += 1;
+		rightGateB -= 1;
+	}
+	if (rightGateA >= 5.3 && rightGateB <= -5.3)
+	{
+		openRightGate = false;
+	}
+	if (openFrontGate == true)
+	{
+		frontGateA += 1;
+		frontGateB -= 1;
+	}
+	if (frontGateA >= 5.3 && frontGateB <= -5.3)
+	{
+		openFrontGate = false;
+	}
+	if (openBackGate == true)
+	{
+		backGateA += 1;
+		backGateB -= 1;
+	}
+	if (backGateA >= 5.3 && backGateB <= -5.3)
+	{
+		openBackGate = false;
 	}
 }
 
@@ -211,11 +273,11 @@ void Camera3::cameraMovement2(double dt)
 			position.y += jumpSpeed * (float)jumpImpulse;
 		//}
 	}
-	if (position.y > groundlevel)
+	/*if (position.y > groundlevel)
 	{
 		jumpSpeed = Physics::gravitational_pulled(jumpSpeed, dt);
 		position.y += jumpSpeed * (float)dt;
-	}
+	}*/
 	rotateCamera(dt);
 	if (Application::IsKeyPressed('R'))
 	{
@@ -277,6 +339,11 @@ void Camera3::cameraMovement2(double dt)
 		position.y = 16;
 		position.z = 3;
 	}
+
+	if ((checkLeftGate == true && leftGate.BoundaryCheck(position.x, position.z, position.y)) && Application::IsKeyPressed('E'))
+	{
+		openLeftGate = true;
+	}
 }
 
 void Camera3::initBoundVec()
@@ -291,15 +358,6 @@ void Camera3::initBoundVec()
 	southwall2.set(-18.3, -15.9, 4.6, 18.0, -5, 10);
 	eastwall2.set(4.6, 18.0, 15.3, 19.0, -5, 10);
 	westwall2.set(-18.0, -4.6, -19.3, -14.8, -5, 10);
-
-	northgate1.set();
-	southgate1.set();
-	eastgate1.set();
-	westgate1.set();
-	northgate2.set();
-	southgate2.set();
-	eastgate2.set();
-	westgate2.set();
 
 	corebase.set(-1.5, 1.5, -1.5, 1.5, -5 , 10);
 
@@ -324,6 +382,8 @@ void Camera3::initBoundVec()
 	TeleporterF1NE.set(-17, -10, 9, 17, -5, 10);
 	TeleporterF1SW.set(10, 17, -17, -9, -5, 10);
 	TeleporterF1SE.set(-17, -10, -17, -9, -5, 10);
+
+	leftGate.set(8, 26, -5, 5, -5, 10);
 }
 
 

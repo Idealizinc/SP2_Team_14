@@ -12,6 +12,7 @@
 #include <string>
 #include <vector>
 #include "WeaponSystem.h"
+//#include "Robot.h"
 
 using std::vector;
 
@@ -91,14 +92,18 @@ class SP2_Scene : public Scene
 		GEO_MELEEROBOTRIGHTLEG,
 
 		GEO_RANGEROBOTBODY,
-		GEO_RANGEROBOTLEFTARM,
-		GEO_RANGEROBOTRIGHTARM,
+		GEO_RANGEROBOTLEFTUPPERARM,
+		GEO_RANGEROBOTLEFTLOWERARM,
+		GEO_RANGEROBOTRIGHTUPPERARM,
+		GEO_RANGEROBOTRIGHTLOWERARM,
 		GEO_RANGEROBOTLEFTLEG,
 		GEO_RANGEROBOTRIGHTLEG,
 
 		GEO_MIXEDROBOTBODY,
-		GEO_MIXEDROBOTLEFTARM,
-		GEO_MIXEDROBOTRIGHTARM,
+		GEO_MIXEDROBOTLEFTUPPERARM,
+		GEO_MIXEDROBOTLEFTLOWERARM,
+		GEO_MIXEDROBOTRIGHTUPPERARM,
+		GEO_MIXEDROBOTRIGHTLOWERARM,
 		GEO_MIXEDROBOTLEFTLEG,
 		GEO_MIXEDROBOTRIGHTLEG,
 
@@ -310,7 +315,9 @@ private:
 	void RenderMeshOnScreen(Mesh* mesh, float Xsize = 1, float Ysize = 1, float Xpos = 0, float Ypos = 0, float Angle = 0, Vector3 RotationDir = Vector3(0, 0, 0));
 	void RenderWepScreen(bool render = false, Vector3 choices = Vector3(0, 0, 0));
 	void RenderTeleporter(bool render = false);
+	void RenderGateText(bool render = false);
 	void RenderRocks();
+	void RenderLevel();
 	void initBounds();
 	void RenderGate(bool render = false);
 	void RenderUI();
@@ -319,10 +326,6 @@ private:
 	//Interaction Values
 	bool buttonPress;
 	int buttonValue;
-	float leftgate;
-	float rightgate;
-	bool openleftgate;
-	bool openrightgate;
 
 	//test on screen values
 	double fps;
@@ -330,7 +333,6 @@ private:
 	unsigned int gatehp;
 	unsigned int bosshp;
 	unsigned int playerhp;
-	unsigned int robothp;
 	unsigned int ammo;
 	unsigned int wave;
 	float framesPerSecond;
@@ -344,12 +346,6 @@ private:
 	float timer;
 	bool weaponinterface;
 	bool repairgate;
-
-	//robot dmg
-	unsigned int meleedmg = 5;
-	unsigned int rangedmg = 5;
-	unsigned int mixedmelee = 4;
-	unsigned int mixedrange = 4;
 
 	//Light Stuff
 	Vector3 TownLightPosition;
