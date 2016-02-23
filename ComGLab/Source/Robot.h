@@ -3,6 +3,8 @@
 
 #include "Vector3.h"
 #include "Boundary.h"
+#include <math.h>
+#include <cmath>
 
 class Robot
 {
@@ -12,7 +14,7 @@ public:
 	{
 		Melee = 0, Ranged, Mixed,
 	};
-	Robot(int RobotType, Vector3 SpawnPos, Boundary BBox = 0) : CurrPos(SpawnPos), BoundingBox(BBox){ SetStats(RobotType); }
+	Robot(int RobotType, Vector3 SpawnPos, Boundary BBox = 0);
 	~Robot();
 	Vector3 Move();
 	Vector3 Position();
@@ -21,6 +23,8 @@ public:
 	Boundary BoundingBox;
 	void SetHealth(float newHP);
 	bool checkHealth();
+	void findAngle();
+	float rotateToTarget;
 private:
 	Vector3 GetDirVec(Vector3 Target);
 	void SetStats(int Type);
