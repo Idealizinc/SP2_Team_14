@@ -18,7 +18,9 @@ public:
 	Vector3 Position();
 	void BoundsCheck();
 	float GetHealth();
-
+	Boundary BoundingBox;
+	void SetHealth(float newHP);
+	bool checkHealth();
 private:
 	Vector3 GetDirVec(Vector3 Target);
 	void SetStats(int Type);
@@ -29,7 +31,6 @@ private:
 	Vector3 TargetPos = (1, 1, 1);
 	Vector3 DirVec;
 	Vector3 CurrPos;
-	Boundary BoundingBox;
 };
 
 #endif

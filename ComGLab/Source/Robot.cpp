@@ -34,6 +34,23 @@ float Robot::GetHealth()
 	return Health;
 }
 
+void Robot::SetHealth(float newHP)
+{
+	Health = newHP;
+}
+
+bool Robot::checkHealth()
+{
+	if (Health >= 0)
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
 Vector3 Robot::GetDirVec(Vector3 Target)
 {
 	DirVec = Target - CurrPos;

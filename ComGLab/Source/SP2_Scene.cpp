@@ -1223,7 +1223,7 @@ void SP2_Scene::Update(double dt)
 
 	if (curRobotCount < RobotManager.MaxRobotCount && Application::IsKeyPressed(VK_RBUTTON))
 	{
-		RobotManager.RobotList.push_back(Robot(0, Vector3(-100, 0, 0)));
+		RobotManager.RobotList.push_back(Robot(0, Vector3(-100, 0, 100)));
 		curRobotCount++;
 	}
 
@@ -1454,7 +1454,7 @@ void SP2_Scene::RenderUI()
 
 	RenderTeleporter(camera.teleCheck);
 
-	RenderGateText(camera.checkLeftGate || camera.checkRightGate || camera.checkFrontGate || camera.checkBackGate);
+	//RenderGateText(camera.checkLeftGate || camera.checkRightGate || camera.checkFrontGate || camera.checkBackGate);
 
 	RenderTextOnScreen(meshList[GEO_TEXT], "Base HP: " + std::to_string(basehp), Color(0, 0.5, 0), 3, 2.5, 87);
 
