@@ -12,7 +12,11 @@
 #include <string>
 #include <vector>
 #include "WeaponSystem.h"
+<<<<<<< HEAD
 //#include "Robot.h"
+=======
+#include "RobotManager.h"
+>>>>>>> ace74c50eb2b882a60595127739e58615decd827
 
 using std::vector;
 
@@ -247,7 +251,10 @@ public:
 	bool canUseDoor = true;
 	int weaponSelect;
 	bool sniper, rifle;
+<<<<<<< HEAD
 	unsigned short curRobotCount;
+=======
+>>>>>>> ace74c50eb2b882a60595127739e58615decd827
 	//unsigned int pause;
 
 	unsigned short skyboxID = 0;
@@ -261,6 +268,11 @@ public:
 	MS modelStack, viewStack, projectionStack;
 
 	WeaponSystem WepSys;
+<<<<<<< HEAD
+=======
+	RobotManager RobotManager;
+	unsigned short currRobotCount;
+>>>>>>> ace74c50eb2b882a60595127739e58615decd827
 
 	//Gun Stuff
 	bool CanFire = true;
@@ -375,7 +387,6 @@ private:
 	GLuint Fast_Shotgun = LoadTGA("Image//Tex_ShotgunFast.tga");
 
 	//Weapon System
-
 	void WeaponSystem(Vector3 LookVector);
 };
 

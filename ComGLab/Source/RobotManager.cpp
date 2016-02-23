@@ -1,6 +1,6 @@
-#include "Robotsystem.h"
+#include "RobotManager.h"
 
-Robotsystem::~Robotsystem()
+RobotManager::~RobotManager()
 {
 	for (std::list<Robot>::iterator iter = RobotList.begin(); iter != RobotList.end(); /*++iter*/)
 	{
@@ -8,7 +8,7 @@ Robotsystem::~Robotsystem()
 	}
 }
 
-void Robotsystem::IncrementPosition()
+void RobotManager::IncrementPosition()
 {
 	for (std::list<Robot>::iterator iter = RobotList.begin(); iter != RobotList.end(); ++iter)
 	{
@@ -16,7 +16,7 @@ void Robotsystem::IncrementPosition()
 	}
 }
 
-void Robotsystem::CleanUp()
+void RobotManager::CleanUp()
 {
 	if (RobotList.size() > MaxRobotCount)
 	{
@@ -24,7 +24,11 @@ void Robotsystem::CleanUp()
 	}
 	for (std::list<Robot>::iterator iter = RobotList.begin(); iter != RobotList.end(); /*++iter*/)
 	{
-		if (GetLength(*iter) > MaxDist)
+		/*if (GetDist(*iter) > MaxDist)
+		{
+			iter = RobotList.erase(iter);
+		}*/
+		if ((*iter).GetHealth() <= 0)
 		{
 			iter = RobotList.erase(iter);
 		}
@@ -33,9 +37,10 @@ void Robotsystem::CleanUp()
 			++iter;
 		}
 	}
+
 }
 
-void Robotsystem::ClearList()
+void RobotManager::ClearList()
 {
 	for (std::list<Robot>::iterator iter = RobotList.begin(); iter != RobotList.end(); /*++iter*/)
 	{
@@ -43,7 +48,7 @@ void Robotsystem::ClearList()
 	}
 }
 
-float Robotsystem::GetLength(Robot robot)
-{
-	return robot.Position().Length();
-}
+//float RobotManager::GetDist(Robot Ray)
+//{
+//	return Ray.Position().Length();
+//}

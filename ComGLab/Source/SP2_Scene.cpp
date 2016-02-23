@@ -5,7 +5,10 @@
 #include "Mtx44.h"
 #include "Application.h"
 #include "MeshBuilder.h"
+<<<<<<< HEAD
 #include "Robot.h"
+=======
+>>>>>>> ace74c50eb2b882a60595127739e58615decd827
 #include "Utility.h"
 #include <fstream>
 #include <iostream>
@@ -93,7 +96,11 @@ void SP2_Scene::Init()
 	//droidrepair = false;
 	droidrepairgate = 0;
 
+<<<<<<< HEAD
 	curRobotCount = 1;
+=======
+	currRobotCount = 1;
+>>>>>>> ace74c50eb2b882a60595127739e58615decd827
 	leftarmrotatelimit = -1;
 	rightarmrotatelimit = -1;
 	leftarmrotate = true;
@@ -634,13 +641,18 @@ void SP2_Scene::initLights()
 
 void SP2_Scene::GameState()
 {
+<<<<<<< HEAD
 	if (basehp <= 0 || playerhp == 0)
+=======
+	if (basehp == 0 || playerhp == 0)
+>>>>>>> ace74c50eb2b882a60595127739e58615decd827
 	{
 		wave = 0;
 		camera.Reset();
 		wave = 1;
 		playerhp = 100;
 		basehp = 100;
+<<<<<<< HEAD
 	}
 	if (curRobotCount <= 0)
 	{
@@ -657,6 +669,17 @@ void SP2_Scene::RenderLevel()
 		if (curRobotCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1 clear", Color(1, 0, 0), 3, 20, 15);
+=======
+	}
+	if (wave == 1)
+	{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1", Color(1, 0, 0), 3, 60, 87);
+			
+			if (currRobotCount == 0)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1 clear", Color(1, 0, 0), 3, 20, 15);
+			weaponinterface = true;
+>>>>>>> ace74c50eb2b882a60595127739e58615decd827
 		}
 	}
 
@@ -708,18 +731,32 @@ void SP2_Scene::RenderLevel()
 		//}
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2", Color(1, 0, 0), 3, 60, 87);
 
+<<<<<<< HEAD
 		if (curRobotCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2 clear", Color(1, 0, 0), 3, 20, 15);
+=======
+		if (currRobotCount == 0)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2 clear", Color(1, 0, 0), 3, 20, 15);
+			weaponinterface = true;
+>>>>>>> ace74c50eb2b882a60595127739e58615decd827
 		}
 	}
 	if (wave == 3)
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3", Color(1, 0, 0), 3, 60, 87);
 
+<<<<<<< HEAD
 		if (curRobotCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 20, 15);
+=======
+		if (currRobotCount == 0)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 20, 15);
+			weaponinterface = true;
+>>>>>>> ace74c50eb2b882a60595127739e58615decd827
 		}
 	}
 	if (wave == 4)
@@ -769,18 +806,32 @@ void SP2_Scene::RenderLevel()
 		//}
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4", Color(1, 0, 0), 3, 60, 87);
 
+<<<<<<< HEAD
 		if (curRobotCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4 clear", Color(1, 0, 0), 3, 20, 15);
+=======
+		if (currRobotCount == 0)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4 clear", Color(1, 0, 0), 3, 20, 15);
+			weaponinterface = true;
+>>>>>>> ace74c50eb2b882a60595127739e58615decd827
 		}
 	}
 	if (wave == 5)
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5", Color(1, 0, 0), 3, 60, 87);
 
+<<<<<<< HEAD
 		if (curRobotCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 20, 15);
+=======
+		if (currRobotCount == 0)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 20, 15);
+			weaponinterface = true;
+>>>>>>> ace74c50eb2b882a60595127739e58615decd827
 		}
 	}
 	if (wave == 6)
@@ -793,6 +844,13 @@ void SP2_Scene::RenderLevel()
 			RenderTextOnScreen(meshList[GEO_TEXT], "Victory Achieved", Color(0.000f, 0.808f, 0.820f), 4, 68.5, 25);
 			//game won, go back to start screen
 		}
+<<<<<<< HEAD
+=======
+	}
+	if (wave > 6)
+	{
+		//go to start screen, win game
+>>>>>>> ace74c50eb2b882a60595127739e58615decd827
 	}
 }
 
@@ -956,11 +1014,15 @@ void SP2_Scene::RobotAnimation(double dt)
 		robotrightattack = true;
 	}
 
-	if (Robot::RobotHP == 0)
+	/*if (Robot::RobotHP == 0)
 	{
 		die = true;
 		curRobotCount--;
+<<<<<<< HEAD
 	}
+=======
+	}*/
+>>>>>>> ace74c50eb2b882a60595127739e58615decd827
 	if (die == true)
 	{
 		collapse += (float)(15 * dt);
@@ -1220,6 +1282,18 @@ void SP2_Scene::Update(double dt)
 	}
 	WepSys.IncrementPosition();
 	WepSys.CleanUp();
+<<<<<<< HEAD
+=======
+
+	if (currRobotCount < RobotManager.MaxRobotCount && Application::IsKeyPressed(VK_RBUTTON))
+	{
+		RobotManager.RobotList.push_back(Robot(0, Vector3(-100, 0, 0)));
+		currRobotCount++;
+	}
+
+	RobotManager.IncrementPosition();
+	RobotManager.CleanUp();
+>>>>>>> ace74c50eb2b882a60595127739e58615decd827
 }
 
 void SP2_Scene::RenderSkybox(Vector3 Position)
@@ -1464,6 +1538,7 @@ void SP2_Scene::RenderUI()
 
 void SP2_Scene::RenderGate(bool render)
 {
+<<<<<<< HEAD
 	modelStack.PushMatrix();
 
 	modelStack.PushMatrix();
@@ -1531,6 +1606,49 @@ void SP2_Scene::RenderGate(bool render)
 	modelStack.PopMatrix();
 
 	modelStack.PopMatrix();
+=======
+	/*modelStack.PushMatrix();
+	modelStack.Translate(17.2, 0.5, -2.15);
+	modelStack.Rotate(90, 0, 1, 0);
+	modelStack.Scale(1.55, 1.55, 2.5);
+	RenderGate(true);
+		modelStack.PushMatrix();
+		modelStack.Translate(-3, 0, 0);
+		RenderGate(true);
+		modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-17.2, 0.5, -2.15);
+	modelStack.Rotate(90, 0, 1, 0);
+	modelStack.Scale(1.55, 1.55, 2.5);
+	RenderGate(true);
+		modelStack.PushMatrix();
+		modelStack.Translate(-3, 0, 0);
+		RenderGate(true);
+		modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-2.15, 0.5, -17.2);
+	modelStack.Scale(1.55, 1.55, 2.5);
+	RenderGate(true);
+		modelStack.PushMatrix();
+		modelStack.Translate(3, 0, 0);
+		RenderGate(true);
+		modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-2.15, 0.5, 17.2);
+	modelStack.Scale(1.55, 1.55, 2.5);
+	RenderGate(true);
+		modelStack.PushMatrix();
+		modelStack.Translate(3, 0, 0);
+		RenderGate(true);
+		modelStack.PopMatrix();
+	modelStack.PopMatrix();*/
+>>>>>>> ace74c50eb2b882a60595127739e58615decd827
 }
 
 void SP2_Scene::RenderRocks()
@@ -1626,7 +1744,10 @@ void SP2_Scene::Render(double dt)
 	modelStack.PopMatrix();
 
 	readtextfile();
+<<<<<<< HEAD
 	GameState();
+=======
+>>>>>>> ace74c50eb2b882a60595127739e58615decd827
 
 	//Render In-Hand Weapon
 	modelStack.PushMatrix();
@@ -1643,7 +1764,99 @@ void SP2_Scene::Render(double dt)
 		modelStack.PopMatrix();
 	}
 
+<<<<<<< HEAD
 	//for (auto i : RobotSys.RobotList)
+	//{
+	//	//melee robot
+	//	modelStack.PushMatrix();
+	//	i.Move();
+	//	modelStack.Translate(i.Position().x -100, 0.5, i.Position().z - 140);
+	//	modelStack.Translate(0, 0, -moverobot);
+	//	RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
+	//		modelStack.PushMatrix();
+	//		//modelStack.Rotate(rotateAngle, 1, 0, 0);
+	//		modelStack.Translate(0, 0, -10);
+	//		modelStack.Translate(0, 0, 10);
+	//		modelStack.Translate(0.3, 0, 0);
+	//		RenderMesh(meshList[GEO_MELEEROBOTLEFTUPPERARM], true);
+	//			modelStack.PushMatrix();
+	//			//modelStack.Rotate(rotateAngle, 1, 0, 0);
+	//			RenderMesh(meshList[GEO_MELEEROBOTLEFTLOWERARM], true);
+	//			modelStack.PopMatrix();
+	//		modelStack.PopMatrix();
+	//			modelStack.PushMatrix();
+	//			//modelStack.Rotate(rotateAngle, 1, 0, 0);
+	//			modelStack.Translate(0, 0, -10);
+	//			modelStack.Translate(0, 0, 10);
+	//			modelStack.Translate(-0.3, 0, 0);
+	//			RenderMesh(meshList[GEO_MELEEROBOTRIGHTUPPERARM], true);
+	//				modelStack.PushMatrix();
+	//				//modelStack.Rotate(rotateAngle, 1, 0, 0);
+	//				RenderMesh(meshList[GEO_MELEEROBOTRIGHTLOWERARM], true);
+	//				modelStack.PopMatrix();
+	//			modelStack.PopMatrix();
+	//		modelStack.PushMatrix();
+	//		modelStack.Rotate(moveleftleg, 1, 0, 0);
+	//		modelStack.Translate(0, 0, -10);
+	//		modelStack.Translate(0, 0, 10);
+	//		RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
+	//		modelStack.PopMatrix();
+	//			modelStack.PushMatrix();
+	//			modelStack.Rotate(moverightleg, 1, 0, 0);
+	//			RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
+	//			modelStack.PopMatrix();
+	//	modelStack.PopMatrix();
+	//}
+=======
+	for (auto i : RobotManager.RobotList)
+	{
+		modelStack.PushMatrix();
+		i.Move();
+		modelStack.Translate(i.Position().x, i.Position().y, i.Position().z);
+			//melee robot
+			modelStack.PushMatrix();
+			i.Move();
+			modelStack.Translate(i.Position().x -100, 0.5, i.Position().z - 140);
+			//modelStack.Translate(0, 0, -moverobot);
+			RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
+				modelStack.PushMatrix();
+				//modelStack.Rotate(rotateAngle, 1, 0, 0);
+				modelStack.Translate(0, 0, -10);
+				modelStack.Translate(0, 0, 10);
+				modelStack.Translate(0.3, 0, 0);
+				RenderMesh(meshList[GEO_MELEEROBOTLEFTUPPERARM], true);
+					modelStack.PushMatrix();
+					//modelStack.Rotate(rotateAngle, 1, 0, 0);
+					RenderMesh(meshList[GEO_MELEEROBOTLEFTLOWERARM], true);
+					modelStack.PopMatrix();
+				modelStack.PopMatrix();
+					modelStack.PushMatrix();
+					//modelStack.Rotate(rotateAngle, 1, 0, 0);
+					modelStack.Translate(0, 0, -10);
+					modelStack.Translate(0, 0, 10);
+					modelStack.Translate(-0.3, 0, 0);
+					RenderMesh(meshList[GEO_MELEEROBOTRIGHTUPPERARM], true);
+						modelStack.PushMatrix();
+						//modelStack.Rotate(rotateAngle, 1, 0, 0);
+						RenderMesh(meshList[GEO_MELEEROBOTRIGHTLOWERARM], true);
+						modelStack.PopMatrix();
+					modelStack.PopMatrix();
+				modelStack.PushMatrix();
+				modelStack.Rotate(moveleftleg, 1, 0, 0);
+				modelStack.Translate(0, 0, -10);
+				modelStack.Translate(0, 0, 10);
+				RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
+				modelStack.PopMatrix();
+					modelStack.PushMatrix();
+					modelStack.Rotate(moverightleg, 1, 0, 0);
+					RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
+					modelStack.PopMatrix();
+			modelStack.PopMatrix();
+		modelStack.PopMatrix();
+	}
+>>>>>>> ace74c50eb2b882a60595127739e58615decd827
+
+	/*//for (auto i : RobotSys.RobotList)
 	//{
 	//	//melee robot
 	//	modelStack.PushMatrix();
@@ -1768,8 +1981,11 @@ void SP2_Scene::Render(double dt)
 	//modelStack.PopMatrix();
 	//modelStack.PopMatrix();*/
 
+<<<<<<< HEAD
 	
 
+=======
+>>>>>>> ace74c50eb2b882a60595127739e58615decd827
 	RenderRocks();
 	
 	//RenderBase
@@ -1788,7 +2004,11 @@ void SP2_Scene::Render(double dt)
 	//RB End
 
 	RenderGate();
+<<<<<<< HEAD
 	RenderLevel();
+=======
+	GameState();
+>>>>>>> ace74c50eb2b882a60595127739e58615decd827
 
 	//DO NOT RENDER ANYTHING UNDER THIS//
 
