@@ -211,11 +211,11 @@ void Camera3::cameraMovement2(double dt)
 			position.y += jumpSpeed * (float)jumpImpulse;
 		//}
 	}
-	if (position.y > groundlevel)
+	/*if (position.y > groundlevel)
 	{
 		jumpSpeed = Physics::gravitational_pulled(jumpSpeed, dt);
 		position.y += jumpSpeed * (float)dt;
-	}
+	}*/
 	rotateCamera(dt);
 	if (Application::IsKeyPressed('R'))
 	{
