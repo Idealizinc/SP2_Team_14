@@ -14,7 +14,7 @@ public:
 	{
 		Melee = 0, Ranged, Mixed,
 	};
-	Robot(int RobotType, Vector3 SpawnPos, Boundary BBox = 0);
+	Robot(int RobotType, Vector3 SpawnPos);
 	~Robot();
 	Vector3 Move();
 	Vector3 Position();
@@ -22,14 +22,15 @@ public:
 	float GetHealth();
 	Boundary BoundingBox;
 	void SetHealth(float newHP);
-	bool checkHealth();
 	void findAngle();
 	float rotateToTarget;
+	void CalcBounds();
+	float Health;
+
 private:
 	Vector3 GetDirVec(Vector3 Target);
 	void SetStats(int Type);
 	R_Type RobotType;
-	float Health;
 	float Damage;
 	float Speed;
 	Vector3 TargetPos = (1, 1, 1);
