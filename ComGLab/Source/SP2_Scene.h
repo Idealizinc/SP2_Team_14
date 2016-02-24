@@ -208,7 +208,8 @@ public:
 	float rotationalLimit;
 	float translationLimit;
 	float scalingLimit;
-
+	unsigned int curRobotCount;
+	unsigned int curMeteorCount;
 	//robot animation
 	bool walk;
 	float moverobot;
@@ -246,9 +247,13 @@ public:
 	float constTranslation;
 	float DoorRot;
 	bool canUseDoor = true;
+	float leftgate;
+	float rightgate;
+	bool openleftgate;
+	bool openrightgate;
 	int weaponSelect;
 	bool sniper, rifle;
-	unsigned short curRobotCount;
+	//unsigned short curRobotCount;
 	//unsigned int pause;
 
 	unsigned short skyboxID = 0;

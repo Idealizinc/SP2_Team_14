@@ -78,13 +78,10 @@ void SP2_Scene::Init()
 	limitersON = true;
 	lightOff = false;
 	basehp = 100;
-<<<<<<< HEAD
 	gatehp = 10;
 	bosshp = 100;
-=======
 	gatehp = 20;
 	bosshp = 0;
->>>>>>> a1a73f281e84e1bceb9b87b4e47c9ab5238bc021
 	playerhp = 100;
 	ammo = 100;
 	wave = 1;
@@ -92,13 +89,15 @@ void SP2_Scene::Init()
 	timer = 0;
 	weaponValue = 0;
 	weaponinterface = false;
-	repairgate = true;
+	meteorhp = 10;
+	//repairgate = false;
 	buttonPress = true;
 	buttonValue = 0;
 	//droidrepair = false;
 	droidrepairgate = 0;
 
 	curRobotCount = 1;
+	curMeteorCount = 1;
 	leftarmrotatelimit = -1;
 	rightarmrotatelimit = -1;
 	leftarmrotate = true;
@@ -120,6 +119,10 @@ void SP2_Scene::Init()
 	rightleg = true;
 	walk = true;
 	die = false;
+	//openleftgate = false;
+	//openrightgate = false;
+	leftgate = 0;
+	rightgate = 0;
 
 	//robotleftattack = false;
 	//robotrightattack = false;
@@ -639,15 +642,13 @@ void SP2_Scene::initLights()
 
 void SP2_Scene::GameState()
 {
-	if (basehp <= 0 || playerhp == 0)
+	if (basehp == 0 || playerhp == 0)
 	{
-<<<<<<< HEAD
 		modelStack.PushMatrix();
 		//translation here once map is out
 		RenderMesh(meshList[GEO_GATE], true);
 		modelStack.PopMatrix();
 		//gatehp = 20;
-=======
 		wave = 0;
 		camera.Reset();
 		wave = 1;
@@ -657,7 +658,10 @@ void SP2_Scene::GameState()
 	if (curRobotCount <= 0)
 	{
 		weaponinterface = true;
->>>>>>> a1a73f281e84e1bceb9b87b4e47c9ab5238bc021
+	}
+	else if (curMeteorCount <= 0)
+	{
+		weaponinterface = true;
 	}
 }
 
@@ -730,7 +734,7 @@ void SP2_Scene::RenderLevel()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3", Color(1, 0, 0), 3, 60, 87);
 
-		if (curRobotCount == 0)
+		if (curMeteorCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 20, 15);
 		}
@@ -1045,7 +1049,7 @@ void SP2_Scene::Update(double dt)
 	translateX += (float)(10 * pause  * dt);
 
 	//gate
-	if (gatehp <= 0)
+	if (gatehp < 20)
 	{
 		repairgate = true;
 	}
@@ -1054,44 +1058,52 @@ void SP2_Scene::Update(double dt)
 		repairgate = false;
 	}
 
-	/*if (repairgate == true)
+	if (repairgate == true)
 	{
-		openLeftGate = true;
-		openRightGate = true;
-		if (openLeftGate == true)
+		openleftgate = true;
+		openrightgate = true;
+		if (openleftgate == true)
 		{
 			leftgate += (float)(3 * dt);
 			if (leftgate > 10)
 			{
-<<<<<<< HEAD
 				leftgate -= (float)(3 * dt);
-				openleftgate = false;
-=======
-				openLeftGate = false;
->>>>>>> a1a73f281e84e1bceb9b87b4e47c9ab5238bc021
+				//openleftgate = false;
 			}
 		}
-		if (openRightGate == true)
+		if (openrightgate == true)
 		{
-			rightgate += (float)(0.5 * dt);
-			if (rightgate > 1)
+			rightgate += (float)(3 * dt);
+			if (rightgate > 10)
 			{
-<<<<<<< HEAD
-				rightgate -= (float)(0.5 * dt);
-				openrightgate = false;
+				rightgate -= (float)(3 * dt);
+				//openrightgate = false;
 			}
-		}
-		if (openleftgate == false)
-		{
-
 		}
 	}
-=======
-				openRightGate = false;
+	else if (repairgate == false)
+	{
+		openleftgate = false;
+		openrightgate = false;
+		if (openleftgate == false)
+		{
+			leftgate -= (float)(3 * dt);
+			if (leftgate < -10)
+			{
+				leftgate += (float)(3 * dt);
+				//openleftgate = false;
 			}
 		}
-	}*/
->>>>>>> a1a73f281e84e1bceb9b87b4e47c9ab5238bc021
+		if (openrightgate == false)
+		{
+			rightgate -= (float)(3 * dt);
+			if (rightgate < -10)
+			{
+				rightgate += (float)(3 * dt);
+				//openrightgate = false;
+			}
+		}
+	}
 
 	//End
 
@@ -1556,12 +1568,14 @@ void SP2_Scene::RenderGate(bool render)
 
 	modelStack.PushMatrix();
 	modelStack.Translate(camera.frontGateA, 0.5, 17.2);
+	modelStack.Translate(-leftgate, 0, 0);
 	modelStack.Scale(1.55, 1.55, 2.5);
 	RenderMesh(meshList[GEO_GATE], true);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(camera.frontGateB, 0.5, 17.2);
+	modelStack.Translate(rightgate, 0, 0);
 	modelStack.Scale(1.55, 1.55, 2.5);
 	RenderMesh(meshList[GEO_GATE], true);
 	modelStack.PopMatrix();
@@ -1851,7 +1865,6 @@ void SP2_Scene::Render(double dt)
 	//modelStack.PopMatrix();
 	//modelStack.PopMatrix();*/
 
-<<<<<<< HEAD
 	modelStack.PushMatrix();
 	modelStack.Translate(17.2, 0.5, -2.15);
 	modelStack.Translate(0, 0, -leftgate);
@@ -1860,7 +1873,7 @@ void SP2_Scene::Render(double dt)
 	RenderGate(true);
 		modelStack.PushMatrix();
 		modelStack.Translate(-3, 0, 0);
-		modelStack.Translate(-rightgate, 0, 0);
+		modelStack.Translate(rightgate, 0, 0);
 		RenderGate(true);
 		modelStack.PopMatrix();
 	modelStack.PopMatrix();
@@ -1895,9 +1908,7 @@ void SP2_Scene::Render(double dt)
 		RenderGate(true);
 		modelStack.PopMatrix();
 	modelStack.PopMatrix();
-=======
 	
->>>>>>> a1a73f281e84e1bceb9b87b4e47c9ab5238bc021
 
 	RenderRocks();
 	
