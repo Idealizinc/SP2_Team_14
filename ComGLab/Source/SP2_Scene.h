@@ -55,24 +55,8 @@ class SP2_Scene : public Scene
 		GEO_RIFLE,
 		GEO_SHOTGUN,
 
-		GEO_RED_SMG,
-		GEO_RED_SNIPER,
-		GEO_RED_RIFLE,
-		GEO_RED_SHOTGUN,
-
-		GEO_GREEN_SMG,
-		GEO_GREEN_SNIPER,
-		GEO_GREEN_RIFLE,
-		GEO_GREEN_SHOTGUN,
-
-		GEO_BLUE_SMG,
-		GEO_BLUE_SNIPER,
-		GEO_BLUE_RIFLE,
-		GEO_BLUE_SHOTGUN,
-
-
 		//Ships
-		//GEO_PLAYERSHIP,
+		GEO_PLAYERSHIP,
 		//GEO_MOTHERSHIP,
 
 		//drone
@@ -208,7 +192,8 @@ public:
 	float rotationalLimit;
 	float translationLimit;
 	float scalingLimit;
-
+	unsigned int curRobotCount;
+	unsigned int curMeteorCount;
 	//robot animation
 	bool walk;
 	float moverobot;
@@ -246,9 +231,13 @@ public:
 	float constTranslation;
 	float DoorRot;
 	bool canUseDoor = true;
+	float leftgate;
+	float rightgate;
+	bool openleftgate;
+	bool openrightgate;
 	int weaponSelect;
 	bool sniper, rifle;
-	unsigned short curRobotCount;
+	//unsigned short curRobotCount;
 	//unsigned int pause;
 
 	unsigned short skyboxID = 0;
@@ -284,7 +273,7 @@ public:
 		F_Shotgun,
 	};
 	Gun_Type currentGun = N_SMG;
-	float RateOfFire = 10;
+	float RateOfFire;
 	float Damage = 0;
 	float MaxAmmo = 0;
 	float CurrAmmo = MaxAmmo;
@@ -293,8 +282,12 @@ private:
 	unsigned short weaponValue;
 	GLuint SB_Day_front, SB_Day_back, SB_Day_top, SB_Day_bottom, SB_Day_left, SB_Day_right;
 	GLuint SB_Nite_front, SB_Nite_back, SB_Nite_top, SB_Nite_bottom, SB_Nite_left, SB_Nite_right;
+	GLuint Normal_Sniper, Normal_Rifle, Normal_Shotgun;
+	GLuint Damage_Sniper, Damage_Rifle, Damage_Shotgun;
+	GLuint Capacity_Sniper, Capacity_Rifle, Capacity_Shotgun;
+	GLuint Fast_Sniper, Fast_Rifle, Fast_Shotgun;
 	GLuint Crosshair;
-	GLuint UI_BG, UI_HP_Red, UI_HP_Green, UI_WepSel_BG;
+	GLuint UI_BG, UI_HP_Red, UI_HP_Green, UI_WepSel_BG, UI_LoadingBG, UI_LoadingSpinner;
 	void RenderSkybox(Vector3 Position);
 	unsigned m_vertexArrayID;
 	unsigned m_programID;
@@ -306,6 +299,15 @@ private:
 	void InitWeaponModels();
 	void InitRobots();
 	void InitMapModels();
+	void initUIElements();
+
+	//Load Values
+	float LoadTimer = 0;
+	float MaxLoadTime = 10;
+	bool GameLoading = true;
+	bool loadRobots = false;
+	bool loadMap = false;
+	bool loadWep = false;
 
 	//Render Calls
 	void readtextfile();
@@ -324,6 +326,7 @@ private:
 	void RenderGate(bool render = false);
 	void RenderUI();
 	void RobotAnimation(double dt);
+	void RenderShip();
 
 	//Interaction Values
 	bool buttonPress;
@@ -348,6 +351,7 @@ private:
 	float timer;
 	bool weaponinterface;
 	bool repairgate;
+	bool repairShipPhase;
 
 	//Light Stuff
 	Vector3 TownLightPosition;
@@ -355,30 +359,6 @@ private:
 
 	// Base Stuff
 	Vector3 basePosition;
-
-	// Base
-	GLuint Normal_Sniper = LoadTGA("Image//Tex_Sniper.tga");
-	GLuint Normal_Rifle = LoadTGA("Image//Tex_Rifle.tga");
-	GLuint Normal_Shotgun = LoadTGA("Image//Tex_Shotgun.tga");
-
-	// Damage
-	GLuint Damage_Sniper = LoadTGA("Image//Tex_SniperDamage.tga");
-	GLuint Damage_Rifle = LoadTGA("Image//Tex_RifleDamage.tga");
-	GLuint Damage_Shotgun = LoadTGA("Image//Tex_ShotgunDamage.tga");
-
-	// Ammo
-	GLuint Capacity_Sniper = LoadTGA("Image//Tex_SniperAmmo.tga");
-	GLuint Capacity_Rifle = LoadTGA("Image//Tex_RifleAmmo.tga");
-	GLuint Capacity_Shotgun = LoadTGA("Image//Tex_ShotgunAmmo.tga");
-
-	// Fast
-	GLuint Fast_Sniper = LoadTGA("Image//Tex_SniperFast.tga");
-	GLuint Fast_Rifle = LoadTGA("Image//Tex_RifleFast.tga");
-	GLuint Fast_Shotgun = LoadTGA("Image//Tex_ShotgunFast.tga");
-
-	//Weapon System
-
-	void WeaponSystem(Vector3 LookVector);
 };
 
 

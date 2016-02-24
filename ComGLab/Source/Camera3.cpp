@@ -49,6 +49,8 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up,
 	checkBackGate = false;
 	openBackGate = false;
 
+	shipCheck = false;
+
 	jumpForce = 0;
 	groundlevel = 6;
 	jumpImpulse = 0;
@@ -76,6 +78,25 @@ void Camera3::Update(double dt)
 	else
 	{
 		teleCheck = false;
+	}
+	
+	if (!PlayerShipLeft.BoundaryCheck(position.x, position.z, position.y) || !PlayerShipRight.BoundaryCheck(position.x, position.z, position.y)
+		|| !PlayerShipFront.BoundaryCheck(position.x, position.z, position.y) || !PlayerShipBack.BoundaryCheck(position.x, position.z, position.y))
+	{
+		shipCheck = true;
+	}
+	else
+	{
+		shipCheck = false;
+	}
+
+	if (!corebase.BoundaryCheck(position.x, position.z, position.y))
+	{
+		coreCheck = true;
+	}
+	else
+	{
+		coreCheck = false;
 	}
 
 	if (!leftGate.BoundaryCheck(position.x, position.z, position.y))
@@ -236,8 +257,8 @@ void Camera3::cameraMovement2(double dt)
 	float walkingZ = 0;
 	float walkingY = 0;
 	float gravity = 9.8 * dt;
-	velocityY += gravity * dt;
-	walkingY = velocityY * dt;
+	//velocityY += gravity * dt;
+	//walkingY = velocityY * dt;
 	
 	if (Application::IsKeyPressed(VK_LSHIFT) || Application::IsKeyPressed(VK_RSHIFT))
 	{
@@ -339,7 +360,7 @@ void Camera3::cameraMovement2(double dt)
 	//Gravity
 	if (isGravityOn == true)
 	{
-		if (velocityY != 0 && northwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && northwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+		if (/*velocityY != 0 &&*/ northwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && northwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
 			&& westwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && westwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
 			&& eastwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && eastwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
 			&& southwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && southwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && corebase.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
@@ -409,6 +430,7 @@ void Camera3::initBoundVec()
 	TeleporterF1SW.set(10, 17, -17, -9, -5, 10);
 	TeleporterF1SE.set(-17, -10, -17, -9, -5, 10);
 
+<<<<<<< HEAD
 	leftGate.set(8, 26, -5, 5, -5, 10);
 
 	leftRock1.set(-44.9, -55.6, -2.8, -12.5, 0, 8);
@@ -421,6 +443,12 @@ void Camera3::initBoundVec()
 	backRock1.set(-4.8, 5.2, 54.2, 65.7, 0, 8);
 	backRock2.set(18.1, 34.1, 117.1, 144, 0, 8);
 	backRock3.set(-150, -140, 116.8, 144.4, 0, 8);
+=======
+	PlayerShipLeft.set(-6.6, 7.5, 65, 67, 0, 5);
+	PlayerShipRight.set(-6.6, 7.5, 83, 85, 0, 5);
+	PlayerShipFront.set(7, 7.5, 67, 83, 0, 5);
+	PlayerShipBack.set(-7, -6.6, 67, 83, 0, 5);
+>>>>>>> 7db3f46660dba17a528259afc7deefb0f05f6bd5
 }
 
 void Camera3::jump(double dt, int level)
