@@ -2,16 +2,12 @@
 
 #define PI 3.1415926535
 
-Robot::Robot(int RobotType, Vector3 SpawnPos, Boundary BBox) : CurrPos(SpawnPos)
+Robot::Robot(int RobotType, Vector3 SpawnPos) : CurrPos(SpawnPos)
 { 
 	findAngle();
 	SetStats(RobotType); 
-	BoundingBox.xMax = BBox.xMax; //(CurrPos.x + 3) * rotateToTarget
-	BoundingBox.xMin = BBox.xMin;
-	BoundingBox.yMax = BBox.yMax;
-	BoundingBox.yMin = BBox.yMin;
-	BoundingBox.zMax = BBox.zMax;
-	BoundingBox.zMin = BBox.zMin;
+	CalcBounds();
+	//(CurrPos.x + 3) * rotateToTarget
 }
 
 Robot::~Robot()
@@ -59,12 +55,13 @@ Vector3 Robot::Move()
 	CurrPos.x += DirVec.x * Speed;
 	CurrPos.y += DirVec.y * Speed;
 	CurrPos.z += DirVec.z * Speed;
-	BoundingBox.xMax += DirVec.x * Speed;
+	CalcBounds();
+	/*BoundingBox.xMax += DirVec.x * Speed;
 	BoundingBox.xMin += DirVec.x * Speed;
 	BoundingBox.yMax += DirVec.y * Speed;
 	BoundingBox.yMin += DirVec.y * Speed;
 	BoundingBox.zMax += DirVec.z * Speed;
-	BoundingBox.zMin += DirVec.z * Speed;
+	BoundingBox.zMin += DirVec.z * Speed;*/
 	return CurrPos;
 }
 
@@ -91,16 +88,9 @@ void Robot::SetHealth(float newHP)
 	Health = newHP;
 }
 
-bool Robot::checkHealth()
+void Robot::CalcBounds()
 {
-	if (Health >= 0)
-	{
-		return false;
-	}
-	else
-	{
-		return true;
-	}
+	BoundingBox.set(CurrPos.x - 3, CurrPos.x + 3, CurrPos.z - 3, CurrPos.z + 3, CurrPos.y - 3, CurrPos.y + 3);
 }
 
 Vector3 Robot::GetDirVec(Vector3 Target)
@@ -118,19 +108,19 @@ void Robot::SetStats(int Type)
 		RobotType = Melee;
 		Health = 50;
 		Damage = 10;
-		Speed = 2;
+		Speed = 1;
 		break;
 	case 1:
 		RobotType = Ranged;
 		Health = 30;
 		Damage = 5;
-		Speed = 2;
+		Speed = 1;
 		break;
 	case 2:
 		RobotType = Mixed;
 		Health = 40;
 		Damage = 8;
-		Speed = 2;
+		Speed = 1;
 		break;
 	default:
 		Health = 0;

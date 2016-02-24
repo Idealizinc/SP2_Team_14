@@ -8,11 +8,12 @@
 class RayCast
 {
 public:
-	RayCast(Vector3 Position, Vector3 DVector, float velocity, Boundary BBox = 0) : RayPos(Position), StoredDirVec(DVector), Speed(velocity), BoundingBox(BBox){ };
+	RayCast(Vector3 Position, Vector3 DVector, float velocity) : RayPos(Position), StoredDirVec(DVector), Speed(velocity){ CalcBounds(); };
 	~RayCast();
 	Vector3 Move();
 	Vector3 Position();
 	bool BoundsCheck(std::list<Robot> RobotList);
+	void CalcBounds();
 
 private:
 	float Damage = 420;
