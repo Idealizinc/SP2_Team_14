@@ -9,7 +9,9 @@
 #include "Utility.h"
 #include <fstream>
 #include <iostream>
+#include <sstream>
 
+using std::stringstream;
 using std::cout;
 using std::endl;
 
@@ -1255,7 +1257,7 @@ void SP2_Scene::Update(double dt)
 
 	if (curRobotCount < RobotManager.MaxRobotCount && Application::IsKeyPressed(VK_RBUTTON))
 	{
-		RobotManager.RobotList.push_back(Robot(0, Vector3(-100, 0, 100), Boundary(-3,3,-3,3,0,4)));
+		RobotManager.RobotList.push_back(Robot(0, Vector3(-100, 0, 100)));
 		curRobotCount++;
 	}
 
@@ -1921,6 +1923,10 @@ void SP2_Scene::Render(double dt)
 	RenderGate();
 	RenderLevel();
 
+	stringstream ss;
+	ss << camera.position.y;
+	std::string cameraY = ss.str();
+	RenderTextOnScreen(meshList[GEO_TEXT], cameraY, Color(1, 1, 1), 2.8, 3, 19.7);
 	//DO NOT RENDER ANYTHING UNDER THIS//
 
 	RenderUI();
