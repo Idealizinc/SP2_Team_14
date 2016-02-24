@@ -52,6 +52,13 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up,
 	jumpForce = 0;
 	groundlevel = 6;
 	jumpImpulse = 0;
+
+	isGravityOn = true;
+	isMaxJump = false;
+	isJump = false;
+	maxJump = 8.0f;
+	maxJump2 = 16.5f;
+	level = 1;
 }
 
 void Camera3::Update(double dt)
@@ -260,24 +267,40 @@ void Camera3::cameraMovement2(double dt)
 	}
 	//if (Application::IsKeyPressed(' ') || Application::IsKeyPressed(VK_SPACE))
 	//{
-	//	/*position.y -= velocityY * 0.5;
-	//	velocityY -= gravity;*/
+		//position.y -= velocityY * 0.5;
+		//velocityY -= gravity;
 	//}
-	if (Application::IsKeyPressed(VK_SPACE))
-	{
+	//if (Application::IsKeyPressed(VK_SPACE))
+	//{
 		/*if (position.y <= groundlevel)
 		{*/
-			jumpImpulse = 2 * dt;
+			/*jumpImpulse = 2 * dt;
 			jumpForce = 15000;
 			jumpSpeed = static_cast<float>(Physics::getAcceleration(jumpForce, cameraMass));
-			position.y += jumpSpeed * (float)jumpImpulse;
+			position.y += jumpSpeed * (float)jumpImpulse;*/
 		//}
-	}
+	//}
 	/*if (position.y > groundlevel)
 	{
 		jumpSpeed = Physics::gravitational_pulled(jumpSpeed, dt);
 		position.y += jumpSpeed * (float)dt;
 	}*/
+	if (Application::IsKeyPressed(' '))
+	{
+		isGravityOn = false;
+		isJump = true;
+
+		if (position.y <= 10.0f)
+			level = 1;
+		else if (position.y >= 15.0f)
+			level = 2;
+	}
+
+	if (isJump == true)
+	{
+		jump(dt, level);
+	}
+
 	rotateCamera(dt);
 	if (Application::IsKeyPressed('R'))
 	{
@@ -314,21 +337,24 @@ void Camera3::cameraMovement2(double dt)
 		position.z += walkingZ;
 	}
 	//Gravity
-	/*if (velocityY != 0 && northwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && northwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-		&& westwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && westwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-		&& eastwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && eastwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-		&& southwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && southwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && corebase.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-		&& WorldBack.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldFront.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-		&& WorldLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-		&& WorldTop.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldBot.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-		&& Floor2BackLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2BackRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-		&& Floor2FrontLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2FrontRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-		&& Floor2WestLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2WestRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-		&& Floor2EastLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2EastRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-		&& Floor2Top.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2Bot.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity))
+	if (isGravityOn == true)
 	{
-		position.y -= gravity;
-	}*/
+		if (velocityY != 0 && northwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && northwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+			&& westwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && westwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+			&& eastwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && eastwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+			&& southwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && southwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && corebase.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+			&& WorldBack.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldFront.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+			&& WorldLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+			&& WorldTop.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldBot.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+			&& Floor2BackLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2BackRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+			&& Floor2FrontLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2FrontRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+			&& Floor2WestLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2WestRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+			&& Floor2EastLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2EastRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+			&& Floor2Top.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2Bot.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity))
+		{
+			position.y -= gravity;
+		}
+	}
 	//Teleporter
 	if ((teleCheck == true && TeleporterF1NW.BoundaryCheck(position.x, position.z, position.y)
 		|| (teleCheck == true && TeleporterF1NE.BoundaryCheck(position.x, position.z, position.y))
@@ -384,6 +410,56 @@ void Camera3::initBoundVec()
 	TeleporterF1SE.set(-17, -10, -17, -9, -5, 10);
 
 	leftGate.set(8, 26, -5, 5, -5, 10);
+}
+
+void Camera3::jump(double dt, int level)
+{
+	if (level == 1)
+	{
+		if (isMaxJump == false) 
+		{
+			position.y += (float)(2 * dt);
+		}
+		else
+		{
+			position.y -= (float)(2 * dt);
+		}
+		if (position.y > maxJump)
+		{
+			isMaxJump = true;
+			position.y = maxJump;
+		}
+		else if (position.y < 5.0f)
+		{
+			position.y = 5.0f;
+			isMaxJump = false;
+			isJump = false;
+			isGravityOn = true;
+		}
+	}
+	else if (level == 2)
+	{
+		if (isMaxJump == false) 
+		{
+			position.y += (float)(2 * dt);
+		}
+		else
+		{
+			position.y -= (float)(2 * dt);
+		}
+		if (position.y > maxJump2)
+		{
+			isMaxJump = true;
+			position.y = maxJump2;
+		}
+		else if (position.y < 15.0f)
+		{
+			position.y = 15.0f;
+			isMaxJump = false;
+			isJump = false;
+			isGravityOn = true;
+		}
+	}
 }
 
 

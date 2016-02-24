@@ -75,6 +75,14 @@ private:
 	int jumpImpulse;
 	int jumpSpeed;
 
+	bool isGravityOn;
+	bool isMaxJump;
+	bool isJump;
+	float maxJump;
+	float maxJump2;
+	int level;
+	void jump(double dt, int level);
+
 	//Bounds
 	//Refer to blueprints for bound location
 	
