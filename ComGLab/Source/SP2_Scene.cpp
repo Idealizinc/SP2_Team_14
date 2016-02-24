@@ -9,7 +9,9 @@
 #include "Utility.h"
 #include <fstream>
 #include <iostream>
+#include <sstream>
 
+using std::stringstream;
 using std::cout;
 using std::endl;
 
@@ -80,8 +82,11 @@ void SP2_Scene::Init()
 	basehp = 100;
 	gatehp = 10;
 	bosshp = 100;
+<<<<<<< HEAD
 	gatehp = 20;
 	bosshp = 0;
+=======
+>>>>>>> 70778617242d0c6ed5e730eeb07ea6243176d5a7
 	playerhp = 100;
 	ammo = 100;
 	wave = 1;
@@ -119,10 +124,14 @@ void SP2_Scene::Init()
 	rightleg = true;
 	walk = true;
 	die = false;
+<<<<<<< HEAD
 	//openleftgate = false;
 	//openrightgate = false;
 	leftgate = 0;
 	rightgate = 0;
+=======
+	repairShipPhase = true;
+>>>>>>> 70778617242d0c6ed5e730eeb07ea6243176d5a7
 
 	//robotleftattack = false;
 	//robotrightattack = false;
@@ -214,8 +223,8 @@ void SP2_Scene::Init()
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//calibri.tga");
 
-	//meshList[GEO_PLAYERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//PlayerShip.obj");
-	//meshList[GEO_PLAYERSHIP]->textureID = LoadTGA("Image//Tex_PlayerShip.tga");
+	meshList[GEO_PLAYERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//PlayerShip.obj");
+	meshList[GEO_PLAYERSHIP]->textureID = LoadTGA("Image//Tex_PlayerShip.tga");
 
 	//meshList[GEO_MOTHERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//Mothership.obj");
 	//meshList[GEO_MOTHERSHIP]->textureID = LoadTGA("Image//Tex_Mothership.tga");
@@ -642,7 +651,11 @@ void SP2_Scene::initLights()
 
 void SP2_Scene::GameState()
 {
+<<<<<<< HEAD
 	if (basehp == 0 || playerhp == 0)
+=======
+	if (basehp <= 0 || playerhp <= 0)
+>>>>>>> 70778617242d0c6ed5e730eeb07ea6243176d5a7
 	{
 		modelStack.PushMatrix();
 		//translation here once map is out
@@ -655,13 +668,16 @@ void SP2_Scene::GameState()
 		playerhp = 100;
 		basehp = 100;
 	}
-	if (curRobotCount <= 0)
+	if (curRobotCount <= 0 && wave != 5)
 	{
 		weaponinterface = true;
+<<<<<<< HEAD
 	}
 	else if (curMeteorCount <= 0)
 	{
 		weaponinterface = true;
+=======
+>>>>>>> 70778617242d0c6ed5e730eeb07ea6243176d5a7
 	}
 }
 
@@ -669,11 +685,11 @@ void SP2_Scene::RenderLevel()
 {
 	if (wave == 1)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1", Color(1, 0, 0), 3, 60, 87);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1", Color(1, 0, 0), 3, 72.5, 87);
 
 		if (curRobotCount == 0)
 		{
-			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1 clear", Color(1, 0, 0), 3, 20, 15);
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1 clear", Color(1, 0, 0), 3, 72.5, 45);
 		}
 	}
 
@@ -723,20 +739,20 @@ void SP2_Scene::RenderLevel()
 		//		modelStack.PopMatrix();
 		//	}
 		//}
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2", Color(1, 0, 0), 3, 60, 87);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2", Color(1, 0, 0), 3, 72.5, 87);
 
 		if (curRobotCount == 0)
 		{
-			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2 clear", Color(1, 0, 0), 3, 20, 15);
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2 clear", Color(1, 0, 0), 3, 72.5, 45);
 		}
 	}
 	if (wave == 3)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3", Color(1, 0, 0), 3, 60, 87);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3", Color(1, 0, 0), 3, 72.5, 87);
 
 		if (curMeteorCount == 0)
 		{
-			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 20, 15);
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 72.5, 45);
 		}
 	}
 	if (wave == 4)
@@ -784,32 +800,47 @@ void SP2_Scene::RenderLevel()
 		//		modelStack.PopMatrix();
 		//	}
 		//}
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4", Color(1, 0, 0), 3, 60, 87);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4", Color(1, 0, 0), 3, 72.5, 87);
 
 		if (curRobotCount == 0)
 		{
-			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4 clear", Color(1, 0, 0), 3, 20, 15);
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4 clear", Color(1, 0, 0), 3, 72.5, 45);
 		}
 	}
 	if (wave == 5)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5", Color(1, 0, 0), 3, 60, 87);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5", Color(1, 0, 0), 3, 72.5, 87);
 
 		if (curRobotCount == 0)
 		{
-			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 20, 15);
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 72.5, 45);
+			repairShipPhase = true;
 		}
 	}
 	if (wave == 6)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Final Stage", Color(1, 0, 0), 3, 60, 87);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Boss HP: " + std::to_string(bosshp), Color(0, 0.5, 0), 3, 65, 81);
-		if (bosshp == 0)
+		RenderTextOnScreen(meshList[GEO_TEXT], "Final Stage", Color(1, 0, 0), 3, 72.5, 87);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Boss HP: " + std::to_string(bosshp), Color(0, 0.5, 0), 3, 72.5, 81);
+		if (bosshp <= 0)
 		{
-			RenderImageOnScreen(UI_BG, 30, 5, 80, 45);
-			RenderTextOnScreen(meshList[GEO_TEXT], "Victory Achieved", Color(0.000f, 0.808f, 0.820f), 4, 68.5, 25);
+			bosshp = 0;
+			RenderImageOnScreen(UI_BG, 38, 5, 83, 76);
+			RenderTextOnScreen(meshList[GEO_TEXT], "Victory Achieved", Color(0.000f, 0.788f, 0.820f), 4, 67.5, 76);
 			//game won, go back to start screen
 		}
+	}
+}
+
+void SP2_Scene::RenderShip()
+{
+	if (repairShipPhase == true)
+	{
+		modelStack.PushMatrix(); //Player ship
+		modelStack.Translate(0, 0, 20);
+		modelStack.Rotate(1, 0, 0, 0);
+		modelStack.Scale(0, 0, 0);
+		RenderMesh(meshList[GEO_PLAYERSHIP], true);
+		modelStack.PopMatrix();
 	}
 }
 
@@ -1068,7 +1099,11 @@ void SP2_Scene::Update(double dt)
 			if (leftgate > 10)
 			{
 				leftgate -= (float)(3 * dt);
+<<<<<<< HEAD
 				//openleftgate = false;
+=======
+				openleftgate = false;
+>>>>>>> 70778617242d0c6ed5e730eeb07ea6243176d5a7
 			}
 		}
 		if (openrightgate == true)
@@ -1076,8 +1111,13 @@ void SP2_Scene::Update(double dt)
 			rightgate += (float)(3 * dt);
 			if (rightgate > 10)
 			{
+<<<<<<< HEAD
 				rightgate -= (float)(3 * dt);
 				//openrightgate = false;
+=======
+				rightgate -= (float)(0.5 * dt);
+				openrightgate = false;
+>>>>>>> 70778617242d0c6ed5e730eeb07ea6243176d5a7
 			}
 		}
 	}
@@ -1094,6 +1134,7 @@ void SP2_Scene::Update(double dt)
 				//openleftgate = false;
 			}
 		}
+<<<<<<< HEAD
 		if (openrightgate == false)
 		{
 			rightgate -= (float)(3 * dt);
@@ -1104,6 +1145,13 @@ void SP2_Scene::Update(double dt)
 			}
 		}
 	}
+=======
+	}
+				openRightGate = false;
+			}
+		}
+	}*/
+>>>>>>> 70778617242d0c6ed5e730eeb07ea6243176d5a7
 
 	//End
 
@@ -1187,6 +1235,10 @@ void SP2_Scene::Update(double dt)
 			weaponinterface = false;
 		}
 	}
+	if (Application::IsKeyPressed('5'))
+	{
+		bosshp = 0;
+	}
 	if (!weaponinterface)
 	{
 		randWepChoices = true;
@@ -1262,7 +1314,7 @@ void SP2_Scene::Update(double dt)
 
 	if (curRobotCount < RobotManager.MaxRobotCount && Application::IsKeyPressed(VK_RBUTTON))
 	{
-		RobotManager.RobotList.push_back(Robot(0, Vector3(-100, 0, 100), Boundary(-3,3,-3,3,0,4)));
+		RobotManager.RobotList.push_back(Robot(0, Vector3(-100, 0, 100)));
 		curRobotCount++;
 	}
 
@@ -1865,7 +1917,11 @@ void SP2_Scene::Render(double dt)
 	//modelStack.PopMatrix();
 	//modelStack.PopMatrix();*/
 
+<<<<<<< HEAD
 	modelStack.PushMatrix();
+=======
+	/*modelStack.PushMatrix();
+>>>>>>> 70778617242d0c6ed5e730eeb07ea6243176d5a7
 	modelStack.Translate(17.2, 0.5, -2.15);
 	modelStack.Translate(0, 0, -leftgate);
 	modelStack.Rotate(90, 0, 1, 0);
@@ -1907,7 +1963,11 @@ void SP2_Scene::Render(double dt)
 		modelStack.Translate(3, 0, 0);
 		RenderGate(true);
 		modelStack.PopMatrix();
+<<<<<<< HEAD
 	modelStack.PopMatrix();
+=======
+	modelStack.PopMatrix();*/
+>>>>>>> 70778617242d0c6ed5e730eeb07ea6243176d5a7
 	
 
 	RenderRocks();
@@ -1930,6 +1990,10 @@ void SP2_Scene::Render(double dt)
 	RenderGate();
 	RenderLevel();
 
+	stringstream ss;
+	ss << camera.position.y;
+	std::string cameraY = ss.str();
+	RenderTextOnScreen(meshList[GEO_TEXT], cameraY, Color(1, 1, 1), 2.8, 3, 19.7);
 	//DO NOT RENDER ANYTHING UNDER THIS//
 
 	RenderUI();

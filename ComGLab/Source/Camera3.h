@@ -43,7 +43,7 @@ public:
 	bool openFrontGate;
 	bool checkBackGate;
 	bool openBackGate;
-	
+	bool shipCheck;
 private:
 	Vector3 view;
 
@@ -74,6 +74,14 @@ private:
 	int groundlevel;
 	int jumpImpulse;
 	int jumpSpeed;
+
+	bool isGravityOn;
+	bool isMaxJump;
+	bool isJump;
+	float maxJump;
+	float maxJump2;
+	int level;
+	void jump(double dt, int level);
 
 	//Bounds
 	//Refer to blueprints for bound location

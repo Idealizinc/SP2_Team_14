@@ -2,15 +2,13 @@
 
 #define PI 3.1415926535
 
-Robot::Robot(int RobotType, Vector3 SpawnPos, Boundary BBox) : CurrPos(SpawnPos)
+Robot::Robot(int RobotType, Vector3 SpawnPos) : CurrPos(SpawnPos)
 { 
+	GetDirVec(TargetPos);
+	findAngle();
 	SetStats(RobotType); 
-	BoundingBox.xMax = BBox.xMax;
-	BoundingBox.xMin = BBox.xMin;
-	BoundingBox.yMax = BBox.yMax;
-	BoundingBox.yMin = BBox.yMin;
-	BoundingBox.zMax = BBox.zMax;
-	BoundingBox.zMin = BBox.zMin;
+	CalcBounds();
+	//(CurrPos.x + 3) * rotateToTarget
 }
 
 Robot::~Robot()
@@ -20,7 +18,7 @@ Robot::~Robot()
 
 void Robot::findAngle()
 {
-	float A, B, C, total, rotateToTarget;
+	/*float A, B, C, total;
 	A = ((0 * DirVec.x) + (0 * DirVec.y) + (1 * DirVec.z));
 
 	B = pow(0, 2) + pow(0, 2), pow(1, 2);
@@ -36,7 +34,29 @@ void Robot::findAngle()
 
 	rotateToTarget = A / total;
 
-	rotateToTarget = acos(rotateToTarget) * 180.0 / PI;
+	rotateToTarget = acos(rotateToTarget) * 180.0 / PI;*/
+
+	/*float A;
+
+	A = atan2(1 - DirVec.z, 0 - DirVec.x);
+	rotateToTarget = A * 180.0 / PI;*/
+
+	//float dot, lenSq1, lenSq2;
+
+	//dot = (0 * DirVec.x) + (0 * DirVec.y) + (1 * DirVec.z);
+	//lenSq1 = 0 + 0 + 1;
+	//lenSq2 = (DirVec.x * DirVec.x) + (DirVec.y * DirVec.y) + (DirVec.z * DirVec.z);
+	//rotateToTarget = acos(dot / sqrt(lenSq1 * lenSq2));
+
+	/*std::cout << DirVec.x << ", " << DirVec.y << ", " << DirVec.z << std::endl;
+	std::cout << rotateToTarget << std::endl;
+	*/float dot, det;
+
+	dot = (0 * DirVec.x) + (1 * DirVec.z);
+	det = (0 * DirVec.z) - (1 * DirVec.x);
+	rotateToTarget = atan2(det, dot);
+	std::cout << DirVec.x << ", " << DirVec.y << ", " << DirVec.z << std::endl;
+	std::cout << rotateToTarget << std::endl;
 }
 
 Vector3 Robot::Move()
@@ -46,12 +66,13 @@ Vector3 Robot::Move()
 	CurrPos.x += DirVec.x * Speed;
 	CurrPos.y += DirVec.y * Speed;
 	CurrPos.z += DirVec.z * Speed;
-	BoundingBox.xMax += DirVec.x * Speed;
+	CalcBounds();
+	/*BoundingBox.xMax += DirVec.x * Speed;
 	BoundingBox.xMin += DirVec.x * Speed;
 	BoundingBox.yMax += DirVec.y * Speed;
 	BoundingBox.yMin += DirVec.y * Speed;
 	BoundingBox.zMax += DirVec.z * Speed;
-	BoundingBox.zMin += DirVec.z * Speed;
+	BoundingBox.zMin += DirVec.z * Speed;*/
 	return CurrPos;
 }
 
@@ -78,16 +99,9 @@ void Robot::SetHealth(float newHP)
 	Health = newHP;
 }
 
-bool Robot::checkHealth()
+void Robot::CalcBounds()
 {
-	if (Health >= 0)
-	{
-		return false;
-	}
-	else
-	{
-		return true;
-	}
+	BoundingBox.set(CurrPos.x - 3, CurrPos.x + 3, CurrPos.z - 3, CurrPos.z + 3, CurrPos.y - 3, CurrPos.y + 3);
 }
 
 Vector3 Robot::GetDirVec(Vector3 Target)
@@ -105,19 +119,19 @@ void Robot::SetStats(int Type)
 		RobotType = Melee;
 		Health = 50;
 		Damage = 10;
-		Speed = 2;
+		Speed = 1;
 		break;
 	case 1:
 		RobotType = Ranged;
 		Health = 30;
 		Damage = 5;
-		Speed = 2;
+		Speed = 1;
 		break;
 	case 2:
 		RobotType = Mixed;
 		Health = 40;
 		Damage = 8;
-		Speed = 2;
+		Speed = 1;
 		break;
 	default:
 		Health = 0;
