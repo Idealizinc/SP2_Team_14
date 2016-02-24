@@ -79,7 +79,7 @@ void SP2_Scene::Init()
 	lightOff = false;
 	basehp = 100;
 	gatehp = 20;
-	bosshp = 0;
+	bosshp = 100;
 	playerhp = 100;
 	ammo = 100;
 	wave = 1;
@@ -652,11 +652,11 @@ void SP2_Scene::RenderLevel()
 {
 	if (wave == 1)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1", Color(1, 0, 0), 3, 60, 87);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1", Color(1, 0, 0), 3, 72.5, 87);
 
 		if (curRobotCount == 0)
 		{
-			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1 clear", Color(1, 0, 0), 3, 20, 15);
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1 clear", Color(1, 0, 0), 3, 72.5, 45);
 		}
 	}
 
@@ -706,20 +706,20 @@ void SP2_Scene::RenderLevel()
 		//		modelStack.PopMatrix();
 		//	}
 		//}
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2", Color(1, 0, 0), 3, 60, 87);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2", Color(1, 0, 0), 3, 72.5, 87);
 
 		if (curRobotCount == 0)
 		{
-			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2 clear", Color(1, 0, 0), 3, 20, 15);
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2 clear", Color(1, 0, 0), 3, 72.5, 45);
 		}
 	}
 	if (wave == 3)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3", Color(1, 0, 0), 3, 60, 87);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3", Color(1, 0, 0), 3, 72.5, 87);
 
 		if (curRobotCount == 0)
 		{
-			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 20, 15);
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 72.5, 45);
 		}
 	}
 	if (wave == 4)
@@ -767,30 +767,31 @@ void SP2_Scene::RenderLevel()
 		//		modelStack.PopMatrix();
 		//	}
 		//}
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4", Color(1, 0, 0), 3, 60, 87);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4", Color(1, 0, 0), 3, 72.5, 87);
 
 		if (curRobotCount == 0)
 		{
-			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4 clear", Color(1, 0, 0), 3, 20, 15);
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4 clear", Color(1, 0, 0), 3, 72.5, 45);
 		}
 	}
 	if (wave == 5)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5", Color(1, 0, 0), 3, 60, 87);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5", Color(1, 0, 0), 3, 72.5, 87);
 
 		if (curRobotCount == 0)
 		{
-			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 20, 15);
+			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 72.5, 45);
 		}
 	}
 	if (wave == 6)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Final Stage", Color(1, 0, 0), 3, 60, 87);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Boss HP: " + std::to_string(bosshp), Color(0, 0.5, 0), 3, 65, 81);
-		if (bosshp == 0)
+		RenderTextOnScreen(meshList[GEO_TEXT], "Final Stage", Color(1, 0, 0), 3, 72.5, 87);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Boss HP: " + std::to_string(bosshp), Color(0, 0.5, 0), 3, 72.5, 81);
+		if (bosshp <= 0)
 		{
-			RenderImageOnScreen(UI_BG, 30, 5, 80, 45);
-			RenderTextOnScreen(meshList[GEO_TEXT], "Victory Achieved", Color(0.000f, 0.808f, 0.820f), 4, 68.5, 25);
+			bosshp = 0;
+			RenderImageOnScreen(UI_BG, 38, 5, 83, 76);
+			RenderTextOnScreen(meshList[GEO_TEXT], "Victory Achieved", Color(0.000f, 0.788f, 0.820f), 4, 67.5, 76);
 			//game won, go back to start screen
 		}
 	}
@@ -1147,6 +1148,10 @@ void SP2_Scene::Update(double dt)
 			buttonValue = 0;*/
 			weaponinterface = false;
 		}
+	}
+	if (Application::IsKeyPressed('5'))
+	{
+		bosshp = 0;
 	}
 	if (!weaponinterface)
 	{

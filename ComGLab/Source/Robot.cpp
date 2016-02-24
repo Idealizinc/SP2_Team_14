@@ -4,8 +4,9 @@
 
 Robot::Robot(int RobotType, Vector3 SpawnPos, Boundary BBox) : CurrPos(SpawnPos)
 { 
+	findAngle();
 	SetStats(RobotType); 
-	BoundingBox.xMax = BBox.xMax;
+	BoundingBox.xMax = BBox.xMax; //(CurrPos.x + 3) * rotateToTarget
 	BoundingBox.xMin = BBox.xMin;
 	BoundingBox.yMax = BBox.yMax;
 	BoundingBox.yMin = BBox.yMin;
@@ -20,7 +21,7 @@ Robot::~Robot()
 
 void Robot::findAngle()
 {
-	float A, B, C, total, rotateToTarget;
+	/*float A, B, C, total;
 	A = ((0 * DirVec.x) + (0 * DirVec.y) + (1 * DirVec.z));
 
 	B = pow(0, 2) + pow(0, 2), pow(1, 2);
@@ -36,7 +37,19 @@ void Robot::findAngle()
 
 	rotateToTarget = A / total;
 
-	rotateToTarget = acos(rotateToTarget) * 180.0 / PI;
+	rotateToTarget = acos(rotateToTarget) * 180.0 / PI;*/
+
+	/*float A;
+
+	A = atan2(1 - DirVec.z, 0 - DirVec.x);
+	rotateToTarget = A * 180.0 / PI;*/
+
+	float dot, lenSq1, lenSq2;
+
+	dot = (0 * DirVec.x) + (0 * DirVec.y) + (1 * DirVec.z);
+	lenSq1 = 0 + 0 + 1;
+	lenSq2 = (DirVec.x * DirVec.x) + (DirVec.y * DirVec.y) + (DirVec.z * DirVec.z);
+	rotateToTarget = acos(dot / sqrt(lenSq1 * lenSq2));
 }
 
 Vector3 Robot::Move()
