@@ -2,8 +2,9 @@
 
 #define PI 3.1415926535
 
-Robot::Robot(int RobotType, Vector3 SpawnPos) : CurrPos(SpawnPos)
+Robot::Robot(int RobotType, Vector3 SpawnPos)
 { 
+	CurrPos = SpawnPos;
 	findAngle();
 	SetStats(RobotType); 
 	CalcBounds();
@@ -51,17 +52,10 @@ void Robot::findAngle()
 Vector3 Robot::Move()
 {
 	GetDirVec(TargetPos);
-	//CalcIncrement(val);
 	CurrPos.x += DirVec.x * Speed;
 	CurrPos.y += DirVec.y * Speed;
 	CurrPos.z += DirVec.z * Speed;
 	CalcBounds();
-	/*BoundingBox.xMax += DirVec.x * Speed;
-	BoundingBox.xMin += DirVec.x * Speed;
-	BoundingBox.yMax += DirVec.y * Speed;
-	BoundingBox.yMin += DirVec.y * Speed;
-	BoundingBox.zMax += DirVec.z * Speed;
-	BoundingBox.zMin += DirVec.z * Speed;*/
 	return CurrPos;
 }
 
