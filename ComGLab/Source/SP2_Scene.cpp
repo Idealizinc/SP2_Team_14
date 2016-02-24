@@ -80,13 +80,9 @@ void SP2_Scene::Init()
 	limitersON = true;
 	lightOff = false;
 	basehp = 100;
-	gatehp = 10;
 	bosshp = 100;
-<<<<<<< HEAD
 	gatehp = 20;
 	bosshp = 0;
-=======
->>>>>>> 70778617242d0c6ed5e730eeb07ea6243176d5a7
 	playerhp = 100;
 	ammo = 100;
 	wave = 1;
@@ -124,14 +120,11 @@ void SP2_Scene::Init()
 	rightleg = true;
 	walk = true;
 	die = false;
-<<<<<<< HEAD
 	//openleftgate = false;
 	//openrightgate = false;
 	leftgate = 0;
 	rightgate = 0;
-=======
 	repairShipPhase = true;
->>>>>>> 70778617242d0c6ed5e730eeb07ea6243176d5a7
 
 	//robotleftattack = false;
 	//robotrightattack = false;
@@ -651,11 +644,7 @@ void SP2_Scene::initLights()
 
 void SP2_Scene::GameState()
 {
-<<<<<<< HEAD
-	if (basehp == 0 || playerhp == 0)
-=======
 	if (basehp <= 0 || playerhp <= 0)
->>>>>>> 70778617242d0c6ed5e730eeb07ea6243176d5a7
 	{
 		modelStack.PushMatrix();
 		//translation here once map is out
@@ -671,13 +660,10 @@ void SP2_Scene::GameState()
 	if (curRobotCount <= 0 && wave != 5)
 	{
 		weaponinterface = true;
-<<<<<<< HEAD
 	}
 	else if (curMeteorCount <= 0)
 	{
 		weaponinterface = true;
-=======
->>>>>>> 70778617242d0c6ed5e730eeb07ea6243176d5a7
 	}
 }
 
@@ -1096,28 +1082,22 @@ void SP2_Scene::Update(double dt)
 		if (openleftgate == true)
 		{
 			leftgate += (float)(3 * dt);
-			if (leftgate > 10)
+			if (leftgate > 6)
 			{
 				leftgate -= (float)(3 * dt);
-<<<<<<< HEAD
 				//openleftgate = false;
-=======
 				openleftgate = false;
->>>>>>> 70778617242d0c6ed5e730eeb07ea6243176d5a7
 			}
 		}
 		if (openrightgate == true)
 		{
 			rightgate += (float)(3 * dt);
-			if (rightgate > 10)
+			if (rightgate > 6)
 			{
-<<<<<<< HEAD
 				rightgate -= (float)(3 * dt);
 				//openrightgate = false;
-=======
 				rightgate -= (float)(0.5 * dt);
 				openrightgate = false;
->>>>>>> 70778617242d0c6ed5e730eeb07ea6243176d5a7
 			}
 		}
 	}
@@ -1128,30 +1108,23 @@ void SP2_Scene::Update(double dt)
 		if (openleftgate == false)
 		{
 			leftgate -= (float)(3 * dt);
-			if (leftgate < -10)
+			if (leftgate < -6)
 			{
 				leftgate += (float)(3 * dt);
 				//openleftgate = false;
 			}
 		}
-<<<<<<< HEAD
 		if (openrightgate == false)
 		{
 			rightgate -= (float)(3 * dt);
-			if (rightgate < -10)
+			if (rightgate < -6)
 			{
 				rightgate += (float)(3 * dt);
 				//openrightgate = false;
 			}
 		}
 	}
-=======
-	}
-				openRightGate = false;
-			}
-		}
-	}*/
->>>>>>> 70778617242d0c6ed5e730eeb07ea6243176d5a7
+
 
 	//End
 
@@ -1312,14 +1285,14 @@ void SP2_Scene::Update(double dt)
 	WepSys.IncrementPosition();
 	WepSys.CleanUp();
 
-	if (curRobotCount < RobotManager.MaxRobotCount && Application::IsKeyPressed(VK_RBUTTON))
+	/*if (curRobotCount < RobotManager.MaxRobotCount && Application::IsKeyPressed(VK_RBUTTON))
 	{
 		RobotManager.RobotList.push_back(Robot(0, Vector3(-100, 0, 100)));
 		curRobotCount++;
 	}
 
 	RobotManager.IncrementPosition();
-	RobotManager.CleanUp();
+	RobotManager.CleanUp();*/
 }
 
 void SP2_Scene::RenderSkybox(Vector3 Position)
@@ -1917,11 +1890,8 @@ void SP2_Scene::Render(double dt)
 	//modelStack.PopMatrix();
 	//modelStack.PopMatrix();*/
 
-<<<<<<< HEAD
-	modelStack.PushMatrix();
-=======
 	/*modelStack.PushMatrix();
->>>>>>> 70778617242d0c6ed5e730eeb07ea6243176d5a7
+	modelStack.PushMatrix();
 	modelStack.Translate(17.2, 0.5, -2.15);
 	modelStack.Translate(0, 0, -leftgate);
 	modelStack.Rotate(90, 0, 1, 0);
@@ -1963,11 +1933,8 @@ void SP2_Scene::Render(double dt)
 		modelStack.Translate(3, 0, 0);
 		RenderGate(true);
 		modelStack.PopMatrix();
-<<<<<<< HEAD
 	modelStack.PopMatrix();
-=======
 	modelStack.PopMatrix();*/
->>>>>>> 70778617242d0c6ed5e730eeb07ea6243176d5a7
 	
 
 	RenderRocks();

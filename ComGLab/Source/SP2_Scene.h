@@ -210,6 +210,7 @@ public:
 	float scalingLimit;
 	unsigned int curRobotCount;
 	unsigned int curMeteorCount;
+	unsigned int meteorhp;
 	//robot animation
 	bool walk;
 	float moverobot;
