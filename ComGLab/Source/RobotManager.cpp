@@ -20,7 +20,7 @@ void RobotManager::CleanUp()
 {
 	if (RobotList.size() > MaxRobotCount)
 	{
-		RobotList.pop_front();
+		RobotList.pop_back();
 	}
 	for (std::list<Robot>::iterator iter = RobotList.begin(); iter != RobotList.end(); /*++iter*/)
 	{

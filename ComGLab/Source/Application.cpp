@@ -81,9 +81,13 @@ void Application::Init()
 	S_Height = mode->height;
 	//Choose ONE
 	//Set to be windowed at primary monitor's resolution;
-	m_window = glfwCreateWindow(S_Width, S_Height, "Computer Graphics", NULL, NULL);
+<<<<<<< HEAD
+	m_window = glfwCreateWindow(1152, 864, "Computer Graphics", NULL, NULL); // S_Width, S_Height
+=======
+	//m_window = glfwCreateWindow(S_Width, S_Height, "Computer Graphics", NULL, NULL);
+>>>>>>> 7db3f46660dba17a528259afc7deefb0f05f6bd5
 	//Set to fullscreen at primary monitor's resolution;
-	//m_window = glfwCreateWindow(S_Width, S_Height, "Computer Graphics", glfwGetPrimaryMonitor(), NULL);
+	m_window = glfwCreateWindow(S_Width, S_Height, "Computer Graphics", glfwGetPrimaryMonitor(), NULL);
 	//
 
 	//Hide The Cursor Within the Application;

@@ -44,6 +44,7 @@ public:
 	bool checkBackGate;
 	bool openBackGate;
 	bool shipCheck;
+	bool coreCheck;
 private:
 	Vector3 view;
 
@@ -113,6 +114,7 @@ private:
 	Boundary Floor2FrontRight;
 	Boundary Floor2BackLeft;
 	Boundary Floor2BackRight;
+
 	//Interactive
 	Boundary TeleporterF1NW;
 	Boundary TeleporterF1NE;
@@ -123,6 +125,26 @@ private:
 	Boundary rightGate;
 	Boundary frontGate;
 	Boundary backGate;
+<<<<<<< HEAD
+
+	// Meteor
+	Boundary leftRock1;
+	Boundary leftRock2;
+	Boundary leftRock3;
+	Boundary frontRock1;
+	Boundary frontRock2;
+	Boundary rightRock1;
+	Boundary rightRock2;
+	Boundary backRock1;
+	Boundary backRock2;
+	Boundary backRock3;
+=======
+	
+	Boundary PlayerShipLeft;
+	Boundary PlayerShipRight;
+	Boundary PlayerShipFront;
+	Boundary PlayerShipBack;
+>>>>>>> 7db3f46660dba17a528259afc7deefb0f05f6bd5
 };
 
 #endif

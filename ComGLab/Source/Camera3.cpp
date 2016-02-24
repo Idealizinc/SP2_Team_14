@@ -79,6 +79,25 @@ void Camera3::Update(double dt)
 	{
 		teleCheck = false;
 	}
+	
+	if (!PlayerShipLeft.BoundaryCheck(position.x, position.z, position.y) || !PlayerShipRight.BoundaryCheck(position.x, position.z, position.y)
+		|| !PlayerShipFront.BoundaryCheck(position.x, position.z, position.y) || !PlayerShipBack.BoundaryCheck(position.x, position.z, position.y))
+	{
+		shipCheck = true;
+	}
+	else
+	{
+		shipCheck = false;
+	}
+
+	if (!corebase.BoundaryCheck(position.x, position.z, position.y))
+	{
+		coreCheck = true;
+	}
+	else
+	{
+		coreCheck = false;
+	}
 
 	if (!leftGate.BoundaryCheck(position.x, position.z, position.y))
 	{
@@ -411,7 +430,25 @@ void Camera3::initBoundVec()
 	TeleporterF1SW.set(10, 17, -17, -9, -5, 10);
 	TeleporterF1SE.set(-17, -10, -17, -9, -5, 10);
 
+<<<<<<< HEAD
 	leftGate.set(8, 26, -5, 5, -5, 10);
+
+	leftRock1.set(-44.9, -55.6, -2.8, -12.5, 0, 8);
+	leftRock2.set(-80.4, -109.4, -17.2, -46.7, 0, 8);
+	leftRock3.set(-92.4, -130, -105.6, -138.9, 0, 8);
+	frontRock1.set(4.9, -5.7, -53.6, -66, 0, 8);
+	frontRock2.set(53.5, 66.9, -110, -128.3, 0, 8);
+	rightRock1.set(44.8, 55.2, 5.4, -5.4, 0, 8);
+	rightRock2.set(95.3, 123.5, -14.7, -44.7, 0, 8);
+	backRock1.set(-4.8, 5.2, 54.2, 65.7, 0, 8);
+	backRock2.set(18.1, 34.1, 117.1, 144, 0, 8);
+	backRock3.set(-150, -140, 116.8, 144.4, 0, 8);
+=======
+	PlayerShipLeft.set(-6.6, 7.5, 65, 67, 0, 5);
+	PlayerShipRight.set(-6.6, 7.5, 83, 85, 0, 5);
+	PlayerShipFront.set(7, 7.5, 67, 83, 0, 5);
+	PlayerShipBack.set(-7, -6.6, 67, 83, 0, 5);
+>>>>>>> 7db3f46660dba17a528259afc7deefb0f05f6bd5
 }
 
 void Camera3::jump(double dt, int level)
