@@ -115,6 +115,7 @@ void SP2_Scene::Init()
 	rightleg = true;
 	walk = true;
 	die = false;
+	repairShipPhase = true;
 
 	//robotleftattack = false;
 	//robotrightattack = false;
@@ -206,8 +207,8 @@ void SP2_Scene::Init()
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//calibri.tga");
 
-	//meshList[GEO_PLAYERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//PlayerShip.obj");
-	//meshList[GEO_PLAYERSHIP]->textureID = LoadTGA("Image//Tex_PlayerShip.tga");
+	meshList[GEO_PLAYERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//PlayerShip.obj");
+	meshList[GEO_PLAYERSHIP]->textureID = LoadTGA("Image//Tex_PlayerShip.tga");
 
 	//meshList[GEO_MOTHERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//Mothership.obj");
 	//meshList[GEO_MOTHERSHIP]->textureID = LoadTGA("Image//Tex_Mothership.tga");
@@ -647,7 +648,7 @@ void SP2_Scene::GameState()
 		playerhp = 100;
 		basehp = 100;
 	}
-	if (curRobotCount <= 0)
+	if (curRobotCount <= 0 && wave != 5)
 	{
 		weaponinterface = true;
 	}
@@ -786,6 +787,7 @@ void SP2_Scene::RenderLevel()
 		if (curRobotCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 72.5, 45);
+			repairShipPhase = true;
 		}
 	}
 	if (wave == 6)
@@ -799,6 +801,19 @@ void SP2_Scene::RenderLevel()
 			RenderTextOnScreen(meshList[GEO_TEXT], "Victory Achieved", Color(0.000f, 0.788f, 0.820f), 4, 67.5, 76);
 			//game won, go back to start screen
 		}
+	}
+}
+
+void SP2_Scene::RenderShip()
+{
+	if (repairShipPhase == true)
+	{
+		modelStack.PushMatrix(); //Player ship
+		modelStack.Translate(0, 0, 20);
+		modelStack.Rotate(1, 0, 0, 0);
+		modelStack.Scale(0, 0, 0);
+		RenderMesh(meshList[GEO_PLAYERSHIP], true);
+		modelStack.PopMatrix();
 	}
 }
 

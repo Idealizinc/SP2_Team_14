@@ -72,7 +72,7 @@ class SP2_Scene : public Scene
 
 
 		//Ships
-		//GEO_PLAYERSHIP,
+		GEO_PLAYERSHIP,
 		//GEO_MOTHERSHIP,
 
 		//drone
@@ -324,6 +324,7 @@ private:
 	void RenderGate(bool render = false);
 	void RenderUI();
 	void RobotAnimation(double dt);
+	void RenderShip();
 
 	//Interaction Values
 	bool buttonPress;
@@ -348,6 +349,7 @@ private:
 	float timer;
 	bool weaponinterface;
 	bool repairgate;
+	bool repairShipPhase;
 
 	//Light Stuff
 	Vector3 TownLightPosition;

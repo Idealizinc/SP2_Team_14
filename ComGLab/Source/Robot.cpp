@@ -4,6 +4,7 @@
 
 Robot::Robot(int RobotType, Vector3 SpawnPos, Boundary BBox) : CurrPos(SpawnPos)
 { 
+	GetDirVec(TargetPos);
 	findAngle();
 	SetStats(RobotType); 
 	BoundingBox.xMax = BBox.xMax; //(CurrPos.x + 3) * rotateToTarget
@@ -44,12 +45,22 @@ void Robot::findAngle()
 	A = atan2(1 - DirVec.z, 0 - DirVec.x);
 	rotateToTarget = A * 180.0 / PI;*/
 
-	float dot, lenSq1, lenSq2;
+	//float dot, lenSq1, lenSq2;
 
-	dot = (0 * DirVec.x) + (0 * DirVec.y) + (1 * DirVec.z);
-	lenSq1 = 0 + 0 + 1;
-	lenSq2 = (DirVec.x * DirVec.x) + (DirVec.y * DirVec.y) + (DirVec.z * DirVec.z);
-	rotateToTarget = acos(dot / sqrt(lenSq1 * lenSq2));
+	//dot = (0 * DirVec.x) + (0 * DirVec.y) + (1 * DirVec.z);
+	//lenSq1 = 0 + 0 + 1;
+	//lenSq2 = (DirVec.x * DirVec.x) + (DirVec.y * DirVec.y) + (DirVec.z * DirVec.z);
+	//rotateToTarget = acos(dot / sqrt(lenSq1 * lenSq2));
+
+	/*std::cout << DirVec.x << ", " << DirVec.y << ", " << DirVec.z << std::endl;
+	std::cout << rotateToTarget << std::endl;
+	*/float dot, det;
+
+	dot = (0 * DirVec.x) + (1 * DirVec.z);
+	det = (0 * DirVec.z) - (1 * DirVec.x);
+	rotateToTarget = atan2(det, dot);
+	std::cout << DirVec.x << ", " << DirVec.y << ", " << DirVec.z << std::endl;
+	std::cout << rotateToTarget << std::endl;
 }
 
 Vector3 Robot::Move()

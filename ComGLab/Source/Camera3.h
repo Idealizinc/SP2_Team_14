@@ -43,7 +43,7 @@ public:
 	bool openFrontGate;
 	bool checkBackGate;
 	bool openBackGate;
-	
+	bool shipCheck;
 private:
 	Vector3 view;
 

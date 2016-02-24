@@ -25,6 +25,8 @@ public:
 	bool checkHealth();
 	void findAngle();
 	float rotateToTarget;
+
+	Vector3 vec3;
 private:
 	Vector3 GetDirVec(Vector3 Target);
 	void SetStats(int Type);

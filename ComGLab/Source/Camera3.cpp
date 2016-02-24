@@ -49,6 +49,8 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up,
 	checkBackGate = false;
 	openBackGate = false;
 
+	shipCheck = false;
+
 	jumpForce = 0;
 	groundlevel = 6;
 	jumpImpulse = 0;
