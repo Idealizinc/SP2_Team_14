@@ -55,22 +55,6 @@ class SP2_Scene : public Scene
 		GEO_RIFLE,
 		GEO_SHOTGUN,
 
-		GEO_RED_SMG,
-		GEO_RED_SNIPER,
-		GEO_RED_RIFLE,
-		GEO_RED_SHOTGUN,
-
-		GEO_GREEN_SMG,
-		GEO_GREEN_SNIPER,
-		GEO_GREEN_RIFLE,
-		GEO_GREEN_SHOTGUN,
-
-		GEO_BLUE_SMG,
-		GEO_BLUE_SNIPER,
-		GEO_BLUE_RIFLE,
-		GEO_BLUE_SHOTGUN,
-
-
 		//Ships
 		//GEO_PLAYERSHIP,
 		//GEO_MOTHERSHIP,
@@ -284,7 +268,7 @@ public:
 		F_Shotgun,
 	};
 	Gun_Type currentGun = N_SMG;
-	float RateOfFire = 10;
+	float RateOfFire;
 	float Damage = 0;
 	float MaxAmmo = 0;
 	float CurrAmmo = MaxAmmo;

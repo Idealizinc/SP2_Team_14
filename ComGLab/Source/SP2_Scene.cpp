@@ -51,6 +51,8 @@ void SP2_Scene::readtextfile()
 
 void SP2_Scene::Init()
 {
+	RobotManager.RobotList.push_back(Robot(0, Vector3(10, 0, 10)));
+
 	/*engine = createIrrKlangDevice();
 	engine->addSoundSourceFromFile(SoundName[0].c_str());
 	Song = engine->play2D(SoundName[0].c_str(), true, false, true);
@@ -122,7 +124,7 @@ void SP2_Scene::Init()
 
 	// Enable depth Test
 	glEnable(GL_DEPTH_TEST);
-	glEnable(GL_CULL_FACE);
+	//glEnable(GL_CULL_FACE);
 	// Enable blending
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -604,13 +606,13 @@ void SP2_Scene::initLights()
 	m_parameters[U_LIGHT0_COSINNER] = glGetUniformLocation(m_programID, "lights[0].cosInner");
 	m_parameters[U_LIGHT0_EXPONENT] = glGetUniformLocation(m_programID, "lights[0].exponent");
 
-	lightDefaultPos.Set(0, 500, 10);
+	lightDefaultPos.Set(0, 40, 0);
 
 	glUseProgram(m_programID);
 	light[0].type = Light::LIGHT_DIRECTIONAL;
 	light[0].position.Set(lightDefaultPos.x, lightDefaultPos.y, lightDefaultPos.z);
 	light[0].color.Set(1, 0.95, 1);
-	light[0].power = 1;
+	light[0].power = 0.7;
 	light[0].kC = 1.f;
 	light[0].kL = 0.01f;
 	light[0].kQ = 0.001f;
@@ -1107,6 +1109,7 @@ void SP2_Scene::Update(double dt)
 	//Weapon
 	if (weaponinterface && randWepChoices)
 	{
+		srand(constTranslation);
 		WepItf_Choices.x = rand() % 4;
 		WepItf_Choices.y = rand() % 4;
 		WepItf_Choices.z = rand() % 4;
@@ -1211,7 +1214,7 @@ void SP2_Scene::Update(double dt)
 	
 	if (!CanFire)
 	{
-		RateOfFire = 0.3;
+		RateOfFire = 0.2;
 		GunWaitTime += pause * dt;
 		if (GunWaitTime >= RateOfFire)
 		{
@@ -1238,13 +1241,12 @@ void SP2_Scene::Update(double dt)
 	WepSys.IncrementPosition();
 	WepSys.CleanUp();
 
-	if (curRobotCount < RobotManager.MaxRobotCount && Application::IsKeyPressed(VK_RBUTTON))
+	/*if (curRobotCount < RobotManager.MaxRobotCount && Application::IsKeyPressed(VK_RBUTTON))
 	{
 		RobotManager.RobotList.push_back(Robot(0, Vector3(-100, 0, 100)));
 		curRobotCount++;
-	}
-
-	RobotManager.IncrementPosition();
+	}*/
+	//RobotManager.IncrementPosition();
 	RobotManager.CleanUp();
 }
 
@@ -1458,10 +1460,9 @@ void SP2_Scene::RenderUI()
 	modelStack.PushMatrix();
 	RenderImageOnScreen(UI_BG, 50, 10, 80, 5);
 	RenderTextOnScreen(meshList[GEO_TEXT], "<Player Health>", Color(0, 1, 0), 3, 70, 7);
-	RenderImageOnScreen(UI_HP_Red, 40, 3, 80, 4);
+	RenderImageOnScreen(UI_HP_Red, 40, 3, 80, 3);
 	float Dividend = playerhp * 0.4;
-	if (playerhp <= 0){ playerhp = 1; }
-	RenderImageOnScreen(UI_HP_Green, Dividend, 3, 80, 4); 
+	if (playerhp > 0){ RenderImageOnScreen(UI_HP_Green, Dividend, 3, 80, 3); }
 	modelStack.PopMatrix();
 	//INFO UI, HP END
 
@@ -1663,6 +1664,7 @@ void SP2_Scene::Render(double dt)
 	{
 		modelStack.PushMatrix();
 		i.Move();
+		i.BoundsCheck(RobotManager.RobotList);
 		modelStack.Translate(i.Position().x, i.Position().y, i.Position().z);
 		modelStack.Scale(0.1, 0.1, 0.1);
 		RenderMesh(meshList[GEO_BULLET], false);
@@ -1673,7 +1675,7 @@ void SP2_Scene::Render(double dt)
 	{
 		modelStack.PushMatrix();
 		modelStack.Translate(i.Position().x, i.Position().y, i.Position().z);
-		modelStack.Rotate(i.rotateToTarget, 0, 1, 0);
+		//modelStack.Rotate(i.rotateToTarget, 0, 1, 0);
 		RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
 		modelStack.PushMatrix();
 		//modelStack.Rotate(rotateAngle, 1, 0, 0);
@@ -1709,49 +1711,6 @@ void SP2_Scene::Render(double dt)
 			modelStack.PopMatrix();
 		modelStack.PopMatrix();
 	}
-
-	//for (auto i : RobotSys.RobotList)
-	//{
-	//	//melee robot
-	//	modelStack.PushMatrix();
-	//	i.Move();
-	//	modelStack.Translate(i.Position().x -100, 0.5, i.Position().z - 140);
-	//	modelStack.Translate(0, 0, -moverobot);
-	//	RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
-	//		modelStack.PushMatrix();
-	//		//modelStack.Rotate(rotateAngle, 1, 0, 0);
-	//		modelStack.Translate(0, 0, -10);
-	//		modelStack.Translate(0, 0, 10);
-	//		modelStack.Translate(0.3, 0, 0);
-	//		RenderMesh(meshList[GEO_MELEEROBOTLEFTUPPERARM], true);
-	//			modelStack.PushMatrix();
-	//			//modelStack.Rotate(rotateAngle, 1, 0, 0);
-	//			RenderMesh(meshList[GEO_MELEEROBOTLEFTLOWERARM], true);
-	//			modelStack.PopMatrix();
-	//		modelStack.PopMatrix();
-	//			modelStack.PushMatrix();
-	//			//modelStack.Rotate(rotateAngle, 1, 0, 0);
-	//			modelStack.Translate(0, 0, -10);
-	//			modelStack.Translate(0, 0, 10);
-	//			modelStack.Translate(-0.3, 0, 0);
-	//			RenderMesh(meshList[GEO_MELEEROBOTRIGHTUPPERARM], true);
-	//				modelStack.PushMatrix();
-	//				//modelStack.Rotate(rotateAngle, 1, 0, 0);
-	//				RenderMesh(meshList[GEO_MELEEROBOTRIGHTLOWERARM], true);
-	//				modelStack.PopMatrix();
-	//			modelStack.PopMatrix();
-	//		modelStack.PushMatrix();
-	//		modelStack.Rotate(moveleftleg, 1, 0, 0);
-	//		modelStack.Translate(0, 0, -10);
-	//		modelStack.Translate(0, 0, 10);
-	//		RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
-	//		modelStack.PopMatrix();
-	//			modelStack.PushMatrix();
-	//			modelStack.Rotate(moverightleg, 1, 0, 0);
-	//			RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
-	//			modelStack.PopMatrix();
-	//	modelStack.PopMatrix();
-	//}
 
 	//for (auto i : numrobots.RobotList)
 	//{
@@ -1796,30 +1755,30 @@ void SP2_Scene::Render(double dt)
 	//	modelStack.PopMatrix();
 	//}
 
-	//drone
-	modelStack.PushMatrix();
-	modelStack.Translate(0, 0, -12);
-	modelStack.Rotate(180, 0, 1, 0);
-	RenderMesh(meshList[GEO_DRONEBODY], true);
-		modelStack.PushMatrix();
-		modelStack.Rotate(droidrepairgate, 0, 0, 1);
-		modelStack.Translate(0, 0, -12);
-		modelStack.Translate(0, 0, 12);
-		RenderMesh(meshList[GEO_DRONELEFTUPPERARM], true);
-			modelStack.PushMatrix();
-			RenderMesh(meshList[GEO_DRONELEFTLOWERARM], true);
-			modelStack.PopMatrix();
-		modelStack.PopMatrix();
-			modelStack.PushMatrix();
-			modelStack.Rotate(droidrepairgate, 0, 0, 1);
-			modelStack.Translate(0, 0, -12);
-			modelStack.Translate(0, 0, 12);
-			RenderMesh(meshList[GEO_DRONERIGHTUPPERARM], true);
-				modelStack.PushMatrix();
-				RenderMesh(meshList[GEO_DRONERIGHTLOWERARM], true);
-				modelStack.PopMatrix();
-			modelStack.PopMatrix();
-	modelStack.PopMatrix();
+	////drone
+	//modelStack.PushMatrix();
+	//modelStack.Translate(0, 0, -12);
+	//modelStack.Rotate(180, 0, 1, 0);
+	//RenderMesh(meshList[GEO_DRONEBODY], true);
+	//	modelStack.PushMatrix();
+	//	modelStack.Rotate(droidrepairgate, 0, 0, 1);
+	//	modelStack.Translate(0, 0, -12);
+	//	modelStack.Translate(0, 0, 12);
+	//	RenderMesh(meshList[GEO_DRONELEFTUPPERARM], true);
+	//		modelStack.PushMatrix();
+	//		RenderMesh(meshList[GEO_DRONELEFTLOWERARM], true);
+	//		modelStack.PopMatrix();
+	//	modelStack.PopMatrix();
+	//		modelStack.PushMatrix();
+	//		modelStack.Rotate(droidrepairgate, 0, 0, 1);
+	//		modelStack.Translate(0, 0, -12);
+	//		modelStack.Translate(0, 0, 12);
+	//		RenderMesh(meshList[GEO_DRONERIGHTUPPERARM], true);
+	//			modelStack.PushMatrix();
+	//			RenderMesh(meshList[GEO_DRONERIGHTLOWERARM], true);
+	//			modelStack.PopMatrix();
+	//		modelStack.PopMatrix();
+	//modelStack.PopMatrix();
 
 	////mixed robot
 	//modelStack.PushMatrix();

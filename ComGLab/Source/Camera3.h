@@ -51,7 +51,7 @@ private:
     float CameraXrotation;
     float CameraYrotation, maxCameraXrotation, minCameraXrotation;
 	void initBoundVec();
-	float rotate_Sensitivity = S_Width / S_Height * 2;
+	float rotate_Sensitivity = S_Width / S_Height;
 	float walkingSpeed = 10.f;
 	float gravity;
 
