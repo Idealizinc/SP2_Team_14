@@ -1563,25 +1563,87 @@ void SP2_Scene::RenderGate(bool render)
 
 void SP2_Scene::RenderRocks()
 {
+	// Right
 	modelStack.PushMatrix();
-	int range = 5;
-	for (int detailLevel = 1; detailLevel <= range; detailLevel++)
-	{
-		for (int i = 1; i <= 360; i += 60 - range * 5)
-		{
-			modelStack.PushMatrix();
-			modelStack.Translate((detailLevel * 70 + 50) * cos(Math::DegreeToRadian(i + detailLevel * 20)), -5, (detailLevel*  70 + 50) * sin(Math::DegreeToRadian(i + detailLevel * 20)));
-			modelStack.Rotate(5 * i, 0, 1, 0);
+	modelStack.Translate(50, -1, 0);
+	modelStack.Rotate(0, 0, 0, 1);
+	modelStack.Scale(6, 6, 6);
+	RenderMesh(meshList[GEO_METEOR], true);
 
-			modelStack.PushMatrix();
-			modelStack.Rotate(20 + 5 * (i + i * detailLevel), 1, 1, 1);
-			modelStack.Scale(15, 10, 15);
-			RenderMesh(meshList[GEO_METEOR], true);
-			modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(10, 0, -8);
+	modelStack.Rotate(50, 1, 0, 0);
+	modelStack.Scale(3, 3, 3);
+	RenderMesh(meshList[GEO_METEOR], true);
 
-			modelStack.PopMatrix();
-		}
-	}
+	modelStack.PushMatrix();
+	modelStack.Translate(3, 0, 20);
+	modelStack.Rotate(30, 1, 0, 0);
+	modelStack.Scale(-3, -3, -3);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	// left
+	modelStack.PushMatrix();
+	modelStack.Translate(-50, -1, -8);
+	modelStack.Rotate(0, 0, 0, 1);
+	modelStack.Scale(6, 6, 6);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-5, 0, -4);
+	modelStack.Rotate(50, 0, 0, 1);
+	modelStack.Scale(3, 3, 3);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-1, 0, -5);
+	modelStack.Rotate(-20, 0, 1, 0);
+	modelStack.Scale(1, 1, 1);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	// front
+	modelStack.PushMatrix();
+	modelStack.Translate(0, -2, -60);
+	modelStack.Rotate(0, 0, 0, 1);
+	modelStack.Scale(6, 6, 6);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PushMatrix();
+	modelStack.Translate(10, 0, -10);
+	modelStack.Rotate(20, 0, 1, 0);
+	modelStack.Scale(2, 2, 2);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	// back
+	modelStack.PushMatrix();
+	modelStack.Translate(0, 0, 60);
+	modelStack.Rotate(0, 0, 0, 1);
+	modelStack.Scale(6, 6, 6);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PushMatrix();
+	modelStack.Translate(5, 0, 9);
+	modelStack.Rotate(80, 1, 0, 0);
+	modelStack.Scale(2, 2, 2);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-8, 0, 0);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
 	modelStack.PopMatrix();
 }
 
@@ -1650,6 +1712,7 @@ void SP2_Scene::Render(double dt)
 	}
 
 	modelStack.PushMatrix();
+	modelStack.Translate(0, 3, 0);
 	RenderMesh(meshList[GEO_AXES], false);
 	modelStack.PopMatrix();
 
@@ -1909,9 +1972,14 @@ void SP2_Scene::Render(double dt)
 	RenderLevel();
 
 	stringstream ss;
-	ss << camera.position.y;
-	std::string cameraY = ss.str();
-	RenderTextOnScreen(meshList[GEO_TEXT], cameraY, Color(1, 1, 1), 2.8, 3, 19.7);
+	ss << camera.position.x;
+	std::string cameraX = ss.str();
+	RenderTextOnScreen(meshList[GEO_TEXT], "X: " + cameraX, Color(1, 1, 1), 2.8, 3, 19.7);
+
+	stringstream ss2;
+	ss2 << camera.position.z;
+	std::string cameraZ = ss2.str();
+	RenderTextOnScreen(meshList[GEO_TEXT], "Z: " + cameraZ, Color(1, 1, 1), 2.8, 3, 18);
 	//DO NOT RENDER ANYTHING UNDER THIS//
 
 	RenderUI();

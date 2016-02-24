@@ -123,6 +123,18 @@ private:
 	Boundary rightGate;
 	Boundary frontGate;
 	Boundary backGate;
+
+	// Meteor
+	Boundary leftRock1;
+	Boundary leftRock2;
+	Boundary leftRock3;
+	Boundary frontRock1;
+	Boundary frontRock2;
+	Boundary rightRock1;
+	Boundary rightRock2;
+	Boundary backRock1;
+	Boundary backRock2;
+	Boundary backRock3;
 };
 
 #endif
