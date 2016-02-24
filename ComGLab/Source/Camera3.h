@@ -44,6 +44,7 @@ public:
 	bool checkBackGate;
 	bool openBackGate;
 	bool shipCheck;
+	bool coreCheck;
 private:
 	Vector3 view;
 
@@ -113,6 +114,7 @@ private:
 	Boundary Floor2FrontRight;
 	Boundary Floor2BackLeft;
 	Boundary Floor2BackRight;
+
 	//Interactive
 	Boundary TeleporterF1NW;
 	Boundary TeleporterF1NE;
@@ -123,6 +125,11 @@ private:
 	Boundary rightGate;
 	Boundary frontGate;
 	Boundary backGate;
+	
+	Boundary PlayerShipLeft;
+	Boundary PlayerShipRight;
+	Boundary PlayerShipFront;
+	Boundary PlayerShipBack;
 };
 
 #endif

@@ -91,13 +91,14 @@ void SP2_Scene::Init()
 	timer = 0;
 	weaponValue = 0;
 	weaponinterface = false;
-	repairgate = true;
+	//repairgate = false;
 	buttonPress = true;
 	buttonValue = 0;
 	//droidrepair = false;
 	droidrepairgate = 0;
 
 	curRobotCount = 1;
+	curMeteorCount = 1;
 	leftarmrotatelimit = -1;
 	rightarmrotatelimit = -1;
 	leftarmrotate = true;
@@ -119,6 +120,11 @@ void SP2_Scene::Init()
 	rightleg = true;
 	walk = true;
 	die = false;
+	//openleftgate = false;
+	//openrightgate = false;
+	leftgate = 0;
+	rightgate = 0;
+	repairShipPhase = true;
 
 	//robotleftattack = false;
 	//robotrightattack = false;
@@ -202,6 +208,8 @@ void SP2_Scene::InitWeaponModels()
 	Normal_Sniper = LoadTGA("Image//Tex_Sniper.tga");
 	Normal_Rifle = LoadTGA("Image//Tex_Rifle.tga");
 	Normal_Shotgun = LoadTGA("Image//Tex_Shotgun.tga");
+	meshList[GEO_PLAYERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//PlayerShip.obj");
+	meshList[GEO_PLAYERSHIP]->textureID = LoadTGA("Image//Tex_PlayerShip.tga");
 
 	// Damage
 	Damage_Sniper = LoadTGA("Image//Tex_SniperDamage.tga");
@@ -662,7 +670,7 @@ void SP2_Scene::initLights()
 
 void SP2_Scene::GameState()
 {
-	if (basehp <= 0 || playerhp <= 0)
+	if (basehp == 0 || playerhp == 0)
 	{
 		modelStack.PushMatrix();
 		//translation here once map is out
@@ -675,7 +683,11 @@ void SP2_Scene::GameState()
 		playerhp = 100;
 		basehp = 100;
 	}
-	if (curRobotCount <= 0)
+	if (curRobotCount <= 0 && wave != 5)
+	{
+		weaponinterface = true;
+	}
+	else if (curMeteorCount <= 0)
 	{
 		weaponinterface = true;
 	}
@@ -750,7 +762,7 @@ void SP2_Scene::RenderLevel()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3", Color(1, 0, 0), 3, 72.5, 87);
 
-		if (curRobotCount == 0)
+		if (curMeteorCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 72.5, 45);
 		}
@@ -814,6 +826,7 @@ void SP2_Scene::RenderLevel()
 		if (curRobotCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 72.5, 45);
+			repairShipPhase = true;
 		}
 	}
 	if (wave == 6)
@@ -827,6 +840,19 @@ void SP2_Scene::RenderLevel()
 			RenderTextOnScreen(meshList[GEO_TEXT], "Victory Achieved", Color(0.000f, 0.788f, 0.820f), 4, 67.5, 76);
 			//game won, go back to start screen
 		}
+	}
+}
+
+void SP2_Scene::RenderShip()
+{
+	if (repairShipPhase == true)
+	{
+		modelStack.PushMatrix(); //Player ship
+		modelStack.Translate(0, 0, 20);
+		modelStack.Rotate(1, 0, 0, 0);
+		modelStack.Scale(0, 0, 0);
+		RenderMesh(meshList[GEO_PLAYERSHIP], true);
+		modelStack.PopMatrix();
 	}
 }
 
@@ -1087,51 +1113,8 @@ void SP2_Scene::Update(double dt)
 			GameLoading = false;
 		}
 	}
-	else{
-		//gate
-		if (gatehp <= 0)
-		{
-			repairgate = true;
-		}
-		else if (gatehp == 20)
-		{
-			repairgate = false;
-		}
-
-		/*if (repairgate == true)
-		{
-		openLeftGate = true;
-		openRightGate = true;
-		if (openLeftGate == true)
-		{
-		leftgate += (float)(3 * dt);
-		if (leftgate > 10)
-		{
-		leftgate -= (float)(3 * dt);
-		openleftgate = false;
-		}
-		}
-		if (openRightGate == true)
-		{
-		rightgate += (float)(0.5 * dt);
-		if (rightgate > 1)
-		{
-		rightgate -= (float)(0.5 * dt);
-		openrightgate = false;
-		}
-		}
-		if (openleftgate == false)
-		{
-
-		}
-		}
-		openRightGate = false;
-		}
-		}
-		}*/
-
-		//End
-
+	else
+	{
 		//Resetting Scaling
 		if (scaleAll >= scalingLimit)
 		{
@@ -1597,12 +1580,14 @@ void SP2_Scene::RenderGate(bool render)
 
 	modelStack.PushMatrix();
 	modelStack.Translate(camera.frontGateA, 0.5, 17.2);
+	modelStack.Translate(-leftgate, 0, 0);
 	modelStack.Scale(1.55, 1.55, 2.5);
 	RenderMesh(meshList[GEO_GATE], true);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(camera.frontGateB, 0.5, 17.2);
+	modelStack.Translate(rightgate, 0, 0);
 	modelStack.Scale(1.55, 1.55, 2.5);
 	RenderMesh(meshList[GEO_GATE], true);
 	modelStack.PopMatrix();
@@ -1872,9 +1857,39 @@ void SP2_Scene::Render(double dt)
 		modelStack.Rotate(90, 0, 1, 0);
 		modelStack.Scale(1.55, 1.55, 2.5);
 		RenderGate(true);
+=======
+	////mixed robot
+	//modelStack.PushMatrix();
+	//modelStack.Translate(-10, 0, 0);
+	//modelStack.Rotate(-90, 0, 1, 0);
+	//RenderMesh(meshList[GEO_MIXEDROBOTBODY], true);
+	//	modelStack.PushMatrix();
+	//	RenderMesh(meshList[GEO_MIXEDROBOTLEFTARM], true);
+	//	modelStack.PopMatrix();
+	//		modelStack.PushMatrix();
+	//		RenderMesh(meshList[GEO_MIXEDROBOTRIGHTARM], true);
+	//		modelStack.PopMatrix();
+	//			modelStack.PushMatrix();
+	//			RenderMesh(meshList[GEO_MIXEDROBOTLEFTLEG], true);
+	//			modelStack.PopMatrix();
+	//				modelStack.PushMatrix();
+	//				RenderMesh(meshList[GEO_MIXEDROBOTRIGHTLEG], true);
+	//				modelStack.PopMatrix();
+	//modelStack.PopMatrix();
+	//modelStack.PopMatrix();*/
+
+	modelStack.PushMatrix();
+	/*modelStack.PushMatrix();
+>>>>>>> 70778617242d0c6ed5e730eeb07ea6243176d5a7
+	modelStack.Translate(17.2, 0.5, -2.15);
+	modelStack.Translate(0, 0, -leftgate);
+	modelStack.Rotate(90, 0, 1, 0);
+	modelStack.Scale(1.55, 1.55, 2.5);
+	RenderGate(true);
+>>>>>>> a6da9c29979dade4382dc44a0de55bfaa8b24271
 		modelStack.PushMatrix();
 		modelStack.Translate(-3, 0, 0);
-		modelStack.Translate(-rightgate, 0, 0);
+		modelStack.Translate(rightgate, 0, 0);
 		RenderGate(true);
 		modelStack.PopMatrix();
 		modelStack.PopMatrix();
@@ -1909,7 +1924,7 @@ void SP2_Scene::Render(double dt)
 		RenderGate(true);
 		modelStack.PopMatrix();
 		modelStack.PopMatrix();*/
-
+	modelStack.PopMatrix();
 
 		RenderRocks();
 

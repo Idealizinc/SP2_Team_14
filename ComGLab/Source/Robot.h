@@ -24,9 +24,9 @@ public:
 	void SetHealth(float newHP);
 	void findAngle();
 	float rotateToTarget;
+
 	void CalcBounds();
 	float Health;
-
 private:
 	Vector3 GetDirVec(Vector3 Target);
 	void SetStats(int Type);

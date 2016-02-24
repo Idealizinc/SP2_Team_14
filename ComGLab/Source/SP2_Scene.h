@@ -56,7 +56,7 @@ class SP2_Scene : public Scene
 		GEO_SHOTGUN,
 
 		//Ships
-		//GEO_PLAYERSHIP,
+		GEO_PLAYERSHIP,
 		//GEO_MOTHERSHIP,
 
 		//drone
@@ -192,7 +192,8 @@ public:
 	float rotationalLimit;
 	float translationLimit;
 	float scalingLimit;
-
+	unsigned int curRobotCount;
+	unsigned int curMeteorCount;
 	//robot animation
 	bool walk;
 	float moverobot;
@@ -230,9 +231,13 @@ public:
 	float constTranslation;
 	float DoorRot;
 	bool canUseDoor = true;
+	float leftgate;
+	float rightgate;
+	bool openleftgate;
+	bool openrightgate;
 	int weaponSelect;
 	bool sniper, rifle;
-	unsigned short curRobotCount;
+	//unsigned short curRobotCount;
 	//unsigned int pause;
 
 	unsigned short skyboxID = 0;
@@ -321,6 +326,7 @@ private:
 	void RenderGate(bool render = false);
 	void RenderUI();
 	void RobotAnimation(double dt);
+	void RenderShip();
 
 	//Interaction Values
 	bool buttonPress;
@@ -345,6 +351,7 @@ private:
 	float timer;
 	bool weaponinterface;
 	bool repairgate;
+	bool repairShipPhase;
 
 	//Light Stuff
 	Vector3 TownLightPosition;
