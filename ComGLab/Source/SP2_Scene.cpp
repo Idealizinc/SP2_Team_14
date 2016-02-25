@@ -96,7 +96,6 @@ void SP2_Scene::Init()
 	droidrepairgate = 0;
 	shipFallingX = -20;
 	shipFallingY = 150;
-	curRobotCount = 1;
 	curMeteorCount = 1;
 	leftarmrotatelimit = -1;
 	rightarmrotatelimit = -1;
@@ -128,6 +127,11 @@ void SP2_Scene::Init()
 	//robotleftattack = false;
 	//robotrightattack = false;
 	WepItf_Choices = Vector3(0, 0, 0);
+
+	spawnPointN = Vector3(0, 0, 150);
+	spawnPointS = Vector3(0, 0, -150); 
+	spawnPointE = Vector3(-150, 0, 0);
+	spawnPointW = Vector3(150, 0, 0);
 
 	// Enable depth Test
 	glEnable(GL_DEPTH_TEST);
@@ -297,6 +301,9 @@ void SP2_Scene::InitMapModels()
 
 void SP2_Scene::InitRobots()
 {
+	meshList[GEO_ROBOTHEALTH] = MeshBuilder::GenerateCube("cube", Color(0, 1, 0));
+	meshList[GEO_ROBOTHEALTH2] = MeshBuilder::GenerateCube("cube", Color(1, 0, 0));
+	
 	//drone
 	meshList[GEO_DRONEBODY] = MeshBuilder::GenerateOBJ("test", "OBJ//Drone_body.obj");
 	GLuint texGD = LoadTGA("Image//Tex_Drone.tga");
@@ -682,7 +689,7 @@ void SP2_Scene::GameState()
 		playerhp = 100;
 		basehp = 100;
 	}
-	if (curRobotCount <= 0 && wave != 5)
+	if (RobotManager.CurrentRobotCount <= 0 && wave != 5)
 	{
 		weaponinterface = true;
 	}
@@ -698,7 +705,7 @@ void SP2_Scene::RenderLevel()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1", Color(1, 0, 0), 3, 72.5, 87);
 
-		if (curRobotCount == 0)
+		if (RobotManager.CurrentRobotCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1 clear", Color(1, 0, 0), 3, 72.5, 45);
 		}
@@ -752,7 +759,7 @@ void SP2_Scene::RenderLevel()
 		//}
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2", Color(1, 0, 0), 3, 72.5, 87);
 
-		if (curRobotCount == 0)
+		if (RobotManager.CurrentRobotCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2 clear", Color(1, 0, 0), 3, 72.5, 45);
 		}
@@ -813,7 +820,7 @@ void SP2_Scene::RenderLevel()
 		//}
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4", Color(1, 0, 0), 3, 72.5, 87);
 
-		if (curRobotCount == 0)
+		if (RobotManager.CurrentRobotCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4 clear", Color(1, 0, 0), 3, 72.5, 45);
 		}
@@ -822,7 +829,7 @@ void SP2_Scene::RenderLevel()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5", Color(1, 0, 0), 3, 72.5, 87);
 
-		if (curRobotCount == 0)
+		if (RobotManager.CurrentRobotCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 72.5, 45);
 			repairShipPhase = true;
@@ -842,21 +849,48 @@ void SP2_Scene::RenderLevel()
 	}
 }
 
-void SP2_Scene::RenderShip(bool render)
+void SP2_Scene::RenderShip()
 {
-	if (repairShipPhase == true)
+	if (repairShipPhase == 1 || repairShipPhase == 2)
 	{
 		modelStack.PushMatrix(); //Player ship
 		modelStack.Translate(shipFallingX, shipFallingY, 75);
 		modelStack.Rotate(45, 1, 0, 1.75);
-		modelStack.Scale(1.5, 1.5, 1.5);
+		modelStack.Scale(4, 4, 4);
+		RenderMesh(meshList[GEO_AXES], false);
+		RenderMesh(meshList[GEO_PLAYERSHIP], true);
+		modelStack.PopMatrix();
+	}
+	if (camera.shipCheck == true && shipFallingY <= 1 && repairShipPhase == 1)
+	{
+		RenderImageOnScreen(UI_BG, 95, 2.75, 82.5, 25);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Bring the base core to the ship in order to refuel it.", Color(0.000f, 0.808f, 0.820f), 3, 40, 25);
+	}
+	if (camera.coreCheck == true && repairShipPhase == 1)
+	{
+		RenderImageOnScreen(UI_BG, 37.5, 2.75, 77.5, 25);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press <E> to pick up Core", Color(0.000f, 0.808f, 0.820f), 2.45, 62.5, 25);
+	}
+	if (camera.shipCheck == true && repairShipPhase == 2)
+	{
+		RenderImageOnScreen(UI_BG, 37.5, 2.75, 77.5, 25);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press <E> to insert Core", Color(0.000f, 0.808f, 0.820f), 2.45, 62.5, 25);
+	}
+
+	if (repairShipPhase == 3)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(shipFallingX, 7.5, 75);
+		modelStack.Rotate(90, 0, 0, 1);
+		modelStack.Scale(4, 4, 4);
 		RenderMesh(meshList[GEO_AXES], false);
 		RenderMesh(meshList[GEO_PLAYERSHIP], true);
 		modelStack.PopMatrix();
 
-		if (render)
+		if (camera.shipCheck == true)
 		{
-			RenderTextOnScreen(meshList[GEO_TEXT], "Bring the base core to the ship in order to refuel it.", Color(0.000f, 0.788f, 0.820f), 4, 55, 76);
+			RenderImageOnScreen(UI_BG, 37.5, 2.75, 77.5, 25);
+			RenderTextOnScreen(meshList[GEO_TEXT], "Press <E> to pilot ship", Color(0.000f, 0.808f, 0.820f), 2.45, 62.5, 25);
 		}
 	}
 }
@@ -1024,7 +1058,7 @@ void SP2_Scene::RobotAnimation(double dt)
 	//if (Robot::RobotHP == 0)
 	//{
 	//	die = true;
-	//	curRobotCount--;
+	//	RobotManager.CurrentRobotCount--;
 	//}
 	if (die == true)
 	{
@@ -1113,7 +1147,7 @@ void SP2_Scene::Update(double dt)
 			InitRobots();
 			loadRobots = true;
 		}
-		if (LoadTimer > MaxLoadTime && Application::IsKeyPressed(VK_SPACE))
+		if (LoadTimer > MaxLoadTime && (Application::IsKeyPressed(VK_LBUTTON) || Application::IsKeyPressed(VK_RBUTTON)))
 		{
 			GameLoading = false;
 		}
@@ -1267,18 +1301,19 @@ void SP2_Scene::Update(double dt)
 		RoomLightPosition.y += tweenVal / 150000;
 		light[2].position.Set(RoomLightPosition.x, RoomLightPosition.y, RoomLightPosition.z);
 
+		WepSys.SetStats(weaponValue);
 		if (!CanFire)
 		{
 			RateOfFire = 0.2;
 			GunWaitTime += pause * dt;
-			if (GunWaitTime >= RateOfFire)
+			if (GunWaitTime >= WepSys.RateOfFire)
 			{
 				CanFire = true;
 			}
 		}
 		if (CanFire && Application::IsKeyPressed(VK_LBUTTON))
 		{
-			WepSys.BulletList.push_back(RayCast(camera.getCameraPosition(), camera.getLookVector(), 0.2));
+			WepSys.BulletList.push_back(RayCast(WepSys.Damage, WepSys.Speed, camera.getCameraPosition(), camera.getLookVector()));
 			CanFire = false;
 			GunWaitTime = 0;
 		}
@@ -1294,10 +1329,14 @@ void SP2_Scene::Update(double dt)
 			projectionStack.LoadMatrix(projection);
 		}
 
-		if (curRobotCount < RobotManager.MaxRobotCount && Application::IsKeyPressed(VK_RBUTTON))
+		if (CanFire && Application::IsKeyPressed(VK_RBUTTON))
 		{
-			RobotManager.RobotList.push_back(Robot(0, Vector3(-100, 0, 100)));
-			curRobotCount++;
+			RobotManager.RobotList.push_back(Robot(0, spawnPointN));
+			RobotManager.RobotList.push_back(Robot(0, spawnPointE));
+			RobotManager.RobotList.push_back(Robot(0, spawnPointS));
+			RobotManager.RobotList.push_back(Robot(0, spawnPointW));
+			CanFire = false;
+			GunWaitTime = 0;
 		}
 
 		WepSys.IncrementPosition();
@@ -1509,7 +1548,7 @@ void SP2_Scene::RenderUI()
 	modelStack.PushMatrix();
 	RenderImageOnScreen(UI_BG, 50, 10, 25, 5);
 	std::stringstream fpsText;
-	fpsText << std::fixed << std::setprecision(1) << "FPS = " << framesPerSecond;
+	fpsText << std::fixed << std::setprecision(2) << "FPS = " << framesPerSecond;
 	RenderTextOnScreen(meshList[GEO_TEXT], fpsText.str(), Color(1, 1, 1), 2.5, 3, 7.5);
 	std::stringstream coordText;
 	coordText << std::fixed << std::setprecision(1) << "Player Location = (" << camera.getCameraPosition().x << ", " << camera.getCameraPosition().y << ", " << camera.getCameraPosition().z << ")";
@@ -1625,25 +1664,87 @@ void SP2_Scene::RenderGate(bool render)
 
 void SP2_Scene::RenderRocks()
 {
+	// Right
 	modelStack.PushMatrix();
-	int range = 5;
-	for (int detailLevel = 1; detailLevel <= range; detailLevel++)
-	{
-		for (int i = 1; i <= 360; i += 60 - range * 5)
-		{
-			modelStack.PushMatrix();
-			modelStack.Translate((detailLevel * 70 + 50) * cos(Math::DegreeToRadian(i + detailLevel * 20)), -5, (detailLevel*  70 + 50) * sin(Math::DegreeToRadian(i + detailLevel * 20)));
-			modelStack.Rotate(5 * i, 0, 1, 0);
+	modelStack.Translate(50, -4, 0);
+	modelStack.Rotate(0, 0, 0, 1);
+	modelStack.Scale(6, 6, 6);
+	RenderMesh(meshList[GEO_METEOR], true);
 
-			modelStack.PushMatrix();
-			modelStack.Rotate(20 + 5 * (i + i * detailLevel), 1, 1, 1);
-			modelStack.Scale(15, 10, 15);
-			RenderMesh(meshList[GEO_METEOR], true);
-			modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(4, -4, -8);
+	modelStack.Rotate(50, 1, 0, 0);
+	modelStack.Scale(3, 3, 3);
+	RenderMesh(meshList[GEO_METEOR], true);
 
-			modelStack.PopMatrix();
-		}
-	}
+	modelStack.PushMatrix();
+	modelStack.Translate(3, -4, 20);
+	modelStack.Rotate(30, 1, 0, 0);
+	modelStack.Scale(-3, -3, -3);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	// left
+	modelStack.PushMatrix();
+	modelStack.Translate(-50, -11, -8);
+	modelStack.Rotate(0, 0, 0, 1);
+	modelStack.Scale(6, 6, 6);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-5, -4, -4);
+	modelStack.Rotate(50, 0, 0, 1);
+	modelStack.Scale(3, 3, 3);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-1, -4, -5);
+	modelStack.Rotate(-20, 0, 1, 0);
+	modelStack.Scale(1, 1, 1);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	// front
+	modelStack.PushMatrix();
+	modelStack.Translate(0, -2, -60);
+	modelStack.Rotate(0, 0, 0, 1);
+	modelStack.Scale(6, 6, 6);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PushMatrix();
+	modelStack.Translate(4, -4, -4);
+	modelStack.Rotate(20, 0, 1, 0);
+	modelStack.Scale(2, 2, 2);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	// back
+	modelStack.PushMatrix();
+	modelStack.Translate(0, -4, 60);
+	modelStack.Rotate(0, 0, 0, 1);
+	modelStack.Scale(6, 6, 6);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PushMatrix();
+	modelStack.Translate(5, -4, 9);
+	modelStack.Rotate(80, 1, 0, 0);
+	modelStack.Scale(2, 2, 2);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-8, -4, 0);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
 	modelStack.PopMatrix();
 }
 
@@ -1722,7 +1823,7 @@ void SP2_Scene::Render(double dt)
 		}
 		else{
 			RenderTextOnScreen(meshList[GEO_TEXT], "<Loading Completed>", Color(0, 0.5, 1), 6, 50, 45);
-			RenderTextOnScreen(meshList[GEO_TEXT], "<Press [Spacebar] To Start Game>", Color(0, 0.5, 1), 5, 35, 35);
+			RenderTextOnScreen(meshList[GEO_TEXT], "<Click Mouse To Start Game>", Color(0, 0.5, 1), 5, 45, 35);
 		}
 	}
 	else{
@@ -1741,7 +1842,6 @@ void SP2_Scene::Render(double dt)
 		for (auto i : WepSys.BulletList)
 		{
 			modelStack.PushMatrix();
-			i.Move();
 			modelStack.Translate(i.Position().x, i.Position().y, i.Position().z);
 			modelStack.Scale(0.1, 0.1, 0.1);
 			RenderMesh(meshList[GEO_BULLET], false);
@@ -1751,19 +1851,35 @@ void SP2_Scene::Render(double dt)
 		for (auto i : RobotManager.RobotList)
 		{
 			modelStack.PushMatrix();
-			//i.BoundsCheck(WepSys.BulletList);
 			modelStack.Translate(i.Position().x, i.Position().y, i.Position().z);
 			modelStack.Rotate(i.rotateToTarget, 0, 1, 0);
-			RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
+			//HP
+			modelStack.PushMatrix();
+			modelStack.Translate(0, 7, 0);
+			modelStack.Rotate(constRotation*2, 0, 1, 0);
+			modelStack.PushMatrix();
+			if (i.GetHealth() > 20)
+			{
+				modelStack.Scale(i.GetHealth() / 80, i.GetHealth() / 80, i.GetHealth() / 80);
+				RenderMesh(meshList[GEO_ROBOTHEALTH], false);
+			}
+			modelStack.PopMatrix();
+			modelStack.PushMatrix();
+			modelStack.Scale(i.GetHealth() / 100, i.GetHealth() / 100, i.GetHealth() / 100);
+			RenderMesh(meshList[GEO_ROBOTHEALTH2], false);
+			modelStack.PopMatrix();
+			modelStack.PopMatrix();
+			
+			RenderMesh(meshList[GEO_RANGEROBOTBODY], true);
 			modelStack.PushMatrix();
 			//modelStack.Rotate(rotateAngle, 1, 0, 0);
 			modelStack.Translate(0, 0, -10);
 			modelStack.Translate(0, 0, 10);
 			modelStack.Translate(0.3, 0, 0);
-			RenderMesh(meshList[GEO_MELEEROBOTLEFTUPPERARM], true);
+			RenderMesh(meshList[GEO_RANGEROBOTLEFTUPPERARM], true);
 			modelStack.PushMatrix();
 			//modelStack.Rotate(rotateAngle, 1, 0, 0);
-			RenderMesh(meshList[GEO_MELEEROBOTLEFTLOWERARM], true);
+			RenderMesh(meshList[GEO_RANGEROBOTLEFTLOWERARM], true);
 			modelStack.PopMatrix();
 			modelStack.PopMatrix();
 			modelStack.PushMatrix();
@@ -1771,21 +1887,21 @@ void SP2_Scene::Render(double dt)
 			modelStack.Translate(0, 0, -10);
 			modelStack.Translate(0, 0, 10);
 			modelStack.Translate(-0.3, 0, 0);
-			RenderMesh(meshList[GEO_MELEEROBOTRIGHTUPPERARM], true);
+			RenderMesh(meshList[GEO_RANGEROBOTRIGHTUPPERARM], true);
 			modelStack.PushMatrix();
 			//modelStack.Rotate(rotateAngle, 1, 0, 0);
-			RenderMesh(meshList[GEO_MELEEROBOTRIGHTLOWERARM], true);
+			RenderMesh(meshList[GEO_RANGEROBOTRIGHTLOWERARM], true);
 			modelStack.PopMatrix();
 			modelStack.PopMatrix();
 			modelStack.PushMatrix();
 			modelStack.Rotate(moveleftleg, 1, 0, 0);
 			modelStack.Translate(0, 0, -10);
 			modelStack.Translate(0, 0, 10);
-			RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
+			RenderMesh(meshList[GEO_RANGEROBOTLEFTLEG], true);
 			modelStack.PopMatrix();
 			modelStack.PushMatrix();
 			modelStack.Rotate(moverightleg, 1, 0, 0);
-			RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
+			RenderMesh(meshList[GEO_RANGEROBOTRIGHTLEG], true);
 			modelStack.PopMatrix();
 			modelStack.PopMatrix();
 		}
@@ -1975,7 +2091,7 @@ void SP2_Scene::Render(double dt)
 
 		RenderGate();
 		RenderLevel();
-		RenderShip(camera.shipCheck);
+		RenderShip();
 		//DO NOT RENDER ANYTHING UNDER THIS//
 
 		RenderUI();

@@ -67,6 +67,9 @@ class SP2_Scene : public Scene
 		GEO_DRONERIGHTLOWERARM,
 
 		//robots
+		GEO_ROBOTHEALTH,
+		GEO_ROBOTHEALTH2,
+
 		GEO_MELEEROBOTBODY,
 		GEO_MELEEROBOTLEFTUPPERARM,
 		GEO_MELEEROBOTLEFTLOWERARM,
@@ -330,7 +333,7 @@ private:
 	void RenderGate(bool render = false);
 	void RenderUI();
 	void RobotAnimation(double dt);
-	void RenderShip(bool render);
+	void RenderShip();
 
 	//Interaction Values
 	bool buttonPress;
@@ -349,6 +352,12 @@ private:
 	// Weapon Interface Stuff
 	Vector3 WepItf_Choices;
 	bool randWepChoices = true;
+
+	//Robot Spawn
+	Vector3 spawnPointN;
+	Vector3 spawnPointS;
+	Vector3 spawnPointE;
+	Vector3 spawnPointW;
 
 	//check game state
 	int state;

@@ -51,23 +51,53 @@ void Robot::findAngle()
 
 	/*std::cout << DirVec.x << ", " << DirVec.y << ", " << DirVec.z << std::endl;
 	std::cout << rotateToTarget << std::endl;
-	*/float dot, det;
+	*/
+	float dot, det;
+	dot = (0 * DirVec.x) + (1 * DirVec.z);
+	det = (0 * DirVec.z) - (1 * DirVec.x);
+	rotateToTarget = Math::RadianToDegree(atan2(det, dot));
+	//std::cout << DirVec.x << ", " << DirVec.y << ", " << DirVec.z << std::endl;
+	//std::cout << rotateToTarget << std::endl;
 
-dot = (0 * DirVec.x) + (1 * DirVec.z);
-det = (0 * DirVec.z) - (1 * DirVec.x);
-rotateToTarget = atan2(det, dot);
-//std::cout << DirVec.x << ", " << DirVec.y << ", " << DirVec.z << std::endl;
-//std::cout << rotateToTarget << std::endl;
+	/*Vector3 a(0, 0, 1);
+	float dot2 = DirVec.Dot(a);
+	rotateToTarget = Math::RadianToDegree(acos(dot2 / sqrt(a.LengthSquared() * DirVec.LengthSquared())));
+	std::cout << rotateToTarget << std::endl;*/
 }
 
 Vector3 Robot::Move()
 {
+	FindNewTarget();
 	GetDirVec(TargetPos);
 	CurrPos.x += DirVec.x * Speed;
 	CurrPos.y += DirVec.y * Speed;
 	CurrPos.z += DirVec.z * Speed;
 	CalcBounds();
 	return CurrPos;
+}
+
+Vector3 Robot::FindNewTarget()
+{
+	Boundary Base(-19, 19, -19, 19, -5, 10); 
+	Boundary BaseOuter(-20, 20, -20, 20, -5, 10);
+	if (BaseOuter.BoundaryCheck(CurrPos.x, CurrPos.y, CurrPos.z))
+	{
+		int choice = rand() % 4 + 1;
+		switch (choice)
+		{
+		case 1: TargetPos = (20, 0, 0);
+			break;
+		case 2: TargetPos = (-20, 0, 0);
+			break;
+		case 3: TargetPos = (0, 0, 20);
+			break;
+		case 4: TargetPos = (0, 0, -20);
+			break;
+		default: TargetPos = (0, 0, 0);
+			break;
+		}
+	}
+	else return TargetPos = (0, 0, 0);
 }
 
 Vector3 Robot::Position()
@@ -113,7 +143,7 @@ void Robot::SetHealth(float newHP)
 
 void Robot::CalcBounds()
 {
-	BoundingBox.set(CurrPos.x - 3, CurrPos.x + 3, CurrPos.z - 3, CurrPos.z + 3, CurrPos.y - 3, CurrPos.y + 7);
+	BoundingBox.set(CurrPos.x - 2.5, CurrPos.x + 2.5, CurrPos.z - 2.5, CurrPos.z + 2.5, CurrPos.y - 3, CurrPos.y + 7);
 }
 
 Vector3 Robot::GetDirVec(Vector3 Target)

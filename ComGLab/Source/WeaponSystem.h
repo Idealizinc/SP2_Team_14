@@ -14,6 +14,13 @@ public:
 	void CleanUp();
 	float GetLength(RayCast Ray);
 	void ClearList();
+	void SetStats(int wepVal);
+
+	float ReloadTime;
+	float RateOfFire;
+	float Damage;
+	float Speed;
+	float MaxAmmo;
 
 private:
 	unsigned short MaxBulletCount = 100;
