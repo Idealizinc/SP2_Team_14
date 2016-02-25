@@ -15,6 +15,7 @@ public:
 	void ClearList();
 	void CleanUp();
 	unsigned short MaxRobotCount = 20;
+	unsigned short CurrentRobotCount = 0;
 	//unsigned short MaxDist = 10000;
 };
 

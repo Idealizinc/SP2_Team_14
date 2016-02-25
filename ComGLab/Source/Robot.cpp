@@ -3,11 +3,11 @@
 #define PI 3.1415926535
 
 Robot::Robot(int RobotType, Vector3 SpawnPos)
-{ 
+{
 	CurrPos = SpawnPos;
 	GetDirVec(TargetPos);
 	findAngle();
-	SetStats(RobotType); 
+	SetStats(RobotType);
 	CalcBounds();
 	//(CurrPos.x + 3) * rotateToTarget
 }
@@ -53,11 +53,11 @@ void Robot::findAngle()
 	std::cout << rotateToTarget << std::endl;
 	*/float dot, det;
 
-	dot = (0 * DirVec.x) + (1 * DirVec.z);
-	det = (0 * DirVec.z) - (1 * DirVec.x);
-	rotateToTarget = atan2(det, dot);
-	std::cout << DirVec.x << ", " << DirVec.y << ", " << DirVec.z << std::endl;
-	std::cout << rotateToTarget << std::endl;
+dot = (0 * DirVec.x) + (1 * DirVec.z);
+det = (0 * DirVec.z) - (1 * DirVec.x);
+rotateToTarget = atan2(det, dot);
+//std::cout << DirVec.x << ", " << DirVec.y << ", " << DirVec.z << std::endl;
+//std::cout << rotateToTarget << std::endl;
 }
 
 Vector3 Robot::Move()
@@ -75,12 +75,30 @@ Vector3 Robot::Position()
 	return CurrPos;
 }
 
-void Robot::BoundsCheck()
+void Robot::BoundsCheck(WeaponSystem WepSys)
 {
-	// If Bullet in specific bounds, Wall Collision
-	// Pop Bullet. 
-	// If Bullet in Robot Bounds, Damage Robot
-	// Pop Bullet
+	//Bot Bullet Trigger Check
+	for (auto i : WepSys.BulletList)
+	{
+		if (!BoundingBox.BoundaryCheck(i.Position().x, i.Position().z, i.Position().y))
+		{
+			//Health = Health - i.Damage;
+			// Weapon Sys Detects if True, if so pop shot.
+			i.BulletUsed = true;
+			SetHealth(Health - i.Damage);
+		}
+	}
+	//for (std::list<RayCast>::iterator iter = WepSys.BulletList.begin(); iter != WepSys.BulletList.end(); /*++iter*/)
+	//{
+	//	if (!BoundingBox.BoundaryCheck((*iter).Position().x, (*iter).Position().z, (*iter).Position().y))
+	//	{
+	//		// Weapon Sys Detects if True, if so pop shot.
+	//		SetHealth(Health - (*iter).Damage);
+	//		(*iter).BulletUsed = true;
+	//	}
+	//	else ++iter;
+	//}
+
 }
 
 float Robot::GetHealth()
@@ -95,7 +113,7 @@ void Robot::SetHealth(float newHP)
 
 void Robot::CalcBounds()
 {
-	BoundingBox.set(CurrPos.x - 3, CurrPos.x + 3, CurrPos.z - 3, CurrPos.z + 3, CurrPos.y - 3, CurrPos.y + 3);
+	BoundingBox.set(CurrPos.x - 3, CurrPos.x + 3, CurrPos.z - 3, CurrPos.z + 3, CurrPos.y - 3, CurrPos.y + 7);
 }
 
 Vector3 Robot::GetDirVec(Vector3 Target)
@@ -113,7 +131,7 @@ void Robot::SetStats(int Type)
 		RobotType = Melee;
 		Health = 50;
 		Damage = 10;
-		Speed = 1;
+		Speed = 0.1;
 		break;
 	case 1:
 		RobotType = Ranged;

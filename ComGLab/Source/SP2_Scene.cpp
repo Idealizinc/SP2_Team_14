@@ -53,8 +53,6 @@ void SP2_Scene::readtextfile()
 
 void SP2_Scene::Init()
 {
-	RobotManager.RobotList.push_back(Robot(0, Vector3(10, 0, 10)));
-
 	/*engine = createIrrKlangDevice();
 	engine->addSoundSourceFromFile(SoundName[0].c_str());
 	Song = engine->play2D(SoundName[0].c_str(), true, false, true);
@@ -96,7 +94,8 @@ void SP2_Scene::Init()
 	buttonValue = 0;
 	//droidrepair = false;
 	droidrepairgate = 0;
-
+	shipFallingX = -20;
+	shipFallingY = 150;
 	curRobotCount = 1;
 	curMeteorCount = 1;
 	leftarmrotatelimit = -1;
@@ -124,7 +123,7 @@ void SP2_Scene::Init()
 	//openrightgate = false;
 	leftgate = 0;
 	rightgate = 0;
-	repairShipPhase = true;
+	repairShipPhase = 0;
 
 	//robotleftattack = false;
 	//robotrightattack = false;
@@ -182,9 +181,9 @@ void SP2_Scene::Init()
 	meshList[GEO_HEMISPHERE] = MeshBuilder::GenerateHemisphere("hemisphere", white, 20, 20);
 	meshList[GEO_SPHERE] = MeshBuilder::GenerateSphere("Sphere", white, 20, 20);
 
-	InitWeaponModels();
-	InitMapModels();
-	InitRobots();
+	//InitWeaponModels();
+	//InitMapModels();
+	//InitRobots();
 }
 
 void SP2_Scene::initUIElements()
@@ -201,6 +200,28 @@ void SP2_Scene::initUIElements()
 
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//calibri.tga");
+
+	//Skybox
+	//Using the lower res skybox image
+	SB_Day_front = LoadTGA("Image//Space_Front.tga");
+	SB_Day_back = LoadTGA("Image//Space_Back.tga");
+	SB_Day_top = LoadTGA("Image//Space_Top.tga");
+	SB_Day_bottom = LoadTGA("Image//Space_Bottom.tga");
+	SB_Day_left = LoadTGA("Image//Space_Left.tga");
+	SB_Day_right = LoadTGA("Image//Space_Right.tga");
+
+	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
+	meshList[GEO_FRONT]->textureID = SB_Day_front;
+	meshList[GEO_BACK] = MeshBuilder::GenerateQuad("back", Color(1, 1, 1));
+	meshList[GEO_BACK]->textureID = SB_Day_back;
+	meshList[GEO_TOP] = MeshBuilder::GenerateQuad("top", Color(1, 1, 1));
+	meshList[GEO_TOP]->textureID = SB_Day_top;
+	meshList[GEO_BOTTOM] = MeshBuilder::GenerateQuad("bottom", Color(1, 1, 1));
+	meshList[GEO_BOTTOM]->textureID = SB_Day_bottom;
+	meshList[GEO_LEFT] = MeshBuilder::GenerateQuad("left", Color(1, 1, 1));
+	meshList[GEO_LEFT]->textureID = SB_Day_left;
+	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1));
+	meshList[GEO_RIGHT]->textureID = SB_Day_right;
 }
 
 void SP2_Scene::InitWeaponModels()
@@ -272,28 +293,6 @@ void SP2_Scene::InitMapModels()
 
 	/*meshList[GEO_COMPUTER] = MeshBuilder::GenerateOBJ("test", "OBJ//computer.obj");
 	meshList[GEO_COMPUTER]->textureID = LoadTGA("Image//computer.tga");*/
-
-	//Skybox
-	//Using the lower res skybox image
-	SB_Day_front = LoadTGA("Image//Space_Front.tga");
-	SB_Day_back = LoadTGA("Image//Space_Back.tga");
-	SB_Day_top = LoadTGA("Image//Space_Top.tga");
-	SB_Day_bottom = LoadTGA("Image//Space_Bottom.tga");
-	SB_Day_left = LoadTGA("Image//Space_Left.tga");
-	SB_Day_right = LoadTGA("Image//Space_Right.tga");
-
-	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1));
-	meshList[GEO_FRONT]->textureID = SB_Day_front;
-	meshList[GEO_BACK] = MeshBuilder::GenerateQuad("back", Color(1, 1, 1));
-	meshList[GEO_BACK]->textureID = SB_Day_back;
-	meshList[GEO_TOP] = MeshBuilder::GenerateQuad("top", Color(1, 1, 1));
-	meshList[GEO_TOP]->textureID = SB_Day_top;
-	meshList[GEO_BOTTOM] = MeshBuilder::GenerateQuad("bottom", Color(1, 1, 1));
-	meshList[GEO_BOTTOM]->textureID = SB_Day_bottom;
-	meshList[GEO_LEFT] = MeshBuilder::GenerateQuad("left", Color(1, 1, 1));
-	meshList[GEO_LEFT]->textureID = SB_Day_left;
-	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1));
-	meshList[GEO_RIGHT]->textureID = SB_Day_right;
 }
 
 void SP2_Scene::InitRobots()
@@ -843,16 +842,22 @@ void SP2_Scene::RenderLevel()
 	}
 }
 
-void SP2_Scene::RenderShip()
+void SP2_Scene::RenderShip(bool render)
 {
 	if (repairShipPhase == true)
 	{
 		modelStack.PushMatrix(); //Player ship
-		modelStack.Translate(0, 0, 20);
-		modelStack.Rotate(1, 0, 0, 0);
-		modelStack.Scale(0, 0, 0);
+		modelStack.Translate(shipFallingX, shipFallingY, 75);
+		modelStack.Rotate(45, 1, 0, 1.75);
+		modelStack.Scale(1.5, 1.5, 1.5);
+		RenderMesh(meshList[GEO_AXES], false);
 		RenderMesh(meshList[GEO_PLAYERSHIP], true);
 		modelStack.PopMatrix();
+
+		if (render)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], "Bring the base core to the ship in order to refuel it.", Color(0.000f, 0.788f, 0.820f), 4, 55, 76);
+		}
 	}
 }
 
@@ -1161,6 +1166,7 @@ void SP2_Scene::Update(double dt)
 				buttonValue = 0;*/
 				weaponinterface = false;
 				playerhp--;
+				repairShipPhase = 1;
 			}
 			else if (buttonPress == true && Application::IsKeyPressed('2'))
 			{
@@ -1174,6 +1180,7 @@ void SP2_Scene::Update(double dt)
 				buttonValue = 0;*/
 				weaponinterface = false;
 				basehp--;
+				repairShipPhase = 2;
 			}
 			else if (buttonPress == true && Application::IsKeyPressed('3'))
 			{
@@ -1186,6 +1193,7 @@ void SP2_Scene::Update(double dt)
 				/*buttonPress = false;
 				buttonValue = 0;*/
 				weaponinterface = false;
+				repairShipPhase = 3;
 			}
 			else if (buttonPress == true && Application::IsKeyPressed('4'))
 			{
@@ -1194,11 +1202,13 @@ void SP2_Scene::Update(double dt)
 				/*buttonPress = false;
 				buttonValue = 0;*/
 				weaponinterface = false;
+				repairShipPhase = 4;
 			}
 		}
 		if (Application::IsKeyPressed('5'))
 		{
 			bosshp = 0;
+			repairShipPhase = 0;
 		}
 		if (!weaponinterface)
 		{
@@ -1236,6 +1246,19 @@ void SP2_Scene::Update(double dt)
 			buttonPress = false;
 			buttonValue = 0;
 		}
+		if (shipFallingY >= 1 && (repairShipPhase == 1 || repairShipPhase == 2))
+		{
+			shipFallingX += 0.1;
+			shipFallingY -= 1;
+		}
+		if (camera.coreCheck == true && Application::IsKeyPressed('E'))
+		{
+			repairShipPhase = 2;
+		}
+		if (camera.shipCheck == true && Application::IsKeyPressed('E'))
+		{
+			repairShipPhase = 3;
+		}
 
 		framesPerSecond = 1 / dt;
 
@@ -1255,7 +1278,7 @@ void SP2_Scene::Update(double dt)
 		}
 		if (CanFire && Application::IsKeyPressed(VK_LBUTTON))
 		{
-			WepSys.BulletList.push_back(RayCast(camera.getCameraPosition(), camera.getLookVector(), 1));
+			WepSys.BulletList.push_back(RayCast(camera.getCameraPosition(), camera.getLookVector(), 0.2));
 			CanFire = false;
 			GunWaitTime = 0;
 		}
@@ -1270,16 +1293,21 @@ void SP2_Scene::Update(double dt)
 			projection.SetToPerspective(40.0f, static_cast <float>(S_Width) / static_cast <float>(S_Height), 0.1f, 3000.0f);
 			projectionStack.LoadMatrix(projection);
 		}
-		WepSys.IncrementPosition();
-		WepSys.CleanUp();
 
 		if (curRobotCount < RobotManager.MaxRobotCount && Application::IsKeyPressed(VK_RBUTTON))
 		{
 			RobotManager.RobotList.push_back(Robot(0, Vector3(-100, 0, 100)));
 			curRobotCount++;
 		}
+
+		WepSys.IncrementPosition();
 		RobotManager.IncrementPosition();
+		for (std::list<Robot>::iterator iter = RobotManager.RobotList.begin(); iter != RobotManager.RobotList.end(); ++iter)
+		{
+			(*iter).BoundsCheck(WepSys);
+		}
 		RobotManager.CleanUp();
+		WepSys.CleanUp();
 	}
 }
 
@@ -1714,7 +1742,6 @@ void SP2_Scene::Render(double dt)
 		{
 			modelStack.PushMatrix();
 			i.Move();
-			i.BoundsCheck(RobotManager.RobotList);
 			modelStack.Translate(i.Position().x, i.Position().y, i.Position().z);
 			modelStack.Scale(0.1, 0.1, 0.1);
 			RenderMesh(meshList[GEO_BULLET], false);
@@ -1724,9 +1751,9 @@ void SP2_Scene::Render(double dt)
 		for (auto i : RobotManager.RobotList)
 		{
 			modelStack.PushMatrix();
-			i.Move();
+			//i.BoundsCheck(WepSys.BulletList);
 			modelStack.Translate(i.Position().x, i.Position().y, i.Position().z);
-			//modelStack.Rotate(i.rotateToTarget, 0, 1, 0);
+			modelStack.Rotate(i.rotateToTarget, 0, 1, 0);
 			RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
 			modelStack.PushMatrix();
 			//modelStack.Rotate(rotateAngle, 1, 0, 0);
@@ -1933,11 +1960,14 @@ void SP2_Scene::Render(double dt)
 		RenderMesh(meshList[GEO_BASE], true);
 		RenderMesh(meshList[GEO_CRYSTALBASE], true);
 		RenderMesh(meshList[GEO_TELEPORTER], true);
-		modelStack.PushMatrix();
-		modelStack.Translate(0, tweenVal / 1000, 0);
-		modelStack.Rotate(constRotation * 3, 0, 1, 0);
-		RenderMesh(meshList[GEO_CRYSTAL], false);
-		modelStack.PopMatrix();
+		if (repairShipPhase == 0 || repairShipPhase == 1)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(0, tweenVal / 1000, 0);
+			modelStack.Rotate(constRotation * 3, 0, 1, 0);
+			RenderMesh(meshList[GEO_CRYSTAL], false);
+			modelStack.PopMatrix();
+		}
 		modelStack.Scale(20, 1, 20);
 		RenderMesh(meshList[GEO_MOONFLOOR], true);
 		modelStack.PopMatrix();
@@ -1945,11 +1975,7 @@ void SP2_Scene::Render(double dt)
 
 		RenderGate();
 		RenderLevel();
-
-		stringstream ss;
-		ss << camera.position.y;
-		std::string cameraY = ss.str();
-		RenderTextOnScreen(meshList[GEO_TEXT], cameraY, Color(1, 1, 1), 2.8, 3, 19.7);
+		RenderShip(camera.shipCheck);
 		//DO NOT RENDER ANYTHING UNDER THIS//
 
 		RenderUI();

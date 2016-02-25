@@ -24,7 +24,11 @@ void WeaponSystem::CleanUp()
 	}
 	for (std::list<RayCast>::iterator iter = BulletList.begin(); iter != BulletList.end(); /*++iter*/)
 	{
-		if (GetLength(*iter) > MaxDist)
+		if ((*iter).BulletUsed == true)
+		{
+			iter = BulletList.erase(iter);
+		}
+		else if (GetLength(*iter) > MaxDist)
 		{
 			iter = BulletList.erase(iter);
 		}

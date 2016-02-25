@@ -2,6 +2,7 @@
 #define _ROBOT_H
 
 #include "Vector3.h"
+#include "WeaponSystem.h"
 #include "Boundary.h"
 #include <math.h>
 #include <cmath>
@@ -18,7 +19,7 @@ public:
 	~Robot();
 	Vector3 Move();
 	Vector3 Position();
-	void BoundsCheck();
+	void BoundsCheck(WeaponSystem WepSys);
 	float GetHealth();
 	Boundary BoundingBox;
 	void SetHealth(float newHP);
@@ -26,14 +27,14 @@ public:
 	float rotateToTarget;
 
 	void CalcBounds();
-	float Health;
 private:
 	Vector3 GetDirVec(Vector3 Target);
 	void SetStats(int Type);
 	R_Type RobotType;
 	float Damage;
 	float Speed;
-	Vector3 TargetPos = (1, 1, 1);
+	float Health;
+	Vector3 TargetPos = (0, 0, 0);
 	Vector3 DirVec;
 	Vector3 CurrPos;
 };

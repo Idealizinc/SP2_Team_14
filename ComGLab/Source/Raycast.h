@@ -3,7 +3,6 @@
 
 #include "Vector3.h"
 #include "Boundary.h"
-#include "RobotManager.h"
 
 class RayCast
 {
@@ -12,11 +11,12 @@ public:
 	~RayCast();
 	Vector3 Move();
 	Vector3 Position();
-	bool BoundsCheck(std::list<Robot> RobotList);
+	//bool BoundsCheck(std::list<Robot> RobotList);
 	void CalcBounds();
+	float Damage = 10;
+	bool BulletUsed = false;
 
 private:
-	float Damage = 420;
 	float Speed;
 	Vector3 StoredDirVec;
 	Vector3 RayPos;

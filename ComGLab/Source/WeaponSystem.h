@@ -16,7 +16,7 @@ public:
 	void ClearList();
 
 private:
-	unsigned short MaxBulletCount = 500;
+	unsigned short MaxBulletCount = 100;
 	unsigned short MaxDist = 10000;
 };
 

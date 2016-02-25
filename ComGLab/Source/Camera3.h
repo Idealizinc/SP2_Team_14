@@ -126,10 +126,9 @@ private:
 	Boundary frontGate;
 	Boundary backGate;
 	
-	Boundary PlayerShipLeft;
-	Boundary PlayerShipRight;
-	Boundary PlayerShipFront;
-	Boundary PlayerShipBack;
+	Boundary PlayerShip;
+	Boundary ShipCheck;
+	Boundary CoreCheck;
 };
 
 #endif

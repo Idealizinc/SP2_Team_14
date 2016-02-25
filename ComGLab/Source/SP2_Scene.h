@@ -192,6 +192,10 @@ public:
 	float rotationalLimit;
 	float translationLimit;
 	float scalingLimit;
+	float shipFallingX;
+	float shipFallingY;
+	unsigned short repairShipPhase;
+
 	unsigned int curRobotCount;
 	unsigned int curMeteorCount;
 	//robot animation
@@ -293,7 +297,7 @@ private:
 	unsigned m_programID;
 	unsigned m_parameters[U_TOTAL];
 	Mesh* meshList[NUM_GEOMETRY];
-	
+
 	//INIT Calls
 	void initLights();
 	void InitWeaponModels();
@@ -303,7 +307,7 @@ private:
 
 	//Load Values
 	float LoadTimer = 0;
-	float MaxLoadTime = 10;
+	float MaxLoadTime = 1;
 	bool GameLoading = true;
 	bool loadRobots = false;
 	bool loadMap = false;
@@ -326,7 +330,7 @@ private:
 	void RenderGate(bool render = false);
 	void RenderUI();
 	void RobotAnimation(double dt);
-	void RenderShip();
+	void RenderShip(bool render);
 
 	//Interaction Values
 	bool buttonPress;
@@ -351,7 +355,6 @@ private:
 	float timer;
 	bool weaponinterface;
 	bool repairgate;
-	bool repairShipPhase;
 
 	//Light Stuff
 	Vector3 TownLightPosition;
