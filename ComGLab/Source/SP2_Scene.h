@@ -330,7 +330,7 @@ private:
 	void RenderGate(bool render = false);
 	void RenderUI();
 	void RobotAnimation(double dt);
-	void RenderShip(bool render);
+	void RenderShip();
 
 	//Interaction Values
 	bool buttonPress;
@@ -349,6 +349,12 @@ private:
 	// Weapon Interface Stuff
 	Vector3 WepItf_Choices;
 	bool randWepChoices = true;
+
+	//Robot Spawn
+	Vector3 spawnPointN;
+	Vector3 spawnPointS;
+	Vector3 spawnPointE;
+	Vector3 spawnPointW;
 
 	//check game state
 	int state;

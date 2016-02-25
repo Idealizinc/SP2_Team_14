@@ -115,6 +115,19 @@ private:
 	Boundary Floor2BackLeft;
 	Boundary Floor2BackRight;
 
+	Boundary Base;
+
+	Boundary leftRock1;
+	Boundary leftRock2;
+	Boundary leftRock3;
+	Boundary frontRock1;
+	Boundary frontRock2;
+	Boundary rightRock1;
+	Boundary rightRock2;
+	Boundary backRock1;
+	Boundary backRock2;
+	Boundary backRock3;
+
 	//Interactive
 	Boundary TeleporterF1NW;
 	Boundary TeleporterF1NE;

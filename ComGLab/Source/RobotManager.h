@@ -14,8 +14,10 @@ public:
 	float GetDist(Robot Bot);
 	void ClearList();
 	void CleanUp();
-	unsigned short MaxRobotCount = 20;
 	unsigned short CurrentRobotCount = 0;
+
+private:
+	unsigned short MaxRobotCount = 50;
 	//unsigned short MaxDist = 10000;
 };
 

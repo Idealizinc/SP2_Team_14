@@ -37,7 +37,7 @@ void RobotManager::CleanUp()
 			++iter;
 		}
 	}
-
+	CurrentRobotCount = RobotList.size();
 }
 
 void RobotManager::ClearList()

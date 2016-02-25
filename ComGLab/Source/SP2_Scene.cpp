@@ -129,6 +129,11 @@ void SP2_Scene::Init()
 	//robotrightattack = false;
 	WepItf_Choices = Vector3(0, 0, 0);
 
+	spawnPointN = Vector3(0, 0, 150);
+	spawnPointS = Vector3(0, 0, -150); 
+	spawnPointE = Vector3(-150, 0, 0);
+	spawnPointW = Vector3(150, 0, 0);
+
 	// Enable depth Test
 	glEnable(GL_DEPTH_TEST);
 	//glEnable(GL_CULL_FACE);
@@ -842,21 +847,48 @@ void SP2_Scene::RenderLevel()
 	}
 }
 
-void SP2_Scene::RenderShip(bool render)
+void SP2_Scene::RenderShip()
 {
-	if (repairShipPhase == true)
+	if (repairShipPhase == 1 || repairShipPhase == 2)
 	{
 		modelStack.PushMatrix(); //Player ship
 		modelStack.Translate(shipFallingX, shipFallingY, 75);
 		modelStack.Rotate(45, 1, 0, 1.75);
-		modelStack.Scale(1.5, 1.5, 1.5);
+		modelStack.Scale(4, 4, 4);
+		RenderMesh(meshList[GEO_AXES], false);
+		RenderMesh(meshList[GEO_PLAYERSHIP], true);
+		modelStack.PopMatrix();
+	}
+	if (camera.shipCheck == true && shipFallingY <= 1 && repairShipPhase == 1)
+	{
+		RenderImageOnScreen(UI_BG, 95, 2.75, 82.5, 25);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Bring the base core to the ship in order to refuel it.", Color(0.000f, 0.808f, 0.820f), 3, 40, 25);
+	}
+	if (camera.coreCheck == true && repairShipPhase == 1)
+	{
+		RenderImageOnScreen(UI_BG, 37.5, 2.75, 77.5, 25);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press <E> to pick up Core", Color(0.000f, 0.808f, 0.820f), 2.45, 62.5, 25);
+	}
+	if (camera.shipCheck == true && repairShipPhase == 2)
+	{
+		RenderImageOnScreen(UI_BG, 37.5, 2.75, 77.5, 25);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press <E> to insert Core", Color(0.000f, 0.808f, 0.820f), 2.45, 62.5, 25);
+	}
+
+	if (repairShipPhase == 3)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(shipFallingX, 7.5, 75);
+		modelStack.Rotate(90, 0, 0, 1);
+		modelStack.Scale(4, 4, 4);
 		RenderMesh(meshList[GEO_AXES], false);
 		RenderMesh(meshList[GEO_PLAYERSHIP], true);
 		modelStack.PopMatrix();
 
-		if (render)
+		if (camera.shipCheck == true)
 		{
-			RenderTextOnScreen(meshList[GEO_TEXT], "Bring the base core to the ship in order to refuel it.", Color(0.000f, 0.788f, 0.820f), 4, 55, 76);
+			RenderImageOnScreen(UI_BG, 37.5, 2.75, 77.5, 25);
+			RenderTextOnScreen(meshList[GEO_TEXT], "Press <E> to pilot ship", Color(0.000f, 0.808f, 0.820f), 2.45, 62.5, 25);
 		}
 	}
 }
@@ -1278,7 +1310,7 @@ void SP2_Scene::Update(double dt)
 		}
 		if (CanFire && Application::IsKeyPressed(VK_LBUTTON))
 		{
-			WepSys.BulletList.push_back(RayCast(camera.getCameraPosition(), camera.getLookVector(), 0.2));
+			WepSys.BulletList.push_back(RayCast(camera.getCameraPosition(), camera.getLookVector(), 5));
 			CanFire = false;
 			GunWaitTime = 0;
 		}
@@ -1294,10 +1326,14 @@ void SP2_Scene::Update(double dt)
 			projectionStack.LoadMatrix(projection);
 		}
 
-		if (curRobotCount < RobotManager.MaxRobotCount && Application::IsKeyPressed(VK_RBUTTON))
+		if (CanFire && Application::IsKeyPressed(VK_RBUTTON))
 		{
-			RobotManager.RobotList.push_back(Robot(0, Vector3(-100, 0, 100)));
-			curRobotCount++;
+			RobotManager.RobotList.push_back(Robot(0, spawnPointN));
+			RobotManager.RobotList.push_back(Robot(0, spawnPointE));
+			RobotManager.RobotList.push_back(Robot(0, spawnPointS));
+			RobotManager.RobotList.push_back(Robot(0, spawnPointW));
+			CanFire = false;
+			GunWaitTime = 0;
 		}
 
 		WepSys.IncrementPosition();
@@ -1625,25 +1661,87 @@ void SP2_Scene::RenderGate(bool render)
 
 void SP2_Scene::RenderRocks()
 {
+	// Right
 	modelStack.PushMatrix();
-	int range = 5;
-	for (int detailLevel = 1; detailLevel <= range; detailLevel++)
-	{
-		for (int i = 1; i <= 360; i += 60 - range * 5)
-		{
-			modelStack.PushMatrix();
-			modelStack.Translate((detailLevel * 70 + 50) * cos(Math::DegreeToRadian(i + detailLevel * 20)), -5, (detailLevel*  70 + 50) * sin(Math::DegreeToRadian(i + detailLevel * 20)));
-			modelStack.Rotate(5 * i, 0, 1, 0);
+	modelStack.Translate(50, -4, 0);
+	modelStack.Rotate(0, 0, 0, 1);
+	modelStack.Scale(6, 6, 6);
+	RenderMesh(meshList[GEO_METEOR], true);
 
-			modelStack.PushMatrix();
-			modelStack.Rotate(20 + 5 * (i + i * detailLevel), 1, 1, 1);
-			modelStack.Scale(15, 10, 15);
-			RenderMesh(meshList[GEO_METEOR], true);
-			modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(4, -4, -8);
+	modelStack.Rotate(50, 1, 0, 0);
+	modelStack.Scale(3, 3, 3);
+	RenderMesh(meshList[GEO_METEOR], true);
 
-			modelStack.PopMatrix();
-		}
-	}
+	modelStack.PushMatrix();
+	modelStack.Translate(3, -4, 20);
+	modelStack.Rotate(30, 1, 0, 0);
+	modelStack.Scale(-3, -3, -3);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	// left
+	modelStack.PushMatrix();
+	modelStack.Translate(-50, -11, -8);
+	modelStack.Rotate(0, 0, 0, 1);
+	modelStack.Scale(6, 6, 6);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-5, -4, -4);
+	modelStack.Rotate(50, 0, 0, 1);
+	modelStack.Scale(3, 3, 3);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-1, -4, -5);
+	modelStack.Rotate(-20, 0, 1, 0);
+	modelStack.Scale(1, 1, 1);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	// front
+	modelStack.PushMatrix();
+	modelStack.Translate(0, -2, -60);
+	modelStack.Rotate(0, 0, 0, 1);
+	modelStack.Scale(6, 6, 6);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PushMatrix();
+	modelStack.Translate(4, -4, -4);
+	modelStack.Rotate(20, 0, 1, 0);
+	modelStack.Scale(2, 2, 2);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	// back
+	modelStack.PushMatrix();
+	modelStack.Translate(0, -4, 60);
+	modelStack.Rotate(0, 0, 0, 1);
+	modelStack.Scale(6, 6, 6);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PushMatrix();
+	modelStack.Translate(5, -4, 9);
+	modelStack.Rotate(80, 1, 0, 0);
+	modelStack.Scale(2, 2, 2);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-8, -4, 0);
+	RenderMesh(meshList[GEO_METEOR], true);
+
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
 	modelStack.PopMatrix();
 }
 
@@ -1741,7 +1839,6 @@ void SP2_Scene::Render(double dt)
 		for (auto i : WepSys.BulletList)
 		{
 			modelStack.PushMatrix();
-			i.Move();
 			modelStack.Translate(i.Position().x, i.Position().y, i.Position().z);
 			modelStack.Scale(0.1, 0.1, 0.1);
 			RenderMesh(meshList[GEO_BULLET], false);
@@ -1975,7 +2072,7 @@ void SP2_Scene::Render(double dt)
 
 		RenderGate();
 		RenderLevel();
-		RenderShip(camera.shipCheck);
+		RenderShip();
 		//DO NOT RENDER ANYTHING UNDER THIS//
 
 		RenderUI();
