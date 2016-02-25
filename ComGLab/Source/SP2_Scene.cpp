@@ -689,7 +689,7 @@ void SP2_Scene::GameState()
 		playerhp = 100;
 		basehp = 100;
 	}
-	if (RobotManager.CurrentRobotCount <= 0 && wave != 5)
+	if (RobotManager.CurrentRobotCount <= 0 && wave != 5 && wave != 6 && wave != 7)
 	{
 		weaponinterface = true;
 	}
