@@ -1311,7 +1311,7 @@ void SP2_Scene::Update(double dt)
 				CanFire = true;
 			}
 		}
-		if (CanFire && Application::IsKeyPressed(VK_LBUTTON))
+		if (CanFire && weaponValue >= 0 && weaponValue <= 12 && Application::IsKeyPressed(VK_LBUTTON))
 		{
 			WepSys.BulletList.push_back(RayCast(WepSys.Damage, WepSys.Speed, camera.getCameraPosition(), camera.getLookVector()));
 			CanFire = false;
