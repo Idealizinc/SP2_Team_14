@@ -57,7 +57,7 @@ class SP2_Scene : public Scene
 
 		//Ships
 		GEO_PLAYERSHIP,
-		//GEO_MOTHERSHIP,
+		GEO_MOTHERSHIP,
 
 		//drone
 		GEO_DRONEBODY,
@@ -200,7 +200,7 @@ public:
 	unsigned short repairShipPhase;
 
 	unsigned int curRobotCount;
-	unsigned int curMeteorCount;
+	//unsigned int curMeteorCount;
 	//robot animation
 	bool walk;
 	float moverobot;
@@ -231,6 +231,13 @@ public:
 	bool droidrepair;
 	float droidrepairgate;
 	float droidlimit;
+	//end of robot
+	//mothership
+	bool moveMship;
+	float moveMshipUp;
+	float rotateMship;
+	bool floatRocks;
+	float moveRocks; //for space map wave 6float droidrepairgate;
 
 	bool rLimiter;
 	bool toggleLimiters;
@@ -334,6 +341,9 @@ private:
 	void RenderUI();
 	void RobotAnimation(double dt);
 	void RenderShip();
+	void RenderSpaceMap();
+	void RenderBase();
+	void RenderRobots();
 
 	//Interaction Values
 	bool buttonPress;
