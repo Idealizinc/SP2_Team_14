@@ -76,28 +76,33 @@ Vector3 Robot::Move()
 	return CurrPos;
 }
 
-Vector3 Robot::FindNewTarget()
+void Robot::FindNewTarget()
 {
-	Boundary Base(-19, 19, -19, 19, -5, 10); 
-	Boundary BaseOuter(-20, 20, -20, 20, -5, 10);
-	if (BaseOuter.BoundaryCheck(CurrPos.x, CurrPos.y, CurrPos.z))
+	int Randomize = rand() % 10 + 1;
+	if (Randomize > 5)
 	{
-		int choice = rand() % 4 + 1;
-		switch (choice)
+		Boundary Base(-19, 19, -19, 19, -5, 10);
+		Boundary BaseOuter(-20, 20, -20, 20, -5, 10);
+		if (BaseOuter.BoundaryCheck(CurrPos.x, CurrPos.y, CurrPos.z))
 		{
-		case 1: TargetPos = (20, 0, 0);
-			break;
-		case 2: TargetPos = (-20, 0, 0);
-			break;
-		case 3: TargetPos = (0, 0, 20);
-			break;
-		case 4: TargetPos = (0, 0, -20);
-			break;
-		default: TargetPos = (0, 0, 0);
-			break;
+			int choice = rand() % 4 + 1;
+			switch (choice)
+			{
+			case 1: TargetPos = (20, 0, 0);
+				break;
+			case 2: TargetPos = (-20, 0, 0);
+				break;
+			case 3: TargetPos = (0, 0, 20);
+				break;
+			case 4: TargetPos = (0, 0, -20);
+				break;
+			default: TargetPos = (0, 0, 0);
+				break;
+			}
 		}
+		else TargetPos = (0, 0, 0);
 	}
-	else return TargetPos = (0, 0, 0);
+	else TargetPos = (0, 0, 0);
 }
 
 Vector3 Robot::Position()
@@ -159,7 +164,7 @@ void Robot::SetStats(int Type)
 	{
 	case 0:
 		RobotType = Melee;
-		Health = 50;
+		Health = 100;
 		Damage = 10;
 		Speed = 0.1;
 		break;

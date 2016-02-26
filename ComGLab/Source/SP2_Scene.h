@@ -263,6 +263,9 @@ public:
 	//Gun Stuff
 	bool CanFire = true;
 	float GunWaitTime = 0;
+	int CurrentAmmo = 0;
+	bool IsReloading = false;
+	float ReloadWaitTime = 0;
 	enum Gun_Type
 	{
 		N_SMG,
@@ -293,8 +296,8 @@ private:
 	GLuint Damage_Sniper, Damage_Rifle, Damage_Shotgun;
 	GLuint Capacity_Sniper, Capacity_Rifle, Capacity_Shotgun;
 	GLuint Fast_Sniper, Fast_Rifle, Fast_Shotgun;
-	GLuint Crosshair;
-	GLuint UI_BG, UI_HP_Red, UI_HP_Green, UI_WepSel_BG, UI_LoadingBG, UI_LoadingSpinner;
+	GLuint Crosshair, Crosshair2;
+	GLuint UI_BG, UI_HP_Red, UI_HP_Green, UI_WepSel_BG, UI_LoadingBG, UI_LoadingBarOverlay;
 	void RenderSkybox(Vector3 Position);
 	unsigned m_vertexArrayID;
 	unsigned m_programID;

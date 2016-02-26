@@ -198,9 +198,9 @@ void SP2_Scene::initUIElements()
 	UI_HP_Red = LoadTGA("Image//UI_HP_Red.tga");
 	UI_HP_Green = LoadTGA("Image//UI_HP_Green.tga");
 	UI_WepSel_BG = LoadTGA("Image//UI_WepSel_BG.tga");
-	Crosshair = LoadTGA("Image//Crosshair.tga");
+	Crosshair2 = LoadTGA("Image//CockpitCHair.tga");
 	UI_LoadingBG = LoadTGA("Image//UI_LoadScreen.tga");
-	UI_LoadingSpinner = LoadTGA("Image//UI_LoadScreen.tga");
+	UI_LoadingBarOverlay = LoadTGA("Image//UI_HP_Overlay.tga");
 
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16, 16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//calibri.tga");
@@ -688,7 +688,31 @@ void SP2_Scene::GameState()
 		wave = 1;
 		playerhp = 100;
 		basehp = 100;
+		weaponValue = 0;
 	}
+	if (wave == 1)
+	{
+		RobotManager.RobotList.push_back(Robot(0, spawnPointN));
+	}
+	/*else if (wave == 2)
+	{
+		RobotManager.RobotList.push_back(Robot(0, spawnPointS));
+	}
+	else if (wave == 3)
+	{
+		RobotManager.RobotList.push_back(Robot(0, spawnPointE));
+	}
+	else if (wave == 4)
+	{
+		RobotManager.RobotList.push_back(Robot(0, spawnPointW));
+	}
+	else if (wave == 5)
+	{
+		RobotManager.RobotList.push_back(Robot(0, spawnPointN));
+		RobotManager.RobotList.push_back(Robot(0, spawnPointS));
+		RobotManager.RobotList.push_back(Robot(0, spawnPointE));
+		RobotManager.RobotList.push_back(Robot(0, spawnPointW));
+	}*/
 	if (RobotManager.CurrentRobotCount <= 0 && wave != 5 && wave != 6 && wave != 7)
 	{
 		weaponinterface = true;
@@ -1186,6 +1210,7 @@ void SP2_Scene::Update(double dt)
 			WepItf_Choices.z = rand() % 4;
 			randWepChoices = false;
 		}
+		WepSys.SetStats(weaponValue);
 		if (weaponinterface == true)
 		{
 			if (buttonPress == true && Application::IsKeyPressed('1'))
@@ -1201,6 +1226,8 @@ void SP2_Scene::Update(double dt)
 				weaponinterface = false;
 				playerhp--;
 				repairShipPhase = 1;
+				WepSys.SetStats(weaponValue);
+				CurrentAmmo = WepSys.MaxAmmo;
 			}
 			else if (buttonPress == true && Application::IsKeyPressed('2'))
 			{
@@ -1215,6 +1242,8 @@ void SP2_Scene::Update(double dt)
 				weaponinterface = false;
 				basehp--;
 				repairShipPhase = 2;
+				WepSys.SetStats(weaponValue);
+				CurrentAmmo = WepSys.MaxAmmo;
 			}
 			else if (buttonPress == true && Application::IsKeyPressed('3'))
 			{
@@ -1228,6 +1257,8 @@ void SP2_Scene::Update(double dt)
 				buttonValue = 0;*/
 				weaponinterface = false;
 				repairShipPhase = 3;
+				WepSys.SetStats(weaponValue);
+				CurrentAmmo = WepSys.MaxAmmo;
 			}
 			else if (buttonPress == true && Application::IsKeyPressed('4'))
 			{
@@ -1237,6 +1268,8 @@ void SP2_Scene::Update(double dt)
 				buttonValue = 0;*/
 				weaponinterface = false;
 				repairShipPhase = 4;
+				WepSys.SetStats(weaponValue);
+				CurrentAmmo = WepSys.MaxAmmo;
 			}
 		}
 		if (Application::IsKeyPressed('5'))
@@ -1301,21 +1334,41 @@ void SP2_Scene::Update(double dt)
 		RoomLightPosition.y += tweenVal / 150000;
 		light[2].position.Set(RoomLightPosition.x, RoomLightPosition.y, RoomLightPosition.z);
 
-		WepSys.SetStats(weaponValue);
 		if (!CanFire)
 		{
-			RateOfFire = 0.2;
 			GunWaitTime += pause * dt;
 			if (GunWaitTime >= WepSys.RateOfFire)
 			{
 				CanFire = true;
 			}
 		}
-		if (CanFire && weaponValue >= 0 && weaponValue <= 12 && Application::IsKeyPressed(VK_LBUTTON))
+		if (IsReloading)
 		{
-			WepSys.BulletList.push_back(RayCast(WepSys.Damage, WepSys.Speed, camera.getCameraPosition(), camera.getLookVector()));
-			CanFire = false;
-			GunWaitTime = 0;
+			ReloadWaitTime += pause * dt;
+			if (ReloadWaitTime >= WepSys.ReloadTime)
+			{
+				IsReloading = false;
+				CurrentAmmo = WepSys.MaxAmmo;
+			}
+		}
+		if (!IsReloading && CanFire && weaponValue >= 0 && weaponValue <= 12 && Application::IsKeyPressed(VK_LBUTTON))
+		{
+			if (CurrentAmmo <= 0)
+			{
+				IsReloading = true;
+				ReloadWaitTime = 0;
+			}
+			else {
+				CurrentAmmo -= 1;
+				WepSys.BulletList.push_back(RayCast(WepSys.Damage, WepSys.Speed, camera.getCameraPosition(), camera.getLookVector()));
+				CanFire = false;
+				GunWaitTime = 0;
+			}
+		}
+		if (Application::IsKeyPressed('R'))
+		{
+			IsReloading = true;
+			ReloadWaitTime = 0;
 		}
 		if (Application::IsKeyPressed(VK_RBUTTON) && (weaponValue == 2 || weaponValue == 5 || weaponValue == 8 || weaponValue == 11))
 		{
@@ -1565,6 +1618,28 @@ void SP2_Scene::RenderUI()
 	if (playerhp > 0){ RenderImageOnScreen(UI_HP_Green, Dividend, 3, 80, 3); }
 	modelStack.PopMatrix();
 	//INFO UI, HP END
+
+	//INFO UI, WEP STATS - BOTTOM RIGHT
+	modelStack.PushMatrix();
+	RenderImageOnScreen(UI_BG, 50, 10, 135, 5);
+	std::stringstream ammoText;
+	ammoText << std::fixed << std::setprecision(0) << "Ammo - < " << CurrentAmmo << " / " << WepSys.MaxAmmo << " >";
+	RenderTextOnScreen(meshList[GEO_TEXT], ammoText.str(), Color(1, 1, 1), 2.5, 115, 7.5);
+	if (IsReloading)
+	{
+		std::stringstream RTimeText;
+		RTimeText << std::fixed << std::setprecision(0) << "Currently Reloading - <" << (WepSys.ReloadTime - ReloadWaitTime) << ">";
+		RenderTextOnScreen(meshList[GEO_TEXT], RTimeText.str(), Color(1, 1, 1), 2.5, 115, 4);
+	}
+	else 
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press <R> To Reload Weapon.", Color(1, 1, 1), 2.5, 115, 4);
+	}
+	/*std::stringstream coordText;
+	coordText << std::fixed << std::setprecision(1) << "Player Location = (" << camera.getCameraPosition().x << ", " << camera.getCameraPosition().y << ", " << camera.getCameraPosition().z << ")";
+	RenderTextOnScreen(meshList[GEO_TEXT], coordText.str(), Color(1, 1, 1), 2.5, 3, 4);*/
+	modelStack.PopMatrix();
+	//INFO UI, STATS END
 
 	RenderImageOnScreen(Crosshair, 10, 10, 80, 45);
 
@@ -1819,7 +1894,9 @@ void SP2_Scene::Render(double dt)
 		RenderTextOnScreen(meshList[GEO_TEXT], "Please Wait", Color(0, 0.5, 1), 8, 45, 70);
 		if (!loadRobots || !loadMap || !loadWep)
 		{
-			RenderImageOnScreen(Crosshair, 10, 10, 80 + (tweenVal / 4), 45);
+			RenderImageOnScreen(UI_HP_Red, 130, 8, 80, 40);
+			RenderImageOnScreen(UI_HP_Green, 130 * (LoadTimer / MaxLoadTime), 8, 80, 40);
+			RenderImageOnScreen(UI_LoadingBarOverlay, 130, 8, 80, 40);
 		}
 		else{
 			RenderTextOnScreen(meshList[GEO_TEXT], "<Loading Completed>", Color(0, 0.5, 1), 6, 50, 45);
