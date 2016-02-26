@@ -322,10 +322,10 @@ void Camera3::cameraMovement2(double dt)
 	}
 
 	rotateCamera(dt);
-	if (Application::IsKeyPressed('R'))
+	/*if (Application::IsKeyPressed('R'))
 	{
 	    Reset();
-	}
+	}*/
 	if (walkingX != 0 && northwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && northwall2.BoundaryCheck(walkingX + position.x, position.z, position.y)
 		&& westwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && westwall2.BoundaryCheck(walkingX + position.x, position.z, position.y)
 		&& eastwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && eastwall2.BoundaryCheck(walkingX + position.x, position.z, position.y) && PlayerShip.BoundaryCheck(walkingX + position.x, position.z, position.y)

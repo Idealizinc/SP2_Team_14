@@ -18,7 +18,7 @@ public:
 	Robot(int RobotType, Vector3 SpawnPos);
 	~Robot();
 	Vector3 Move();
-	Vector3 FindNewTarget();
+	void FindNewTarget();
 	Vector3 Position();
 	void BoundsCheck(WeaponSystem WepSys);
 	float GetHealth();
