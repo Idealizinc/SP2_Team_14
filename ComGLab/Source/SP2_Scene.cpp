@@ -807,7 +807,7 @@ void SP2_Scene::GameState()
 		RobotManager.RobotList.push_back(Robot(0, spawnPointE));
 		RobotManager.RobotList.push_back(Robot(0, spawnPointW));
 	}*/
-	if (SpawnedRobots && RobotManager.CurrentRobotCount <= 0 && wave != 5 && wave != 6 && wave != 7)
+	if (SpawnedRobots && RobotManager.CurrentRobotCount <= 0 && wave != 6 && wave != 7)
 	{
 		weaponinterface = true;
 	}
@@ -1166,7 +1166,7 @@ void SP2_Scene::Update(double dt)
 			{
 				WepSys.ClearList();
 				wave += 1;
-				buttonPress = false;
+				//buttonPress = false;
 				buttonValue = 0;
 				weaponinterface = false;
 				repairShipPhase = 4;

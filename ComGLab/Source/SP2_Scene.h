@@ -326,7 +326,7 @@ private:
 
 	//Interaction Values
 	bool buttonPress;
-	int buttonValue;
+	float buttonValue;
 
 	//test on screen values
 	double fps;
