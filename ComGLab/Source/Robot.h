@@ -26,7 +26,7 @@ public:
 	void SetHealth(float newHP);
 	void findAngle();
 	float rotateToTarget;
-
+	void RobotAnimation(double dt);
 	void CalcBounds();
 private:
 	Vector3 GetDirVec(Vector3 Target);
