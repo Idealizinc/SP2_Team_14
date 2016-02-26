@@ -80,7 +80,6 @@ Vector3 Robot::Move()
 		CurrPos.y += DirVec.y * Speed;
 		CurrPos.z += DirVec.z * Speed;
 		CalcBounds();
-
 		return CurrPos;
 	}
 }
