@@ -28,7 +28,7 @@ void RobotManager::CleanUp()
 		{
 		iter = RobotList.erase(iter);
 		}*/
-		if ((*iter).GetHealth() <= 0)
+		if ((*iter).GetHealth() <= 0 && (*iter).deadanimationover)
 		{
 			iter = RobotList.erase(iter);
 		}

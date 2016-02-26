@@ -68,14 +68,21 @@ void Robot::findAngle()
 
 Vector3 Robot::Move()
 {
-	FindNewTarget();
-	GetDirVec(TargetPos);
-	CurrPos.x += DirVec.x * Speed;
-	CurrPos.y += DirVec.y * Speed;
-	CurrPos.z += DirVec.z * Speed;
-	CalcBounds();
+	if (GetHealth() <= 0)
+	{
+		die = true;
+	}
+	else
+	{
+		FindNewTarget();
+		GetDirVec(TargetPos);
+		CurrPos.x += DirVec.x * Speed;
+		CurrPos.y += DirVec.y * Speed;
+		CurrPos.z += DirVec.z * Speed;
+		CalcBounds();
 
-	return CurrPos;
+		return CurrPos;
+	}
 }
 
 void Robot::FindNewTarget()
@@ -213,19 +220,20 @@ void Robot::RobotAnimation(double dt)
 		rightarmrotatelimit = -3;
 	}*/
 
-	//if (Robot::RobotHP == 0)
-	//{
-	//	die = true;
-	//	curRobotCount--;
-	//}
+	
 
 	if (die == true)
 	{
-		collapse += (float)(15 * dt);
+		rotatelefthand = 0;
+		rotaterighthand = 0;
+		moveleftleg = 0;
+		moverightleg = 0;
+		collapse += (float)(100 * dt);
 		if (collapse > 85)
 		{
 			die = false;
-			collapse -= (float)(15 * dt);
+			collapse -= (float)(100 * dt);
+			deadanimationover = true;
 		}
 	}
 

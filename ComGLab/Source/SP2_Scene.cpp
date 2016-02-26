@@ -1166,7 +1166,7 @@ void SP2_Scene::Update(double dt)
 			{
 				WepSys.ClearList();
 				wave += 1;
-				//buttonPress = false;
+				buttonPress = false;
 				buttonValue = 0;
 				weaponinterface = false;
 				repairShipPhase = 4;
@@ -1827,57 +1827,62 @@ void SP2_Scene::Render(double dt)
 			modelStack.Translate(i.Position().x, i.Position().y + 0.5, i.Position().z);
 			modelStack.Rotate(i.rotateToTarget, 0, 1, 0);
 			//HP
-			modelStack.PushMatrix();
-			modelStack.Translate(0, 7, 0);
-			modelStack.Rotate(constRotation * 2, 0, 1, 0);
+				modelStack.PushMatrix();
+				modelStack.Translate(0, 7, 0);
+				modelStack.Rotate(constRotation * 2, 0, 1, 0);
 			modelStack.PushMatrix();
 			if (i.GetHealth() > 20)
 			{
 				modelStack.Scale(i.GetHealth() / 80, i.GetHealth() / 80, i.GetHealth() / 80);
 				RenderMesh(meshList[GEO_ROBOTHEALTH], false);
 			}
+				modelStack.PopMatrix();
+					modelStack.PushMatrix();
+					modelStack.Scale(i.GetHealth() / 100, i.GetHealth() / 100, i.GetHealth() / 100);
+					if (i.GetHealth() >= 0)
+					{
+						RenderMesh(meshList[GEO_ROBOTHEALTH2], false);
+					}
+					modelStack.PopMatrix();
 			modelStack.PopMatrix();
+
 			modelStack.PushMatrix();
-			modelStack.Scale(i.GetHealth() / 100, i.GetHealth() / 100, i.GetHealth() / 100);
-			RenderMesh(meshList[GEO_ROBOTHEALTH2], false);
-			modelStack.PopMatrix();
-			modelStack.PopMatrix();
-			modelStack.PushMatrix();
+			modelStack.Rotate(i.collapse, 1, 0, 0);
 			RenderMesh(meshList[GEO_RANGEROBOTBODY], true);
-			modelStack.PushMatrix();
-			modelStack.Rotate(i.rotatelefthand, 1, 0, 0);
-			modelStack.Translate(0, 0, -10);
-			modelStack.Translate(0, 0, 10);
-			modelStack.Translate(0.3, 0, 0);
-			RenderMesh(meshList[GEO_RANGEROBOTLEFTUPPERARM], true);
-			modelStack.PushMatrix();
-			modelStack.Translate(0, 0, i.leftarmattack);
-			modelStack.Rotate(i.rotatelefthand, 1, 0, 0);
-			RenderMesh(meshList[GEO_RANGEROBOTLEFTLOWERARM], true);
-			modelStack.PopMatrix();
-			modelStack.PopMatrix();
-			modelStack.PushMatrix();
-			modelStack.Rotate(i.rotaterighthand, 1, 0, 0);
-			modelStack.Translate(0, 0, -10);
-			modelStack.Translate(0, 0, 10);
-			modelStack.Translate(-0.3, 0, 0);
-			RenderMesh(meshList[GEO_RANGEROBOTRIGHTUPPERARM], true);
-			modelStack.PushMatrix();
-			modelStack.Translate(0, 0, i.rightarmattack);
-			modelStack.Rotate(i.rotaterighthand, 1, 0, 0);
-			RenderMesh(meshList[GEO_RANGEROBOTRIGHTLOWERARM], true);
-			modelStack.PopMatrix();
-			modelStack.PopMatrix();
-			modelStack.PushMatrix();
-			modelStack.Rotate(i.moveleftleg, 1, 0, 0);
-			modelStack.Translate(0, 0, -10);
-			modelStack.Translate(0, 0, 10);
-			RenderMesh(meshList[GEO_RANGEROBOTLEFTLEG], true);
-			modelStack.PopMatrix();
-			modelStack.PushMatrix();
-			modelStack.Rotate(i.moverightleg, 1, 0, 0);
-			RenderMesh(meshList[GEO_RANGEROBOTRIGHTLEG], true);
-			modelStack.PopMatrix();
+				modelStack.PushMatrix();
+				modelStack.Rotate(i.rotatelefthand, 1, 0, 0);
+				modelStack.Translate(0, 0, -10);
+				modelStack.Translate(0, 0, 10);
+				modelStack.Translate(0.3, 0, 0);
+				RenderMesh(meshList[GEO_RANGEROBOTLEFTUPPERARM], true);
+					modelStack.PushMatrix();
+					modelStack.Translate(0, 0, i.leftarmattack);
+					modelStack.Rotate(i.rotatelefthand, 1, 0, 0);
+					RenderMesh(meshList[GEO_RANGEROBOTLEFTLOWERARM], true);
+					modelStack.PopMatrix();
+				modelStack.PopMatrix();
+						modelStack.PushMatrix();
+						modelStack.Rotate(i.rotaterighthand, 1, 0, 0);
+						modelStack.Translate(0, 0, -10);
+						modelStack.Translate(0, 0, 10);
+						modelStack.Translate(-0.3, 0, 0);
+						RenderMesh(meshList[GEO_RANGEROBOTRIGHTUPPERARM], true);
+							modelStack.PushMatrix();
+							modelStack.Translate(0, 0, i.rightarmattack);
+							modelStack.Rotate(i.rotaterighthand, 1, 0, 0);
+							RenderMesh(meshList[GEO_RANGEROBOTRIGHTLOWERARM], true);
+							modelStack.PopMatrix();
+						modelStack.PopMatrix();
+								modelStack.PushMatrix();
+								modelStack.Rotate(i.moveleftleg, 1, 0, 0);
+								modelStack.Translate(0, 0, -10);
+								modelStack.Translate(0, 0, 10);
+								RenderMesh(meshList[GEO_RANGEROBOTLEFTLEG], true);
+								modelStack.PopMatrix();
+									modelStack.PushMatrix();
+									modelStack.Rotate(i.moverightleg, 1, 0, 0);
+									RenderMesh(meshList[GEO_RANGEROBOTRIGHTLEG], true);
+									modelStack.PopMatrix();
 			modelStack.PopMatrix();
 			modelStack.PopMatrix();
 		}

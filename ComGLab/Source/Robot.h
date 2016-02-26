@@ -52,6 +52,7 @@ public:
 
 	float collapse = 0;
 	bool die = false;
+	bool deadanimationover = false;
 private:
 	Vector3 GetDirVec(Vector3 Target);
 	void SetStats(int Type);
