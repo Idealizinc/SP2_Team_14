@@ -158,9 +158,9 @@ Vector3 Robot::GetDirVec(Vector3 Target)
 	return DirVec;
 }
 
-void Robot::SetStats(int Type)
+void Robot::SetStats(int Level)
 {
-	switch (Type)
+	switch (Level)
 	{
 	case 0:
 		RobotType = Melee;
@@ -169,16 +169,16 @@ void Robot::SetStats(int Type)
 		Speed = 0.1;
 		break;
 	case 1:
-		RobotType = Ranged;
-		Health = 30;
-		Damage = 5;
-		Speed = 1;
+		RobotType = Melee;
+		Health = 150;
+		Damage = 10;
+		Speed = 0.1;
 		break;
 	case 2:
-		RobotType = Mixed;
-		Health = 40;
-		Damage = 8;
-		Speed = 1;
+		RobotType = Melee;
+		Health = 200;
+		Damage = 10;
+		Speed = 0.1;
 		break;
 	default:
 		Health = 0;
