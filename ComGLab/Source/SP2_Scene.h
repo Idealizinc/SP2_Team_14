@@ -353,6 +353,7 @@ private:
 	float timer;
 	bool weaponinterface;
 	bool repairgate;
+	bool SpawnedRobots = false;
 
 	//Light Stuff
 	Vector3 TownLightPosition;

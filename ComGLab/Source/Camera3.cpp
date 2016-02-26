@@ -261,7 +261,7 @@ void Camera3::cameraMovement2(double dt)
 	
 	if (Application::IsKeyPressed(VK_LSHIFT) || Application::IsKeyPressed(VK_RSHIFT))
 	{
-		walkingSpeed = 0.5;
+		walkingSpeed = 2.5;
 	}
 	else walkingSpeed = 5;
 

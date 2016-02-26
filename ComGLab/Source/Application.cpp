@@ -16,7 +16,7 @@
 int S_Width, S_Height;
 
 GLFWwindow* m_window;
-const unsigned char FPS = 60; // FPS of this game
+const unsigned char FPS = 100; // FPS of this game
 const unsigned int frameTime = 1000 / FPS; // time for each frame
 
 //Define an error callback
