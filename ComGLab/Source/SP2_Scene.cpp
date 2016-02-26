@@ -1592,7 +1592,7 @@ void SP2_Scene::RenderRocks()
 {
 	// Right
 	modelStack.PushMatrix();
-	modelStack.Translate(45, -2, 30);
+	modelStack.Translate(45, -2, -30);
 	modelStack.Rotate(0, 0, 0, 1);
 	modelStack.Scale(4, 4, 4);
 	RenderMesh(meshList[GEO_METEOR], true);
@@ -1779,7 +1779,7 @@ void SP2_Scene::Render(double dt)
 		{
 		
 			modelStack.PushMatrix();
-			modelStack.Translate(i.Position().x, i.Position().y, i.Position().z);
+			modelStack.Translate(i.Position().x, i.Position().y + 0.5, i.Position().z);
 			modelStack.Rotate(i.rotateToTarget, 0, 1, 0);
 			//HP
 			modelStack.PushMatrix();

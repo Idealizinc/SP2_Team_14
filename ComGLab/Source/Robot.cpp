@@ -187,11 +187,11 @@ void Robot::RobotAnimation(double dt)
 	//left leg
 	if (leftleg == true)
 	{
-		moveleftleg -= (float)(10 * dt);
+		moveleftleg -= (float)(20 * dt);
 	}
 	else if (leftleg == false)
 	{
-		moveleftleg += (float)(10 * dt);
+		moveleftleg += (float)(20 * dt);
 	}
 	if (moveleftleg >= leftleglimit)
 	{
@@ -205,11 +205,11 @@ void Robot::RobotAnimation(double dt)
 	//right leg
 	if (rightleg == true)
 	{
-		moverightleg += (float)(10 * dt);
+		moverightleg += (float)(20 * dt);
 	}
 	else if (rightleg == false)
 	{
-		moverightleg -= (float)(10 * dt);
+		moverightleg -= (float)(20 * dt);
 	}
 	if (moverightleg >= rightleglimit)
 	{
