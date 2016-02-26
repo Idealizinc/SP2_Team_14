@@ -9,6 +9,7 @@ Robot::Robot(int RobotType, Vector3 SpawnPos)
 	findAngle();
 	SetStats(RobotType);
 	CalcBounds();
+	//RobotAnimation(dt);
 	//(CurrPos.x + 3) * rotateToTarget
 }
 
@@ -73,6 +74,7 @@ Vector3 Robot::Move()
 	CurrPos.y += DirVec.y * Speed;
 	CurrPos.z += DirVec.z * Speed;
 	CalcBounds();
+
 	return CurrPos;
 }
 
@@ -145,7 +147,104 @@ void Robot::SetHealth(float newHP)
 {
 	Health = newHP;
 }
+void Robot::RobotAnimation(double dt)
+{
+	//left arm
+	if (leftarmrotate == true)
+	{
+		rotatelefthand -= (float)(5 * dt);
+	}
+	else if (leftarmrotate == false)
+	{
+		rotatelefthand += (float)(5 * dt);
+	}
+	if (rotatelefthand <= leftarmrotatelimit)
+	{
+		leftarmrotate = false;
+	}
+	else if (rotatelefthand >= -leftarmrotatelimit)
+	{
+		leftarmrotate = true;
+	}
 
+	//right arm
+	if (rightarmrotate == true)
+	{
+		rotaterighthand += (float)(5 * dt);
+	}
+	else if (rightarmrotate == false)
+	{
+		rotaterighthand -= (float)(5 * dt);
+	}
+	if (rotaterighthand <= rightarmrotatelimit)
+	{
+		rightarmrotate = true;
+	}
+	else if (rotaterighthand >= -rightarmrotatelimit)
+	{
+		rightarmrotate = false;
+	}
+	//left leg
+	if (leftleg == true)
+	{
+		moveleftleg -= (float)(10 * dt);
+	}
+	else if (leftleg == false)
+	{
+		moveleftleg += (float)(10 * dt);
+	}
+	if (moveleftleg >= leftleglimit)
+	{
+		leftleg = true;
+	}
+	else if (moveleftleg <= -leftleglimit)
+	{
+		leftleg = false;
+	}
+
+	//right leg
+	if (rightleg == true)
+	{
+		moverightleg += (float)(10 * dt);
+	}
+	else if (rightleg == false)
+	{
+		moverightleg -= (float)(10 * dt);
+	}
+	if (moverightleg >= rightleglimit)
+	{
+		rightleg = false;
+	}
+	else if (moverightleg <= -rightleglimit)
+	{
+		rightleg = true;
+	}
+	//walking
+	/*if (walk == false)
+	{
+		leftarmrotatelimit = -3;
+		rightarmrotatelimit = -3;
+	}*/
+
+	//if (Robot::RobotHP == 0)
+	//{
+	//	die = true;
+	//	curRobotCount--;
+	//}
+
+	if (die == true)
+	{
+		collapse += (float)(15 * dt);
+		if (collapse > 85)
+		{
+			die = false;
+			collapse -= (float)(15 * dt);
+		}
+	}
+
+	//droid repair animation
+	
+}
 void Robot::CalcBounds()
 {
 	BoundingBox.set(CurrPos.x - 2.5, CurrPos.x + 2.5, CurrPos.z - 2.5, CurrPos.z + 2.5, CurrPos.y - 3, CurrPos.y + 7);

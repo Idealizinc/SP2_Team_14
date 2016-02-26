@@ -97,27 +97,6 @@ void SP2_Scene::Init()
 	shipFallingX = -20;
 	shipFallingY = 150;
 	//curMeteorCount = 1;
-	leftarmrotatelimit = -1;
-	rightarmrotatelimit = -1;
-	leftarmrotate = true;
-	rightarmrotate = true;
-	rotatelefthand = 0;
-	rotaterighthand = 0;
-	moverobot = 0;
-	moveleftleg = 0;
-	moverightleg = 0;
-	leftleglimit = 4;
-	rightleglimit = 4;
-	leftarmattack = 0;
-	rightarmattack = 0;
-	leftarmattacklimit = -4;
-	rightarmattacklimit = -4;
-	droidlimit = 3;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
-	collapse = 0;
-	leftleg = true;
-	rightleg = true;
-	walk = true;
-	die = false;
 	//openleftgate = false;
 	//openrightgate = false;
 	leftgate = 0;
@@ -763,7 +742,10 @@ void SP2_Scene::GameState()
 	}
 	if (wave == 1)
 	{
-		RobotManager.RobotList.push_back(Robot(0, spawnPointN));
+		/*for (int i = 0; i < 10; i++)
+		{
+			RobotManager.RobotList.push_back(Robot(0, Vector3(spawnPointN.x + (rand() % 80 - 39), spawnPointN.y, spawnPointN.z + (rand() % 80 - 39))));
+		}	*/
 	}
 	/*else if (wave == 2)
 	{
@@ -871,6 +853,13 @@ void SP2_Scene::RenderLevel()
 void SP2_Scene::RenderSpaceMap()
 {
 	modelStack.PushMatrix();
+	modelStack.Translate(0, 10, 50);
+	modelStack.Translate(0, moveMshipUp, 0);
+	modelStack.Scale(5, 5, 5);
+	RenderMesh(meshList[GEO_MOTHERSHIP], true);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
 	int range = 5;
 	for (int detailLevel = 1; detailLevel <= range; detailLevel++)
 	{
@@ -890,8 +879,6 @@ void SP2_Scene::RenderSpaceMap()
 				modelStack.PopMatrix();
 
 				modelStack.PopMatrix();
-				/*SpaceRockCheck.set((detailLevel * 70 + 150) * cos(Math::DegreeToRadian(i + detailLevel * 20)) - 25, (detailLevel * 70 + 150) * cos(Math::DegreeToRadian(i + detailLevel * 20)) + 25, (detailLevel * 70 + 150) * sin(Math::DegreeToRadian(i + detailLevel * 20)) - 25, (detailLevel * 70 + 150) * sin(Math::DegreeToRadian(i + detailLevel * 20)) + 25,
-				40 * j - 20, 40 * j + 20);*/
 			}
 		}
 	}
@@ -943,137 +930,12 @@ void SP2_Scene::RenderShip()
 	}
 }
 
-void SP2_Scene::RobotAnimation(double dt)
-{
-	//left arm
-	if (leftarmrotate == true)
-	{
-		rotatelefthand -= (float)(5 * dt);
-	}
-	else if (leftarmrotate == false)
-	{
-		rotatelefthand += (float)(5 * dt);
-	}
-	if (rotatelefthand <= leftarmrotatelimit)
-	{
-		leftarmrotate = false;
-	}
-	else if (rotatelefthand >= -leftarmrotatelimit)
-	{
-		leftarmrotate = true;
-	}
-
-	//right arm
-	if (rightarmrotate == true)
-	{
-		rotaterighthand += (float)(5 * dt);
-	}
-	else if (rightarmrotate == false)
-	{
-		rotaterighthand -= (float)(5 * dt);
-	}
-	if (rotaterighthand <= rightarmrotatelimit)
-	{
-		rightarmrotate = true;
-	}
-	else if (rotaterighthand >= -rightarmrotatelimit)
-	{
-		rightarmrotate = false;
-	}
-	//left leg
-	if (leftleg == true)
-	{
-		moveleftleg -= (float)(10 * dt);
-	}
-	else if (leftleg == false)
-	{
-		moveleftleg += (float)(10 * dt);
-	}
-	if (moveleftleg >= leftleglimit)
-	{
-		leftleg = true;
-	}
-	else if (moveleftleg <= -leftleglimit)
-	{
-		leftleg = false;
-	}
-
-	//right leg
-	if (rightleg == true)
-	{
-		moverightleg += (float)(10 * dt);
-	}
-	else if (rightleg == false)
-	{
-		moverightleg -= (float)(10 * dt);
-	}
-	if (moverightleg >= rightleglimit)
-	{
-		rightleg = false;
-	}
-	else if (moverightleg <= -rightleglimit)
-	{
-		rightleg = true;
-	}
-	//walking
-	if (walk == true)
-	{
-		moverobot += (float)(5 * dt);
-		if (moverobot > 120)
-		{
-			walk = false;
-		}
-	}
-	if (walk == false)
-	{
-		leftarmrotatelimit = -3;
-		rightarmrotatelimit = -3;
-	}
-
-	//if (Robot::RobotHP == 0)
-	//{
-	//	die = true;
-	//	curRobotCount--;
-	//}
-	if (die == true)
-	{
-		collapse += (float)(15 * dt);
-		if (collapse > 85)
-		{
-			die = false;
-			collapse -= (float)(15 * dt);
-		}
-	}
-
-	//droid repair animation
-	if (repairgate == true)
-	{
-		droidrepair = true;
-	}
-	if (droidrepair == true)
-	{
-		droidrepairgate += (float)(5 * dt);
-	}
-	else if (droidrepair == false)
-	{
-		droidrepairgate -= (float)(5 * dt);
-	}
-	if (droidrepairgate >= droidlimit)
-	{
-		droidrepair = false;
-	}
-	else if (droidrepairgate <= -droidlimit)
-	{
-		droidrepair = true;
-	}
-}
-
 void SP2_Scene::Update(double dt)
 {
 	camera.Update(dt);
 	constRotation += (float)(10 * pause * dt);
 	constTranslation += (float)(10 * pause  * dt);
-	RobotAnimation(dt);
+	//RobotAnimation(dt);
 	//Lerping Rotation
 	if ((rLimiter == true))
 	{
@@ -1384,6 +1246,8 @@ void SP2_Scene::Update(double dt)
 		for (std::list<Robot>::iterator iter = RobotManager.RobotList.begin(); iter != RobotManager.RobotList.end(); ++iter)
 		{
 			(*iter).BoundsCheck(WepSys);
+			(*iter).RobotAnimation(dt);
+			
 		}
 		RobotManager.CleanUp();
 		WepSys.CleanUp();
@@ -1728,22 +1592,22 @@ void SP2_Scene::RenderRocks()
 {
 	// Right
 	modelStack.PushMatrix();
-	modelStack.Translate(50, -4, 0);
+	modelStack.Translate(45, -2, 30);
 	modelStack.Rotate(0, 0, 0, 1);
-	modelStack.Scale(6, 6, 6);
+	modelStack.Scale(4, 4, 4);
 	RenderMesh(meshList[GEO_METEOR], true);
 
-	modelStack.PushMatrix();
-	modelStack.Translate(4, -4, -8);
-	modelStack.Rotate(50, 1, 0, 0);
-	modelStack.Scale(3, 3, 3);
-	RenderMesh(meshList[GEO_METEOR], true);
+		modelStack.PushMatrix();
+		modelStack.Translate(4, -2, -8);
+		modelStack.Rotate(50, 1, 0, 0);
+		modelStack.Scale(3, 3, 3);
+		RenderMesh(meshList[GEO_METEOR], true);
 
-	modelStack.PushMatrix();
-	modelStack.Translate(3, -4, 20);
-	modelStack.Rotate(30, 1, 0, 0);
-	modelStack.Scale(-3, -3, -3);
-	RenderMesh(meshList[GEO_METEOR], true);
+			modelStack.PushMatrix();
+			modelStack.Translate(3, -2, 20);
+			modelStack.Rotate(30, 1, 0, 0);
+			modelStack.Scale(-1, -1, -1);
+			RenderMesh(meshList[GEO_METEOR], true);
 
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
@@ -1751,22 +1615,22 @@ void SP2_Scene::RenderRocks()
 
 	// left
 	modelStack.PushMatrix();
-	modelStack.Translate(-50, -11, -8);
-	modelStack.Rotate(0, 0, 0, 1);
-	modelStack.Scale(6, 6, 6);
+	modelStack.Translate(-50, -2, -20);
+	modelStack.Rotate(-40, 0, 0, 1);
+	modelStack.Scale(4, 4, 4);
 	RenderMesh(meshList[GEO_METEOR], true);
 
-	modelStack.PushMatrix();
-	modelStack.Translate(-5, -4, -4);
-	modelStack.Rotate(50, 0, 0, 1);
-	modelStack.Scale(3, 3, 3);
-	RenderMesh(meshList[GEO_METEOR], true);
+		modelStack.PushMatrix();
+		modelStack.Translate(-10, -10, -8);
+		modelStack.Rotate(50, 0, 0, 1);
+		modelStack.Scale(3, 3, 3);
+		RenderMesh(meshList[GEO_METEOR], true);
 
-	modelStack.PushMatrix();
-	modelStack.Translate(-1, -4, -5);
-	modelStack.Rotate(-20, 0, 1, 0);
-	modelStack.Scale(1, 1, 1);
-	RenderMesh(meshList[GEO_METEOR], true);
+			modelStack.PushMatrix();
+			modelStack.Translate(-1, -2, -5);
+			modelStack.Rotate(-20, 0, 1, 0);
+			modelStack.Scale(1, 1, 1);
+			RenderMesh(meshList[GEO_METEOR], true);
 
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
@@ -1774,9 +1638,9 @@ void SP2_Scene::RenderRocks()
 
 	// front
 	modelStack.PushMatrix();
-	modelStack.Translate(0, -2, -60);
-	modelStack.Rotate(0, 0, 0, 1);
-	modelStack.Scale(6, 6, 6);
+	modelStack.Translate(25, -2, -60);
+	modelStack.Rotate(50, 0, 0, 1);
+	modelStack.Scale(4, 4, 4);
 	RenderMesh(meshList[GEO_METEOR], true);
 
 	modelStack.PushMatrix();
@@ -1790,20 +1654,20 @@ void SP2_Scene::RenderRocks()
 
 	// back
 	modelStack.PushMatrix();
-	modelStack.Translate(0, -4, 60);
-	modelStack.Rotate(0, 0, 0, 1);
-	modelStack.Scale(6, 6, 6);
+	modelStack.Translate(30, -2, 60);
+	modelStack.Rotate(-30, 0, 0, 1);
+	modelStack.Scale(4, 4, 4);
 	RenderMesh(meshList[GEO_METEOR], true);
 
-	modelStack.PushMatrix();
-	modelStack.Translate(5, -4, 9);
-	modelStack.Rotate(80, 1, 0, 0);
-	modelStack.Scale(2, 2, 2);
-	RenderMesh(meshList[GEO_METEOR], true);
+		modelStack.PushMatrix();
+		modelStack.Translate(5, -2, 9);
+		modelStack.Rotate(80, 1, 0, 0);
+		modelStack.Scale(2, 2, 2);
+		RenderMesh(meshList[GEO_METEOR], true);
 
-	modelStack.PushMatrix();
-	modelStack.Translate(-8, -4, 0);
-	RenderMesh(meshList[GEO_METEOR], true);
+			modelStack.PushMatrix();
+			modelStack.Translate(-8, -2, 20);
+			RenderMesh(meshList[GEO_METEOR], true);
 
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
@@ -1913,6 +1777,7 @@ void SP2_Scene::Render(double dt)
 
 		for (auto i : RobotManager.RobotList)
 		{
+		
 			modelStack.PushMatrix();
 			modelStack.Translate(i.Position().x, i.Position().y, i.Position().z);
 			modelStack.Rotate(i.rotateToTarget, 0, 1, 0);
@@ -1935,37 +1800,37 @@ void SP2_Scene::Render(double dt)
 			modelStack.PushMatrix();
 			RenderMesh(meshList[GEO_RANGEROBOTBODY], true);
 			modelStack.PushMatrix();
-			modelStack.Rotate(rotatelefthand, 1, 0, 0);
+			modelStack.Rotate(i.rotatelefthand, 1, 0, 0);
 			modelStack.Translate(0, 0, -10);
 			modelStack.Translate(0, 0, 10);
 			modelStack.Translate(0.3, 0, 0);
 			RenderMesh(meshList[GEO_RANGEROBOTLEFTUPPERARM], true);
 			modelStack.PushMatrix();
-			modelStack.Translate(0, 0, leftarmattack);
-			modelStack.Rotate(rotatelefthand, 1, 0, 0);
+			modelStack.Translate(0, 0, i.leftarmattack);
+			modelStack.Rotate(i.rotatelefthand, 1, 0, 0);
 			RenderMesh(meshList[GEO_RANGEROBOTLEFTLOWERARM], true);
 			modelStack.PopMatrix();
 			modelStack.PopMatrix();
 			modelStack.PushMatrix();
-			modelStack.Rotate(rotaterighthand, 1, 0, 0);
+			modelStack.Rotate(i.rotaterighthand, 1, 0, 0);
 			modelStack.Translate(0, 0, -10);
 			modelStack.Translate(0, 0, 10);
 			modelStack.Translate(-0.3, 0, 0);
 			RenderMesh(meshList[GEO_RANGEROBOTRIGHTUPPERARM], true);
 			modelStack.PushMatrix();
-			modelStack.Translate(0, 0, rightarmattack);
-			modelStack.Rotate(rotaterighthand, 1, 0, 0);
+			modelStack.Translate(0, 0, i.rightarmattack);
+			modelStack.Rotate(i.rotaterighthand, 1, 0, 0);
 			RenderMesh(meshList[GEO_RANGEROBOTRIGHTLOWERARM], true);
 			modelStack.PopMatrix();
 			modelStack.PopMatrix();
 			modelStack.PushMatrix();
-			modelStack.Rotate(moveleftleg, 1, 0, 0);
+			modelStack.Rotate(i.moveleftleg, 1, 0, 0);
 			modelStack.Translate(0, 0, -10);
 			modelStack.Translate(0, 0, 10);
 			RenderMesh(meshList[GEO_RANGEROBOTLEFTLEG], true);
 			modelStack.PopMatrix();
 			modelStack.PushMatrix();
-			modelStack.Rotate(moverightleg, 1, 0, 0);
+			modelStack.Rotate(i.moverightleg, 1, 0, 0);
 			RenderMesh(meshList[GEO_RANGEROBOTRIGHTLEG], true);
 			modelStack.PopMatrix();
 			modelStack.PopMatrix();
@@ -2066,7 +1931,6 @@ void SP2_Scene::Render(double dt)
 		modelStack.Rotate(90, 0, 1, 0);
 		modelStack.Scale(1.55, 1.55, 2.5);
 		RenderGate(true);
-=======
 	////mixed robot
 	//modelStack.PushMatrix();
 	//modelStack.Translate(-10, 0, 0);
@@ -2086,15 +1950,6 @@ void SP2_Scene::Render(double dt)
 	//				modelStack.PopMatrix();
 	//modelStack.PopMatrix();
 	//modelStack.PopMatrix();*/
-
-	
-
-		/*modelStack.PushMatrix();
-		modelStack.Translate(0, 10, 50);
-		modelStack.Translate(0, moveMshipUp, 0);
-		modelStack.Scale(5, 5, 5);
-		RenderMesh(meshList[GEO_MOTHERSHIP], true);
-		modelStack.PopMatrix();*/
 
 		GameState();
 		//DO NOT RENDER ANYTHING UNDER THIS//
