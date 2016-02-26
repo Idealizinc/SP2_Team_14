@@ -84,7 +84,7 @@ void Robot::FindNewTarget()
 	if (Randomize > 5)
 	{
 		Boundary Base(-19, 19, -19, 19, -5, 10);
-		Boundary BaseOuter(-20, 20, -20, 20, -5, 10);
+		Boundary BaseOuter(-25, 25, -25, 25, -5, 10);
 		if (BaseOuter.BoundaryCheck(CurrPos.x, CurrPos.y, CurrPos.z))
 		{
 			int choice = rand() % 4 + 1;
@@ -119,23 +119,10 @@ void Robot::BoundsCheck(WeaponSystem WepSys)
 	{
 		if (!BoundingBox.BoundaryCheck(i.Position().x, i.Position().z, i.Position().y))
 		{
-			//Health = Health - i.Damage;
-			// Weapon Sys Detects if True, if so pop shot.
 			i.BulletUsed = true;
 			SetHealth(Health - i.Damage);
 		}
 	}
-	//for (std::list<RayCast>::iterator iter = WepSys.BulletList.begin(); iter != WepSys.BulletList.end(); /*++iter*/)
-	//{
-	//	if (!BoundingBox.BoundaryCheck((*iter).Position().x, (*iter).Position().z, (*iter).Position().y))
-	//	{
-	//		// Weapon Sys Detects if True, if so pop shot.
-	//		SetHealth(Health - (*iter).Damage);
-	//		(*iter).BulletUsed = true;
-	//	}
-	//	else ++iter;
-	//}
-
 }
 
 float Robot::GetHealth()
@@ -265,19 +252,19 @@ void Robot::SetStats(int Level)
 		RobotType = Melee;
 		Health = 100;
 		Damage = 10;
-		Speed = 0.1;
+		Speed = 0.15;
 		break;
 	case 1:
 		RobotType = Melee;
 		Health = 150;
 		Damage = 10;
-		Speed = 0.1;
+		Speed = 0.15;
 		break;
 	case 2:
 		RobotType = Melee;
 		Health = 200;
 		Damage = 10;
-		Speed = 0.1;
+		Speed = 0.15;
 		break;
 	default:
 		Health = 0;

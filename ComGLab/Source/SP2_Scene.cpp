@@ -112,10 +112,10 @@ void SP2_Scene::Init()
 	//robotrightattack = false;
 	WepItf_Choices = Vector3(0, 0, 0);
 
-	spawnPointN = Vector3(0, 0, 150);
-	spawnPointS = Vector3(0, 0, -150); 
-	spawnPointE = Vector3(-150, 0, 0);
-	spawnPointW = Vector3(150, 0, 0);
+	spawnPointN = Vector3(0, 0, 250);
+	spawnPointS = Vector3(0, 0, -250);
+	spawnPointE = Vector3(-250, 0, 0);
+	spawnPointW = Vector3(250, 0, 0);
 
 	// Enable depth Test
 	glEnable(GL_DEPTH_TEST);
@@ -735,22 +735,63 @@ void SP2_Scene::GameState()
 		//gatehp = 20;
 		wave = 0;
 		camera.Reset();
-		wave = 1;
 		playerhp = 100;
 		basehp = 100;
 		weaponValue = 0;
 	}
-	if (wave == 1)
+	if (wave == 1 && !weaponinterface && !SpawnedRobots)
 	{
-		/*for (int i = 0; i < 10; i++)
+		for (int i = 0; i < 10; i++)
 		{
 			RobotManager.RobotList.push_back(Robot(0, Vector3(spawnPointN.x + (rand() % 80 - 39), spawnPointN.y, spawnPointN.z + (rand() % 80 - 39))));
-		}	*/
+		}
+		SpawnedRobots = true;
 	}
-	/*else if (wave == 2)
+	else if (wave == 2 && !weaponinterface && !SpawnedRobots)
 	{
-		RobotManager.RobotList.push_back(Robot(0, spawnPointS));
+		for (int i = 0; i < 10; i++)
+		{
+			RobotManager.RobotList.push_back(Robot(1, Vector3(spawnPointS.x + (rand() % 80 - 39), spawnPointS.y, spawnPointS.z + (rand() % 80 - 39))));
+		}
+		SpawnedRobots = true;
 	}
+	else if (wave == 3 && !weaponinterface && !SpawnedRobots)
+	{
+		for (int i = 0; i < 10; i++)
+		{
+			RobotManager.RobotList.push_back(Robot(2, Vector3(spawnPointE.x + (rand() % 80 - 39), spawnPointE.y, spawnPointE.z + (rand() % 80 - 39))));
+		}
+		SpawnedRobots = true;
+	}
+	else if (wave == 4 && !weaponinterface && !SpawnedRobots)
+	{
+		for (int i = 0; i < 10; i++)
+		{
+			RobotManager.RobotList.push_back(Robot(2, Vector3(spawnPointW.x + (rand() % 80 - 39), spawnPointW.y, spawnPointW.z + (rand() % 80 - 39))));
+		}
+		SpawnedRobots = true;
+	}
+	else if (wave == 5 && !weaponinterface && !SpawnedRobots)
+	{
+		for (int i = 0; i < 10; i++)
+		{
+			RobotManager.RobotList.push_back(Robot(0, Vector3(spawnPointN.x + (rand() % 80 - 39), spawnPointN.y, spawnPointN.z + (rand() % 80 - 39))));
+		}
+		for (int i = 0; i < 10; i++)
+		{
+			RobotManager.RobotList.push_back(Robot(1, Vector3(spawnPointS.x + (rand() % 80 - 39), spawnPointS.y, spawnPointS.z + (rand() % 80 - 39))));
+		}
+		for (int i = 0; i < 10; i++)
+		{
+			RobotManager.RobotList.push_back(Robot(2, Vector3(spawnPointE.x + (rand() % 80 - 39), spawnPointE.y, spawnPointE.z + (rand() % 80 - 39))));
+		}
+		for (int i = 0; i < 10; i++)
+		{
+			RobotManager.RobotList.push_back(Robot(2, Vector3(spawnPointW.x + (rand() % 80 - 39), spawnPointW.y, spawnPointW.z + (rand() % 80 - 39))));
+		}
+		SpawnedRobots = true;
+	}
+	/*
 	else if (wave == 3)
 	{
 		RobotManager.RobotList.push_back(Robot(0, spawnPointE));
@@ -766,10 +807,11 @@ void SP2_Scene::GameState()
 		RobotManager.RobotList.push_back(Robot(0, spawnPointE));
 		RobotManager.RobotList.push_back(Robot(0, spawnPointW));
 	}*/
-	if (RobotManager.CurrentRobotCount <= 0 && wave != 5 && wave != 6 && wave != 7)
+	if (SpawnedRobots && RobotManager.CurrentRobotCount <= 0 && wave != 5 && wave != 6 && wave != 7)
 	{
 		weaponinterface = true;
 	}
+	else weaponinterface = false;
 	/*else if (curMeteorCount <= 0)
 	{
 	weaponinterface = true;
@@ -1060,6 +1102,14 @@ void SP2_Scene::Update(double dt)
 			randWepChoices = false;
 		}
 		WepSys.SetStats(weaponValue);
+		if (!buttonPress)
+		{
+			buttonValue += dt;
+			if (buttonValue >= 2)
+			{
+				buttonPress = true;
+			}
+		}
 		if (weaponinterface == true)
 		{
 			if (buttonPress == true && Application::IsKeyPressed('1'))
@@ -1070,13 +1120,14 @@ void SP2_Scene::Update(double dt)
 				else if (WepItf_Choices.x == 3){ weaponValue = 10; }
 				WepSys.ClearList();
 				wave += 1;
-				/*buttonPress = false;
-				buttonValue = 0;*/
+				//buttonPress = false;
+				buttonValue = 0;
 				weaponinterface = false;
 				playerhp--;
 				repairShipPhase = 1;
 				WepSys.SetStats(weaponValue);
 				CurrentAmmo = WepSys.MaxAmmo;
+				SpawnedRobots = false;
 			}
 			else if (buttonPress == true && Application::IsKeyPressed('2'))
 			{
@@ -1086,13 +1137,14 @@ void SP2_Scene::Update(double dt)
 				else if (WepItf_Choices.y == 3){ weaponValue = 11; }
 				WepSys.ClearList();
 				wave += 1;
-				/*buttonPress = false;
-				buttonValue = 0;*/
+				//buttonPress = false;
+				buttonValue = 0;
 				weaponinterface = false;
 				basehp--;
 				repairShipPhase = 2;
 				WepSys.SetStats(weaponValue);
 				CurrentAmmo = WepSys.MaxAmmo;
+				SpawnedRobots = false;
 			}
 			else if (buttonPress == true && Application::IsKeyPressed('3'))
 			{
@@ -1102,23 +1154,25 @@ void SP2_Scene::Update(double dt)
 				else if (WepItf_Choices.z == 3){ weaponValue = 12; }
 				WepSys.ClearList();
 				wave += 1;
-				/*buttonPress = false;
-				buttonValue = 0;*/
+				//buttonPress = false;
+				buttonValue = 0;
 				weaponinterface = false;
 				repairShipPhase = 3;
 				WepSys.SetStats(weaponValue);
 				CurrentAmmo = WepSys.MaxAmmo;
+				SpawnedRobots = false;
 			}
 			else if (buttonPress == true && Application::IsKeyPressed('4'))
 			{
 				WepSys.ClearList();
 				wave += 1;
-				/*buttonPress = false;
-				buttonValue = 0;*/
+				buttonPress = false;
+				buttonValue = 0;
 				weaponinterface = false;
 				repairShipPhase = 4;
 				WepSys.SetStats(weaponValue);
 				CurrentAmmo = WepSys.MaxAmmo;
+				SpawnedRobots = false;
 			}
 		}
 		if (Application::IsKeyPressed('5'))
@@ -1129,15 +1183,6 @@ void SP2_Scene::Update(double dt)
 		if (!weaponinterface)
 		{
 			randWepChoices = true;
-		}
-
-		if (!buttonPress)
-		{
-			buttonValue += 1 * pause * dt;
-			if (buttonValue >= 10)
-			{
-				buttonPress = true;
-			}
 		}
 
 		if (Application::IsKeyPressed('I'))
@@ -1261,7 +1306,7 @@ void SP2_Scene::RenderSkybox(Vector3 Position)
 	//Skybox
 	modelStack.PushMatrix();
 	//Skybox Movement
-	modelStack.Translate(Position.x, 0, Position.z);
+	modelStack.Translate(Position.x, Position.y, Position.z);
 	//GEO_FRONT
 	modelStack.PushMatrix();
 	modelStack.Translate(0, 0, -transSB);
