@@ -58,17 +58,14 @@ void WeaponSystem::SetStats(int wepVal)
 	{
 	case 0:
 		ReloadTime = 3;
-<<<<<<< HEAD
 		RateOfFire = 0;
 		Damage = 5;
 		Speed = 3;
 		MaxAmmo = 1000;
-=======
 		RateOfFire = 0;// 0.1;
 		Damage = 5;
 		Speed = 3;
 		MaxAmmo = 1337;// 30;
->>>>>>> ba4bfdb0239507678f551aa577bcb1a35170e4c5
 		break;
 	case 1:
 		ReloadTime = 4;
