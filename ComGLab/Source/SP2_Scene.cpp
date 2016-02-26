@@ -1120,7 +1120,7 @@ void SP2_Scene::Update(double dt)
 				else if (WepItf_Choices.x == 3){ weaponValue = 10; }
 				WepSys.ClearList();
 				wave += 1;
-				//buttonPress = false;
+				buttonPress = false;
 				buttonValue = 0;
 				weaponinterface = false;
 				playerhp--;
@@ -1137,7 +1137,7 @@ void SP2_Scene::Update(double dt)
 				else if (WepItf_Choices.y == 3){ weaponValue = 11; }
 				WepSys.ClearList();
 				wave += 1;
-				//buttonPress = false;
+				buttonPress = false;
 				buttonValue = 0;
 				weaponinterface = false;
 				basehp--;
@@ -1154,7 +1154,7 @@ void SP2_Scene::Update(double dt)
 				else if (WepItf_Choices.z == 3){ weaponValue = 12; }
 				WepSys.ClearList();
 				wave += 1;
-				//buttonPress = false;
+				buttonPress = false;
 				buttonValue = 0;
 				weaponinterface = false;
 				repairShipPhase = 3;
