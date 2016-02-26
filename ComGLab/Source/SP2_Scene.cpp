@@ -97,27 +97,6 @@ void SP2_Scene::Init()
 	shipFallingX = -20;
 	shipFallingY = 150;
 	//curMeteorCount = 1;
-	leftarmrotatelimit = -1;
-	rightarmrotatelimit = -1;
-	leftarmrotate = true;
-	rightarmrotate = true;
-	rotatelefthand = 0;
-	rotaterighthand = 0;
-	moverobot = 0;
-	moveleftleg = 0;
-	moverightleg = 0;
-	leftleglimit = 4;
-	rightleglimit = 4;
-	leftarmattack = 0;
-	rightarmattack = 0;
-	leftarmattacklimit = -4;
-	rightarmattacklimit = -4;
-	droidlimit = 3;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
-	collapse = 0;
-	leftleg = true;
-	rightleg = true;
-	walk = true;
-	die = false;
 	//openleftgate = false;
 	//openrightgate = false;
 	leftgate = 0;
@@ -701,65 +680,7 @@ void SP2_Scene::RenderBase()
 }
 void SP2_Scene::RenderRobots()
 {
-	for (auto i : RobotManager.RobotList)
-	{
-		modelStack.PushMatrix();
-		modelStack.Translate(i.Position().x, i.Position().y, i.Position().z);
-		modelStack.Rotate(i.rotateToTarget, 0, 1, 0);
-		//HP
-			modelStack.PushMatrix();
-			modelStack.Translate(0, 7, 0);
-			modelStack.Rotate(constRotation * 2, 0, 1, 0);
-				modelStack.PushMatrix();
-		if (i.GetHealth() > 20)
-		{
-			modelStack.Scale(i.GetHealth() / 80, i.GetHealth() / 80, i.GetHealth() / 80);
-			RenderMesh(meshList[GEO_ROBOTHEALTH], false);
-		}
-				modelStack.PopMatrix();
-			modelStack.PushMatrix();
-			modelStack.Scale(i.GetHealth() / 100, i.GetHealth() / 100, i.GetHealth() / 100);
-			RenderMesh(meshList[GEO_ROBOTHEALTH2], false);
-			modelStack.PopMatrix();
-		modelStack.PopMatrix();
-
-		RenderMesh(meshList[GEO_RANGEROBOTBODY], true);
-		modelStack.PushMatrix();
-		modelStack.Rotate(rotatelefthand, 1, 0, 0);
-		modelStack.Translate(0, 0, -10);
-		modelStack.Translate(0, 0, 10);
-		modelStack.Translate(0.3, 0, 0);
-		RenderMesh(meshList[GEO_RANGEROBOTLEFTUPPERARM], true);
-		modelStack.PushMatrix();
-		modelStack.Translate(0, 0, leftarmattack);
-		modelStack.Rotate(rotatelefthand, 1, 0, 0);
-		RenderMesh(meshList[GEO_RANGEROBOTLEFTLOWERARM], true);
-		modelStack.PopMatrix();
-		modelStack.PopMatrix();
-		modelStack.PushMatrix();
-		modelStack.Rotate(rotaterighthand, 1, 0, 0);
-		modelStack.Translate(0, 0, -10);
-		modelStack.Translate(0, 0, 10);
-		modelStack.Translate(-0.3, 0, 0);
-		RenderMesh(meshList[GEO_RANGEROBOTRIGHTUPPERARM], true);
-		modelStack.PushMatrix();
-		modelStack.Translate(0, 0, rightarmattack);
-		modelStack.Rotate(rotaterighthand, 1, 0, 0);
-		RenderMesh(meshList[GEO_RANGEROBOTRIGHTLOWERARM], true);
-		modelStack.PopMatrix();
-		modelStack.PopMatrix();
-		modelStack.PushMatrix();
-		modelStack.Rotate(moveleftleg, 1, 0, 0);
-		modelStack.Translate(0, 0, -10);
-		modelStack.Translate(0, 0, 10);
-		RenderMesh(meshList[GEO_RANGEROBOTLEFTLEG], true);
-		modelStack.PopMatrix();
-		modelStack.PushMatrix();
-		modelStack.Rotate(moverightleg, 1, 0, 0);
-		RenderMesh(meshList[GEO_RANGEROBOTRIGHTLEG], true);
-		modelStack.PopMatrix();
-		modelStack.PopMatrix();
-	}
+	
 }
 void SP2_Scene::GameState()
 {
@@ -964,137 +885,12 @@ void SP2_Scene::RenderShip()
 	}
 }
 
-void SP2_Scene::RobotAnimation(double dt)
-{
-	//left arm
-	if (leftarmrotate == true)
-	{
-		rotatelefthand -= (float)(5 * dt);
-	}
-	else if (leftarmrotate == false)
-	{
-		rotatelefthand += (float)(5 * dt);
-	}
-	if (rotatelefthand <= leftarmrotatelimit)
-	{
-		leftarmrotate = false;
-	}
-	else if (rotatelefthand >= -leftarmrotatelimit)
-	{
-		leftarmrotate = true;
-	}
-
-	//right arm
-	if (rightarmrotate == true)
-	{
-		rotaterighthand += (float)(5 * dt);
-	}
-	else if (rightarmrotate == false)
-	{
-		rotaterighthand -= (float)(5 * dt);
-	}
-	if (rotaterighthand <= rightarmrotatelimit)
-	{
-		rightarmrotate = true;
-	}
-	else if (rotaterighthand >= -rightarmrotatelimit)
-	{
-		rightarmrotate = false;
-	}
-	//left leg
-	if (leftleg == true)
-	{
-		moveleftleg -= (float)(10 * dt);
-	}
-	else if (leftleg == false)
-	{
-		moveleftleg += (float)(10 * dt);
-	}
-	if (moveleftleg >= leftleglimit)
-	{
-		leftleg = true;
-	}
-	else if (moveleftleg <= -leftleglimit)
-	{
-		leftleg = false;
-	}
-
-	//right leg
-	if (rightleg == true)
-	{
-		moverightleg += (float)(10 * dt);
-	}
-	else if (rightleg == false)
-	{
-		moverightleg -= (float)(10 * dt);
-	}
-	if (moverightleg >= rightleglimit)
-	{
-		rightleg = false;
-	}
-	else if (moverightleg <= -rightleglimit)
-	{
-		rightleg = true;
-	}
-	//walking
-	if (walk == true)
-	{
-		moverobot += (float)(10 * dt);
-		if (moverobot > 120)
-		{
-			walk = false;
-		}
-	}
-	if (walk == false)
-	{
-		leftarmrotatelimit = -3;
-		rightarmrotatelimit = -3;
-	}
-
-	//if (Robot::RobotHP == 0)
-	//{
-	//	die = true;
-	//	curRobotCount--;
-	//}
-	if (die == true)
-	{
-		collapse += (float)(15 * dt);
-		if (collapse > 85)
-		{
-			die = false;
-			collapse -= (float)(15 * dt);
-		}
-	}
-
-	//droid repair animation
-	if (repairgate == true)
-	{
-		droidrepair = true;
-	}
-	if (droidrepair == true)
-	{
-		droidrepairgate += (float)(5 * dt);
-	}
-	else if (droidrepair == false)
-	{
-		droidrepairgate -= (float)(5 * dt);
-	}
-	if (droidrepairgate >= droidlimit)
-	{
-		droidrepair = false;
-	}
-	else if (droidrepairgate <= -droidlimit)
-	{
-		droidrepair = true;
-	}
-}
-
 void SP2_Scene::Update(double dt)
 {
 	camera.Update(dt);
 	constRotation += (float)(10 * pause * dt);
 	constTranslation += (float)(10 * pause  * dt);
-	RobotAnimation(dt);
+	//RobotAnimation(dt);
 	//Lerping Rotation
 	if ((rLimiter == true))
 	{
@@ -1405,6 +1201,7 @@ void SP2_Scene::Update(double dt)
 		for (std::list<Robot>::iterator iter = RobotManager.RobotList.begin(); iter != RobotManager.RobotList.end(); ++iter)
 		{
 			(*iter).BoundsCheck(WepSys);
+			
 		}
 		RobotManager.CleanUp();
 		WepSys.CleanUp();
@@ -1917,7 +1714,6 @@ void SP2_Scene::Render(double dt)
 		modelStack.PopMatrix();
 
 		readtextfile();
-		//GameState();
 
 		//Render In-Hand Weapon
 		modelStack.PushMatrix();
@@ -1932,7 +1728,66 @@ void SP2_Scene::Render(double dt)
 			RenderMesh(meshList[GEO_BULLET], false);
 			modelStack.PopMatrix();
 		}
+		for (auto i : RobotManager.RobotList)
+		{
+			i.RobotAnimation(dt);
+			modelStack.PushMatrix();
+			modelStack.Translate(i.Position().x, i.Position().y+ 0.5, i.Position().z);
+			modelStack.Rotate(i.rotateToTarget, 0, 1, 0);
+			//HP
+			modelStack.PushMatrix();
+			modelStack.Translate(0, 7, 0);
+			modelStack.Rotate(constRotation * 2, 0, 1, 0);
+			modelStack.PushMatrix();
+			if (i.GetHealth() > 20)
+			{
+				modelStack.Scale(i.GetHealth() / 80, i.GetHealth() / 80, i.GetHealth() / 80);
+				RenderMesh(meshList[GEO_ROBOTHEALTH], false);
+			}
+			modelStack.PopMatrix();
+			modelStack.PushMatrix();
+			modelStack.Scale(i.GetHealth() / 100, i.GetHealth() / 100, i.GetHealth() / 100);
+			RenderMesh(meshList[GEO_ROBOTHEALTH2], false);
+			modelStack.PopMatrix();
+			modelStack.PopMatrix();
 
+			RenderMesh(meshList[GEO_RANGEROBOTBODY], true);
+			modelStack.PushMatrix();
+			modelStack.Rotate(i.rotatelefthand, 1, 0, 0);
+			modelStack.Translate(0, 0, -10);
+			modelStack.Translate(0, 0, 10);
+			modelStack.Translate(0.3, 0, 0);
+			RenderMesh(meshList[GEO_RANGEROBOTLEFTUPPERARM], true);
+			modelStack.PushMatrix();
+			modelStack.Translate(0, 0, i.leftarmattack);
+			modelStack.Rotate(i.rotatelefthand, 1, 0, 0);
+			RenderMesh(meshList[GEO_RANGEROBOTLEFTLOWERARM], true);
+			modelStack.PopMatrix();
+			modelStack.PopMatrix();
+			modelStack.PushMatrix();
+			modelStack.Rotate(i.rotaterighthand, 1, 0, 0);
+			modelStack.Translate(0, 0, -10);
+			modelStack.Translate(0, 0, 10);
+			modelStack.Translate(-0.3, 0, 0);
+			RenderMesh(meshList[GEO_RANGEROBOTRIGHTUPPERARM], true);
+			modelStack.PushMatrix();
+			modelStack.Translate(0, 0, i.rightarmattack);
+			modelStack.Rotate(i.rotaterighthand, 1, 0, 0);
+			RenderMesh(meshList[GEO_RANGEROBOTRIGHTLOWERARM], true);
+			modelStack.PopMatrix();
+			modelStack.PopMatrix();
+			modelStack.PushMatrix();
+			modelStack.Rotate(i.moveleftleg, 1, 0, 0);
+			modelStack.Translate(0, 0, -10);
+			modelStack.Translate(0, 0, 10);
+			RenderMesh(meshList[GEO_RANGEROBOTLEFTLEG], true);
+			modelStack.PopMatrix();
+			modelStack.PushMatrix();
+			modelStack.Rotate(i.moverightleg, 1, 0, 0);
+			RenderMesh(meshList[GEO_RANGEROBOTRIGHTLEG], true);
+			modelStack.PopMatrix();
+			modelStack.PopMatrix();
+		}
 		//for (auto i : numrobots.RobotList)
 		//{
 		//	//range robot

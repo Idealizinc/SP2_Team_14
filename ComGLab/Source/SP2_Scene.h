@@ -203,30 +203,6 @@ public:
 	//unsigned int curMeteorCount;
 	//robot animation
 	bool walk;
-	float moverobot;
-	float rotatelefthand;
-	float rotaterighthand;
-	float leftarmrotatelimit;
-	float rightarmrotatelimit;
-	bool leftarmrotate;
-	bool rightarmrotate;
-
-	float leftleglimit;
-	float rightleglimit;
-	float moveleftleg;
-	float moverightleg;
-	bool leftleg;
-	bool rightleg;
-
-	bool robotleftattack;
-	bool robotrightattack;
-	float rightarmattack;
-	float rightarmattacklimit;
-	float leftarmattack;
-	float leftarmattacklimit;
-
-	float collapse;
-	bool die;
 
 	bool droidrepair;
 	float droidrepairgate;
@@ -342,7 +318,7 @@ private:
 	void initBounds();
 	void RenderGate(bool render = false);
 	void RenderUI();
-	void RobotAnimation(double dt);
+	//void RobotAnimation(double dt);
 	void RenderShip();
 	void RenderSpaceMap();
 	void RenderBase();
