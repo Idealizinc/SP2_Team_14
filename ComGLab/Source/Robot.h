@@ -15,7 +15,7 @@ public:
 	{
 		Melee = 0, Ranged, Mixed,
 	};
-	Robot(int RobotType, Vector3 SpawnPos);
+	Robot(int RobotType, float Rotation, Vector3 SpawnPos);
 	~Robot();
 	Vector3 Move();
 	void FindNewTarget();
@@ -24,11 +24,14 @@ public:
 	float GetHealth();
 	Boundary BoundingBox;
 	void SetHealth(float newHP);
-	void findAngle();
 	float rotateToTarget;
 	void RobotAnimation(double dt);
 	void CalcBounds();
+	bool isMothership = false;
+	void SetShipTarget(Vector3 newTarget);
 
+	//Animation
+	float Rotation;
 	float rotatelefthand = 0;
 	float rotaterighthand = 0;
 	float leftarmrotatelimit = -1;
@@ -53,6 +56,7 @@ public:
 	float collapse = 0;
 	bool die = false;
 	bool deadanimationover = false;
+
 private:
 	Vector3 GetDirVec(Vector3 Target);
 	void SetStats(int Type);
@@ -60,7 +64,7 @@ private:
 	float Damage;
 	float Speed;
 	float Health;
-
+	int RobotTypeVal = 0;
 	
 
 	Vector3 TargetPos = (0, 0, 0);

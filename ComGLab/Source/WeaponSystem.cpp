@@ -147,6 +147,41 @@ void WeaponSystem::SetStats(int wepVal)
 		Speed = 3;
 		MaxAmmo = 30;
 		break;
+	case 13: //upgraded damage sniper
+		ReloadTime = 2;
+		RateOfFire = 0.25;
+		Damage = 150;
+		Speed = 3;
+		MaxAmmo = 20;
+		break;
+	case 14: //downgraded capacity rifle
+		ReloadTime = 4;
+		RateOfFire = 0.2;
+		Damage = 6;
+		Speed = 4;
+		MaxAmmo = 40;
+		break;
+	case 15: //downgraded speed shotgun
+		ReloadTime = 2;
+		RateOfFire = 0.2;
+		Damage = 5;
+		Speed = 3;
+		MaxAmmo = 35;
+		break;
+	case 16: //upgraded normal rifle
+		ReloadTime = 3;
+		RateOfFire = 0.1;
+		Damage = 15;
+		Speed = 4;
+		MaxAmmo = 40;
+		break;
+	case 17: //upgraded damage shotgun
+		ReloadTime = 3;
+		RateOfFire = 0.1;
+		Damage = 15;
+		Speed = 3;
+		MaxAmmo = 30;
+		break;
 	default:
 		ReloadTime = 0;
 		RateOfFire = 0;

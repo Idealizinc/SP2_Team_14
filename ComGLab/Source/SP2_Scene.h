@@ -57,7 +57,11 @@ class SP2_Scene : public Scene
 
 		//Ships
 		GEO_PLAYERSHIP,
-		GEO_MOTHERSHIP,
+		GEO_MOTHERSHIP_TOP,
+		GEO_MOTHERSHIP_UPPERBODY,
+		GEO_MOTHERSHIP_LOWERBODY,
+		GEO_MOTHERSHIP_BOTTOM,
+		GEO_MOTHERSHIP_TAIL,
 
 		//drone
 		GEO_DRONEBODY,
@@ -195,8 +199,9 @@ public:
 	float rotationalLimit;
 	float translationLimit;
 	float scalingLimit;
-	float shipFallingX;
-	float shipFallingY;
+	float ShipX;
+	float ShipY;
+	float ShipRot;
 	unsigned short repairShipPhase;
 
 	unsigned int curRobotCount;
@@ -213,7 +218,11 @@ public:
 	float moveMshipUp;
 	float rotateMship;
 	bool floatRocks;
-	float moveRocks; //for space map wave 6float droidrepairgate;
+	float moveRocks; //for space map wave 6
+
+	//mothership defeated animation
+	bool defeat;
+	float explosion;
 
 	bool rLimiter;
 	bool toggleLimiters;
@@ -229,7 +238,11 @@ public:
 	bool sniper, rifle;
 	//unsigned short curRobotCount;
 	//unsigned int pause;
-
+	bool SpecialSniperPickedUp;
+	bool SpecialRiflePickedUp;
+	bool SpecialShotgunPickedUp;
+	bool SpecialRifle2PickedUp;
+	bool SpecialShotgun2PickedUp;
 	unsigned short skyboxID = 0;
 
 	Position lightDefaultPos;
@@ -239,6 +252,18 @@ public:
 	Camera3 camera;
 
 	MS modelStack, viewStack, projectionStack;
+
+	//Mothership Stuff
+	WeaponSystem EnemyWepSys;
+	RobotManager MothershipHandler;
+	bool ShipSpawned = false;
+	Vector3 ShipPos1 = Vector3(0, 10, 650);
+	Vector3 ShipPos2 = Vector3(-60, 30, 650);
+	Vector3 ShipPos3 = Vector3(60, 30, 650);
+	float ChoiceTimer = 0;
+	float ShotTimer = 0;
+
+	//End
 
 	WeaponSystem WepSys;
 	RobotManager RobotManager;
@@ -354,6 +379,7 @@ private:
 	bool weaponinterface;
 	bool repairgate;
 	bool SpawnedRobots = false;
+	bool PlayBGM = false;
 
 	//Light Stuff
 	Vector3 TownLightPosition;
@@ -361,6 +387,7 @@ private:
 
 	// Base Stuff
 	Vector3 basePosition;
+
 };
 
 

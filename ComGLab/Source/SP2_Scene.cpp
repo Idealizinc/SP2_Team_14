@@ -17,11 +17,13 @@ using std::endl;
 
 ISoundEngine* engine;
 
-const std::string SoundName[] = {
-	"Sounds//Spacebattle.mp3"
-};
+//const std::string SoundName[] = {
+//	"Sounds//PhaserShoot.ogg",
+//	"Sounds//Gnosemite.ogg"
+//};
 
-ISound* Song;
+ISound* ShootSound;
+ISound* WaveBGM;
 
 int pause = 1;
 
@@ -55,8 +57,8 @@ void SP2_Scene::Init()
 {
 	/*engine = createIrrKlangDevice();
 	engine->addSoundSourceFromFile(SoundName[0].c_str());
-	Song = engine->play2D(SoundName[0].c_str(), true, false, true);
-	Song->setVolume(0.25);*/
+	engine->addSoundSourceFromFile(SoundName[1].c_str());*/
+
 	// Init VBO here
 	glClearColor(0.15f, 0.2f, 0.35f, 0.0f);
 
@@ -81,10 +83,12 @@ void SP2_Scene::Init()
 	lightOff = false;
 	basehp = 100;
 	gatehp = 10;
-	bosshp = 100;
+	bosshp = 0;
+	defeat = false;
+	explosion = 0;
 	playerhp = 100;
 	ammo = 100;
-	wave = 1;
+	wave = 7;
 	state = 0;
 	timer = 0;
 	weaponValue = 0;
@@ -94,8 +98,9 @@ void SP2_Scene::Init()
 	buttonValue = 0;
 	//droidrepair = false;
 	droidrepairgate = 0;
-	shipFallingX = -20;
-	shipFallingY = 150;
+	ShipX = -20;
+	ShipY = 150;
+	ShipRot = 0;
 	//curMeteorCount = 1;
 	//openleftgate = false;
 	//openrightgate = false;
@@ -107,6 +112,11 @@ void SP2_Scene::Init()
 	moveRocks = 0;
 	rotateMship = 0;
 	floatRocks = true;
+	SpecialSniperPickedUp = false;
+	SpecialRiflePickedUp = false;
+	SpecialRifle2PickedUp = false;
+	SpecialShotgunPickedUp = false;
+	SpecialShotgun2PickedUp = false;
 
 	//robotleftattack = false;
 	//robotrightattack = false;
@@ -276,8 +286,17 @@ void SP2_Scene::InitMapModels()
 	//meshList[GEO_PLAYERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//PlayerShip.obj");
 	//meshList[GEO_PLAYERSHIP]->textureID = LoadTGA("Image//Tex_PlayerShip.tga");
 
-	meshList[GEO_MOTHERSHIP] = MeshBuilder::GenerateOBJ("test", "OBJ//Mothership.obj");
-	meshList[GEO_MOTHERSHIP]->textureID = LoadTGA("Image//Tex_Mothership.tga");
+	meshList[GEO_MOTHERSHIP_TOP] = MeshBuilder::GenerateOBJ("test", "OBJ//Mothership_top.obj");
+	GLuint texMS = LoadTGA("Image//Tex_Mothership.tga");
+	meshList[GEO_MOTHERSHIP_TOP]->textureID = texMS;
+	meshList[GEO_MOTHERSHIP_UPPERBODY] = MeshBuilder::GenerateOBJ("test", "OBJ//Mothership_upperbody.obj");
+	meshList[GEO_MOTHERSHIP_UPPERBODY]->textureID = texMS;
+	meshList[GEO_MOTHERSHIP_LOWERBODY] = MeshBuilder::GenerateOBJ("test", "OBJ//Mothership_lowerbody.obj");
+	meshList[GEO_MOTHERSHIP_LOWERBODY]->textureID = texMS;
+	meshList[GEO_MOTHERSHIP_BOTTOM] = MeshBuilder::GenerateOBJ("test", "OBJ//Mothership_bottom.obj");
+	meshList[GEO_MOTHERSHIP_BOTTOM]->textureID = texMS;
+	meshList[GEO_MOTHERSHIP_TAIL] = MeshBuilder::GenerateOBJ("test", "OBJ//Mothership_tail.obj");
+	meshList[GEO_MOTHERSHIP_TAIL]->textureID = texMS;
 
 	/*meshList[GEO_COMPUTER] = MeshBuilder::GenerateOBJ("test", "OBJ//computer.obj");
 	meshList[GEO_COMPUTER]->textureID = LoadTGA("Image//computer.tga");*/
@@ -461,16 +480,27 @@ void SP2_Scene::RenderWeaponInHand(unsigned short wepVal, float size, float x, f
 	viewStack.LoadIdentity(); //No need camera for ortho mode
 	modelStack.PushMatrix();
 	modelStack.LoadIdentity(); //Reset modelStack
-	modelStack.Translate(140, 4, -10);
-	modelStack.Rotate(200, 0, 1, 0);
-	modelStack.Rotate(10, -1, 0, 0);
-	modelStack.Scale(20, 20, 20);
+	if (wepVal >= 0 && wepVal <= 17)
+	{
+		modelStack.Translate(140, 4, -10);
+		modelStack.Rotate(200, 0, 1, 0);
+		modelStack.Rotate(10, -1, 0, 0);
+		modelStack.Scale(20, 20, 20);
+	}
+	else if (wepVal == 18)
+	{
+		modelStack.Translate(140, 4, -10);
+		modelStack.Rotate(200, 0, 1, 0);
+		modelStack.Rotate(10, -1, 0, 0);
+		modelStack.Scale(20, 20, 20);
+		modelStack.Translate(0, -4, 0);
+	}
 	if (wepVal == 0)
 	{
 		meshList[GEO_BULLET] = MeshBuilder::GenerateSphere("Bullet", Color(1, 1, 1), 8, 8);
 		RenderMesh(meshList[GEO_SMG], true);
 	}
-	else if (wepVal == 1)
+	else if (wepVal == 1 || wepVal == 16)
 	{
 		meshList[GEO_BULLET] = MeshBuilder::GenerateSphere("Bullet", Color(1, 1, 1), 8, 8);
 		meshList[GEO_RIFLE]->textureID = Normal_Rifle;
@@ -494,19 +524,19 @@ void SP2_Scene::RenderWeaponInHand(unsigned short wepVal, float size, float x, f
 		meshList[GEO_RIFLE]->textureID = Damage_Rifle;
 		RenderMesh(meshList[GEO_RIFLE], true);
 	}
-	else if (wepVal == 5)
+	else if (wepVal == 5 || wepVal == 13)
 	{
 		meshList[GEO_BULLET] = MeshBuilder::GenerateSphere("Bullet", Color(1, 0, 0), 8, 8);
 		meshList[GEO_SNIPER]->textureID = Damage_Sniper;
 		RenderMesh(meshList[GEO_SNIPER], true);
 	}
-	else if (wepVal == 6)
+	else if (wepVal == 6 || wepVal == 17)
 	{
 		meshList[GEO_BULLET] = MeshBuilder::GenerateSphere("Bullet", Color(1, 0, 0), 8, 8);
 		meshList[GEO_SHOTGUN]->textureID = Damage_Shotgun;
 		RenderMesh(meshList[GEO_SHOTGUN], true);
 	}
-	else if (wepVal == 7)
+	else if (wepVal == 7 || wepVal == 14)
 	{
 		meshList[GEO_BULLET] = MeshBuilder::GenerateSphere("Bullet", Color(0, 0, 1), 8, 8);
 		meshList[GEO_RIFLE]->textureID = Capacity_Rifle;
@@ -536,11 +566,17 @@ void SP2_Scene::RenderWeaponInHand(unsigned short wepVal, float size, float x, f
 		meshList[GEO_SNIPER]->textureID = Fast_Sniper;
 		RenderMesh(meshList[GEO_SNIPER], true);
 	}
-	else if (wepVal == 12)
+	else if (wepVal == 12 || wepVal == 15)
 	{
 		meshList[GEO_BULLET] = MeshBuilder::GenerateSphere("Bullet", Color(0, 1, 0), 8, 8);
 		meshList[GEO_SHOTGUN]->textureID = Fast_Shotgun;
 		RenderMesh(meshList[GEO_SHOTGUN], true);
+	}
+	else if (wepVal == 18)
+	{
+		//meshList[GEO_BULLET] = MeshBuilder::GenerateSphere("Bullet", Color(0, 1, 0), 8, 8);
+		//meshList[GEO_SHOTGUN]->textureID = Fast_Shotgun;
+		RenderMesh(meshList[GEO_CRYSTAL], true);
 	}
 
 	projectionStack.PopMatrix();
@@ -678,52 +714,10 @@ void SP2_Scene::RenderBase()
 	modelStack.PopMatrix();
 	//RB End
 }
+
 void SP2_Scene::RenderRobots()
 {
-	//for (auto i : RobotManager.RobotList)
-	//{
-	//	modelStack.PushMatrix();
-	//	//i.BoundsCheck(WepSys.BulletList);
-	//	modelStack.Translate(i.Position().x, i.Position().y + 0.5, i.Position().z);
-	//	modelStack.Rotate(i.rotateToTarget, 0, 1, 0);
-	//	modelStack.Rotate(-45, 0, 1, 0);
-	//	RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
-	//	modelStack.PushMatrix();
-	//	modelStack.Rotate(rotatelefthand, 1, 0, 0);
-	//	modelStack.Translate(0, 0, -10);
-	//	modelStack.Translate(0, 0, 10);
-	//	modelStack.Translate(0.3, 0, 0);
-	//	RenderMesh(meshList[GEO_MELEEROBOTLEFTUPPERARM], true);
-	//	modelStack.PushMatrix();
-	//	modelStack.Translate(0, 0, leftarmattack);
-	//	modelStack.Rotate(rotatelefthand, 1, 0, 0);
-	//	RenderMesh(meshList[GEO_MELEEROBOTLEFTLOWERARM], true);
-	//	modelStack.PopMatrix();
-	//	modelStack.PopMatrix();
-	//	modelStack.PushMatrix();
-	//	modelStack.Rotate(rotaterighthand, 1, 0, 0);
-	//	modelStack.Translate(0, 0, -10);
-	//	modelStack.Translate(0, 0, 10);
-	//	modelStack.Translate(-0.3, 0, 0);
-	//	RenderMesh(meshList[GEO_MELEEROBOTRIGHTUPPERARM], true);
-	//	modelStack.PushMatrix();
-	//	modelStack.Translate(0, 0, rightarmattack);
-	//	modelStack.Rotate(rotaterighthand, 1, 0, 0);
-	//	RenderMesh(meshList[GEO_MELEEROBOTRIGHTLOWERARM], true);
-	//	modelStack.PopMatrix();
-	//	modelStack.PopMatrix();
-	//	modelStack.PushMatrix();
-	//	modelStack.Rotate(moveleftleg, 1, 0, 0);
-	//	modelStack.Translate(0, 0, -10);
-	//	modelStack.Translate(0, 0, 10);
-	//	RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
-	//	modelStack.PopMatrix();
-	//	modelStack.PushMatrix();
-	//	modelStack.Rotate(moverightleg, 1, 0, 0);
-	//	RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
-	//	modelStack.PopMatrix();
-	//	modelStack.PopMatrix();
-	//}
+	
 }
 void SP2_Scene::GameState()
 {
@@ -743,7 +737,7 @@ void SP2_Scene::GameState()
 	{
 		for (int i = 0; i < 10; i++)
 		{
-			RobotManager.RobotList.push_back(Robot(0, Vector3(spawnPointN.x + (rand() % 80 - 39), spawnPointN.y, spawnPointN.z + (rand() % 80 - 39))));
+			RobotManager.RobotList.push_back(Robot(0, 0, Vector3(spawnPointN.x + (rand() % 80 - 39), spawnPointN.y, spawnPointN.z + (rand() % 80 - 39))));
 		}
 		SpawnedRobots = true;
 	}
@@ -751,7 +745,7 @@ void SP2_Scene::GameState()
 	{
 		for (int i = 0; i < 10; i++)
 		{
-			RobotManager.RobotList.push_back(Robot(1, Vector3(spawnPointS.x + (rand() % 80 - 39), spawnPointS.y, spawnPointS.z + (rand() % 80 - 39))));
+			RobotManager.RobotList.push_back(Robot(1, 180, Vector3(spawnPointS.x + (rand() % 80 - 39), spawnPointS.y, spawnPointS.z + (rand() % 80 - 39))));
 		}
 		SpawnedRobots = true;
 	}
@@ -759,7 +753,7 @@ void SP2_Scene::GameState()
 	{
 		for (int i = 0; i < 10; i++)
 		{
-			RobotManager.RobotList.push_back(Robot(2, Vector3(spawnPointE.x + (rand() % 80 - 39), spawnPointE.y, spawnPointE.z + (rand() % 80 - 39))));
+			RobotManager.RobotList.push_back(Robot(2, 270, Vector3(spawnPointE.x + (rand() % 80 - 39), spawnPointE.y, spawnPointE.z + (rand() % 80 - 39))));
 		}
 		SpawnedRobots = true;
 	}
@@ -767,27 +761,27 @@ void SP2_Scene::GameState()
 	{
 		for (int i = 0; i < 10; i++)
 		{
-			RobotManager.RobotList.push_back(Robot(2, Vector3(spawnPointW.x + (rand() % 80 - 39), spawnPointW.y, spawnPointW.z + (rand() % 80 - 39))));
+			RobotManager.RobotList.push_back(Robot(2, 90, Vector3(spawnPointW.x + (rand() % 80 - 39), spawnPointW.y, spawnPointW.z + (rand() % 80 - 39))));
 		}
 		SpawnedRobots = true;
 	}
 	else if (wave == 5 && !weaponinterface && !SpawnedRobots)
 	{
-		for (int i = 0; i < 10; i++)
+		for (int i = 0; i < 3; i++)
 		{
-			RobotManager.RobotList.push_back(Robot(0, Vector3(spawnPointN.x + (rand() % 80 - 39), spawnPointN.y, spawnPointN.z + (rand() % 80 - 39))));
+			RobotManager.RobotList.push_back(Robot(2, 0, Vector3(spawnPointN.x + (rand() % 80 - 39), spawnPointN.y, spawnPointN.z + (rand() % 80 - 39))));
 		}
-		for (int i = 0; i < 10; i++)
+		for (int i = 0; i < 3; i++)
 		{
-			RobotManager.RobotList.push_back(Robot(1, Vector3(spawnPointS.x + (rand() % 80 - 39), spawnPointS.y, spawnPointS.z + (rand() % 80 - 39))));
+			RobotManager.RobotList.push_back(Robot(2, 180, Vector3(spawnPointS.x + (rand() % 80 - 39), spawnPointS.y, spawnPointS.z + (rand() % 80 - 39))));
 		}
-		for (int i = 0; i < 10; i++)
+		for (int i = 0; i < 3; i++)
 		{
-			RobotManager.RobotList.push_back(Robot(2, Vector3(spawnPointE.x + (rand() % 80 - 39), spawnPointE.y, spawnPointE.z + (rand() % 80 - 39))));
+			RobotManager.RobotList.push_back(Robot(2, 270, Vector3(spawnPointE.x + (rand() % 80 - 39), spawnPointE.y, spawnPointE.z + (rand() % 80 - 39))));
 		}
-		for (int i = 0; i < 10; i++)
+		for (int i = 0; i < 3; i++)
 		{
-			RobotManager.RobotList.push_back(Robot(2, Vector3(spawnPointW.x + (rand() % 80 - 39), spawnPointW.y, spawnPointW.z + (rand() % 80 - 39))));
+			RobotManager.RobotList.push_back(Robot(2, 90, Vector3(spawnPointW.x + (rand() % 80 - 39), spawnPointW.y, spawnPointW.z + (rand() % 80 - 39))));
 		}
 		SpawnedRobots = true;
 	}
@@ -811,7 +805,14 @@ void SP2_Scene::GameState()
 	{
 		weaponinterface = true;
 	}
-	else weaponinterface = false;
+	else
+	{
+		weaponinterface = false;
+	}
+	if (wave == 6 && repairShipPhase != 2 && repairShipPhase != 3 && repairShipPhase != 4)
+	{
+		repairShipPhase = 1;
+	}
 	/*else if (curMeteorCount <= 0)
 	{
 	weaponinterface = true;
@@ -823,9 +824,31 @@ void SP2_Scene::GameState()
 		RenderGate();
 		RenderLevel();
 		RenderShip();
+		camera.spaceModeOn = false;
+		if (!PlayBGM)
+		{
+			//WaveBGM = engine->play2D(SoundName[1].c_str(), true, false, true);
+			//WaveBGM->setVolume(0.2);
+			PlayBGM = true;
+		}
+		
 	}
 	else if (wave == 7)
 	{
+		if (ShipSpawned == false)
+		{
+			weaponValue = 14;
+			MothershipHandler.RobotList.push_back(Robot(3, 0, Vector3(0, 10, 600)));
+			MothershipHandler.RobotList.front().isMothership = true;
+			ShipSpawned = true;
+			camera.maxCameraXrotation = 0;
+			camera.minCameraXrotation = -15;
+			camera.maxCameraYrotation = 30;
+			camera.minCameraYrotation = -30;
+			camera.spaceModeOn = true;
+			MothershipHandler.RobotList.front().SetShipTarget(ShipPos1);
+			camera.baseWalkSpeed = 3;
+		}
 		RenderSpaceMap();
 	}
 }
@@ -836,9 +859,33 @@ void SP2_Scene::RenderLevel()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1", Color(1, 0, 0), 3, 72.5, 87);
 
-		if (curRobotCount == 0)
+		if (RobotManager.CurrentRobotCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 1 clear", Color(1, 0, 0), 3, 72.5, 45);
+		}
+		if (SpecialSniperPickedUp == false)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(50, 4.5, 50);
+			modelStack.Rotate(90, 0, 0, 1);
+			modelStack.Translate(0, 0, -50);
+			modelStack.Rotate(constRotation, 0, 0, 1);
+			modelStack.Translate(0, 0, 50);
+			meshList[GEO_SNIPER]->textureID = Damage_Sniper;
+			RenderMesh(meshList[GEO_SNIPER], true);
+			modelStack.PopMatrix();
+		}
+		if (camera.sniperCheck == true && SpecialSniperPickedUp == false)
+		{
+			RenderImageOnScreen(UI_BG, 50, 2.75, 77.5, 25);
+			RenderTextOnScreen(meshList[GEO_TEXT], "Press <C> to pick up special weapon", Color(0.000f, 0.808f, 0.820f), 2.45, 55, 25);
+		}
+		if (SpecialSniperPickedUp == true)
+		{
+			weaponValue = 13;
+			modelStack.PushMatrix();
+			RenderWeaponInHand(weaponValue, 5, 1, 1);
+			modelStack.PopMatrix();
 		}
 	}
 
@@ -846,62 +893,177 @@ void SP2_Scene::RenderLevel()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2", Color(1, 0, 0), 3, 72.5, 87);
 
-		if (curRobotCount == 0)
+		if (RobotManager.CurrentRobotCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 2 clear", Color(1, 0, 0), 3, 72.5, 45);
+		}
+		if (SpecialRiflePickedUp == false)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(-50, 4.5, -30);
+			modelStack.Rotate(90, 0, 0, 1);
+			modelStack.Translate(0, 0, -30);
+			modelStack.Rotate(constRotation, 0, 0, 1);
+			modelStack.Translate(0, 0, 30);
+			meshList[GEO_RIFLE]->textureID = Capacity_Rifle;
+			RenderMesh(meshList[GEO_RIFLE], true);
+			modelStack.PopMatrix();
+		}
+		if (camera.rifleCheck == true && SpecialRiflePickedUp == false)
+		{
+			RenderImageOnScreen(UI_BG, 50, 2.75, 77.5, 25);
+			RenderTextOnScreen(meshList[GEO_TEXT], "Press <C> to pick up special weapon", Color(0.080f, 0.808f, 0.0f), 2.45, 55, 25);
+		}
+		if (SpecialRiflePickedUp == true)
+		{
+			weaponValue = 14;
+			modelStack.PushMatrix();
+			RenderWeaponInHand(weaponValue, 5, 1, 1);
+			modelStack.PopMatrix();
 		}
 	}
 	if (wave == 3)
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3", Color(1, 0, 0), 3, 72.5, 87);
 
-		if (curRobotCount == 0)
+		if (RobotManager.CurrentRobotCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 3 clear", Color(1, 0, 0), 3, 72.5, 45);
+		}
+		if (SpecialShotgunPickedUp == false)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(20, 4.5, 15);
+			modelStack.Rotate(90, 0, 0, 1);
+			modelStack.Translate(0, 0, -30);
+			modelStack.Rotate(constRotation, 0, 0, 1);
+			modelStack.Translate(0, 0, 30);
+			meshList[GEO_SHOTGUN]->textureID = Fast_Shotgun;
+			RenderMesh(meshList[GEO_SHOTGUN], true);
+			modelStack.PopMatrix();
+		}
+		if (camera.shotgunCheck == true && SpecialShotgunPickedUp == false)
+		{
+			RenderImageOnScreen(UI_BG, 50, 2.75, 77.5, 25);
+			RenderTextOnScreen(meshList[GEO_TEXT], "Press <C> to pick up special weapon", Color(0.0f, 0.0f, 0.820f), 2.45, 55, 25);
+		}
+		if (SpecialShotgunPickedUp == true)
+		{
+			weaponValue = 15;
+			modelStack.PushMatrix();
+			RenderWeaponInHand(weaponValue, 5, 1, 1);
+			modelStack.PopMatrix();
 		}
 	}
 	if (wave == 4)
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4", Color(1, 0, 0), 3, 72.5, 87);
 
-		if (curRobotCount == 0)
+		if (RobotManager.CurrentRobotCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 4 clear", Color(1, 0, 0), 3, 72.5, 45);
+		}
+		if (SpecialRifle2PickedUp == false)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(-30, 4.5, -20);
+			modelStack.Rotate(90, 0, 0, 1);
+			modelStack.Translate(0, 0, -30);
+			modelStack.Rotate(constRotation, 0, 0, 1);
+			modelStack.Translate(0, 0, 30);
+			meshList[GEO_RIFLE]->textureID = Normal_Rifle;
+			RenderMesh(meshList[GEO_RIFLE], true);
+			modelStack.PopMatrix();
+		}
+		if (camera.rifle2Check == true && SpecialRifle2PickedUp == false)
+		{
+			RenderImageOnScreen(UI_BG, 50, 2.75, 77.5, 25);
+			RenderTextOnScreen(meshList[GEO_TEXT], "Press <C> to pick up special weapon", Color(0.8f, 0.0f, 0.0f), 2.45, 55, 25);
+		}
+		if (SpecialRifle2PickedUp == true)
+		{
+			weaponValue = 16;
+			modelStack.PushMatrix();
+			RenderWeaponInHand(weaponValue, 5, 1, 1);
+			modelStack.PopMatrix();
 		}
 	}
 	if (wave == 5)
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5", Color(1, 0, 0), 3, 72.5, 87);
 
-		if (curRobotCount == 0)
+		if (RobotManager.CurrentRobotCount == 0)
 		{
 			RenderTextOnScreen(meshList[GEO_TEXT], "Wave 5 clear", Color(1, 0, 0), 3, 72.5, 45);
 			repairShipPhase = true;
 		}
-	}
-	if (wave == 6)
-	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Final Stage", Color(1, 0, 0), 3, 72.5, 87);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Boss HP: " + std::to_string(bosshp), Color(0, 0.5, 0), 3, 72.5, 81);
-		if (bosshp <= 0)
+		if (SpecialShotgun2PickedUp == false)
 		{
-			bosshp = 0;
-			RenderImageOnScreen(UI_BG, 38, 5, 83, 76);
-			RenderTextOnScreen(meshList[GEO_TEXT], "Victory Achieved", Color(0.000f, 0.788f, 0.820f), 4, 67.5, 76);
-			//game won, go back to start screen
+			modelStack.PushMatrix();
+			modelStack.Translate(10, 4.5, -50);
+			modelStack.Rotate(90, 0, 0, 1);
+			modelStack.Translate(0, 0, -30);
+			modelStack.Rotate(constRotation, 0, 0, 1);
+			modelStack.Translate(0, 0, 30);
+			meshList[GEO_SHOTGUN]->textureID = Damage_Shotgun;
+			RenderMesh(meshList[GEO_SHOTGUN], true);
+			modelStack.PopMatrix();
+		}
+		if (camera.shotgun2Check == true && SpecialShotgun2PickedUp == false)
+		{
+			RenderImageOnScreen(UI_BG, 50, 2.75, 77.5, 25);
+			RenderTextOnScreen(meshList[GEO_TEXT], "Press <C> to pick up special weapon", Color(0.8f, 0.0f, 0.0f), 2.45, 55, 25);
+		}
+		if (SpecialShotgun2PickedUp == true)
+		{
+			weaponValue = 17;
+			modelStack.PushMatrix();
+			RenderWeaponInHand(weaponValue, 5, 1, 1);
+			modelStack.PopMatrix();
 		}
 	}
 }
 void SP2_Scene::RenderSpaceMap()
 {
+	for (auto i : MothershipHandler.RobotList)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(i.Position().x, i.Position().y, i.Position().z);
+			modelStack.PushMatrix();
+			//modelStack.Translate(0, 10, 100);
+			//modelStack.Translate(0, moveMshipUp, 0);
+			modelStack.Scale(20, 20, 20);
+			RenderMesh(meshList[GEO_MOTHERSHIP_TOP], true);
+				modelStack.PushMatrix();
+				RenderMesh(meshList[GEO_MOTHERSHIP_UPPERBODY], true);
+				modelStack.PopMatrix();
+					modelStack.PushMatrix();
+					RenderMesh(meshList[GEO_MOTHERSHIP_LOWERBODY], true);
+					modelStack.PopMatrix();
+						modelStack.PushMatrix();
+						RenderMesh(meshList[GEO_MOTHERSHIP_BOTTOM], true);
+						modelStack.PopMatrix();
+							modelStack.PushMatrix();
+							RenderMesh(meshList[GEO_MOTHERSHIP_TAIL], true);
+							modelStack.PopMatrix();
+			modelStack.PopMatrix();
+		modelStack.PopMatrix();
+	}
+	for (auto i : EnemyWepSys.BulletList)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(i.Position().x, i.Position().y, i.Position().z);
+		modelStack.Scale(1, 1, 1);
+		RenderMesh(meshList[GEO_BULLET], false);
+		modelStack.PopMatrix();
+	}
 	modelStack.PushMatrix();
-	modelStack.Translate(0, 10, 50);
-	modelStack.Translate(0, moveMshipUp, 0);
-	modelStack.Scale(5, 5, 5);
-	RenderMesh(meshList[GEO_MOTHERSHIP], true);
+	modelStack.Translate(camera.getCameraPosition().x, camera.getCameraPosition().y - 3, camera.getCameraPosition().z + 10);
+	modelStack.Rotate(90, 0, -1, 0);
+	modelStack.Scale(1, 1, 1);
+	RenderMesh(meshList[GEO_PLAYERSHIP], false);
 	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
+	/*modelStack.PushMatrix();
 	int range = 5;
 	for (int detailLevel = 1; detailLevel <= range; detailLevel++)
 	{
@@ -924,21 +1086,20 @@ void SP2_Scene::RenderSpaceMap()
 			}
 		}
 	}
-	modelStack.PopMatrix();
+	modelStack.PopMatrix();*/
 }
 void SP2_Scene::RenderShip()
 {
 	if (repairShipPhase == 1 || repairShipPhase == 2)
 	{
 		modelStack.PushMatrix(); //Player ship
-		modelStack.Translate(shipFallingX, shipFallingY, 75);
+		modelStack.Translate(ShipX, ShipY, 75);
 		modelStack.Rotate(45, 1, 0, 1.75);
 		modelStack.Scale(4, 4, 4);
-		RenderMesh(meshList[GEO_AXES], false);
 		RenderMesh(meshList[GEO_PLAYERSHIP], true);
 		modelStack.PopMatrix();
 	}
-	if (camera.shipCheck == true && shipFallingY <= 1 && repairShipPhase == 1)
+	if (camera.shipCheck == true && ShipY <= 1 && repairShipPhase == 1)
 	{
 		RenderImageOnScreen(UI_BG, 95, 2.75, 82.5, 25);
 		RenderTextOnScreen(meshList[GEO_TEXT], "Bring the base core to the ship in order to refuel it.", Color(0.000f, 0.808f, 0.820f), 3, 40, 25);
@@ -957,18 +1118,26 @@ void SP2_Scene::RenderShip()
 	if (repairShipPhase == 3)
 	{
 		modelStack.PushMatrix();
-		modelStack.Translate(shipFallingX, 7.5, 75);
-		modelStack.Rotate(90, 0, 0, 1);
+		modelStack.Translate(ShipX, ShipY, 75);
 		modelStack.Scale(4, 4, 4);
-		RenderMesh(meshList[GEO_AXES], false);
 		RenderMesh(meshList[GEO_PLAYERSHIP], true);
 		modelStack.PopMatrix();
 
 		if (camera.shipCheck == true)
 		{
 			RenderImageOnScreen(UI_BG, 37.5, 2.75, 77.5, 25);
-			RenderTextOnScreen(meshList[GEO_TEXT], "Press <E> to pilot ship", Color(0.000f, 0.808f, 0.820f), 2.45, 62.5, 25);
+			RenderTextOnScreen(meshList[GEO_TEXT], "Press <F> to pilot ship", Color(0.000f, 0.808f, 0.820f), 2.45, 62.5, 25);
 		}
+	}
+
+	if (repairShipPhase == 4)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(ShipX, ShipY, 75);
+		modelStack.Rotate(ShipRot, 0, 0, 1);
+		modelStack.Scale(4, 4, 4);
+		RenderMesh(meshList[GEO_PLAYERSHIP], true);
+		modelStack.PopMatrix();
 	}
 }
 
@@ -1026,6 +1195,17 @@ void SP2_Scene::Update(double dt)
 		moveMship = true;
 	}
 	rotateMship += (float)(2 * dt);
+
+	//mothership defeated animation
+	if (bosshp == 0)
+	{
+		defeat = true;
+	}
+	if (defeat == true)
+	{
+		explosion += (float)(5 * dt);
+	}
+
 
 	if (floatRocks == true)
 	{
@@ -1110,6 +1290,51 @@ void SP2_Scene::Update(double dt)
 				buttonPress = true;
 			}
 		}
+		if (SpecialSniperPickedUp == true)
+		{
+			weaponValue = 13;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			CurrentAmmo = WepSys.MaxAmmo;
+			//SpecialSniperPickedUp = false;
+		}
+		else if (SpecialRiflePickedUp == true)
+		{
+			weaponValue = 14;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			CurrentAmmo = WepSys.MaxAmmo;
+			//SpecialRiflePickedUp = false;
+		}
+		else if (SpecialShotgunPickedUp == true)
+		{
+			weaponValue = 15;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			CurrentAmmo = WepSys.MaxAmmo;
+			//SpecialShotgunPickedUp = false;
+		}
+		else if (SpecialRifle2PickedUp == true)
+		{
+			weaponValue = 16;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			CurrentAmmo = WepSys.MaxAmmo;
+			//SpecialRifle2PickedUp = false;
+		}
+		else if (SpecialShotgun2PickedUp == true)
+		{
+			weaponValue = 17;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			CurrentAmmo = WepSys.MaxAmmo;
+			//SpecialShotgun2PickedUp = false;
+		}
+		SpecialSniperPickedUp = false;
+		SpecialRiflePickedUp = false;
+		SpecialShotgunPickedUp = false;
+		SpecialRifle2PickedUp = false;
+		SpecialShotgun2PickedUp = false;
 		if (weaponinterface == true)
 		{
 			if (buttonPress == true && Application::IsKeyPressed('1'))
@@ -1123,8 +1348,6 @@ void SP2_Scene::Update(double dt)
 				buttonPress = false;
 				buttonValue = 0;
 				weaponinterface = false;
-				playerhp--;
-				repairShipPhase = 1;
 				WepSys.SetStats(weaponValue);
 				CurrentAmmo = WepSys.MaxAmmo;
 				SpawnedRobots = false;
@@ -1140,8 +1363,6 @@ void SP2_Scene::Update(double dt)
 				buttonPress = false;
 				buttonValue = 0;
 				weaponinterface = false;
-				basehp--;
-				repairShipPhase = 2;
 				WepSys.SetStats(weaponValue);
 				CurrentAmmo = WepSys.MaxAmmo;
 				SpawnedRobots = false;
@@ -1157,7 +1378,6 @@ void SP2_Scene::Update(double dt)
 				buttonPress = false;
 				buttonValue = 0;
 				weaponinterface = false;
-				repairShipPhase = 3;
 				WepSys.SetStats(weaponValue);
 				CurrentAmmo = WepSys.MaxAmmo;
 				SpawnedRobots = false;
@@ -1169,16 +1389,19 @@ void SP2_Scene::Update(double dt)
 				buttonPress = false;
 				buttonValue = 0;
 				weaponinterface = false;
-				repairShipPhase = 4;
 				WepSys.SetStats(weaponValue);
 				CurrentAmmo = WepSys.MaxAmmo;
 				SpawnedRobots = false;
 			}
-		}
-		if (Application::IsKeyPressed('5'))
-		{
-			bosshp = 0;
-			repairShipPhase = 0;
+			/*else if (SpecialSniperPickedUp == true)
+			{
+				weaponValue = 13;
+				WepSys.ClearList();
+				WepSys.SetStats(weaponValue);
+				CurrentAmmo = WepSys.MaxAmmo;
+				SpecialSniperPickedUp = false;
+			}*/
+			
 		}
 		if (!weaponinterface)
 		{
@@ -1207,20 +1430,45 @@ void SP2_Scene::Update(double dt)
 			buttonPress = false;
 			buttonValue = 0;
 		}
-		if (shipFallingY >= 1 && (repairShipPhase == 1 || repairShipPhase == 2))
+		if (ShipY >= 1 && (repairShipPhase == 1 || repairShipPhase == 2))
 		{
-			shipFallingX += 0.1;
-			shipFallingY -= 1;
+			ShipX += 0.1;
+			ShipY -= 1;
 		}
-		if (camera.coreCheck == true && Application::IsKeyPressed('E'))
+		if (camera.coreCheck == true && Application::IsKeyPressed('E') && repairShipPhase == 1)
 		{
 			repairShipPhase = 2;
+			weaponValue = 18;
 		}
-		if (camera.shipCheck == true && Application::IsKeyPressed('E'))
+		if (camera.shipCheck == true && Application::IsKeyPressed('E') && repairShipPhase == 2)
 		{
 			repairShipPhase = 3;
+			weaponValue = 0;
 		}
-
+		if (camera.shipCheck == true && Application::IsKeyPressed('F') && repairShipPhase == 3)
+		{
+			repairShipPhase = 4;
+		}
+		if (camera.sniperCheck == true && Application::IsKeyPressed('C'))
+		{
+			SpecialSniperPickedUp = true;
+		}
+		if (camera.rifleCheck == true && Application::IsKeyPressed('C'))
+		{
+			SpecialRiflePickedUp = true;
+		}
+		if (camera.shotgunCheck == true && Application::IsKeyPressed('C'))
+		{
+			SpecialShotgunPickedUp = true;
+		}
+		if (camera.rifle2Check == true && Application::IsKeyPressed('C'))
+		{
+			SpecialRifle2PickedUp = true;
+		}
+		if (camera.shotgun2Check == true && Application::IsKeyPressed('C'))
+		{
+			SpecialShotgun2PickedUp = true;
+		}
 		framesPerSecond = 1 / dt;
 
 		TownLightPosition.y += tweenVal / 15000;
@@ -1245,7 +1493,7 @@ void SP2_Scene::Update(double dt)
 				CurrentAmmo = WepSys.MaxAmmo;
 			}
 		}
-		if (!IsReloading && CanFire && weaponValue >= 0 && weaponValue <= 12 && Application::IsKeyPressed(VK_LBUTTON))
+		if (!IsReloading && CanFire && weaponValue >= 0 && weaponValue <= 17 && Application::IsKeyPressed(VK_LBUTTON))
 		{
 			if (CurrentAmmo <= 0)
 			{
@@ -1255,6 +1503,8 @@ void SP2_Scene::Update(double dt)
 			else {
 				CurrentAmmo -= 1;
 				WepSys.BulletList.push_back(RayCast(WepSys.Damage, WepSys.Speed, camera.getCameraPosition(), camera.getLookVector()));
+				//ShootSound = engine->play2D(SoundName[0].c_str(), false, false, true);
+				//ShootSound->setVolume(0.15);
 				CanFire = false;
 				GunWaitTime = 0;
 			}
@@ -1276,7 +1526,7 @@ void SP2_Scene::Update(double dt)
 			projectionStack.LoadMatrix(projection);
 		}
 
-		if (CanFire && Application::IsKeyPressed(VK_RBUTTON))
+		/*if (CanFire && Application::IsKeyPressed(VK_RBUTTON))
 		{
 			RobotManager.RobotList.push_back(Robot(0, spawnPointN));
 			RobotManager.RobotList.push_back(Robot(0, spawnPointE));
@@ -1284,18 +1534,74 @@ void SP2_Scene::Update(double dt)
 			RobotManager.RobotList.push_back(Robot(0, spawnPointW));
 			CanFire = false;
 			GunWaitTime = 0;
+		}*/
+
+		if (Application::IsKeyPressed(VK_RBUTTON))
+		{
+			cout << "Debug";
 		}
 
 		WepSys.IncrementPosition();
+		EnemyWepSys.IncrementPosition();
 		RobotManager.IncrementPosition();
+		MothershipHandler.IncrementPosition();
 		for (std::list<Robot>::iterator iter = RobotManager.RobotList.begin(); iter != RobotManager.RobotList.end(); ++iter)
 		{
 			(*iter).BoundsCheck(WepSys);
 			(*iter).RobotAnimation(dt);
-			
+		}
+		if (ShipSpawned && MothershipHandler.RobotList.front().GetHealth() >= 0)
+		{
+			srand(constTranslation);
+			ChoiceTimer += dt;
+			if (ChoiceTimer > 5)
+			{
+				int choice = rand() % 3 + 1;
+				if (choice == 1){ MothershipHandler.RobotList.front().SetShipTarget(ShipPos1); }
+				else if (choice == 2){ MothershipHandler.RobotList.front().SetShipTarget(ShipPos2); }
+				else if(choice == 3){ MothershipHandler.RobotList.front().SetShipTarget(ShipPos3); }
+				ChoiceTimer = 0;
+			}
+			ShotTimer += dt;
+			if (ShotTimer > 1)
+			{
+				int choice = rand() % 5 + 1;
+				if (choice == 1){
+					EnemyWepSys.BulletList.push_back(RayCast(10, 3, MothershipHandler.RobotList.front().Position(), (-MothershipHandler.RobotList.front().Position() + camera.getCameraPosition()).Normalize()));
+					ShotTimer = 0;
+				}
+				else if (choice == 2){
+					EnemyWepSys.BulletList.push_back(RayCast(10, 3, MothershipHandler.RobotList.front().Position(), (-MothershipHandler.RobotList.front().Position() + Vector3(0, 5, 0)+ camera.getCameraPosition()).Normalize()));
+					EnemyWepSys.BulletList.push_back(RayCast(10, 3, MothershipHandler.RobotList.front().Position(), (-MothershipHandler.RobotList.front().Position() + Vector3(5, 0, 0) + camera.getCameraPosition()).Normalize()));
+					EnemyWepSys.BulletList.push_back(RayCast(10, 3, MothershipHandler.RobotList.front().Position(), (-MothershipHandler.RobotList.front().Position() + Vector3(-5, 0, 0) + camera.getCameraPosition()).Normalize()));
+					EnemyWepSys.BulletList.push_back(RayCast(10, 3, MothershipHandler.RobotList.front().Position(), (-MothershipHandler.RobotList.front().Position() + Vector3(0, -5, 0) + camera.getCameraPosition()).Normalize()));
+					ShotTimer = 0;
+				}
+				else if (choice == 3){
+					EnemyWepSys.BulletList.push_back(RayCast(10, 3, MothershipHandler.RobotList.front().Position(), (-MothershipHandler.RobotList.front().Position() + Vector3(0, 5, 0) + camera.getCameraPosition()).Normalize()));
+					EnemyWepSys.BulletList.push_back(RayCast(10, 3, MothershipHandler.RobotList.front().Position(), (-MothershipHandler.RobotList.front().Position() + Vector3(0, -5, 0) + camera.getCameraPosition()).Normalize()));
+					EnemyWepSys.BulletList.push_back(RayCast(10, 3, MothershipHandler.RobotList.front().Position(), (-MothershipHandler.RobotList.front().Position() + Vector3(0, 0, 0) + camera.getCameraPosition()).Normalize()));
+					ShotTimer = 0;
+				}
+				else if (choice == 4){
+					EnemyWepSys.BulletList.push_back(RayCast(10, 3, MothershipHandler.RobotList.front().Position(), (-MothershipHandler.RobotList.front().Position() + Vector3(5, 0, 0) + camera.getCameraPosition()).Normalize()));
+					EnemyWepSys.BulletList.push_back(RayCast(10, 3, MothershipHandler.RobotList.front().Position(), (-MothershipHandler.RobotList.front().Position() + Vector3(-5, 0, 0) + camera.getCameraPosition()).Normalize()));
+					EnemyWepSys.BulletList.push_back(RayCast(10, 3, MothershipHandler.RobotList.front().Position(), (-MothershipHandler.RobotList.front().Position() + Vector3(0, 0, 0) + camera.getCameraPosition()).Normalize()));
+					ShotTimer = 0;
+				}
+				else if (choice == 5){
+					EnemyWepSys.BulletList.push_back(RayCast(10, 3, MothershipHandler.RobotList.front().Position(), (-MothershipHandler.RobotList.front().Position() + Vector3(5, 5, 0) + camera.getCameraPosition()).Normalize()));
+					EnemyWepSys.BulletList.push_back(RayCast(10, 3, MothershipHandler.RobotList.front().Position(), (-MothershipHandler.RobotList.front().Position() + Vector3(5, -5, 0) + camera.getCameraPosition()).Normalize()));
+					EnemyWepSys.BulletList.push_back(RayCast(10, 3, MothershipHandler.RobotList.front().Position(), (-MothershipHandler.RobotList.front().Position() + Vector3(-5, 5, -15) + camera.getCameraPosition()).Normalize()));
+					EnemyWepSys.BulletList.push_back(RayCast(10, 3, MothershipHandler.RobotList.front().Position(), (-MothershipHandler.RobotList.front().Position() + Vector3(-5, -5, -15) + camera.getCameraPosition()).Normalize()));
+					ShotTimer = 0;
+				}
+			}
 		}
 		RobotManager.CleanUp();
 		WepSys.CleanUp();
+		EnemyWepSys.CleanUp();
+		MothershipHandler.CleanUp();
 	}
 }
 
@@ -1785,7 +2091,7 @@ void SP2_Scene::Render(double dt)
 
 	if (GameLoading)
 	{
-		RenderImageOnScreen(UI_LoadingBG, 160, 90, 80, 45);
+		//RenderImageOnScreen(UI_LoadingBG, 160, 90, 80, 45);
 		RenderTextOnScreen(meshList[GEO_TEXT], "Game Currently Loading", Color(0, 0.5, 1), 8, 15, 80);
 		RenderTextOnScreen(meshList[GEO_TEXT], "Please Wait", Color(0, 0.5, 1), 8, 45, 70);
 		if (!loadRobots || !loadMap || !loadWep)
@@ -1801,7 +2107,6 @@ void SP2_Scene::Render(double dt)
 	}
 	else{
 		modelStack.PushMatrix();
-		RenderMesh(meshList[GEO_AXES], false);
 		modelStack.PopMatrix();
 
 		readtextfile();
@@ -1825,7 +2130,7 @@ void SP2_Scene::Render(double dt)
 		
 			modelStack.PushMatrix();
 			modelStack.Translate(i.Position().x, i.Position().y + 0.5, i.Position().z);
-			modelStack.Rotate(i.rotateToTarget, 0, 1, 0);
+			modelStack.Rotate(i.Rotation, 0, 1, 0);
 			//HP
 				modelStack.PushMatrix();
 				modelStack.Translate(0, 7, 0);
