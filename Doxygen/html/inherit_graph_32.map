@@ -1,5 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classScene.html" title="Scene" alt="" coords="5,31,64,57"/>
-<area shape="rect" id="node2" href="$classParticle.html" title="Particle" alt="" coords="124,5,191,32"/>
-<area shape="rect" id="node3" href="$classSP2__Scene.html" title="SP2_Scene" alt="" coords="112,56,203,83"/>
+<area shape="rect" id="node1" href="$classScene.html" title="Defines the methods for Scene. " alt="" coords="5,5,64,32"/>
+<area shape="rect" id="node2" href="$classSP2__Scene.html" title="Defines the methods, enums and variables for SP2_Scene. " alt="" coords="112,5,203,32"/>
 </map>

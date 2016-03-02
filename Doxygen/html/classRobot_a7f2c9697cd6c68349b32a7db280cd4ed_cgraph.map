@@ -1,10 +1,10 @@
 <map id="Robot::Move" name="Robot::Move">
-<area shape="rect" id="node2" href="$classRobot.html#a4e7360385dab7b3974d6ca7c6464b747" title="Robot::CalcBounds" alt="" coords="156,5,291,32"/>
-<area shape="rect" id="node4" href="$classRobot.html#a984fba314296d7a4016afb093f775c0d" title="Robot::FindNewTarget" alt="" coords="148,56,299,83"/>
-<area shape="rect" id="node6" href="$classRobot.html#a1b94e72fd005902fa335e3f6d827190b" title="Robot::GetDirVec" alt="" coords="161,107,285,133"/>
-<area shape="rect" id="node9" href="$classRobot.html#a6fdd2278c1dae3d19ea37d0305cfb51d" title="Robot::GetHealth" alt="" coords="162,157,285,184"/>
-<area shape="rect" id="node3" href="$structBoundary.html#a3cf640001c6bbc842d129f453fb3441b" title="Boundary::set" alt="" coords="384,5,487,32"/>
-<area shape="rect" id="node5" href="$structBoundary.html#ac8729f6b5ec80c5af1151892c0a3e9b8" title="Boundary::BoundaryCheck" alt="" coords="347,56,524,83"/>
+<area shape="rect" id="node2" href="$classRobot.html#a4e7360385dab7b3974d6ca7c6464b747" title="Calculates the boundary of each robot. " alt="" coords="156,5,291,32"/>
+<area shape="rect" id="node4" href="$classRobot.html#a984fba314296d7a4016afb093f775c0d" title="Chooses a new target for the robots to walk to. " alt="" coords="148,56,299,83"/>
+<area shape="rect" id="node6" href="$classRobot.html#a1b94e72fd005902fa335e3f6d827190b" title="Calculates the direction vector. " alt="" coords="161,107,285,133"/>
+<area shape="rect" id="node9" href="$classRobot.html#a6fdd2278c1dae3d19ea37d0305cfb51d" title="Calls the value for each robot&#39;s current heatlth. " alt="" coords="162,157,285,184"/>
+<area shape="rect" id="node3" href="$structBoundary.html#a3cf640001c6bbc842d129f453fb3441b" title="Sets the minimum and maximum x,y and z boundaries. " alt="" coords="384,5,487,32"/>
+<area shape="rect" id="node5" href="$structBoundary.html#ac8729f6b5ec80c5af1151892c0a3e9b8" title="Checks if the players position is outside of the boundaries set. " alt="" coords="347,56,524,83"/>
 <area shape="rect" id="node7" href="$structVector3.html#a200024a8442329de9a625ed58ffe7075" title="Return length of vector. " alt="" coords="572,132,687,159"/>
 <area shape="rect" id="node8" href="$structVector3.html#aaef4f25a38878a640ab4a48002a7eff8" title="Normalize this vector and return a reference to it. " alt="" coords="369,157,502,184"/>
 </map>

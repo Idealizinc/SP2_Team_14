@@ -7,104 +7,90 @@
     <includedby refid="ik__ISound_8h" local="yes">irrKlang-1.5.0/include/ik_ISound.h</includedby>
     <includedby refid="irrKlang_8h" local="yes">irrKlang-1.5.0/include/irrKlang.h</includedby>
     <incdepgraph>
-      <node id="2703">
+      <node id="2209">
         <label>wchar.h</label>
       </node>
-      <node id="2702">
+      <node id="2208">
         <label>ik_irrKlangTypes.h</label>
         <link refid="ik__irrKlangTypes_8h"/>
-        <childnode refid="2703" relation="include">
+        <childnode refid="2209" relation="include">
         </childnode>
       </node>
-      <node id="2700">
+      <node id="2206">
         <label>irrKlang-1.5.0/include/ik_ISoundEffectControl.h</label>
         <link refid="ik_ISoundEffectControl.h"/>
-        <childnode refid="2701" relation="include">
+        <childnode refid="2207" relation="include">
         </childnode>
-        <childnode refid="2704" relation="include">
+        <childnode refid="2210" relation="include">
         </childnode>
       </node>
-      <node id="2705">
+      <node id="2211">
         <label>math.h</label>
       </node>
-      <node id="2701">
+      <node id="2207">
         <label>ik_IVirtualRefCounted.h</label>
         <link refid="ik__IVirtualRefCounted_8h"/>
-        <childnode refid="2702" relation="include">
+        <childnode refid="2208" relation="include">
         </childnode>
       </node>
-      <node id="2704">
+      <node id="2210">
         <label>ik_vec3d.h</label>
         <link refid="ik__vec3d_8h"/>
-        <childnode refid="2705" relation="include">
+        <childnode refid="2211" relation="include">
         </childnode>
-        <childnode refid="2702" relation="include">
+        <childnode refid="2208" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2714">
-        <label>ComGLab/Source/Particle.cpp</label>
-        <link refid="Particle_8cpp"/>
-      </node>
-      <node id="2715">
+      <node id="2219">
         <label>irrKlang-1.5.0/plugins/ikpMP3/ikpMP3.cpp</label>
         <link refid="ikpMP3_8cpp"/>
       </node>
-      <node id="2709">
+      <node id="2215">
         <label>irrKlang-1.5.0/include/irrKlang.h</label>
         <link refid="irrKlang_8h"/>
-        <childnode refid="2710" relation="include">
+        <childnode refid="2216" relation="include">
         </childnode>
-        <childnode refid="2713" relation="include">
-        </childnode>
-        <childnode refid="2715" relation="include">
+        <childnode refid="2219" relation="include">
         </childnode>
       </node>
-      <node id="2712">
+      <node id="2218">
         <label>ComGLab/Source/SP2_Scene.cpp</label>
         <link refid="SP2__Scene_8cpp"/>
       </node>
-      <node id="2711">
+      <node id="2217">
         <label>ComGLab/Source/Application.cpp</label>
         <link refid="Application_8cpp"/>
       </node>
-      <node id="2710">
+      <node id="2216">
         <label>ComGLab/Source/SP2_Scene.h</label>
         <link refid="SP2__Scene_8h"/>
-        <childnode refid="2711" relation="include">
+        <childnode refid="2217" relation="include">
         </childnode>
-        <childnode refid="2712" relation="include">
+        <childnode refid="2218" relation="include">
         </childnode>
       </node>
-      <node id="2706">
+      <node id="2212">
         <label>irrKlang-1.5.0/include/ik_ISoundEffectControl.h</label>
         <link refid="ik_ISoundEffectControl.h"/>
-        <childnode refid="2707" relation="include">
+        <childnode refid="2213" relation="include">
         </childnode>
-        <childnode refid="2709" relation="include">
+        <childnode refid="2215" relation="include">
         </childnode>
       </node>
-      <node id="2707">
+      <node id="2213">
         <label>irrKlang-1.5.0/include/ik_ISound.h</label>
         <link refid="ik__ISound_8h"/>
-        <childnode refid="2708" relation="include">
+        <childnode refid="2214" relation="include">
         </childnode>
-        <childnode refid="2709" relation="include">
-        </childnode>
-      </node>
-      <node id="2713">
-        <label>ComGLab/Source/Particle.h</label>
-        <link refid="Particle_8h"/>
-        <childnode refid="2711" relation="include">
-        </childnode>
-        <childnode refid="2714" relation="include">
+        <childnode refid="2215" relation="include">
         </childnode>
       </node>
-      <node id="2708">
+      <node id="2214">
         <label>irrKlang-1.5.0/include/ik_ISoundEngine.h</label>
         <link refid="ik__ISoundEngine_8h"/>
-        <childnode refid="2709" relation="include">
+        <childnode refid="2215" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

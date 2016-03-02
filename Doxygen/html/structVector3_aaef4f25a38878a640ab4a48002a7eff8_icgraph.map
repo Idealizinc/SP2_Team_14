@@ -1,18 +1,14 @@
 <map id="Vector3::Normalize" name="Vector3::Normalize">
 <area shape="rect" id="node2" href="$classMeshBuilder.html#a3123aa273acbacf182adc536433c4911" title="MeshBuilder::GenerateCone" alt="" coords="187,107,372,133"/>
-<area shape="rect" id="node4" href="$classRobot.html#a1b94e72fd005902fa335e3f6d827190b" title="Robot::GetDirVec" alt="" coords="217,56,341,83"/>
-<area shape="rect" id="node7" href="$classCamera2.html#af3d4e37be651bac9c0a94ac0af021c35" title="Camera2::Init" alt="" coords="230,157,329,184"/>
-<area shape="rect" id="node8" href="$classCamera3.html#a1029fbe574de09b19ff8908748031289" title="Camera3::Init" alt="" coords="230,208,329,235"/>
-<area shape="rect" id="node14" href="$classMtx44.html#a7c3d2d30d9ed5bfca2ba97d0e570930f" title="Set matrix to be a lookat matrix. " alt="" coords="209,259,350,285"/>
-<area shape="rect" id="node17" href="$classCamera2.html#a1a54eeb46692c8806b7abea38a6301f3" title="Camera2::Update" alt="" coords="218,309,341,336"/>
-<area shape="rect" id="node3" href="$classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="SP2_Scene::Init" alt="" coords="445,107,561,133"/>
-<area shape="rect" id="node5" href="$classRobot.html#a7f2c9697cd6c68349b32a7db280cd4ed" title="Robot::Move" alt="" coords="456,5,551,32"/>
-<area shape="rect" id="node6" href="$classRobot.html#a4987b293d92f59ca29693e2b72eddf7e" title="Robot::Robot" alt="" coords="454,56,553,83"/>
-<area shape="rect" id="node9" href="$classSP2__Scene.html#a3cd10ebc989e3f3e2f84f59d74b76ef2" title="SP2_Scene::GameState" alt="" coords="635,259,800,285"/>
-<area shape="rect" id="node11" href="$classParticle.html#ad4131133df499c87e0a4e75ffdaae4a3" title="Particle::Init" alt="" coords="458,208,549,235"/>
-<area shape="rect" id="node12" href="$classSP2__Scene.html#a68b65e14328ef7b87a9e1c516499ee44" title="SP2_Scene::RenderShip" alt="" coords="420,259,587,285"/>
-<area shape="rect" id="node13" href="$classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="SP2_Scene::Update" alt="" coords="433,309,573,336"/>
-<area shape="rect" id="node10" href="$classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="SP2_Scene::Render" alt="" coords="848,309,988,336"/>
-<area shape="rect" id="node15" href="$classMS.html#a2638cd3249260877cc31329978fb6b38" title="Setup lookat matrix and push to matrix stack. " alt="" coords="458,360,549,387"/>
-<area shape="rect" id="node16" href="$classParticle.html#aff7cd61e7a2b82cebc3e9494fa54aa5d" title="Particle::Render" alt="" coords="660,309,775,336"/>
+<area shape="rect" id="node4" href="$classRobot.html#a1b94e72fd005902fa335e3f6d827190b" title="Calculates the direction vector. " alt="" coords="217,56,341,83"/>
+<area shape="rect" id="node7" href="$classCamera3.html#a1029fbe574de09b19ff8908748031289" title="Initializes variables. " alt="" coords="230,157,329,184"/>
+<area shape="rect" id="node12" href="$classMtx44.html#a7c3d2d30d9ed5bfca2ba97d0e570930f" title="Set matrix to be a lookat matrix. " alt="" coords="209,259,350,285"/>
+<area shape="rect" id="node3" href="$classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="Initializes values. " alt="" coords="445,107,561,133"/>
+<area shape="rect" id="node5" href="$classRobot.html#a7f2c9697cd6c68349b32a7db280cd4ed" title="Method that handles each robot&#39;s movements. " alt="" coords="456,56,551,83"/>
+<area shape="rect" id="node6" href="$classRobot.html#a4987b293d92f59ca29693e2b72eddf7e" title="Constructor. " alt="" coords="454,5,553,32"/>
+<area shape="rect" id="node8" href="$classSP2__Scene.html#a3cd10ebc989e3f3e2f84f59d74b76ef2" title="Method that controls the transition from wave to wave. " alt="" coords="635,259,800,285"/>
+<area shape="rect" id="node10" href="$classSP2__Scene.html#a68b65e14328ef7b87a9e1c516499ee44" title="Method that renders and animates the drivable ship. " alt="" coords="420,208,587,235"/>
+<area shape="rect" id="node11" href="$classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="Method where values are changed. " alt="" coords="433,157,573,184"/>
+<area shape="rect" id="node9" href="$classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="Method that renders everything in the game. " alt="" coords="848,284,988,311"/>
+<area shape="rect" id="node13" href="$classMS.html#a2638cd3249260877cc31329978fb6b38" title="Setup lookat matrix and push to matrix stack. " alt="" coords="672,309,763,336"/>
 </map>

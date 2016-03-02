@@ -5,144 +5,125 @@
     <includes refid="Vector3_8h" local="yes">Vector3.h</includes>
     <includedby refid="Camera3_8h" local="yes">ComGLab/Source/Camera3.h</includedby>
     <includedby refid="Camera_8cpp" local="yes">ComGLab/Source/Camera.cpp</includedby>
-    <includedby refid="Camera2_8h" local="yes">ComGLab/Source/Camera2.h</includedby>
     <incdepgraph>
-      <node id="1615">
+      <node id="1350">
         <label>MyMath.h</label>
         <link refid="MyMath_8h"/>
-        <childnode refid="1616" relation="include">
+        <childnode refid="1351" relation="include">
         </childnode>
-        <childnode refid="1617" relation="include">
+        <childnode refid="1352" relation="include">
         </childnode>
-        <childnode refid="1618" relation="include">
+        <childnode refid="1353" relation="include">
         </childnode>
-        <childnode refid="1619" relation="include">
+        <childnode refid="1354" relation="include">
         </childnode>
       </node>
-      <node id="1613">
+      <node id="1348">
         <label>ComGLab/Source/Camera.h</label>
         <link refid="Camera.h"/>
-        <childnode refid="1614" relation="include">
+        <childnode refid="1349" relation="include">
         </childnode>
       </node>
-      <node id="1616">
+      <node id="1351">
         <label>cmath</label>
       </node>
-      <node id="1614">
+      <node id="1349">
         <label>Vector3.h</label>
         <link refid="Vector3_8h"/>
-        <childnode refid="1615" relation="include">
+        <childnode refid="1350" relation="include">
         </childnode>
-        <childnode refid="1620" relation="include">
+        <childnode refid="1355" relation="include">
         </childnode>
       </node>
-      <node id="1617">
+      <node id="1352">
         <label>exception</label>
       </node>
-      <node id="1618">
+      <node id="1353">
         <label>ctime</label>
       </node>
-      <node id="1619">
+      <node id="1354">
         <label>cstdlib</label>
       </node>
-      <node id="1620">
+      <node id="1355">
         <label>iostream</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="1630">
-        <label>ComGLab/Source/Camera2.h</label>
-        <link refid="Camera2_8h"/>
-        <childnode refid="1631" relation="include">
-        </childnode>
-      </node>
-      <node id="1621">
+      <node id="1356">
         <label>ComGLab/Source/Camera.h</label>
         <link refid="Camera.h"/>
-        <childnode refid="1622" relation="include">
+        <childnode refid="1357" relation="include">
         </childnode>
-        <childnode refid="1629" relation="include">
-        </childnode>
-        <childnode refid="1630" relation="include">
+        <childnode refid="1362" relation="include">
         </childnode>
       </node>
-      <node id="1627">
-        <label>ComGLab/Source/Particle.cpp</label>
-        <link refid="Particle_8cpp"/>
-      </node>
-      <node id="1625">
+      <node id="1360">
         <label>ComGLab/Source/SP2_Scene.cpp</label>
         <link refid="SP2__Scene_8cpp"/>
       </node>
-      <node id="1624">
+      <node id="1359">
         <label>ComGLab/Source/Application.cpp</label>
         <link refid="Application_8cpp"/>
       </node>
-      <node id="1623">
+      <node id="1358">
         <label>ComGLab/Source/SP2_Scene.h</label>
         <link refid="SP2__Scene_8h"/>
-        <childnode refid="1624" relation="include">
+        <childnode refid="1359" relation="include">
         </childnode>
-        <childnode refid="1625" relation="include">
+        <childnode refid="1360" relation="include">
         </childnode>
       </node>
-      <node id="1631">
-        <label>ComGLab/Source/Camera2.cpp</label>
-        <link refid="Camera2_8cpp"/>
-      </node>
-      <node id="1628">
+      <node id="1361">
         <label>ComGLab/Source/Camera3.cpp</label>
         <link refid="Camera3_8cpp"/>
       </node>
-      <node id="1622">
+      <node id="1357">
         <label>ComGLab/Source/Camera3.h</label>
         <link refid="Camera3_8h"/>
-        <childnode refid="1623" relation="include">
+        <childnode refid="1358" relation="include">
         </childnode>
-        <childnode refid="1626" relation="include">
-        </childnode>
-        <childnode refid="1628" relation="include">
+        <childnode refid="1361" relation="include">
         </childnode>
       </node>
-      <node id="1626">
-        <label>ComGLab/Source/Particle.h</label>
-        <link refid="Particle_8h"/>
-        <childnode refid="1624" relation="include">
-        </childnode>
-        <childnode refid="1627" relation="include">
-        </childnode>
-      </node>
-      <node id="1629">
+      <node id="1362">
         <label>ComGLab/Source/Camera.cpp</label>
         <link refid="Camera_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classCamera" prot="public">Camera</innerclass>
     <briefdescription>
-    </briefdescription>
+<para>Class to define camera. </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para><simplesect kind="author"><para>Wen Sheng Tang </para></simplesect>
+<simplesect kind="par"><title>email: tang_wen_sheng@nyp.edu.sg</title><para></para></simplesect>
+</para>    </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CAMERA_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAMERA_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Vector3_8h" kindref="compound">Vector3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6" refid="classCamera" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classCamera" kindref="compound">Camera</ref></highlight></codeline>
-<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="9" refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" kindref="member">position</ref>;</highlight></codeline>
-<codeline lineno="10" refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" kindref="member">target</ref>;</highlight></codeline>
-<codeline lineno="11" refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" kindref="member">up</ref>;</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCamera_1a01f94c3543f56ede7af49dc778f19331" kindref="member">Camera</ref>();</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCamera_1ad1897942d0ccf91052386388a497349f" kindref="member">~Camera</ref>();</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCamera_1a609775f7ec4cd936ad7add808cd7354c" kindref="member">Init</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/>pos,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/>target,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/>up);</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCamera_1aa46f58b32270a571ab56dde4caca46db" kindref="member">Reset</ref>();</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCamera_1acc1741feb6d9da849ea4b6c12e0711e6" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
-<codeline lineno="18"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CAMERA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAMERA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Vector3_8h" kindref="compound">Vector3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classCamera" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classCamera" kindref="compound">Camera</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26" refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" kindref="member">position</ref>;</highlight></codeline>
+<codeline lineno="27" refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" kindref="member">target</ref>;</highlight></codeline>
+<codeline lineno="28" refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" kindref="member">up</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCamera_1a01f94c3543f56ede7af49dc778f19331" kindref="member">Camera</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCamera_1ad1897942d0ccf91052386388a497349f" kindref="member">~Camera</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCamera_1a609775f7ec4cd936ad7add808cd7354c" kindref="member">Init</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/>pos,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/>target,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/>up);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCamera_1aa46f58b32270a571ab56dde4caca46db" kindref="member">Reset</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCamera_1acc1741feb6d9da849ea4b6c12e0711e6" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="ComGLab/Source/Camera.h"/>
   </compounddef>

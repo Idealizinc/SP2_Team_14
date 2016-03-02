@@ -1,7 +1,7 @@
 <map id="IndexVBO" name="IndexVBO">
 <area shape="rect" id="node2" href="$classMeshBuilder.html#aba87550d7726a610c911fbb977fd3575" title="MeshBuilder::GenerateOBJ" alt="" coords="135,56,315,83"/>
-<area shape="rect" id="node3" href="$classSP2__Scene.html#a6db32e7632b8b3d3a57d949d3029b4a7" title="SP2_Scene::InitWeaponModels" alt="" coords="363,5,569,32"/>
-<area shape="rect" id="node5" href="$classSP2__Scene.html#aea95ab9454db62830823d42d053c191e" title="SP2_Scene::InitMapModels" alt="" coords="375,56,557,83"/>
-<area shape="rect" id="node6" href="$classSP2__Scene.html#aeef4e3096a06665be510e2b4bd6c2b79" title="SP2_Scene::InitRobots" alt="" coords="387,107,545,133"/>
-<area shape="rect" id="node4" href="$classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="SP2_Scene::Update" alt="" coords="617,56,757,83"/>
+<area shape="rect" id="node3" href="$classSP2__Scene.html#a6db32e7632b8b3d3a57d949d3029b4a7" title="Initializes OBJ and TGA files. " alt="" coords="363,5,569,32"/>
+<area shape="rect" id="node5" href="$classSP2__Scene.html#aea95ab9454db62830823d42d053c191e" title="Initializes OBJ and TGA files. " alt="" coords="375,56,557,83"/>
+<area shape="rect" id="node6" href="$classSP2__Scene.html#aeef4e3096a06665be510e2b4bd6c2b79" title="Initializes OBJ and TGA files. " alt="" coords="387,107,545,133"/>
+<area shape="rect" id="node4" href="$classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="Method where values are changed. " alt="" coords="617,56,757,83"/>
 </map>

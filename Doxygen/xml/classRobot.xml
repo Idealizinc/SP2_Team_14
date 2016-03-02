@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="15" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="14" bodyend="17"/>
+        <location file="ComGLab/Source/Robot.h" line="32" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="31" bodyend="34"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
@@ -49,9 +49,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="25" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="25" bodyend="-1"/>
-        <referencedby refid="classRobot_1ad545d19adff26cb99fda1c4408f51e69" compoundref="Robot_8cpp" startline="83" endline="94">BoundsCheck</referencedby>
-        <referencedby refid="classRobot_1a4e7360385dab7b3974d6ca7c6464b747" compoundref="Robot_8cpp" startline="206" endline="213">CalcBounds</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="42" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="42" bodyend="-1"/>
+        <referencedby refid="classRobot_1ad545d19adff26cb99fda1c4408f51e69" compoundref="Robot_8cpp" startline="176" endline="187">BoundsCheck</referencedby>
+        <referencedby refid="classRobot_1a4e7360385dab7b3974d6ca7c6464b747" compoundref="Robot_8cpp" startline="355" endline="362">CalcBounds</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1a56b4021987207a493121157d63692ec5" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="27" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="27" bodyend="-1"/>
+        <location file="ComGLab/Source/Robot.h" line="44" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1aaa46b0d0467ee2c4e965cce8d74276da" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -78,8 +78,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="30" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="30" bodyend="-1"/>
-        <referencedby refid="classRobot_1a984fba314296d7a4016afb093f775c0d" compoundref="Robot_8cpp" startline="41" endline="71">FindNewTarget</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="47" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="47" bodyend="-1"/>
+        <referencedby refid="classRobot_1a984fba314296d7a4016afb093f775c0d" compoundref="Robot_8cpp" startline="99" endline="129">FindNewTarget</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1a7d0b37036a8f2b117a86efe9cf828b2c" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -92,8 +92,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="34" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="34" bodyend="-1"/>
-        <referencedby refid="classRobot_1a4987b293d92f59ca29693e2b72eddf7e" compoundref="Robot_8cpp" startline="5" endline="15">Robot</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="51" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="51" bodyend="-1"/>
+        <referencedby refid="classRobot_1a4987b293d92f59ca29693e2b72eddf7e" compoundref="Robot_8cpp" startline="28" endline="38">Robot</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1afac8bceeb1a68029d42e6a049164e11a" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -107,8 +107,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="35" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="35" bodyend="-1"/>
-        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="106" endline="204">RobotAnimation</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="52" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="244" endline="342">RobotAnimation</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1ad7d06ebaf735df96d17d3c5cacf58fb3" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -122,8 +122,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="36" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="36" bodyend="-1"/>
-        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="106" endline="204">RobotAnimation</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="53" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="53" bodyend="-1"/>
+        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="244" endline="342">RobotAnimation</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1a8738b97a8b7e6ac3b199392bc0c8fb07" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -137,8 +137,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="37" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="37" bodyend="-1"/>
-        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="106" endline="204">RobotAnimation</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="54" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="54" bodyend="-1"/>
+        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="244" endline="342">RobotAnimation</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1a8058b1a46e38164e0b2df93a069c0759" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -152,8 +152,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="38" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="38" bodyend="-1"/>
-        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="106" endline="204">RobotAnimation</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="55" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="55" bodyend="-1"/>
+        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="244" endline="342">RobotAnimation</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1a147a239afd0bd95ce87ad949585e9ad0" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -167,8 +167,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="39" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="39" bodyend="-1"/>
-        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="106" endline="204">RobotAnimation</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="56" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="56" bodyend="-1"/>
+        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="244" endline="342">RobotAnimation</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1a79b340ad832995d7d8cacac9e1389e41" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -182,8 +182,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="40" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="40" bodyend="-1"/>
-        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="106" endline="204">RobotAnimation</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="57" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="57" bodyend="-1"/>
+        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="244" endline="342">RobotAnimation</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1aa22a3eca7c16ae45834b329ba5dc72c9" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -197,8 +197,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="42" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="42" bodyend="-1"/>
-        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="106" endline="204">RobotAnimation</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="59" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="244" endline="342">RobotAnimation</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1a6d6e3ed408a8d3b186367ad5f27e06fa" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -212,8 +212,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="43" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="43" bodyend="-1"/>
-        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="106" endline="204">RobotAnimation</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="60" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="60" bodyend="-1"/>
+        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="244" endline="342">RobotAnimation</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1adef30811b8c499303c689a400b3311f6" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -227,8 +227,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="44" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="44" bodyend="-1"/>
-        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="106" endline="204">RobotAnimation</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="61" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="61" bodyend="-1"/>
+        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="244" endline="342">RobotAnimation</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1a81a4dd32f998ddc5bf1e43a103a04bc4" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -242,8 +242,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="45" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="45" bodyend="-1"/>
-        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="106" endline="204">RobotAnimation</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="62" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="62" bodyend="-1"/>
+        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="244" endline="342">RobotAnimation</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1a3f31cc694496abc4cf4caf24f0cecee0" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -257,8 +257,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="46" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="46" bodyend="-1"/>
-        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="106" endline="204">RobotAnimation</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="63" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="63" bodyend="-1"/>
+        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="244" endline="342">RobotAnimation</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1ac0e26f325babdf4b7e6f5c80e88e6bd6" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -272,8 +272,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="47" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="47" bodyend="-1"/>
-        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="106" endline="204">RobotAnimation</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="64" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="64" bodyend="-1"/>
+        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="244" endline="342">RobotAnimation</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1a0bcd9484fbb6a9f4768a4f76e31aff7e" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -286,7 +286,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="49" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="49" bodyend="-1"/>
+        <location file="ComGLab/Source/Robot.h" line="66" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="66" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1aef76d8f894ee5a9efa74ac38285369ef" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -299,7 +299,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="50" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="50" bodyend="-1"/>
+        <location file="ComGLab/Source/Robot.h" line="67" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="67" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1a53460dec35d8a0873c69b3792825c6b2" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -313,7 +313,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="51" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="51" bodyend="-1"/>
+        <location file="ComGLab/Source/Robot.h" line="68" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="68" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1a0e1523590c831025102b75685b8782c2" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -327,7 +327,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="52" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="52" bodyend="-1"/>
+        <location file="ComGLab/Source/Robot.h" line="69" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="69" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1a4dbf85058d9e81af470db17e16419697" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -341,7 +341,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="53" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="53" bodyend="-1"/>
+        <location file="ComGLab/Source/Robot.h" line="70" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="70" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1ac316b05ea9c4effa1a5691c627b19774" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -355,7 +355,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="54" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="54" bodyend="-1"/>
+        <location file="ComGLab/Source/Robot.h" line="71" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="71" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1a6cce3b0d17bb255ab2a6d4ba054179a0" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -369,8 +369,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="56" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="56" bodyend="-1"/>
-        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="106" endline="204">RobotAnimation</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="73" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="73" bodyend="-1"/>
+        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="244" endline="342">RobotAnimation</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1afdab2bc274db60b950f5bb8d99f16ec7" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -384,9 +384,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="57" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="57" bodyend="-1"/>
-        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="23" endline="39">Move</referencedby>
-        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="106" endline="204">RobotAnimation</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="74" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="74" bodyend="-1"/>
+        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="66" endline="82">Move</referencedby>
+        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="244" endline="342">RobotAnimation</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1a29f9ae8e5514465862b8b613ddf2fae4" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -400,8 +400,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="58" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="58" bodyend="-1"/>
-        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="106" endline="204">RobotAnimation</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="75" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="75" bodyend="-1"/>
+        <referencedby refid="classRobot_1a47accc655f0909134cf572af6c8d5288" compoundref="Robot_8cpp" startline="244" endline="342">RobotAnimation</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -416,9 +416,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="63" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="63" bodyend="-1"/>
-        <referencedby refid="classRobot_1a4987b293d92f59ca29693e2b72eddf7e" compoundref="Robot_8cpp" startline="5" endline="15">Robot</referencedby>
-        <referencedby refid="classRobot_1a8b6afcea9f407806b66328ee37fea7bc" compoundref="Robot_8cpp" startline="225" endline="259">SetStats</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="80" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="80" bodyend="-1"/>
+        <referencedby refid="classRobot_1a4987b293d92f59ca29693e2b72eddf7e" compoundref="Robot_8cpp" startline="28" endline="38">Robot</referencedby>
+        <referencedby refid="classRobot_1a8b6afcea9f407806b66328ee37fea7bc" compoundref="Robot_8cpp" startline="401" endline="435">SetStats</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1afd1098da4999f2da827916e5401b8832" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -431,8 +431,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="64" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="64" bodyend="-1"/>
-        <referencedby refid="classRobot_1a8b6afcea9f407806b66328ee37fea7bc" compoundref="Robot_8cpp" startline="225" endline="259">SetStats</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="81" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="81" bodyend="-1"/>
+        <referencedby refid="classRobot_1a8b6afcea9f407806b66328ee37fea7bc" compoundref="Robot_8cpp" startline="401" endline="435">SetStats</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1aa0046e0d301058ea4771b04e52d2df71" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -445,9 +445,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="65" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="65" bodyend="-1"/>
-        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="23" endline="39">Move</referencedby>
-        <referencedby refid="classRobot_1a8b6afcea9f407806b66328ee37fea7bc" compoundref="Robot_8cpp" startline="225" endline="259">SetStats</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="82" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="82" bodyend="-1"/>
+        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="66" endline="82">Move</referencedby>
+        <referencedby refid="classRobot_1a8b6afcea9f407806b66328ee37fea7bc" compoundref="Robot_8cpp" startline="401" endline="435">SetStats</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1aed6a3eef0b1ff14618a60e007f045dda" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -460,11 +460,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="66" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="66" bodyend="-1"/>
-        <referencedby refid="classRobot_1ad545d19adff26cb99fda1c4408f51e69" compoundref="Robot_8cpp" startline="83" endline="94">BoundsCheck</referencedby>
-        <referencedby refid="classRobot_1a6fdd2278c1dae3d19ea37d0305cfb51d" compoundref="Robot_8cpp" startline="96" endline="99">GetHealth</referencedby>
-        <referencedby refid="classRobot_1ab4de60946e11a6216df1c203f2b32797" compoundref="Robot_8cpp" startline="101" endline="104">SetHealth</referencedby>
-        <referencedby refid="classRobot_1a8b6afcea9f407806b66328ee37fea7bc" compoundref="Robot_8cpp" startline="225" endline="259">SetStats</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="83" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="83" bodyend="-1"/>
+        <referencedby refid="classRobot_1ad545d19adff26cb99fda1c4408f51e69" compoundref="Robot_8cpp" startline="176" endline="187">BoundsCheck</referencedby>
+        <referencedby refid="classRobot_1a6fdd2278c1dae3d19ea37d0305cfb51d" compoundref="Robot_8cpp" startline="200" endline="203">GetHealth</referencedby>
+        <referencedby refid="classRobot_1ab4de60946e11a6216df1c203f2b32797" compoundref="Robot_8cpp" startline="216" endline="219">SetHealth</referencedby>
+        <referencedby refid="classRobot_1a8b6afcea9f407806b66328ee37fea7bc" compoundref="Robot_8cpp" startline="401" endline="435">SetStats</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1a9e326656a1dfed623ad74765df36336b" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -478,9 +478,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="67" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="67" bodyend="-1"/>
-        <referencedby refid="classRobot_1a4e7360385dab7b3974d6ca7c6464b747" compoundref="Robot_8cpp" startline="206" endline="213">CalcBounds</referencedby>
-        <referencedby refid="classRobot_1a4987b293d92f59ca29693e2b72eddf7e" compoundref="Robot_8cpp" startline="5" endline="15">Robot</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="84" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="84" bodyend="-1"/>
+        <referencedby refid="classRobot_1a4e7360385dab7b3974d6ca7c6464b747" compoundref="Robot_8cpp" startline="355" endline="362">CalcBounds</referencedby>
+        <referencedby refid="classRobot_1a4987b293d92f59ca29693e2b72eddf7e" compoundref="Robot_8cpp" startline="28" endline="38">Robot</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1a33f46e27da3f27dfb74855ef9c16bc33" prot="private" static="no" mutable="no">
         <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
@@ -494,11 +494,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="70" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="70" bodyend="-1"/>
-        <referencedby refid="classRobot_1a984fba314296d7a4016afb093f775c0d" compoundref="Robot_8cpp" startline="41" endline="71">FindNewTarget</referencedby>
-        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="23" endline="39">Move</referencedby>
-        <referencedby refid="classRobot_1a4987b293d92f59ca29693e2b72eddf7e" compoundref="Robot_8cpp" startline="5" endline="15">Robot</referencedby>
-        <referencedby refid="classRobot_1aee4bb0426347e74be86b9e330c219d2c" compoundref="Robot_8cpp" startline="73" endline="76">SetShipTarget</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="87" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="87" bodyend="-1"/>
+        <referencedby refid="classRobot_1a984fba314296d7a4016afb093f775c0d" compoundref="Robot_8cpp" startline="99" endline="129">FindNewTarget</referencedby>
+        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="66" endline="82">Move</referencedby>
+        <referencedby refid="classRobot_1a4987b293d92f59ca29693e2b72eddf7e" compoundref="Robot_8cpp" startline="28" endline="38">Robot</referencedby>
+        <referencedby refid="classRobot_1aee4bb0426347e74be86b9e330c219d2c" compoundref="Robot_8cpp" startline="142" endline="145">SetShipTarget</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1a87b80e46fcc856d4e56f49f75c611efd" prot="private" static="no" mutable="no">
         <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
@@ -511,9 +511,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="71" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="71" bodyend="-1"/>
-        <referencedby refid="classRobot_1a1b94e72fd005902fa335e3f6d827190b" compoundref="Robot_8cpp" startline="215" endline="223">GetDirVec</referencedby>
-        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="23" endline="39">Move</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="88" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="88" bodyend="-1"/>
+        <referencedby refid="classRobot_1a1b94e72fd005902fa335e3f6d827190b" compoundref="Robot_8cpp" startline="377" endline="385">GetDirVec</referencedby>
+        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="66" endline="82">Move</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobot_1a294f15367227f0917670c30be43dfeed" prot="private" static="no" mutable="no">
         <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
@@ -526,13 +526,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="72" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="72" bodyend="-1"/>
-        <referencedby refid="classRobot_1a4e7360385dab7b3974d6ca7c6464b747" compoundref="Robot_8cpp" startline="206" endline="213">CalcBounds</referencedby>
-        <referencedby refid="classRobot_1a984fba314296d7a4016afb093f775c0d" compoundref="Robot_8cpp" startline="41" endline="71">FindNewTarget</referencedby>
-        <referencedby refid="classRobot_1a1b94e72fd005902fa335e3f6d827190b" compoundref="Robot_8cpp" startline="215" endline="223">GetDirVec</referencedby>
-        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="23" endline="39">Move</referencedby>
-        <referencedby refid="classRobot_1af64ff1433fcab8e3703a019fcfc55579" compoundref="Robot_8cpp" startline="78" endline="81">Position</referencedby>
-        <referencedby refid="classRobot_1a4987b293d92f59ca29693e2b72eddf7e" compoundref="Robot_8cpp" startline="5" endline="15">Robot</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="89" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="89" bodyend="-1"/>
+        <referencedby refid="classRobot_1a4e7360385dab7b3974d6ca7c6464b747" compoundref="Robot_8cpp" startline="355" endline="362">CalcBounds</referencedby>
+        <referencedby refid="classRobot_1a984fba314296d7a4016afb093f775c0d" compoundref="Robot_8cpp" startline="99" endline="129">FindNewTarget</referencedby>
+        <referencedby refid="classRobot_1a1b94e72fd005902fa335e3f6d827190b" compoundref="Robot_8cpp" startline="377" endline="385">GetDirVec</referencedby>
+        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="66" endline="82">Move</referencedby>
+        <referencedby refid="classRobot_1af64ff1433fcab8e3703a019fcfc55579" compoundref="Robot_8cpp" startline="158" endline="161">Position</referencedby>
+        <referencedby refid="classRobot_1a4987b293d92f59ca29693e2b72eddf7e" compoundref="Robot_8cpp" startline="28" endline="38">Robot</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -547,7 +547,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="13" column="1"/>
+        <location file="ComGLab/Source/Robot.h" line="30" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classRobot_1a4987b293d92f59ca29693e2b72eddf7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -567,20 +567,29 @@
           <declname>SpawnPos</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Constructor. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>RobotType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- value that determines the type of robot spawned Rotation - value that determines the angle which the robot faces SpawnPos - <ref refid="structVector3" kindref="compound">Vector3</ref> value that determines the spawn point of a robot </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting values and normalized vectors </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="18" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="5" bodyend="15"/>
-        <references refid="classRobot_1a4e7360385dab7b3974d6ca7c6464b747" compoundref="Robot_8cpp" startline="206" endline="213">CalcBounds</references>
-        <references refid="classRobot_1a294f15367227f0917670c30be43dfeed" compoundref="Robot_8h" startline="72">CurrPos</references>
-        <references refid="classRobot_1a1b94e72fd005902fa335e3f6d827190b" compoundref="Robot_8cpp" startline="215" endline="223">GetDirVec</references>
-        <references refid="classRobot_1a6fce8adac8c12ad74d7aacd344546c11" compoundref="Robot_8h" startline="63">RobotType</references>
-        <references refid="classRobot_1a9e326656a1dfed623ad74765df36336b" compoundref="Robot_8h" startline="67">RobotTypeVal</references>
-        <references refid="classRobot_1a7d0b37036a8f2b117a86efe9cf828b2c" compoundref="Robot_8h" startline="34">Rotation</references>
-        <references refid="classRobot_1a8b6afcea9f407806b66328ee37fea7bc" compoundref="Robot_8cpp" startline="225" endline="259">SetStats</references>
-        <references refid="classRobot_1a33f46e27da3f27dfb74855ef9c16bc33" compoundref="Robot_8h" startline="70">TargetPos</references>
+        <location file="ComGLab/Source/Robot.h" line="35" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="28" bodyend="38"/>
+        <references refid="classRobot_1a4e7360385dab7b3974d6ca7c6464b747" compoundref="Robot_8cpp" startline="355" endline="362">CalcBounds</references>
+        <references refid="classRobot_1a294f15367227f0917670c30be43dfeed" compoundref="Robot_8h" startline="89">CurrPos</references>
+        <references refid="classRobot_1a1b94e72fd005902fa335e3f6d827190b" compoundref="Robot_8cpp" startline="377" endline="385">GetDirVec</references>
+        <references refid="classRobot_1a6fce8adac8c12ad74d7aacd344546c11" compoundref="Robot_8h" startline="80">RobotType</references>
+        <references refid="classRobot_1a9e326656a1dfed623ad74765df36336b" compoundref="Robot_8h" startline="84">RobotTypeVal</references>
+        <references refid="classRobot_1a7d0b37036a8f2b117a86efe9cf828b2c" compoundref="Robot_8h" startline="51">Rotation</references>
+        <references refid="classRobot_1a8b6afcea9f407806b66328ee37fea7bc" compoundref="Robot_8cpp" startline="401" endline="435">SetStats</references>
+        <references refid="classRobot_1a33f46e27da3f27dfb74855ef9c16bc33" compoundref="Robot_8h" startline="87">TargetPos</references>
       </memberdef>
       <memberdef kind="function" id="classRobot_1a924320124b09c2f2ac1621aa210d5f38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -588,12 +597,12 @@
         <argsstring>()</argsstring>
         <name>~Robot</name>
         <briefdescription>
-        </briefdescription>
+<para>Destrutctor. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="19" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="17" bodyend="20"/>
+        <location file="ComGLab/Source/Robot.h" line="36" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="47" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
@@ -601,21 +610,30 @@
         <argsstring>()</argsstring>
         <name>Move</name>
         <briefdescription>
-        </briefdescription>
+<para>Method that handles each robot&apos;s movements. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>die</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- boolean which determines if the robot is dead or not CurrPos - <ref refid="structVector3" kindref="compound">Vector3</ref> value which determines the robot&apos;s current position DirVec - <ref refid="structVector3" kindref="compound">Vector3</ref> value which determines the robot&apos;s direction vector Speed - value which determines the robot&apos;s walking speed </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting values and normalized vectors </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="20" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="23" bodyend="39"/>
-        <references refid="classRobot_1a4e7360385dab7b3974d6ca7c6464b747" compoundref="Robot_8cpp" startline="206" endline="213">CalcBounds</references>
-        <references refid="classRobot_1a294f15367227f0917670c30be43dfeed" compoundref="Robot_8h" startline="72">CurrPos</references>
-        <references refid="classRobot_1afdab2bc274db60b950f5bb8d99f16ec7" compoundref="Robot_8h" startline="57">die</references>
-        <references refid="classRobot_1a87b80e46fcc856d4e56f49f75c611efd" compoundref="Robot_8h" startline="71">DirVec</references>
-        <references refid="classRobot_1a984fba314296d7a4016afb093f775c0d" compoundref="Robot_8cpp" startline="41" endline="71">FindNewTarget</references>
-        <references refid="classRobot_1a1b94e72fd005902fa335e3f6d827190b" compoundref="Robot_8cpp" startline="215" endline="223">GetDirVec</references>
-        <references refid="classRobot_1a6fdd2278c1dae3d19ea37d0305cfb51d" compoundref="Robot_8cpp" startline="96" endline="99">GetHealth</references>
-        <references refid="classRobot_1aa0046e0d301058ea4771b04e52d2df71" compoundref="Robot_8h" startline="65">Speed</references>
-        <references refid="classRobot_1a33f46e27da3f27dfb74855ef9c16bc33" compoundref="Robot_8h" startline="70">TargetPos</references>
+        <location file="ComGLab/Source/Robot.h" line="37" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="66" bodyend="82"/>
+        <references refid="classRobot_1a4e7360385dab7b3974d6ca7c6464b747" compoundref="Robot_8cpp" startline="355" endline="362">CalcBounds</references>
+        <references refid="classRobot_1a294f15367227f0917670c30be43dfeed" compoundref="Robot_8h" startline="89">CurrPos</references>
+        <references refid="classRobot_1afdab2bc274db60b950f5bb8d99f16ec7" compoundref="Robot_8h" startline="74">die</references>
+        <references refid="classRobot_1a87b80e46fcc856d4e56f49f75c611efd" compoundref="Robot_8h" startline="88">DirVec</references>
+        <references refid="classRobot_1a984fba314296d7a4016afb093f775c0d" compoundref="Robot_8cpp" startline="99" endline="129">FindNewTarget</references>
+        <references refid="classRobot_1a1b94e72fd005902fa335e3f6d827190b" compoundref="Robot_8cpp" startline="377" endline="385">GetDirVec</references>
+        <references refid="classRobot_1a6fdd2278c1dae3d19ea37d0305cfb51d" compoundref="Robot_8cpp" startline="200" endline="203">GetHealth</references>
+        <references refid="classRobot_1aa0046e0d301058ea4771b04e52d2df71" compoundref="Robot_8h" startline="82">Speed</references>
+        <references refid="classRobot_1a33f46e27da3f27dfb74855ef9c16bc33" compoundref="Robot_8h" startline="87">TargetPos</references>
         <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
         <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
         <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
@@ -626,20 +644,29 @@
         <argsstring>()</argsstring>
         <name>FindNewTarget</name>
         <briefdescription>
-        </briefdescription>
+<para>Chooses a new target for the robots to walk to. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isMothership</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- boolean that determines if the current stage is the boss fight Randomize - value that is randomized Base - a boundary inside the base BaseOuter - a boundary around the base TargetPos - <ref refid="structVector3" kindref="compound">Vector3</ref> value that determines the robots&apos; target </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting values and normalized vectors </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="21" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="41" bodyend="71"/>
-        <references refid="structBoundary_1ac8729f6b5ec80c5af1151892c0a3e9b8" compoundref="Boundary_8cpp" startline="13" endline="24">Boundary::BoundaryCheck</references>
-        <references refid="classRobot_1a294f15367227f0917670c30be43dfeed" compoundref="Robot_8h" startline="72">CurrPos</references>
-        <references refid="classRobot_1aaa46b0d0467ee2c4e965cce8d74276da" compoundref="Robot_8h" startline="30">isMothership</references>
-        <references refid="classRobot_1a33f46e27da3f27dfb74855ef9c16bc33" compoundref="Robot_8h" startline="70">TargetPos</references>
+        <location file="ComGLab/Source/Robot.h" line="38" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="99" bodyend="129"/>
+        <references refid="structBoundary_1ac8729f6b5ec80c5af1151892c0a3e9b8" compoundref="Boundary_8cpp" startline="58" endline="69">Boundary::BoundaryCheck</references>
+        <references refid="classRobot_1a294f15367227f0917670c30be43dfeed" compoundref="Robot_8h" startline="89">CurrPos</references>
+        <references refid="classRobot_1aaa46b0d0467ee2c4e965cce8d74276da" compoundref="Robot_8h" startline="47">isMothership</references>
+        <references refid="classRobot_1a33f46e27da3f27dfb74855ef9c16bc33" compoundref="Robot_8h" startline="87">TargetPos</references>
         <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
         <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
         <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
-        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="23" endline="39">Move</referencedby>
+        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="66" endline="82">Move</referencedby>
       </memberdef>
       <memberdef kind="function" id="classRobot_1af64ff1433fcab8e3703a019fcfc55579" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
@@ -647,13 +674,22 @@
         <argsstring>()</argsstring>
         <name>Position</name>
         <briefdescription>
-        </briefdescription>
+<para>Calls the value for each robot&apos;s current position. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>CurrPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="structVector3" kindref="compound">Vector3</ref> value which determines the robot&apos;s current position </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting normalized vectors </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="22" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="78" bodyend="81"/>
-        <references refid="classRobot_1a294f15367227f0917670c30be43dfeed" compoundref="Robot_8h" startline="72">CurrPos</references>
+        <location file="ComGLab/Source/Robot.h" line="39" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="158" bodyend="161"/>
+        <references refid="classRobot_1a294f15367227f0917670c30be43dfeed" compoundref="Robot_8h" startline="89">CurrPos</references>
       </memberdef>
       <memberdef kind="function" id="classRobot_1ad545d19adff26cb99fda1c4408f51e69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -665,17 +701,26 @@
           <declname>WepSys</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Checks if the player or a bullet has entered a robot&apos;s boundary. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>BulletUsed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- boolean that checks if the bullet has hit a robot Health - value that determines each robot&apos;s health Damage - value that determines each bullet&apos;s damage </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting values </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="23" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="83" bodyend="94"/>
-        <references refid="structBoundary_1ac8729f6b5ec80c5af1151892c0a3e9b8" compoundref="Boundary_8cpp" startline="13" endline="24">Boundary::BoundaryCheck</references>
-        <references refid="classRobot_1a2ba266b1017ca2c3960a8396b3220810" compoundref="Robot_8h" startline="25">BoundingBox</references>
-        <references refid="classWeaponSystem_1abf033a8b540f147675c1f4620d67554a" compoundref="WeaponSystem_8h" startline="12">WeaponSystem::BulletList</references>
-        <references refid="classRobot_1aed6a3eef0b1ff14618a60e007f045dda" compoundref="Robot_8h" startline="66">Health</references>
-        <references refid="classRobot_1ab4de60946e11a6216df1c203f2b32797" compoundref="Robot_8cpp" startline="101" endline="104">SetHealth</references>
+        <location file="ComGLab/Source/Robot.h" line="40" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="176" bodyend="187"/>
+        <references refid="structBoundary_1ac8729f6b5ec80c5af1151892c0a3e9b8" compoundref="Boundary_8cpp" startline="58" endline="69">Boundary::BoundaryCheck</references>
+        <references refid="classRobot_1a2ba266b1017ca2c3960a8396b3220810" compoundref="Robot_8h" startline="42">BoundingBox</references>
+        <references refid="classWeaponSystem_1abf033a8b540f147675c1f4620d67554a" compoundref="WeaponSystem_8h" startline="29">WeaponSystem::BulletList</references>
+        <references refid="classRobot_1aed6a3eef0b1ff14618a60e007f045dda" compoundref="Robot_8h" startline="83">Health</references>
+        <references refid="classRobot_1ab4de60946e11a6216df1c203f2b32797" compoundref="Robot_8cpp" startline="216" endline="219">SetHealth</references>
       </memberdef>
       <memberdef kind="function" id="classRobot_1a6fdd2278c1dae3d19ea37d0305cfb51d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -683,14 +728,23 @@
         <argsstring>()</argsstring>
         <name>GetHealth</name>
         <briefdescription>
-        </briefdescription>
+<para>Calls the value for each robot&apos;s current heatlth. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Health</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- value that determines each robot&apos;s health </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting values </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="24" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="96" bodyend="99"/>
-        <references refid="classRobot_1aed6a3eef0b1ff14618a60e007f045dda" compoundref="Robot_8h" startline="66">Health</references>
-        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="23" endline="39">Move</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="41" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="200" bodyend="203"/>
+        <references refid="classRobot_1aed6a3eef0b1ff14618a60e007f045dda" compoundref="Robot_8h" startline="83">Health</references>
+        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="66" endline="82">Move</referencedby>
       </memberdef>
       <memberdef kind="function" id="classRobot_1ab4de60946e11a6216df1c203f2b32797" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -702,14 +756,23 @@
           <declname>newHP</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Sets a new value for each robot&apos;s health. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Health</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- value that determines each robot&apos;s health </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting normalized vectors </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="26" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="101" bodyend="104"/>
-        <references refid="classRobot_1aed6a3eef0b1ff14618a60e007f045dda" compoundref="Robot_8h" startline="66">Health</references>
-        <referencedby refid="classRobot_1ad545d19adff26cb99fda1c4408f51e69" compoundref="Robot_8cpp" startline="83" endline="94">BoundsCheck</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="43" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="216" bodyend="219"/>
+        <references refid="classRobot_1aed6a3eef0b1ff14618a60e007f045dda" compoundref="Robot_8h" startline="83">Health</references>
+        <referencedby refid="classRobot_1ad545d19adff26cb99fda1c4408f51e69" compoundref="Robot_8cpp" startline="176" endline="187">BoundsCheck</referencedby>
       </memberdef>
       <memberdef kind="function" id="classRobot_1a47accc655f0909134cf572af6c8d5288" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -721,27 +784,36 @@
           <declname>dt</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Animations for the robots. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>leftarmrotate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- boolean that determines if the left arm is being rotated rotatelefthand - value that determines the angle of the left hand&apos;s rotation leftarmrotatelimite - value that determines the maximum angle of rotation for the left arm rightarmrotate - boolean that determines if the right arm is being rotated rotaterighthand - value that determines the angle of the right hand&apos;s rotation rightarmrotatelimite - value that determines the maximum angle of rotation for the right arm leftleg - boolean that determines if the left leg is moving moveleftleg - value that determines how much the left leg is moved rightleg - boolean that determines if the right leg is moving moverightleg - value that determines how much the right leg is moved die - boolean which determines if the robot is dead or not collapse - value for animating robot deadanimationover - boolean that determines if the death animation is over </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting values </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="28" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="106" bodyend="204"/>
-        <references refid="classRobot_1a6cce3b0d17bb255ab2a6d4ba054179a0" compoundref="Robot_8h" startline="56">collapse</references>
-        <references refid="classRobot_1a29f9ae8e5514465862b8b613ddf2fae4" compoundref="Robot_8h" startline="58">deadanimationover</references>
-        <references refid="classRobot_1afdab2bc274db60b950f5bb8d99f16ec7" compoundref="Robot_8h" startline="57">die</references>
-        <references refid="classRobot_1a147a239afd0bd95ce87ad949585e9ad0" compoundref="Robot_8h" startline="39">leftarmrotate</references>
-        <references refid="classRobot_1a8738b97a8b7e6ac3b199392bc0c8fb07" compoundref="Robot_8h" startline="37">leftarmrotatelimit</references>
-        <references refid="classRobot_1a3f31cc694496abc4cf4caf24f0cecee0" compoundref="Robot_8h" startline="46">leftleg</references>
-        <references refid="classRobot_1aa22a3eca7c16ae45834b329ba5dc72c9" compoundref="Robot_8h" startline="42">leftleglimit</references>
-        <references refid="classRobot_1adef30811b8c499303c689a400b3311f6" compoundref="Robot_8h" startline="44">moveleftleg</references>
-        <references refid="classRobot_1a81a4dd32f998ddc5bf1e43a103a04bc4" compoundref="Robot_8h" startline="45">moverightleg</references>
-        <references refid="classRobot_1a79b340ad832995d7d8cacac9e1389e41" compoundref="Robot_8h" startline="40">rightarmrotate</references>
-        <references refid="classRobot_1a8058b1a46e38164e0b2df93a069c0759" compoundref="Robot_8h" startline="38">rightarmrotatelimit</references>
-        <references refid="classRobot_1ac0e26f325babdf4b7e6f5c80e88e6bd6" compoundref="Robot_8h" startline="47">rightleg</references>
-        <references refid="classRobot_1a6d6e3ed408a8d3b186367ad5f27e06fa" compoundref="Robot_8h" startline="43">rightleglimit</references>
-        <references refid="classRobot_1afac8bceeb1a68029d42e6a049164e11a" compoundref="Robot_8h" startline="35">rotatelefthand</references>
-        <references refid="classRobot_1ad7d06ebaf735df96d17d3c5cacf58fb3" compoundref="Robot_8h" startline="36">rotaterighthand</references>
+        <location file="ComGLab/Source/Robot.h" line="45" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="244" bodyend="342"/>
+        <references refid="classRobot_1a6cce3b0d17bb255ab2a6d4ba054179a0" compoundref="Robot_8h" startline="73">collapse</references>
+        <references refid="classRobot_1a29f9ae8e5514465862b8b613ddf2fae4" compoundref="Robot_8h" startline="75">deadanimationover</references>
+        <references refid="classRobot_1afdab2bc274db60b950f5bb8d99f16ec7" compoundref="Robot_8h" startline="74">die</references>
+        <references refid="classRobot_1a147a239afd0bd95ce87ad949585e9ad0" compoundref="Robot_8h" startline="56">leftarmrotate</references>
+        <references refid="classRobot_1a8738b97a8b7e6ac3b199392bc0c8fb07" compoundref="Robot_8h" startline="54">leftarmrotatelimit</references>
+        <references refid="classRobot_1a3f31cc694496abc4cf4caf24f0cecee0" compoundref="Robot_8h" startline="63">leftleg</references>
+        <references refid="classRobot_1aa22a3eca7c16ae45834b329ba5dc72c9" compoundref="Robot_8h" startline="59">leftleglimit</references>
+        <references refid="classRobot_1adef30811b8c499303c689a400b3311f6" compoundref="Robot_8h" startline="61">moveleftleg</references>
+        <references refid="classRobot_1a81a4dd32f998ddc5bf1e43a103a04bc4" compoundref="Robot_8h" startline="62">moverightleg</references>
+        <references refid="classRobot_1a79b340ad832995d7d8cacac9e1389e41" compoundref="Robot_8h" startline="57">rightarmrotate</references>
+        <references refid="classRobot_1a8058b1a46e38164e0b2df93a069c0759" compoundref="Robot_8h" startline="55">rightarmrotatelimit</references>
+        <references refid="classRobot_1ac0e26f325babdf4b7e6f5c80e88e6bd6" compoundref="Robot_8h" startline="64">rightleg</references>
+        <references refid="classRobot_1a6d6e3ed408a8d3b186367ad5f27e06fa" compoundref="Robot_8h" startline="60">rightleglimit</references>
+        <references refid="classRobot_1afac8bceeb1a68029d42e6a049164e11a" compoundref="Robot_8h" startline="52">rotatelefthand</references>
+        <references refid="classRobot_1ad7d06ebaf735df96d17d3c5cacf58fb3" compoundref="Robot_8h" startline="53">rotaterighthand</references>
       </memberdef>
       <memberdef kind="function" id="classRobot_1a4e7360385dab7b3974d6ca7c6464b747" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -749,21 +821,30 @@
         <argsstring>()</argsstring>
         <name>CalcBounds</name>
         <briefdescription>
-        </briefdescription>
+<para>Calculates the boundary of each robot. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>CurrPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="structVector3" kindref="compound">Vector3</ref> value which determines the robot&apos;s current position </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting normalized vectors </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="29" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="206" bodyend="213"/>
-        <references refid="classRobot_1a2ba266b1017ca2c3960a8396b3220810" compoundref="Robot_8h" startline="25">BoundingBox</references>
-        <references refid="classRobot_1a294f15367227f0917670c30be43dfeed" compoundref="Robot_8h" startline="72">CurrPos</references>
-        <references refid="classRobot_1a9e326656a1dfed623ad74765df36336b" compoundref="Robot_8h" startline="67">RobotTypeVal</references>
-        <references refid="structBoundary_1a3cf640001c6bbc842d129f453fb3441b" compoundref="Boundary_8cpp" startline="3" endline="11">Boundary::set</references>
+        <location file="ComGLab/Source/Robot.h" line="46" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="355" bodyend="362"/>
+        <references refid="classRobot_1a2ba266b1017ca2c3960a8396b3220810" compoundref="Robot_8h" startline="42">BoundingBox</references>
+        <references refid="classRobot_1a294f15367227f0917670c30be43dfeed" compoundref="Robot_8h" startline="89">CurrPos</references>
+        <references refid="classRobot_1a9e326656a1dfed623ad74765df36336b" compoundref="Robot_8h" startline="84">RobotTypeVal</references>
+        <references refid="structBoundary_1a3cf640001c6bbc842d129f453fb3441b" compoundref="Boundary_8cpp" startline="29" endline="37">Boundary::set</references>
         <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
         <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
         <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
-        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="23" endline="39">Move</referencedby>
-        <referencedby refid="classRobot_1a4987b293d92f59ca29693e2b72eddf7e" compoundref="Robot_8cpp" startline="5" endline="15">Robot</referencedby>
+        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="66" endline="82">Move</referencedby>
+        <referencedby refid="classRobot_1a4987b293d92f59ca29693e2b72eddf7e" compoundref="Robot_8cpp" startline="28" endline="38">Robot</referencedby>
       </memberdef>
       <memberdef kind="function" id="classRobot_1aee4bb0426347e74be86b9e330c219d2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -775,13 +856,22 @@
           <declname>newTarget</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Sets a new target for the mothership. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>TargetPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="structVector3" kindref="compound">Vector3</ref> value that determines the target </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting normalized vectors </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="31" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="73" bodyend="76"/>
-        <references refid="classRobot_1a33f46e27da3f27dfb74855ef9c16bc33" compoundref="Robot_8h" startline="70">TargetPos</references>
+        <location file="ComGLab/Source/Robot.h" line="48" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="142" bodyend="145"/>
+        <references refid="classRobot_1a33f46e27da3f27dfb74855ef9c16bc33" compoundref="Robot_8h" startline="87">TargetPos</references>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -795,18 +885,27 @@
           <declname>Target</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Calculates the direction vector. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>DirVec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- <ref refid="structVector3" kindref="compound">Vector3</ref> value which determines the robot&apos;s direction vector Target - <ref refid="structVector3" kindref="compound">Vector3</ref> value that determines the robots&apos; target CurrPos - <ref refid="structVector3" kindref="compound">Vector3</ref> value which determines the robot&apos;s current position </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting normalized vectors </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="61" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="215" bodyend="223"/>
-        <references refid="classRobot_1a294f15367227f0917670c30be43dfeed" compoundref="Robot_8h" startline="72">CurrPos</references>
-        <references refid="classRobot_1a87b80e46fcc856d4e56f49f75c611efd" compoundref="Robot_8h" startline="71">DirVec</references>
+        <location file="ComGLab/Source/Robot.h" line="78" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="377" bodyend="385"/>
+        <references refid="classRobot_1a294f15367227f0917670c30be43dfeed" compoundref="Robot_8h" startline="89">CurrPos</references>
+        <references refid="classRobot_1a87b80e46fcc856d4e56f49f75c611efd" compoundref="Robot_8h" startline="88">DirVec</references>
         <references refid="structVector3_1a200024a8442329de9a625ed58ffe7075" compoundref="Vector3_8cpp" startline="273" endline="276">Vector3::Length</references>
         <references refid="structVector3_1aaef4f25a38878a640ab4a48002a7eff8" compoundref="Vector3_8cpp" startline="358" endline="367">Vector3::Normalize</references>
-        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="23" endline="39">Move</referencedby>
-        <referencedby refid="classRobot_1a4987b293d92f59ca29693e2b72eddf7e" compoundref="Robot_8cpp" startline="5" endline="15">Robot</referencedby>
+        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="66" endline="82">Move</referencedby>
+        <referencedby refid="classRobot_1a4987b293d92f59ca29693e2b72eddf7e" compoundref="Robot_8cpp" startline="28" endline="38">Robot</referencedby>
       </memberdef>
       <memberdef kind="function" id="classRobot_1a8b6afcea9f407806b66328ee37fea7bc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -816,40 +915,50 @@
         <param>
           <type>int</type>
           <declname>Type</declname>
+          <defname>Level</defname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Sets the values of each stat for every robot type. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>RobotType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- value that determines the type of robot spawned Health - value that determines each robot&apos;s health Damage - value that determines each robot&apos;s damage Speed - value which determines the robot&apos;s walking speed </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting values </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Robot.h" line="62" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="225" bodyend="259"/>
-        <references refid="classRobot_1afd1098da4999f2da827916e5401b8832" compoundref="Robot_8h" startline="64">Damage</references>
-        <references refid="classRobot_1aed6a3eef0b1ff14618a60e007f045dda" compoundref="Robot_8h" startline="66">Health</references>
-        <references refid="classRobot_1a73591651f9b97f8adbc09b6d5fcc71f3a359c69247c081778d742eb90a1ecd443" compoundref="Robot_8h" startline="16">Melee</references>
-        <references refid="classRobot_1a6fce8adac8c12ad74d7aacd344546c11" compoundref="Robot_8h" startline="63">RobotType</references>
-        <references refid="classRobot_1aa0046e0d301058ea4771b04e52d2df71" compoundref="Robot_8h" startline="65">Speed</references>
-        <referencedby refid="classRobot_1a4987b293d92f59ca29693e2b72eddf7e" compoundref="Robot_8cpp" startline="5" endline="15">Robot</referencedby>
+        <location file="ComGLab/Source/Robot.h" line="79" column="1" bodyfile="ComGLab/Source/Robot.cpp" bodystart="401" bodyend="435"/>
+        <references refid="classRobot_1afd1098da4999f2da827916e5401b8832" compoundref="Robot_8h" startline="81">Damage</references>
+        <references refid="classRobot_1aed6a3eef0b1ff14618a60e007f045dda" compoundref="Robot_8h" startline="83">Health</references>
+        <references refid="classRobot_1a73591651f9b97f8adbc09b6d5fcc71f3a359c69247c081778d742eb90a1ecd443" compoundref="Robot_8h" startline="33">Melee</references>
+        <references refid="classRobot_1a6fce8adac8c12ad74d7aacd344546c11" compoundref="Robot_8h" startline="80">RobotType</references>
+        <references refid="classRobot_1aa0046e0d301058ea4771b04e52d2df71" compoundref="Robot_8h" startline="82">Speed</references>
+        <referencedby refid="classRobot_1a4987b293d92f59ca29693e2b72eddf7e" compoundref="Robot_8cpp" startline="28" endline="38">Robot</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Defines the methods, enums and variables for <ref refid="classRobot" kindref="compound">Robot</ref>. </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para>Class <ref refid="classRobot" kindref="compound">Robot</ref>: </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="564">
+      <node id="499">
         <label>R_Type</label>
       </node>
-      <node id="565">
+      <node id="500">
         <label>float</label>
       </node>
-      <node id="563">
+      <node id="498">
         <label>Robot</label>
         <link refid="classRobot"/>
-        <childnode refid="564" relation="usage">
+        <childnode refid="499" relation="usage">
           <edgelabel>RobotType</edgelabel>
         </childnode>
-        <childnode refid="565" relation="usage">
+        <childnode refid="500" relation="usage">
           <edgelabel>collapse</edgelabel>
           <edgelabel>moveleftleg</edgelabel>
           <edgelabel>moverightleg</edgelabel>
@@ -862,18 +971,18 @@
           <edgelabel>rightarmattacklimit</edgelabel>
           <edgelabel>...</edgelabel>
         </childnode>
-        <childnode refid="566" relation="usage">
+        <childnode refid="501" relation="usage">
           <edgelabel>DirVec</edgelabel>
           <edgelabel>CurrPos</edgelabel>
           <edgelabel>TargetPos</edgelabel>
         </childnode>
-        <childnode refid="567" relation="usage">
+        <childnode refid="502" relation="usage">
           <edgelabel>RobotTypeVal</edgelabel>
         </childnode>
-        <childnode refid="568" relation="usage">
+        <childnode refid="503" relation="usage">
           <edgelabel>BoundingBox</edgelabel>
         </childnode>
-        <childnode refid="569" relation="usage">
+        <childnode refid="504" relation="usage">
           <edgelabel>isMothership</edgelabel>
           <edgelabel>robotleftattack</edgelabel>
           <edgelabel>leftleg</edgelabel>
@@ -885,13 +994,13 @@
           <edgelabel>deadanimationover</edgelabel>
         </childnode>
       </node>
-      <node id="567">
+      <node id="502">
         <label>int</label>
       </node>
-      <node id="568">
+      <node id="503">
         <label>Boundary</label>
         <link refid="structBoundary"/>
-        <childnode refid="565" relation="usage">
+        <childnode refid="500" relation="usage">
           <edgelabel>zMin</edgelabel>
           <edgelabel>yMin</edgelabel>
           <edgelabel>zMax</edgelabel>
@@ -899,31 +1008,31 @@
           <edgelabel>xMin</edgelabel>
           <edgelabel>xMax</edgelabel>
         </childnode>
-        <childnode refid="569" relation="usage">
+        <childnode refid="504" relation="usage">
           <edgelabel>active</edgelabel>
           <edgelabel>isWithin</edgelabel>
         </childnode>
-        <childnode refid="570" relation="usage">
+        <childnode refid="505" relation="usage">
           <edgelabel>type</edgelabel>
         </childnode>
       </node>
-      <node id="570">
+      <node id="505">
         <label>unsigned</label>
       </node>
-      <node id="569">
+      <node id="504">
         <label>bool</label>
       </node>
-      <node id="566">
+      <node id="501">
         <label>Vector3</label>
         <link refid="structVector3"/>
-        <childnode refid="565" relation="usage">
+        <childnode refid="500" relation="usage">
           <edgelabel>x</edgelabel>
           <edgelabel>y</edgelabel>
           <edgelabel>z</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="ComGLab/Source/Robot.h" line="11" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="10" bodyend="73"/>
+    <location file="ComGLab/Source/Robot.h" line="28" column="1" bodyfile="ComGLab/Source/Robot.h" bodystart="27" bodyend="90"/>
     <listofallmembers>
       <member refid="classRobot_1a2ba266b1017ca2c3960a8396b3220810" prot="public" virt="non-virtual"><scope>Robot</scope><name>BoundingBox</name></member>
       <member refid="classRobot_1ad545d19adff26cb99fda1c4408f51e69" prot="public" virt="non-virtual"><scope>Robot</scope><name>BoundsCheck</name></member>

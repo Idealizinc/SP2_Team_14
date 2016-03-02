@@ -1,12 +1,12 @@
 <map id="SP2_Scene::RenderWepScreen" name="SP2_Scene::RenderWepScreen">
 <area shape="rect" id="node2" href="$classMS.html#aac22e39d0ac437fcb85403a9f0a7a25f" title="Pop the top matrix on the matrix stack. " alt="" coords="571,56,681,83"/>
 <area shape="rect" id="node3" href="$classMS.html#a9fb4fff5036f3f197b893f9a579c97b2" title="Make a copy of the top matrix on the matrix stack and push it on top. " alt="" coords="568,107,684,133"/>
-<area shape="rect" id="node4" href="$classSP2__Scene.html#ae91e39146c4052e9e959cb1ff6a2890a" title="SP2_Scene::RenderImageOn\lScreen" alt="" coords="281,209,473,250"/>
-<area shape="rect" id="node25" href="$classSP2__Scene.html#a523ce5a26d1efa53a575081ebb2a2919" title="SP2_Scene::RenderMeshOnScreen" alt="" coords="261,157,492,184"/>
-<area shape="rect" id="node26" href="$classSP2__Scene.html#a40721f5409a15245989ab79baf848996" title="SP2_Scene::RenderTextOnScreen" alt="" coords="265,309,488,336"/>
+<area shape="rect" id="node4" href="$classSP2__Scene.html#ae91e39146c4052e9e959cb1ff6a2890a" title="method that renders images on screen " alt="" coords="281,209,473,250"/>
+<area shape="rect" id="node25" href="$classSP2__Scene.html#a523ce5a26d1efa53a575081ebb2a2919" title="Method that renders a mesh on screen. " alt="" coords="261,157,492,184"/>
+<area shape="rect" id="node26" href="$classSP2__Scene.html#a40721f5409a15245989ab79baf848996" title="Method that renders text on screen. " alt="" coords="265,309,488,336"/>
 <area shape="rect" id="node5" href="$classMS.html#a77c5f7e4a21ea48dcf902a7ff6824a11" title="Replace the top matrix with an identity matrix. " alt="" coords="566,259,686,285"/>
 <area shape="rect" id="node8" href="$classMS.html#a86606fe9f575ccb747d77195c8aefdaf" title="Return the top matrix with a new matrix. " alt="" coords="569,360,683,387"/>
-<area shape="rect" id="node9" href="$classSP2__Scene.html#a0cd5fd0736fa9288f21b0712d22ff17c" title="SP2_Scene::RenderMesh" alt="" coords="540,157,712,184"/>
+<area shape="rect" id="node9" href="$classSP2__Scene.html#a0cd5fd0736fa9288f21b0712d22ff17c" title="Method that renders a mesh in the scene. " alt="" coords="540,157,712,184"/>
 <area shape="rect" id="node17" href="$classMS.html#a6ce592114042b920b648bca5519690cd" title="Multiply the top matrix with a rotation matrix based on the following parameters. ..." alt="" coords="582,5,670,32"/>
 <area shape="rect" id="node19" href="$classMS.html#a52109795de960e24663b315e9128533f" title="Multiply the top matrix with a scale matrix based on the following parameters. " alt="" coords="585,309,667,336"/>
 <area shape="rect" id="node21" href="$classMtx44.html#a0a4c7818be7c1aeb0601ad069c1a591d" title="Setup orthogonal matrix. " alt="" coords="560,208,692,235"/>

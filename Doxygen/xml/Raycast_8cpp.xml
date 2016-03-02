@@ -4,111 +4,108 @@
     <compoundname>Raycast.cpp</compoundname>
     <includes refid="Raycast_8h" local="yes">RayCast.h</includes>
     <incdepgraph>
-      <node id="1979">
+      <node id="1558">
         <label>MyMath.h</label>
         <link refid="MyMath_8h"/>
-        <childnode refid="1980" relation="include">
+        <childnode refid="1559" relation="include">
         </childnode>
-        <childnode refid="1981" relation="include">
+        <childnode refid="1560" relation="include">
         </childnode>
-        <childnode refid="1982" relation="include">
+        <childnode refid="1561" relation="include">
         </childnode>
-        <childnode refid="1983" relation="include">
+        <childnode refid="1562" relation="include">
         </childnode>
       </node>
-      <node id="1977">
+      <node id="1556">
         <label>RayCast.h</label>
         <link refid="Raycast_8h"/>
-        <childnode refid="1978" relation="include">
+        <childnode refid="1557" relation="include">
         </childnode>
-        <childnode refid="1985" relation="include">
+        <childnode refid="1564" relation="include">
         </childnode>
       </node>
-      <node id="1980">
+      <node id="1559">
         <label>cmath</label>
       </node>
-      <node id="1978">
+      <node id="1557">
         <label>Vector3.h</label>
         <link refid="Vector3_8h"/>
-        <childnode refid="1979" relation="include">
+        <childnode refid="1558" relation="include">
         </childnode>
-        <childnode refid="1984" relation="include">
+        <childnode refid="1563" relation="include">
         </childnode>
       </node>
-      <node id="1981">
+      <node id="1560">
         <label>exception</label>
       </node>
-      <node id="1976">
+      <node id="1555">
         <label>ComGLab/Source/Raycast.cpp</label>
         <link refid="Raycast.cpp"/>
-        <childnode refid="1977" relation="include">
+        <childnode refid="1556" relation="include">
         </childnode>
       </node>
-      <node id="1985">
+      <node id="1564">
         <label>Boundary.h</label>
         <link refid="Boundary_8h"/>
       </node>
-      <node id="1982">
+      <node id="1561">
         <label>ctime</label>
       </node>
-      <node id="1983">
+      <node id="1562">
         <label>cstdlib</label>
       </node>
-      <node id="1984">
+      <node id="1563">
         <label>iostream</label>
       </node>
     </incdepgraph>
     <briefdescription>
-    </briefdescription>
+<para>.cpp file that defines Raycast </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para><simplesect kind="author"><para>Ryan Lim Rui An </para></simplesect>
+<simplesect kind="par"><title>email: 150577L.nyp.edu.sg</title><para></para></simplesect>
+</para>    </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Raycast_8h" kindref="compound">RayCast.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3" refid="classRayCast_1a9f407ff03066ed3ff8c38a19c00567d5" refkind="member"><highlight class="normal"><ref refid="classRayCast_1a9f407ff03066ed3ff8c38a19c00567d5" kindref="member">RayCast::~RayCast</ref>()</highlight></codeline>
-<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8" refid="classRayCast_1adbf2ca40b63d9d3507c160579afa575a" refkind="member"><highlight class="normal"><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classRayCast_1adbf2ca40b63d9d3507c160579afa575a" kindref="member">RayCast::Move</ref>()</highlight></codeline>
-<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//CalcIncrement(val);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>.<ref refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" kindref="member">x</ref><sp/>+=<sp/><ref refid="classRayCast_1ad5cc0ccf28e713ea0e4bc57ef5bb2d15" kindref="member">StoredDirVec</ref>.<ref refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" kindref="member">x</ref><sp/>*<sp/><ref refid="classRayCast_1a28653a0f75add596b9be09ac05264f60" kindref="member">Speed</ref>;</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>.<ref refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" kindref="member">y</ref><sp/>+=<sp/><ref refid="classRayCast_1ad5cc0ccf28e713ea0e4bc57ef5bb2d15" kindref="member">StoredDirVec</ref>.<ref refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" kindref="member">y</ref><sp/>*<sp/><ref refid="classRayCast_1a28653a0f75add596b9be09ac05264f60" kindref="member">Speed</ref>;</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>.<ref refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" kindref="member">z</ref><sp/>+=<sp/><ref refid="classRayCast_1ad5cc0ccf28e713ea0e4bc57ef5bb2d15" kindref="member">StoredDirVec</ref>.<ref refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" kindref="member">z</ref><sp/>*<sp/><ref refid="classRayCast_1a28653a0f75add596b9be09ac05264f60" kindref="member">Speed</ref>;</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" kindref="member">CalcBounds</ref>();</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>;</highlight></codeline>
-<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18" refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" kindref="member">RayCast::CalcBounds</ref>()</highlight></codeline>
-<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRayCast_1a146263922bb07f396a06455bf86c22a8" kindref="member">BoundingBox</ref>.<ref refid="structBoundary_1a3cf640001c6bbc842d129f453fb3441b" kindref="member">set</ref>(<ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>.<ref refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" kindref="member">x</ref><sp/>-<sp/>3,<sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>.<ref refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" kindref="member">x</ref><sp/>+<sp/>3,<sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>.<ref refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" kindref="member">z</ref><sp/>-<sp/>3,<sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>.<ref refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" kindref="member">z</ref><sp/>+<sp/>3,<sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>.<ref refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" kindref="member">y</ref><sp/>-<sp/>3,<sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>.<ref refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" kindref="member">y</ref><sp/>+<sp/>3);</highlight></codeline>
-<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Raycast_8h" kindref="compound">RayCast.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classRayCast_1a9f407ff03066ed3ff8c38a19c00567d5" refkind="member"><highlight class="normal"><ref refid="classRayCast_1a9f407ff03066ed3ff8c38a19c00567d5" kindref="member">RayCast::~RayCast</ref>()</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23" refid="classRayCast_1a9f508cc3e3f75cb0a9e4079424753bcb" refkind="member"><highlight class="normal"><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classRayCast_1a9f508cc3e3f75cb0a9e4079424753bcb" kindref="member">RayCast::Position</ref>()</highlight></codeline>
-<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>;</highlight></codeline>
-<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//bool<sp/>RayCast::BoundsCheck(std::list&lt;Robot&gt;<sp/>RobotList)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//{</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>If<sp/>Bullet<sp/>in<sp/>specific<sp/>bounds,<sp/>Wall<sp/>Collision</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Pop<sp/>Bullet.<sp/></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>//Bot<sp/>Bullet<sp/>Trigger<sp/>Check</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>i<sp/>:<sp/>RobotList)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(!i.BoundingBox.BoundaryCheck(RayPos.x,<sp/>RayPos.z,<sp/>RayPos.y))</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i.Health<sp/>=<sp/>i.Health<sp/>-<sp/>Damage;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>true;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Weapon<sp/>Sys<sp/>Detects<sp/>if<sp/>True,<sp/>if<sp/>so<sp/>pop<sp/>shot.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i.Health<sp/>=<sp/>i.Health<sp/>-<sp/>Damage;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>true;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>false;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classRayCast_1adbf2ca40b63d9d3507c160579afa575a" refkind="member"><highlight class="normal"><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classRayCast_1adbf2ca40b63d9d3507c160579afa575a" kindref="member">RayCast::Move</ref>()</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//CalcIncrement(val);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>.<ref refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" kindref="member">x</ref><sp/>+=<sp/><ref refid="classRayCast_1ad5cc0ccf28e713ea0e4bc57ef5bb2d15" kindref="member">StoredDirVec</ref>.<ref refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" kindref="member">x</ref><sp/>*<sp/><ref refid="classRayCast_1a28653a0f75add596b9be09ac05264f60" kindref="member">Speed</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>.<ref refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" kindref="member">y</ref><sp/>+=<sp/><ref refid="classRayCast_1ad5cc0ccf28e713ea0e4bc57ef5bb2d15" kindref="member">StoredDirVec</ref>.<ref refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" kindref="member">y</ref><sp/>*<sp/><ref refid="classRayCast_1a28653a0f75add596b9be09ac05264f60" kindref="member">Speed</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>.<ref refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" kindref="member">z</ref><sp/>+=<sp/><ref refid="classRayCast_1ad5cc0ccf28e713ea0e4bc57ef5bb2d15" kindref="member">StoredDirVec</ref>.<ref refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" kindref="member">z</ref><sp/>*<sp/><ref refid="classRayCast_1a28653a0f75add596b9be09ac05264f60" kindref="member">Speed</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" kindref="member">CalcBounds</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="57"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" kindref="member">RayCast::CalcBounds</ref>()</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRayCast_1a146263922bb07f396a06455bf86c22a8" kindref="member">BoundingBox</ref>.<ref refid="structBoundary_1a3cf640001c6bbc842d129f453fb3441b" kindref="member">set</ref>(<ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>.<ref refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" kindref="member">x</ref><sp/>-<sp/>3,<sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>.<ref refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" kindref="member">x</ref><sp/>+<sp/>3,<sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>.<ref refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" kindref="member">z</ref><sp/>-<sp/>3,<sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>.<ref refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" kindref="member">z</ref><sp/>+<sp/>3,<sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>.<ref refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" kindref="member">y</ref><sp/>-<sp/>3,<sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>.<ref refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" kindref="member">y</ref><sp/>+<sp/>3);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="73"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classRayCast_1a9f508cc3e3f75cb0a9e4079424753bcb" refkind="member"><highlight class="normal"><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classRayCast_1a9f508cc3e3f75cb0a9e4079424753bcb" kindref="member">RayCast::Position</ref>()</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="ComGLab/Source/Raycast.cpp"/>
   </compounddef>

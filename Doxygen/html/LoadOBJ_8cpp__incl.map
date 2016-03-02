@@ -1,6 +1,6 @@
 <map id="ComGLab/Source/LoadOBJ.cpp" name="ComGLab/Source/LoadOBJ.cpp">
-<area shape="rect" id="node5" href="$LoadOBJ_8h.html" title="LoadOBJ.h" alt="" coords="196,80,283,107"/>
-<area shape="rect" id="node7" href="$Vertex_8h.html" title="Vertex.h" alt="" coords="167,155,237,181"/>
+<area shape="rect" id="node5" href="$LoadOBJ_8h.html" title="Header file for code that loads OBJ files. " alt="" coords="196,80,283,107"/>
+<area shape="rect" id="node7" href="$Vertex_8h.html" title="Header file for vertex. " alt="" coords="167,155,237,181"/>
 <area shape="rect" id="node8" href="$Vector3_8h.html" title="Struct to define a 3D vector. " alt="" coords="163,229,241,256"/>
 <area shape="rect" id="node9" href="$MyMath_8h.html" title="Header file for math helper functions. " alt="" coords="162,304,242,331"/>
 </map>

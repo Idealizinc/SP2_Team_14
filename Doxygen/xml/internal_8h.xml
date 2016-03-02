@@ -14,71 +14,71 @@
     <includedby refid="bits_8c" local="yes">irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c</includedby>
     <includedby refid="mpaudec_8c" local="yes">irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c</includedby>
     <incdepgraph>
-      <node id="2929">
+      <node id="2417">
         <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h</label>
         <link refid="internal.h"/>
-        <childnode refid="2930" relation="include">
+        <childnode refid="2418" relation="include">
         </childnode>
-        <childnode refid="2931" relation="include">
+        <childnode refid="2419" relation="include">
         </childnode>
-        <childnode refid="2932" relation="include">
+        <childnode refid="2420" relation="include">
         </childnode>
-        <childnode refid="2933" relation="include">
+        <childnode refid="2421" relation="include">
         </childnode>
-        <childnode refid="2934" relation="include">
+        <childnode refid="2422" relation="include">
         </childnode>
-        <childnode refid="2935" relation="include">
+        <childnode refid="2423" relation="include">
         </childnode>
-        <childnode refid="2936" relation="include">
+        <childnode refid="2424" relation="include">
         </childnode>
-        <childnode refid="2937" relation="include">
+        <childnode refid="2425" relation="include">
         </childnode>
-        <childnode refid="2938" relation="include">
+        <childnode refid="2426" relation="include">
         </childnode>
       </node>
-      <node id="2938">
+      <node id="2426">
         <label>assert.h</label>
       </node>
-      <node id="2930">
+      <node id="2418">
         <label>stdlib.h</label>
       </node>
-      <node id="2935">
+      <node id="2423">
         <label>stddef.h</label>
       </node>
-      <node id="2936">
+      <node id="2424">
         <label>mpaudec.h</label>
         <link refid="mpaudec_8h"/>
       </node>
-      <node id="2932">
+      <node id="2420">
         <label>string.h</label>
       </node>
-      <node id="2934">
+      <node id="2422">
         <label>math.h</label>
       </node>
-      <node id="2933">
+      <node id="2421">
         <label>ctype.h</label>
       </node>
-      <node id="2931">
+      <node id="2419">
         <label>stdio.h</label>
       </node>
-      <node id="2937">
+      <node id="2425">
         <label>inttypes.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2939">
+      <node id="2427">
         <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h</label>
         <link refid="internal.h"/>
-        <childnode refid="2940" relation="include">
+        <childnode refid="2428" relation="include">
         </childnode>
-        <childnode refid="2941" relation="include">
+        <childnode refid="2429" relation="include">
         </childnode>
       </node>
-      <node id="2941">
+      <node id="2429">
         <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c</label>
         <link refid="mpaudec_8c"/>
       </node>
-      <node id="2940">
+      <node id="2428">
         <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c</label>
         <link refid="bits_8c"/>
       </node>

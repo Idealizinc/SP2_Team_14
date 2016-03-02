@@ -1,5 +1,4 @@
 <map id="Mtx44::SetToPerspective" name="Mtx44::SetToPerspective">
-<area shape="rect" id="node2" href="$classParticle.html#ad4131133df499c87e0a4e75ffdaae4a3" title="Particle::Init" alt="" coords="245,5,335,32"/>
-<area shape="rect" id="node3" href="$classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="SP2_Scene::Init" alt="" coords="232,56,348,83"/>
-<area shape="rect" id="node4" href="$classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="SP2_Scene::Update" alt="" coords="220,107,360,133"/>
+<area shape="rect" id="node2" href="$classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="Initializes values. " alt="" coords="232,5,348,32"/>
+<area shape="rect" id="node3" href="$classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="Method where values are changed. " alt="" coords="220,56,360,83"/>
 </map>

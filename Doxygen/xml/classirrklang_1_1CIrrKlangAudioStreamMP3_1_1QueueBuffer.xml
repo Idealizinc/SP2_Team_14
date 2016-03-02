@@ -155,20 +155,20 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="554">
+      <node id="489">
         <label>ik_u8 *</label>
       </node>
-      <node id="553">
+      <node id="488">
         <label>int</label>
       </node>
-      <node id="552">
+      <node id="487">
         <label>irrklang::CIrrKlangAudioStreamMP3::QueueBuffer</label>
         <link refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer"/>
-        <childnode refid="553" relation="usage">
+        <childnode refid="488" relation="usage">
           <edgelabel>Size</edgelabel>
           <edgelabel>Capacity</edgelabel>
         </childnode>
-        <childnode refid="554" relation="usage">
+        <childnode refid="489" relation="usage">
           <edgelabel>Buffer</edgelabel>
         </childnode>
       </node>

@@ -1,24 +1,22 @@
 <map id="irrKlang&#45;1.5.0/include/ik_IRefCounted.h" name="irrKlang&#45;1.5.0/include/ik_IRefCounted.h">
 <area shape="rect" id="node2" href="$ik__IAudioRecorder_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_IAudioRecorder.h" alt="" coords="517,273,661,315"/>
 <area shape="rect" id="node3" href="$irrKlang_8h.html" title="Main header file of the irrKlang sound library, the only file needed to include. " alt="" coords="677,370,821,411"/>
-<area shape="rect" id="node10" href="$ik__SAudioStreamFormat_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_SAudioStreamFormat.h" alt="" coords="747,95,925,136"/>
-<area shape="rect" id="node12" href="$ik__ISoundEngine_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_ISoundEngine.h" alt="" coords="299,273,443,315"/>
-<area shape="rect" id="node13" href="$ik__IAudioStream_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_IAudioStream.h" alt="" coords="1064,184,1208,225"/>
-<area shape="rect" id="node17" href="$ik__ISoundMixedOutputReceiver_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_ISoundMixedOutputReceiver.h" alt="" coords="275,184,493,225"/>
-<area shape="rect" id="node18" href="$ik__ISoundStopEventReceiver_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_ISoundStopEventReceiver.h" alt="" coords="837,184,1040,225"/>
-<area shape="rect" id="node19" href="$ik__IAudioStreamLoader_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_IAudioStreamLoader.h" alt="" coords="1267,273,1437,315"/>
-<area shape="rect" id="node21" href="$ik__IFileReader_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_IFileReader.h" alt="" coords="1232,184,1376,225"/>
-<area shape="rect" id="node22" href="$ik__IFileFactory_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_IFileFactory.h" alt="" coords="5,184,149,225"/>
-<area shape="rect" id="node23" href="$ik__ISoundDeviceList_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_ISoundDeviceList.h" alt="" coords="569,95,722,136"/>
-<area shape="rect" id="node4" href="$SP2__Scene_8h.html" title="ComGLab/Source/SP2\l_Scene.h" alt="" coords="831,474,985,515"/>
-<area shape="rect" id="node7" href="$Particle_8h.html" title="ComGLab/Source/Particle.h" alt="" coords="623,481,807,508"/>
-<area shape="rect" id="node9" href="$ikpMP3_8cpp.html" title="irrKlang&#45;1.5.0/plugins\l/ikpMP3/ikpMP3.cpp" alt="" coords="1079,474,1223,515"/>
-<area shape="rect" id="node5" href="$Application_8cpp.html" title="ComGLab/Source/Application.cpp" alt="" coords="703,578,921,605"/>
-<area shape="rect" id="node6" href="$SP2__Scene_8cpp.html" title="ComGLab/Source/SP2\l_Scene.cpp" alt="" coords="945,571,1100,612"/>
-<area shape="rect" id="node8" href="$Particle_8cpp.html" title="ComGLab/Source/Particle.cpp" alt="" coords="479,578,678,605"/>
-<area shape="rect" id="node11" href="$ik__ISoundSource_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_ISoundSource.h" alt="" coords="568,184,712,225"/>
-<area shape="rect" id="node14" href="$CIrrKlangAudioStreamMP3_8h.html" title="irrKlang&#45;1.5.0/plugins\l/ikpMP3/CIrrKlangAudioStreamMP3.h" alt="" coords="1003,273,1243,315"/>
-<area shape="rect" id="node15" href="$CIrrKlangAudioStreamLoaderMP3_8cpp.html" title="irrKlang&#45;1.5.0/plugins\l/ikpMP3/CIrrKlangAudioStream\lLoaderMP3.cpp" alt="" coords="1281,467,1484,523"/>
-<area shape="rect" id="node16" href="$CIrrKlangAudioStreamMP3_8cpp.html" title="irrKlang&#45;1.5.0/plugins\l/ikpMP3/CIrrKlangAudioStream\lMP3.cpp" alt="" coords="985,363,1188,419"/>
-<area shape="rect" id="node20" href="$CIrrKlangAudioStreamLoaderMP3_8h.html" title="irrKlang&#45;1.5.0/plugins\l/ikpMP3/CIrrKlangAudioStream\lLoaderMP3.h" alt="" coords="1212,363,1415,419"/>
+<area shape="rect" id="node8" href="$ik__SAudioStreamFormat_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_SAudioStreamFormat.h" alt="" coords="747,95,925,136"/>
+<area shape="rect" id="node10" href="$ik__ISoundEngine_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_ISoundEngine.h" alt="" coords="299,273,443,315"/>
+<area shape="rect" id="node11" href="$ik__IAudioStream_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_IAudioStream.h" alt="" coords="1064,184,1208,225"/>
+<area shape="rect" id="node15" href="$ik__ISoundMixedOutputReceiver_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_ISoundMixedOutputReceiver.h" alt="" coords="275,184,493,225"/>
+<area shape="rect" id="node16" href="$ik__ISoundStopEventReceiver_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_ISoundStopEventReceiver.h" alt="" coords="837,184,1040,225"/>
+<area shape="rect" id="node17" href="$ik__IAudioStreamLoader_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_IAudioStreamLoader.h" alt="" coords="1267,273,1437,315"/>
+<area shape="rect" id="node19" href="$ik__IFileReader_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_IFileReader.h" alt="" coords="1232,184,1376,225"/>
+<area shape="rect" id="node20" href="$ik__IFileFactory_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_IFileFactory.h" alt="" coords="5,184,149,225"/>
+<area shape="rect" id="node21" href="$ik__ISoundDeviceList_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_ISoundDeviceList.h" alt="" coords="569,95,722,136"/>
+<area shape="rect" id="node4" href="$SP2__Scene_8h.html" title="Header file for scene. " alt="" coords="672,474,827,515"/>
+<area shape="rect" id="node7" href="$ikpMP3_8cpp.html" title="irrKlang&#45;1.5.0/plugins\l/ikpMP3/ikpMP3.cpp" alt="" coords="991,474,1135,515"/>
+<area shape="rect" id="node5" href="$Application_8cpp.html" title="Runs the application. " alt="" coords="535,578,753,605"/>
+<area shape="rect" id="node6" href="$SP2__Scene_8cpp.html" title=".cpp file that defines scenes " alt="" coords="777,571,932,612"/>
+<area shape="rect" id="node9" href="$ik__ISoundSource_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_ISoundSource.h" alt="" coords="568,184,712,225"/>
+<area shape="rect" id="node12" href="$CIrrKlangAudioStreamMP3_8h.html" title="irrKlang&#45;1.5.0/plugins\l/ikpMP3/CIrrKlangAudioStreamMP3.h" alt="" coords="1003,273,1243,315"/>
+<area shape="rect" id="node13" href="$CIrrKlangAudioStreamLoaderMP3_8cpp.html" title="irrKlang&#45;1.5.0/plugins\l/ikpMP3/CIrrKlangAudioStream\lLoaderMP3.cpp" alt="" coords="1229,467,1432,523"/>
+<area shape="rect" id="node14" href="$CIrrKlangAudioStreamMP3_8cpp.html" title="irrKlang&#45;1.5.0/plugins\l/ikpMP3/CIrrKlangAudioStream\lMP3.cpp" alt="" coords="933,363,1136,419"/>
+<area shape="rect" id="node18" href="$CIrrKlangAudioStreamLoaderMP3_8h.html" title="irrKlang&#45;1.5.0/plugins\l/ikpMP3/CIrrKlangAudioStream\lLoaderMP3.h" alt="" coords="1160,363,1363,419"/>
 </map>

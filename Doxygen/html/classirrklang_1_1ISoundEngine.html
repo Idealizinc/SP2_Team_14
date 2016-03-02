@@ -324,14 +324,14 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns the pointer to the added sound source or 0 if not sucessful because for example a sound already existed with that name. If not successful, the reason will be printed into the log. Note: Don't call <a class="el" href="classirrklang_1_1IRefCounted.html#a869fe3adc6e49e8da105e95837a565b1" title="When you receive an object in irrKlang (for example an ISound using play2D() or play3D()), and you no longer need the object, you have to call drop(). ">drop()</a> to this pointer, it will be managed by irrKlang and exist as long as you don't delete irrKlang or call <a class="el" href="classirrklang_1_1ISoundEngine.html#a82e712f7816f933145690983dbd8be9e" title="Removes a sound source from the engine, freeing the memory it occupies. ">removeSoundSource()</a>. However, you are free to call <a class="el" href="classirrklang_1_1IRefCounted.html#a737b09ee717069b964a3bd0451690388" title="Grabs the object. ">grab()</a> if you want and <a class="el" href="classirrklang_1_1IRefCounted.html#a869fe3adc6e49e8da105e95837a565b1" title="When you receive an object in irrKlang (for example an ISound using play2D() or play3D()), and you no longer need the object, you have to call drop(). ">drop()</a> it then later of course. </dd></dl>
 
-<p>Referenced by <a class="el" href="SP2__Scene_8cpp_source.html#l00060">SP2_Scene::Init()</a>.</p>
+<p>Referenced by <a class="el" href="SP2__Scene_8cpp_source.html#l00102">SP2_Scene::Init()</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classirrklang_1_1ISoundEngine_a4eed0fa6712872e55003b26462e21005_icgraph.png" border="0" usemap="#classirrklang_1_1ISoundEngine_a4eed0fa6712872e55003b26462e21005_icgraph" alt=""/></div>
 <map name="classirrklang_1_1ISoundEngine_a4eed0fa6712872e55003b26462e21005_icgraph" id="classirrklang_1_1ISoundEngine_a4eed0fa6712872e55003b26462e21005_icgraph">
-<area shape="rect" id="node2" href="classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="SP2_Scene::Init" alt="" coords="233,13,349,39"/>
+<area shape="rect" id="node2" href="classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="Initializes values. " alt="" coords="233,13,349,39"/>
 </map>
 </div>
 </p>
@@ -871,16 +871,16 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Only returns a pointer to an <a class="el" href="classirrklang_1_1ISound.html" title="Represents a sound which is currently played. ">ISound</a> if the parameters 'track', 'startPaused' or 'enableSoundEffects' have been set to true. Note: if this method returns an <a class="el" href="classirrklang_1_1ISound.html" title="Represents a sound which is currently played. ">ISound</a> as result, you HAVE to call <a class="el" href="classirrklang_1_1IVirtualRefCounted.html#a6602c3d110f23410c5bca8a08b709aa4" title="Drops the object. Decrements the reference counter by one. ">ISound::drop()</a> after you don't need the <a class="el" href="classirrklang_1_1ISound.html" title="Represents a sound which is currently played. ">ISound</a> interface anymore. Otherwise this will cause memory waste. This method also may return 0 altough 'track', 'startPaused' or 'enableSoundEffects' have been set to true, if the sound could not be played. </dd></dl>
 
-<p>Referenced by <a class="el" href="SP2__Scene_8cpp_source.html#l00828">SP2_Scene::GameState()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l01226">SP2_Scene::Update()</a>.</p>
+<p>Referenced by <a class="el" href="SP2__Scene_8cpp_source.html#l00960">SP2_Scene::GameState()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l01523">SP2_Scene::Update()</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classirrklang_1_1ISoundEngine_a25f612fe6479d3b22dc5bab2a2eaa927_icgraph.png" border="0" usemap="#classirrklang_1_1ISoundEngine_a25f612fe6479d3b22dc5bab2a2eaa927_icgraph" alt=""/></div>
 <map name="classirrklang_1_1ISoundEngine_a25f612fe6479d3b22dc5bab2a2eaa927_icgraph" id="classirrklang_1_1ISoundEngine_a25f612fe6479d3b22dc5bab2a2eaa927_icgraph">
-<area shape="rect" id="node2" href="classSP2__Scene.html#a3cd10ebc989e3f3e2f84f59d74b76ef2" title="SP2_Scene::GameState" alt="" coords="205,5,371,32"/>
-<area shape="rect" id="node4" href="classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="SP2_Scene::Update" alt="" coords="218,56,358,83"/>
-<area shape="rect" id="node3" href="classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="SP2_Scene::Render" alt="" coords="419,5,559,32"/>
+<area shape="rect" id="node2" href="classSP2__Scene.html#a3cd10ebc989e3f3e2f84f59d74b76ef2" title="Method that controls the transition from wave to wave. " alt="" coords="205,5,371,32"/>
+<area shape="rect" id="node4" href="classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="Method where values are changed. " alt="" coords="218,56,358,83"/>
+<area shape="rect" id="node3" href="classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="Method that renders everything in the game. " alt="" coords="419,5,559,32"/>
 </map>
 </div>
 </p>
@@ -1018,7 +1018,7 @@ Here is the caller graph for this function:</div>
 <p>There is some example code on how to work with 3D sound at <a class="el" href="index.html#sound3d">3D Sound</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sourceFileName</td><td>Filename of sound, like "sounds/test.wav" or "foobar.ogg". </td></tr>
-    <tr><td class="paramname">pos</td><td><a class="el" href="structPosition.html">Position</a> of the 3D sound. </td></tr>
+    <tr><td class="paramname">pos</td><td><a class="el" href="structPosition.html" title="Defines the methods and variables for setting position. ">Position</a> of the 3D sound. </td></tr>
     <tr><td class="paramname">playLooped</td><td>plays the sound in loop mode. If set to 'false', the sound is played once, then stopped and deleted from the internal playing list. Calls to <a class="el" href="classirrklang_1_1ISound.html" title="Represents a sound which is currently played. ">ISound</a> have no effect after such a non looped sound has been stopped automaticly. </td></tr>
     <tr><td class="paramname">startPaused</td><td>starts the sound paused. This implies that track=true. Use this if you want to modify some of the playing parameters before the sound actually plays. Usually you would set this parameter to true, then use the <a class="el" href="classirrklang_1_1ISound.html" title="Represents a sound which is currently played. ">ISound</a> interface to modify some of the sound parameters and then call ISound::setPaused(false); Note: You need to call <a class="el" href="classirrklang_1_1IVirtualRefCounted.html#a6602c3d110f23410c5bca8a08b709aa4" title="Drops the object. Decrements the reference counter by one. ">ISound::drop()</a> when setting this parameter to true and you don't need the <a class="el" href="classirrklang_1_1ISound.html" title="Represents a sound which is currently played. ">ISound</a> object anymore. See 'return' for details. </td></tr>
     <tr><td class="paramname">track</td><td>Makes it possible to track the sound. Causes the method to return an <a class="el" href="classirrklang_1_1ISound.html" title="Represents a sound which is currently played. ">ISound</a> interface. See 'return' for details. </td></tr>
@@ -1091,7 +1091,7 @@ Here is the caller graph for this function:</div>
 <p>An <a class="el" href="classirrklang_1_1ISoundSource.html" title="A sound source describes an input file (.ogg, .mp3, .wav or similar) and its default settings...">ISoundSource</a> object will be created internally when playing a sound the first time, or can be added with <a class="el" href="classirrklang_1_1ISoundEngine.html#a7f5a0aff56ce54d9bbc5fcf6603cf516" title="Gets a sound source by sound name. Adds the sound source as file into the sound engine if not loaded ...">getSoundSource()</a>. There is some example code on how to work with 3D sound <a class="el" href="index.html#sound3d">3D Sound</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">source</td><td>The sound source, specifiying sound file source and default settings for this file. Use the other <a class="el" href="classirrklang_1_1ISoundEngine.html#a25f612fe6479d3b22dc5bab2a2eaa927" title="loads a sound source (if not loaded already) from a file and plays it. ">ISoundEngine::play2D()</a> overloads if you want to specify a filename string instead of this. </td></tr>
-    <tr><td class="paramname">pos</td><td><a class="el" href="structPosition.html">Position</a> of the 3D sound. </td></tr>
+    <tr><td class="paramname">pos</td><td><a class="el" href="structPosition.html" title="Defines the methods and variables for setting position. ">Position</a> of the 3D sound. </td></tr>
     <tr><td class="paramname">playLooped</td><td>plays the sound in loop mode. If set to 'false', the sound is played once, then stopped and deleted from the internal playing list. Calls to <a class="el" href="classirrklang_1_1ISound.html" title="Represents a sound which is currently played. ">ISound</a> have no effect after such a non looped sound has been stopped automaticly. </td></tr>
     <tr><td class="paramname">startPaused</td><td>starts the sound paused. This implies that track=true. Use this if you want to modify some of the playing parameters before the sound actually plays. Usually you would set this parameter to true, then use the <a class="el" href="classirrklang_1_1ISound.html" title="Represents a sound which is currently played. ">ISound</a> interface to modify some of the sound parameters and then call ISound::setPaused(false); Note: You need to call <a class="el" href="classirrklang_1_1IVirtualRefCounted.html#a6602c3d110f23410c5bca8a08b709aa4" title="Drops the object. Decrements the reference counter by one. ">ISound::drop()</a> when setting this parameter to true and you don't need the <a class="el" href="classirrklang_1_1ISound.html" title="Represents a sound which is currently played. ">ISound</a> object anymore. See 'return' for details. </td></tr>
     <tr><td class="paramname">track</td><td>Makes it possible to track the sound. Causes the method to return an <a class="el" href="classirrklang_1_1ISound.html" title="Represents a sound which is currently played. ">ISound</a> interface. See 'return' for details. </td></tr>
@@ -1402,7 +1402,7 @@ Here is the caller graph for this function:</div>
 <p>Sets the current listener 3d position. </p>
 <p>When playing sounds in 3D, updating the position of the listener every frame should be done using this function. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pos</td><td><a class="el" href="structPosition.html">Position</a> of the camera or listener. </td></tr>
+    <tr><td class="paramname">pos</td><td><a class="el" href="structPosition.html" title="Defines the methods and variables for setting position. ">Position</a> of the camera or listener. </td></tr>
     <tr><td class="paramname">lookdir</td><td>Direction vector where the camera or listener is looking into. If you have a camera position and a target 3d point where it is looking at, this would be cam-&gt;getTarget() - cam-&gt;getAbsolutePosition(). </td></tr>
     <tr><td class="paramname">velPerSecond</td><td>The velocity per second describes the speed of the listener and is only needed for doppler effects. </td></tr>
     <tr><td class="paramname">upvector</td><td>Vector pointing 'up', so the engine can decide where is left and right. This vector is usually (0,1,0). </td></tr>

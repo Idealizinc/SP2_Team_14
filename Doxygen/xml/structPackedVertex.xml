@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/LoadOBJ.cpp" line="118" column="1" bodyfile="ComGLab/Source/LoadOBJ.cpp" bodystart="118" bodyend="-1"/>
+        <location file="ComGLab/Source/LoadOBJ.cpp" line="128" column="1" bodyfile="ComGLab/Source/LoadOBJ.cpp" bodystart="128" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structPackedVertex_1a86428554cc4e4c177eb1161bc3be0230" prot="public" static="no" mutable="no">
         <type><ref refid="structTexCoord" kindref="compound">TexCoord</ref></type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/LoadOBJ.cpp" line="119" column="1" bodyfile="ComGLab/Source/LoadOBJ.cpp" bodystart="119" bodyend="-1"/>
+        <location file="ComGLab/Source/LoadOBJ.cpp" line="129" column="1" bodyfile="ComGLab/Source/LoadOBJ.cpp" bodystart="129" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structPackedVertex_1ad7f8bd922bf90fb53ac5a27935179698" prot="public" static="no" mutable="no">
         <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/LoadOBJ.cpp" line="120" column="1" bodyfile="ComGLab/Source/LoadOBJ.cpp" bodystart="120" bodyend="-1"/>
+        <location file="ComGLab/Source/LoadOBJ.cpp" line="130" column="1" bodyfile="ComGLab/Source/LoadOBJ.cpp" bodystart="130" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/LoadOBJ.cpp" line="121" column="1" bodyfile="ComGLab/Source/LoadOBJ.cpp" bodystart="121" bodyend="123"/>
+        <location file="ComGLab/Source/LoadOBJ.cpp" line="131" column="1" bodyfile="ComGLab/Source/LoadOBJ.cpp" bodystart="131" bodyend="133"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -67,50 +67,50 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="522">
+      <node id="482">
         <label>Position</label>
         <link refid="structPosition"/>
-        <childnode refid="520" relation="usage">
+        <childnode refid="480" relation="usage">
           <edgelabel>x</edgelabel>
           <edgelabel>y</edgelabel>
           <edgelabel>z</edgelabel>
         </childnode>
       </node>
-      <node id="521">
+      <node id="481">
         <label>TexCoord</label>
         <link refid="structTexCoord"/>
-        <childnode refid="520" relation="usage">
+        <childnode refid="480" relation="usage">
           <edgelabel>u</edgelabel>
           <edgelabel>v</edgelabel>
         </childnode>
       </node>
-      <node id="520">
+      <node id="480">
         <label>float</label>
       </node>
-      <node id="518">
+      <node id="478">
         <label>PackedVertex</label>
         <link refid="structPackedVertex"/>
-        <childnode refid="519" relation="usage">
+        <childnode refid="479" relation="usage">
           <edgelabel>normal</edgelabel>
         </childnode>
-        <childnode refid="521" relation="usage">
+        <childnode refid="481" relation="usage">
           <edgelabel>uv</edgelabel>
         </childnode>
-        <childnode refid="522" relation="usage">
+        <childnode refid="482" relation="usage">
           <edgelabel>position</edgelabel>
         </childnode>
       </node>
-      <node id="519">
+      <node id="479">
         <label>Vector3</label>
         <link refid="structVector3"/>
-        <childnode refid="520" relation="usage">
+        <childnode refid="480" relation="usage">
           <edgelabel>x</edgelabel>
           <edgelabel>y</edgelabel>
           <edgelabel>z</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="ComGLab/Source/LoadOBJ.cpp" line="117" column="1" bodyfile="ComGLab/Source/LoadOBJ.cpp" bodystart="117" bodyend="124"/>
+    <location file="ComGLab/Source/LoadOBJ.cpp" line="127" column="1" bodyfile="ComGLab/Source/LoadOBJ.cpp" bodystart="127" bodyend="134"/>
     <listofallmembers>
       <member refid="structPackedVertex_1ad7f8bd922bf90fb53ac5a27935179698" prot="public" virt="non-virtual"><scope>PackedVertex</scope><name>normal</name></member>
       <member refid="structPackedVertex_1a86a90d456e948b1105c7e8905f4fa385" prot="public" virt="non-virtual"><scope>PackedVertex</scope><name>operator&lt;</name></member>

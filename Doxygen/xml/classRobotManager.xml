@@ -15,16 +15,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/RobotManager.h" line="12" column="1" bodyfile="ComGLab/Source/RobotManager.h" bodystart="12" bodyend="-1"/>
-        <referencedby refid="classRobotManager_1affe43358be46aeb70d8cc616f09ecce2" compoundref="RobotManager_8cpp" startline="19" endline="41">CleanUp</referencedby>
-        <referencedby refid="classRobotManager_1a836b4959e675f78e146bba9444ac1834" compoundref="RobotManager_8cpp" startline="43" endline="49">ClearList</referencedby>
-        <referencedby refid="classSP2__Scene_1a3cd10ebc989e3f3e2f84f59d74b76ef2" compoundref="SP2__Scene_8cpp" startline="828" endline="953">SP2_Scene::GameState</referencedby>
-        <referencedby refid="classRobotManager_1a621e32721f045db98dc13b288aaeb09f" compoundref="RobotManager_8cpp" startline="11" endline="17">IncrementPosition</referencedby>
-        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2248" endline="2508">SP2_Scene::Render</referencedby>
-        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1004" endline="1135">SP2_Scene::RenderSpaceMap</referencedby>
-        <referencedby refid="classSP2__Scene_1aeb5b6dadeb1ee8d943f2e52e69d6d9e0" compoundref="SP2__Scene_8cpp" startline="1980" endline="2067">SP2_Scene::RenderUI</referencedby>
-        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
-        <referencedby refid="classRobotManager_1ad0c62becf9a947a3679995039074c2bb" compoundref="RobotManager_8cpp" startline="3" endline="9">~RobotManager</referencedby>
+        <location file="ComGLab/Source/RobotManager.h" line="29" column="1" bodyfile="ComGLab/Source/RobotManager.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classRobotManager_1affe43358be46aeb70d8cc616f09ecce2" compoundref="RobotManager_8cpp" startline="53" endline="75">CleanUp</referencedby>
+        <referencedby refid="classRobotManager_1a836b4959e675f78e146bba9444ac1834" compoundref="RobotManager_8cpp" startline="85" endline="91">ClearList</referencedby>
+        <referencedby refid="classSP2__Scene_1a3cd10ebc989e3f3e2f84f59d74b76ef2" compoundref="SP2__Scene_8cpp" startline="960" endline="1095">SP2_Scene::GameState</referencedby>
+        <referencedby refid="classRobotManager_1a621e32721f045db98dc13b288aaeb09f" compoundref="RobotManager_8cpp" startline="37" endline="43">IncrementPosition</referencedby>
+        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2424" endline="2688">SP2_Scene::Render</referencedby>
+        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1279" endline="1410">SP2_Scene::RenderSpaceMap</referencedby>
+        <referencedby refid="classSP2__Scene_1aeb5b6dadeb1ee8d943f2e52e69d6d9e0" compoundref="SP2__Scene_8cpp" startline="2295" endline="2382">SP2_Scene::RenderUI</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1523" endline="2089">SP2_Scene::Update</referencedby>
+        <referencedby refid="classRobotManager_1ad0c62becf9a947a3679995039074c2bb" compoundref="RobotManager_8cpp" startline="21" endline="27">~RobotManager</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRobotManager_1a04fbfa8ef3b45ec3f12ad5ebdb581c4a" prot="public" static="no" mutable="no">
         <type>unsigned short</type>
@@ -38,10 +38,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/RobotManager.h" line="17" column="1" bodyfile="ComGLab/Source/RobotManager.h" bodystart="17" bodyend="-1"/>
-        <referencedby refid="classRobotManager_1affe43358be46aeb70d8cc616f09ecce2" compoundref="RobotManager_8cpp" startline="19" endline="41">CleanUp</referencedby>
-        <referencedby refid="classSP2__Scene_1a3cd10ebc989e3f3e2f84f59d74b76ef2" compoundref="SP2__Scene_8cpp" startline="828" endline="953">SP2_Scene::GameState</referencedby>
-        <referencedby refid="classSP2__Scene_1a617111439177700d9903e7777c821926" compoundref="SP2__Scene_8cpp" startline="955" endline="1003">SP2_Scene::RenderLevel</referencedby>
+        <location file="ComGLab/Source/RobotManager.h" line="34" column="1" bodyfile="ComGLab/Source/RobotManager.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classRobotManager_1affe43358be46aeb70d8cc616f09ecce2" compoundref="RobotManager_8cpp" startline="53" endline="75">CleanUp</referencedby>
+        <referencedby refid="classSP2__Scene_1a3cd10ebc989e3f3e2f84f59d74b76ef2" compoundref="SP2__Scene_8cpp" startline="960" endline="1095">SP2_Scene::GameState</referencedby>
+        <referencedby refid="classSP2__Scene_1a617111439177700d9903e7777c821926" compoundref="SP2__Scene_8cpp" startline="1222" endline="1270">SP2_Scene::RenderLevel</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -57,8 +57,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/RobotManager.h" line="20" column="1" bodyfile="ComGLab/Source/RobotManager.h" bodystart="20" bodyend="-1"/>
-        <referencedby refid="classRobotManager_1affe43358be46aeb70d8cc616f09ecce2" compoundref="RobotManager_8cpp" startline="19" endline="41">CleanUp</referencedby>
+        <location file="ComGLab/Source/RobotManager.h" line="37" column="1" bodyfile="ComGLab/Source/RobotManager.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="classRobotManager_1affe43358be46aeb70d8cc616f09ecce2" compoundref="RobotManager_8cpp" startline="53" endline="75">CleanUp</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/RobotManager.h" line="10" column="1" bodyfile="ComGLab/Source/RobotManager.h" bodystart="10" bodyend="10"/>
+        <location file="ComGLab/Source/RobotManager.h" line="27" column="1" bodyfile="ComGLab/Source/RobotManager.h" bodystart="27" bodyend="27"/>
       </memberdef>
       <memberdef kind="function" id="classRobotManager_1ad0c62becf9a947a3679995039074c2bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -81,13 +81,13 @@
         <argsstring>()</argsstring>
         <name>~RobotManager</name>
         <briefdescription>
-        </briefdescription>
+<para>Constructor. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/RobotManager.h" line="11" column="1" bodyfile="ComGLab/Source/RobotManager.cpp" bodystart="3" bodyend="9"/>
-        <references refid="classRobotManager_1a9c47f42fad00110c31689477d757e647" compoundref="RobotManager_8h" startline="12">RobotList</references>
+        <location file="ComGLab/Source/RobotManager.h" line="28" column="1" bodyfile="ComGLab/Source/RobotManager.cpp" bodystart="21" bodyend="27"/>
+        <references refid="classRobotManager_1a9c47f42fad00110c31689477d757e647" compoundref="RobotManager_8h" startline="29">RobotList</references>
       </memberdef>
       <memberdef kind="function" id="classRobotManager_1a621e32721f045db98dc13b288aaeb09f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -95,14 +95,14 @@
         <argsstring>()</argsstring>
         <name>IncrementPosition</name>
         <briefdescription>
-        </briefdescription>
+<para>Increments robot position in the scene. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/RobotManager.h" line="13" column="1" bodyfile="ComGLab/Source/RobotManager.cpp" bodystart="11" bodyend="17"/>
-        <references refid="classRobotManager_1a9c47f42fad00110c31689477d757e647" compoundref="RobotManager_8h" startline="12">RobotList</references>
-        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+        <location file="ComGLab/Source/RobotManager.h" line="30" column="1" bodyfile="ComGLab/Source/RobotManager.cpp" bodystart="37" bodyend="43"/>
+        <references refid="classRobotManager_1a9c47f42fad00110c31689477d757e647" compoundref="RobotManager_8h" startline="29">RobotList</references>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1523" endline="2089">SP2_Scene::Update</referencedby>
       </memberdef>
       <memberdef kind="function" id="classRobotManager_1a8a32a49f06bdbc8dc274ca02ae03706b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -119,7 +119,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/RobotManager.h" line="14" column="1"/>
+        <location file="ComGLab/Source/RobotManager.h" line="31" column="1"/>
       </memberdef>
       <memberdef kind="function" id="classRobotManager_1a836b4959e675f78e146bba9444ac1834" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -127,14 +127,14 @@
         <argsstring>()</argsstring>
         <name>ClearList</name>
         <briefdescription>
-        </briefdescription>
+<para>Removes dead robots from the list. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/RobotManager.h" line="15" column="1" bodyfile="ComGLab/Source/RobotManager.cpp" bodystart="43" bodyend="49"/>
-        <references refid="classRobotManager_1a9c47f42fad00110c31689477d757e647" compoundref="RobotManager_8h" startline="12">RobotList</references>
-        <referencedby refid="classSP2__Scene_1a3cd10ebc989e3f3e2f84f59d74b76ef2" compoundref="SP2__Scene_8cpp" startline="828" endline="953">SP2_Scene::GameState</referencedby>
+        <location file="ComGLab/Source/RobotManager.h" line="32" column="1" bodyfile="ComGLab/Source/RobotManager.cpp" bodystart="85" bodyend="91"/>
+        <references refid="classRobotManager_1a9c47f42fad00110c31689477d757e647" compoundref="RobotManager_8h" startline="29">RobotList</references>
+        <referencedby refid="classSP2__Scene_1a3cd10ebc989e3f3e2f84f59d74b76ef2" compoundref="SP2__Scene_8cpp" startline="960" endline="1095">SP2_Scene::GameState</referencedby>
       </memberdef>
       <memberdef kind="function" id="classRobotManager_1affe43358be46aeb70d8cc616f09ecce2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -142,42 +142,42 @@
         <argsstring>()</argsstring>
         <name>CleanUp</name>
         <briefdescription>
-        </briefdescription>
+<para>Cleans up data to prevent memory leaks. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/RobotManager.h" line="16" column="1" bodyfile="ComGLab/Source/RobotManager.cpp" bodystart="19" bodyend="41"/>
-        <references refid="classRobotManager_1a04fbfa8ef3b45ec3f12ad5ebdb581c4a" compoundref="RobotManager_8h" startline="17">CurrentRobotCount</references>
-        <references refid="classRobotManager_1a7db81d08f5973976a4090ff2571e3d78" compoundref="RobotManager_8h" startline="20">MaxRobotCount</references>
-        <references refid="classRobotManager_1a9c47f42fad00110c31689477d757e647" compoundref="RobotManager_8h" startline="12">RobotList</references>
-        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+        <location file="ComGLab/Source/RobotManager.h" line="33" column="1" bodyfile="ComGLab/Source/RobotManager.cpp" bodystart="53" bodyend="75"/>
+        <references refid="classRobotManager_1a04fbfa8ef3b45ec3f12ad5ebdb581c4a" compoundref="RobotManager_8h" startline="34">CurrentRobotCount</references>
+        <references refid="classRobotManager_1a7db81d08f5973976a4090ff2571e3d78" compoundref="RobotManager_8h" startline="37">MaxRobotCount</references>
+        <references refid="classRobotManager_1a9c47f42fad00110c31689477d757e647" compoundref="RobotManager_8h" startline="29">RobotList</references>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1523" endline="2089">SP2_Scene::Update</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Defines the methods and variables for managing robots in the scene. </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para>Class <ref refid="classRobotManager" kindref="compound">RobotManager</ref>: </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="572">
+      <node id="507">
         <label>RobotManager</label>
         <link refid="classRobotManager"/>
-        <childnode refid="573" relation="usage">
+        <childnode refid="508" relation="usage">
           <edgelabel>CurrentRobotCount</edgelabel>
           <edgelabel>MaxRobotCount</edgelabel>
         </childnode>
-        <childnode refid="574" relation="usage">
+        <childnode refid="509" relation="usage">
           <edgelabel>RobotList</edgelabel>
         </childnode>
       </node>
-      <node id="573">
+      <node id="508">
         <label>unsigned</label>
       </node>
-      <node id="574">
+      <node id="509">
         <label>list&lt; Robot &gt;</label>
       </node>
     </collaborationgraph>
-    <location file="ComGLab/Source/RobotManager.h" line="8" column="1" bodyfile="ComGLab/Source/RobotManager.h" bodystart="7" bodyend="22"/>
+    <location file="ComGLab/Source/RobotManager.h" line="25" column="1" bodyfile="ComGLab/Source/RobotManager.h" bodystart="24" bodyend="39"/>
     <listofallmembers>
       <member refid="classRobotManager_1affe43358be46aeb70d8cc616f09ecce2" prot="public" virt="non-virtual"><scope>RobotManager</scope><name>CleanUp</name></member>
       <member refid="classRobotManager_1a836b4959e675f78e146bba9444ac1834" prot="public" virt="non-virtual"><scope>RobotManager</scope><name>ClearList</name></member>

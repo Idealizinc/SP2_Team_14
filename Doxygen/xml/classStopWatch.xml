@@ -131,7 +131,7 @@
         </inbodydescription>
         <location file="Common/Source/timer.h" line="19" column="1" bodyfile="Common/Source/timer.cpp" bodystart="29" bodyend="32"/>
         <references refid="classStopWatch_1a1bf2210ebf10821c4b2eb849e5e98502" compoundref="timer_8h" startline="12">prevTime</references>
-        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="121" endline="141">Application::Run</referencedby>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="130" endline="150">Application::Run</referencedby>
       </memberdef>
       <memberdef kind="function" id="classStopWatch_1ac8be1626396d1a5ca414f74349d59eb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -148,7 +148,7 @@
         <references refid="classStopWatch_1a9ff6d4ddf698ba9cb82bdb0d27af72e8" compoundref="timer_8h" startline="12">currTime</references>
         <references refid="classStopWatch_1a2e61acbf46638eb3275cc8a7c1ea768d" compoundref="timer_8cpp" startline="25" endline="27">LIToSecs</references>
         <references refid="classStopWatch_1a1bf2210ebf10821c4b2eb849e5e98502" compoundref="timer_8h" startline="12">prevTime</references>
-        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="121" endline="141">Application::Run</referencedby>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="130" endline="150">Application::Run</referencedby>
       </memberdef>
       <memberdef kind="function" id="classStopWatch_1a2cd0856fc87a40038edfd66d784be8b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -168,7 +168,7 @@
         <location file="Common/Source/timer.h" line="21" column="1" bodyfile="Common/Source/timer.cpp" bodystart="43" bodyend="56"/>
         <references refid="classStopWatch_1a102c4e3275d87798eca31673192c97ed" compoundref="timer_8h" startline="11">frequency</references>
         <references refid="classStopWatch_1a1bf2210ebf10821c4b2eb849e5e98502" compoundref="timer_8h" startline="12">prevTime</references>
-        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="121" endline="141">Application::Run</referencedby>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="130" endline="150">Application::Run</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -176,22 +176,22 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="624">
+      <node id="558">
         <label>LARGE_INTEGER</label>
       </node>
-      <node id="622">
+      <node id="556">
         <label>StopWatch</label>
         <link refid="classStopWatch"/>
-        <childnode refid="623" relation="usage">
+        <childnode refid="557" relation="usage">
           <edgelabel>wTimerRes</edgelabel>
         </childnode>
-        <childnode refid="624" relation="usage">
+        <childnode refid="558" relation="usage">
           <edgelabel>frequency</edgelabel>
           <edgelabel>currTime</edgelabel>
           <edgelabel>prevTime</edgelabel>
         </childnode>
       </node>
-      <node id="623">
+      <node id="557">
         <label>UINT</label>
       </node>
     </collaborationgraph>

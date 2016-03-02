@@ -4,89 +4,82 @@
     <compoundname>Utility.h</compoundname>
     <includes refid="Mtx44_8h" local="yes">Mtx44.h</includes>
     <includes refid="Vertex_8h" local="yes">Vertex.h</includes>
-    <includedby refid="Particle_8cpp" local="yes">ComGLab/Source/Particle.cpp</includedby>
     <includedby refid="SP2__Scene_8cpp" local="yes">ComGLab/Source/SP2_Scene.cpp</includedby>
     <includedby refid="Utility_8cpp" local="yes">ComGLab/Source/Utility.cpp</includedby>
     <incdepgraph>
-      <node id="2267">
+      <node id="1816">
         <label>MyMath.h</label>
         <link refid="MyMath_8h"/>
-        <childnode refid="2268" relation="include">
+        <childnode refid="1817" relation="include">
         </childnode>
-        <childnode refid="2269" relation="include">
+        <childnode refid="1818" relation="include">
         </childnode>
-        <childnode refid="2270" relation="include">
+        <childnode refid="1819" relation="include">
         </childnode>
-        <childnode refid="2271" relation="include">
+        <childnode refid="1820" relation="include">
         </childnode>
       </node>
-      <node id="2266">
+      <node id="1815">
         <label>Mtx44.h</label>
         <link refid="Mtx44_8h"/>
-        <childnode refid="2267" relation="include">
+        <childnode refid="1816" relation="include">
         </childnode>
-        <childnode refid="2272" relation="include">
+        <childnode refid="1821" relation="include">
         </childnode>
       </node>
-      <node id="2272">
+      <node id="1821">
         <label>Vector3.h</label>
         <link refid="Vector3_8h"/>
-        <childnode refid="2267" relation="include">
+        <childnode refid="1816" relation="include">
         </childnode>
-        <childnode refid="2273" relation="include">
+        <childnode refid="1822" relation="include">
         </childnode>
       </node>
-      <node id="2268">
+      <node id="1817">
         <label>cmath</label>
       </node>
-      <node id="2269">
+      <node id="1818">
         <label>exception</label>
       </node>
-      <node id="2274">
+      <node id="1823">
         <label>Vertex.h</label>
         <link refid="Vertex_8h"/>
-        <childnode refid="2272" relation="include">
+        <childnode refid="1821" relation="include">
         </childnode>
       </node>
-      <node id="2270">
+      <node id="1819">
         <label>ctime</label>
       </node>
-      <node id="2265">
+      <node id="1814">
         <label>ComGLab/Source/Utility.h</label>
         <link refid="Utility.h"/>
-        <childnode refid="2266" relation="include">
+        <childnode refid="1815" relation="include">
         </childnode>
-        <childnode refid="2274" relation="include">
+        <childnode refid="1823" relation="include">
         </childnode>
       </node>
-      <node id="2271">
+      <node id="1820">
         <label>cstdlib</label>
       </node>
-      <node id="2273">
+      <node id="1822">
         <label>iostream</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2276">
-        <label>ComGLab/Source/Particle.cpp</label>
-        <link refid="Particle_8cpp"/>
-      </node>
-      <node id="2277">
+      <node id="1825">
         <label>ComGLab/Source/SP2_Scene.cpp</label>
         <link refid="SP2__Scene_8cpp"/>
       </node>
-      <node id="2278">
+      <node id="1826">
         <label>ComGLab/Source/Utility.cpp</label>
         <link refid="Utility_8cpp"/>
       </node>
-      <node id="2275">
+      <node id="1824">
         <label>ComGLab/Source/Utility.h</label>
         <link refid="Utility.h"/>
-        <childnode refid="2276" relation="include">
+        <childnode refid="1825" relation="include">
         </childnode>
-        <childnode refid="2277" relation="include">
-        </childnode>
-        <childnode refid="2278" relation="include">
+        <childnode refid="1826" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -110,27 +103,32 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Utility.h" line="7" column="1" bodyfile="ComGLab/Source/Utility.cpp" bodystart="3" bodyend="11"/>
+        <location file="ComGLab/Source/Utility.h" line="17" column="1" bodyfile="ComGLab/Source/Utility.cpp" bodystart="13" bodyend="21"/>
         <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">Mtx44::a</references>
-        <references refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" compoundref="Vertex_8h" startline="8">Position::x</references>
-        <references refid="structPosition_1a54a6182b5f7539295b32255808897d3f" compoundref="Vertex_8h" startline="8">Position::y</references>
-        <references refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" compoundref="Vertex_8h" startline="8">Position::z</references>
+        <references refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" compoundref="Vertex_8h" startline="25">Position::x</references>
+        <references refid="structPosition_1a54a6182b5f7539295b32255808897d3f" compoundref="Vertex_8h" startline="25">Position::y</references>
+        <references refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" compoundref="Vertex_8h" startline="25">Position::z</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Header file for utility. </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para><simplesect kind="author"><para>Wen Sheng Tang </para></simplesect>
+<simplesect kind="par"><title>email: tang_wen_sheng@nyp.edu.sg</title><para></para></simplesect>
+</para>    </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>UTILITY_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UTILITY_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Mtx44_8h" kindref="compound">Mtx44.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Vertex_8h" kindref="compound">Vertex.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="Utility_8h_1adfba271c0b8f223d01dd4f35e62e27af" kindref="member">operator*</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classMtx44" kindref="compound">Mtx44</ref>&amp;<sp/>lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structPosition" kindref="compound">Position</ref>&amp;<sp/>rhs);</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>UTILITY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UTILITY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Mtx44_8h" kindref="compound">Mtx44.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Vertex_8h" kindref="compound">Vertex.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="Utility_8h_1adfba271c0b8f223d01dd4f35e62e27af" kindref="member">operator*</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classMtx44" kindref="compound">Mtx44</ref>&amp;<sp/>lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structPosition" kindref="compound">Position</ref>&amp;<sp/>rhs);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight></codeline>
     </programlisting>
     <location file="ComGLab/Source/Utility.h"/>
   </compounddef>

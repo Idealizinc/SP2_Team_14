@@ -54,6 +54,9 @@
 </div><!--header-->
 <div class="contents">
 
+<p>Defines the enums and methods for <a class="el" href="structLight.html" title="Defines the enums and methods for Light. ">Light</a>.  
+ <a href="structLight.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Light_8h_source.html">Light.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Light:</div>
@@ -61,8 +64,8 @@ Collaboration diagram for Light:</div>
 <div class="center"><img src="structLight__coll__graph.png" border="0" usemap="#Light_coll__map" alt="Collaboration graph"/></div>
 <map name="Light_coll__map" id="Light_coll__map">
 <area shape="rect" id="node4" href="structVector3.html" title="Defines a 3D vector and its methods. " alt="" coords="233,162,300,189"/>
-<area shape="rect" id="node5" href="structPosition.html" title="Position" alt="" coords="324,162,393,189"/>
-<area shape="rect" id="node6" href="structColor.html" title="Color" alt="" coords="418,162,470,189"/>
+<area shape="rect" id="node5" href="structPosition.html" title="Defines the methods and variables for setting position. " alt="" coords="324,162,393,189"/>
+<area shape="rect" id="node6" href="structColor.html" title="Defines the methods and variables for setting color. " alt="" coords="418,162,470,189"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -78,6 +81,7 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aeb5df09a25a32f19fdffa761268ba24f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structLight.html#aeb5df09a25a32f19fdffa761268ba24f">Light</a> ()</td></tr>
+<tr class="memdesc:aeb5df09a25a32f19fdffa761268ba24f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the variables of light.  <a href="#aeb5df09a25a32f19fdffa761268ba24f">More...</a><br /></td></tr>
 <tr class="separator:aeb5df09a25a32f19fdffa761268ba24f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -106,8 +110,10 @@ Data Fields</h2></td></tr>
 <tr class="separator:a4eb4fd0f025fb66d1934675ffff0e661"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="Light_8h_source.html#l00006">6</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
+<div class="textblock"><p>Defines the enums and methods for <a class="el" href="structLight.html" title="Defines the enums and methods for Light. ">Light</a>. </p>
+<p>Struct <a class="el" href="structLight.html" title="Defines the enums and methods for Light. ">Light</a>: </p>
+
+<p>Definition at line <a class="el" href="Light_8h_source.html#l00023">23</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="aa7ed22cab99d811d72896efaee6d07cb"></a>
 <div class="memitem">
@@ -129,7 +135,7 @@ Data Fields</h2></td></tr>
 </td></tr>
 </table>
 
-<p>Definition at line <a class="el" href="Light_8h_source.html#l00014">14</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
+<p>Definition at line <a class="el" href="Light_8h_source.html#l00031">31</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
 
 </div>
 </div>
@@ -147,9 +153,18 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Light_8cpp_source.html#l00003">3</a> of file <a class="el" href="Light_8cpp_source.html">Light.cpp</a>.</p>
+<p>Determines the variables of light. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>- <a class="el" href="structVector3.html" title="Defines a 3D vector and its methods. ">Vector3</a> that determines the position of the light color - determines the color of the light power - determines the power of the light </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Resulting values and normalized vectors </dd></dl>
 
-<p>References <a class="el" href="Light_8h_source.html#l00010">color</a>, <a class="el" href="Light_8h_source.html#l00012">kC</a>, <a class="el" href="Light_8h_source.html#l00012">kL</a>, <a class="el" href="Light_8h_source.html#l00012">kQ</a>, <a class="el" href="Light_8h_source.html#l00009">position</a>, <a class="el" href="Light_8h_source.html#l00011">power</a>, <a class="el" href="Vertex_8h_source.html#l00013">Position::Set()</a>, and <a class="el" href="Vertex_8h_source.html#l00023">Color::Set()</a>.</p>
+<p>Definition at line <a class="el" href="Light_8cpp_source.html#l00026">26</a> of file <a class="el" href="Light_8cpp_source.html">Light.cpp</a>.</p>
+
+<p>References <a class="el" href="Light_8h_source.html#l00027">color</a>, <a class="el" href="Light_8h_source.html#l00029">kC</a>, <a class="el" href="Light_8h_source.html#l00029">kL</a>, <a class="el" href="Light_8h_source.html#l00029">kQ</a>, <a class="el" href="Light_8h_source.html#l00026">position</a>, <a class="el" href="Light_8h_source.html#l00028">power</a>, <a class="el" href="Vertex_8h_source.html#l00030">Position::Set()</a>, and <a class="el" href="Vertex_8h_source.html#l00047">Color::Set()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -175,9 +190,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Light_8h_source.html#l00010">10</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
+<p>Definition at line <a class="el" href="Light_8h_source.html#l00027">27</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
 
-<p>Referenced by <a class="el" href="Particle_8cpp_source.html#l00212">Particle::initLights()</a>, <a class="el" href="SP2__Scene_8cpp_source.html#l00672">SP2_Scene::initLights()</a>, <a class="el" href="Light_8cpp_source.html#l00003">Light()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l01226">SP2_Scene::Update()</a>.</p>
+<p>Referenced by <a class="el" href="SP2__Scene_8cpp_source.html#l00838">SP2_Scene::initLights()</a>, <a class="el" href="Light_8cpp_source.html#l00026">Light()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l01523">SP2_Scene::Update()</a>.</p>
 
 </div>
 </div>
@@ -191,9 +206,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Light_8h_source.html#l00024">24</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
+<p>Definition at line <a class="el" href="Light_8h_source.html#l00041">41</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
 
-<p>Referenced by <a class="el" href="Particle_8cpp_source.html#l00212">Particle::initLights()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l00672">SP2_Scene::initLights()</a>.</p>
+<p>Referenced by <a class="el" href="SP2__Scene_8cpp_source.html#l00838">SP2_Scene::initLights()</a>.</p>
 
 </div>
 </div>
@@ -207,9 +222,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Light_8h_source.html#l00025">25</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
+<p>Definition at line <a class="el" href="Light_8h_source.html#l00042">42</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
 
-<p>Referenced by <a class="el" href="Particle_8cpp_source.html#l00212">Particle::initLights()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l00672">SP2_Scene::initLights()</a>.</p>
+<p>Referenced by <a class="el" href="SP2__Scene_8cpp_source.html#l00838">SP2_Scene::initLights()</a>.</p>
 
 </div>
 </div>
@@ -223,9 +238,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Light_8h_source.html#l00026">26</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
+<p>Definition at line <a class="el" href="Light_8h_source.html#l00043">43</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
 
-<p>Referenced by <a class="el" href="Particle_8cpp_source.html#l00212">Particle::initLights()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l00672">SP2_Scene::initLights()</a>.</p>
+<p>Referenced by <a class="el" href="SP2__Scene_8cpp_source.html#l00838">SP2_Scene::initLights()</a>.</p>
 
 </div>
 </div>
@@ -239,9 +254,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Light_8h_source.html#l00012">12</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
+<p>Definition at line <a class="el" href="Light_8h_source.html#l00029">29</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
 
-<p>Referenced by <a class="el" href="Particle_8cpp_source.html#l00212">Particle::initLights()</a>, <a class="el" href="SP2__Scene_8cpp_source.html#l00672">SP2_Scene::initLights()</a>, and <a class="el" href="Light_8cpp_source.html#l00003">Light()</a>.</p>
+<p>Referenced by <a class="el" href="SP2__Scene_8cpp_source.html#l00838">SP2_Scene::initLights()</a>, and <a class="el" href="Light_8cpp_source.html#l00026">Light()</a>.</p>
 
 </div>
 </div>
@@ -255,9 +270,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Light_8h_source.html#l00012">12</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
+<p>Definition at line <a class="el" href="Light_8h_source.html#l00029">29</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
 
-<p>Referenced by <a class="el" href="Particle_8cpp_source.html#l00212">Particle::initLights()</a>, <a class="el" href="SP2__Scene_8cpp_source.html#l00672">SP2_Scene::initLights()</a>, and <a class="el" href="Light_8cpp_source.html#l00003">Light()</a>.</p>
+<p>Referenced by <a class="el" href="SP2__Scene_8cpp_source.html#l00838">SP2_Scene::initLights()</a>, and <a class="el" href="Light_8cpp_source.html#l00026">Light()</a>.</p>
 
 </div>
 </div>
@@ -271,9 +286,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Light_8h_source.html#l00012">12</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
+<p>Definition at line <a class="el" href="Light_8h_source.html#l00029">29</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
 
-<p>Referenced by <a class="el" href="Particle_8cpp_source.html#l00212">Particle::initLights()</a>, <a class="el" href="SP2__Scene_8cpp_source.html#l00672">SP2_Scene::initLights()</a>, and <a class="el" href="Light_8cpp_source.html#l00003">Light()</a>.</p>
+<p>Referenced by <a class="el" href="SP2__Scene_8cpp_source.html#l00838">SP2_Scene::initLights()</a>, and <a class="el" href="Light_8cpp_source.html#l00026">Light()</a>.</p>
 
 </div>
 </div>
@@ -287,9 +302,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Light_8h_source.html#l00009">9</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
+<p>Definition at line <a class="el" href="Light_8h_source.html#l00026">26</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
 
-<p>Referenced by <a class="el" href="Particle_8cpp_source.html#l00212">Particle::initLights()</a>, <a class="el" href="SP2__Scene_8cpp_source.html#l00672">SP2_Scene::initLights()</a>, <a class="el" href="Light_8cpp_source.html#l00003">Light()</a>, <a class="el" href="Particle_8cpp_source.html#l00358">Particle::Render()</a>, <a class="el" href="SP2__Scene_8cpp_source.html#l02248">SP2_Scene::Render()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l01226">SP2_Scene::Update()</a>.</p>
+<p>Referenced by <a class="el" href="SP2__Scene_8cpp_source.html#l00838">SP2_Scene::initLights()</a>, <a class="el" href="Light_8cpp_source.html#l00026">Light()</a>, <a class="el" href="SP2__Scene_8cpp_source.html#l02424">SP2_Scene::Render()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l01523">SP2_Scene::Update()</a>.</p>
 
 </div>
 </div>
@@ -303,9 +318,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Light_8h_source.html#l00011">11</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
+<p>Definition at line <a class="el" href="Light_8h_source.html#l00028">28</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
 
-<p>Referenced by <a class="el" href="Particle_8cpp_source.html#l00212">Particle::initLights()</a>, <a class="el" href="SP2__Scene_8cpp_source.html#l00672">SP2_Scene::initLights()</a>, and <a class="el" href="Light_8cpp_source.html#l00003">Light()</a>.</p>
+<p>Referenced by <a class="el" href="SP2__Scene_8cpp_source.html#l00838">SP2_Scene::initLights()</a>, and <a class="el" href="Light_8cpp_source.html#l00026">Light()</a>.</p>
 
 </div>
 </div>
@@ -319,9 +334,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Light_8h_source.html#l00023">23</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
+<p>Definition at line <a class="el" href="Light_8h_source.html#l00040">40</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
 
-<p>Referenced by <a class="el" href="Particle_8cpp_source.html#l00212">Particle::initLights()</a>, <a class="el" href="SP2__Scene_8cpp_source.html#l00672">SP2_Scene::initLights()</a>, <a class="el" href="Particle_8cpp_source.html#l00358">Particle::Render()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l02248">SP2_Scene::Render()</a>.</p>
+<p>Referenced by <a class="el" href="SP2__Scene_8cpp_source.html#l00838">SP2_Scene::initLights()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l02424">SP2_Scene::Render()</a>.</p>
 
 </div>
 </div>
@@ -335,9 +350,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Light_8h_source.html#l00022">22</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
+<p>Definition at line <a class="el" href="Light_8h_source.html#l00039">39</a> of file <a class="el" href="Light_8h_source.html">Light.h</a>.</p>
 
-<p>Referenced by <a class="el" href="Particle_8cpp_source.html#l00212">Particle::initLights()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l00672">SP2_Scene::initLights()</a>.</p>
+<p>Referenced by <a class="el" href="SP2__Scene_8cpp_source.html#l00838">SP2_Scene::initLights()</a>.</p>
 
 </div>
 </div>

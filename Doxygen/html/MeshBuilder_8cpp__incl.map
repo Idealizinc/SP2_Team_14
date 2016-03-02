@@ -1,9 +1,9 @@
 <map id="ComGLab/Source/MeshBuilder.cpp" name="ComGLab/Source/MeshBuilder.cpp">
-<area shape="rect" id="node2" href="$MeshBuilder_8h.html" title="MeshBuilder.h" alt="" coords="375,80,481,107"/>
-<area shape="rect" id="node3" href="$Vertex_8h.html" title="Vertex.h" alt="" coords="474,229,545,256"/>
-<area shape="rect" id="node11" href="$Mesh_8h.html" title="Mesh.h" alt="" coords="241,155,306,181"/>
-<area shape="rect" id="node16" href="$LoadOBJ_8h.html" title="LoadOBJ.h" alt="" coords="385,155,471,181"/>
+<area shape="rect" id="node2" href="$MeshBuilder_8h.html" title="Class to build meshess. " alt="" coords="375,80,481,107"/>
+<area shape="rect" id="node3" href="$Vertex_8h.html" title="Header file for vertex. " alt="" coords="474,229,545,256"/>
+<area shape="rect" id="node11" href="$Mesh_8h.html" title="Class to draw meshes. " alt="" coords="241,155,306,181"/>
+<area shape="rect" id="node16" href="$LoadOBJ_8h.html" title="Header file for code that loads OBJ files. " alt="" coords="385,155,471,181"/>
 <area shape="rect" id="node4" href="$Vector3_8h.html" title="Struct to define a 3D vector. " alt="" coords="397,304,475,331"/>
 <area shape="rect" id="node5" href="$MyMath_8h.html" title="Header file for math helper functions. " alt="" coords="281,379,361,405"/>
-<area shape="rect" id="node14" href="$Material_8h.html" title="Material.h" alt="" coords="110,229,189,256"/>
+<area shape="rect" id="node14" href="$Material_8h.html" title="Struct that defines light properties. " alt="" coords="110,229,189,256"/>
 </map>

@@ -138,13 +138,13 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="510">
+      <node id="470">
         <label>void *</label>
       </node>
-      <node id="508">
+      <node id="468">
         <label>MPAuDecContext</label>
         <link refid="structMPAuDecContext"/>
-        <childnode refid="509" relation="usage">
+        <childnode refid="469" relation="usage">
           <edgelabel>coded_frame_size</edgelabel>
           <edgelabel>bit_rate</edgelabel>
           <edgelabel>sample_rate</edgelabel>
@@ -153,11 +153,11 @@
           <edgelabel>frame_size</edgelabel>
           <edgelabel>channels</edgelabel>
         </childnode>
-        <childnode refid="510" relation="usage">
+        <childnode refid="470" relation="usage">
           <edgelabel>priv_data</edgelabel>
         </childnode>
       </node>
-      <node id="509">
+      <node id="469">
         <label>int</label>
       </node>
     </collaborationgraph>

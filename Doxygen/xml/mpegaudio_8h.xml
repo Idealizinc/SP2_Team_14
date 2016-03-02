@@ -4,13 +4,13 @@
     <compoundname>mpegaudio.h</compoundname>
     <includedby refid="mpaudec_8c" local="yes">irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c</includedby>
     <invincdepgraph>
-      <node id="2968">
+      <node id="2456">
         <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/mpegaudio.h</label>
         <link refid="mpegaudio.h"/>
-        <childnode refid="2969" relation="include">
+        <childnode refid="2457" relation="include">
         </childnode>
       </node>
-      <node id="2969">
+      <node id="2457">
         <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c</label>
         <link refid="mpaudec_8c"/>
       </node>

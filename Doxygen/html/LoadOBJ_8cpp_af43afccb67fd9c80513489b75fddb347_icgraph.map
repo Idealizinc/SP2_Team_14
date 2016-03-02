@@ -1,8 +1,8 @@
 <map id="getSimilarVertexIndex_fast" name="getSimilarVertexIndex_fast">
 <area shape="rect" id="node2" href="$LoadOBJ_8h.html#aa99ef9426a57205ed8acb8f7d41f3bae" title="IndexVBO" alt="" coords="231,56,312,83"/>
 <area shape="rect" id="node3" href="$classMeshBuilder.html#aba87550d7726a610c911fbb977fd3575" title="MeshBuilder::GenerateOBJ" alt="" coords="360,56,540,83"/>
-<area shape="rect" id="node4" href="$classSP2__Scene.html#a6db32e7632b8b3d3a57d949d3029b4a7" title="SP2_Scene::InitWeaponModels" alt="" coords="588,5,795,32"/>
-<area shape="rect" id="node6" href="$classSP2__Scene.html#aea95ab9454db62830823d42d053c191e" title="SP2_Scene::InitMapModels" alt="" coords="600,56,783,83"/>
-<area shape="rect" id="node7" href="$classSP2__Scene.html#aeef4e3096a06665be510e2b4bd6c2b79" title="SP2_Scene::InitRobots" alt="" coords="613,107,770,133"/>
-<area shape="rect" id="node5" href="$classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="SP2_Scene::Update" alt="" coords="843,56,983,83"/>
+<area shape="rect" id="node4" href="$classSP2__Scene.html#a6db32e7632b8b3d3a57d949d3029b4a7" title="Initializes OBJ and TGA files. " alt="" coords="588,5,795,32"/>
+<area shape="rect" id="node6" href="$classSP2__Scene.html#aea95ab9454db62830823d42d053c191e" title="Initializes OBJ and TGA files. " alt="" coords="600,56,783,83"/>
+<area shape="rect" id="node7" href="$classSP2__Scene.html#aeef4e3096a06665be510e2b4bd6c2b79" title="Initializes OBJ and TGA files. " alt="" coords="613,107,770,133"/>
+<area shape="rect" id="node5" href="$classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="Method where values are changed. " alt="" coords="843,56,983,83"/>
 </map>

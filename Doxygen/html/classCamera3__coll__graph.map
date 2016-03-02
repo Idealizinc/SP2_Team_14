@@ -1,5 +1,5 @@
 <map id="Camera3" name="Camera3">
-<area shape="rect" id="node2" href="$classCamera.html" title="Camera" alt="" coords="116,489,182,515"/>
-<area shape="rect" id="node3" href="$structVector3.html" title="Defines a 3D vector and its methods. " alt="" coords="164,155,230,181"/>
-<area shape="rect" id="node6" href="$structBoundary.html" title="Boundary" alt="" coords="486,489,564,515"/>
+<area shape="rect" id="node2" href="$classCamera.html" title="Defines the methods for camera control. " alt="" coords="116,467,183,493"/>
+<area shape="rect" id="node3" href="$structVector3.html" title="Defines a 3D vector and its methods. " alt="" coords="164,155,231,181"/>
+<area shape="rect" id="node7" href="$structBoundary.html" title="Defines 3D vectors and its methods. " alt="" coords="487,467,564,493"/>
 </map>

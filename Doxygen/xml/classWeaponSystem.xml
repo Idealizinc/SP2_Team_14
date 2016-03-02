@@ -15,16 +15,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/WeaponSystem.h" line="12" column="1" bodyfile="ComGLab/Source/WeaponSystem.h" bodystart="12" bodyend="-1"/>
-        <referencedby refid="classRobot_1ad545d19adff26cb99fda1c4408f51e69" compoundref="Robot_8cpp" startline="83" endline="94">Robot::BoundsCheck</referencedby>
-        <referencedby refid="classWeaponSystem_1a4c149823fee5be2cc5ee8f19cf8760d8" compoundref="WeaponSystem_8cpp" startline="19" endline="40">CleanUp</referencedby>
-        <referencedby refid="classWeaponSystem_1a233da9c15e711ac1f5ce5fcf2945d91f" compoundref="WeaponSystem_8cpp" startline="42" endline="48">ClearList</referencedby>
-        <referencedby refid="classWeaponSystem_1a66aa47e78dd93edc708236ba4bc0c288" compoundref="WeaponSystem_8cpp" startline="11" endline="17">IncrementPosition</referencedby>
-        <referencedby refid="classSP2__Scene_1a0b1572242a264fb4de0bb415d293c99f" compoundref="SP2__Scene_8cpp" startline="1192" endline="1224">SP2_Scene::MothershipBulletSpawner</referencedby>
-        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2248" endline="2508">SP2_Scene::Render</referencedby>
-        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1004" endline="1135">SP2_Scene::RenderSpaceMap</referencedby>
-        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
-        <referencedby refid="classWeaponSystem_1a8d172b8401719296f5fcce169f15f891" compoundref="WeaponSystem_8cpp" startline="3" endline="9">~WeaponSystem</referencedby>
+        <location file="ComGLab/Source/WeaponSystem.h" line="29" column="1" bodyfile="ComGLab/Source/WeaponSystem.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classRobot_1ad545d19adff26cb99fda1c4408f51e69" compoundref="Robot_8cpp" startline="176" endline="187">Robot::BoundsCheck</referencedby>
+        <referencedby refid="classWeaponSystem_1a4c149823fee5be2cc5ee8f19cf8760d8" compoundref="WeaponSystem_8cpp" startline="53" endline="74">CleanUp</referencedby>
+        <referencedby refid="classWeaponSystem_1a233da9c15e711ac1f5ce5fcf2945d91f" compoundref="WeaponSystem_8cpp" startline="84" endline="90">ClearList</referencedby>
+        <referencedby refid="classWeaponSystem_1a66aa47e78dd93edc708236ba4bc0c288" compoundref="WeaponSystem_8cpp" startline="37" endline="43">IncrementPosition</referencedby>
+        <referencedby refid="classSP2__Scene_1a0b1572242a264fb4de0bb415d293c99f" compoundref="SP2__Scene_8cpp" startline="1482" endline="1514">SP2_Scene::MothershipBulletSpawner</referencedby>
+        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2424" endline="2688">SP2_Scene::Render</referencedby>
+        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1279" endline="1410">SP2_Scene::RenderSpaceMap</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1523" endline="2089">SP2_Scene::Update</referencedby>
+        <referencedby refid="classWeaponSystem_1a8d172b8401719296f5fcce169f15f891" compoundref="WeaponSystem_8cpp" startline="21" endline="27">~WeaponSystem</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWeaponSystem_1a85863154bde71142bbe5baa144cd729f" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -37,10 +37,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/WeaponSystem.h" line="19" column="1" bodyfile="ComGLab/Source/WeaponSystem.h" bodystart="19" bodyend="-1"/>
-        <referencedby refid="classSP2__Scene_1aeb5b6dadeb1ee8d943f2e52e69d6d9e0" compoundref="SP2__Scene_8cpp" startline="1980" endline="2067">SP2_Scene::RenderUI</referencedby>
-        <referencedby refid="classWeaponSystem_1ae014e0236d0f8a401a0ec848b25a2896" compoundref="WeaponSystem_8cpp" startline="55" endline="172">SetStats</referencedby>
-        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+        <location file="ComGLab/Source/WeaponSystem.h" line="36" column="1" bodyfile="ComGLab/Source/WeaponSystem.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classSP2__Scene_1aeb5b6dadeb1ee8d943f2e52e69d6d9e0" compoundref="SP2__Scene_8cpp" startline="2295" endline="2382">SP2_Scene::RenderUI</referencedby>
+        <referencedby refid="classWeaponSystem_1ae014e0236d0f8a401a0ec848b25a2896" compoundref="WeaponSystem_8cpp" startline="122" endline="239">SetStats</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1523" endline="2089">SP2_Scene::Update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWeaponSystem_1a82a183194516fbcddfb7a2fd70139e1f" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -53,9 +53,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/WeaponSystem.h" line="20" column="1" bodyfile="ComGLab/Source/WeaponSystem.h" bodystart="20" bodyend="-1"/>
-        <referencedby refid="classWeaponSystem_1ae014e0236d0f8a401a0ec848b25a2896" compoundref="WeaponSystem_8cpp" startline="55" endline="172">SetStats</referencedby>
-        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+        <location file="ComGLab/Source/WeaponSystem.h" line="37" column="1" bodyfile="ComGLab/Source/WeaponSystem.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="classWeaponSystem_1ae014e0236d0f8a401a0ec848b25a2896" compoundref="WeaponSystem_8cpp" startline="122" endline="239">SetStats</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1523" endline="2089">SP2_Scene::Update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWeaponSystem_1a1b10c3a982b00f3eb8141d495d35de37" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -68,9 +68,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/WeaponSystem.h" line="21" column="1" bodyfile="ComGLab/Source/WeaponSystem.h" bodystart="21" bodyend="-1"/>
-        <referencedby refid="classWeaponSystem_1ae014e0236d0f8a401a0ec848b25a2896" compoundref="WeaponSystem_8cpp" startline="55" endline="172">SetStats</referencedby>
-        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+        <location file="ComGLab/Source/WeaponSystem.h" line="38" column="1" bodyfile="ComGLab/Source/WeaponSystem.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classWeaponSystem_1ae014e0236d0f8a401a0ec848b25a2896" compoundref="WeaponSystem_8cpp" startline="122" endline="239">SetStats</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1523" endline="2089">SP2_Scene::Update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWeaponSystem_1a9d8d2b48191e7acbfdb92e4869bec755" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -83,9 +83,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/WeaponSystem.h" line="22" column="1" bodyfile="ComGLab/Source/WeaponSystem.h" bodystart="22" bodyend="-1"/>
-        <referencedby refid="classWeaponSystem_1ae014e0236d0f8a401a0ec848b25a2896" compoundref="WeaponSystem_8cpp" startline="55" endline="172">SetStats</referencedby>
-        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+        <location file="ComGLab/Source/WeaponSystem.h" line="39" column="1" bodyfile="ComGLab/Source/WeaponSystem.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classWeaponSystem_1ae014e0236d0f8a401a0ec848b25a2896" compoundref="WeaponSystem_8cpp" startline="122" endline="239">SetStats</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1523" endline="2089">SP2_Scene::Update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWeaponSystem_1a408c7014b033103d043f4ddc18becf69" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -98,11 +98,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/WeaponSystem.h" line="23" column="1" bodyfile="ComGLab/Source/WeaponSystem.h" bodystart="23" bodyend="-1"/>
-        <referencedby refid="classSP2__Scene_1a3cd10ebc989e3f3e2f84f59d74b76ef2" compoundref="SP2__Scene_8cpp" startline="828" endline="953">SP2_Scene::GameState</referencedby>
-        <referencedby refid="classSP2__Scene_1aeb5b6dadeb1ee8d943f2e52e69d6d9e0" compoundref="SP2__Scene_8cpp" startline="1980" endline="2067">SP2_Scene::RenderUI</referencedby>
-        <referencedby refid="classWeaponSystem_1ae014e0236d0f8a401a0ec848b25a2896" compoundref="WeaponSystem_8cpp" startline="55" endline="172">SetStats</referencedby>
-        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+        <location file="ComGLab/Source/WeaponSystem.h" line="40" column="1" bodyfile="ComGLab/Source/WeaponSystem.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classSP2__Scene_1a3cd10ebc989e3f3e2f84f59d74b76ef2" compoundref="SP2__Scene_8cpp" startline="960" endline="1095">SP2_Scene::GameState</referencedby>
+        <referencedby refid="classSP2__Scene_1a1251677b641cce30ba451e9e02418cf2" compoundref="SP2__Scene_8cpp" startline="1104" endline="1213">SP2_Scene::RenderPowerUp</referencedby>
+        <referencedby refid="classSP2__Scene_1aeb5b6dadeb1ee8d943f2e52e69d6d9e0" compoundref="SP2__Scene_8cpp" startline="2295" endline="2382">SP2_Scene::RenderUI</referencedby>
+        <referencedby refid="classWeaponSystem_1ae014e0236d0f8a401a0ec848b25a2896" compoundref="WeaponSystem_8cpp" startline="122" endline="239">SetStats</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1523" endline="2089">SP2_Scene::Update</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -118,8 +119,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/WeaponSystem.h" line="26" column="1" bodyfile="ComGLab/Source/WeaponSystem.h" bodystart="26" bodyend="-1"/>
-        <referencedby refid="classWeaponSystem_1a4c149823fee5be2cc5ee8f19cf8760d8" compoundref="WeaponSystem_8cpp" startline="19" endline="40">CleanUp</referencedby>
+        <location file="ComGLab/Source/WeaponSystem.h" line="43" column="1" bodyfile="ComGLab/Source/WeaponSystem.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="classWeaponSystem_1a4c149823fee5be2cc5ee8f19cf8760d8" compoundref="WeaponSystem_8cpp" startline="53" endline="74">CleanUp</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWeaponSystem_1a44426b0d147133364ed27d0592bfa919" prot="private" static="no" mutable="no">
         <type>unsigned short</type>
@@ -133,8 +134,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/WeaponSystem.h" line="27" column="1" bodyfile="ComGLab/Source/WeaponSystem.h" bodystart="27" bodyend="-1"/>
-        <referencedby refid="classWeaponSystem_1a4c149823fee5be2cc5ee8f19cf8760d8" compoundref="WeaponSystem_8cpp" startline="19" endline="40">CleanUp</referencedby>
+        <location file="ComGLab/Source/WeaponSystem.h" line="44" column="1" bodyfile="ComGLab/Source/WeaponSystem.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="classWeaponSystem_1a4c149823fee5be2cc5ee8f19cf8760d8" compoundref="WeaponSystem_8cpp" startline="53" endline="74">CleanUp</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -149,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/WeaponSystem.h" line="10" column="1" bodyfile="ComGLab/Source/WeaponSystem.h" bodystart="10" bodyend="10"/>
+        <location file="ComGLab/Source/WeaponSystem.h" line="27" column="1" bodyfile="ComGLab/Source/WeaponSystem.h" bodystart="27" bodyend="27"/>
       </memberdef>
       <memberdef kind="function" id="classWeaponSystem_1a8d172b8401719296f5fcce169f15f891" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -157,13 +158,13 @@
         <argsstring>()</argsstring>
         <name>~WeaponSystem</name>
         <briefdescription>
-        </briefdescription>
+<para>Constructor. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/WeaponSystem.h" line="11" column="1" bodyfile="ComGLab/Source/WeaponSystem.cpp" bodystart="3" bodyend="9"/>
-        <references refid="classWeaponSystem_1abf033a8b540f147675c1f4620d67554a" compoundref="WeaponSystem_8h" startline="12">BulletList</references>
+        <location file="ComGLab/Source/WeaponSystem.h" line="28" column="1" bodyfile="ComGLab/Source/WeaponSystem.cpp" bodystart="21" bodyend="27"/>
+        <references refid="classWeaponSystem_1abf033a8b540f147675c1f4620d67554a" compoundref="WeaponSystem_8h" startline="29">BulletList</references>
       </memberdef>
       <memberdef kind="function" id="classWeaponSystem_1a66aa47e78dd93edc708236ba4bc0c288" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -171,14 +172,14 @@
         <argsstring>()</argsstring>
         <name>IncrementPosition</name>
         <briefdescription>
-        </briefdescription>
+<para>Increments the position of each bullet. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/WeaponSystem.h" line="13" column="1" bodyfile="ComGLab/Source/WeaponSystem.cpp" bodystart="11" bodyend="17"/>
-        <references refid="classWeaponSystem_1abf033a8b540f147675c1f4620d67554a" compoundref="WeaponSystem_8h" startline="12">BulletList</references>
-        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+        <location file="ComGLab/Source/WeaponSystem.h" line="30" column="1" bodyfile="ComGLab/Source/WeaponSystem.cpp" bodystart="37" bodyend="43"/>
+        <references refid="classWeaponSystem_1abf033a8b540f147675c1f4620d67554a" compoundref="WeaponSystem_8h" startline="29">BulletList</references>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1523" endline="2089">SP2_Scene::Update</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWeaponSystem_1a4c149823fee5be2cc5ee8f19cf8760d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -186,17 +187,17 @@
         <argsstring>()</argsstring>
         <name>CleanUp</name>
         <briefdescription>
-        </briefdescription>
+<para>Cleans up data to prevent memory leaks. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/WeaponSystem.h" line="14" column="1" bodyfile="ComGLab/Source/WeaponSystem.cpp" bodystart="19" bodyend="40"/>
-        <references refid="classWeaponSystem_1abf033a8b540f147675c1f4620d67554a" compoundref="WeaponSystem_8h" startline="12">BulletList</references>
-        <references refid="classWeaponSystem_1a92124c3a05ebf38514c7455cc3f2fcb0" compoundref="WeaponSystem_8cpp" startline="50" endline="53">GetLength</references>
-        <references refid="classWeaponSystem_1ac11d8d279548ca11c6783695d7af2b4a" compoundref="WeaponSystem_8h" startline="26">MaxBulletCount</references>
-        <references refid="classWeaponSystem_1a44426b0d147133364ed27d0592bfa919" compoundref="WeaponSystem_8h" startline="27">MaxDist</references>
-        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+        <location file="ComGLab/Source/WeaponSystem.h" line="31" column="1" bodyfile="ComGLab/Source/WeaponSystem.cpp" bodystart="53" bodyend="74"/>
+        <references refid="classWeaponSystem_1abf033a8b540f147675c1f4620d67554a" compoundref="WeaponSystem_8h" startline="29">BulletList</references>
+        <references refid="classWeaponSystem_1a92124c3a05ebf38514c7455cc3f2fcb0" compoundref="WeaponSystem_8cpp" startline="100" endline="103">GetLength</references>
+        <references refid="classWeaponSystem_1ac11d8d279548ca11c6783695d7af2b4a" compoundref="WeaponSystem_8h" startline="43">MaxBulletCount</references>
+        <references refid="classWeaponSystem_1a44426b0d147133364ed27d0592bfa919" compoundref="WeaponSystem_8h" startline="44">MaxDist</references>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1523" endline="2089">SP2_Scene::Update</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWeaponSystem_1a92124c3a05ebf38514c7455cc3f2fcb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -208,15 +209,15 @@
           <declname>Ray</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Returns the length of each bullet. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/WeaponSystem.h" line="15" column="1" bodyfile="ComGLab/Source/WeaponSystem.cpp" bodystart="50" bodyend="53"/>
+        <location file="ComGLab/Source/WeaponSystem.h" line="32" column="1" bodyfile="ComGLab/Source/WeaponSystem.cpp" bodystart="100" bodyend="103"/>
         <references refid="structVector3_1a200024a8442329de9a625ed58ffe7075" compoundref="Vector3_8cpp" startline="273" endline="276">Vector3::Length</references>
-        <references refid="classRayCast_1a9f508cc3e3f75cb0a9e4079424753bcb" compoundref="Raycast_8cpp" startline="23" endline="26">RayCast::Position</references>
-        <referencedby refid="classWeaponSystem_1a4c149823fee5be2cc5ee8f19cf8760d8" compoundref="WeaponSystem_8cpp" startline="19" endline="40">CleanUp</referencedby>
+        <references refid="classRayCast_1a9f508cc3e3f75cb0a9e4079424753bcb" compoundref="Raycast_8cpp" startline="75" endline="78">RayCast::Position</references>
+        <referencedby refid="classWeaponSystem_1a4c149823fee5be2cc5ee8f19cf8760d8" compoundref="WeaponSystem_8cpp" startline="53" endline="74">CleanUp</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWeaponSystem_1a233da9c15e711ac1f5ce5fcf2945d91f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -224,15 +225,16 @@
         <argsstring>()</argsstring>
         <name>ClearList</name>
         <briefdescription>
-        </briefdescription>
+<para>Removes bullets from the list. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/WeaponSystem.h" line="16" column="1" bodyfile="ComGLab/Source/WeaponSystem.cpp" bodystart="42" bodyend="48"/>
-        <references refid="classWeaponSystem_1abf033a8b540f147675c1f4620d67554a" compoundref="WeaponSystem_8h" startline="12">BulletList</references>
-        <referencedby refid="classSP2__Scene_1a3cd10ebc989e3f3e2f84f59d74b76ef2" compoundref="SP2__Scene_8cpp" startline="828" endline="953">SP2_Scene::GameState</referencedby>
-        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+        <location file="ComGLab/Source/WeaponSystem.h" line="33" column="1" bodyfile="ComGLab/Source/WeaponSystem.cpp" bodystart="84" bodyend="90"/>
+        <references refid="classWeaponSystem_1abf033a8b540f147675c1f4620d67554a" compoundref="WeaponSystem_8h" startline="29">BulletList</references>
+        <referencedby refid="classSP2__Scene_1a3cd10ebc989e3f3e2f84f59d74b76ef2" compoundref="SP2__Scene_8cpp" startline="960" endline="1095">SP2_Scene::GameState</referencedby>
+        <referencedby refid="classSP2__Scene_1a1251677b641cce30ba451e9e02418cf2" compoundref="SP2__Scene_8cpp" startline="1104" endline="1213">SP2_Scene::RenderPowerUp</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1523" endline="2089">SP2_Scene::Update</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWeaponSystem_1ae014e0236d0f8a401a0ec848b25a2896" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -244,55 +246,65 @@
           <declname>wepVal</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Sets the stats for each type of gun. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wepVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- value that determines the type of gun used ReloadTime - value that determines how long each gun takes to reload RateOfFire - value that determines each weapon&apos;s rate of fire Damage - value that determines each weapon&apos;s damage Speed - value that determines the speed of each bullet MaxAmmo - value that determines the maximum amount of ammo that each type of gun can hold </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting values </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/WeaponSystem.h" line="17" column="1" bodyfile="ComGLab/Source/WeaponSystem.cpp" bodystart="55" bodyend="172"/>
-        <references refid="classWeaponSystem_1a1b10c3a982b00f3eb8141d495d35de37" compoundref="WeaponSystem_8h" startline="21">Damage</references>
-        <references refid="classWeaponSystem_1a408c7014b033103d043f4ddc18becf69" compoundref="WeaponSystem_8h" startline="23">MaxAmmo</references>
-        <references refid="classWeaponSystem_1a82a183194516fbcddfb7a2fd70139e1f" compoundref="WeaponSystem_8h" startline="20">RateOfFire</references>
-        <references refid="classWeaponSystem_1a85863154bde71142bbe5baa144cd729f" compoundref="WeaponSystem_8h" startline="19">ReloadTime</references>
-        <references refid="classWeaponSystem_1a9d8d2b48191e7acbfdb92e4869bec755" compoundref="WeaponSystem_8h" startline="22">Speed</references>
-        <referencedby refid="classSP2__Scene_1a3cd10ebc989e3f3e2f84f59d74b76ef2" compoundref="SP2__Scene_8cpp" startline="828" endline="953">SP2_Scene::GameState</referencedby>
-        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+        <location file="ComGLab/Source/WeaponSystem.h" line="34" column="1" bodyfile="ComGLab/Source/WeaponSystem.cpp" bodystart="122" bodyend="239"/>
+        <references refid="classWeaponSystem_1a1b10c3a982b00f3eb8141d495d35de37" compoundref="WeaponSystem_8h" startline="38">Damage</references>
+        <references refid="classWeaponSystem_1a408c7014b033103d043f4ddc18becf69" compoundref="WeaponSystem_8h" startline="40">MaxAmmo</references>
+        <references refid="classWeaponSystem_1a82a183194516fbcddfb7a2fd70139e1f" compoundref="WeaponSystem_8h" startline="37">RateOfFire</references>
+        <references refid="classWeaponSystem_1a85863154bde71142bbe5baa144cd729f" compoundref="WeaponSystem_8h" startline="36">ReloadTime</references>
+        <references refid="classWeaponSystem_1a9d8d2b48191e7acbfdb92e4869bec755" compoundref="WeaponSystem_8h" startline="39">Speed</references>
+        <referencedby refid="classSP2__Scene_1a3cd10ebc989e3f3e2f84f59d74b76ef2" compoundref="SP2__Scene_8cpp" startline="960" endline="1095">SP2_Scene::GameState</referencedby>
+        <referencedby refid="classSP2__Scene_1a1251677b641cce30ba451e9e02418cf2" compoundref="SP2__Scene_8cpp" startline="1104" endline="1213">SP2_Scene::RenderPowerUp</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1523" endline="2089">SP2_Scene::Update</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Defines the methods and variables for Weapon System. </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para>Class <ref refid="classWeaponSystem" kindref="compound">WeaponSystem</ref>: </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="648">
+      <node id="582">
         <label>float</label>
       </node>
-      <node id="646">
+      <node id="580">
         <label>WeaponSystem</label>
         <link refid="classWeaponSystem"/>
-        <childnode refid="647" relation="usage">
+        <childnode refid="581" relation="usage">
           <edgelabel>BulletList</edgelabel>
         </childnode>
-        <childnode refid="648" relation="usage">
+        <childnode refid="582" relation="usage">
           <edgelabel>ReloadTime</edgelabel>
           <edgelabel>Speed</edgelabel>
           <edgelabel>RateOfFire</edgelabel>
           <edgelabel>MaxAmmo</edgelabel>
           <edgelabel>Damage</edgelabel>
         </childnode>
-        <childnode refid="649" relation="usage">
+        <childnode refid="583" relation="usage">
           <edgelabel>MaxDist</edgelabel>
           <edgelabel>MaxBulletCount</edgelabel>
         </childnode>
       </node>
-      <node id="647">
+      <node id="581">
         <label>list&lt; RayCast &gt;</label>
       </node>
-      <node id="649">
+      <node id="583">
         <label>unsigned</label>
       </node>
     </collaborationgraph>
-    <location file="ComGLab/Source/WeaponSystem.h" line="8" column="1" bodyfile="ComGLab/Source/WeaponSystem.h" bodystart="7" bodyend="28"/>
+    <location file="ComGLab/Source/WeaponSystem.h" line="25" column="1" bodyfile="ComGLab/Source/WeaponSystem.h" bodystart="24" bodyend="45"/>
     <listofallmembers>
       <member refid="classWeaponSystem_1abf033a8b540f147675c1f4620d67554a" prot="public" virt="non-virtual"><scope>WeaponSystem</scope><name>BulletList</name></member>
       <member refid="classWeaponSystem_1a4c149823fee5be2cc5ee8f19cf8760d8" prot="public" virt="non-virtual"><scope>WeaponSystem</scope><name>CleanUp</name></member>

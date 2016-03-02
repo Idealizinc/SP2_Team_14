@@ -3,7 +3,7 @@
 <area shape="rect" id="node5" href="$classMS.html#a86606fe9f575ccb747d77195c8aefdaf" title="Return the top matrix with a new matrix. " alt="" coords="313,157,427,184"/>
 <area shape="rect" id="node6" href="$classMS.html#aac22e39d0ac437fcb85403a9f0a7a25f" title="Pop the top matrix on the matrix stack. " alt="" coords="315,208,425,235"/>
 <area shape="rect" id="node7" href="$classMS.html#a9fb4fff5036f3f197b893f9a579c97b2" title="Make a copy of the top matrix on the matrix stack and push it on top. " alt="" coords="312,259,428,285"/>
-<area shape="rect" id="node8" href="$classSP2__Scene.html#a0cd5fd0736fa9288f21b0712d22ff17c" title="SP2_Scene::RenderMesh" alt="" coords="284,360,456,387"/>
+<area shape="rect" id="node8" href="$classSP2__Scene.html#a0cd5fd0736fa9288f21b0712d22ff17c" title="Method that renders a mesh in the scene. " alt="" coords="284,360,456,387"/>
 <area shape="rect" id="node16" href="$classMS.html#a6ce592114042b920b648bca5519690cd" title="Multiply the top matrix with a rotation matrix based on the following parameters. ..." alt="" coords="326,309,414,336"/>
 <area shape="rect" id="node18" href="$classMS.html#a52109795de960e24663b315e9128533f" title="Multiply the top matrix with a scale matrix based on the following parameters. " alt="" coords="329,56,411,83"/>
 <area shape="rect" id="node20" href="$classMtx44.html#a0a4c7818be7c1aeb0601ad069c1a591d" title="Setup orthogonal matrix. " alt="" coords="304,436,436,463"/>

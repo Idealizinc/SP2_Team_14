@@ -147,32 +147,32 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="435">
+      <node id="395">
         <label>irrklang::IRefCounted</label>
         <link refid="classirrklang_1_1IRefCounted"/>
       </node>
-      <node id="434">
+      <node id="394">
         <label>irrklang::IFileReader</label>
         <link refid="classirrklang_1_1IFileReader"/>
-        <childnode refid="435" relation="public-inheritance">
+        <childnode refid="395" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="438">
+      <node id="398">
         <label>int</label>
       </node>
-      <node id="437">
+      <node id="397">
         <label>irrklang::IRefCounted</label>
         <link refid="classirrklang_1_1IRefCounted"/>
-        <childnode refid="438" relation="usage">
+        <childnode refid="398" relation="usage">
           <edgelabel>ReferenceCounter</edgelabel>
         </childnode>
       </node>
-      <node id="436">
+      <node id="396">
         <label>irrklang::IFileReader</label>
         <link refid="classirrklang_1_1IFileReader"/>
-        <childnode refid="437" relation="public-inheritance">
+        <childnode refid="397" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

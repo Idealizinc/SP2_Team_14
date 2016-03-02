@@ -1,6 +1,5 @@
 <map id="MeshBuilder::GenerateCube" name="MeshBuilder::GenerateCube">
-<area shape="rect" id="node2" href="$classParticle.html#ad4131133df499c87e0a4e75ffdaae4a3" title="Particle::Init" alt="" coords="272,5,363,32"/>
-<area shape="rect" id="node3" href="$classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="SP2_Scene::Init" alt="" coords="259,56,375,83"/>
-<area shape="rect" id="node4" href="$classSP2__Scene.html#aeef4e3096a06665be510e2b4bd6c2b79" title="SP2_Scene::InitRobots" alt="" coords="239,107,396,133"/>
-<area shape="rect" id="node5" href="$classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="SP2_Scene::Update" alt="" coords="444,107,584,133"/>
+<area shape="rect" id="node2" href="$classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="Initializes values. " alt="" coords="259,5,375,32"/>
+<area shape="rect" id="node3" href="$classSP2__Scene.html#aeef4e3096a06665be510e2b4bd6c2b79" title="Initializes OBJ and TGA files. " alt="" coords="239,56,396,83"/>
+<area shape="rect" id="node4" href="$classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="Method where values are changed. " alt="" coords="444,56,584,83"/>
 </map>

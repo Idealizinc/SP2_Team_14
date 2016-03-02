@@ -1,5 +1,5 @@
 <map id="Light" name="Light">
 <area shape="rect" id="node4" href="$structVector3.html" title="Defines a 3D vector and its methods. " alt="" coords="233,162,300,189"/>
-<area shape="rect" id="node5" href="$structPosition.html" title="Position" alt="" coords="324,162,393,189"/>
-<area shape="rect" id="node6" href="$structColor.html" title="Color" alt="" coords="418,162,470,189"/>
+<area shape="rect" id="node5" href="$structPosition.html" title="Defines the methods and variables for setting position. " alt="" coords="324,162,393,189"/>
+<area shape="rect" id="node6" href="$structColor.html" title="Defines the methods and variables for setting color. " alt="" coords="418,162,470,189"/>
 </map>

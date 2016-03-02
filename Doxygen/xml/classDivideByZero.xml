@@ -24,24 +24,24 @@
     <detaileddescription>
 <para>Class <ref refid="classDivideByZero" kindref="compound">DivideByZero</ref>: </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="390">
+      <node id="350">
         <label>std::exception</label>
       </node>
-      <node id="389">
+      <node id="349">
         <label>DivideByZero</label>
         <link refid="classDivideByZero"/>
-        <childnode refid="390" relation="public-inheritance">
+        <childnode refid="350" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="392">
+      <node id="352">
         <label>std::exception</label>
       </node>
-      <node id="391">
+      <node id="351">
         <label>DivideByZero</label>
         <link refid="classDivideByZero"/>
-        <childnode refid="392" relation="public-inheritance">
+        <childnode refid="352" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

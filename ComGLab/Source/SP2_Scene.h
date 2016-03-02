@@ -6,7 +6,8 @@
 \brief
 Header file for scene
 */
-/****************************************************************************/
+/****************************************************************************/
+
 #ifndef SP2_SCENE_H
 #define SP2_SCENE_H
 
@@ -36,8 +37,8 @@ extern int S_Width, S_Height;
 
 /****************************************************************************/
 /*!
-Class SP2_Scene:
-\brief Defines the methods, enums and variables for scene
+Class Scene:
+\brief Defines the methods, enums and variables for SP2_Scene
 */
 /****************************************************************************/
 
@@ -129,6 +130,7 @@ class SP2_Scene : public Scene
 
 		GEO_BASE,
 		GEO_GATE_SIDE,
+		GEO_POWERUP,
 		NUM_GEOMETRY,
 	};
 
@@ -249,7 +251,7 @@ public:
 	bool ShipSpawned = false;
 	Vector3 ShipPos1 = Vector3(0, 10, 700);
 	Vector3 ShipPos2 = Vector3(-60, 40, 700);
-	Vector3 ShipPos3 = Vector3(60, 40, 700);
+	Vector3 ShipPos3 = Vector3(60, 40, 700); 
 	float ChoiceTimer = 0;
 	float ShotTimer = 0;
 	float ShipRotation = 90;
@@ -340,6 +342,7 @@ private:
 	void RenderSpaceMap();
 	void RenderBase();
 	void RenderRobots();
+	void RenderPowerUp(unsigned short PowerUpType = 1);
 
 	//Interaction Values
 	bool buttonPress;
@@ -393,6 +396,13 @@ private:
 	bool loadRobots = false;
 	bool loadMap = false;
 	bool loadWep = false;
+
+	//mothership defeated animation
+	float explosion;
+
+	//Power Up Stuff
+	bool PowerUpActive = true;
+	unsigned short PowerUpVal = 0;
 };
 
 #endif

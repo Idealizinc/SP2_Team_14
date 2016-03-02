@@ -52,184 +52,185 @@
 <div class="title">Application.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="Application_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Application_8h.html">Application.h</a>&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//Include GLEW</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;GL/glew.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//Include GLFW</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;GLFW/glfw3.h&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//Include the standard C++ headers</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<a href="Application_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Application_8h.html">Application.h</a>&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="SP2__Scene_8h.html">SP2_Scene.h</a>&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Particle_8h.html">Particle.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//Include GLEW</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;GL/glew.h&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="SP2__Scene_8h.html#a2cbda9a4727e1cdbcae5c646d7fb0911">   16</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="Application_8cpp.html#a2cbda9a4727e1cdbcae5c646d7fb0911">S_Width</a>, <a class="code" href="Application_8cpp.html#a9cd21b84bf993de559113a32edfc8e93">S_Height</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="Application_8cpp.html#ac325468d8b5ea73fd5e5831ba972bb59">   18</a></span>&#160;GLFWwindow* <a class="code" href="Application_8cpp.html#ac325468d8b5ea73fd5e5831ba972bb59">m_window</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="Application_8cpp.html#a677c5ab1ba0f5747ef76b40a17b6f803">   19</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="Application_8cpp.html#a677c5ab1ba0f5747ef76b40a17b6f803">FPS</a> = 100; <span class="comment">// FPS of this game</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="Application_8cpp.html#ae228418b33873657fa31313fb4189a8f">   20</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="Application_8cpp.html#ae228418b33873657fa31313fb4189a8f">frameTime</a> = 1000 / <a class="code" href="Application_8cpp.html#a677c5ab1ba0f5747ef76b40a17b6f803">FPS</a>; <span class="comment">// time for each frame</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//Define an error callback</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="Application_8cpp.html#a6e6d1771a9242858811be0a3569838fa">   23</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="Application_8cpp.html#a6e6d1771a9242858811be0a3569838fa">error_callback</a>(<span class="keywordtype">int</span> error, <span class="keyword">const</span> <span class="keywordtype">char</span>* description)</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        fputs(description, stderr);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        _fgetchar();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">//Define the key input callback</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="Application_8cpp.html#a6d1a8981b70f74fc60c1428f080da820">   30</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="Application_8cpp.html#a6d1a8981b70f74fc60c1428f080da820">key_callback</a>(GLFWwindow* <a class="code" href="mpaudec_8c.html#a988bf6974f37c7585b0cd2f299605004">window</a>, <span class="keywordtype">int</span> key, <span class="keywordtype">int</span> scancode, <span class="keywordtype">int</span> action, <span class="keywordtype">int</span> mods)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">if</span> (key == GLFW_KEY_ESCAPE &amp;&amp; action == GLFW_PRESS)</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                glfwSetWindowShouldClose(window, GL_TRUE);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classApplication.html#ae02b37c3fd9151bc11e379db0fc51f22">Application::CloseGame</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//Include GLFW</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;GLFW/glfw3.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//Include the standard C++ headers</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="SP2__Scene_8h.html">SP2_Scene.h</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="SP2__Scene_8h.html#a2cbda9a4727e1cdbcae5c646d7fb0911">   25</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="Application_8cpp.html#a2cbda9a4727e1cdbcae5c646d7fb0911">S_Width</a>, <a class="code" href="Application_8cpp.html#a9cd21b84bf993de559113a32edfc8e93">S_Height</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="Application_8cpp.html#ac325468d8b5ea73fd5e5831ba972bb59">   27</a></span>&#160;GLFWwindow* <a class="code" href="Application_8cpp.html#ac325468d8b5ea73fd5e5831ba972bb59">m_window</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="Application_8cpp.html#a677c5ab1ba0f5747ef76b40a17b6f803">   28</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="Application_8cpp.html#a677c5ab1ba0f5747ef76b40a17b6f803">FPS</a> = 100; <span class="comment">// FPS of this game</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="Application_8cpp.html#ae228418b33873657fa31313fb4189a8f">   29</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="Application_8cpp.html#ae228418b33873657fa31313fb4189a8f">frameTime</a> = 1000 / <a class="code" href="Application_8cpp.html#a677c5ab1ba0f5747ef76b40a17b6f803">FPS</a>; <span class="comment">// time for each frame</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">//Define an error callback</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="Application_8cpp.html#a6e6d1771a9242858811be0a3569838fa">   32</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="Application_8cpp.html#a6e6d1771a9242858811be0a3569838fa">error_callback</a>(<span class="keywordtype">int</span> error, <span class="keyword">const</span> <span class="keywordtype">char</span>* description)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        fputs(description, stderr);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        _fgetchar();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe">   38</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe">Application::IsKeyPressed</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> key)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> ((GetAsyncKeyState(key) &amp; 0x8001) != 0);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classApplication.html#afa8cc05ce6b6092be5ecdfdae44e05f8">   43</a></span>&#160;<a class="code" href="classApplication.html#afa8cc05ce6b6092be5ecdfdae44e05f8">Application::Application</a>()</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">//Define the key input callback</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="Application_8cpp.html#a6d1a8981b70f74fc60c1428f080da820">   39</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="Application_8cpp.html#a6d1a8981b70f74fc60c1428f080da820">key_callback</a>(GLFWwindow* <a class="code" href="mpaudec_8c.html#a988bf6974f37c7585b0cd2f299605004">window</a>, <span class="keywordtype">int</span> key, <span class="keywordtype">int</span> scancode, <span class="keywordtype">int</span> action, <span class="keywordtype">int</span> mods)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">if</span> (key == GLFW_KEY_ESCAPE &amp;&amp; action == GLFW_PRESS)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                glfwSetWindowShouldClose(window, GL_TRUE);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classApplication.html#ae02b37c3fd9151bc11e379db0fc51f22">Application::CloseGame</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classApplication.html#a748bca84fefb9c12661cfaa2f623748d">   47</a></span>&#160;<a class="code" href="classApplication.html#a748bca84fefb9c12661cfaa2f623748d">Application::~Application</a>()</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe">   47</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe">Application::IsKeyPressed</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> key)</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="Application_8cpp.html#aadcee9765075e232ca0720f80a76ad37">   51</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="Application_8cpp.html#aadcee9765075e232ca0720f80a76ad37">resize_callback</a>(GLFWwindow* <a class="code" href="mpaudec_8c.html#a988bf6974f37c7585b0cd2f299605004">window</a>, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h)</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        glViewport(0, 0, w, h); <span class="comment">// Update opengl the new window size</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> ((GetAsyncKeyState(key) &amp; 0x8001) != 0);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classApplication.html#afa8cc05ce6b6092be5ecdfdae44e05f8">   52</a></span>&#160;<a class="code" href="classApplication.html#afa8cc05ce6b6092be5ecdfdae44e05f8">Application::Application</a>()</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classApplication.html#a276388f7090c0a2b1c8b16cf033b969d">   56</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classApplication.html#a276388f7090c0a2b1c8b16cf033b969d">Application::Init</a>()</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classApplication.html#a748bca84fefb9c12661cfaa2f623748d">   56</a></span>&#160;<a class="code" href="classApplication.html#a748bca84fefb9c12661cfaa2f623748d">Application::~Application</a>()</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="comment">//Set the error callback</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        glfwSetErrorCallback(<a class="code" href="Application_8cpp.html#a6e6d1771a9242858811be0a3569838fa">error_callback</a>);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">//Initialize GLFW</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span> (!glfwInit())</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                exit(EXIT_FAILURE);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">//Set the GLFW window creation hints - these are optional</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">//glfwWindowHint(GLFW_SAMPLES, 4); //Request 4x antialiasing</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        glfwWindowHint(GLFW_SAMPLES, 8); <span class="comment">//Request 8x antialiasing</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3); <span class="comment">//Request a specific OpenGL version</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3); <span class="comment">//Request a specific OpenGL version</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="comment">//glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // To make MacOS happy; should not be needed</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); <span class="comment">//We don&#39;t want the old OpenGL </span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="Application_8cpp.html#aadcee9765075e232ca0720f80a76ad37">   60</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="Application_8cpp.html#aadcee9765075e232ca0720f80a76ad37">resize_callback</a>(GLFWwindow* <a class="code" href="mpaudec_8c.html#a988bf6974f37c7585b0cd2f299605004">window</a>, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        glViewport(0, 0, w, h); <span class="comment">// Update opengl the new window size</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classApplication.html#a276388f7090c0a2b1c8b16cf033b969d">   65</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classApplication.html#a276388f7090c0a2b1c8b16cf033b969d">Application::Init</a>()</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">//Set the error callback</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        glfwSetErrorCallback(<a class="code" href="Application_8cpp.html#a6e6d1771a9242858811be0a3569838fa">error_callback</a>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">//Initialize GLFW</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">if</span> (!glfwInit())</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="comment">//Create a window and create its OpenGL context</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">//m_window = glfwCreateWindow(1300, 975, &quot;Computer Graphics&quot;, NULL, NULL);</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="comment">// SIDE NOTE: DO NOT BUG TEST IN FULL SCREEN. IF IT LAGS OUT, YOU CANNOT CLOSE THE WINDOW!</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keyword">const</span> GLFWvidmode * mode = glfwGetVideoMode(glfwGetPrimaryMonitor());</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="comment">//Obtain Width and Height values from the monitor;</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="Application_8cpp.html#a2cbda9a4727e1cdbcae5c646d7fb0911">S_Width</a> = mode-&gt;width;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="Application_8cpp.html#a9cd21b84bf993de559113a32edfc8e93">S_Height</a> = mode-&gt;height;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="comment">//Choose ONE</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="comment">//Set to be windowed at primary monitor&#39;s resolution;</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="comment">//m_window = glfwCreateWindow(S_Width, S_Height, &quot;Computer Graphics&quot;, NULL, NULL);</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="comment">//Set to fullscreen at primary monitor&#39;s resolution;</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="Application_8cpp.html#ac325468d8b5ea73fd5e5831ba972bb59">m_window</a> = glfwCreateWindow(<a class="code" href="Application_8cpp.html#a2cbda9a4727e1cdbcae5c646d7fb0911">S_Width</a>, <a class="code" href="Application_8cpp.html#a9cd21b84bf993de559113a32edfc8e93">S_Height</a>, <span class="stringliteral">&quot;Computer Graphics&quot;</span>, glfwGetPrimaryMonitor(), NULL);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="comment">//</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="comment">//Hide The Cursor Within the Application;</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        glfwSetInputMode(<a class="code" href="Application_8cpp.html#ac325468d8b5ea73fd5e5831ba972bb59">m_window</a>, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        glfwSetWindowSizeCallback(<a class="code" href="Application_8cpp.html#ac325468d8b5ea73fd5e5831ba972bb59">m_window</a>, <a class="code" href="Application_8cpp.html#aadcee9765075e232ca0720f80a76ad37">resize_callback</a>);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="comment">//If the window couldn&#39;t be created</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="Application_8cpp.html#ac325468d8b5ea73fd5e5831ba972bb59">m_window</a>)</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                fprintf( stderr, <span class="stringliteral">&quot;Failed to open GLFW window.\n&quot;</span> );</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                glfwTerminate();</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                exit(EXIT_FAILURE);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="comment">//This function makes the context of the specified window current on the calling thread. </span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        glfwMakeContextCurrent(<a class="code" href="Application_8cpp.html#ac325468d8b5ea73fd5e5831ba972bb59">m_window</a>);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="comment">//Sets the key callback</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="comment">//glfwSetKeyCallback(m_window, key_callback);</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        glewExperimental = <span class="keyword">true</span>; <span class="comment">// Needed for core profile</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="comment">//Initialize GLEW</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        GLenum err = glewInit();</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="comment">//If GLEW hasn&#39;t initialized</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">if</span> (err != GLEW_OK) </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        {</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                fprintf(stderr, <span class="stringliteral">&quot;Error: %s\n&quot;</span>, glewGetErrorString(err));</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                <span class="comment">//return -1;</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classApplication.html#aaf09cd6cb412086dc039e28cdb059f0d">  121</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classApplication.html#aaf09cd6cb412086dc039e28cdb059f0d">Application::Run</a>()</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="comment">//Main Loop</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <a class="code" href="classScene.html">Scene</a> *scene = <span class="keyword">new</span> <a class="code" href="classSP2__Scene.html">SP2_Scene</a>();</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        scene-&gt;<a class="code" href="classScene.html#ac3c4677dfd702a3ffd5ffadd3f1ac478">Init</a>();</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <a class="code" href="classApplication.html#ac81ea1396dc69c6d48b9a701954f53fe">m_timer</a>.<a class="code" href="classStopWatch.html#a23301f735a2e3190435e39c9fd70cdf2">startTimer</a>();    <span class="comment">// Start timer to calculate how long it takes to render this frame</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">while</span> (!glfwWindowShouldClose(<a class="code" href="Application_8cpp.html#ac325468d8b5ea73fd5e5831ba972bb59">m_window</a>) &amp;&amp; !<a class="code" href="classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe">IsKeyPressed</a>(VK_ESCAPE) &amp;&amp; !<a class="code" href="classApplication.html#ae02b37c3fd9151bc11e379db0fc51f22">CloseGame</a>)</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        {</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                scene-&gt;<a class="code" href="classScene.html#af5c6bcf2185087fb32c27fb8f6a18d91">Update</a>(<a class="code" href="classApplication.html#ac81ea1396dc69c6d48b9a701954f53fe">m_timer</a>.<a class="code" href="classStopWatch.html#ac8be1626396d1a5ca414f74349d59eb2">getElapsedTime</a>());</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                scene-&gt;<a class="code" href="classScene.html#a9319090be5d18e87f1e83dbbf191204f">Render</a>(<a class="code" href="classApplication.html#ac81ea1396dc69c6d48b9a701954f53fe">m_timer</a>.<a class="code" href="classStopWatch.html#ac8be1626396d1a5ca414f74349d59eb2">getElapsedTime</a>());</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                <span class="comment">//Swap buffers</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                glfwSwapBuffers(<a class="code" href="Application_8cpp.html#ac325468d8b5ea73fd5e5831ba972bb59">m_window</a>);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                <span class="comment">//Get and organize events, like keyboard and mouse input, window resizing, etc...</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                glfwPollEvents();</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <a class="code" href="classApplication.html#ac81ea1396dc69c6d48b9a701954f53fe">m_timer</a>.<a class="code" href="classStopWatch.html#a2cd0856fc87a40038edfd66d784be8b4">waitUntil</a>(<a class="code" href="Application_8cpp.html#ae228418b33873657fa31313fb4189a8f">frameTime</a>);       <span class="comment">// Frame rate limiter. Limits each frame to a specified time in ms.   </span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        } <span class="comment">//Check if the ESC key had been pressed or if the window had been closed</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        scene-&gt;<a class="code" href="classScene.html#aae8e24654ef98c79961c2b804b12852c">Exit</a>();</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keyword">delete</span> scene;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;}</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
-<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="classApplication.html#a9d410604b39b8374a884b1f2a1f2a5ba">  143</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classApplication.html#a9d410604b39b8374a884b1f2a1f2a5ba">Application::Exit</a>()</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;{</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="comment">//Close OpenGL window and terminate GLFW</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        glfwDestroyWindow(<a class="code" href="Application_8cpp.html#ac325468d8b5ea73fd5e5831ba972bb59">m_window</a>);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="comment">//Finalize and clean up GLFW</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        glfwTerminate();</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="comment">//Set the GLFW window creation hints - these are optional</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">//glfwWindowHint(GLFW_SAMPLES, 4); //Request 4x antialiasing</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        glfwWindowHint(GLFW_SAMPLES, 8); <span class="comment">//Request 8x antialiasing</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3); <span class="comment">//Request a specific OpenGL version</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3); <span class="comment">//Request a specific OpenGL version</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="comment">//glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // To make MacOS happy; should not be needed</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); <span class="comment">//We don&#39;t want the old OpenGL </span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="comment">//Create a window and create its OpenGL context</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="comment">//m_window = glfwCreateWindow(1300, 975, &quot;Computer Graphics&quot;, NULL, NULL);</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="comment">// SIDE NOTE: DO NOT BUG TEST IN FULL SCREEN. IF IT LAGS OUT, YOU CANNOT CLOSE THE WINDOW!</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">const</span> GLFWvidmode * mode = glfwGetVideoMode(glfwGetPrimaryMonitor());</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="comment">//Obtain Width and Height values from the monitor;</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="Application_8cpp.html#a2cbda9a4727e1cdbcae5c646d7fb0911">S_Width</a> = mode-&gt;width;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="Application_8cpp.html#a9cd21b84bf993de559113a32edfc8e93">S_Height</a> = mode-&gt;height;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="comment">//Choose ONE</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="comment">//Set to be windowed at primary monitor&#39;s resolution;</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="comment">//m_window = glfwCreateWindow(S_Width, S_Height, &quot;Computer Graphics&quot;, NULL, NULL);</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="comment">//Set to fullscreen at primary monitor&#39;s resolution;</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="Application_8cpp.html#ac325468d8b5ea73fd5e5831ba972bb59">m_window</a> = glfwCreateWindow(<a class="code" href="Application_8cpp.html#a2cbda9a4727e1cdbcae5c646d7fb0911">S_Width</a>, <a class="code" href="Application_8cpp.html#a9cd21b84bf993de559113a32edfc8e93">S_Height</a>, <span class="stringliteral">&quot;Computer Graphics&quot;</span>, glfwGetPrimaryMonitor(), NULL);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="comment">//Hide The Cursor Within the Application;</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        glfwSetInputMode(<a class="code" href="Application_8cpp.html#ac325468d8b5ea73fd5e5831ba972bb59">m_window</a>, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        glfwSetWindowSizeCallback(<a class="code" href="Application_8cpp.html#ac325468d8b5ea73fd5e5831ba972bb59">m_window</a>, <a class="code" href="Application_8cpp.html#aadcee9765075e232ca0720f80a76ad37">resize_callback</a>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="comment">//If the window couldn&#39;t be created</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="Application_8cpp.html#ac325468d8b5ea73fd5e5831ba972bb59">m_window</a>)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                fprintf( stderr, <span class="stringliteral">&quot;Failed to open GLFW window.\n&quot;</span> );</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                glfwTerminate();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                exit(EXIT_FAILURE);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="comment">//This function makes the context of the specified window current on the calling thread. </span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        glfwMakeContextCurrent(<a class="code" href="Application_8cpp.html#ac325468d8b5ea73fd5e5831ba972bb59">m_window</a>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="comment">//Sets the key callback</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="comment">//glfwSetKeyCallback(m_window, key_callback);</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        glewExperimental = <span class="keyword">true</span>; <span class="comment">// Needed for core profile</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="comment">//Initialize GLEW</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        GLenum err = glewInit();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="comment">//If GLEW hasn&#39;t initialized</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">if</span> (err != GLEW_OK) </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                fprintf(stderr, <span class="stringliteral">&quot;Error: %s\n&quot;</span>, glewGetErrorString(err));</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <span class="comment">//return -1;</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="classApplication.html#aaf09cd6cb412086dc039e28cdb059f0d">  130</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classApplication.html#aaf09cd6cb412086dc039e28cdb059f0d">Application::Run</a>()</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="comment">//Main Loop</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <a class="code" href="classScene.html">Scene</a> *scene = <span class="keyword">new</span> <a class="code" href="classSP2__Scene.html">SP2_Scene</a>();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        scene-&gt;<a class="code" href="classScene.html#ac3c4677dfd702a3ffd5ffadd3f1ac478">Init</a>();</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <a class="code" href="classApplication.html#ac81ea1396dc69c6d48b9a701954f53fe">m_timer</a>.<a class="code" href="classStopWatch.html#a23301f735a2e3190435e39c9fd70cdf2">startTimer</a>();    <span class="comment">// Start timer to calculate how long it takes to render this frame</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">while</span> (!glfwWindowShouldClose(<a class="code" href="Application_8cpp.html#ac325468d8b5ea73fd5e5831ba972bb59">m_window</a>) &amp;&amp; !<a class="code" href="classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe">IsKeyPressed</a>(VK_ESCAPE) &amp;&amp; !<a class="code" href="classApplication.html#ae02b37c3fd9151bc11e379db0fc51f22">CloseGame</a>)</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                scene-&gt;<a class="code" href="classScene.html#af5c6bcf2185087fb32c27fb8f6a18d91">Update</a>(<a class="code" href="classApplication.html#ac81ea1396dc69c6d48b9a701954f53fe">m_timer</a>.<a class="code" href="classStopWatch.html#ac8be1626396d1a5ca414f74349d59eb2">getElapsedTime</a>());</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                scene-&gt;<a class="code" href="classScene.html#a9319090be5d18e87f1e83dbbf191204f">Render</a>(<a class="code" href="classApplication.html#ac81ea1396dc69c6d48b9a701954f53fe">m_timer</a>.<a class="code" href="classStopWatch.html#ac8be1626396d1a5ca414f74349d59eb2">getElapsedTime</a>());</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                <span class="comment">//Swap buffers</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                glfwSwapBuffers(<a class="code" href="Application_8cpp.html#ac325468d8b5ea73fd5e5831ba972bb59">m_window</a>);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                <span class="comment">//Get and organize events, like keyboard and mouse input, window resizing, etc...</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                glfwPollEvents();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <a class="code" href="classApplication.html#ac81ea1396dc69c6d48b9a701954f53fe">m_timer</a>.<a class="code" href="classStopWatch.html#a2cd0856fc87a40038edfd66d784be8b4">waitUntil</a>(<a class="code" href="Application_8cpp.html#ae228418b33873657fa31313fb4189a8f">frameTime</a>);       <span class="comment">// Frame rate limiter. Limits each frame to a specified time in ms.   </span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        } <span class="comment">//Check if the ESC key had been pressed or if the window had been closed</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        scene-&gt;<a class="code" href="classScene.html#aae8e24654ef98c79961c2b804b12852c">Exit</a>();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keyword">delete</span> scene;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="classApplication.html#a9d410604b39b8374a884b1f2a1f2a5ba">  152</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classApplication.html#a9d410604b39b8374a884b1f2a1f2a5ba">Application::Exit</a>()</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="comment">//Close OpenGL window and terminate GLFW</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        glfwDestroyWindow(<a class="code" href="Application_8cpp.html#ac325468d8b5ea73fd5e5831ba972bb59">m_window</a>);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="comment">//Finalize and clean up GLFW</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        glfwTerminate();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div>
 <div class="ttc" id="mpaudec_8c_html_a988bf6974f37c7585b0cd2f299605004"><div class="ttname"><a href="mpaudec_8c.html#a988bf6974f37c7585b0cd2f299605004">window</a></div><div class="ttdeci">static MPA_INT window[512]</div><div class="ttdef"><b>Definition:</b> <a href="mpaudec_8c_source.html#l00172">mpaudec.c:172</a></div></div>
 <div class="ttc" id="classScene_html_ac3c4677dfd702a3ffd5ffadd3f1ac478"><div class="ttname"><a href="classScene.html#ac3c4677dfd702a3ffd5ffadd3f1ac478">Scene::Init</a></div><div class="ttdeci">virtual void Init()=0</div></div>
-<div class="ttc" id="classApplication_html_afa8cc05ce6b6092be5ecdfdae44e05f8"><div class="ttname"><a href="classApplication.html#afa8cc05ce6b6092be5ecdfdae44e05f8">Application::Application</a></div><div class="ttdeci">Application()</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00043">Application.cpp:43</a></div></div>
-<div class="ttc" id="Application_8cpp_html_ac325468d8b5ea73fd5e5831ba972bb59"><div class="ttname"><a href="Application_8cpp.html#ac325468d8b5ea73fd5e5831ba972bb59">m_window</a></div><div class="ttdeci">GLFWwindow * m_window</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00018">Application.cpp:18</a></div></div>
+<div class="ttc" id="classApplication_html_afa8cc05ce6b6092be5ecdfdae44e05f8"><div class="ttname"><a href="classApplication.html#afa8cc05ce6b6092be5ecdfdae44e05f8">Application::Application</a></div><div class="ttdeci">Application()</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00052">Application.cpp:52</a></div></div>
+<div class="ttc" id="Application_8cpp_html_ac325468d8b5ea73fd5e5831ba972bb59"><div class="ttname"><a href="Application_8cpp.html#ac325468d8b5ea73fd5e5831ba972bb59">m_window</a></div><div class="ttdeci">GLFWwindow * m_window</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00027">Application.cpp:27</a></div></div>
 <div class="ttc" id="classScene_html_af5c6bcf2185087fb32c27fb8f6a18d91"><div class="ttname"><a href="classScene.html#af5c6bcf2185087fb32c27fb8f6a18d91">Scene::Update</a></div><div class="ttdeci">virtual void Update(double dt)=0</div></div>
 <div class="ttc" id="classStopWatch_html_a23301f735a2e3190435e39c9fd70cdf2"><div class="ttname"><a href="classStopWatch.html#a23301f735a2e3190435e39c9fd70cdf2">StopWatch::startTimer</a></div><div class="ttdeci">void startTimer()</div><div class="ttdef"><b>Definition:</b> <a href="timer_8cpp_source.html#l00029">timer.cpp:29</a></div></div>
-<div class="ttc" id="Application_8h_html"><div class="ttname"><a href="Application_8h.html">Application.h</a></div></div>
-<div class="ttc" id="classApplication_html_a72cc9bba26506a7c0f54c346dfbd5cfe"><div class="ttname"><a href="classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe">Application::IsKeyPressed</a></div><div class="ttdeci">static bool IsKeyPressed(unsigned short key)</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00038">Application.cpp:38</a></div></div>
-<div class="ttc" id="classApplication_html_aaf09cd6cb412086dc039e28cdb059f0d"><div class="ttname"><a href="classApplication.html#aaf09cd6cb412086dc039e28cdb059f0d">Application::Run</a></div><div class="ttdeci">void Run()</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00121">Application.cpp:121</a></div></div>
-<div class="ttc" id="Application_8cpp_html_a6e6d1771a9242858811be0a3569838fa"><div class="ttname"><a href="Application_8cpp.html#a6e6d1771a9242858811be0a3569838fa">error_callback</a></div><div class="ttdeci">static void error_callback(int error, const char *description)</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00023">Application.cpp:23</a></div></div>
-<div class="ttc" id="Application_8cpp_html_a6d1a8981b70f74fc60c1428f080da820"><div class="ttname"><a href="Application_8cpp.html#a6d1a8981b70f74fc60c1428f080da820">key_callback</a></div><div class="ttdeci">static void key_callback(GLFWwindow *window, int key, int scancode, int action, int mods)</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00030">Application.cpp:30</a></div></div>
-<div class="ttc" id="Application_8cpp_html_aadcee9765075e232ca0720f80a76ad37"><div class="ttname"><a href="Application_8cpp.html#aadcee9765075e232ca0720f80a76ad37">resize_callback</a></div><div class="ttdeci">void resize_callback(GLFWwindow *window, int w, int h)</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00051">Application.cpp:51</a></div></div>
+<div class="ttc" id="Application_8h_html"><div class="ttname"><a href="Application_8h.html">Application.h</a></div><div class="ttdoc">Header file that contains the class to run the application. </div></div>
+<div class="ttc" id="classApplication_html_a72cc9bba26506a7c0f54c346dfbd5cfe"><div class="ttname"><a href="classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe">Application::IsKeyPressed</a></div><div class="ttdeci">static bool IsKeyPressed(unsigned short key)</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00047">Application.cpp:47</a></div></div>
+<div class="ttc" id="classApplication_html_aaf09cd6cb412086dc039e28cdb059f0d"><div class="ttname"><a href="classApplication.html#aaf09cd6cb412086dc039e28cdb059f0d">Application::Run</a></div><div class="ttdeci">void Run()</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00130">Application.cpp:130</a></div></div>
+<div class="ttc" id="Application_8cpp_html_a6e6d1771a9242858811be0a3569838fa"><div class="ttname"><a href="Application_8cpp.html#a6e6d1771a9242858811be0a3569838fa">error_callback</a></div><div class="ttdeci">static void error_callback(int error, const char *description)</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00032">Application.cpp:32</a></div></div>
+<div class="ttc" id="Application_8cpp_html_a6d1a8981b70f74fc60c1428f080da820"><div class="ttname"><a href="Application_8cpp.html#a6d1a8981b70f74fc60c1428f080da820">key_callback</a></div><div class="ttdeci">static void key_callback(GLFWwindow *window, int key, int scancode, int action, int mods)</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00039">Application.cpp:39</a></div></div>
+<div class="ttc" id="Application_8cpp_html_aadcee9765075e232ca0720f80a76ad37"><div class="ttname"><a href="Application_8cpp.html#aadcee9765075e232ca0720f80a76ad37">resize_callback</a></div><div class="ttdeci">void resize_callback(GLFWwindow *window, int w, int h)</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00060">Application.cpp:60</a></div></div>
 <div class="ttc" id="classScene_html_a9319090be5d18e87f1e83dbbf191204f"><div class="ttname"><a href="classScene.html#a9319090be5d18e87f1e83dbbf191204f">Scene::Render</a></div><div class="ttdeci">virtual void Render(double dt)=0</div></div>
-<div class="ttc" id="classSP2__Scene_html"><div class="ttname"><a href="classSP2__Scene.html">SP2_Scene</a></div><div class="ttdef"><b>Definition:</b> <a href="SP2__Scene_8h_source.html#l00029">SP2_Scene.h:29</a></div></div>
+<div class="ttc" id="classSP2__Scene_html"><div class="ttname"><a href="classSP2__Scene.html">SP2_Scene</a></div><div class="ttdoc">Defines the methods, enums and variables for SP2_Scene. </div><div class="ttdef"><b>Definition:</b> <a href="SP2__Scene_8h_source.html#l00045">SP2_Scene.h:45</a></div></div>
 <div class="ttc" id="classStopWatch_html_a2cd0856fc87a40038edfd66d784be8b4"><div class="ttname"><a href="classStopWatch.html#a2cd0856fc87a40038edfd66d784be8b4">StopWatch::waitUntil</a></div><div class="ttdeci">void waitUntil(long long time)</div><div class="ttdef"><b>Definition:</b> <a href="timer_8cpp_source.html#l00043">timer.cpp:43</a></div></div>
-<div class="ttc" id="classApplication_html_a276388f7090c0a2b1c8b16cf033b969d"><div class="ttname"><a href="classApplication.html#a276388f7090c0a2b1c8b16cf033b969d">Application::Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00056">Application.cpp:56</a></div></div>
-<div class="ttc" id="classApplication_html_ae02b37c3fd9151bc11e379db0fc51f22"><div class="ttname"><a href="classApplication.html#ae02b37c3fd9151bc11e379db0fc51f22">Application::CloseGame</a></div><div class="ttdeci">static bool CloseGame</div><div class="ttdef"><b>Definition:</b> <a href="Application_8h_source.html#l00016">Application.h:16</a></div></div>
-<div class="ttc" id="Particle_8h_html"><div class="ttname"><a href="Particle_8h.html">Particle.h</a></div></div>
+<div class="ttc" id="classApplication_html_a276388f7090c0a2b1c8b16cf033b969d"><div class="ttname"><a href="classApplication.html#a276388f7090c0a2b1c8b16cf033b969d">Application::Init</a></div><div class="ttdeci">void Init()</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00065">Application.cpp:65</a></div></div>
+<div class="ttc" id="classApplication_html_ae02b37c3fd9151bc11e379db0fc51f22"><div class="ttname"><a href="classApplication.html#ae02b37c3fd9151bc11e379db0fc51f22">Application::CloseGame</a></div><div class="ttdeci">static bool CloseGame</div><div class="ttdef"><b>Definition:</b> <a href="Application_8h_source.html#l00032">Application.h:32</a></div></div>
 <div class="ttc" id="classScene_html_aae8e24654ef98c79961c2b804b12852c"><div class="ttname"><a href="classScene.html#aae8e24654ef98c79961c2b804b12852c">Scene::Exit</a></div><div class="ttdeci">virtual void Exit()=0</div></div>
-<div class="ttc" id="classScene_html"><div class="ttname"><a href="classScene.html">Scene</a></div><div class="ttdef"><b>Definition:</b> <a href="Scene_8h_source.html#l00004">Scene.h:4</a></div></div>
-<div class="ttc" id="Application_8cpp_html_a9cd21b84bf993de559113a32edfc8e93"><div class="ttname"><a href="Application_8cpp.html#a9cd21b84bf993de559113a32edfc8e93">S_Height</a></div><div class="ttdeci">int S_Height</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00016">Application.cpp:16</a></div></div>
-<div class="ttc" id="classApplication_html_ac81ea1396dc69c6d48b9a701954f53fe"><div class="ttname"><a href="classApplication.html#ac81ea1396dc69c6d48b9a701954f53fe">Application::m_timer</a></div><div class="ttdeci">StopWatch m_timer</div><div class="ttdef"><b>Definition:</b> <a href="Application_8h_source.html#l00020">Application.h:20</a></div></div>
-<div class="ttc" id="Application_8cpp_html_a2cbda9a4727e1cdbcae5c646d7fb0911"><div class="ttname"><a href="Application_8cpp.html#a2cbda9a4727e1cdbcae5c646d7fb0911">S_Width</a></div><div class="ttdeci">int S_Width</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00016">Application.cpp:16</a></div></div>
+<div class="ttc" id="classScene_html"><div class="ttname"><a href="classScene.html">Scene</a></div><div class="ttdoc">Defines the methods for Scene. </div><div class="ttdef"><b>Definition:</b> <a href="Scene_8h_source.html#l00021">Scene.h:21</a></div></div>
+<div class="ttc" id="Application_8cpp_html_a9cd21b84bf993de559113a32edfc8e93"><div class="ttname"><a href="Application_8cpp.html#a9cd21b84bf993de559113a32edfc8e93">S_Height</a></div><div class="ttdeci">int S_Height</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00025">Application.cpp:25</a></div></div>
+<div class="ttc" id="classApplication_html_ac81ea1396dc69c6d48b9a701954f53fe"><div class="ttname"><a href="classApplication.html#ac81ea1396dc69c6d48b9a701954f53fe">Application::m_timer</a></div><div class="ttdeci">StopWatch m_timer</div><div class="ttdef"><b>Definition:</b> <a href="Application_8h_source.html#l00036">Application.h:36</a></div></div>
+<div class="ttc" id="Application_8cpp_html_a2cbda9a4727e1cdbcae5c646d7fb0911"><div class="ttname"><a href="Application_8cpp.html#a2cbda9a4727e1cdbcae5c646d7fb0911">S_Width</a></div><div class="ttdeci">int S_Width</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00025">Application.cpp:25</a></div></div>
 <div class="ttc" id="classStopWatch_html_ac8be1626396d1a5ca414f74349d59eb2"><div class="ttname"><a href="classStopWatch.html#ac8be1626396d1a5ca414f74349d59eb2">StopWatch::getElapsedTime</a></div><div class="ttdeci">double getElapsedTime()</div><div class="ttdef"><b>Definition:</b> <a href="timer_8cpp_source.html#l00034">timer.cpp:34</a></div></div>
-<div class="ttc" id="Application_8cpp_html_ae228418b33873657fa31313fb4189a8f"><div class="ttname"><a href="Application_8cpp.html#ae228418b33873657fa31313fb4189a8f">frameTime</a></div><div class="ttdeci">const unsigned int frameTime</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00020">Application.cpp:20</a></div></div>
-<div class="ttc" id="Application_8cpp_html_a677c5ab1ba0f5747ef76b40a17b6f803"><div class="ttname"><a href="Application_8cpp.html#a677c5ab1ba0f5747ef76b40a17b6f803">FPS</a></div><div class="ttdeci">const unsigned char FPS</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00019">Application.cpp:19</a></div></div>
-<div class="ttc" id="classApplication_html_a748bca84fefb9c12661cfaa2f623748d"><div class="ttname"><a href="classApplication.html#a748bca84fefb9c12661cfaa2f623748d">Application::~Application</a></div><div class="ttdeci">~Application()</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00047">Application.cpp:47</a></div></div>
-<div class="ttc" id="classApplication_html_a9d410604b39b8374a884b1f2a1f2a5ba"><div class="ttname"><a href="classApplication.html#a9d410604b39b8374a884b1f2a1f2a5ba">Application::Exit</a></div><div class="ttdeci">void Exit()</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00143">Application.cpp:143</a></div></div>
-<div class="ttc" id="SP2__Scene_8h_html"><div class="ttname"><a href="SP2__Scene_8h.html">SP2_Scene.h</a></div></div>
+<div class="ttc" id="Application_8cpp_html_ae228418b33873657fa31313fb4189a8f"><div class="ttname"><a href="Application_8cpp.html#ae228418b33873657fa31313fb4189a8f">frameTime</a></div><div class="ttdeci">const unsigned int frameTime</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00029">Application.cpp:29</a></div></div>
+<div class="ttc" id="Application_8cpp_html_a677c5ab1ba0f5747ef76b40a17b6f803"><div class="ttname"><a href="Application_8cpp.html#a677c5ab1ba0f5747ef76b40a17b6f803">FPS</a></div><div class="ttdeci">const unsigned char FPS</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00028">Application.cpp:28</a></div></div>
+<div class="ttc" id="classApplication_html_a748bca84fefb9c12661cfaa2f623748d"><div class="ttname"><a href="classApplication.html#a748bca84fefb9c12661cfaa2f623748d">Application::~Application</a></div><div class="ttdeci">~Application()</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00056">Application.cpp:56</a></div></div>
+<div class="ttc" id="classApplication_html_a9d410604b39b8374a884b1f2a1f2a5ba"><div class="ttname"><a href="classApplication.html#a9d410604b39b8374a884b1f2a1f2a5ba">Application::Exit</a></div><div class="ttdeci">void Exit()</div><div class="ttdef"><b>Definition:</b> <a href="Application_8cpp_source.html#l00152">Application.cpp:152</a></div></div>
+<div class="ttc" id="SP2__Scene_8h_html"><div class="ttname"><a href="SP2__Scene_8h.html">SP2_Scene.h</a></div><div class="ttdoc">Header file for scene. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

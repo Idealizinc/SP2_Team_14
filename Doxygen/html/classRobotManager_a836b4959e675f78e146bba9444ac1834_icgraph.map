@@ -1,4 +1,4 @@
 <map id="RobotManager::ClearList" name="RobotManager::ClearList">
-<area shape="rect" id="node2" href="$classSP2__Scene.html#a3cd10ebc989e3f3e2f84f59d74b76ef2" title="SP2_Scene::GameState" alt="" coords="219,5,384,32"/>
-<area shape="rect" id="node3" href="$classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="SP2_Scene::Render" alt="" coords="432,5,572,32"/>
+<area shape="rect" id="node2" href="$classSP2__Scene.html#a3cd10ebc989e3f3e2f84f59d74b76ef2" title="Method that controls the transition from wave to wave. " alt="" coords="219,5,384,32"/>
+<area shape="rect" id="node3" href="$classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="Method that renders everything in the game. " alt="" coords="432,5,572,32"/>
 </map>

@@ -1,5 +1,4 @@
 <map id="MeshBuilder::GenerateText" name="MeshBuilder::GenerateText">
-<area shape="rect" id="node2" href="$classParticle.html#ad4131133df499c87e0a4e75ffdaae4a3" title="Particle::Init" alt="" coords="279,5,370,32"/>
-<area shape="rect" id="node3" href="$classSP2__Scene.html#a4867e767b8f3f993a01c5c271c90d82e" title="SP2_Scene::initUIElements" alt="" coords="233,56,416,83"/>
-<area shape="rect" id="node4" href="$classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="SP2_Scene::Init" alt="" coords="464,56,580,83"/>
+<area shape="rect" id="node2" href="$classSP2__Scene.html#a4867e767b8f3f993a01c5c271c90d82e" title="SP2_Scene::initUIElements" alt="" coords="233,5,416,32"/>
+<area shape="rect" id="node3" href="$classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="Initializes values. " alt="" coords="464,5,580,32"/>
 </map>

@@ -74,14 +74,10 @@
         </inbodydescription>
         <location file="Common/Source/MatrixStack.h" line="27" column="1" bodyfile="Common/Source/MatrixStack.cpp" bodystart="42" bodyend="44"/>
         <references refid="classMS_1a52ff310fee5be24b7777e472ef2acea6" compoundref="MatrixStack_8h" startline="23">ms</references>
-        <referencedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" compoundref="Particle_8cpp" startline="358" endline="422">Particle::Render</referencedby>
-        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2248" endline="2508">SP2_Scene::Render</referencedby>
-        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">Particle::RenderMesh</referencedby>
-        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="629" endline="670">SP2_Scene::RenderMesh</referencedby>
-        <referencedby refid="classParticle_1ae3b87275d545d2b4d6b266fa6777b8e8" compoundref="Particle_8cpp" startline="97" endline="123">Particle::RenderText</referencedby>
-        <referencedby refid="classSP2__Scene_1aba0bba98a66ffc88a253833486bc90e9" compoundref="SP2__Scene_8cpp" startline="375" endline="401">SP2_Scene::RenderText</referencedby>
-        <referencedby refid="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" compoundref="Particle_8cpp" startline="125" endline="167">Particle::RenderTextOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="403" endline="444">SP2_Scene::RenderTextOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2424" endline="2688">SP2_Scene::Render</referencedby>
+        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="788" endline="829">SP2_Scene::RenderMesh</referencedby>
+        <referencedby refid="classSP2__Scene_1aba0bba98a66ffc88a253833486bc90e9" compoundref="SP2__Scene_8cpp" startline="492" endline="518">SP2_Scene::RenderText</referencedby>
+        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="527" endline="568">SP2_Scene::RenderTextOnScreen</referencedby>
       </memberdef>
       <memberdef kind="function" id="classMS_1aac22e39d0ac437fcb85403a9f0a7a25f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -96,26 +92,21 @@
         </inbodydescription>
         <location file="Common/Source/MatrixStack.h" line="28" column="1" bodyfile="Common/Source/MatrixStack.cpp" bodystart="52" bodyend="54"/>
         <references refid="classMS_1a52ff310fee5be24b7777e472ef2acea6" compoundref="MatrixStack_8h" startline="23">ms</references>
-        <referencedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" compoundref="Particle_8cpp" startline="358" endline="422">Particle::Render</referencedby>
-        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2248" endline="2508">SP2_Scene::Render</referencedby>
-        <referencedby refid="classSP2__Scene_1af1c59e2fb386a9a8417e88f59cee95ba" compoundref="SP2__Scene_8cpp" startline="759" endline="778">SP2_Scene::RenderBase</referencedby>
-        <referencedby refid="classSP2__Scene_1a3e26f7a9aa903c8f659e341be2b65ccf" compoundref="SP2__Scene_8cpp" startline="2069" endline="2138">SP2_Scene::RenderGate</referencedby>
-        <referencedby refid="classSP2__Scene_1a84a5528561c5696e8f2161da2820a419" compoundref="SP2__Scene_8cpp" startline="1969" endline="1978">SP2_Scene::RenderGateText</referencedby>
-        <referencedby refid="classSP2__Scene_1a5b8cc318fb5a712285abce0fad2a3dba" compoundref="SP2__Scene_8cpp" startline="446" endline="458">SP2_Scene::RenderImageInMap</referencedby>
-        <referencedby refid="classSP2__Scene_1ae91e39146c4052e9e959cb1ff6a2890a" compoundref="SP2__Scene_8cpp" startline="460" endline="485">SP2_Scene::RenderImageOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="608" endline="627">SP2_Scene::RenderMeshOnScreen</referencedby>
-        <referencedby refid="classParticle_1a37afd6d47fda746f93062ed4e1a00551" compoundref="Particle_8cpp" startline="342" endline="356">Particle::renderParticleEmitter</referencedby>
-        <referencedby refid="classSP2__Scene_1a934794f65e93751b1e1106a85a08ae73" compoundref="SP2__Scene_8cpp" startline="2140" endline="2246">SP2_Scene::RenderRocks</referencedby>
-        <referencedby refid="classSP2__Scene_1a68b65e14328ef7b87a9e1c516499ee44" compoundref="SP2__Scene_8cpp" startline="1136" endline="1190">SP2_Scene::RenderShip</referencedby>
-        <referencedby refid="classParticle_1abad5adaed21693c0bed86aca19f982df" compoundref="Particle_8cpp" startline="286" endline="340">Particle::RenderSkybox</referencedby>
-        <referencedby refid="classSP2__Scene_1a2de18ab05abb2a3ea98dbcadb4f518a7" compoundref="SP2__Scene_8cpp" startline="1793" endline="1847">SP2_Scene::RenderSkybox</referencedby>
-        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1004" endline="1135">SP2_Scene::RenderSpaceMap</referencedby>
-        <referencedby refid="classSP2__Scene_1a6d8a3b4fea5fd0e17f86bc4f5a8ce315" compoundref="SP2__Scene_8cpp" startline="1958" endline="1967">SP2_Scene::RenderTeleporter</referencedby>
-        <referencedby refid="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" compoundref="Particle_8cpp" startline="125" endline="167">Particle::RenderTextOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="403" endline="444">SP2_Scene::RenderTextOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1aeb5b6dadeb1ee8d943f2e52e69d6d9e0" compoundref="SP2__Scene_8cpp" startline="1980" endline="2067">SP2_Scene::RenderUI</referencedby>
-        <referencedby refid="classSP2__Scene_1a4105499f6a2e4cc7eeedac1af5248126" compoundref="SP2__Scene_8cpp" startline="487" endline="606">SP2_Scene::RenderWeaponInHand</referencedby>
-        <referencedby refid="classSP2__Scene_1a6448011a887d25ea57d981ca7753810b" compoundref="SP2__Scene_8cpp" startline="1849" endline="1956">SP2_Scene::RenderWepScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2424" endline="2688">SP2_Scene::Render</referencedby>
+        <referencedby refid="classSP2__Scene_1af1c59e2fb386a9a8417e88f59cee95ba" compoundref="SP2__Scene_8cpp" startline="932" endline="951">SP2_Scene::RenderBase</referencedby>
+        <referencedby refid="classSP2__Scene_1a5b8cc318fb5a712285abce0fad2a3dba" compoundref="SP2__Scene_8cpp" startline="577" endline="589">SP2_Scene::RenderImageInMap</referencedby>
+        <referencedby refid="classSP2__Scene_1ae91e39146c4052e9e959cb1ff6a2890a" compoundref="SP2__Scene_8cpp" startline="598" endline="623">SP2_Scene::RenderImageOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="760" endline="779">SP2_Scene::RenderMeshOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a1251677b641cce30ba451e9e02418cf2" compoundref="SP2__Scene_8cpp" startline="1104" endline="1213">SP2_Scene::RenderPowerUp</referencedby>
+        <referencedby refid="classSP2__Scene_1a934794f65e93751b1e1106a85a08ae73" compoundref="SP2__Scene_8cpp" startline="2391" endline="2415">SP2_Scene::RenderRocks</referencedby>
+        <referencedby refid="classSP2__Scene_1a68b65e14328ef7b87a9e1c516499ee44" compoundref="SP2__Scene_8cpp" startline="1419" endline="1473">SP2_Scene::RenderShip</referencedby>
+        <referencedby refid="classSP2__Scene_1a2de18ab05abb2a3ea98dbcadb4f518a7" compoundref="SP2__Scene_8cpp" startline="2098" endline="2152">SP2_Scene::RenderSkybox</referencedby>
+        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1279" endline="1410">SP2_Scene::RenderSpaceMap</referencedby>
+        <referencedby refid="classSP2__Scene_1a6d8a3b4fea5fd0e17f86bc4f5a8ce315" compoundref="SP2__Scene_8cpp" startline="2277" endline="2286">SP2_Scene::RenderTeleporter</referencedby>
+        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="527" endline="568">SP2_Scene::RenderTextOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1aeb5b6dadeb1ee8d943f2e52e69d6d9e0" compoundref="SP2__Scene_8cpp" startline="2295" endline="2382">SP2_Scene::RenderUI</referencedby>
+        <referencedby refid="classSP2__Scene_1a4105499f6a2e4cc7eeedac1af5248126" compoundref="SP2__Scene_8cpp" startline="632" endline="751">SP2_Scene::RenderWeaponInHand</referencedby>
+        <referencedby refid="classSP2__Scene_1a6448011a887d25ea57d981ca7753810b" compoundref="SP2__Scene_8cpp" startline="2161" endline="2268">SP2_Scene::RenderWepScreen</referencedby>
       </memberdef>
       <memberdef kind="function" id="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -130,26 +121,21 @@
         </inbodydescription>
         <location file="Common/Source/MatrixStack.h" line="29" column="1" bodyfile="Common/Source/MatrixStack.cpp" bodystart="62" bodyend="64"/>
         <references refid="classMS_1a52ff310fee5be24b7777e472ef2acea6" compoundref="MatrixStack_8h" startline="23">ms</references>
-        <referencedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" compoundref="Particle_8cpp" startline="358" endline="422">Particle::Render</referencedby>
-        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2248" endline="2508">SP2_Scene::Render</referencedby>
-        <referencedby refid="classSP2__Scene_1af1c59e2fb386a9a8417e88f59cee95ba" compoundref="SP2__Scene_8cpp" startline="759" endline="778">SP2_Scene::RenderBase</referencedby>
-        <referencedby refid="classSP2__Scene_1a3e26f7a9aa903c8f659e341be2b65ccf" compoundref="SP2__Scene_8cpp" startline="2069" endline="2138">SP2_Scene::RenderGate</referencedby>
-        <referencedby refid="classSP2__Scene_1a84a5528561c5696e8f2161da2820a419" compoundref="SP2__Scene_8cpp" startline="1969" endline="1978">SP2_Scene::RenderGateText</referencedby>
-        <referencedby refid="classSP2__Scene_1a5b8cc318fb5a712285abce0fad2a3dba" compoundref="SP2__Scene_8cpp" startline="446" endline="458">SP2_Scene::RenderImageInMap</referencedby>
-        <referencedby refid="classSP2__Scene_1ae91e39146c4052e9e959cb1ff6a2890a" compoundref="SP2__Scene_8cpp" startline="460" endline="485">SP2_Scene::RenderImageOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="608" endline="627">SP2_Scene::RenderMeshOnScreen</referencedby>
-        <referencedby refid="classParticle_1a37afd6d47fda746f93062ed4e1a00551" compoundref="Particle_8cpp" startline="342" endline="356">Particle::renderParticleEmitter</referencedby>
-        <referencedby refid="classSP2__Scene_1a934794f65e93751b1e1106a85a08ae73" compoundref="SP2__Scene_8cpp" startline="2140" endline="2246">SP2_Scene::RenderRocks</referencedby>
-        <referencedby refid="classSP2__Scene_1a68b65e14328ef7b87a9e1c516499ee44" compoundref="SP2__Scene_8cpp" startline="1136" endline="1190">SP2_Scene::RenderShip</referencedby>
-        <referencedby refid="classParticle_1abad5adaed21693c0bed86aca19f982df" compoundref="Particle_8cpp" startline="286" endline="340">Particle::RenderSkybox</referencedby>
-        <referencedby refid="classSP2__Scene_1a2de18ab05abb2a3ea98dbcadb4f518a7" compoundref="SP2__Scene_8cpp" startline="1793" endline="1847">SP2_Scene::RenderSkybox</referencedby>
-        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1004" endline="1135">SP2_Scene::RenderSpaceMap</referencedby>
-        <referencedby refid="classSP2__Scene_1a6d8a3b4fea5fd0e17f86bc4f5a8ce315" compoundref="SP2__Scene_8cpp" startline="1958" endline="1967">SP2_Scene::RenderTeleporter</referencedby>
-        <referencedby refid="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" compoundref="Particle_8cpp" startline="125" endline="167">Particle::RenderTextOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="403" endline="444">SP2_Scene::RenderTextOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1aeb5b6dadeb1ee8d943f2e52e69d6d9e0" compoundref="SP2__Scene_8cpp" startline="1980" endline="2067">SP2_Scene::RenderUI</referencedby>
-        <referencedby refid="classSP2__Scene_1a4105499f6a2e4cc7eeedac1af5248126" compoundref="SP2__Scene_8cpp" startline="487" endline="606">SP2_Scene::RenderWeaponInHand</referencedby>
-        <referencedby refid="classSP2__Scene_1a6448011a887d25ea57d981ca7753810b" compoundref="SP2__Scene_8cpp" startline="1849" endline="1956">SP2_Scene::RenderWepScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2424" endline="2688">SP2_Scene::Render</referencedby>
+        <referencedby refid="classSP2__Scene_1af1c59e2fb386a9a8417e88f59cee95ba" compoundref="SP2__Scene_8cpp" startline="932" endline="951">SP2_Scene::RenderBase</referencedby>
+        <referencedby refid="classSP2__Scene_1a5b8cc318fb5a712285abce0fad2a3dba" compoundref="SP2__Scene_8cpp" startline="577" endline="589">SP2_Scene::RenderImageInMap</referencedby>
+        <referencedby refid="classSP2__Scene_1ae91e39146c4052e9e959cb1ff6a2890a" compoundref="SP2__Scene_8cpp" startline="598" endline="623">SP2_Scene::RenderImageOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="760" endline="779">SP2_Scene::RenderMeshOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a1251677b641cce30ba451e9e02418cf2" compoundref="SP2__Scene_8cpp" startline="1104" endline="1213">SP2_Scene::RenderPowerUp</referencedby>
+        <referencedby refid="classSP2__Scene_1a934794f65e93751b1e1106a85a08ae73" compoundref="SP2__Scene_8cpp" startline="2391" endline="2415">SP2_Scene::RenderRocks</referencedby>
+        <referencedby refid="classSP2__Scene_1a68b65e14328ef7b87a9e1c516499ee44" compoundref="SP2__Scene_8cpp" startline="1419" endline="1473">SP2_Scene::RenderShip</referencedby>
+        <referencedby refid="classSP2__Scene_1a2de18ab05abb2a3ea98dbcadb4f518a7" compoundref="SP2__Scene_8cpp" startline="2098" endline="2152">SP2_Scene::RenderSkybox</referencedby>
+        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1279" endline="1410">SP2_Scene::RenderSpaceMap</referencedby>
+        <referencedby refid="classSP2__Scene_1a6d8a3b4fea5fd0e17f86bc4f5a8ce315" compoundref="SP2__Scene_8cpp" startline="2277" endline="2286">SP2_Scene::RenderTeleporter</referencedby>
+        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="527" endline="568">SP2_Scene::RenderTextOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1aeb5b6dadeb1ee8d943f2e52e69d6d9e0" compoundref="SP2__Scene_8cpp" startline="2295" endline="2382">SP2_Scene::RenderUI</referencedby>
+        <referencedby refid="classSP2__Scene_1a4105499f6a2e4cc7eeedac1af5248126" compoundref="SP2__Scene_8cpp" startline="632" endline="751">SP2_Scene::RenderWeaponInHand</referencedby>
+        <referencedby refid="classSP2__Scene_1a6448011a887d25ea57d981ca7753810b" compoundref="SP2__Scene_8cpp" startline="2161" endline="2268">SP2_Scene::RenderWepScreen</referencedby>
       </memberdef>
       <memberdef kind="function" id="classMS_1ab3eb89506a55a00137cba928686b0201" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -179,13 +165,11 @@
         <location file="Common/Source/MatrixStack.h" line="31" column="1" bodyfile="Common/Source/MatrixStack.cpp" bodystart="83" bodyend="87"/>
         <references refid="classMS_1a52ff310fee5be24b7777e472ef2acea6" compoundref="MatrixStack_8h" startline="23">ms</references>
         <references refid="classMtx44_1a3ac8a0afd66412e15e4246474b893da2" compoundref="Mtx44_8cpp" startline="74" endline="77">Mtx44::SetToIdentity</references>
-        <referencedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" compoundref="Particle_8cpp" startline="358" endline="422">Particle::Render</referencedby>
-        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2248" endline="2508">SP2_Scene::Render</referencedby>
-        <referencedby refid="classSP2__Scene_1ae91e39146c4052e9e959cb1ff6a2890a" compoundref="SP2__Scene_8cpp" startline="460" endline="485">SP2_Scene::RenderImageOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="608" endline="627">SP2_Scene::RenderMeshOnScreen</referencedby>
-        <referencedby refid="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" compoundref="Particle_8cpp" startline="125" endline="167">Particle::RenderTextOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="403" endline="444">SP2_Scene::RenderTextOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a4105499f6a2e4cc7eeedac1af5248126" compoundref="SP2__Scene_8cpp" startline="487" endline="606">SP2_Scene::RenderWeaponInHand</referencedby>
+        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2424" endline="2688">SP2_Scene::Render</referencedby>
+        <referencedby refid="classSP2__Scene_1ae91e39146c4052e9e959cb1ff6a2890a" compoundref="SP2__Scene_8cpp" startline="598" endline="623">SP2_Scene::RenderImageOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="760" endline="779">SP2_Scene::RenderMeshOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="527" endline="568">SP2_Scene::RenderTextOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a4105499f6a2e4cc7eeedac1af5248126" compoundref="SP2__Scene_8cpp" startline="632" endline="751">SP2_Scene::RenderWeaponInHand</referencedby>
       </memberdef>
       <memberdef kind="function" id="classMS_1a86606fe9f575ccb747d77195c8aefdaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -212,14 +196,12 @@
         </inbodydescription>
         <location file="Common/Source/MatrixStack.h" line="32" column="1" bodyfile="Common/Source/MatrixStack.cpp" bodystart="98" bodyend="100"/>
         <references refid="classMS_1a52ff310fee5be24b7777e472ef2acea6" compoundref="MatrixStack_8h" startline="23">ms</references>
-        <referencedby refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" compoundref="Particle_8cpp" startline="18" endline="95">Particle::Init</referencedby>
-        <referencedby refid="classSP2__Scene_1ae7483c042e4a1861b71137f1a564ad7a" compoundref="SP2__Scene_8cpp" startline="60" endline="130">SP2_Scene::Init</referencedby>
-        <referencedby refid="classSP2__Scene_1ae91e39146c4052e9e959cb1ff6a2890a" compoundref="SP2__Scene_8cpp" startline="460" endline="485">SP2_Scene::RenderImageOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="608" endline="627">SP2_Scene::RenderMeshOnScreen</referencedby>
-        <referencedby refid="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" compoundref="Particle_8cpp" startline="125" endline="167">Particle::RenderTextOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="403" endline="444">SP2_Scene::RenderTextOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a4105499f6a2e4cc7eeedac1af5248126" compoundref="SP2__Scene_8cpp" startline="487" endline="606">SP2_Scene::RenderWeaponInHand</referencedby>
-        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+        <referencedby refid="classSP2__Scene_1ae7483c042e4a1861b71137f1a564ad7a" compoundref="SP2__Scene_8cpp" startline="102" endline="172">SP2_Scene::Init</referencedby>
+        <referencedby refid="classSP2__Scene_1ae91e39146c4052e9e959cb1ff6a2890a" compoundref="SP2__Scene_8cpp" startline="598" endline="623">SP2_Scene::RenderImageOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="760" endline="779">SP2_Scene::RenderMeshOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="527" endline="568">SP2_Scene::RenderTextOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a4105499f6a2e4cc7eeedac1af5248126" compoundref="SP2__Scene_8cpp" startline="632" endline="751">SP2_Scene::RenderWeaponInHand</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1523" endline="2089">SP2_Scene::Update</referencedby>
       </memberdef>
       <memberdef kind="function" id="classMS_1af5a89751ef3b273288bee108113d4899" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -306,18 +288,17 @@
         <location file="Common/Source/MatrixStack.h" line="34" column="1" bodyfile="Common/Source/MatrixStack.cpp" bodystart="130" bodyend="134"/>
         <references refid="classMS_1a52ff310fee5be24b7777e472ef2acea6" compoundref="MatrixStack_8h" startline="23">ms</references>
         <references refid="classMtx44_1ac0587ffb5ff9fd58ad5768d28fc06574" compoundref="Mtx44_8cpp" startline="319" endline="341">Mtx44::SetToRotation</references>
-        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2248" endline="2508">SP2_Scene::Render</referencedby>
-        <referencedby refid="classSP2__Scene_1af1c59e2fb386a9a8417e88f59cee95ba" compoundref="SP2__Scene_8cpp" startline="759" endline="778">SP2_Scene::RenderBase</referencedby>
-        <referencedby refid="classSP2__Scene_1a3e26f7a9aa903c8f659e341be2b65ccf" compoundref="SP2__Scene_8cpp" startline="2069" endline="2138">SP2_Scene::RenderGate</referencedby>
-        <referencedby refid="classSP2__Scene_1a5b8cc318fb5a712285abce0fad2a3dba" compoundref="SP2__Scene_8cpp" startline="446" endline="458">SP2_Scene::RenderImageInMap</referencedby>
-        <referencedby refid="classSP2__Scene_1ae91e39146c4052e9e959cb1ff6a2890a" compoundref="SP2__Scene_8cpp" startline="460" endline="485">SP2_Scene::RenderImageOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="608" endline="627">SP2_Scene::RenderMeshOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a934794f65e93751b1e1106a85a08ae73" compoundref="SP2__Scene_8cpp" startline="2140" endline="2246">SP2_Scene::RenderRocks</referencedby>
-        <referencedby refid="classSP2__Scene_1a68b65e14328ef7b87a9e1c516499ee44" compoundref="SP2__Scene_8cpp" startline="1136" endline="1190">SP2_Scene::RenderShip</referencedby>
-        <referencedby refid="classParticle_1abad5adaed21693c0bed86aca19f982df" compoundref="Particle_8cpp" startline="286" endline="340">Particle::RenderSkybox</referencedby>
-        <referencedby refid="classSP2__Scene_1a2de18ab05abb2a3ea98dbcadb4f518a7" compoundref="SP2__Scene_8cpp" startline="1793" endline="1847">SP2_Scene::RenderSkybox</referencedby>
-        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1004" endline="1135">SP2_Scene::RenderSpaceMap</referencedby>
-        <referencedby refid="classSP2__Scene_1a4105499f6a2e4cc7eeedac1af5248126" compoundref="SP2__Scene_8cpp" startline="487" endline="606">SP2_Scene::RenderWeaponInHand</referencedby>
+        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2424" endline="2688">SP2_Scene::Render</referencedby>
+        <referencedby refid="classSP2__Scene_1af1c59e2fb386a9a8417e88f59cee95ba" compoundref="SP2__Scene_8cpp" startline="932" endline="951">SP2_Scene::RenderBase</referencedby>
+        <referencedby refid="classSP2__Scene_1a5b8cc318fb5a712285abce0fad2a3dba" compoundref="SP2__Scene_8cpp" startline="577" endline="589">SP2_Scene::RenderImageInMap</referencedby>
+        <referencedby refid="classSP2__Scene_1ae91e39146c4052e9e959cb1ff6a2890a" compoundref="SP2__Scene_8cpp" startline="598" endline="623">SP2_Scene::RenderImageOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="760" endline="779">SP2_Scene::RenderMeshOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a1251677b641cce30ba451e9e02418cf2" compoundref="SP2__Scene_8cpp" startline="1104" endline="1213">SP2_Scene::RenderPowerUp</referencedby>
+        <referencedby refid="classSP2__Scene_1a934794f65e93751b1e1106a85a08ae73" compoundref="SP2__Scene_8cpp" startline="2391" endline="2415">SP2_Scene::RenderRocks</referencedby>
+        <referencedby refid="classSP2__Scene_1a68b65e14328ef7b87a9e1c516499ee44" compoundref="SP2__Scene_8cpp" startline="1419" endline="1473">SP2_Scene::RenderShip</referencedby>
+        <referencedby refid="classSP2__Scene_1a2de18ab05abb2a3ea98dbcadb4f518a7" compoundref="SP2__Scene_8cpp" startline="2098" endline="2152">SP2_Scene::RenderSkybox</referencedby>
+        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1279" endline="1410">SP2_Scene::RenderSpaceMap</referencedby>
+        <referencedby refid="classSP2__Scene_1a4105499f6a2e4cc7eeedac1af5248126" compoundref="SP2__Scene_8cpp" startline="632" endline="751">SP2_Scene::RenderWeaponInHand</referencedby>
       </memberdef>
       <memberdef kind="function" id="classMS_1a52109795de960e24663b315e9128533f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -367,20 +348,18 @@
         <location file="Common/Source/MatrixStack.h" line="35" column="1" bodyfile="Common/Source/MatrixStack.cpp" bodystart="149" bodyend="153"/>
         <references refid="classMS_1a52ff310fee5be24b7777e472ef2acea6" compoundref="MatrixStack_8h" startline="23">ms</references>
         <references refid="classMtx44_1a04c49a922f8e8ffcb57a90c6ce955600" compoundref="Mtx44_8cpp" startline="356" endline="361">Mtx44::SetToScale</references>
-        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2248" endline="2508">SP2_Scene::Render</referencedby>
-        <referencedby refid="classSP2__Scene_1af1c59e2fb386a9a8417e88f59cee95ba" compoundref="SP2__Scene_8cpp" startline="759" endline="778">SP2_Scene::RenderBase</referencedby>
-        <referencedby refid="classSP2__Scene_1a3e26f7a9aa903c8f659e341be2b65ccf" compoundref="SP2__Scene_8cpp" startline="2069" endline="2138">SP2_Scene::RenderGate</referencedby>
-        <referencedby refid="classSP2__Scene_1a5b8cc318fb5a712285abce0fad2a3dba" compoundref="SP2__Scene_8cpp" startline="446" endline="458">SP2_Scene::RenderImageInMap</referencedby>
-        <referencedby refid="classSP2__Scene_1ae91e39146c4052e9e959cb1ff6a2890a" compoundref="SP2__Scene_8cpp" startline="460" endline="485">SP2_Scene::RenderImageOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="608" endline="627">SP2_Scene::RenderMeshOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a934794f65e93751b1e1106a85a08ae73" compoundref="SP2__Scene_8cpp" startline="2140" endline="2246">SP2_Scene::RenderRocks</referencedby>
-        <referencedby refid="classSP2__Scene_1a68b65e14328ef7b87a9e1c516499ee44" compoundref="SP2__Scene_8cpp" startline="1136" endline="1190">SP2_Scene::RenderShip</referencedby>
-        <referencedby refid="classParticle_1abad5adaed21693c0bed86aca19f982df" compoundref="Particle_8cpp" startline="286" endline="340">Particle::RenderSkybox</referencedby>
-        <referencedby refid="classSP2__Scene_1a2de18ab05abb2a3ea98dbcadb4f518a7" compoundref="SP2__Scene_8cpp" startline="1793" endline="1847">SP2_Scene::RenderSkybox</referencedby>
-        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1004" endline="1135">SP2_Scene::RenderSpaceMap</referencedby>
-        <referencedby refid="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" compoundref="Particle_8cpp" startline="125" endline="167">Particle::RenderTextOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="403" endline="444">SP2_Scene::RenderTextOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a4105499f6a2e4cc7eeedac1af5248126" compoundref="SP2__Scene_8cpp" startline="487" endline="606">SP2_Scene::RenderWeaponInHand</referencedby>
+        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2424" endline="2688">SP2_Scene::Render</referencedby>
+        <referencedby refid="classSP2__Scene_1af1c59e2fb386a9a8417e88f59cee95ba" compoundref="SP2__Scene_8cpp" startline="932" endline="951">SP2_Scene::RenderBase</referencedby>
+        <referencedby refid="classSP2__Scene_1a5b8cc318fb5a712285abce0fad2a3dba" compoundref="SP2__Scene_8cpp" startline="577" endline="589">SP2_Scene::RenderImageInMap</referencedby>
+        <referencedby refid="classSP2__Scene_1ae91e39146c4052e9e959cb1ff6a2890a" compoundref="SP2__Scene_8cpp" startline="598" endline="623">SP2_Scene::RenderImageOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="760" endline="779">SP2_Scene::RenderMeshOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a1251677b641cce30ba451e9e02418cf2" compoundref="SP2__Scene_8cpp" startline="1104" endline="1213">SP2_Scene::RenderPowerUp</referencedby>
+        <referencedby refid="classSP2__Scene_1a934794f65e93751b1e1106a85a08ae73" compoundref="SP2__Scene_8cpp" startline="2391" endline="2415">SP2_Scene::RenderRocks</referencedby>
+        <referencedby refid="classSP2__Scene_1a68b65e14328ef7b87a9e1c516499ee44" compoundref="SP2__Scene_8cpp" startline="1419" endline="1473">SP2_Scene::RenderShip</referencedby>
+        <referencedby refid="classSP2__Scene_1a2de18ab05abb2a3ea98dbcadb4f518a7" compoundref="SP2__Scene_8cpp" startline="2098" endline="2152">SP2_Scene::RenderSkybox</referencedby>
+        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1279" endline="1410">SP2_Scene::RenderSpaceMap</referencedby>
+        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="527" endline="568">SP2_Scene::RenderTextOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a4105499f6a2e4cc7eeedac1af5248126" compoundref="SP2__Scene_8cpp" startline="632" endline="751">SP2_Scene::RenderWeaponInHand</referencedby>
       </memberdef>
       <memberdef kind="function" id="classMS_1a7e94a35ce566fe3ec49c92b6c4bb663a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -430,19 +409,17 @@
         <location file="Common/Source/MatrixStack.h" line="36" column="1" bodyfile="Common/Source/MatrixStack.cpp" bodystart="169" bodyend="173"/>
         <references refid="classMS_1a52ff310fee5be24b7777e472ef2acea6" compoundref="MatrixStack_8h" startline="23">ms</references>
         <references refid="classMtx44_1a0cc88cc5c648da14effba480c4d2ac70" compoundref="Mtx44_8cpp" startline="376" endline="381">Mtx44::SetToTranslation</references>
-        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2248" endline="2508">SP2_Scene::Render</referencedby>
-        <referencedby refid="classSP2__Scene_1af1c59e2fb386a9a8417e88f59cee95ba" compoundref="SP2__Scene_8cpp" startline="759" endline="778">SP2_Scene::RenderBase</referencedby>
-        <referencedby refid="classSP2__Scene_1a3e26f7a9aa903c8f659e341be2b65ccf" compoundref="SP2__Scene_8cpp" startline="2069" endline="2138">SP2_Scene::RenderGate</referencedby>
-        <referencedby refid="classSP2__Scene_1ae91e39146c4052e9e959cb1ff6a2890a" compoundref="SP2__Scene_8cpp" startline="460" endline="485">SP2_Scene::RenderImageOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="608" endline="627">SP2_Scene::RenderMeshOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a934794f65e93751b1e1106a85a08ae73" compoundref="SP2__Scene_8cpp" startline="2140" endline="2246">SP2_Scene::RenderRocks</referencedby>
-        <referencedby refid="classSP2__Scene_1a68b65e14328ef7b87a9e1c516499ee44" compoundref="SP2__Scene_8cpp" startline="1136" endline="1190">SP2_Scene::RenderShip</referencedby>
-        <referencedby refid="classParticle_1abad5adaed21693c0bed86aca19f982df" compoundref="Particle_8cpp" startline="286" endline="340">Particle::RenderSkybox</referencedby>
-        <referencedby refid="classSP2__Scene_1a2de18ab05abb2a3ea98dbcadb4f518a7" compoundref="SP2__Scene_8cpp" startline="1793" endline="1847">SP2_Scene::RenderSkybox</referencedby>
-        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1004" endline="1135">SP2_Scene::RenderSpaceMap</referencedby>
-        <referencedby refid="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" compoundref="Particle_8cpp" startline="125" endline="167">Particle::RenderTextOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="403" endline="444">SP2_Scene::RenderTextOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a4105499f6a2e4cc7eeedac1af5248126" compoundref="SP2__Scene_8cpp" startline="487" endline="606">SP2_Scene::RenderWeaponInHand</referencedby>
+        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2424" endline="2688">SP2_Scene::Render</referencedby>
+        <referencedby refid="classSP2__Scene_1af1c59e2fb386a9a8417e88f59cee95ba" compoundref="SP2__Scene_8cpp" startline="932" endline="951">SP2_Scene::RenderBase</referencedby>
+        <referencedby refid="classSP2__Scene_1ae91e39146c4052e9e959cb1ff6a2890a" compoundref="SP2__Scene_8cpp" startline="598" endline="623">SP2_Scene::RenderImageOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="760" endline="779">SP2_Scene::RenderMeshOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a1251677b641cce30ba451e9e02418cf2" compoundref="SP2__Scene_8cpp" startline="1104" endline="1213">SP2_Scene::RenderPowerUp</referencedby>
+        <referencedby refid="classSP2__Scene_1a934794f65e93751b1e1106a85a08ae73" compoundref="SP2__Scene_8cpp" startline="2391" endline="2415">SP2_Scene::RenderRocks</referencedby>
+        <referencedby refid="classSP2__Scene_1a68b65e14328ef7b87a9e1c516499ee44" compoundref="SP2__Scene_8cpp" startline="1419" endline="1473">SP2_Scene::RenderShip</referencedby>
+        <referencedby refid="classSP2__Scene_1a2de18ab05abb2a3ea98dbcadb4f518a7" compoundref="SP2__Scene_8cpp" startline="2098" endline="2152">SP2_Scene::RenderSkybox</referencedby>
+        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1279" endline="1410">SP2_Scene::RenderSpaceMap</referencedby>
+        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="527" endline="568">SP2_Scene::RenderTextOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a4105499f6a2e4cc7eeedac1af5248126" compoundref="SP2__Scene_8cpp" startline="632" endline="751">SP2_Scene::RenderWeaponInHand</referencedby>
       </memberdef>
       <memberdef kind="function" id="classMS_1a155508354e47f5aa755e181e69fc3cd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -640,8 +617,7 @@
         <location file="Common/Source/MatrixStack.h" line="38" column="1" bodyfile="Common/Source/MatrixStack.cpp" bodystart="224" bodyend="231"/>
         <references refid="classMS_1a52ff310fee5be24b7777e472ef2acea6" compoundref="MatrixStack_8h" startline="23">ms</references>
         <references refid="classMtx44_1a7c3d2d30d9ed5bfca2ba97d0e570930f" compoundref="Mtx44_8cpp" startline="433" endline="450">Mtx44::SetToLookAt</references>
-        <referencedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" compoundref="Particle_8cpp" startline="358" endline="422">Particle::Render</referencedby>
-        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2248" endline="2508">SP2_Scene::Render</referencedby>
+        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2424" endline="2688">SP2_Scene::Render</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -649,13 +625,13 @@
     <detaileddescription>
 <para>Class <ref refid="classMS" kindref="compound">MS</ref>: </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="513">
+      <node id="473">
         <label>stack&lt; Mtx44 &gt;</label>
       </node>
-      <node id="512">
+      <node id="472">
         <label>MS</label>
         <link refid="classMS"/>
-        <childnode refid="513" relation="usage">
+        <childnode refid="473" relation="usage">
           <edgelabel>ms</edgelabel>
         </childnode>
       </node>

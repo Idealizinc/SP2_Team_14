@@ -9,6 +9,20 @@
 /****************************************************************************/
 #include "Material.h"
 
+/****************************************************************************/
+/*!
+\brief
+Sets the default light properties
+\param
+		kAmbient - determines the amount of ambience caused by light
+		kDiffuse - determines the amount of diffusion of light
+		kSpecular - determines the amount of specular
+		kShininess - determines the shininess
+\return
+values for boundaries
+*/
+/****************************************************************************/
+
 Material::Material()
 {
 	kAmbient.Set(0.4f, 0.4f, 0.4f);

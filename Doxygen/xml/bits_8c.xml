@@ -4,60 +4,60 @@
     <compoundname>bits.c</compoundname>
     <includes refid="internal_8h" local="yes">internal.h</includes>
     <incdepgraph>
-      <node id="2918">
+      <node id="2406">
         <label>internal.h</label>
         <link refid="internal_8h"/>
-        <childnode refid="2919" relation="include">
+        <childnode refid="2407" relation="include">
         </childnode>
-        <childnode refid="2920" relation="include">
+        <childnode refid="2408" relation="include">
         </childnode>
-        <childnode refid="2921" relation="include">
+        <childnode refid="2409" relation="include">
         </childnode>
-        <childnode refid="2922" relation="include">
+        <childnode refid="2410" relation="include">
         </childnode>
-        <childnode refid="2923" relation="include">
+        <childnode refid="2411" relation="include">
         </childnode>
-        <childnode refid="2924" relation="include">
+        <childnode refid="2412" relation="include">
         </childnode>
-        <childnode refid="2925" relation="include">
+        <childnode refid="2413" relation="include">
         </childnode>
-        <childnode refid="2926" relation="include">
+        <childnode refid="2414" relation="include">
         </childnode>
-        <childnode refid="2927" relation="include">
+        <childnode refid="2415" relation="include">
         </childnode>
       </node>
-      <node id="2927">
+      <node id="2415">
         <label>assert.h</label>
       </node>
-      <node id="2919">
+      <node id="2407">
         <label>stdlib.h</label>
       </node>
-      <node id="2924">
+      <node id="2412">
         <label>stddef.h</label>
       </node>
-      <node id="2925">
+      <node id="2413">
         <label>mpaudec.h</label>
         <link refid="mpaudec_8h"/>
       </node>
-      <node id="2921">
+      <node id="2409">
         <label>string.h</label>
       </node>
-      <node id="2917">
+      <node id="2405">
         <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c</label>
         <link refid="bits.c"/>
-        <childnode refid="2918" relation="include">
+        <childnode refid="2406" relation="include">
         </childnode>
       </node>
-      <node id="2923">
+      <node id="2411">
         <label>math.h</label>
       </node>
-      <node id="2922">
+      <node id="2410">
         <label>ctype.h</label>
       </node>
-      <node id="2920">
+      <node id="2408">
         <label>stdio.h</label>
       </node>
-      <node id="2926">
+      <node id="2414">
         <label>inttypes.h</label>
       </node>
     </incdepgraph>

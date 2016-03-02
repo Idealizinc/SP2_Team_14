@@ -1,5 +1,5 @@
 <map id="SP2_Scene::RenderLevel" name="SP2_Scene::RenderLevel">
-<area shape="rect" id="node2" href="$classSP2__Scene.html#a40721f5409a15245989ab79baf848996" title="SP2_Scene::RenderTextOnScreen" alt="" coords="223,233,445,260"/>
+<area shape="rect" id="node2" href="$classSP2__Scene.html#a40721f5409a15245989ab79baf848996" title="Method that renders text on screen. " alt="" coords="223,233,445,260"/>
 <area shape="rect" id="node3" href="$classMtx44.html#a0a4c7818be7c1aeb0601ad069c1a591d" title="Setup orthogonal matrix. " alt="" coords="493,5,625,32"/>
 <area shape="rect" id="node5" href="$classMS.html#a9fb4fff5036f3f197b893f9a579c97b2" title="Make a copy of the top matrix on the matrix stack and push it on top. " alt="" coords="501,56,617,83"/>
 <area shape="rect" id="node6" href="$classMS.html#a86606fe9f575ccb747d77195c8aefdaf" title="Return the top matrix with a new matrix. " alt="" coords="502,107,617,133"/>

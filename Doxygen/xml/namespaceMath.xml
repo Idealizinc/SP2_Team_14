@@ -135,20 +135,18 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Common/Source/MyMath.h" line="49" column="1" bodyfile="Common/Source/MyMath.h" bodystart="49" bodyend="52"/>
-        <referencedby refid="classCamera3_1a72d040ce3726a7d6439efa15734105a5" compoundref="Camera3_8cpp" startline="217" endline="240">Camera3::cameraMovement</referencedby>
-        <referencedby refid="classCamera3_1a99440cc4eb40bfc3bbad15bfe08c8a55" compoundref="Camera3_8cpp" startline="257" endline="409">Camera3::cameraMovement2</referencedby>
-        <referencedby refid="MeshBuilder_8cpp_1a452206fa7621781c2b35fcd17b816239" compoundref="MeshBuilder_8cpp" startline="257" endline="260">CircleX</referencedby>
-        <referencedby refid="MeshBuilder_8cpp_1aede6465b0e45fc027ae0e8ec50d68ffb" compoundref="MeshBuilder_8cpp" startline="262" endline="265">CircleZ</referencedby>
-        <referencedby refid="classMeshBuilder_1a334f7cc0723906edca201cf80bc865ba" compoundref="MeshBuilder_8cpp" startline="572" endline="620">MeshBuilder::GenerateHalfTorus</referencedby>
-        <referencedby refid="classMeshBuilder_1ae78de92278560e1d9d33bad688f3ac7f" compoundref="MeshBuilder_8cpp" startline="524" endline="570">MeshBuilder::GenerateTorus</referencedby>
-        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">Particle::initLights</referencedby>
-        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="672" endline="757">SP2_Scene::initLights</referencedby>
-        <referencedby refid="classSP2__Scene_1a934794f65e93751b1e1106a85a08ae73" compoundref="SP2__Scene_8cpp" startline="2140" endline="2246">SP2_Scene::RenderRocks</referencedby>
-        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1004" endline="1135">SP2_Scene::RenderSpaceMap</referencedby>
-        <referencedby refid="classCamera3_1a81897b566fc3a2142c40276eb7c6a57b" compoundref="Camera3_8cpp" startline="158" endline="179">Camera3::rotateCamera</referencedby>
-        <referencedby refid="MeshBuilder_8cpp_1aef75a362a1bdb0980ed4abcf8241da69" compoundref="MeshBuilder_8cpp" startline="370" endline="373">SphereX</referencedby>
-        <referencedby refid="MeshBuilder_8cpp_1af7655f1bbe33f114c8c2457bb80d8d56" compoundref="MeshBuilder_8cpp" startline="375" endline="378">SphereY</referencedby>
-        <referencedby refid="MeshBuilder_8cpp_1a635e807e82196e114ec59993fe28838a" compoundref="MeshBuilder_8cpp" startline="380" endline="383">SphereZ</referencedby>
+        <referencedby refid="classCamera3_1a99440cc4eb40bfc3bbad15bfe08c8a55" compoundref="Camera3_8cpp" startline="271" endline="423">Camera3::cameraMovement2</referencedby>
+        <referencedby refid="MeshBuilder_8cpp_1a452206fa7621781c2b35fcd17b816239" compoundref="MeshBuilder_8cpp" startline="267" endline="270">CircleX</referencedby>
+        <referencedby refid="MeshBuilder_8cpp_1aede6465b0e45fc027ae0e8ec50d68ffb" compoundref="MeshBuilder_8cpp" startline="272" endline="275">CircleZ</referencedby>
+        <referencedby refid="classMeshBuilder_1a334f7cc0723906edca201cf80bc865ba" compoundref="MeshBuilder_8cpp" startline="582" endline="630">MeshBuilder::GenerateHalfTorus</referencedby>
+        <referencedby refid="classMeshBuilder_1ae78de92278560e1d9d33bad688f3ac7f" compoundref="MeshBuilder_8cpp" startline="534" endline="580">MeshBuilder::GenerateTorus</referencedby>
+        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="838" endline="923">SP2_Scene::initLights</referencedby>
+        <referencedby refid="classSP2__Scene_1a934794f65e93751b1e1106a85a08ae73" compoundref="SP2__Scene_8cpp" startline="2391" endline="2415">SP2_Scene::RenderRocks</referencedby>
+        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1279" endline="1410">SP2_Scene::RenderSpaceMap</referencedby>
+        <referencedby refid="classCamera3_1a81897b566fc3a2142c40276eb7c6a57b" compoundref="Camera3_8cpp" startline="197" endline="218">Camera3::rotateCamera</referencedby>
+        <referencedby refid="MeshBuilder_8cpp_1aef75a362a1bdb0980ed4abcf8241da69" compoundref="MeshBuilder_8cpp" startline="380" endline="383">SphereX</referencedby>
+        <referencedby refid="MeshBuilder_8cpp_1af7655f1bbe33f114c8c2457bb80d8d56" compoundref="MeshBuilder_8cpp" startline="385" endline="388">SphereY</referencedby>
+        <referencedby refid="MeshBuilder_8cpp_1a635e807e82196e114ec59993fe28838a" compoundref="MeshBuilder_8cpp" startline="390" endline="393">SphereZ</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespaceMath_1a1a1d364c850f9d66fda85cf71598bbe5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -306,7 +304,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Common/Source/MyMath.h" line="111" column="1" bodyfile="Common/Source/MyMath.h" bodystart="111" bodyend="123"/>
-        <referencedby refid="classCamera3_1a81897b566fc3a2142c40276eb7c6a57b" compoundref="Camera3_8cpp" startline="158" endline="179">Camera3::rotateCamera</referencedby>
+        <referencedby refid="classCamera3_1a81897b566fc3a2142c40276eb7c6a57b" compoundref="Camera3_8cpp" startline="197" endline="218">Camera3::rotateCamera</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespaceMath_1af308aea473e7e8e6352e1bd452e11df9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>

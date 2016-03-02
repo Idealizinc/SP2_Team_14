@@ -1016,13 +1016,13 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="630">
+      <node id="564">
         <label>T</label>
       </node>
-      <node id="629">
+      <node id="563">
         <label>irrklang::vec3d&lt; T &gt;</label>
         <link refid="classirrklang_1_1vec3d"/>
-        <childnode refid="630" relation="usage">
+        <childnode refid="564" relation="usage">
           <edgelabel>X</edgelabel>
           <edgelabel>Y</edgelabel>
           <edgelabel>Z</edgelabel>

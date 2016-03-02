@@ -9,6 +9,14 @@
 /****************************************************************************/
 #include "RobotManager.h"
 
+
+/****************************************************************************/
+/*!
+\brief
+Constructor
+*/
+/****************************************************************************/
+
 RobotManager::~RobotManager()
 {
 	for (std::list<Robot>::iterator iter = RobotList.begin(); iter != RobotList.end(); /*++iter*/)
@@ -17,6 +25,14 @@ RobotManager::~RobotManager()
 	}
 }
 
+
+/****************************************************************************/
+/*!
+\brief
+Increments robot position in the scene
+*/
+/****************************************************************************/
+
 void RobotManager::IncrementPosition()
 {
 	for (std::list<Robot>::iterator iter = RobotList.begin(); iter != RobotList.end(); ++iter)
@@ -24,6 +40,14 @@ void RobotManager::IncrementPosition()
 		(*iter).Move();
 	}
 }
+
+
+/****************************************************************************/
+/*!
+\brief
+Cleans up data to prevent memory leaks
+*/
+/****************************************************************************/
 
 void RobotManager::CleanUp()
 {
@@ -48,6 +72,14 @@ void RobotManager::CleanUp()
 	}
 	CurrentRobotCount = RobotList.size();
 }
+
+
+/****************************************************************************/
+/*!
+\brief
+Removes dead robots from the list
+*/
+/****************************************************************************/
 
 void RobotManager::ClearList()
 {

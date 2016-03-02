@@ -1,11 +1,9 @@
 <map id="irrKlang&#45;1.5.0/include/ik_ISoundEffectControl.h" name="irrKlang&#45;1.5.0/include/ik_ISoundEffectControl.h">
-<area shape="rect" id="node2" href="$ik__ISound_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_ISound.h" alt="" coords="259,95,403,136"/>
-<area shape="rect" id="node4" href="$irrKlang_8h.html" title="Main header file of the irrKlang sound library, the only file needed to include. " alt="" coords="317,273,461,315"/>
-<area shape="rect" id="node3" href="$ik__ISoundEngine_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_ISoundEngine.h" alt="" coords="208,184,352,225"/>
-<area shape="rect" id="node5" href="$SP2__Scene_8h.html" title="ComGLab/Source/SP2\l_Scene.h" alt="" coords="119,363,273,404"/>
-<area shape="rect" id="node8" href="$Particle_8h.html" title="ComGLab/Source/Particle.h" alt="" coords="297,370,481,397"/>
-<area shape="rect" id="node10" href="$ikpMP3_8cpp.html" title="irrKlang&#45;1.5.0/plugins\l/ikpMP3/ikpMP3.cpp" alt="" coords="505,363,649,404"/>
-<area shape="rect" id="node6" href="$Application_8cpp.html" title="ComGLab/Source/Application.cpp" alt="" coords="184,459,403,486"/>
-<area shape="rect" id="node7" href="$SP2__Scene_8cpp.html" title="ComGLab/Source/SP2\l_Scene.cpp" alt="" coords="5,452,160,493"/>
-<area shape="rect" id="node9" href="$Particle_8cpp.html" title="ComGLab/Source/Particle.cpp" alt="" coords="427,459,626,486"/>
+<area shape="rect" id="node2" href="$ik__ISound_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_ISound.h" alt="" coords="176,95,320,136"/>
+<area shape="rect" id="node4" href="$irrKlang_8h.html" title="Main header file of the irrKlang sound library, the only file needed to include. " alt="" coords="235,273,379,315"/>
+<area shape="rect" id="node3" href="$ik__ISoundEngine_8h.html" title="irrKlang&#45;1.5.0/include\l/ik_ISoundEngine.h" alt="" coords="125,184,269,225"/>
+<area shape="rect" id="node5" href="$SP2__Scene_8h.html" title="Header file for scene. " alt="" coords="143,363,297,404"/>
+<area shape="rect" id="node8" href="$ikpMP3_8cpp.html" title="irrKlang&#45;1.5.0/plugins\l/ikpMP3/ikpMP3.cpp" alt="" coords="321,363,465,404"/>
+<area shape="rect" id="node6" href="$Application_8cpp.html" title="Runs the application. " alt="" coords="5,459,224,486"/>
+<area shape="rect" id="node7" href="$SP2__Scene_8cpp.html" title=".cpp file that defines scenes " alt="" coords="248,452,403,493"/>
 </map>

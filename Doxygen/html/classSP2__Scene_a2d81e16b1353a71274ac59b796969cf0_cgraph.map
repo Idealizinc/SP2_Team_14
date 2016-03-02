@@ -1,35 +1,35 @@
 <map id="SP2_Scene::Update" name="SP2_Scene::Update">
-<area shape="rect" id="node2" href="$structBoundary.html#ac8729f6b5ec80c5af1151892c0a3e9b8" title="Boundary::BoundaryCheck" alt="" coords="707,27,884,53"/>
-<area shape="rect" id="node3" href="$classWeaponSystem.html#a4c149823fee5be2cc5ee8f19cf8760d8" title="WeaponSystem::CleanUp" alt="" coords="221,432,393,459"/>
-<area shape="rect" id="node7" href="$classRobotManager.html#affe43358be46aeb70d8cc616f09ecce2" title="RobotManager::CleanUp" alt="" coords="225,533,388,560"/>
-<area shape="rect" id="node8" href="$classWeaponSystem.html#a233da9c15e711ac1f5ce5fcf2945d91f" title="WeaponSystem::ClearList" alt="" coords="219,584,394,611"/>
-<area shape="rect" id="node9" href="$classCamera3.html#adba0ccda28b9537ec3c3f8ee23048abd" title="Camera3::getCameraPosition" alt="" coords="211,635,403,661"/>
-<area shape="rect" id="node10" href="$classCamera3.html#a7c74b73c43b5cce034b6c6ea8b072e58" title="Camera3::getLookVector" alt="" coords="223,685,390,712"/>
-<area shape="rect" id="node11" href="$classWeaponSystem.html#a66aa47e78dd93edc708236ba4bc0c288" title="WeaponSystem::IncrementPosition" alt="" coords="193,736,420,763"/>
-<area shape="rect" id="node12" href="$classRobotManager.html#a621e32721f045db98dc13b288aaeb09f" title="RobotManager::IncrementPosition" alt="" coords="197,787,416,813"/>
-<area shape="rect" id="node13" href="$classCamera3.html#a1029fbe574de09b19ff8908748031289" title="Camera3::Init" alt="" coords="257,381,356,408"/>
-<area shape="rect" id="node17" href="$structBoundary.html#a3cf640001c6bbc842d129f453fb3441b" title="Boundary::set" alt="" coords="744,508,847,535"/>
-<area shape="rect" id="node20" href="$classSP2__Scene.html#a909805431ade0c324aa6ea7726b48e50" title="SP2_Scene::InitKeyVariables" alt="" coords="210,837,403,864"/>
-<area shape="rect" id="node21" href="$classSP2__Scene.html#aea95ab9454db62830823d42d053c191e" title="SP2_Scene::InitMapModels" alt="" coords="215,888,398,915"/>
+<area shape="rect" id="node2" href="$structBoundary.html#ac8729f6b5ec80c5af1151892c0a3e9b8" title="Checks if the players position is outside of the boundaries set. " alt="" coords="707,27,884,53"/>
+<area shape="rect" id="node3" href="$classWeaponSystem.html#a4c149823fee5be2cc5ee8f19cf8760d8" title="Cleans up data to prevent memory leaks. " alt="" coords="221,432,393,459"/>
+<area shape="rect" id="node7" href="$classRobotManager.html#affe43358be46aeb70d8cc616f09ecce2" title="Cleans up data to prevent memory leaks. " alt="" coords="225,533,388,560"/>
+<area shape="rect" id="node8" href="$classWeaponSystem.html#a233da9c15e711ac1f5ce5fcf2945d91f" title="Removes bullets from the list. " alt="" coords="219,584,394,611"/>
+<area shape="rect" id="node9" href="$classCamera3.html#adba0ccda28b9537ec3c3f8ee23048abd" title="Calls the value for current position. " alt="" coords="211,635,403,661"/>
+<area shape="rect" id="node10" href="$classCamera3.html#a7c74b73c43b5cce034b6c6ea8b072e58" title="Calls the value for the Look Vector. " alt="" coords="223,685,390,712"/>
+<area shape="rect" id="node11" href="$classWeaponSystem.html#a66aa47e78dd93edc708236ba4bc0c288" title="Increments the position of each bullet. " alt="" coords="193,736,420,763"/>
+<area shape="rect" id="node12" href="$classRobotManager.html#a621e32721f045db98dc13b288aaeb09f" title="Increments robot position in the scene. " alt="" coords="197,787,416,813"/>
+<area shape="rect" id="node13" href="$classCamera3.html#a1029fbe574de09b19ff8908748031289" title="Initializes variables. " alt="" coords="257,381,356,408"/>
+<area shape="rect" id="node17" href="$structBoundary.html#a3cf640001c6bbc842d129f453fb3441b" title="Sets the minimum and maximum x,y and z boundaries. " alt="" coords="744,508,847,535"/>
+<area shape="rect" id="node20" href="$classSP2__Scene.html#a909805431ade0c324aa6ea7726b48e50" title="Holds all the variables used. " alt="" coords="210,837,403,864"/>
+<area shape="rect" id="node21" href="$classSP2__Scene.html#aea95ab9454db62830823d42d053c191e" title="Initializes OBJ and TGA files. " alt="" coords="215,888,398,915"/>
 <area shape="rect" id="node25" href="$structPosition.html#a2919b2441baf7a2f799791d65a1cfc15" title="Position::Set" alt="" coords="972,989,1069,1016"/>
-<area shape="rect" id="node29" href="$classSP2__Scene.html#aeef4e3096a06665be510e2b4bd6c2b79" title="SP2_Scene::InitRobots" alt="" coords="228,989,385,1016"/>
-<area shape="rect" id="node32" href="$classSP2__Scene.html#a6db32e7632b8b3d3a57d949d3029b4a7" title="SP2_Scene::InitWeaponModels" alt="" coords="203,939,410,965"/>
+<area shape="rect" id="node29" href="$classSP2__Scene.html#aeef4e3096a06665be510e2b4bd6c2b79" title="Initializes OBJ and TGA files. " alt="" coords="228,989,385,1016"/>
+<area shape="rect" id="node32" href="$classSP2__Scene.html#a6db32e7632b8b3d3a57d949d3029b4a7" title="Initializes OBJ and TGA files. " alt="" coords="203,939,410,965"/>
 <area shape="rect" id="node33" href="$classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe" title="Application::IsKeyPressed" alt="" coords="708,77,883,104"/>
 <area shape="rect" id="node34" href="$classMS.html#a86606fe9f575ccb747d77195c8aefdaf" title="Return the top matrix with a new matrix. " alt="" coords="249,1091,364,1117"/>
-<area shape="rect" id="node35" href="$classSP2__Scene.html#a0b1572242a264fb4de0bb415d293c99f" title="SP2_Scene::MothershipBullet\lSpawner" alt="" coords="209,1142,405,1183"/>
+<area shape="rect" id="node35" href="$classSP2__Scene.html#a0b1572242a264fb4de0bb415d293c99f" title="Method that controls the bullets of the enemy mothership. " alt="" coords="209,1142,405,1183"/>
 <area shape="rect" id="node36" href="$classirrklang_1_1ISoundEngine.html#a25f612fe6479d3b22dc5bab2a2eaa927" title="loads a sound source (if not loaded already) from a file and plays it. " alt="" coords="231,1207,383,1249"/>
-<area shape="rect" id="node37" href="$classCamera3.html#a4b10106bcd89f21e3cf3e39f04d8c1cb" title="Camera3::Reset" alt="" coords="249,1273,365,1300"/>
+<area shape="rect" id="node37" href="$classCamera3.html#a4b10106bcd89f21e3cf3e39f04d8c1cb" title="Resets camera position to default value. " alt="" coords="249,1273,365,1300"/>
 <area shape="rect" id="node38" href="$structColor.html#acc77e4e3583d3eca7e476952e51bfb80" title="Color::Set" alt="" coords="267,1324,347,1351"/>
-<area shape="rect" id="node39" href="$classWeaponSystem.html#ae014e0236d0f8a401a0ec848b25a2896" title="WeaponSystem::SetStats" alt="" coords="219,1375,394,1401"/>
+<area shape="rect" id="node39" href="$classWeaponSystem.html#ae014e0236d0f8a401a0ec848b25a2896" title="Sets the stats for each type of gun. " alt="" coords="219,1375,394,1401"/>
 <area shape="rect" id="node40" href="$classMtx44.html#ac6e6521111d78ff36d539bf111a902c6" title="Set matrix to be a perspective matrix. " alt="" coords="223,1425,390,1452"/>
 <area shape="rect" id="node42" href="$classirrklang_1_1ISound.html#a4c91357775f1d15e2c276ced09a40599" title="sets the volume of the sound, a value between 0 (mute) and 1 (full volume). " alt="" coords="215,1476,398,1503"/>
 <area shape="rect" id="node43" href="$classirrklang_1_1ISound.html#a108485fe64658441cecd70917782961f" title="Will stop the sound and free its resources. " alt="" coords="234,1527,379,1553"/>
-<area shape="rect" id="node44" href="$classCamera3.html#acc5d4103826cda6d20b80a0d35eacdbe" title="Camera3::Update" alt="" coords="245,204,368,231"/>
-<area shape="rect" id="node4" href="$classWeaponSystem.html#a92124c3a05ebf38514c7455cc3f2fcb0" title="WeaponSystem::GetLength" alt="" coords="472,432,655,459"/>
-<area shape="rect" id="node5" href="$classRayCast.html#a9f508cc3e3f75cb0a9e4079424753bcb" title="RayCast::Position" alt="" coords="732,432,859,459"/>
+<area shape="rect" id="node44" href="$classCamera3.html#acc5d4103826cda6d20b80a0d35eacdbe" title="Method where values are changed. " alt="" coords="245,204,368,231"/>
+<area shape="rect" id="node4" href="$classWeaponSystem.html#a92124c3a05ebf38514c7455cc3f2fcb0" title="Returns the length of each bullet. " alt="" coords="472,432,655,459"/>
+<area shape="rect" id="node5" href="$classRayCast.html#a9f508cc3e3f75cb0a9e4079424753bcb" title="Calls the current position of each RayCast. " alt="" coords="732,432,859,459"/>
 <area shape="rect" id="node6" href="$structVector3.html#a200024a8442329de9a625ed58ffe7075" title="Return length of vector. " alt="" coords="738,381,853,408"/>
 <area shape="rect" id="node14" href="$structVector3.html#aa1cdc5357009b47fe585ddd61e263aad" title="Cross product of 2 vectors. " alt="" coords="966,280,1075,307"/>
-<area shape="rect" id="node16" href="$classCamera3.html#ae8bf411b15978eaeb425b6fe169a0f05" title="Camera3::initBoundVec" alt="" coords="484,483,643,509"/>
+<area shape="rect" id="node16" href="$classCamera3.html#ae8bf411b15978eaeb425b6fe169a0f05" title="Initializes Boundary values. " alt="" coords="484,483,643,509"/>
 <area shape="rect" id="node18" href="$structVector3.html#aaef4f25a38878a640ab4a48002a7eff8" title="Normalize this vector and return a reference to it. " alt="" coords="497,381,630,408"/>
 <area shape="rect" id="node19" href="$structVector3.html#a2da0f00c5529bced69763320dac9c414" title="Return a copy of this vector, normalized. " alt="" coords="493,331,633,357"/>
 <area shape="rect" id="node15" href="$structVector3.html#afa5e0c801fc2c8a820a54ea99302fe08" title="Vector3 default constructor. " alt="" coords="1157,305,1277,332"/>
@@ -42,9 +42,9 @@
 <area shape="rect" id="node30" href="$classMeshBuilder.html#a5e777328dc946f483beb5645d8f24c4a" title="Generate the vertices of a cube; Use random color for each vertex Then generate the VBO/IBO and store..." alt="" coords="471,989,656,1016"/>
 <area shape="rect" id="node31" href="$structVector3.html#a9c25d604bd52b162cfcb56302ef032bb" title="Set the elements of this vector. " alt="" coords="748,939,843,965"/>
 <area shape="rect" id="node41" href="$classMtx44.html#a1b985913080679da29ff94217935b3c7" title="Default Constructor. Default values are zero. " alt="" coords="512,1425,615,1452"/>
-<area shape="rect" id="node45" href="$classCamera3.html#a99440cc4eb40bfc3bbad15bfe08c8a55" title="Camera3::cameraMovement2" alt="" coords="468,179,659,205"/>
-<area shape="rect" id="node48" href="$classCamera3.html#a81897b566fc3a2142c40276eb7c6a57b" title="Camera3::rotateCamera" alt="" coords="715,229,875,256"/>
+<area shape="rect" id="node45" href="$classCamera3.html#a99440cc4eb40bfc3bbad15bfe08c8a55" title="Method for player movement. " alt="" coords="468,179,659,205"/>
+<area shape="rect" id="node48" href="$classCamera3.html#a81897b566fc3a2142c40276eb7c6a57b" title="Rotates the camera. " alt="" coords="715,229,875,256"/>
 <area shape="rect" id="node46" href="$namespaceMath.html#ac04b987cc6c574a059e68cb58f58c09a" title="Converts from degrees to radians. " alt="" coords="943,153,1098,180"/>
-<area shape="rect" id="node47" href="$classCamera3.html#ac5d3985b326b8334208c9a12741c5dc3" title="Camera3::jump" alt="" coords="740,179,851,205"/>
+<area shape="rect" id="node47" href="$classCamera3.html#ac5d3985b326b8334208c9a12741c5dc3" title="Method that allows the player to jump. " alt="" coords="740,179,851,205"/>
 <area shape="rect" id="node49" href="$namespaceMath.html#af8dc69787ee8df1ea409e97f53fce3cb" title="Keeps a value between a min and max point. If it goes to low, it will become the min. If the value gets too high, it will become the max. " alt="" coords="973,229,1069,256"/>
 </map>

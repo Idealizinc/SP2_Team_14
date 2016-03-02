@@ -7,79 +7,79 @@
     <includes local="no">stdlib.h</includes>
     <includes local="no">string.h</includes>
     <incdepgraph>
-      <node id="2892">
+      <node id="2380">
         <label>CIrrKlangAudioStreamMP3.h</label>
         <link refid="CIrrKlangAudioStreamMP3_8h"/>
-        <childnode refid="2893" relation="include">
+        <childnode refid="2381" relation="include">
         </childnode>
-        <childnode refid="2898" relation="include">
+        <childnode refid="2386" relation="include">
         </childnode>
-        <childnode refid="2899" relation="include">
+        <childnode refid="2387" relation="include">
         </childnode>
-        <childnode refid="2900" relation="include">
+        <childnode refid="2388" relation="include">
         </childnode>
       </node>
-      <node id="2894">
+      <node id="2382">
         <label>ik_IRefCounted.h</label>
         <link refid="ik__IRefCounted_8h"/>
-        <childnode refid="2895" relation="include">
+        <childnode refid="2383" relation="include">
         </childnode>
       </node>
-      <node id="2902">
+      <node id="2390">
         <label>stdlib.h</label>
       </node>
-      <node id="2898">
+      <node id="2386">
         <label>ik_IFileReader.h</label>
         <link refid="ik__IFileReader_8h"/>
-        <childnode refid="2894" relation="include">
+        <childnode refid="2382" relation="include">
         </childnode>
       </node>
-      <node id="2901">
+      <node id="2389">
         <label>memory.h</label>
       </node>
-      <node id="2897">
+      <node id="2385">
         <label>ik_SAudioStreamFormat.h</label>
         <link refid="ik__SAudioStreamFormat_8h"/>
-        <childnode refid="2894" relation="include">
+        <childnode refid="2382" relation="include">
         </childnode>
       </node>
-      <node id="2900">
+      <node id="2388">
         <label>decoder/mpaudec.h</label>
         <link refid="mpaudec_8h"/>
       </node>
-      <node id="2891">
+      <node id="2379">
         <label>irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.cpp</label>
         <link refid="CIrrKlangAudioStreamMP3.cpp"/>
-        <childnode refid="2892" relation="include">
+        <childnode refid="2380" relation="include">
         </childnode>
-        <childnode refid="2901" relation="include">
+        <childnode refid="2389" relation="include">
         </childnode>
-        <childnode refid="2902" relation="include">
+        <childnode refid="2390" relation="include">
         </childnode>
-        <childnode refid="2903" relation="include">
+        <childnode refid="2391" relation="include">
         </childnode>
       </node>
-      <node id="2896">
+      <node id="2384">
         <label>wchar.h</label>
       </node>
-      <node id="2903">
+      <node id="2391">
         <label>string.h</label>
       </node>
-      <node id="2899">
+      <node id="2387">
         <label>vector</label>
       </node>
-      <node id="2895">
+      <node id="2383">
         <label>ik_irrKlangTypes.h</label>
         <link refid="ik__irrKlangTypes_8h"/>
-        <childnode refid="2896" relation="include">
+        <childnode refid="2384" relation="include">
         </childnode>
       </node>
-      <node id="2893">
+      <node id="2381">
         <label>ik_IAudioStream.h</label>
         <link refid="ik__IAudioStream_8h"/>
-        <childnode refid="2894" relation="include">
+        <childnode refid="2382" relation="include">
         </childnode>
-        <childnode refid="2897" relation="include">
+        <childnode refid="2385" relation="include">
         </childnode>
       </node>
     </incdepgraph>

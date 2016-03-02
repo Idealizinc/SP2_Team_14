@@ -1,4 +1,4 @@
 <map id="Mesh" name="Mesh">
-<area shape="rect" id="node2" href="$structMaterial.html" title="Material" alt="" coords="5,243,73,269"/>
-<area shape="rect" id="node4" href="$structComponent.html" title="Component" alt="" coords="111,124,199,151"/>
+<area shape="rect" id="node2" href="$structMaterial.html" title="Defines the methods and variables for light properties. " alt="" coords="5,243,73,269"/>
+<area shape="rect" id="node4" href="$structComponent.html" title="Defines the methods and variables for light properties. " alt="" coords="111,124,199,151"/>
 </map>

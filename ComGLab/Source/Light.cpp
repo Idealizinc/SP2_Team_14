@@ -9,6 +9,19 @@
 /****************************************************************************/
 #include "Light.h"
 
+/****************************************************************************/
+/*!
+\brief
+Determines the variables of light
+\param
+		position - Vector3 that determines the position of the light
+		color - determines the color of the light
+		power - determines the power of the light
+\return
+Resulting values and normalized vectors
+*/
+/****************************************************************************/
+
 Light::Light()
 {
 	position.Set(0, 0, 0);

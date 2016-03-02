@@ -277,26 +277,26 @@
     <detaileddescription>
 <para>It provides some informations about the sound source like the play lenght and can have default settings for volume, distances for 3d etc. There is some example code on how to use Sound sources at <ref refid="index_1soundSources" kindref="member">Using Sound Sources</ref>. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="471">
+      <node id="431">
         <label>irrklang::IVirtualRefCounted</label>
         <link refid="classirrklang_1_1IVirtualRefCounted"/>
       </node>
-      <node id="470">
+      <node id="430">
         <label>irrklang::ISoundSource</label>
         <link refid="classirrklang_1_1ISoundSource"/>
-        <childnode refid="471" relation="public-inheritance">
+        <childnode refid="431" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="473">
+      <node id="433">
         <label>irrklang::IVirtualRefCounted</label>
         <link refid="classirrklang_1_1IVirtualRefCounted"/>
       </node>
-      <node id="472">
+      <node id="432">
         <label>irrklang::ISoundSource</label>
         <link refid="classirrklang_1_1ISoundSource"/>
-        <childnode refid="473" relation="public-inheritance">
+        <childnode refid="433" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

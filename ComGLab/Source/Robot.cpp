@@ -11,6 +11,19 @@
 
 #define PI 3.1415926535
 
+/****************************************************************************/
+/*!
+\brief
+Constructor
+\param
+		RobotType - value that determines the type of robot spawned
+		Rotation - value that determines the angle which the robot faces
+		SpawnPos - Vector3 value that determines the spawn point of a robot
+\return
+Resulting values and normalized vectors
+*/
+/****************************************************************************/
+
 Robot::Robot(int RobotType, float Rotation, Vector3 SpawnPos)
 {
 	this->RobotTypeVal = RobotType;
@@ -23,11 +36,31 @@ Robot::Robot(int RobotType, float Rotation, Vector3 SpawnPos)
 	//(CurrPos.x + 3) * rotateToTarget
 }
 
+/****************************************************************************/
+/*!
+\brief
+Destrutctor
+*/
+/****************************************************************************/
+
 Robot::~Robot()
 {
 
 }
 
+/****************************************************************************/
+/*!
+\brief
+Method that handles each robot's movements
+\param
+		die - boolean which determines if the robot is dead or not
+		CurrPos - Vector3 value which determines the robot's current position
+		DirVec - Vector3 value which determines the robot's direction vector
+		Speed - value which determines the robot's walking speed
+\return
+Resulting values and normalized vectors
+*/
+/****************************************************************************/
 
 Vector3 Robot::Move()
 {
@@ -46,6 +79,21 @@ Vector3 Robot::Move()
 		return CurrPos;
 	}
 }
+
+/****************************************************************************/
+/*!
+\brief
+Chooses a new target for the robots to walk to
+\param
+		isMothership - boolean that determines if the current stage is the boss fight
+		Randomize - value that is randomized
+		Base - a boundary inside the base
+		BaseOuter - a boundary around the base
+		TargetPos - Vector3 value that determines the robots' target
+\return
+Resulting values and normalized vectors
+*/
+/****************************************************************************/
 
 void Robot::FindNewTarget()
 {
@@ -79,15 +127,50 @@ void Robot::FindNewTarget()
 	}
 }
 
+/****************************************************************************/
+/*!
+\brief
+Sets a new target for the mothership
+\param
+	TargetPos - Vector3 value that determines the target
+\return
+Resulting normalized vectors
+*/
+/****************************************************************************/
+
 void Robot::SetShipTarget(Vector3 newTarget)
 {
 	TargetPos = newTarget;
 }
 
+/****************************************************************************/
+/*!
+\brief
+Calls the value for each robot's current position
+\param
+		CurrPos - Vector3 value which determines the robot's current position
+\return
+Resulting normalized vectors
+*/
+/****************************************************************************/
+
 Vector3 Robot::Position()
 {
 	return CurrPos;
 }
+
+/****************************************************************************/
+/*!
+\brief
+Checks if the player or a bullet has entered a robot's boundary
+\param
+		BulletUsed - boolean that checks if the bullet has hit a robot
+		Health - value that determines each robot's health
+		Damage - value that determines each bullet's damage
+\return
+Resulting values
+*/
+/****************************************************************************/
 
 void Robot::BoundsCheck(WeaponSystem WepSys)
 {
@@ -102,15 +185,60 @@ void Robot::BoundsCheck(WeaponSystem WepSys)
 	}
 }
 
+/****************************************************************************/
+/*!
+\brief
+Calls the value for each robot's current heatlth
+\param
+		Health - value that determines each robot's health
+\return
+Resulting values
+*/
+/****************************************************************************/
+
 float Robot::GetHealth()
 {
 	return Health;
 }
 
+/****************************************************************************/
+/*!
+\brief
+Sets a new value for each robot's health
+\param
+	Health - value that determines each robot's health
+\return
+Resulting normalized vectors
+*/
+/****************************************************************************/
+
 void Robot::SetHealth(float newHP)
 {
 	Health = newHP;
 }
+
+/****************************************************************************/
+/*!
+\brief
+Animations for the robots
+\param
+		leftarmrotate - boolean that determines if the left arm is being rotated
+		rotatelefthand - value that determines the angle of the left hand's rotation
+		leftarmrotatelimite - value that determines the maximum angle of rotation for the left arm
+		rightarmrotate - boolean that determines if the right arm is being rotated
+		rotaterighthand - value that determines the angle of the right hand's rotation
+		rightarmrotatelimite - value that determines the maximum angle of rotation for the right arm
+		leftleg - boolean that determines if the left leg is moving
+		moveleftleg - value that determines how much the left leg is moved
+		rightleg - boolean that determines if the right leg is moving
+		moverightleg - value that determines how much the right leg is moved
+		die - boolean which determines if the robot is dead or not
+		collapse - value for animating robot
+		deadanimationover - boolean that determines if the death animation is over
+\return
+Resulting values
+*/
+/****************************************************************************/
 
 void Robot::RobotAnimation(double dt)
 {
@@ -212,6 +340,17 @@ void Robot::RobotAnimation(double dt)
 	
 }
 
+/****************************************************************************/
+/*!
+\brief
+Calculates the boundary of each robot
+\param
+		CurrPos - Vector3 value which determines the robot's current position
+\return
+Resulting normalized vectors
+*/
+/****************************************************************************/
+
 void Robot::CalcBounds()
 {
 	if (RobotTypeVal != 3)
@@ -220,6 +359,19 @@ void Robot::CalcBounds()
 	}
 	else 	BoundingBox.set(CurrPos.x - 30, CurrPos.x + 30, CurrPos.z - 60, CurrPos.z + 60, CurrPos.y - 20, CurrPos.y + 20);
 }
+
+/****************************************************************************/
+/*!
+\brief
+Calculates the direction vector
+\param
+		DirVec - Vector3 value which determines the robot's direction vector
+		Target - Vector3 value that determines the robots' target
+		CurrPos - Vector3 value which determines the robot's current position
+\return
+Resulting normalized vectors
+*/
+/****************************************************************************/
 
 Vector3 Robot::GetDirVec(Vector3 Target)
 {
@@ -230,6 +382,20 @@ Vector3 Robot::GetDirVec(Vector3 Target)
 	}
 	return DirVec;
 }
+
+/****************************************************************************/
+/*!
+\brief
+Sets the values of each stat for every robot type
+\param
+		RobotType - value that determines the type of robot spawned
+		Health - value that determines each robot's health
+		Damage - value that determines each robot's damage
+		Speed - value which determines the robot's walking speed
+\return
+Resulting values
+*/
+/****************************************************************************/
 
 void Robot::SetStats(int Level)
 {

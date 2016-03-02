@@ -1,5 +1,4 @@
 <map id="ComGLab/Source/Utility.h" name="ComGLab/Source/Utility.h">
-<area shape="rect" id="node2" href="$Particle_8cpp.html" title="ComGLab/Source/Particle.cpp" alt="" coords="5,87,204,114"/>
-<area shape="rect" id="node3" href="$SP2__Scene_8cpp.html" title="ComGLab/Source/SP2\l_Scene.cpp" alt="" coords="229,80,383,121"/>
-<area shape="rect" id="node4" href="$Utility_8cpp.html" title="ComGLab/Source/Utility.cpp" alt="" coords="407,87,594,114"/>
+<area shape="rect" id="node2" href="$SP2__Scene_8cpp.html" title=".cpp file that defines scenes " alt="" coords="5,80,160,121"/>
+<area shape="rect" id="node3" href="$Utility_8cpp.html" title=".cpp file that defines Utility " alt="" coords="184,87,371,114"/>
 </map>

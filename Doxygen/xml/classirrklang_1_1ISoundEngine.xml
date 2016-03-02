@@ -103,8 +103,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="irrKlang-1.5.0/include/ik_ISoundEngine.h" line="56" column="1"/>
-        <referencedby refid="classSP2__Scene_1a3cd10ebc989e3f3e2f84f59d74b76ef2" compoundref="SP2__Scene_8cpp" startline="828" endline="953">SP2_Scene::GameState</referencedby>
-        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+        <referencedby refid="classSP2__Scene_1a3cd10ebc989e3f3e2f84f59d74b76ef2" compoundref="SP2__Scene_8cpp" startline="960" endline="1095">SP2_Scene::GameState</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1523" endline="2089">SP2_Scene::Update</referencedby>
       </memberdef>
       <memberdef kind="function" id="classirrklang_1_1ISoundEngine_1aef959c10e0a0fd2df68abb1cdacd5893" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classirrklang_1_1ISound" kindref="compound">ISound</ref> *</type>
@@ -512,7 +512,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="irrKlang-1.5.0/include/ik_ISoundEngine.h" line="190" column="1"/>
-        <referencedby refid="classSP2__Scene_1ae7483c042e4a1861b71137f1a564ad7a" compoundref="SP2__Scene_8cpp" startline="60" endline="130">SP2_Scene::Init</referencedby>
+        <referencedby refid="classSP2__Scene_1ae7483c042e4a1861b71137f1a564ad7a" compoundref="SP2__Scene_8cpp" startline="102" endline="172">SP2_Scene::Init</referencedby>
       </memberdef>
       <memberdef kind="function" id="classirrklang_1_1ISoundEngine_1a686f6a4c8a7e90ec6859436f6ae39707" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classirrklang_1_1ISoundSource" kindref="compound">ISoundSource</ref> *</type>
@@ -1110,31 +1110,31 @@
     <detaileddescription>
 <para>This is the main interface of irrKlang. You usually would create this using the <ref refid="namespaceirrklang_1ad9829f898bc0665fdd2554a6f5c7ca1c" kindref="member">createIrrKlangDevice()</ref> function. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="463">
+      <node id="423">
         <label>irrklang::ISoundEngine</label>
         <link refid="classirrklang_1_1ISoundEngine"/>
-        <childnode refid="464" relation="public-inheritance">
+        <childnode refid="424" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="464">
+      <node id="424">
         <label>irrklang::IRefCounted</label>
         <link refid="classirrklang_1_1IRefCounted"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="465">
+      <node id="425">
         <label>irrklang::ISoundEngine</label>
         <link refid="classirrklang_1_1ISoundEngine"/>
-        <childnode refid="466" relation="public-inheritance">
+        <childnode refid="426" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="467">
+      <node id="427">
         <label>int</label>
       </node>
-      <node id="466">
+      <node id="426">
         <label>irrklang::IRefCounted</label>
         <link refid="classirrklang_1_1IRefCounted"/>
-        <childnode refid="467" relation="usage">
+        <childnode refid="427" relation="usage">
           <edgelabel>ReferenceCounter</edgelabel>
         </childnode>
       </node>

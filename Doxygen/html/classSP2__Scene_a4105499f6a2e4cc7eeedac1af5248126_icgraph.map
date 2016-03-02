@@ -1,4 +1,4 @@
 <map id="SP2_Scene::RenderWeaponInHand" name="SP2_Scene::RenderWeaponInHand">
-<area shape="rect" id="node2" href="$classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="SP2_Scene::Render" alt="" coords="481,5,621,32"/>
-<area shape="rect" id="node3" href="$classSP2__Scene.html#aeb5b6dadeb1ee8d943f2e52e69d6d9e0" title="SP2_Scene::RenderUI" alt="" coords="281,31,433,57"/>
+<area shape="rect" id="node2" href="$classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="Method that renders everything in the game. " alt="" coords="481,5,621,32"/>
+<area shape="rect" id="node3" href="$classSP2__Scene.html#aeb5b6dadeb1ee8d943f2e52e69d6d9e0" title="Method that renders the user interface. " alt="" coords="281,31,433,57"/>
 </map>

@@ -6,203 +6,208 @@
     <includes refid="Mesh_8h" local="yes">Mesh.h</includes>
     <includes local="yes">GL\glew.h</includes>
     <incdepgraph>
-      <node id="1796">
+      <node id="1488">
         <label>ComGLab/Source/Mesh.cpp</label>
         <link refid="Mesh.cpp"/>
-        <childnode refid="1797" relation="include">
+        <childnode refid="1489" relation="include">
         </childnode>
-        <childnode refid="1805" relation="include">
+        <childnode refid="1497" relation="include">
         </childnode>
-        <childnode refid="1806" relation="include">
+        <childnode refid="1498" relation="include">
         </childnode>
       </node>
-      <node id="1799">
+      <node id="1491">
         <label>MyMath.h</label>
         <link refid="MyMath_8h"/>
-        <childnode refid="1800" relation="include">
+        <childnode refid="1492" relation="include">
         </childnode>
-        <childnode refid="1801" relation="include">
+        <childnode refid="1493" relation="include">
         </childnode>
-        <childnode refid="1802" relation="include">
+        <childnode refid="1494" relation="include">
         </childnode>
-        <childnode refid="1803" relation="include">
+        <childnode refid="1495" relation="include">
         </childnode>
       </node>
-      <node id="1800">
+      <node id="1492">
         <label>cmath</label>
       </node>
-      <node id="1798">
+      <node id="1490">
         <label>Vector3.h</label>
         <link refid="Vector3_8h"/>
-        <childnode refid="1799" relation="include">
+        <childnode refid="1491" relation="include">
         </childnode>
-        <childnode refid="1804" relation="include">
+        <childnode refid="1496" relation="include">
         </childnode>
       </node>
-      <node id="1806">
+      <node id="1498">
         <label>GL\glew.h</label>
       </node>
-      <node id="1805">
+      <node id="1497">
         <label>Mesh.h</label>
         <link refid="Mesh_8h"/>
-        <childnode refid="1806" relation="include">
+        <childnode refid="1498" relation="include">
         </childnode>
-        <childnode refid="1807" relation="include">
+        <childnode refid="1499" relation="include">
         </childnode>
-        <childnode refid="1799" relation="include">
+        <childnode refid="1491" relation="include">
         </childnode>
-        <childnode refid="1808" relation="include">
+        <childnode refid="1500" relation="include">
         </childnode>
-        <childnode refid="1809" relation="include">
+        <childnode refid="1501" relation="include">
         </childnode>
       </node>
-      <node id="1809">
+      <node id="1501">
         <label>string</label>
       </node>
-      <node id="1801">
+      <node id="1493">
         <label>exception</label>
       </node>
-      <node id="1797">
+      <node id="1489">
         <label>Vertex.h</label>
         <link refid="Vertex_8h"/>
-        <childnode refid="1798" relation="include">
+        <childnode refid="1490" relation="include">
         </childnode>
       </node>
-      <node id="1802">
+      <node id="1494">
         <label>ctime</label>
       </node>
-      <node id="1807">
+      <node id="1499">
         <label>vector</label>
       </node>
-      <node id="1803">
+      <node id="1495">
         <label>cstdlib</label>
       </node>
-      <node id="1804">
+      <node id="1496">
         <label>iostream</label>
       </node>
-      <node id="1808">
+      <node id="1500">
         <label>Material.h</label>
         <link refid="Material_8h"/>
       </node>
     </incdepgraph>
     <briefdescription>
-    </briefdescription>
+<para>.cpp file that draws meshes </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para><simplesect kind="author"><para>Wen Sheng Tang </para></simplesect>
+<simplesect kind="par"><title>email: tang_wen_sheng@nyp.edu.sg</title><para></para></simplesect>
+</para>    </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Vertex_8h" kindref="compound">Vertex.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Mesh_8h" kindref="compound">Mesh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GL\glew.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
-<codeline lineno="12"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13" refid="classMesh_1a8618160123ac2c27985d7ae34ad58cae" refkind="member"><highlight class="normal"><ref refid="classMesh_1a8618160123ac2c27985d7ae34ad58cae" kindref="member">Mesh::Mesh</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;meshName)</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>name(meshName)</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>mode(DRAW_TRIANGLES)</highlight></codeline>
-<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGenBuffers(1,<sp/>&amp;<ref refid="classMesh_1a1e99394b36ad335804acd2461a736cfb" kindref="member">vertexBuffer</ref>);</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//glGenBuffers(1,<sp/>&amp;colorBuffer);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGenBuffers(1,<sp/>&amp;<ref refid="classMesh_1ad5efa4d45e469674dfa3765e479e4a73" kindref="member">indexBuffer</ref>);</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" kindref="member">textureID</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
-<codeline lineno="28"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29" refid="classMesh_1a5efe4da1a4c0971cfb037bd70304c303" refkind="member"><highlight class="normal"><ref refid="classMesh_1a5efe4da1a4c0971cfb037bd70304c303" kindref="member">Mesh::~Mesh</ref>()</highlight></codeline>
-<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Cleanup<sp/>VBO<sp/>here</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDeleteBuffers(1,<sp/>&amp;<ref refid="classMesh_1a1e99394b36ad335804acd2461a736cfb" kindref="member">vertexBuffer</ref>);</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//glDeleteBuffers(1,<sp/>&amp;colorBuffer);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDeleteBuffers(1,<sp/>&amp;<ref refid="classMesh_1ad5efa4d45e469674dfa3765e479e4a73" kindref="member">indexBuffer</ref>);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" kindref="member">textureID</ref><sp/>&gt;<sp/>0)</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDeleteTextures(1,<sp/>&amp;<ref refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" kindref="member">textureID</ref>);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
-<codeline lineno="46"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="47" refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" kindref="member">Mesh::Render</ref>()</highlight></codeline>
-<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnableVertexAttribArray(0);</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnableVertexAttribArray(1);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnableVertexAttribArray(2);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" kindref="member">textureID</ref><sp/>&gt;<sp/>0)</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnableVertexAttribArray(3);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindBuffer(GL_ARRAY_BUFFER,<sp/><ref refid="classMesh_1a1e99394b36ad335804acd2461a736cfb" kindref="member">vertexBuffer</ref>);</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertexAttribPointer(0,<sp/>3,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structVertex" kindref="compound">Vertex</ref>),<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)0);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertexAttribPointer(1,<sp/>3,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structVertex" kindref="compound">Vertex</ref>),<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structPosition" kindref="compound">Position</ref>));</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertexAttribPointer(2,<sp/>3,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structVertex" kindref="compound">Vertex</ref>),<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structPosition" kindref="compound">Position</ref>)<sp/>+<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structColor" kindref="compound">Color</ref>)));</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Add<sp/>these<sp/>codes<sp/>to<sp/>the<sp/>appropriate<sp/>lines<sp/>after<sp/>bind<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" kindref="member">textureID</ref><sp/>&gt;<sp/>0)</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertexAttribPointer(3,<sp/>2,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structVertex" kindref="compound">Vertex</ref>),<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structPosition" kindref="compound">Position</ref>)+</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structColor" kindref="compound">Color</ref>)+</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structVector3" kindref="compound">Vector3</ref>)));</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,<sp/><ref refid="classMesh_1ad5efa4d45e469674dfa3765e479e4a73" kindref="member">indexBuffer</ref>);</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classMesh_1ae12937ea9bdacb3b7b786f60fe42448e" kindref="member">mode</ref><sp/>==<sp/><ref refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a76fb83917a3507580897f6e86656927d" kindref="member">DRAW_TRIANGLE_STRIP</ref>)</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDrawElements(GL_TRIANGLE_STRIP,<sp/><ref refid="classMesh_1ac6d6f70d161b9dd66c5ca79a187d86df" kindref="member">indexSize</ref>,<sp/>GL_UNSIGNED_INT,<sp/>0);</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classMesh_1ae12937ea9bdacb3b7b786f60fe42448e" kindref="member">mode</ref><sp/>==<sp/><ref refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a2eacb69a1ffbcde68e12fb36f8c88639" kindref="member">DRAW_LINES</ref>)</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDrawElements(GL_LINES,<sp/><ref refid="classMesh_1ac6d6f70d161b9dd66c5ca79a187d86df" kindref="member">indexSize</ref>,<sp/>GL_UNSIGNED_INT,<sp/>0);</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDrawElements(GL_TRIANGLES,<sp/><ref refid="classMesh_1ac6d6f70d161b9dd66c5ca79a187d86df" kindref="member">indexSize</ref>,<sp/>GL_UNSIGNED_INT,<sp/>0);</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDisableVertexAttribArray(0);</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDisableVertexAttribArray(1);</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDisableVertexAttribArray(2);</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Add<sp/>these<sp/>codes<sp/>before<sp/>end<sp/>of<sp/>method</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" kindref="member">textureID</ref><sp/>&gt;<sp/>0)</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDisableVertexAttribArray(3);</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88" refid="classMesh_1a13afbd2fcdaf0ae700599eb643ae3135" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" kindref="member">Mesh::Render</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>offset,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>count)</highlight></codeline>
-<codeline lineno="89"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnableVertexAttribArray(0);</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnableVertexAttribArray(1);</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnableVertexAttribArray(2);</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" kindref="member">textureID</ref><sp/>&gt;<sp/>0)</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnableVertexAttribArray(3);</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindBuffer(GL_ARRAY_BUFFER,<sp/><ref refid="classMesh_1a1e99394b36ad335804acd2461a736cfb" kindref="member">vertexBuffer</ref>);</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertexAttribPointer(0,<sp/>3,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structVertex" kindref="compound">Vertex</ref>),<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)0);</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertexAttribPointer(1,<sp/>3,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structVertex" kindref="compound">Vertex</ref>),<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structPosition" kindref="compound">Position</ref>));</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertexAttribPointer(2,<sp/>3,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structVertex" kindref="compound">Vertex</ref>),<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structPosition" kindref="compound">Position</ref>)+</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structColor" kindref="compound">Color</ref>)));</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Add<sp/>these<sp/>codes<sp/>to<sp/>the<sp/>appropriate<sp/>lines<sp/>after<sp/>bind<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" kindref="member">textureID</ref><sp/>&gt;<sp/>0)</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertexAttribPointer(3,<sp/>2,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structVertex" kindref="compound">Vertex</ref>),<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structPosition" kindref="compound">Position</ref>)+</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structColor" kindref="compound">Color</ref>)+</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structVector3" kindref="compound">Vector3</ref>)));</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,<sp/><ref refid="classMesh_1ad5efa4d45e469674dfa3765e479e4a73" kindref="member">indexBuffer</ref>);</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classMesh_1ae12937ea9bdacb3b7b786f60fe42448e" kindref="member">mode</ref><sp/>==<sp/><ref refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a2eacb69a1ffbcde68e12fb36f8c88639" kindref="member">DRAW_LINES</ref>)</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDrawElements(GL_LINES,<sp/>count,<sp/>GL_UNSIGNED_INT,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)(offset<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(GLuint)));</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classMesh_1ae12937ea9bdacb3b7b786f60fe42448e" kindref="member">mode</ref><sp/>==<sp/><ref refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a76fb83917a3507580897f6e86656927d" kindref="member">DRAW_TRIANGLE_STRIP</ref>)</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDrawElements(GL_TRIANGLE_STRIP,<sp/>count,<sp/>GL_UNSIGNED_INT,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)(offset<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(GLuint)));</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDrawElements(GL_TRIANGLES,<sp/>count,<sp/>GL_UNSIGNED_INT,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)(offset<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(GLuint)));</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDisableVertexAttribArray(0);</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDisableVertexAttribArray(1);</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDisableVertexAttribArray(2);</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Add<sp/>these<sp/>codes<sp/>before<sp/>end<sp/>of<sp/>method</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" kindref="member">textureID</ref><sp/>&gt;<sp/>0)</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDisableVertexAttribArray(3);</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Vertex_8h" kindref="compound">Vertex.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Mesh_8h" kindref="compound">Mesh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;GL\glew.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classMesh_1a8618160123ac2c27985d7ae34ad58cae" refkind="member"><highlight class="normal"><ref refid="classMesh_1a8618160123ac2c27985d7ae34ad58cae" kindref="member">Mesh::Mesh</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;meshName)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>name(meshName)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,<sp/>mode(DRAW_TRIANGLES)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGenBuffers(1,<sp/>&amp;<ref refid="classMesh_1a1e99394b36ad335804acd2461a736cfb" kindref="member">vertexBuffer</ref>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//glGenBuffers(1,<sp/>&amp;colorBuffer);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGenBuffers(1,<sp/>&amp;<ref refid="classMesh_1ad5efa4d45e469674dfa3765e479e4a73" kindref="member">indexBuffer</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" kindref="member">textureID</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classMesh_1a5efe4da1a4c0971cfb037bd70304c303" refkind="member"><highlight class="normal"><ref refid="classMesh_1a5efe4da1a4c0971cfb037bd70304c303" kindref="member">Mesh::~Mesh</ref>()</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Cleanup<sp/>VBO<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDeleteBuffers(1,<sp/>&amp;<ref refid="classMesh_1a1e99394b36ad335804acd2461a736cfb" kindref="member">vertexBuffer</ref>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//glDeleteBuffers(1,<sp/>&amp;colorBuffer);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDeleteBuffers(1,<sp/>&amp;<ref refid="classMesh_1ad5efa4d45e469674dfa3765e479e4a73" kindref="member">indexBuffer</ref>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" kindref="member">textureID</ref><sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDeleteTextures(1,<sp/>&amp;<ref refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" kindref="member">textureID</ref>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="56"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" kindref="member">Mesh::Render</ref>()</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnableVertexAttribArray(0);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnableVertexAttribArray(1);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnableVertexAttribArray(2);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" kindref="member">textureID</ref><sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnableVertexAttribArray(3);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindBuffer(GL_ARRAY_BUFFER,<sp/><ref refid="classMesh_1a1e99394b36ad335804acd2461a736cfb" kindref="member">vertexBuffer</ref>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertexAttribPointer(0,<sp/>3,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structVertex" kindref="compound">Vertex</ref>),<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)0);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertexAttribPointer(1,<sp/>3,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structVertex" kindref="compound">Vertex</ref>),<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structPosition" kindref="compound">Position</ref>));</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertexAttribPointer(2,<sp/>3,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structVertex" kindref="compound">Vertex</ref>),<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structPosition" kindref="compound">Position</ref>)<sp/>+<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structColor" kindref="compound">Color</ref>)));</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Add<sp/>these<sp/>codes<sp/>to<sp/>the<sp/>appropriate<sp/>lines<sp/>after<sp/>bind<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" kindref="member">textureID</ref><sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertexAttribPointer(3,<sp/>2,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structVertex" kindref="compound">Vertex</ref>),<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structPosition" kindref="compound">Position</ref>)+</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structColor" kindref="compound">Color</ref>)+</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structVector3" kindref="compound">Vector3</ref>)));</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,<sp/><ref refid="classMesh_1ad5efa4d45e469674dfa3765e479e4a73" kindref="member">indexBuffer</ref>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classMesh_1ae12937ea9bdacb3b7b786f60fe42448e" kindref="member">mode</ref><sp/>==<sp/><ref refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a76fb83917a3507580897f6e86656927d" kindref="member">DRAW_TRIANGLE_STRIP</ref>)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDrawElements(GL_TRIANGLE_STRIP,<sp/><ref refid="classMesh_1ac6d6f70d161b9dd66c5ca79a187d86df" kindref="member">indexSize</ref>,<sp/>GL_UNSIGNED_INT,<sp/>0);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classMesh_1ae12937ea9bdacb3b7b786f60fe42448e" kindref="member">mode</ref><sp/>==<sp/><ref refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a2eacb69a1ffbcde68e12fb36f8c88639" kindref="member">DRAW_LINES</ref>)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDrawElements(GL_LINES,<sp/><ref refid="classMesh_1ac6d6f70d161b9dd66c5ca79a187d86df" kindref="member">indexSize</ref>,<sp/>GL_UNSIGNED_INT,<sp/>0);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDrawElements(GL_TRIANGLES,<sp/><ref refid="classMesh_1ac6d6f70d161b9dd66c5ca79a187d86df" kindref="member">indexSize</ref>,<sp/>GL_UNSIGNED_INT,<sp/>0);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDisableVertexAttribArray(0);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDisableVertexAttribArray(1);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDisableVertexAttribArray(2);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Add<sp/>these<sp/>codes<sp/>before<sp/>end<sp/>of<sp/>method</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" kindref="member">textureID</ref><sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDisableVertexAttribArray(3);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="classMesh_1a13afbd2fcdaf0ae700599eb643ae3135" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" kindref="member">Mesh::Render</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>offset,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>count)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnableVertexAttribArray(0);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnableVertexAttribArray(1);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnableVertexAttribArray(2);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" kindref="member">textureID</ref><sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnableVertexAttribArray(3);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindBuffer(GL_ARRAY_BUFFER,<sp/><ref refid="classMesh_1a1e99394b36ad335804acd2461a736cfb" kindref="member">vertexBuffer</ref>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertexAttribPointer(0,<sp/>3,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structVertex" kindref="compound">Vertex</ref>),<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)0);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertexAttribPointer(1,<sp/>3,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structVertex" kindref="compound">Vertex</ref>),<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structPosition" kindref="compound">Position</ref>));</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertexAttribPointer(2,<sp/>3,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structVertex" kindref="compound">Vertex</ref>),<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structPosition" kindref="compound">Position</ref>)+</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structColor" kindref="compound">Color</ref>)));</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Add<sp/>these<sp/>codes<sp/>to<sp/>the<sp/>appropriate<sp/>lines<sp/>after<sp/>bind<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" kindref="member">textureID</ref><sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertexAttribPointer(3,<sp/>2,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structVertex" kindref="compound">Vertex</ref>),<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structPosition" kindref="compound">Position</ref>)+</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structColor" kindref="compound">Color</ref>)+</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structVector3" kindref="compound">Vector3</ref>)));</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,<sp/><ref refid="classMesh_1ad5efa4d45e469674dfa3765e479e4a73" kindref="member">indexBuffer</ref>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classMesh_1ae12937ea9bdacb3b7b786f60fe42448e" kindref="member">mode</ref><sp/>==<sp/><ref refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a2eacb69a1ffbcde68e12fb36f8c88639" kindref="member">DRAW_LINES</ref>)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDrawElements(GL_LINES,<sp/>count,<sp/>GL_UNSIGNED_INT,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)(offset<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(GLuint)));</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classMesh_1ae12937ea9bdacb3b7b786f60fe42448e" kindref="member">mode</ref><sp/>==<sp/><ref refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a76fb83917a3507580897f6e86656927d" kindref="member">DRAW_TRIANGLE_STRIP</ref>)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDrawElements(GL_TRIANGLE_STRIP,<sp/>count,<sp/>GL_UNSIGNED_INT,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)(offset<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(GLuint)));</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDrawElements(GL_TRIANGLES,<sp/>count,<sp/>GL_UNSIGNED_INT,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)(offset<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(GLuint)));</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDisableVertexAttribArray(0);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDisableVertexAttribArray(1);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDisableVertexAttribArray(2);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Add<sp/>these<sp/>codes<sp/>before<sp/>end<sp/>of<sp/>method</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" kindref="member">textureID</ref><sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glDisableVertexAttribArray(3);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="ComGLab/Source/Mesh.cpp"/>
   </compounddef>

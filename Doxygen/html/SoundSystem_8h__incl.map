@@ -1,5 +1,4 @@
 <map id="ComGLab/Source/SoundSystem.h" name="ComGLab/Source/SoundSystem.h">
-<area shape="rect" id="node2" href="$Application_8h.html" title="Application.h" alt="" coords="51,80,149,107"/>
-<area shape="rect" id="node3" href="$timer_8h.html" title="timer.h" alt="" coords="15,155,78,181"/>
-<area shape="rect" id="node5" href="$SharedData_8h.html" title="SharedData.h" alt="" coords="103,155,204,181"/>
+<area shape="rect" id="node2" href="$Application_8h.html" title="Header file that contains the class to run the application. " alt="" coords="19,80,116,107"/>
+<area shape="rect" id="node3" href="$timer_8h.html" title="timer.h" alt="" coords="36,155,99,181"/>
 </map>

@@ -16,21 +16,20 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Common/Source/Vector3.h" line="27" column="1" bodyfile="Common/Source/Vector3.h" bodystart="27" bodyend="-1"/>
-        <referencedby refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" compoundref="Raycast_8cpp" startline="18" endline="21">RayCast::CalcBounds</referencedby>
-        <referencedby refid="classRobot_1a4e7360385dab7b3974d6ca7c6464b747" compoundref="Robot_8cpp" startline="206" endline="213">Robot::CalcBounds</referencedby>
-        <referencedby refid="classCamera3_1a72d040ce3726a7d6439efa15734105a5" compoundref="Camera3_8cpp" startline="217" endline="240">Camera3::cameraMovement</referencedby>
-        <referencedby refid="classCamera3_1a99440cc4eb40bfc3bbad15bfe08c8a55" compoundref="Camera3_8cpp" startline="257" endline="409">Camera3::cameraMovement2</referencedby>
+        <referencedby refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" compoundref="Raycast_8cpp" startline="59" endline="62">RayCast::CalcBounds</referencedby>
+        <referencedby refid="classRobot_1a4e7360385dab7b3974d6ca7c6464b747" compoundref="Robot_8cpp" startline="355" endline="362">Robot::CalcBounds</referencedby>
+        <referencedby refid="classCamera3_1a99440cc4eb40bfc3bbad15bfe08c8a55" compoundref="Camera3_8cpp" startline="271" endline="423">Camera3::cameraMovement2</referencedby>
         <referencedby refid="structVector3_1aa1cdc5357009b47fe585ddd61e263aad" compoundref="Vector3_8cpp" startline="319" endline="322">Cross</referencedby>
         <referencedby refid="structVector3_1a71b1271deb064c65f9dc7dba638c5b57" compoundref="Vector3_8cpp" startline="303" endline="306">Dot</referencedby>
-        <referencedby refid="classRobot_1a984fba314296d7a4016afb093f775c0d" compoundref="Robot_8cpp" startline="41" endline="71">Robot::FindNewTarget</referencedby>
-        <referencedby refid="classSP2__Scene_1a3cd10ebc989e3f3e2f84f59d74b76ef2" compoundref="SP2__Scene_8cpp" startline="828" endline="953">SP2_Scene::GameState</referencedby>
-        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="672" endline="757">SP2_Scene::initLights</referencedby>
+        <referencedby refid="classRobot_1a984fba314296d7a4016afb093f775c0d" compoundref="Robot_8cpp" startline="99" endline="129">Robot::FindNewTarget</referencedby>
+        <referencedby refid="classSP2__Scene_1a3cd10ebc989e3f3e2f84f59d74b76ef2" compoundref="SP2__Scene_8cpp" startline="960" endline="1095">SP2_Scene::GameState</referencedby>
+        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="838" endline="923">SP2_Scene::initLights</referencedby>
         <referencedby refid="structVector3_1affeb6d657b146584b5cb0b42a0d6eaeb" compoundref="Vector3_8cpp" startline="91" endline="94">IsZero</referencedby>
         <referencedby refid="structVector3_1a200024a8442329de9a625ed58ffe7075" compoundref="Vector3_8cpp" startline="273" endline="276">Length</referencedby>
         <referencedby refid="structVector3_1a87c90f81b4044393fe18f7a1e90f26df" compoundref="Vector3_8cpp" startline="287" endline="290">LengthSquared</referencedby>
-        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="7" endline="115">LoadOBJ</referencedby>
-        <referencedby refid="classRayCast_1adbf2ca40b63d9d3507c160579afa575a" compoundref="Raycast_8cpp" startline="8" endline="16">RayCast::Move</referencedby>
-        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="23" endline="39">Robot::Move</referencedby>
+        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="17" endline="125">LoadOBJ</referencedby>
+        <referencedby refid="classRayCast_1adbf2ca40b63d9d3507c160579afa575a" compoundref="Raycast_8cpp" startline="38" endline="46">RayCast::Move</referencedby>
+        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="66" endline="82">Robot::Move</referencedby>
         <referencedby refid="structVector3_1aaef4f25a38878a640ab4a48002a7eff8" compoundref="Vector3_8cpp" startline="358" endline="367">Normalize</referencedby>
         <referencedby refid="structVector3_1a2da0f00c5529bced69763320dac9c414" compoundref="Vector3_8cpp" startline="337" endline="343">Normalized</referencedby>
         <referencedby refid="structVector3_1a27ba9abc0d1b5cd47a0365a4ebcfeb7c" compoundref="Vector3_8cpp" startline="241" endline="244">operator!=</referencedby>
@@ -44,22 +43,20 @@
         <referencedby refid="Vector3_8cpp_1a2bb22d81325ba847b6c54c8ad769b5d1" compoundref="Vector3_8cpp" startline="369" endline="373">operator&lt;&lt;</referencedby>
         <referencedby refid="structVector3_1afbfdb69cef54e84d72d05c3c141e315f" compoundref="Vector3_8cpp" startline="256" endline="262">operator=</referencedby>
         <referencedby refid="structVector3_1ae084cfb19c537457f52bfb3cb3a7054d" compoundref="Vector3_8cpp" startline="225" endline="228">operator==</referencedby>
-        <referencedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" compoundref="Particle_8cpp" startline="358" endline="422">Particle::Render</referencedby>
-        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2248" endline="2508">SP2_Scene::Render</referencedby>
-        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="608" endline="627">SP2_Scene::RenderMeshOnScreen</referencedby>
-        <referencedby refid="classParticle_1abad5adaed21693c0bed86aca19f982df" compoundref="Particle_8cpp" startline="286" endline="340">Particle::RenderSkybox</referencedby>
-        <referencedby refid="classSP2__Scene_1a2de18ab05abb2a3ea98dbcadb4f518a7" compoundref="SP2__Scene_8cpp" startline="1793" endline="1847">SP2_Scene::RenderSkybox</referencedby>
-        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1004" endline="1135">SP2_Scene::RenderSpaceMap</referencedby>
-        <referencedby refid="classSP2__Scene_1aeb5b6dadeb1ee8d943f2e52e69d6d9e0" compoundref="SP2__Scene_8cpp" startline="1980" endline="2067">SP2_Scene::RenderUI</referencedby>
-        <referencedby refid="classSP2__Scene_1a6448011a887d25ea57d981ca7753810b" compoundref="SP2__Scene_8cpp" startline="1849" endline="1956">SP2_Scene::RenderWepScreen</referencedby>
-        <referencedby refid="classCamera3_1a81897b566fc3a2142c40276eb7c6a57b" compoundref="Camera3_8cpp" startline="158" endline="179">Camera3::rotateCamera</referencedby>
+        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2424" endline="2688">SP2_Scene::Render</referencedby>
+        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="760" endline="779">SP2_Scene::RenderMeshOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a1251677b641cce30ba451e9e02418cf2" compoundref="SP2__Scene_8cpp" startline="1104" endline="1213">SP2_Scene::RenderPowerUp</referencedby>
+        <referencedby refid="classSP2__Scene_1a2de18ab05abb2a3ea98dbcadb4f518a7" compoundref="SP2__Scene_8cpp" startline="2098" endline="2152">SP2_Scene::RenderSkybox</referencedby>
+        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1279" endline="1410">SP2_Scene::RenderSpaceMap</referencedby>
+        <referencedby refid="classSP2__Scene_1aeb5b6dadeb1ee8d943f2e52e69d6d9e0" compoundref="SP2__Scene_8cpp" startline="2295" endline="2382">SP2_Scene::RenderUI</referencedby>
+        <referencedby refid="classSP2__Scene_1a6448011a887d25ea57d981ca7753810b" compoundref="SP2__Scene_8cpp" startline="2161" endline="2268">SP2_Scene::RenderWepScreen</referencedby>
+        <referencedby refid="classCamera3_1a81897b566fc3a2142c40276eb7c6a57b" compoundref="Camera3_8cpp" startline="197" endline="218">Camera3::rotateCamera</referencedby>
         <referencedby refid="structVector3_1a9c25d604bd52b162cfcb56302ef032bb" compoundref="Vector3_8cpp" startline="67" endline="72">Set</referencedby>
         <referencedby refid="classMtx44_1a7c3d2d30d9ed5bfca2ba97d0e570930f" compoundref="Mtx44_8cpp" startline="433" endline="450">Mtx44::SetToLookAt</referencedby>
         <referencedby refid="structVector3_1ac6c9b941ccefd7744eace77ceab16b56" compoundref="Vector3_8cpp" startline="79" endline="82">SetZero</referencedby>
-        <referencedby refid="classCamera_1acc1741feb6d9da849ea4b6c12e0711e6" compoundref="Camera_8cpp" startline="28" endline="47">Camera::Update</referencedby>
-        <referencedby refid="classCamera2_1a1a54eeb46692c8806b7abea38a6301f3" compoundref="Camera2_8cpp" startline="24" endline="85">Camera2::Update</referencedby>
-        <referencedby refid="classCamera3_1acc5d4103826cda6d20b80a0d35eacdbe" compoundref="Camera3_8cpp" startline="70" endline="149">Camera3::Update</referencedby>
-        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+        <referencedby refid="classCamera_1acc1741feb6d9da849ea4b6c12e0711e6" compoundref="Camera_8cpp" startline="86" endline="105">Camera::Update</referencedby>
+        <referencedby refid="classCamera3_1acc5d4103826cda6d20b80a0d35eacdbe" compoundref="Camera3_8cpp" startline="119" endline="152">Camera3::Update</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1523" endline="2089">SP2_Scene::Update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -73,23 +70,22 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Common/Source/Vector3.h" line="27" column="1" bodyfile="Common/Source/Vector3.h" bodystart="27" bodyend="-1"/>
-        <referencedby refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" compoundref="Raycast_8cpp" startline="18" endline="21">RayCast::CalcBounds</referencedby>
-        <referencedby refid="classRobot_1a4e7360385dab7b3974d6ca7c6464b747" compoundref="Robot_8cpp" startline="206" endline="213">Robot::CalcBounds</referencedby>
-        <referencedby refid="classCamera3_1a99440cc4eb40bfc3bbad15bfe08c8a55" compoundref="Camera3_8cpp" startline="257" endline="409">Camera3::cameraMovement2</referencedby>
+        <referencedby refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" compoundref="Raycast_8cpp" startline="59" endline="62">RayCast::CalcBounds</referencedby>
+        <referencedby refid="classRobot_1a4e7360385dab7b3974d6ca7c6464b747" compoundref="Robot_8cpp" startline="355" endline="362">Robot::CalcBounds</referencedby>
+        <referencedby refid="classCamera3_1a99440cc4eb40bfc3bbad15bfe08c8a55" compoundref="Camera3_8cpp" startline="271" endline="423">Camera3::cameraMovement2</referencedby>
         <referencedby refid="structVector3_1aa1cdc5357009b47fe585ddd61e263aad" compoundref="Vector3_8cpp" startline="319" endline="322">Cross</referencedby>
         <referencedby refid="structVector3_1a71b1271deb064c65f9dc7dba638c5b57" compoundref="Vector3_8cpp" startline="303" endline="306">Dot</referencedby>
-        <referencedby refid="classRobot_1a984fba314296d7a4016afb093f775c0d" compoundref="Robot_8cpp" startline="41" endline="71">Robot::FindNewTarget</referencedby>
-        <referencedby refid="classSP2__Scene_1a3cd10ebc989e3f3e2f84f59d74b76ef2" compoundref="SP2__Scene_8cpp" startline="828" endline="953">SP2_Scene::GameState</referencedby>
-        <referencedby refid="classCamera2_1af3d4e37be651bac9c0a94ac0af021c35" compoundref="Camera2_8cpp" startline="13" endline="22">Camera2::Init</referencedby>
-        <referencedby refid="classCamera3_1a1029fbe574de09b19ff8908748031289" compoundref="Camera3_8cpp" startline="15" endline="68">Camera3::Init</referencedby>
-        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="672" endline="757">SP2_Scene::initLights</referencedby>
+        <referencedby refid="classRobot_1a984fba314296d7a4016afb093f775c0d" compoundref="Robot_8cpp" startline="99" endline="129">Robot::FindNewTarget</referencedby>
+        <referencedby refid="classSP2__Scene_1a3cd10ebc989e3f3e2f84f59d74b76ef2" compoundref="SP2__Scene_8cpp" startline="960" endline="1095">SP2_Scene::GameState</referencedby>
+        <referencedby refid="classCamera3_1a1029fbe574de09b19ff8908748031289" compoundref="Camera3_8cpp" startline="72" endline="104">Camera3::Init</referencedby>
+        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="838" endline="923">SP2_Scene::initLights</referencedby>
         <referencedby refid="structVector3_1affeb6d657b146584b5cb0b42a0d6eaeb" compoundref="Vector3_8cpp" startline="91" endline="94">IsZero</referencedby>
-        <referencedby refid="classCamera3_1ac5d3985b326b8334208c9a12741c5dc3" compoundref="Camera3_8cpp" startline="466" endline="514">Camera3::jump</referencedby>
+        <referencedby refid="classCamera3_1ac5d3985b326b8334208c9a12741c5dc3" compoundref="Camera3_8cpp" startline="524" endline="572">Camera3::jump</referencedby>
         <referencedby refid="structVector3_1a200024a8442329de9a625ed58ffe7075" compoundref="Vector3_8cpp" startline="273" endline="276">Length</referencedby>
         <referencedby refid="structVector3_1a87c90f81b4044393fe18f7a1e90f26df" compoundref="Vector3_8cpp" startline="287" endline="290">LengthSquared</referencedby>
-        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="7" endline="115">LoadOBJ</referencedby>
-        <referencedby refid="classRayCast_1adbf2ca40b63d9d3507c160579afa575a" compoundref="Raycast_8cpp" startline="8" endline="16">RayCast::Move</referencedby>
-        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="23" endline="39">Robot::Move</referencedby>
+        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="17" endline="125">LoadOBJ</referencedby>
+        <referencedby refid="classRayCast_1adbf2ca40b63d9d3507c160579afa575a" compoundref="Raycast_8cpp" startline="38" endline="46">RayCast::Move</referencedby>
+        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="66" endline="82">Robot::Move</referencedby>
         <referencedby refid="structVector3_1aaef4f25a38878a640ab4a48002a7eff8" compoundref="Vector3_8cpp" startline="358" endline="367">Normalize</referencedby>
         <referencedby refid="structVector3_1a2da0f00c5529bced69763320dac9c414" compoundref="Vector3_8cpp" startline="337" endline="343">Normalized</referencedby>
         <referencedby refid="structVector3_1a27ba9abc0d1b5cd47a0365a4ebcfeb7c" compoundref="Vector3_8cpp" startline="241" endline="244">operator!=</referencedby>
@@ -103,21 +99,20 @@
         <referencedby refid="Vector3_8cpp_1a2bb22d81325ba847b6c54c8ad769b5d1" compoundref="Vector3_8cpp" startline="369" endline="373">operator&lt;&lt;</referencedby>
         <referencedby refid="structVector3_1afbfdb69cef54e84d72d05c3c141e315f" compoundref="Vector3_8cpp" startline="256" endline="262">operator=</referencedby>
         <referencedby refid="structVector3_1ae084cfb19c537457f52bfb3cb3a7054d" compoundref="Vector3_8cpp" startline="225" endline="228">operator==</referencedby>
-        <referencedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" compoundref="Particle_8cpp" startline="358" endline="422">Particle::Render</referencedby>
-        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2248" endline="2508">SP2_Scene::Render</referencedby>
-        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="608" endline="627">SP2_Scene::RenderMeshOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a2de18ab05abb2a3ea98dbcadb4f518a7" compoundref="SP2__Scene_8cpp" startline="1793" endline="1847">SP2_Scene::RenderSkybox</referencedby>
-        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1004" endline="1135">SP2_Scene::RenderSpaceMap</referencedby>
-        <referencedby refid="classSP2__Scene_1aeb5b6dadeb1ee8d943f2e52e69d6d9e0" compoundref="SP2__Scene_8cpp" startline="1980" endline="2067">SP2_Scene::RenderUI</referencedby>
-        <referencedby refid="classSP2__Scene_1a6448011a887d25ea57d981ca7753810b" compoundref="SP2__Scene_8cpp" startline="1849" endline="1956">SP2_Scene::RenderWepScreen</referencedby>
-        <referencedby refid="classCamera3_1a81897b566fc3a2142c40276eb7c6a57b" compoundref="Camera3_8cpp" startline="158" endline="179">Camera3::rotateCamera</referencedby>
+        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2424" endline="2688">SP2_Scene::Render</referencedby>
+        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="760" endline="779">SP2_Scene::RenderMeshOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a1251677b641cce30ba451e9e02418cf2" compoundref="SP2__Scene_8cpp" startline="1104" endline="1213">SP2_Scene::RenderPowerUp</referencedby>
+        <referencedby refid="classSP2__Scene_1a2de18ab05abb2a3ea98dbcadb4f518a7" compoundref="SP2__Scene_8cpp" startline="2098" endline="2152">SP2_Scene::RenderSkybox</referencedby>
+        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1279" endline="1410">SP2_Scene::RenderSpaceMap</referencedby>
+        <referencedby refid="classSP2__Scene_1aeb5b6dadeb1ee8d943f2e52e69d6d9e0" compoundref="SP2__Scene_8cpp" startline="2295" endline="2382">SP2_Scene::RenderUI</referencedby>
+        <referencedby refid="classSP2__Scene_1a6448011a887d25ea57d981ca7753810b" compoundref="SP2__Scene_8cpp" startline="2161" endline="2268">SP2_Scene::RenderWepScreen</referencedby>
+        <referencedby refid="classCamera3_1a81897b566fc3a2142c40276eb7c6a57b" compoundref="Camera3_8cpp" startline="197" endline="218">Camera3::rotateCamera</referencedby>
         <referencedby refid="structVector3_1a9c25d604bd52b162cfcb56302ef032bb" compoundref="Vector3_8cpp" startline="67" endline="72">Set</referencedby>
         <referencedby refid="classMtx44_1a7c3d2d30d9ed5bfca2ba97d0e570930f" compoundref="Mtx44_8cpp" startline="433" endline="450">Mtx44::SetToLookAt</referencedby>
         <referencedby refid="structVector3_1ac6c9b941ccefd7744eace77ceab16b56" compoundref="Vector3_8cpp" startline="79" endline="82">SetZero</referencedby>
-        <referencedby refid="classCamera_1acc1741feb6d9da849ea4b6c12e0711e6" compoundref="Camera_8cpp" startline="28" endline="47">Camera::Update</referencedby>
-        <referencedby refid="classCamera2_1a1a54eeb46692c8806b7abea38a6301f3" compoundref="Camera2_8cpp" startline="24" endline="85">Camera2::Update</referencedby>
-        <referencedby refid="classCamera3_1acc5d4103826cda6d20b80a0d35eacdbe" compoundref="Camera3_8cpp" startline="70" endline="149">Camera3::Update</referencedby>
-        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+        <referencedby refid="classCamera_1acc1741feb6d9da849ea4b6c12e0711e6" compoundref="Camera_8cpp" startline="86" endline="105">Camera::Update</referencedby>
+        <referencedby refid="classCamera3_1acc5d4103826cda6d20b80a0d35eacdbe" compoundref="Camera3_8cpp" startline="119" endline="152">Camera3::Update</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1523" endline="2089">SP2_Scene::Update</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -131,21 +126,20 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Common/Source/Vector3.h" line="27" column="1" bodyfile="Common/Source/Vector3.h" bodystart="27" bodyend="-1"/>
-        <referencedby refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" compoundref="Raycast_8cpp" startline="18" endline="21">RayCast::CalcBounds</referencedby>
-        <referencedby refid="classRobot_1a4e7360385dab7b3974d6ca7c6464b747" compoundref="Robot_8cpp" startline="206" endline="213">Robot::CalcBounds</referencedby>
-        <referencedby refid="classCamera3_1a72d040ce3726a7d6439efa15734105a5" compoundref="Camera3_8cpp" startline="217" endline="240">Camera3::cameraMovement</referencedby>
-        <referencedby refid="classCamera3_1a99440cc4eb40bfc3bbad15bfe08c8a55" compoundref="Camera3_8cpp" startline="257" endline="409">Camera3::cameraMovement2</referencedby>
+        <referencedby refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" compoundref="Raycast_8cpp" startline="59" endline="62">RayCast::CalcBounds</referencedby>
+        <referencedby refid="classRobot_1a4e7360385dab7b3974d6ca7c6464b747" compoundref="Robot_8cpp" startline="355" endline="362">Robot::CalcBounds</referencedby>
+        <referencedby refid="classCamera3_1a99440cc4eb40bfc3bbad15bfe08c8a55" compoundref="Camera3_8cpp" startline="271" endline="423">Camera3::cameraMovement2</referencedby>
         <referencedby refid="structVector3_1aa1cdc5357009b47fe585ddd61e263aad" compoundref="Vector3_8cpp" startline="319" endline="322">Cross</referencedby>
         <referencedby refid="structVector3_1a71b1271deb064c65f9dc7dba638c5b57" compoundref="Vector3_8cpp" startline="303" endline="306">Dot</referencedby>
-        <referencedby refid="classRobot_1a984fba314296d7a4016afb093f775c0d" compoundref="Robot_8cpp" startline="41" endline="71">Robot::FindNewTarget</referencedby>
-        <referencedby refid="classSP2__Scene_1a3cd10ebc989e3f3e2f84f59d74b76ef2" compoundref="SP2__Scene_8cpp" startline="828" endline="953">SP2_Scene::GameState</referencedby>
-        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="672" endline="757">SP2_Scene::initLights</referencedby>
+        <referencedby refid="classRobot_1a984fba314296d7a4016afb093f775c0d" compoundref="Robot_8cpp" startline="99" endline="129">Robot::FindNewTarget</referencedby>
+        <referencedby refid="classSP2__Scene_1a3cd10ebc989e3f3e2f84f59d74b76ef2" compoundref="SP2__Scene_8cpp" startline="960" endline="1095">SP2_Scene::GameState</referencedby>
+        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="838" endline="923">SP2_Scene::initLights</referencedby>
         <referencedby refid="structVector3_1affeb6d657b146584b5cb0b42a0d6eaeb" compoundref="Vector3_8cpp" startline="91" endline="94">IsZero</referencedby>
         <referencedby refid="structVector3_1a200024a8442329de9a625ed58ffe7075" compoundref="Vector3_8cpp" startline="273" endline="276">Length</referencedby>
         <referencedby refid="structVector3_1a87c90f81b4044393fe18f7a1e90f26df" compoundref="Vector3_8cpp" startline="287" endline="290">LengthSquared</referencedby>
-        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="7" endline="115">LoadOBJ</referencedby>
-        <referencedby refid="classRayCast_1adbf2ca40b63d9d3507c160579afa575a" compoundref="Raycast_8cpp" startline="8" endline="16">RayCast::Move</referencedby>
-        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="23" endline="39">Robot::Move</referencedby>
+        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="17" endline="125">LoadOBJ</referencedby>
+        <referencedby refid="classRayCast_1adbf2ca40b63d9d3507c160579afa575a" compoundref="Raycast_8cpp" startline="38" endline="46">RayCast::Move</referencedby>
+        <referencedby refid="classRobot_1a7f2c9697cd6c68349b32a7db280cd4ed" compoundref="Robot_8cpp" startline="66" endline="82">Robot::Move</referencedby>
         <referencedby refid="structVector3_1aaef4f25a38878a640ab4a48002a7eff8" compoundref="Vector3_8cpp" startline="358" endline="367">Normalize</referencedby>
         <referencedby refid="structVector3_1a2da0f00c5529bced69763320dac9c414" compoundref="Vector3_8cpp" startline="337" endline="343">Normalized</referencedby>
         <referencedby refid="structVector3_1a27ba9abc0d1b5cd47a0365a4ebcfeb7c" compoundref="Vector3_8cpp" startline="241" endline="244">operator!=</referencedby>
@@ -159,21 +153,19 @@
         <referencedby refid="Vector3_8cpp_1a2bb22d81325ba847b6c54c8ad769b5d1" compoundref="Vector3_8cpp" startline="369" endline="373">operator&lt;&lt;</referencedby>
         <referencedby refid="structVector3_1afbfdb69cef54e84d72d05c3c141e315f" compoundref="Vector3_8cpp" startline="256" endline="262">operator=</referencedby>
         <referencedby refid="structVector3_1ae084cfb19c537457f52bfb3cb3a7054d" compoundref="Vector3_8cpp" startline="225" endline="228">operator==</referencedby>
-        <referencedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" compoundref="Particle_8cpp" startline="358" endline="422">Particle::Render</referencedby>
-        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2248" endline="2508">SP2_Scene::Render</referencedby>
-        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="608" endline="627">SP2_Scene::RenderMeshOnScreen</referencedby>
-        <referencedby refid="classParticle_1abad5adaed21693c0bed86aca19f982df" compoundref="Particle_8cpp" startline="286" endline="340">Particle::RenderSkybox</referencedby>
-        <referencedby refid="classSP2__Scene_1a2de18ab05abb2a3ea98dbcadb4f518a7" compoundref="SP2__Scene_8cpp" startline="1793" endline="1847">SP2_Scene::RenderSkybox</referencedby>
-        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1004" endline="1135">SP2_Scene::RenderSpaceMap</referencedby>
-        <referencedby refid="classSP2__Scene_1aeb5b6dadeb1ee8d943f2e52e69d6d9e0" compoundref="SP2__Scene_8cpp" startline="1980" endline="2067">SP2_Scene::RenderUI</referencedby>
-        <referencedby refid="classSP2__Scene_1a6448011a887d25ea57d981ca7753810b" compoundref="SP2__Scene_8cpp" startline="1849" endline="1956">SP2_Scene::RenderWepScreen</referencedby>
-        <referencedby refid="classCamera3_1a81897b566fc3a2142c40276eb7c6a57b" compoundref="Camera3_8cpp" startline="158" endline="179">Camera3::rotateCamera</referencedby>
+        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2424" endline="2688">SP2_Scene::Render</referencedby>
+        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="760" endline="779">SP2_Scene::RenderMeshOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a1251677b641cce30ba451e9e02418cf2" compoundref="SP2__Scene_8cpp" startline="1104" endline="1213">SP2_Scene::RenderPowerUp</referencedby>
+        <referencedby refid="classSP2__Scene_1a2de18ab05abb2a3ea98dbcadb4f518a7" compoundref="SP2__Scene_8cpp" startline="2098" endline="2152">SP2_Scene::RenderSkybox</referencedby>
+        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1279" endline="1410">SP2_Scene::RenderSpaceMap</referencedby>
+        <referencedby refid="classSP2__Scene_1aeb5b6dadeb1ee8d943f2e52e69d6d9e0" compoundref="SP2__Scene_8cpp" startline="2295" endline="2382">SP2_Scene::RenderUI</referencedby>
+        <referencedby refid="classSP2__Scene_1a6448011a887d25ea57d981ca7753810b" compoundref="SP2__Scene_8cpp" startline="2161" endline="2268">SP2_Scene::RenderWepScreen</referencedby>
+        <referencedby refid="classCamera3_1a81897b566fc3a2142c40276eb7c6a57b" compoundref="Camera3_8cpp" startline="197" endline="218">Camera3::rotateCamera</referencedby>
         <referencedby refid="structVector3_1a9c25d604bd52b162cfcb56302ef032bb" compoundref="Vector3_8cpp" startline="67" endline="72">Set</referencedby>
         <referencedby refid="classMtx44_1a7c3d2d30d9ed5bfca2ba97d0e570930f" compoundref="Mtx44_8cpp" startline="433" endline="450">Mtx44::SetToLookAt</referencedby>
         <referencedby refid="structVector3_1ac6c9b941ccefd7744eace77ceab16b56" compoundref="Vector3_8cpp" startline="79" endline="82">SetZero</referencedby>
-        <referencedby refid="classCamera2_1a1a54eeb46692c8806b7abea38a6301f3" compoundref="Camera2_8cpp" startline="24" endline="85">Camera2::Update</referencedby>
-        <referencedby refid="classCamera3_1acc5d4103826cda6d20b80a0d35eacdbe" compoundref="Camera3_8cpp" startline="70" endline="149">Camera3::Update</referencedby>
-        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+        <referencedby refid="classCamera3_1acc5d4103826cda6d20b80a0d35eacdbe" compoundref="Camera3_8cpp" startline="119" endline="152">Camera3::Update</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1523" endline="2089">SP2_Scene::Update</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -347,23 +339,22 @@
         <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
         <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
         <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
-        <referencedby refid="classMeshBuilder_1a68d491a27ed57b66b7a8161a2b230951" compoundref="MeshBuilder_8cpp" startline="267" endline="313">MeshBuilder::GenerateCircle</referencedby>
-        <referencedby refid="classMeshBuilder_1a3123aa273acbacf182adc536433c4911" compoundref="MeshBuilder_8cpp" startline="694" endline="743">MeshBuilder::GenerateCone</referencedby>
-        <referencedby refid="classMeshBuilder_1a5e777328dc946f483beb5645d8f24c4a" compoundref="MeshBuilder_8cpp" startline="138" endline="202">MeshBuilder::GenerateCube</referencedby>
-        <referencedby refid="classMeshBuilder_1a06796a82056f0a291f6cda3d8318531c" compoundref="MeshBuilder_8cpp" startline="623" endline="692">MeshBuilder::GenerateCylinder</referencedby>
-        <referencedby refid="classMeshBuilder_1a334f7cc0723906edca201cf80bc865ba" compoundref="MeshBuilder_8cpp" startline="572" endline="620">MeshBuilder::GenerateHalfTorus</referencedby>
-        <referencedby refid="classMeshBuilder_1a36320c69da431e763f864e3247c58a9b" compoundref="MeshBuilder_8cpp" startline="479" endline="522">MeshBuilder::GenerateHemisphere</referencedby>
-        <referencedby refid="classMeshBuilder_1a6220b5a8d58df2c01bc2026b00477c30" compoundref="MeshBuilder_8cpp" startline="204" endline="255">MeshBuilder::GeneratePrism</referencedby>
-        <referencedby refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="80" endline="122">MeshBuilder::GenerateQuad</referencedby>
-        <referencedby refid="classMeshBuilder_1a227ca853ca1ea18521bae1c1d46d6715" compoundref="MeshBuilder_8cpp" startline="433" endline="477">MeshBuilder::GenerateQuarterSphere</referencedby>
-        <referencedby refid="classMeshBuilder_1a53f9fa5f58c23dfce5327d27e6fa1783" compoundref="MeshBuilder_8cpp" startline="315" endline="367">MeshBuilder::GenerateRing</referencedby>
-        <referencedby refid="classMeshBuilder_1a569c4966c1422841fc79118803f5ca7e" compoundref="MeshBuilder_8cpp" startline="385" endline="431">MeshBuilder::GenerateSphere</referencedby>
-        <referencedby refid="classMeshBuilder_1aac7c87881dbc08f8d41f2068e0f40c76" compoundref="MeshBuilder_8cpp" startline="839" endline="887">MeshBuilder::GenerateText</referencedby>
-        <referencedby refid="classMeshBuilder_1ae78de92278560e1d9d33bad688f3ac7f" compoundref="MeshBuilder_8cpp" startline="524" endline="570">MeshBuilder::GenerateTorus</referencedby>
-        <referencedby refid="classMeshBuilder_1a579c3377542eaf2cfb64ae7bbb309630" compoundref="MeshBuilder_8cpp" startline="745" endline="809">MeshBuilder::GenerateTrapezium</referencedby>
-        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">Particle::initLights</referencedby>
-        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="672" endline="757">SP2_Scene::initLights</referencedby>
-        <referencedby refid="classCamera_1aa46f58b32270a571ab56dde4caca46db" compoundref="Camera_8cpp" startline="21" endline="26">Camera::Reset</referencedby>
+        <referencedby refid="classMeshBuilder_1a68d491a27ed57b66b7a8161a2b230951" compoundref="MeshBuilder_8cpp" startline="277" endline="323">MeshBuilder::GenerateCircle</referencedby>
+        <referencedby refid="classMeshBuilder_1a3123aa273acbacf182adc536433c4911" compoundref="MeshBuilder_8cpp" startline="704" endline="753">MeshBuilder::GenerateCone</referencedby>
+        <referencedby refid="classMeshBuilder_1a5e777328dc946f483beb5645d8f24c4a" compoundref="MeshBuilder_8cpp" startline="148" endline="212">MeshBuilder::GenerateCube</referencedby>
+        <referencedby refid="classMeshBuilder_1a06796a82056f0a291f6cda3d8318531c" compoundref="MeshBuilder_8cpp" startline="633" endline="702">MeshBuilder::GenerateCylinder</referencedby>
+        <referencedby refid="classMeshBuilder_1a334f7cc0723906edca201cf80bc865ba" compoundref="MeshBuilder_8cpp" startline="582" endline="630">MeshBuilder::GenerateHalfTorus</referencedby>
+        <referencedby refid="classMeshBuilder_1a36320c69da431e763f864e3247c58a9b" compoundref="MeshBuilder_8cpp" startline="489" endline="532">MeshBuilder::GenerateHemisphere</referencedby>
+        <referencedby refid="classMeshBuilder_1a6220b5a8d58df2c01bc2026b00477c30" compoundref="MeshBuilder_8cpp" startline="214" endline="265">MeshBuilder::GeneratePrism</referencedby>
+        <referencedby refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="90" endline="132">MeshBuilder::GenerateQuad</referencedby>
+        <referencedby refid="classMeshBuilder_1a227ca853ca1ea18521bae1c1d46d6715" compoundref="MeshBuilder_8cpp" startline="443" endline="487">MeshBuilder::GenerateQuarterSphere</referencedby>
+        <referencedby refid="classMeshBuilder_1a53f9fa5f58c23dfce5327d27e6fa1783" compoundref="MeshBuilder_8cpp" startline="325" endline="377">MeshBuilder::GenerateRing</referencedby>
+        <referencedby refid="classMeshBuilder_1a569c4966c1422841fc79118803f5ca7e" compoundref="MeshBuilder_8cpp" startline="395" endline="441">MeshBuilder::GenerateSphere</referencedby>
+        <referencedby refid="classMeshBuilder_1aac7c87881dbc08f8d41f2068e0f40c76" compoundref="MeshBuilder_8cpp" startline="849" endline="897">MeshBuilder::GenerateText</referencedby>
+        <referencedby refid="classMeshBuilder_1ae78de92278560e1d9d33bad688f3ac7f" compoundref="MeshBuilder_8cpp" startline="534" endline="580">MeshBuilder::GenerateTorus</referencedby>
+        <referencedby refid="classMeshBuilder_1a579c3377542eaf2cfb64ae7bbb309630" compoundref="MeshBuilder_8cpp" startline="755" endline="819">MeshBuilder::GenerateTrapezium</referencedby>
+        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="838" endline="923">SP2_Scene::initLights</referencedby>
+        <referencedby refid="classCamera_1aa46f58b32270a571ab56dde4caca46db" compoundref="Camera_8cpp" startline="79" endline="84">Camera::Reset</referencedby>
       </memberdef>
       <memberdef kind="function" id="structVector3_1ac6c9b941ccefd7744eace77ceab16b56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -727,11 +718,10 @@
         <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
         <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
         <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
-        <referencedby refid="classRobot_1a1b94e72fd005902fa335e3f6d827190b" compoundref="Robot_8cpp" startline="215" endline="223">Robot::GetDirVec</referencedby>
-        <referencedby refid="classWeaponSystem_1a92124c3a05ebf38514c7455cc3f2fcb0" compoundref="WeaponSystem_8cpp" startline="50" endline="53">WeaponSystem::GetLength</referencedby>
+        <referencedby refid="classRobot_1a1b94e72fd005902fa335e3f6d827190b" compoundref="Robot_8cpp" startline="377" endline="385">Robot::GetDirVec</referencedby>
+        <referencedby refid="classWeaponSystem_1a92124c3a05ebf38514c7455cc3f2fcb0" compoundref="WeaponSystem_8cpp" startline="100" endline="103">WeaponSystem::GetLength</referencedby>
         <referencedby refid="structVector3_1aaef4f25a38878a640ab4a48002a7eff8" compoundref="Vector3_8cpp" startline="358" endline="367">Normalize</referencedby>
         <referencedby refid="structVector3_1a2da0f00c5529bced69763320dac9c414" compoundref="Vector3_8cpp" startline="337" endline="343">Normalized</referencedby>
-        <referencedby refid="classCamera2_1a1a54eeb46692c8806b7abea38a6301f3" compoundref="Camera2_8cpp" startline="24" endline="85">Camera2::Update</referencedby>
       </memberdef>
       <memberdef kind="function" id="structVector3_1a87c90f81b4044393fe18f7a1e90f26df" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -811,11 +801,9 @@
         <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
         <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
         <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
-        <referencedby refid="classCamera2_1af3d4e37be651bac9c0a94ac0af021c35" compoundref="Camera2_8cpp" startline="13" endline="22">Camera2::Init</referencedby>
-        <referencedby refid="classCamera3_1a1029fbe574de09b19ff8908748031289" compoundref="Camera3_8cpp" startline="15" endline="68">Camera3::Init</referencedby>
-        <referencedby refid="classCamera3_1a81897b566fc3a2142c40276eb7c6a57b" compoundref="Camera3_8cpp" startline="158" endline="179">Camera3::rotateCamera</referencedby>
+        <referencedby refid="classCamera3_1a1029fbe574de09b19ff8908748031289" compoundref="Camera3_8cpp" startline="72" endline="104">Camera3::Init</referencedby>
+        <referencedby refid="classCamera3_1a81897b566fc3a2142c40276eb7c6a57b" compoundref="Camera3_8cpp" startline="197" endline="218">Camera3::rotateCamera</referencedby>
         <referencedby refid="classMtx44_1a7c3d2d30d9ed5bfca2ba97d0e570930f" compoundref="Mtx44_8cpp" startline="433" endline="450">Mtx44::SetToLookAt</referencedby>
-        <referencedby refid="classCamera2_1a1a54eeb46692c8806b7abea38a6301f3" compoundref="Camera2_8cpp" startline="24" endline="85">Camera2::Update</referencedby>
       </memberdef>
       <memberdef kind="function" id="structVector3_1a2da0f00c5529bced69763320dac9c414" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
@@ -856,9 +844,7 @@
         <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
         <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
         <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
-        <referencedby refid="classCamera2_1af3d4e37be651bac9c0a94ac0af021c35" compoundref="Camera2_8cpp" startline="13" endline="22">Camera2::Init</referencedby>
-        <referencedby refid="classCamera3_1a1029fbe574de09b19ff8908748031289" compoundref="Camera3_8cpp" startline="15" endline="68">Camera3::Init</referencedby>
-        <referencedby refid="classCamera2_1a1a54eeb46692c8806b7abea38a6301f3" compoundref="Camera2_8cpp" startline="24" endline="85">Camera2::Update</referencedby>
+        <referencedby refid="classCamera3_1a1029fbe574de09b19ff8908748031289" compoundref="Camera3_8cpp" startline="72" endline="104">Camera3::Init</referencedby>
       </memberdef>
       <memberdef kind="function" id="structVector3_1aaef4f25a38878a640ab4a48002a7eff8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
@@ -898,12 +884,10 @@
         <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
         <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
         <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
-        <referencedby refid="classMeshBuilder_1a3123aa273acbacf182adc536433c4911" compoundref="MeshBuilder_8cpp" startline="694" endline="743">MeshBuilder::GenerateCone</referencedby>
-        <referencedby refid="classRobot_1a1b94e72fd005902fa335e3f6d827190b" compoundref="Robot_8cpp" startline="215" endline="223">Robot::GetDirVec</referencedby>
-        <referencedby refid="classCamera2_1af3d4e37be651bac9c0a94ac0af021c35" compoundref="Camera2_8cpp" startline="13" endline="22">Camera2::Init</referencedby>
-        <referencedby refid="classCamera3_1a1029fbe574de09b19ff8908748031289" compoundref="Camera3_8cpp" startline="15" endline="68">Camera3::Init</referencedby>
+        <referencedby refid="classMeshBuilder_1a3123aa273acbacf182adc536433c4911" compoundref="MeshBuilder_8cpp" startline="704" endline="753">MeshBuilder::GenerateCone</referencedby>
+        <referencedby refid="classRobot_1a1b94e72fd005902fa335e3f6d827190b" compoundref="Robot_8cpp" startline="377" endline="385">Robot::GetDirVec</referencedby>
+        <referencedby refid="classCamera3_1a1029fbe574de09b19ff8908748031289" compoundref="Camera3_8cpp" startline="72" endline="104">Camera3::Init</referencedby>
         <referencedby refid="classMtx44_1a7c3d2d30d9ed5bfca2ba97d0e570930f" compoundref="Mtx44_8cpp" startline="433" endline="450">Mtx44::SetToLookAt</referencedby>
-        <referencedby refid="classCamera2_1a1a54eeb46692c8806b7abea38a6301f3" compoundref="Camera2_8cpp" startline="24" endline="85">Camera2::Update</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -971,13 +955,13 @@
     <detaileddescription>
 <para>Class <ref refid="structVector3" kindref="compound">Vector3</ref>: </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="633">
+      <node id="567">
         <label>float</label>
       </node>
-      <node id="632">
+      <node id="566">
         <label>Vector3</label>
         <link refid="structVector3"/>
-        <childnode refid="633" relation="usage">
+        <childnode refid="567" relation="usage">
           <edgelabel>x</edgelabel>
           <edgelabel>y</edgelabel>
           <edgelabel>z</edgelabel>

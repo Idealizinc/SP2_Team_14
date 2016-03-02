@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Raycast.h" line="16" column="1" bodyfile="ComGLab/Source/Raycast.h" bodystart="16" bodyend="-1"/>
+        <location file="ComGLab/Source/Raycast.h" line="33" column="1" bodyfile="ComGLab/Source/Raycast.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classRayCast_1a05dde18068af964b819dc44cfcc16300" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Raycast.h" line="17" column="1" bodyfile="ComGLab/Source/Raycast.h" bodystart="17" bodyend="-1"/>
+        <location file="ComGLab/Source/Raycast.h" line="34" column="1" bodyfile="ComGLab/Source/Raycast.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -46,8 +46,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Raycast.h" line="20" column="1" bodyfile="ComGLab/Source/Raycast.h" bodystart="20" bodyend="-1"/>
-        <referencedby refid="classRayCast_1adbf2ca40b63d9d3507c160579afa575a" compoundref="Raycast_8cpp" startline="8" endline="16">Move</referencedby>
+        <location file="ComGLab/Source/Raycast.h" line="37" column="1" bodyfile="ComGLab/Source/Raycast.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="classRayCast_1adbf2ca40b63d9d3507c160579afa575a" compoundref="Raycast_8cpp" startline="38" endline="46">Move</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRayCast_1ad5cc0ccf28e713ea0e4bc57ef5bb2d15" prot="private" static="no" mutable="no">
         <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
@@ -60,8 +60,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Raycast.h" line="21" column="1" bodyfile="ComGLab/Source/Raycast.h" bodystart="21" bodyend="-1"/>
-        <referencedby refid="classRayCast_1adbf2ca40b63d9d3507c160579afa575a" compoundref="Raycast_8cpp" startline="8" endline="16">Move</referencedby>
+        <location file="ComGLab/Source/Raycast.h" line="38" column="1" bodyfile="ComGLab/Source/Raycast.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classRayCast_1adbf2ca40b63d9d3507c160579afa575a" compoundref="Raycast_8cpp" startline="38" endline="46">Move</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" prot="private" static="no" mutable="no">
         <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
@@ -74,10 +74,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Raycast.h" line="22" column="1" bodyfile="ComGLab/Source/Raycast.h" bodystart="22" bodyend="-1"/>
-        <referencedby refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" compoundref="Raycast_8cpp" startline="18" endline="21">CalcBounds</referencedby>
-        <referencedby refid="classRayCast_1adbf2ca40b63d9d3507c160579afa575a" compoundref="Raycast_8cpp" startline="8" endline="16">Move</referencedby>
-        <referencedby refid="classRayCast_1a9f508cc3e3f75cb0a9e4079424753bcb" compoundref="Raycast_8cpp" startline="23" endline="26">Position</referencedby>
+        <location file="ComGLab/Source/Raycast.h" line="39" column="1" bodyfile="ComGLab/Source/Raycast.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" compoundref="Raycast_8cpp" startline="59" endline="62">CalcBounds</referencedby>
+        <referencedby refid="classRayCast_1adbf2ca40b63d9d3507c160579afa575a" compoundref="Raycast_8cpp" startline="38" endline="46">Move</referencedby>
+        <referencedby refid="classRayCast_1a9f508cc3e3f75cb0a9e4079424753bcb" compoundref="Raycast_8cpp" startline="75" endline="78">Position</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRayCast_1a146263922bb07f396a06455bf86c22a8" prot="private" static="no" mutable="no">
         <type><ref refid="structBoundary" kindref="compound">Boundary</ref></type>
@@ -90,8 +90,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Raycast.h" line="23" column="1" bodyfile="ComGLab/Source/Raycast.h" bodystart="23" bodyend="-1"/>
-        <referencedby refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" compoundref="Raycast_8cpp" startline="18" endline="21">CalcBounds</referencedby>
+        <location file="ComGLab/Source/Raycast.h" line="40" column="1" bodyfile="ComGLab/Source/Raycast.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" compoundref="Raycast_8cpp" startline="59" endline="62">CalcBounds</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classRayCast_1adbef1a7ed4a0323bc24693013240febb" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -105,7 +105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Raycast.h" line="24" column="1" bodyfile="ComGLab/Source/Raycast.h" bodystart="24" bodyend="-1"/>
+        <location file="ComGLab/Source/Raycast.h" line="41" column="1" bodyfile="ComGLab/Source/Raycast.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -136,8 +136,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Raycast.h" line="10" column="1" bodyfile="ComGLab/Source/Raycast.h" bodystart="10" bodyend="10"/>
-        <references refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" compoundref="Raycast_8cpp" startline="18" endline="21">CalcBounds</references>
+        <location file="ComGLab/Source/Raycast.h" line="27" column="1" bodyfile="ComGLab/Source/Raycast.h" bodystart="27" bodyend="27"/>
+        <references refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" compoundref="Raycast_8cpp" startline="59" endline="62">CalcBounds</references>
       </memberdef>
       <memberdef kind="function" id="classRayCast_1a9f407ff03066ed3ff8c38a19c00567d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -145,12 +145,12 @@
         <argsstring>()</argsstring>
         <name>~RayCast</name>
         <briefdescription>
-        </briefdescription>
+<para>Constructor. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Raycast.h" line="11" column="1" bodyfile="ComGLab/Source/Raycast.cpp" bodystart="3" bodyend="6"/>
+        <location file="ComGLab/Source/Raycast.h" line="28" column="1" bodyfile="ComGLab/Source/Raycast.cpp" bodystart="20" bodyend="23"/>
       </memberdef>
       <memberdef kind="function" id="classRayCast_1adbf2ca40b63d9d3507c160579afa575a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
@@ -158,16 +158,25 @@
         <argsstring>()</argsstring>
         <name>Move</name>
         <briefdescription>
-        </briefdescription>
+<para>Moves the <ref refid="classRayCast" kindref="compound">RayCast</ref>. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>RayPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- determines the position of the <ref refid="classRayCast" kindref="compound">RayCast</ref> StoredDirVec - returns the value of a stored direction vector Speed - determines the speed of the <ref refid="classRayCast" kindref="compound">RayCast</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting normalized vectors </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Raycast.h" line="12" column="1" bodyfile="ComGLab/Source/Raycast.cpp" bodystart="8" bodyend="16"/>
-        <references refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" compoundref="Raycast_8cpp" startline="18" endline="21">CalcBounds</references>
-        <references refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" compoundref="Raycast_8h" startline="22">RayPos</references>
-        <references refid="classRayCast_1a28653a0f75add596b9be09ac05264f60" compoundref="Raycast_8h" startline="20">Speed</references>
-        <references refid="classRayCast_1ad5cc0ccf28e713ea0e4bc57ef5bb2d15" compoundref="Raycast_8h" startline="21">StoredDirVec</references>
+        <location file="ComGLab/Source/Raycast.h" line="29" column="1" bodyfile="ComGLab/Source/Raycast.cpp" bodystart="38" bodyend="46"/>
+        <references refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" compoundref="Raycast_8cpp" startline="59" endline="62">CalcBounds</references>
+        <references refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" compoundref="Raycast_8h" startline="39">RayPos</references>
+        <references refid="classRayCast_1a28653a0f75add596b9be09ac05264f60" compoundref="Raycast_8h" startline="37">Speed</references>
+        <references refid="classRayCast_1ad5cc0ccf28e713ea0e4bc57ef5bb2d15" compoundref="Raycast_8h" startline="38">StoredDirVec</references>
         <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
         <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
         <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
@@ -178,14 +187,23 @@
         <argsstring>()</argsstring>
         <name>Position</name>
         <briefdescription>
-        </briefdescription>
+<para>Calls the current position of each <ref refid="classRayCast" kindref="compound">RayCast</ref>. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>RayPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- determines the position of the <ref refid="classRayCast" kindref="compound">RayCast</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting normalized vectors </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Raycast.h" line="13" column="1" bodyfile="ComGLab/Source/Raycast.cpp" bodystart="23" bodyend="26"/>
-        <references refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" compoundref="Raycast_8h" startline="22">RayPos</references>
-        <referencedby refid="classWeaponSystem_1a92124c3a05ebf38514c7455cc3f2fcb0" compoundref="WeaponSystem_8cpp" startline="50" endline="53">WeaponSystem::GetLength</referencedby>
+        <location file="ComGLab/Source/Raycast.h" line="30" column="1" bodyfile="ComGLab/Source/Raycast.cpp" bodystart="75" bodyend="78"/>
+        <references refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" compoundref="Raycast_8h" startline="39">RayPos</references>
+        <referencedby refid="classWeaponSystem_1a92124c3a05ebf38514c7455cc3f2fcb0" compoundref="WeaponSystem_8cpp" startline="100" endline="103">WeaponSystem::GetLength</referencedby>
       </memberdef>
       <memberdef kind="function" id="classRayCast_1a6338e869ae22fb9e40241135b9c52941" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -193,53 +211,62 @@
         <argsstring>()</argsstring>
         <name>CalcBounds</name>
         <briefdescription>
-        </briefdescription>
+<para>Calculates the boundary of each <ref refid="classRayCast" kindref="compound">RayCast</ref>. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>RayPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- determines the position of the <ref refid="classRayCast" kindref="compound">RayCast</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting normalized vectors </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Raycast.h" line="15" column="1" bodyfile="ComGLab/Source/Raycast.cpp" bodystart="18" bodyend="21"/>
-        <references refid="classRayCast_1a146263922bb07f396a06455bf86c22a8" compoundref="Raycast_8h" startline="23">BoundingBox</references>
-        <references refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" compoundref="Raycast_8h" startline="22">RayPos</references>
-        <references refid="structBoundary_1a3cf640001c6bbc842d129f453fb3441b" compoundref="Boundary_8cpp" startline="3" endline="11">Boundary::set</references>
+        <location file="ComGLab/Source/Raycast.h" line="32" column="1" bodyfile="ComGLab/Source/Raycast.cpp" bodystart="59" bodyend="62"/>
+        <references refid="classRayCast_1a146263922bb07f396a06455bf86c22a8" compoundref="Raycast_8h" startline="40">BoundingBox</references>
+        <references refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" compoundref="Raycast_8h" startline="39">RayPos</references>
+        <references refid="structBoundary_1a3cf640001c6bbc842d129f453fb3441b" compoundref="Boundary_8cpp" startline="29" endline="37">Boundary::set</references>
         <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
         <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
         <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
-        <referencedby refid="classRayCast_1adbf2ca40b63d9d3507c160579afa575a" compoundref="Raycast_8cpp" startline="8" endline="16">Move</referencedby>
-        <referencedby refid="classRayCast_1aa1bc94d1420bf1de6074aebefcaf4692" compoundref="Raycast_8h" startline="10" endline="10">RayCast</referencedby>
+        <referencedby refid="classRayCast_1adbf2ca40b63d9d3507c160579afa575a" compoundref="Raycast_8cpp" startline="38" endline="46">Move</referencedby>
+        <referencedby refid="classRayCast_1aa1bc94d1420bf1de6074aebefcaf4692" compoundref="Raycast_8h" startline="27" endline="27">RayCast</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Defines the methods and variables for RayCasting. </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para>Class <ref refid="classRayCast" kindref="compound">RayCast</ref>: </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="557">
+      <node id="492">
         <label>float</label>
       </node>
-      <node id="556">
+      <node id="491">
         <label>RayCast</label>
         <link refid="classRayCast"/>
-        <childnode refid="557" relation="usage">
+        <childnode refid="492" relation="usage">
           <edgelabel>Speed</edgelabel>
           <edgelabel>increment</edgelabel>
           <edgelabel>Damage</edgelabel>
         </childnode>
-        <childnode refid="558" relation="usage">
+        <childnode refid="493" relation="usage">
           <edgelabel>BoundingBox</edgelabel>
         </childnode>
-        <childnode refid="561" relation="usage">
+        <childnode refid="496" relation="usage">
           <edgelabel>RayPos</edgelabel>
           <edgelabel>StoredDirVec</edgelabel>
         </childnode>
-        <childnode refid="559" relation="usage">
+        <childnode refid="494" relation="usage">
           <edgelabel>BulletUsed</edgelabel>
         </childnode>
       </node>
-      <node id="558">
+      <node id="493">
         <label>Boundary</label>
         <link refid="structBoundary"/>
-        <childnode refid="557" relation="usage">
+        <childnode refid="492" relation="usage">
           <edgelabel>zMin</edgelabel>
           <edgelabel>yMin</edgelabel>
           <edgelabel>zMax</edgelabel>
@@ -247,31 +274,31 @@
           <edgelabel>xMin</edgelabel>
           <edgelabel>xMax</edgelabel>
         </childnode>
-        <childnode refid="559" relation="usage">
+        <childnode refid="494" relation="usage">
           <edgelabel>active</edgelabel>
           <edgelabel>isWithin</edgelabel>
         </childnode>
-        <childnode refid="560" relation="usage">
+        <childnode refid="495" relation="usage">
           <edgelabel>type</edgelabel>
         </childnode>
       </node>
-      <node id="560">
+      <node id="495">
         <label>unsigned</label>
       </node>
-      <node id="559">
+      <node id="494">
         <label>bool</label>
       </node>
-      <node id="561">
+      <node id="496">
         <label>Vector3</label>
         <link refid="structVector3"/>
-        <childnode refid="557" relation="usage">
+        <childnode refid="492" relation="usage">
           <edgelabel>x</edgelabel>
           <edgelabel>y</edgelabel>
           <edgelabel>z</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="ComGLab/Source/Raycast.h" line="8" column="1" bodyfile="ComGLab/Source/Raycast.h" bodystart="7" bodyend="25"/>
+    <location file="ComGLab/Source/Raycast.h" line="25" column="1" bodyfile="ComGLab/Source/Raycast.h" bodystart="24" bodyend="42"/>
     <listofallmembers>
       <member refid="classRayCast_1a146263922bb07f396a06455bf86c22a8" prot="private" virt="non-virtual"><scope>RayCast</scope><name>BoundingBox</name></member>
       <member refid="classRayCast_1a05dde18068af964b819dc44cfcc16300" prot="public" virt="non-virtual"><scope>RayCast</scope><name>BulletUsed</name></member>

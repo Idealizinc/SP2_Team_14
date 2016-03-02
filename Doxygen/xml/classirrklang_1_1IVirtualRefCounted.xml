@@ -51,20 +51,20 @@
     <detaileddescription>
 <para>See <ref refid="classirrklang_1_1IRefCounted" kindref="compound">IRefCounted</ref> for the basics of this class. The difference to <ref refid="classirrklang_1_1IRefCounted" kindref="compound">IRefCounted</ref> is that the class has to implement reference counting for itself. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="476">
+      <node id="436">
         <label>irrklang::IVirtualRefCounted</label>
         <link refid="classirrklang_1_1IVirtualRefCounted"/>
       </node>
-      <node id="477">
+      <node id="437">
         <label>irrklang::ISound</label>
         <link refid="classirrklang_1_1ISound"/>
-        <childnode refid="476" relation="public-inheritance">
+        <childnode refid="436" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="478">
+      <node id="438">
         <label>irrklang::ISoundSource</label>
         <link refid="classirrklang_1_1ISoundSource"/>
-        <childnode refid="476" relation="public-inheritance">
+        <childnode refid="436" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Mesh.h" line="20" column="1" bodyfile="ComGLab/Source/Mesh.h" bodystart="19" bodyend="25"/>
+        <location file="ComGLab/Source/Mesh.h" line="30" column="1" bodyfile="ComGLab/Source/Mesh.h" bodystart="29" bodyend="35"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Mesh.h" line="32" column="1" bodyfile="ComGLab/Source/Mesh.h" bodystart="32" bodyend="-1"/>
+        <location file="ComGLab/Source/Mesh.h" line="42" column="1" bodyfile="ComGLab/Source/Mesh.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classMesh_1ae12937ea9bdacb3b7b786f60fe42448e" prot="public" static="no" mutable="no">
         <type><ref refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307" kindref="member">DRAW_MODE</ref></type>
@@ -69,24 +69,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Mesh.h" line="33" column="1" bodyfile="ComGLab/Source/Mesh.h" bodystart="33" bodyend="-1"/>
-        <referencedby refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="17" endline="65">MeshBuilder::GenerateAxes</referencedby>
-        <referencedby refid="classMeshBuilder_1a68d491a27ed57b66b7a8161a2b230951" compoundref="MeshBuilder_8cpp" startline="267" endline="313">MeshBuilder::GenerateCircle</referencedby>
-        <referencedby refid="classMeshBuilder_1a3123aa273acbacf182adc536433c4911" compoundref="MeshBuilder_8cpp" startline="694" endline="743">MeshBuilder::GenerateCone</referencedby>
-        <referencedby refid="classMeshBuilder_1a5e777328dc946f483beb5645d8f24c4a" compoundref="MeshBuilder_8cpp" startline="138" endline="202">MeshBuilder::GenerateCube</referencedby>
-        <referencedby refid="classMeshBuilder_1a06796a82056f0a291f6cda3d8318531c" compoundref="MeshBuilder_8cpp" startline="623" endline="692">MeshBuilder::GenerateCylinder</referencedby>
-        <referencedby refid="classMeshBuilder_1a334f7cc0723906edca201cf80bc865ba" compoundref="MeshBuilder_8cpp" startline="572" endline="620">MeshBuilder::GenerateHalfTorus</referencedby>
-        <referencedby refid="classMeshBuilder_1a36320c69da431e763f864e3247c58a9b" compoundref="MeshBuilder_8cpp" startline="479" endline="522">MeshBuilder::GenerateHemisphere</referencedby>
-        <referencedby refid="classMeshBuilder_1aba87550d7726a610c911fbb977fd3575" compoundref="MeshBuilder_8cpp" startline="811" endline="837">MeshBuilder::GenerateOBJ</referencedby>
-        <referencedby refid="classMeshBuilder_1a6220b5a8d58df2c01bc2026b00477c30" compoundref="MeshBuilder_8cpp" startline="204" endline="255">MeshBuilder::GeneratePrism</referencedby>
-        <referencedby refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="80" endline="122">MeshBuilder::GenerateQuad</referencedby>
-        <referencedby refid="classMeshBuilder_1a227ca853ca1ea18521bae1c1d46d6715" compoundref="MeshBuilder_8cpp" startline="433" endline="477">MeshBuilder::GenerateQuarterSphere</referencedby>
-        <referencedby refid="classMeshBuilder_1a53f9fa5f58c23dfce5327d27e6fa1783" compoundref="MeshBuilder_8cpp" startline="315" endline="367">MeshBuilder::GenerateRing</referencedby>
-        <referencedby refid="classMeshBuilder_1a569c4966c1422841fc79118803f5ca7e" compoundref="MeshBuilder_8cpp" startline="385" endline="431">MeshBuilder::GenerateSphere</referencedby>
-        <referencedby refid="classMeshBuilder_1aac7c87881dbc08f8d41f2068e0f40c76" compoundref="MeshBuilder_8cpp" startline="839" endline="887">MeshBuilder::GenerateText</referencedby>
-        <referencedby refid="classMeshBuilder_1ae78de92278560e1d9d33bad688f3ac7f" compoundref="MeshBuilder_8cpp" startline="524" endline="570">MeshBuilder::GenerateTorus</referencedby>
-        <referencedby refid="classMeshBuilder_1a579c3377542eaf2cfb64ae7bbb309630" compoundref="MeshBuilder_8cpp" startline="745" endline="809">MeshBuilder::GenerateTrapezium</referencedby>
-        <referencedby refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" compoundref="Mesh_8cpp" startline="47" endline="86">Render</referencedby>
+        <location file="ComGLab/Source/Mesh.h" line="43" column="1" bodyfile="ComGLab/Source/Mesh.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="27" endline="75">MeshBuilder::GenerateAxes</referencedby>
+        <referencedby refid="classMeshBuilder_1a68d491a27ed57b66b7a8161a2b230951" compoundref="MeshBuilder_8cpp" startline="277" endline="323">MeshBuilder::GenerateCircle</referencedby>
+        <referencedby refid="classMeshBuilder_1a3123aa273acbacf182adc536433c4911" compoundref="MeshBuilder_8cpp" startline="704" endline="753">MeshBuilder::GenerateCone</referencedby>
+        <referencedby refid="classMeshBuilder_1a5e777328dc946f483beb5645d8f24c4a" compoundref="MeshBuilder_8cpp" startline="148" endline="212">MeshBuilder::GenerateCube</referencedby>
+        <referencedby refid="classMeshBuilder_1a06796a82056f0a291f6cda3d8318531c" compoundref="MeshBuilder_8cpp" startline="633" endline="702">MeshBuilder::GenerateCylinder</referencedby>
+        <referencedby refid="classMeshBuilder_1a334f7cc0723906edca201cf80bc865ba" compoundref="MeshBuilder_8cpp" startline="582" endline="630">MeshBuilder::GenerateHalfTorus</referencedby>
+        <referencedby refid="classMeshBuilder_1a36320c69da431e763f864e3247c58a9b" compoundref="MeshBuilder_8cpp" startline="489" endline="532">MeshBuilder::GenerateHemisphere</referencedby>
+        <referencedby refid="classMeshBuilder_1aba87550d7726a610c911fbb977fd3575" compoundref="MeshBuilder_8cpp" startline="821" endline="847">MeshBuilder::GenerateOBJ</referencedby>
+        <referencedby refid="classMeshBuilder_1a6220b5a8d58df2c01bc2026b00477c30" compoundref="MeshBuilder_8cpp" startline="214" endline="265">MeshBuilder::GeneratePrism</referencedby>
+        <referencedby refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="90" endline="132">MeshBuilder::GenerateQuad</referencedby>
+        <referencedby refid="classMeshBuilder_1a227ca853ca1ea18521bae1c1d46d6715" compoundref="MeshBuilder_8cpp" startline="443" endline="487">MeshBuilder::GenerateQuarterSphere</referencedby>
+        <referencedby refid="classMeshBuilder_1a53f9fa5f58c23dfce5327d27e6fa1783" compoundref="MeshBuilder_8cpp" startline="325" endline="377">MeshBuilder::GenerateRing</referencedby>
+        <referencedby refid="classMeshBuilder_1a569c4966c1422841fc79118803f5ca7e" compoundref="MeshBuilder_8cpp" startline="395" endline="441">MeshBuilder::GenerateSphere</referencedby>
+        <referencedby refid="classMeshBuilder_1aac7c87881dbc08f8d41f2068e0f40c76" compoundref="MeshBuilder_8cpp" startline="849" endline="897">MeshBuilder::GenerateText</referencedby>
+        <referencedby refid="classMeshBuilder_1ae78de92278560e1d9d33bad688f3ac7f" compoundref="MeshBuilder_8cpp" startline="534" endline="580">MeshBuilder::GenerateTorus</referencedby>
+        <referencedby refid="classMeshBuilder_1a579c3377542eaf2cfb64ae7bbb309630" compoundref="MeshBuilder_8cpp" startline="755" endline="819">MeshBuilder::GenerateTrapezium</referencedby>
+        <referencedby refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" compoundref="Mesh_8cpp" startline="57" endline="96">Render</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classMesh_1a1e99394b36ad335804acd2461a736cfb" prot="public" static="no" mutable="no">
         <type>unsigned</type>
@@ -99,26 +99,26 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Mesh.h" line="34" column="1" bodyfile="ComGLab/Source/Mesh.h" bodystart="34" bodyend="-1"/>
-        <referencedby refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="17" endline="65">MeshBuilder::GenerateAxes</referencedby>
-        <referencedby refid="classMeshBuilder_1a68d491a27ed57b66b7a8161a2b230951" compoundref="MeshBuilder_8cpp" startline="267" endline="313">MeshBuilder::GenerateCircle</referencedby>
-        <referencedby refid="classMeshBuilder_1a3123aa273acbacf182adc536433c4911" compoundref="MeshBuilder_8cpp" startline="694" endline="743">MeshBuilder::GenerateCone</referencedby>
-        <referencedby refid="classMeshBuilder_1a5e777328dc946f483beb5645d8f24c4a" compoundref="MeshBuilder_8cpp" startline="138" endline="202">MeshBuilder::GenerateCube</referencedby>
-        <referencedby refid="classMeshBuilder_1a06796a82056f0a291f6cda3d8318531c" compoundref="MeshBuilder_8cpp" startline="623" endline="692">MeshBuilder::GenerateCylinder</referencedby>
-        <referencedby refid="classMeshBuilder_1a334f7cc0723906edca201cf80bc865ba" compoundref="MeshBuilder_8cpp" startline="572" endline="620">MeshBuilder::GenerateHalfTorus</referencedby>
-        <referencedby refid="classMeshBuilder_1a36320c69da431e763f864e3247c58a9b" compoundref="MeshBuilder_8cpp" startline="479" endline="522">MeshBuilder::GenerateHemisphere</referencedby>
-        <referencedby refid="classMeshBuilder_1aba87550d7726a610c911fbb977fd3575" compoundref="MeshBuilder_8cpp" startline="811" endline="837">MeshBuilder::GenerateOBJ</referencedby>
-        <referencedby refid="classMeshBuilder_1a6220b5a8d58df2c01bc2026b00477c30" compoundref="MeshBuilder_8cpp" startline="204" endline="255">MeshBuilder::GeneratePrism</referencedby>
-        <referencedby refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="80" endline="122">MeshBuilder::GenerateQuad</referencedby>
-        <referencedby refid="classMeshBuilder_1a227ca853ca1ea18521bae1c1d46d6715" compoundref="MeshBuilder_8cpp" startline="433" endline="477">MeshBuilder::GenerateQuarterSphere</referencedby>
-        <referencedby refid="classMeshBuilder_1a53f9fa5f58c23dfce5327d27e6fa1783" compoundref="MeshBuilder_8cpp" startline="315" endline="367">MeshBuilder::GenerateRing</referencedby>
-        <referencedby refid="classMeshBuilder_1a569c4966c1422841fc79118803f5ca7e" compoundref="MeshBuilder_8cpp" startline="385" endline="431">MeshBuilder::GenerateSphere</referencedby>
-        <referencedby refid="classMeshBuilder_1aac7c87881dbc08f8d41f2068e0f40c76" compoundref="MeshBuilder_8cpp" startline="839" endline="887">MeshBuilder::GenerateText</referencedby>
-        <referencedby refid="classMeshBuilder_1ae78de92278560e1d9d33bad688f3ac7f" compoundref="MeshBuilder_8cpp" startline="524" endline="570">MeshBuilder::GenerateTorus</referencedby>
-        <referencedby refid="classMeshBuilder_1a579c3377542eaf2cfb64ae7bbb309630" compoundref="MeshBuilder_8cpp" startline="745" endline="809">MeshBuilder::GenerateTrapezium</referencedby>
-        <referencedby refid="classMesh_1a8618160123ac2c27985d7ae34ad58cae" compoundref="Mesh_8cpp" startline="13" endline="21">Mesh</referencedby>
-        <referencedby refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" compoundref="Mesh_8cpp" startline="47" endline="86">Render</referencedby>
-        <referencedby refid="classMesh_1a5efe4da1a4c0971cfb037bd70304c303" compoundref="Mesh_8cpp" startline="29" endline="39">~Mesh</referencedby>
+        <location file="ComGLab/Source/Mesh.h" line="44" column="1" bodyfile="ComGLab/Source/Mesh.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="27" endline="75">MeshBuilder::GenerateAxes</referencedby>
+        <referencedby refid="classMeshBuilder_1a68d491a27ed57b66b7a8161a2b230951" compoundref="MeshBuilder_8cpp" startline="277" endline="323">MeshBuilder::GenerateCircle</referencedby>
+        <referencedby refid="classMeshBuilder_1a3123aa273acbacf182adc536433c4911" compoundref="MeshBuilder_8cpp" startline="704" endline="753">MeshBuilder::GenerateCone</referencedby>
+        <referencedby refid="classMeshBuilder_1a5e777328dc946f483beb5645d8f24c4a" compoundref="MeshBuilder_8cpp" startline="148" endline="212">MeshBuilder::GenerateCube</referencedby>
+        <referencedby refid="classMeshBuilder_1a06796a82056f0a291f6cda3d8318531c" compoundref="MeshBuilder_8cpp" startline="633" endline="702">MeshBuilder::GenerateCylinder</referencedby>
+        <referencedby refid="classMeshBuilder_1a334f7cc0723906edca201cf80bc865ba" compoundref="MeshBuilder_8cpp" startline="582" endline="630">MeshBuilder::GenerateHalfTorus</referencedby>
+        <referencedby refid="classMeshBuilder_1a36320c69da431e763f864e3247c58a9b" compoundref="MeshBuilder_8cpp" startline="489" endline="532">MeshBuilder::GenerateHemisphere</referencedby>
+        <referencedby refid="classMeshBuilder_1aba87550d7726a610c911fbb977fd3575" compoundref="MeshBuilder_8cpp" startline="821" endline="847">MeshBuilder::GenerateOBJ</referencedby>
+        <referencedby refid="classMeshBuilder_1a6220b5a8d58df2c01bc2026b00477c30" compoundref="MeshBuilder_8cpp" startline="214" endline="265">MeshBuilder::GeneratePrism</referencedby>
+        <referencedby refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="90" endline="132">MeshBuilder::GenerateQuad</referencedby>
+        <referencedby refid="classMeshBuilder_1a227ca853ca1ea18521bae1c1d46d6715" compoundref="MeshBuilder_8cpp" startline="443" endline="487">MeshBuilder::GenerateQuarterSphere</referencedby>
+        <referencedby refid="classMeshBuilder_1a53f9fa5f58c23dfce5327d27e6fa1783" compoundref="MeshBuilder_8cpp" startline="325" endline="377">MeshBuilder::GenerateRing</referencedby>
+        <referencedby refid="classMeshBuilder_1a569c4966c1422841fc79118803f5ca7e" compoundref="MeshBuilder_8cpp" startline="395" endline="441">MeshBuilder::GenerateSphere</referencedby>
+        <referencedby refid="classMeshBuilder_1aac7c87881dbc08f8d41f2068e0f40c76" compoundref="MeshBuilder_8cpp" startline="849" endline="897">MeshBuilder::GenerateText</referencedby>
+        <referencedby refid="classMeshBuilder_1ae78de92278560e1d9d33bad688f3ac7f" compoundref="MeshBuilder_8cpp" startline="534" endline="580">MeshBuilder::GenerateTorus</referencedby>
+        <referencedby refid="classMeshBuilder_1a579c3377542eaf2cfb64ae7bbb309630" compoundref="MeshBuilder_8cpp" startline="755" endline="819">MeshBuilder::GenerateTrapezium</referencedby>
+        <referencedby refid="classMesh_1a8618160123ac2c27985d7ae34ad58cae" compoundref="Mesh_8cpp" startline="23" endline="31">Mesh</referencedby>
+        <referencedby refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" compoundref="Mesh_8cpp" startline="57" endline="96">Render</referencedby>
+        <referencedby refid="classMesh_1a5efe4da1a4c0971cfb037bd70304c303" compoundref="Mesh_8cpp" startline="39" endline="49">~Mesh</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classMesh_1ad5efa4d45e469674dfa3765e479e4a73" prot="public" static="no" mutable="no">
         <type>unsigned</type>
@@ -131,26 +131,26 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Mesh.h" line="35" column="1" bodyfile="ComGLab/Source/Mesh.h" bodystart="35" bodyend="-1"/>
-        <referencedby refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="17" endline="65">MeshBuilder::GenerateAxes</referencedby>
-        <referencedby refid="classMeshBuilder_1a68d491a27ed57b66b7a8161a2b230951" compoundref="MeshBuilder_8cpp" startline="267" endline="313">MeshBuilder::GenerateCircle</referencedby>
-        <referencedby refid="classMeshBuilder_1a3123aa273acbacf182adc536433c4911" compoundref="MeshBuilder_8cpp" startline="694" endline="743">MeshBuilder::GenerateCone</referencedby>
-        <referencedby refid="classMeshBuilder_1a5e777328dc946f483beb5645d8f24c4a" compoundref="MeshBuilder_8cpp" startline="138" endline="202">MeshBuilder::GenerateCube</referencedby>
-        <referencedby refid="classMeshBuilder_1a06796a82056f0a291f6cda3d8318531c" compoundref="MeshBuilder_8cpp" startline="623" endline="692">MeshBuilder::GenerateCylinder</referencedby>
-        <referencedby refid="classMeshBuilder_1a334f7cc0723906edca201cf80bc865ba" compoundref="MeshBuilder_8cpp" startline="572" endline="620">MeshBuilder::GenerateHalfTorus</referencedby>
-        <referencedby refid="classMeshBuilder_1a36320c69da431e763f864e3247c58a9b" compoundref="MeshBuilder_8cpp" startline="479" endline="522">MeshBuilder::GenerateHemisphere</referencedby>
-        <referencedby refid="classMeshBuilder_1aba87550d7726a610c911fbb977fd3575" compoundref="MeshBuilder_8cpp" startline="811" endline="837">MeshBuilder::GenerateOBJ</referencedby>
-        <referencedby refid="classMeshBuilder_1a6220b5a8d58df2c01bc2026b00477c30" compoundref="MeshBuilder_8cpp" startline="204" endline="255">MeshBuilder::GeneratePrism</referencedby>
-        <referencedby refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="80" endline="122">MeshBuilder::GenerateQuad</referencedby>
-        <referencedby refid="classMeshBuilder_1a227ca853ca1ea18521bae1c1d46d6715" compoundref="MeshBuilder_8cpp" startline="433" endline="477">MeshBuilder::GenerateQuarterSphere</referencedby>
-        <referencedby refid="classMeshBuilder_1a53f9fa5f58c23dfce5327d27e6fa1783" compoundref="MeshBuilder_8cpp" startline="315" endline="367">MeshBuilder::GenerateRing</referencedby>
-        <referencedby refid="classMeshBuilder_1a569c4966c1422841fc79118803f5ca7e" compoundref="MeshBuilder_8cpp" startline="385" endline="431">MeshBuilder::GenerateSphere</referencedby>
-        <referencedby refid="classMeshBuilder_1aac7c87881dbc08f8d41f2068e0f40c76" compoundref="MeshBuilder_8cpp" startline="839" endline="887">MeshBuilder::GenerateText</referencedby>
-        <referencedby refid="classMeshBuilder_1ae78de92278560e1d9d33bad688f3ac7f" compoundref="MeshBuilder_8cpp" startline="524" endline="570">MeshBuilder::GenerateTorus</referencedby>
-        <referencedby refid="classMeshBuilder_1a579c3377542eaf2cfb64ae7bbb309630" compoundref="MeshBuilder_8cpp" startline="745" endline="809">MeshBuilder::GenerateTrapezium</referencedby>
-        <referencedby refid="classMesh_1a8618160123ac2c27985d7ae34ad58cae" compoundref="Mesh_8cpp" startline="13" endline="21">Mesh</referencedby>
-        <referencedby refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" compoundref="Mesh_8cpp" startline="47" endline="86">Render</referencedby>
-        <referencedby refid="classMesh_1a5efe4da1a4c0971cfb037bd70304c303" compoundref="Mesh_8cpp" startline="29" endline="39">~Mesh</referencedby>
+        <location file="ComGLab/Source/Mesh.h" line="45" column="1" bodyfile="ComGLab/Source/Mesh.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="27" endline="75">MeshBuilder::GenerateAxes</referencedby>
+        <referencedby refid="classMeshBuilder_1a68d491a27ed57b66b7a8161a2b230951" compoundref="MeshBuilder_8cpp" startline="277" endline="323">MeshBuilder::GenerateCircle</referencedby>
+        <referencedby refid="classMeshBuilder_1a3123aa273acbacf182adc536433c4911" compoundref="MeshBuilder_8cpp" startline="704" endline="753">MeshBuilder::GenerateCone</referencedby>
+        <referencedby refid="classMeshBuilder_1a5e777328dc946f483beb5645d8f24c4a" compoundref="MeshBuilder_8cpp" startline="148" endline="212">MeshBuilder::GenerateCube</referencedby>
+        <referencedby refid="classMeshBuilder_1a06796a82056f0a291f6cda3d8318531c" compoundref="MeshBuilder_8cpp" startline="633" endline="702">MeshBuilder::GenerateCylinder</referencedby>
+        <referencedby refid="classMeshBuilder_1a334f7cc0723906edca201cf80bc865ba" compoundref="MeshBuilder_8cpp" startline="582" endline="630">MeshBuilder::GenerateHalfTorus</referencedby>
+        <referencedby refid="classMeshBuilder_1a36320c69da431e763f864e3247c58a9b" compoundref="MeshBuilder_8cpp" startline="489" endline="532">MeshBuilder::GenerateHemisphere</referencedby>
+        <referencedby refid="classMeshBuilder_1aba87550d7726a610c911fbb977fd3575" compoundref="MeshBuilder_8cpp" startline="821" endline="847">MeshBuilder::GenerateOBJ</referencedby>
+        <referencedby refid="classMeshBuilder_1a6220b5a8d58df2c01bc2026b00477c30" compoundref="MeshBuilder_8cpp" startline="214" endline="265">MeshBuilder::GeneratePrism</referencedby>
+        <referencedby refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="90" endline="132">MeshBuilder::GenerateQuad</referencedby>
+        <referencedby refid="classMeshBuilder_1a227ca853ca1ea18521bae1c1d46d6715" compoundref="MeshBuilder_8cpp" startline="443" endline="487">MeshBuilder::GenerateQuarterSphere</referencedby>
+        <referencedby refid="classMeshBuilder_1a53f9fa5f58c23dfce5327d27e6fa1783" compoundref="MeshBuilder_8cpp" startline="325" endline="377">MeshBuilder::GenerateRing</referencedby>
+        <referencedby refid="classMeshBuilder_1a569c4966c1422841fc79118803f5ca7e" compoundref="MeshBuilder_8cpp" startline="395" endline="441">MeshBuilder::GenerateSphere</referencedby>
+        <referencedby refid="classMeshBuilder_1aac7c87881dbc08f8d41f2068e0f40c76" compoundref="MeshBuilder_8cpp" startline="849" endline="897">MeshBuilder::GenerateText</referencedby>
+        <referencedby refid="classMeshBuilder_1ae78de92278560e1d9d33bad688f3ac7f" compoundref="MeshBuilder_8cpp" startline="534" endline="580">MeshBuilder::GenerateTorus</referencedby>
+        <referencedby refid="classMeshBuilder_1a579c3377542eaf2cfb64ae7bbb309630" compoundref="MeshBuilder_8cpp" startline="755" endline="819">MeshBuilder::GenerateTrapezium</referencedby>
+        <referencedby refid="classMesh_1a8618160123ac2c27985d7ae34ad58cae" compoundref="Mesh_8cpp" startline="23" endline="31">Mesh</referencedby>
+        <referencedby refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" compoundref="Mesh_8cpp" startline="57" endline="96">Render</referencedby>
+        <referencedby refid="classMesh_1a5efe4da1a4c0971cfb037bd70304c303" compoundref="Mesh_8cpp" startline="39" endline="49">~Mesh</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classMesh_1ac6d6f70d161b9dd66c5ca79a187d86df" prot="public" static="no" mutable="no">
         <type>unsigned</type>
@@ -163,24 +163,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Mesh.h" line="36" column="1" bodyfile="ComGLab/Source/Mesh.h" bodystart="36" bodyend="-1"/>
-        <referencedby refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="17" endline="65">MeshBuilder::GenerateAxes</referencedby>
-        <referencedby refid="classMeshBuilder_1a68d491a27ed57b66b7a8161a2b230951" compoundref="MeshBuilder_8cpp" startline="267" endline="313">MeshBuilder::GenerateCircle</referencedby>
-        <referencedby refid="classMeshBuilder_1a3123aa273acbacf182adc536433c4911" compoundref="MeshBuilder_8cpp" startline="694" endline="743">MeshBuilder::GenerateCone</referencedby>
-        <referencedby refid="classMeshBuilder_1a5e777328dc946f483beb5645d8f24c4a" compoundref="MeshBuilder_8cpp" startline="138" endline="202">MeshBuilder::GenerateCube</referencedby>
-        <referencedby refid="classMeshBuilder_1a06796a82056f0a291f6cda3d8318531c" compoundref="MeshBuilder_8cpp" startline="623" endline="692">MeshBuilder::GenerateCylinder</referencedby>
-        <referencedby refid="classMeshBuilder_1a334f7cc0723906edca201cf80bc865ba" compoundref="MeshBuilder_8cpp" startline="572" endline="620">MeshBuilder::GenerateHalfTorus</referencedby>
-        <referencedby refid="classMeshBuilder_1a36320c69da431e763f864e3247c58a9b" compoundref="MeshBuilder_8cpp" startline="479" endline="522">MeshBuilder::GenerateHemisphere</referencedby>
-        <referencedby refid="classMeshBuilder_1aba87550d7726a610c911fbb977fd3575" compoundref="MeshBuilder_8cpp" startline="811" endline="837">MeshBuilder::GenerateOBJ</referencedby>
-        <referencedby refid="classMeshBuilder_1a6220b5a8d58df2c01bc2026b00477c30" compoundref="MeshBuilder_8cpp" startline="204" endline="255">MeshBuilder::GeneratePrism</referencedby>
-        <referencedby refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="80" endline="122">MeshBuilder::GenerateQuad</referencedby>
-        <referencedby refid="classMeshBuilder_1a227ca853ca1ea18521bae1c1d46d6715" compoundref="MeshBuilder_8cpp" startline="433" endline="477">MeshBuilder::GenerateQuarterSphere</referencedby>
-        <referencedby refid="classMeshBuilder_1a53f9fa5f58c23dfce5327d27e6fa1783" compoundref="MeshBuilder_8cpp" startline="315" endline="367">MeshBuilder::GenerateRing</referencedby>
-        <referencedby refid="classMeshBuilder_1a569c4966c1422841fc79118803f5ca7e" compoundref="MeshBuilder_8cpp" startline="385" endline="431">MeshBuilder::GenerateSphere</referencedby>
-        <referencedby refid="classMeshBuilder_1aac7c87881dbc08f8d41f2068e0f40c76" compoundref="MeshBuilder_8cpp" startline="839" endline="887">MeshBuilder::GenerateText</referencedby>
-        <referencedby refid="classMeshBuilder_1ae78de92278560e1d9d33bad688f3ac7f" compoundref="MeshBuilder_8cpp" startline="524" endline="570">MeshBuilder::GenerateTorus</referencedby>
-        <referencedby refid="classMeshBuilder_1a579c3377542eaf2cfb64ae7bbb309630" compoundref="MeshBuilder_8cpp" startline="745" endline="809">MeshBuilder::GenerateTrapezium</referencedby>
-        <referencedby refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" compoundref="Mesh_8cpp" startline="47" endline="86">Render</referencedby>
+        <location file="ComGLab/Source/Mesh.h" line="46" column="1" bodyfile="ComGLab/Source/Mesh.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="27" endline="75">MeshBuilder::GenerateAxes</referencedby>
+        <referencedby refid="classMeshBuilder_1a68d491a27ed57b66b7a8161a2b230951" compoundref="MeshBuilder_8cpp" startline="277" endline="323">MeshBuilder::GenerateCircle</referencedby>
+        <referencedby refid="classMeshBuilder_1a3123aa273acbacf182adc536433c4911" compoundref="MeshBuilder_8cpp" startline="704" endline="753">MeshBuilder::GenerateCone</referencedby>
+        <referencedby refid="classMeshBuilder_1a5e777328dc946f483beb5645d8f24c4a" compoundref="MeshBuilder_8cpp" startline="148" endline="212">MeshBuilder::GenerateCube</referencedby>
+        <referencedby refid="classMeshBuilder_1a06796a82056f0a291f6cda3d8318531c" compoundref="MeshBuilder_8cpp" startline="633" endline="702">MeshBuilder::GenerateCylinder</referencedby>
+        <referencedby refid="classMeshBuilder_1a334f7cc0723906edca201cf80bc865ba" compoundref="MeshBuilder_8cpp" startline="582" endline="630">MeshBuilder::GenerateHalfTorus</referencedby>
+        <referencedby refid="classMeshBuilder_1a36320c69da431e763f864e3247c58a9b" compoundref="MeshBuilder_8cpp" startline="489" endline="532">MeshBuilder::GenerateHemisphere</referencedby>
+        <referencedby refid="classMeshBuilder_1aba87550d7726a610c911fbb977fd3575" compoundref="MeshBuilder_8cpp" startline="821" endline="847">MeshBuilder::GenerateOBJ</referencedby>
+        <referencedby refid="classMeshBuilder_1a6220b5a8d58df2c01bc2026b00477c30" compoundref="MeshBuilder_8cpp" startline="214" endline="265">MeshBuilder::GeneratePrism</referencedby>
+        <referencedby refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="90" endline="132">MeshBuilder::GenerateQuad</referencedby>
+        <referencedby refid="classMeshBuilder_1a227ca853ca1ea18521bae1c1d46d6715" compoundref="MeshBuilder_8cpp" startline="443" endline="487">MeshBuilder::GenerateQuarterSphere</referencedby>
+        <referencedby refid="classMeshBuilder_1a53f9fa5f58c23dfce5327d27e6fa1783" compoundref="MeshBuilder_8cpp" startline="325" endline="377">MeshBuilder::GenerateRing</referencedby>
+        <referencedby refid="classMeshBuilder_1a569c4966c1422841fc79118803f5ca7e" compoundref="MeshBuilder_8cpp" startline="395" endline="441">MeshBuilder::GenerateSphere</referencedby>
+        <referencedby refid="classMeshBuilder_1aac7c87881dbc08f8d41f2068e0f40c76" compoundref="MeshBuilder_8cpp" startline="849" endline="897">MeshBuilder::GenerateText</referencedby>
+        <referencedby refid="classMeshBuilder_1ae78de92278560e1d9d33bad688f3ac7f" compoundref="MeshBuilder_8cpp" startline="534" endline="580">MeshBuilder::GenerateTorus</referencedby>
+        <referencedby refid="classMeshBuilder_1a579c3377542eaf2cfb64ae7bbb309630" compoundref="MeshBuilder_8cpp" startline="755" endline="819">MeshBuilder::GenerateTrapezium</referencedby>
+        <referencedby refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" compoundref="Mesh_8cpp" startline="57" endline="96">Render</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classMesh_1a7abd957a6487641e00c8fb855397bccd" prot="public" static="no" mutable="no">
         <type>unsigned</type>
@@ -193,26 +193,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Mesh.h" line="37" column="1" bodyfile="ComGLab/Source/Mesh.h" bodystart="37" bodyend="-1"/>
-        <referencedby refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" compoundref="Particle_8cpp" startline="18" endline="95">Particle::Init</referencedby>
-        <referencedby refid="classSP2__Scene_1aea95ab9454db62830823d42d053c191e" compoundref="SP2__Scene_8cpp" startline="272" endline="303">SP2_Scene::InitMapModels</referencedby>
-        <referencedby refid="classSP2__Scene_1aeef4e3096a06665be510e2b4bd6c2b79" compoundref="SP2__Scene_8cpp" startline="305" endline="373">SP2_Scene::InitRobots</referencedby>
-        <referencedby refid="classSP2__Scene_1a4867e767b8f3f993a01c5c271c90d82e" compoundref="SP2__Scene_8cpp" startline="132" endline="170">SP2_Scene::initUIElements</referencedby>
-        <referencedby refid="classSP2__Scene_1a6db32e7632b8b3d3a57d949d3029b4a7" compoundref="SP2__Scene_8cpp" startline="222" endline="270">SP2_Scene::InitWeaponModels</referencedby>
-        <referencedby refid="classMesh_1a8618160123ac2c27985d7ae34ad58cae" compoundref="Mesh_8cpp" startline="13" endline="21">Mesh</referencedby>
-        <referencedby refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" compoundref="Mesh_8cpp" startline="47" endline="86">Render</referencedby>
-        <referencedby refid="classSP2__Scene_1a5b8cc318fb5a712285abce0fad2a3dba" compoundref="SP2__Scene_8cpp" startline="446" endline="458">SP2_Scene::RenderImageInMap</referencedby>
-        <referencedby refid="classSP2__Scene_1ae91e39146c4052e9e959cb1ff6a2890a" compoundref="SP2__Scene_8cpp" startline="460" endline="485">SP2_Scene::RenderImageOnScreen</referencedby>
-        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">Particle::RenderMesh</referencedby>
-        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="629" endline="670">SP2_Scene::RenderMesh</referencedby>
-        <referencedby refid="classParticle_1a37afd6d47fda746f93062ed4e1a00551" compoundref="Particle_8cpp" startline="342" endline="356">Particle::renderParticleEmitter</referencedby>
-        <referencedby refid="classParticle_1ae3b87275d545d2b4d6b266fa6777b8e8" compoundref="Particle_8cpp" startline="97" endline="123">Particle::RenderText</referencedby>
-        <referencedby refid="classSP2__Scene_1aba0bba98a66ffc88a253833486bc90e9" compoundref="SP2__Scene_8cpp" startline="375" endline="401">SP2_Scene::RenderText</referencedby>
-        <referencedby refid="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" compoundref="Particle_8cpp" startline="125" endline="167">Particle::RenderTextOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="403" endline="444">SP2_Scene::RenderTextOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a4105499f6a2e4cc7eeedac1af5248126" compoundref="SP2__Scene_8cpp" startline="487" endline="606">SP2_Scene::RenderWeaponInHand</referencedby>
-        <referencedby refid="classSP2__Scene_1a6448011a887d25ea57d981ca7753810b" compoundref="SP2__Scene_8cpp" startline="1849" endline="1956">SP2_Scene::RenderWepScreen</referencedby>
-        <referencedby refid="classMesh_1a5efe4da1a4c0971cfb037bd70304c303" compoundref="Mesh_8cpp" startline="29" endline="39">~Mesh</referencedby>
+        <location file="ComGLab/Source/Mesh.h" line="47" column="1" bodyfile="ComGLab/Source/Mesh.h" bodystart="47" bodyend="-1"/>
+        <referencedby refid="classSP2__Scene_1aea95ab9454db62830823d42d053c191e" compoundref="SP2__Scene_8cpp" startline="372" endline="406">SP2_Scene::InitMapModels</referencedby>
+        <referencedby refid="classSP2__Scene_1aeef4e3096a06665be510e2b4bd6c2b79" compoundref="SP2__Scene_8cpp" startline="415" endline="483">SP2_Scene::InitRobots</referencedby>
+        <referencedby refid="classSP2__Scene_1a4867e767b8f3f993a01c5c271c90d82e" compoundref="SP2__Scene_8cpp" startline="174" endline="212">SP2_Scene::initUIElements</referencedby>
+        <referencedby refid="classSP2__Scene_1a6db32e7632b8b3d3a57d949d3029b4a7" compoundref="SP2__Scene_8cpp" startline="317" endline="363">SP2_Scene::InitWeaponModels</referencedby>
+        <referencedby refid="classMesh_1a8618160123ac2c27985d7ae34ad58cae" compoundref="Mesh_8cpp" startline="23" endline="31">Mesh</referencedby>
+        <referencedby refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" compoundref="Mesh_8cpp" startline="57" endline="96">Render</referencedby>
+        <referencedby refid="classSP2__Scene_1a5b8cc318fb5a712285abce0fad2a3dba" compoundref="SP2__Scene_8cpp" startline="577" endline="589">SP2_Scene::RenderImageInMap</referencedby>
+        <referencedby refid="classSP2__Scene_1ae91e39146c4052e9e959cb1ff6a2890a" compoundref="SP2__Scene_8cpp" startline="598" endline="623">SP2_Scene::RenderImageOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="788" endline="829">SP2_Scene::RenderMesh</referencedby>
+        <referencedby refid="classSP2__Scene_1a1251677b641cce30ba451e9e02418cf2" compoundref="SP2__Scene_8cpp" startline="1104" endline="1213">SP2_Scene::RenderPowerUp</referencedby>
+        <referencedby refid="classSP2__Scene_1aba0bba98a66ffc88a253833486bc90e9" compoundref="SP2__Scene_8cpp" startline="492" endline="518">SP2_Scene::RenderText</referencedby>
+        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="527" endline="568">SP2_Scene::RenderTextOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a4105499f6a2e4cc7eeedac1af5248126" compoundref="SP2__Scene_8cpp" startline="632" endline="751">SP2_Scene::RenderWeaponInHand</referencedby>
+        <referencedby refid="classSP2__Scene_1a6448011a887d25ea57d981ca7753810b" compoundref="SP2__Scene_8cpp" startline="2161" endline="2268">SP2_Scene::RenderWepScreen</referencedby>
+        <referencedby refid="classMesh_1a5efe4da1a4c0971cfb037bd70304c303" compoundref="Mesh_8cpp" startline="39" endline="49">~Mesh</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classMesh_1a3368c3bc60dd176e522df1542b764847" prot="public" static="no" mutable="no">
         <type><ref refid="structMaterial" kindref="compound">Material</ref></type>
@@ -225,9 +221,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Mesh.h" line="39" column="1" bodyfile="ComGLab/Source/Mesh.h" bodystart="39" bodyend="-1"/>
-        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">Particle::RenderMesh</referencedby>
-        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="629" endline="670">SP2_Scene::RenderMesh</referencedby>
+        <location file="ComGLab/Source/Mesh.h" line="49" column="1" bodyfile="ComGLab/Source/Mesh.h" bodystart="49" bodyend="-1"/>
+        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="788" endline="829">SP2_Scene::RenderMesh</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -254,10 +249,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Mesh.h" line="26" column="1" bodyfile="ComGLab/Source/Mesh.cpp" bodystart="13" bodyend="21"/>
-        <references refid="classMesh_1ad5efa4d45e469674dfa3765e479e4a73" compoundref="Mesh_8h" startline="35">indexBuffer</references>
-        <references refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" compoundref="Mesh_8h" startline="37">textureID</references>
-        <references refid="classMesh_1a1e99394b36ad335804acd2461a736cfb" compoundref="Mesh_8h" startline="34">vertexBuffer</references>
+        <location file="ComGLab/Source/Mesh.h" line="36" column="1" bodyfile="ComGLab/Source/Mesh.cpp" bodystart="23" bodyend="31"/>
+        <references refid="classMesh_1ad5efa4d45e469674dfa3765e479e4a73" compoundref="Mesh_8h" startline="45">indexBuffer</references>
+        <references refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" compoundref="Mesh_8h" startline="47">textureID</references>
+        <references refid="classMesh_1a1e99394b36ad335804acd2461a736cfb" compoundref="Mesh_8h" startline="44">vertexBuffer</references>
       </memberdef>
       <memberdef kind="function" id="classMesh_1a5efe4da1a4c0971cfb037bd70304c303" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -270,10 +265,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Mesh.h" line="27" column="1" bodyfile="ComGLab/Source/Mesh.cpp" bodystart="29" bodyend="39"/>
-        <references refid="classMesh_1ad5efa4d45e469674dfa3765e479e4a73" compoundref="Mesh_8h" startline="35">indexBuffer</references>
-        <references refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" compoundref="Mesh_8h" startline="37">textureID</references>
-        <references refid="classMesh_1a1e99394b36ad335804acd2461a736cfb" compoundref="Mesh_8h" startline="34">vertexBuffer</references>
+        <location file="ComGLab/Source/Mesh.h" line="37" column="1" bodyfile="ComGLab/Source/Mesh.cpp" bodystart="39" bodyend="49"/>
+        <references refid="classMesh_1ad5efa4d45e469674dfa3765e479e4a73" compoundref="Mesh_8h" startline="45">indexBuffer</references>
+        <references refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" compoundref="Mesh_8h" startline="47">textureID</references>
+        <references refid="classMesh_1a1e99394b36ad335804acd2461a736cfb" compoundref="Mesh_8h" startline="44">vertexBuffer</references>
       </memberdef>
       <memberdef kind="function" id="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -286,20 +281,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Mesh.h" line="29" column="1" bodyfile="ComGLab/Source/Mesh.cpp" bodystart="47" bodyend="86"/>
-        <references refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a2eacb69a1ffbcde68e12fb36f8c88639" compoundref="Mesh_8h" startline="23">DRAW_LINES</references>
-        <references refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a76fb83917a3507580897f6e86656927d" compoundref="Mesh_8h" startline="22">DRAW_TRIANGLE_STRIP</references>
-        <references refid="classMesh_1ad5efa4d45e469674dfa3765e479e4a73" compoundref="Mesh_8h" startline="35">indexBuffer</references>
-        <references refid="classMesh_1ac6d6f70d161b9dd66c5ca79a187d86df" compoundref="Mesh_8h" startline="36">indexSize</references>
-        <references refid="classMesh_1ae12937ea9bdacb3b7b786f60fe42448e" compoundref="Mesh_8h" startline="33">mode</references>
-        <references refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" compoundref="Mesh_8h" startline="37">textureID</references>
-        <references refid="classMesh_1a1e99394b36ad335804acd2461a736cfb" compoundref="Mesh_8h" startline="34">vertexBuffer</references>
-        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">Particle::RenderMesh</referencedby>
-        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="629" endline="670">SP2_Scene::RenderMesh</referencedby>
-        <referencedby refid="classParticle_1ae3b87275d545d2b4d6b266fa6777b8e8" compoundref="Particle_8cpp" startline="97" endline="123">Particle::RenderText</referencedby>
-        <referencedby refid="classSP2__Scene_1aba0bba98a66ffc88a253833486bc90e9" compoundref="SP2__Scene_8cpp" startline="375" endline="401">SP2_Scene::RenderText</referencedby>
-        <referencedby refid="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" compoundref="Particle_8cpp" startline="125" endline="167">Particle::RenderTextOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="403" endline="444">SP2_Scene::RenderTextOnScreen</referencedby>
+        <location file="ComGLab/Source/Mesh.h" line="39" column="1" bodyfile="ComGLab/Source/Mesh.cpp" bodystart="57" bodyend="96"/>
+        <references refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a2eacb69a1ffbcde68e12fb36f8c88639" compoundref="Mesh_8h" startline="33">DRAW_LINES</references>
+        <references refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a76fb83917a3507580897f6e86656927d" compoundref="Mesh_8h" startline="32">DRAW_TRIANGLE_STRIP</references>
+        <references refid="classMesh_1ad5efa4d45e469674dfa3765e479e4a73" compoundref="Mesh_8h" startline="45">indexBuffer</references>
+        <references refid="classMesh_1ac6d6f70d161b9dd66c5ca79a187d86df" compoundref="Mesh_8h" startline="46">indexSize</references>
+        <references refid="classMesh_1ae12937ea9bdacb3b7b786f60fe42448e" compoundref="Mesh_8h" startline="43">mode</references>
+        <references refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" compoundref="Mesh_8h" startline="47">textureID</references>
+        <references refid="classMesh_1a1e99394b36ad335804acd2461a736cfb" compoundref="Mesh_8h" startline="44">vertexBuffer</references>
+        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="788" endline="829">SP2_Scene::RenderMesh</referencedby>
+        <referencedby refid="classSP2__Scene_1aba0bba98a66ffc88a253833486bc90e9" compoundref="SP2__Scene_8cpp" startline="492" endline="518">SP2_Scene::RenderText</referencedby>
+        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="527" endline="568">SP2_Scene::RenderTextOnScreen</referencedby>
       </memberdef>
       <memberdef kind="function" id="classMesh_1a13afbd2fcdaf0ae700599eb643ae3135" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -320,13 +312,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Mesh.h" line="30" column="1" bodyfile="ComGLab/Source/Mesh.cpp" bodystart="88" bodyend="127"/>
-        <references refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a2eacb69a1ffbcde68e12fb36f8c88639" compoundref="Mesh_8h" startline="23">DRAW_LINES</references>
-        <references refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a76fb83917a3507580897f6e86656927d" compoundref="Mesh_8h" startline="22">DRAW_TRIANGLE_STRIP</references>
-        <references refid="classMesh_1ad5efa4d45e469674dfa3765e479e4a73" compoundref="Mesh_8h" startline="35">indexBuffer</references>
-        <references refid="classMesh_1ae12937ea9bdacb3b7b786f60fe42448e" compoundref="Mesh_8h" startline="33">mode</references>
-        <references refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" compoundref="Mesh_8h" startline="37">textureID</references>
-        <references refid="classMesh_1a1e99394b36ad335804acd2461a736cfb" compoundref="Mesh_8h" startline="34">vertexBuffer</references>
+        <location file="ComGLab/Source/Mesh.h" line="40" column="1" bodyfile="ComGLab/Source/Mesh.cpp" bodystart="98" bodyend="137"/>
+        <references refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a2eacb69a1ffbcde68e12fb36f8c88639" compoundref="Mesh_8h" startline="33">DRAW_LINES</references>
+        <references refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a76fb83917a3507580897f6e86656927d" compoundref="Mesh_8h" startline="32">DRAW_TRIANGLE_STRIP</references>
+        <references refid="classMesh_1ad5efa4d45e469674dfa3765e479e4a73" compoundref="Mesh_8h" startline="45">indexBuffer</references>
+        <references refid="classMesh_1ae12937ea9bdacb3b7b786f60fe42448e" compoundref="Mesh_8h" startline="43">mode</references>
+        <references refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" compoundref="Mesh_8h" startline="47">textureID</references>
+        <references refid="classMesh_1a1e99394b36ad335804acd2461a736cfb" compoundref="Mesh_8h" startline="44">vertexBuffer</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -334,60 +326,60 @@
     <detaileddescription>
 <para>Class <ref refid="classMesh" kindref="compound">Mesh</ref>: </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="495">
+      <node id="455">
         <label>Component</label>
         <link refid="structComponent"/>
-        <childnode refid="494" relation="usage">
+        <childnode refid="454" relation="usage">
           <edgelabel>g</edgelabel>
           <edgelabel>r</edgelabel>
           <edgelabel>b</edgelabel>
         </childnode>
       </node>
-      <node id="492">
+      <node id="452">
         <label>Mesh</label>
         <link refid="classMesh"/>
-        <childnode refid="493" relation="usage">
+        <childnode refid="453" relation="usage">
           <edgelabel>material</edgelabel>
         </childnode>
-        <childnode refid="496" relation="usage">
+        <childnode refid="456" relation="usage">
           <edgelabel>mode</edgelabel>
         </childnode>
-        <childnode refid="497" relation="usage">
+        <childnode refid="457" relation="usage">
           <edgelabel>name</edgelabel>
         </childnode>
-        <childnode refid="498" relation="usage">
+        <childnode refid="458" relation="usage">
           <edgelabel>textureID</edgelabel>
           <edgelabel>indexBuffer</edgelabel>
           <edgelabel>indexSize</edgelabel>
           <edgelabel>vertexBuffer</edgelabel>
         </childnode>
       </node>
-      <node id="496">
+      <node id="456">
         <label>DRAW_MODE</label>
       </node>
-      <node id="497">
+      <node id="457">
         <label>string</label>
       </node>
-      <node id="493">
+      <node id="453">
         <label>Material</label>
         <link refid="structMaterial"/>
-        <childnode refid="494" relation="usage">
+        <childnode refid="454" relation="usage">
           <edgelabel>kShininess</edgelabel>
         </childnode>
-        <childnode refid="495" relation="usage">
+        <childnode refid="455" relation="usage">
           <edgelabel>kDiffuse</edgelabel>
           <edgelabel>kAmbient</edgelabel>
           <edgelabel>kSpecular</edgelabel>
         </childnode>
       </node>
-      <node id="494">
+      <node id="454">
         <label>float</label>
       </node>
-      <node id="498">
+      <node id="458">
         <label>unsigned</label>
       </node>
     </collaborationgraph>
-    <location file="ComGLab/Source/Mesh.h" line="17" column="1" bodyfile="ComGLab/Source/Mesh.h" bodystart="16" bodyend="40"/>
+    <location file="ComGLab/Source/Mesh.h" line="27" column="1" bodyfile="ComGLab/Source/Mesh.h" bodystart="26" bodyend="50"/>
     <listofallmembers>
       <member refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a2eacb69a1ffbcde68e12fb36f8c88639" prot="public" virt="non-virtual"><scope>Mesh</scope><name>DRAW_LINES</name></member>
       <member refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307" prot="public" virt="non-virtual"><scope>Mesh</scope><name>DRAW_MODE</name></member>

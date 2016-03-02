@@ -1,19 +1,19 @@
 <map id="SP2_Scene::RenderShip" name="SP2_Scene::RenderShip">
-<area shape="rect" id="node2" href="$classCamera3.html#a1029fbe574de09b19ff8908748031289" title="Camera3::Init" alt="" coords="282,107,381,133"/>
+<area shape="rect" id="node2" href="$classCamera3.html#a1029fbe574de09b19ff8908748031289" title="Initializes variables. " alt="" coords="282,107,381,133"/>
 <area shape="rect" id="node10" href="$classMS.html#aac22e39d0ac437fcb85403a9f0a7a25f" title="Pop the top matrix on the matrix stack. " alt="" coords="522,332,631,359"/>
 <area shape="rect" id="node11" href="$classMS.html#a9fb4fff5036f3f197b893f9a579c97b2" title="Make a copy of the top matrix on the matrix stack and push it on top. " alt="" coords="519,383,635,409"/>
-<area shape="rect" id="node12" href="$classSP2__Scene.html#ae91e39146c4052e9e959cb1ff6a2890a" title="SP2_Scene::RenderImageOn\lScreen" alt="" coords="235,434,427,475"/>
-<area shape="rect" id="node17" href="$classSP2__Scene.html#a0cd5fd0736fa9288f21b0712d22ff17c" title="SP2_Scene::RenderMesh" alt="" coords="491,281,663,308"/>
+<area shape="rect" id="node12" href="$classSP2__Scene.html#ae91e39146c4052e9e959cb1ff6a2890a" title="method that renders images on screen " alt="" coords="235,434,427,475"/>
+<area shape="rect" id="node17" href="$classSP2__Scene.html#a0cd5fd0736fa9288f21b0712d22ff17c" title="Method that renders a mesh in the scene. " alt="" coords="491,281,663,308"/>
 <area shape="rect" id="node25" href="$classMS.html#a6ce592114042b920b648bca5519690cd" title="Multiply the top matrix with a rotation matrix based on the following parameters. ..." alt="" coords="533,231,621,257"/>
 <area shape="rect" id="node27" href="$classMS.html#a52109795de960e24663b315e9128533f" title="Multiply the top matrix with a scale matrix based on the following parameters. " alt="" coords="535,687,618,713"/>
 <area shape="rect" id="node31" href="$classMS.html#a7e94a35ce566fe3ec49c92b6c4bb663a" title="Multiply the top matrix with a translation matrix based on the following parameters. " alt="" coords="525,737,628,764"/>
-<area shape="rect" id="node33" href="$classSP2__Scene.html#a40721f5409a15245989ab79baf848996" title="SP2_Scene::RenderTextOnScreen" alt="" coords="220,535,443,561"/>
+<area shape="rect" id="node33" href="$classSP2__Scene.html#a40721f5409a15245989ab79baf848996" title="Method that renders text on screen. " alt="" coords="220,535,443,561"/>
 <area shape="rect" id="node3" href="$structVector3.html#aa1cdc5357009b47fe585ddd61e263aad" title="Cross product of 2 vectors. " alt="" coords="522,5,631,32"/>
-<area shape="rect" id="node5" href="$classCamera3.html#ae8bf411b15978eaeb425b6fe169a0f05" title="Camera3::initBoundVec" alt="" coords="497,157,656,184"/>
+<area shape="rect" id="node5" href="$classCamera3.html#ae8bf411b15978eaeb425b6fe169a0f05" title="Initializes Boundary values. " alt="" coords="497,157,656,184"/>
 <area shape="rect" id="node7" href="$structVector3.html#aaef4f25a38878a640ab4a48002a7eff8" title="Normalize this vector and return a reference to it. " alt="" coords="510,107,643,133"/>
 <area shape="rect" id="node9" href="$structVector3.html#a2da0f00c5529bced69763320dac9c414" title="Return a copy of this vector, normalized. " alt="" coords="507,56,647,83"/>
 <area shape="rect" id="node4" href="$structVector3.html#afa5e0c801fc2c8a820a54ea99302fe08" title="Vector3 default constructor. " alt="" coords="732,19,852,45"/>
-<area shape="rect" id="node6" href="$structBoundary.html#a3cf640001c6bbc842d129f453fb3441b" title="Boundary::set" alt="" coords="741,152,843,179"/>
+<area shape="rect" id="node6" href="$structBoundary.html#a3cf640001c6bbc842d129f453fb3441b" title="Sets the minimum and maximum x,y and z boundaries. " alt="" coords="741,152,843,179"/>
 <area shape="rect" id="node8" href="$structVector3.html#a200024a8442329de9a625ed58ffe7075" title="Return length of vector. " alt="" coords="735,95,849,121"/>
 <area shape="rect" id="node13" href="$classMS.html#a77c5f7e4a21ea48dcf902a7ff6824a11" title="Replace the top matrix with an identity matrix. " alt="" coords="517,636,637,663"/>
 <area shape="rect" id="node16" href="$classMS.html#a86606fe9f575ccb747d77195c8aefdaf" title="Return the top matrix with a new matrix. " alt="" coords="519,484,634,511"/>

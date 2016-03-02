@@ -1,10 +1,10 @@
 <map id="ComGLab/Source/WeaponSystem.h" name="ComGLab/Source/WeaponSystem.h">
-<area shape="rect" id="node2" href="$SP2__Scene_8h.html" title="ComGLab/Source/SP2\l_Scene.h" alt="" coords="300,229,455,271"/>
-<area shape="rect" id="node5" href="$Robot_8h.html" title="ComGLab/Source/Robot.h" alt="" coords="218,80,393,107"/>
-<area shape="rect" id="node9" href="$WeaponSystem_8cpp.html" title="ComGLab/Source/WeaponSystem.cpp" alt="" coords="607,80,854,107"/>
-<area shape="rect" id="node3" href="$Application_8cpp.html" title="ComGLab/Source/Application.cpp" alt="" coords="268,326,487,353"/>
-<area shape="rect" id="node4" href="$SP2__Scene_8cpp.html" title="ComGLab/Source/SP2\l_Scene.cpp" alt="" coords="5,319,160,360"/>
-<area shape="rect" id="node6" href="$RobotManager_8h.html" title="ComGLab/Source/RobotManager.h" alt="" coords="44,155,268,181"/>
-<area shape="rect" id="node8" href="$Robot_8cpp.html" title="ComGLab/Source/Robot.cpp" alt="" coords="343,155,531,181"/>
-<area shape="rect" id="node7" href="$RobotManager_8cpp.html" title="ComGLab/Source/RobotManager.cpp" alt="" coords="37,237,275,263"/>
+<area shape="rect" id="node2" href="$SP2__Scene_8h.html" title="Header file for scene. " alt="" coords="300,229,455,271"/>
+<area shape="rect" id="node5" href="$Robot_8h.html" title="Class to define Robot. " alt="" coords="218,80,393,107"/>
+<area shape="rect" id="node9" href="$WeaponSystem_8cpp.html" title=".cpp file that defines Weapon System " alt="" coords="607,80,854,107"/>
+<area shape="rect" id="node3" href="$Application_8cpp.html" title="Runs the application. " alt="" coords="268,326,487,353"/>
+<area shape="rect" id="node4" href="$SP2__Scene_8cpp.html" title=".cpp file that defines scenes " alt="" coords="5,319,160,360"/>
+<area shape="rect" id="node6" href="$RobotManager_8h.html" title="Class that defines the system that manages the robots. " alt="" coords="44,155,268,181"/>
+<area shape="rect" id="node8" href="$Robot_8cpp.html" title=".cpp file that defines Robot " alt="" coords="343,155,531,181"/>
+<area shape="rect" id="node7" href="$RobotManager_8cpp.html" title=".cpp file that manages robots in the scene " alt="" coords="37,237,275,263"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="RayCast::Position" name="RayCast::Position">
-<area shape="rect" id="node2" href="$classWeaponSystem.html#a92124c3a05ebf38514c7455cc3f2fcb0" title="WeaponSystem::GetLength" alt="" coords="180,5,363,32"/>
-<area shape="rect" id="node3" href="$classWeaponSystem.html#a4c149823fee5be2cc5ee8f19cf8760d8" title="WeaponSystem::CleanUp" alt="" coords="411,5,583,32"/>
-<area shape="rect" id="node4" href="$classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="SP2_Scene::Update" alt="" coords="631,5,771,32"/>
+<area shape="rect" id="node2" href="$classWeaponSystem.html#a92124c3a05ebf38514c7455cc3f2fcb0" title="Returns the length of each bullet. " alt="" coords="180,5,363,32"/>
+<area shape="rect" id="node3" href="$classWeaponSystem.html#a4c149823fee5be2cc5ee8f19cf8760d8" title="Cleans up data to prevent memory leaks. " alt="" coords="411,5,583,32"/>
+<area shape="rect" id="node4" href="$classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="Method where values are changed. " alt="" coords="631,5,771,32"/>
 </map>

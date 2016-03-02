@@ -5,105 +5,90 @@
     <includes local="no">stack</includes>
     <includes refid="Mtx44_8h" local="yes">Mtx44.h</includes>
     <includedby refid="SP2__Scene_8h" local="yes">ComGLab/Source/SP2_Scene.h</includedby>
-    <includedby refid="Particle_8h" local="yes">ComGLab/Source/Particle.h</includedby>
     <includedby refid="MatrixStack_8cpp" local="yes">Common/Source/MatrixStack.cpp</includedby>
     <incdepgraph>
-      <node id="2350">
+      <node id="1896">
         <label>MyMath.h</label>
         <link refid="MyMath_8h"/>
-        <childnode refid="2351" relation="include">
+        <childnode refid="1897" relation="include">
         </childnode>
-        <childnode refid="2352" relation="include">
+        <childnode refid="1898" relation="include">
         </childnode>
-        <childnode refid="2353" relation="include">
+        <childnode refid="1899" relation="include">
         </childnode>
-        <childnode refid="2354" relation="include">
+        <childnode refid="1900" relation="include">
         </childnode>
       </node>
-      <node id="2349">
+      <node id="1895">
         <label>Mtx44.h</label>
         <link refid="Mtx44_8h"/>
-        <childnode refid="2350" relation="include">
+        <childnode refid="1896" relation="include">
         </childnode>
-        <childnode refid="2355" relation="include">
+        <childnode refid="1901" relation="include">
         </childnode>
       </node>
-      <node id="2355">
+      <node id="1901">
         <label>Vector3.h</label>
         <link refid="Vector3_8h"/>
-        <childnode refid="2350" relation="include">
+        <childnode refid="1896" relation="include">
         </childnode>
-        <childnode refid="2356" relation="include">
+        <childnode refid="1902" relation="include">
         </childnode>
       </node>
-      <node id="2351">
+      <node id="1897">
         <label>cmath</label>
       </node>
-      <node id="2352">
+      <node id="1898">
         <label>exception</label>
       </node>
-      <node id="2353">
+      <node id="1899">
         <label>ctime</label>
       </node>
-      <node id="2348">
+      <node id="1894">
         <label>stack</label>
       </node>
-      <node id="2354">
+      <node id="1900">
         <label>cstdlib</label>
       </node>
-      <node id="2356">
+      <node id="1902">
         <label>iostream</label>
       </node>
-      <node id="2347">
+      <node id="1893">
         <label>Common/Source/MatrixStack.h</label>
         <link refid="MatrixStack.h"/>
-        <childnode refid="2348" relation="include">
+        <childnode refid="1894" relation="include">
         </childnode>
-        <childnode refid="2349" relation="include">
+        <childnode refid="1895" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2362">
-        <label>ComGLab/Source/Particle.cpp</label>
-        <link refid="Particle_8cpp"/>
-      </node>
-      <node id="2363">
+      <node id="1907">
         <label>Common/Source/MatrixStack.cpp</label>
         <link refid="MatrixStack_8cpp"/>
       </node>
-      <node id="2360">
+      <node id="1906">
         <label>ComGLab/Source/SP2_Scene.cpp</label>
         <link refid="SP2__Scene_8cpp"/>
       </node>
-      <node id="2359">
+      <node id="1905">
         <label>ComGLab/Source/Application.cpp</label>
         <link refid="Application_8cpp"/>
       </node>
-      <node id="2358">
+      <node id="1904">
         <label>ComGLab/Source/SP2_Scene.h</label>
         <link refid="SP2__Scene_8h"/>
-        <childnode refid="2359" relation="include">
+        <childnode refid="1905" relation="include">
         </childnode>
-        <childnode refid="2360" relation="include">
+        <childnode refid="1906" relation="include">
         </childnode>
       </node>
-      <node id="2357">
+      <node id="1903">
         <label>Common/Source/MatrixStack.h</label>
         <link refid="MatrixStack.h"/>
-        <childnode refid="2358" relation="include">
+        <childnode refid="1904" relation="include">
         </childnode>
-        <childnode refid="2361" relation="include">
-        </childnode>
-        <childnode refid="2363" relation="include">
-        </childnode>
-      </node>
-      <node id="2361">
-        <label>ComGLab/Source/Particle.h</label>
-        <link refid="Particle_8h"/>
-        <childnode refid="2359" relation="include">
-        </childnode>
-        <childnode refid="2362" relation="include">
+        <childnode refid="1907" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

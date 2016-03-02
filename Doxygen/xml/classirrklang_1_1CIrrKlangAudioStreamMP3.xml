@@ -499,37 +499,37 @@
     <detaileddescription>
 <para>To extend irrKlang with new audio format decoders, the only thing needed to do is implementing the <ref refid="classirrklang_1_1IAudioStream" kindref="compound">IAudioStream</ref> interface. All the code available in this class is only for mp3 decoding and may make this class look a bit more complicated then it actually is. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="366">
+      <node id="326">
         <label>irrklang::CIrrKlangAudioStreamMP3</label>
         <link refid="classirrklang_1_1CIrrKlangAudioStreamMP3"/>
-        <childnode refid="367" relation="public-inheritance">
+        <childnode refid="327" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="367">
+      <node id="327">
         <label>irrklang::IAudioStream</label>
         <link refid="classirrklang_1_1IAudioStream"/>
-        <childnode refid="368" relation="public-inheritance">
+        <childnode refid="328" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="368">
+      <node id="328">
         <label>irrklang::IRefCounted</label>
         <link refid="classirrklang_1_1IRefCounted"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="379">
+      <node id="339">
         <label>ik_u8 *</label>
       </node>
-      <node id="373">
+      <node id="333">
         <label>vector&lt; irrklang::CIrrKlangAudioStreamMP3::SFramePositionData &gt;</label>
       </node>
-      <node id="375">
+      <node id="335">
         <label>void *</label>
       </node>
-      <node id="374">
+      <node id="334">
         <label>MPAuDecContext</label>
         <link refid="structMPAuDecContext"/>
-        <childnode refid="372" relation="usage">
+        <childnode refid="332" relation="usage">
           <edgelabel>coded_frame_size</edgelabel>
           <edgelabel>bit_rate</edgelabel>
           <edgelabel>sample_rate</edgelabel>
@@ -538,100 +538,100 @@
           <edgelabel>frame_size</edgelabel>
           <edgelabel>channels</edgelabel>
         </childnode>
-        <childnode refid="375" relation="usage">
+        <childnode refid="335" relation="usage">
           <edgelabel>priv_data</edgelabel>
         </childnode>
       </node>
-      <node id="378">
+      <node id="338">
         <label>ESampleFormat</label>
       </node>
-      <node id="369">
+      <node id="329">
         <label>irrklang::CIrrKlangAudioStreamMP3</label>
         <link refid="classirrklang_1_1CIrrKlangAudioStreamMP3"/>
-        <childnode refid="370" relation="public-inheritance">
+        <childnode refid="330" relation="public-inheritance">
         </childnode>
-        <childnode refid="373" relation="usage">
+        <childnode refid="333" relation="usage">
           <edgelabel>FramePositionData</edgelabel>
         </childnode>
-        <childnode refid="374" relation="usage">
+        <childnode refid="334" relation="usage">
           <edgelabel>TheMPAuDecContext</edgelabel>
         </childnode>
-        <childnode refid="372" relation="usage">
+        <childnode refid="332" relation="usage">
           <edgelabel>FileBegin</edgelabel>
           <edgelabel>InputLength</edgelabel>
           <edgelabel>Position</edgelabel>
           <edgelabel>InputPosition</edgelabel>
         </childnode>
-        <childnode refid="376" relation="usage">
+        <childnode refid="336" relation="usage">
           <edgelabel>EndOfFileReached</edgelabel>
           <edgelabel>FirstFrameRead</edgelabel>
         </childnode>
-        <childnode refid="377" relation="usage">
+        <childnode refid="337" relation="usage">
           <edgelabel>Format</edgelabel>
         </childnode>
-        <childnode refid="379" relation="usage">
+        <childnode refid="339" relation="usage">
           <edgelabel>DecodeBuffer</edgelabel>
         </childnode>
-        <childnode refid="380" relation="usage">
+        <childnode refid="340" relation="usage">
           <edgelabel>DecodedQueue</edgelabel>
         </childnode>
-        <childnode refid="381" relation="usage">
+        <childnode refid="341" relation="usage">
           <edgelabel>CurrentFramePosition</edgelabel>
           <edgelabel>InputBuffer</edgelabel>
         </childnode>
-        <childnode refid="382" relation="usage">
+        <childnode refid="342" relation="usage">
           <edgelabel>File</edgelabel>
         </childnode>
       </node>
-      <node id="372">
+      <node id="332">
         <label>int</label>
       </node>
-      <node id="377">
+      <node id="337">
         <label>irrklang::SAudioStreamFormat</label>
         <link refid="structirrklang_1_1SAudioStreamFormat"/>
-        <childnode refid="378" relation="usage">
+        <childnode refid="338" relation="usage">
           <edgelabel>SampleFormat</edgelabel>
         </childnode>
-        <childnode refid="372" relation="usage">
+        <childnode refid="332" relation="usage">
           <edgelabel>ChannelCount</edgelabel>
           <edgelabel>FrameCount</edgelabel>
           <edgelabel>SampleRate</edgelabel>
         </childnode>
       </node>
-      <node id="370">
+      <node id="330">
         <label>irrklang::IAudioStream</label>
         <link refid="classirrklang_1_1IAudioStream"/>
-        <childnode refid="371" relation="public-inheritance">
+        <childnode refid="331" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="371">
+      <node id="331">
         <label>irrklang::IRefCounted</label>
         <link refid="classirrklang_1_1IRefCounted"/>
-        <childnode refid="372" relation="usage">
+        <childnode refid="332" relation="usage">
           <edgelabel>ReferenceCounter</edgelabel>
         </childnode>
       </node>
-      <node id="381">
+      <node id="341">
         <label>unsigned</label>
       </node>
-      <node id="376">
+      <node id="336">
         <label>bool</label>
       </node>
-      <node id="380">
+      <node id="340">
         <label>irrklang::CIrrKlangAudioStreamMP3::QueueBuffer</label>
         <link refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer"/>
-        <childnode refid="372" relation="usage">
+        <childnode refid="332" relation="usage">
           <edgelabel>Size</edgelabel>
           <edgelabel>Capacity</edgelabel>
         </childnode>
-        <childnode refid="379" relation="usage">
+        <childnode refid="339" relation="usage">
           <edgelabel>Buffer</edgelabel>
         </childnode>
       </node>
-      <node id="382">
+      <node id="342">
         <label>irrklang::IFileReader</label>
         <link refid="classirrklang_1_1IFileReader"/>
-        <childnode refid="371" relation="public-inheritance">
+        <childnode refid="331" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

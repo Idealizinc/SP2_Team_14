@@ -1,9 +1,10 @@
 <map id="Boundary::BoundaryCheck" name="Boundary::BoundaryCheck">
-<area shape="rect" id="node2" href="$classRobot.html#ad545d19adff26cb99fda1c4408f51e69" title="Robot::BoundsCheck" alt="" coords="253,5,399,32"/>
-<area shape="rect" id="node3" href="$classCamera3.html#a99440cc4eb40bfc3bbad15bfe08c8a55" title="Camera3::cameraMovement2" alt="" coords="231,56,421,83"/>
-<area shape="rect" id="node4" href="$classCamera3.html#acc5d4103826cda6d20b80a0d35eacdbe" title="Camera3::Update" alt="" coords="469,107,592,133"/>
-<area shape="rect" id="node6" href="$classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="SP2_Scene::Update" alt="" coords="640,157,780,184"/>
-<area shape="rect" id="node7" href="$classRobot.html#a984fba314296d7a4016afb093f775c0d" title="Robot::FindNewTarget" alt="" coords="251,208,401,235"/>
-<area shape="rect" id="node5" href="$classParticle.html#a8a5412af8bbf924a183d373a64480b00" title="Particle::Update" alt="" coords="653,107,767,133"/>
-<area shape="rect" id="node8" href="$classRobot.html#a7f2c9697cd6c68349b32a7db280cd4ed" title="Robot::Move" alt="" coords="483,208,578,235"/>
+<area shape="rect" id="node2" href="$classRobot.html#ad545d19adff26cb99fda1c4408f51e69" title="Checks if the player or a bullet has entered a robot&#39;s boundary. " alt="" coords="254,5,399,32"/>
+<area shape="rect" id="node3" href="$classCamera3.html#a99440cc4eb40bfc3bbad15bfe08c8a55" title="Method for player movement. " alt="" coords="231,56,422,83"/>
+<area shape="rect" id="node4" href="$classCamera3.html#acc5d4103826cda6d20b80a0d35eacdbe" title="Method where values are changed. " alt="" coords="479,107,602,133"/>
+<area shape="rect" id="node5" href="$classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="Method where values are changed. " alt="" coords="659,132,799,159"/>
+<area shape="rect" id="node6" href="$classRobot.html#a984fba314296d7a4016afb093f775c0d" title="Chooses a new target for the robots to walk to. " alt="" coords="251,208,402,235"/>
+<area shape="rect" id="node8" href="$classSP2__Scene.html#a1251677b641cce30ba451e9e02418cf2" title="Method that renders Power Ups in the scene. " alt="" coords="231,259,423,285"/>
+<area shape="rect" id="node7" href="$classRobot.html#a7f2c9697cd6c68349b32a7db280cd4ed" title="Method that handles each robot&#39;s movements. " alt="" coords="493,208,588,235"/>
+<area shape="rect" id="node9" href="$classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="Method that renders everything in the game. " alt="" coords="471,259,611,285"/>
 </map>

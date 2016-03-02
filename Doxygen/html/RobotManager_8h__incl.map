@@ -1,8 +1,8 @@
 <map id="ComGLab/Source/RobotManager.h" name="ComGLab/Source/RobotManager.h">
-<area shape="rect" id="node3" href="$Robot_8h.html" title="Robot.h" alt="" coords="212,80,279,107"/>
+<area shape="rect" id="node3" href="$Robot_8h.html" title="Class to define Robot. " alt="" coords="212,80,279,107"/>
 <area shape="rect" id="node4" href="$Vector3_8h.html" title="Struct to define a 3D vector. " alt="" coords="267,304,346,331"/>
-<area shape="rect" id="node11" href="$WeaponSystem_8h.html" title="WeaponSystem.h" alt="" coords="29,155,155,181"/>
-<area shape="rect" id="node13" href="$Boundary_8h.html" title="Boundary.h" alt="" coords="155,304,243,331"/>
+<area shape="rect" id="node11" href="$WeaponSystem_8h.html" title="Header file for Weapon System. " alt="" coords="29,155,155,181"/>
+<area shape="rect" id="node13" href="$Boundary_8h.html" title="Struct to define a Boundary in the scene. " alt="" coords="155,304,243,331"/>
 <area shape="rect" id="node5" href="$MyMath_8h.html" title="Header file for math helper functions. " alt="" coords="171,379,251,405"/>
-<area shape="rect" id="node12" href="$Raycast_8h.html" title="RayCast.h" alt="" coords="157,229,240,256"/>
+<area shape="rect" id="node12" href="$Raycast_8h.html" title="Class to define RayCast. " alt="" coords="157,229,240,256"/>
 </map>

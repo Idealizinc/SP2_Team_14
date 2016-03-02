@@ -1,5 +1,5 @@
 <map id="irrklang::ISound::setVolume" name="irrklang::ISound::setVolume">
-<area shape="rect" id="node2" href="$classSP2__Scene.html#a3cd10ebc989e3f3e2f84f59d74b76ef2" title="SP2_Scene::GameState" alt="" coords="236,5,401,32"/>
-<area shape="rect" id="node4" href="$classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="SP2_Scene::Update" alt="" coords="249,56,389,83"/>
-<area shape="rect" id="node3" href="$classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="SP2_Scene::Render" alt="" coords="449,5,589,32"/>
+<area shape="rect" id="node2" href="$classSP2__Scene.html#a3cd10ebc989e3f3e2f84f59d74b76ef2" title="Method that controls the transition from wave to wave. " alt="" coords="236,5,401,32"/>
+<area shape="rect" id="node4" href="$classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="Method where values are changed. " alt="" coords="249,56,389,83"/>
+<area shape="rect" id="node3" href="$classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="Method that renders everything in the game. " alt="" coords="449,5,589,32"/>
 </map>

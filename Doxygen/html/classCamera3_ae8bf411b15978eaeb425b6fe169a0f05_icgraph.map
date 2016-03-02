@@ -1,9 +1,8 @@
 <map id="Camera3::initBoundVec" name="Camera3::initBoundVec">
-<area shape="rect" id="node2" href="$classCamera3.html#a1029fbe574de09b19ff8908748031289" title="Camera3::Init" alt="" coords="212,83,311,110"/>
-<area shape="rect" id="node3" href="$classSP2__Scene.html#a3cd10ebc989e3f3e2f84f59d74b76ef2" title="SP2_Scene::GameState" alt="" coords="573,58,739,84"/>
-<area shape="rect" id="node5" href="$classParticle.html#ad4131133df499c87e0a4e75ffdaae4a3" title="Particle::Init" alt="" coords="397,32,487,59"/>
-<area shape="rect" id="node6" href="$classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="SP2_Scene::Init" alt="" coords="384,83,500,110"/>
-<area shape="rect" id="node7" href="$classSP2__Scene.html#a68b65e14328ef7b87a9e1c516499ee44" title="SP2_Scene::RenderShip" alt="" coords="359,134,525,160"/>
-<area shape="rect" id="node8" href="$classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="SP2_Scene::Update" alt="" coords="372,184,512,211"/>
-<area shape="rect" id="node4" href="$classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="SP2_Scene::Render" alt="" coords="787,58,927,84"/>
+<area shape="rect" id="node2" href="$classCamera3.html#a1029fbe574de09b19ff8908748031289" title="Initializes variables. " alt="" coords="212,53,311,80"/>
+<area shape="rect" id="node3" href="$classSP2__Scene.html#a3cd10ebc989e3f3e2f84f59d74b76ef2" title="Method that controls the transition from wave to wave. " alt="" coords="573,28,739,54"/>
+<area shape="rect" id="node5" href="$classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="Initializes values. " alt="" coords="384,28,500,54"/>
+<area shape="rect" id="node6" href="$classSP2__Scene.html#a68b65e14328ef7b87a9e1c516499ee44" title="Method that renders and animates the drivable ship. " alt="" coords="359,78,525,105"/>
+<area shape="rect" id="node7" href="$classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="Method where values are changed. " alt="" coords="372,129,512,156"/>
+<area shape="rect" id="node4" href="$classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="Method that renders everything in the game. " alt="" coords="787,28,927,54"/>
 </map>

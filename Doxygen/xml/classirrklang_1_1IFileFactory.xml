@@ -50,31 +50,31 @@
     <detaileddescription>
 <para>Derive your own class from <ref refid="classirrklang_1_1IFileFactory" kindref="compound">IFileFactory</ref>, overwrite the <ref refid="classirrklang_1_1IFileFactory_1abe09d8c9dadf1cfd45a63c733a2f910c" kindref="member">createFileReader()</ref> method and return your own implemented <ref refid="classirrklang_1_1IFileReader" kindref="compound">IFileReader</ref> to overwrite file access of irrKlang. Use <ref refid="classirrklang_1_1ISoundEngine_1ad7c48f9d7ccc6f60adb1b3f024f9b189" kindref="member">ISoundEngine::addFileFactory()</ref> to let irrKlang know about your class. Example code can be found in the tutorial 04.OverrideFileAccess. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="429">
+      <node id="389">
         <label>irrklang::IFileFactory</label>
         <link refid="classirrklang_1_1IFileFactory"/>
-        <childnode refid="430" relation="public-inheritance">
+        <childnode refid="390" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="430">
+      <node id="390">
         <label>irrklang::IRefCounted</label>
         <link refid="classirrklang_1_1IRefCounted"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="433">
+      <node id="393">
         <label>int</label>
       </node>
-      <node id="431">
+      <node id="391">
         <label>irrklang::IFileFactory</label>
         <link refid="classirrklang_1_1IFileFactory"/>
-        <childnode refid="432" relation="public-inheritance">
+        <childnode refid="392" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="432">
+      <node id="392">
         <label>irrklang::IRefCounted</label>
         <link refid="classirrklang_1_1IRefCounted"/>
-        <childnode refid="433" relation="usage">
+        <childnode refid="393" relation="usage">
           <edgelabel>ReferenceCounter</edgelabel>
         </childnode>
       </node>

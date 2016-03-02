@@ -1,16 +1,16 @@
 <map id="SP2_Scene" name="SP2_Scene">
-<area shape="rect" id="node2" href="$classScene.html" title="Scene" alt="" coords="711,52,769,79"/>
-<area shape="rect" id="node4" href="$structLight.html" title="Light" alt="" coords="438,373,489,400"/>
-<area shape="rect" id="node7" href="$structVector3.html" title="Defines a 3D vector and its methods. " alt="" coords="135,865,202,892"/>
-<area shape="rect" id="node8" href="$structPosition.html" title="Position" alt="" coords="134,456,203,483"/>
-<area shape="rect" id="node9" href="$structColor.html" title="Color" alt="" coords="143,204,195,231"/>
-<area shape="rect" id="node14" href="$classWeaponSystem.html" title="WeaponSystem" alt="" coords="406,581,521,608"/>
-<area shape="rect" id="node16" href="$classCamera3.html" title="Camera3" alt="" coords="703,939,777,965"/>
-<area shape="rect" id="node19" href="$structBoundary.html" title="Boundary" alt="" coords="425,1476,502,1503"/>
-<area shape="rect" id="node25" href="$structMaterial.html" title="Material" alt="" coords="429,1873,497,1900"/>
-<area shape="rect" id="node26" href="$structComponent.html" title="Component" alt="" coords="125,1923,213,1949"/>
-<area shape="rect" id="node17" href="$classCamera.html" title="Camera" alt="" coords="430,827,497,853"/>
-<area shape="rect" id="node11" href="$classRobotManager.html" title="RobotManager" alt="" coords="410,1716,517,1743"/>
-<area shape="rect" id="node24" href="$classMesh.html" title="To store VBO (vertex &amp; color buffer) and IBO (index buffer) " alt="" coords="713,1840,767,1867"/>
-<area shape="rect" id="node22" href="$classMS.html" title="Matrix Stack class. " alt="" coords="719,1983,761,2009"/>
+<area shape="rect" id="node2" href="$classScene.html" title="Defines the methods for Scene. " alt="" coords="711,52,769,79"/>
+<area shape="rect" id="node4" href="$structLight.html" title="Defines the enums and methods for Light. " alt="" coords="438,372,489,399"/>
+<area shape="rect" id="node7" href="$structVector3.html" title="Defines a 3D vector and its methods. " alt="" coords="135,681,202,708"/>
+<area shape="rect" id="node8" href="$structPosition.html" title="Defines the methods and variables for setting position. " alt="" coords="134,456,203,483"/>
+<area shape="rect" id="node9" href="$structColor.html" title="Defines the methods and variables for setting color. " alt="" coords="143,204,195,231"/>
+<area shape="rect" id="node14" href="$classWeaponSystem.html" title="Defines the methods and variables for Weapon System. " alt="" coords="406,555,521,581"/>
+<area shape="rect" id="node16" href="$classCamera3.html" title="Defines the methods for camera control. " alt="" coords="703,877,777,904"/>
+<area shape="rect" id="node20" href="$structBoundary.html" title="Defines 3D vectors and its methods. " alt="" coords="425,1328,502,1355"/>
+<area shape="rect" id="node25" href="$structMaterial.html" title="Defines the methods and variables for light properties. " alt="" coords="429,1793,497,1820"/>
+<area shape="rect" id="node26" href="$structComponent.html" title="Defines the methods and variables for light properties. " alt="" coords="125,1727,213,1753"/>
+<area shape="rect" id="node17" href="$classCamera.html" title="Defines the methods for camera control. " alt="" coords="430,827,497,853"/>
+<area shape="rect" id="node11" href="$classRobotManager.html" title="Defines the methods and variables for managing robots in the scene. " alt="" coords="410,1535,517,1561"/>
+<area shape="rect" id="node24" href="$classMesh.html" title="To store VBO (vertex &amp; color buffer) and IBO (index buffer) " alt="" coords="713,1659,767,1685"/>
+<area shape="rect" id="node22" href="$classMS.html" title="Matrix Stack class. " alt="" coords="719,1801,761,1828"/>
 </map>

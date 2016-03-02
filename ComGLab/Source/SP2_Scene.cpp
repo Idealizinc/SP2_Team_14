@@ -40,13 +40,37 @@ ISound* MenuBGM;
 
 int pause = 1;
 
+
+/****************************************************************************/
+/*!
+\brief
+Constructor
+*/
+/****************************************************************************/
+
 SP2_Scene::SP2_Scene()
 {
 }
 
+
+/****************************************************************************/
+/*!
+\brief
+Destructor
+*/
+/****************************************************************************/
+
 SP2_Scene::~SP2_Scene()
 {
 }
+
+
+/****************************************************************************/
+/*!
+\brief
+Reads a text file
+*/
+/****************************************************************************/
 
 void SP2_Scene::readtextfile()
 {
@@ -65,6 +89,14 @@ void SP2_Scene::readtextfile()
 		startfile.close();
 	}
 }
+
+
+/****************************************************************************/
+/*!
+\brief
+Initializes values
+*/
+/****************************************************************************/
 
 void SP2_Scene::Init()
 {
@@ -127,7 +159,7 @@ void SP2_Scene::Init()
 	meshList[GEO_CUBE] = MeshBuilder::GenerateCube("cube", white);
 	meshList[GEO_CIRCLE] = MeshBuilder::GenerateCircle("circle", white, 36);
 	meshList[GEO_RING] = MeshBuilder::GenerateRing("ring", white, 0.5, 36);
-	meshList[GEO_TORUS] = MeshBuilder::GenerateTorus("torus", white, 1, 0.5, 20, 20);
+	meshList[GEO_TORUS] = MeshBuilder::GenerateTorus("torus", white, 1, 0.1, 20, 20);
 	meshList[GEO_CYLINDER] = MeshBuilder::GenerateCylinder("cylinder", white, 20);
 	meshList[GEO_CONE] = MeshBuilder::GenerateCone("cone", white, 20);
 	meshList[GEO_HEMISPHERE] = MeshBuilder::GenerateHemisphere("hemisphere", white, 20, 20);
@@ -178,6 +210,50 @@ void SP2_Scene::initUIElements()
 	
 }
 
+
+/****************************************************************************/
+/*!
+\brief
+Holds all the variables used
+\param
+		tweenVal - value that determines tween
+		constRotation - value that constantly changes with dt
+		constTranslation - value that constantly changes with dt
+		translateX - value that translates along the x-axis
+		scaleAll - value used for scaling
+		rLimiter - boolean used for animation
+		toggleLimiters - boolean used to toggle limiters on 
+		limitersOn - boolean that checks if limiters are on 
+		lightsOff - boolean that checks if lights are on 
+		basehp - value for base hp
+		bosshp - value for boss hp
+		playerhp - value for player hp
+		GameOver - boolean that checks if the game is over 
+		wave - value that determines what wave the game is in
+		weaponValue - value that determines what gun is used
+		weaponinterface - boolean that determines if the interface is on screen
+		buttonPress - boolean that checks if a button is pressed or not
+		buttonValue - value that creates a delay between one button press and the next
+		ShipX - value used for translating the drivable ship along the x-axis
+		ShipY - value used for translating the drivable ship along the y-axis
+		ShipRot - value used for rotating the drivable ship
+		repairShipPhase - value used to determine which phase of the repair ship quest the game is in
+		moveRocks - value used to translate rocks
+		floatRocks - boolean that determines if rocks are floating
+		ShipRotation - value used for rotating enemy mothership
+		Intro - boolean that checks if the introductory cutscene is playing
+		weaponsOn - boolean that determines if the mothership is firing at the player
+		ShipSpawned - boolean that determines if the enemy mothership has spawned
+		explosion - value used for animation
+		PowerUpActive - boolean that determines if a Power Up is active
+		WepItf_Choices - Vector3 value for the weapon interface screen
+		SpawnPointN - Vector3 value for a robot spawn point
+		SpawnPointS - Vector3 value for a robot spawn point
+		SpawnPointE - Vector3 value for a robot spawn point
+		SpawnPointW - Vector3 value for a robot spawn point
+*/
+/****************************************************************************/
+
 void SP2_Scene::InitKeyVariables()
 {
 	tweenVal = 0;
@@ -211,6 +287,8 @@ void SP2_Scene::InitKeyVariables()
 	Intro = false;
 	weaponsOn = false;
 	ShipSpawned = false;
+	explosion = 0;
+	PowerUpActive = true;
 
 	//robotleftattack = false;
 	//robotrightattack = false;
@@ -227,6 +305,13 @@ void SP2_Scene::InitKeyVariables()
 	camera.minCameraYrotation = -360;
 
 }
+
+/****************************************************************************/
+/*!
+\brief
+Initializes OBJ and TGA files
+*/
+/****************************************************************************/
 
 void SP2_Scene::InitWeaponModels()
 {
@@ -274,12 +359,20 @@ void SP2_Scene::InitWeaponModels()
 
 	meshList[GEO_SHOTGUN] = MeshBuilder::GenerateOBJ("test", "OBJ//Shotgun.obj");
 	meshList[GEO_SHOTGUN]->textureID = LoadTGA("Image//Tex_Shotgun.tga");
-
-	
 }
+
+/****************************************************************************/
+/*!
+\brief
+Initializes OBJ and TGA files
+*/
+/****************************************************************************/
 
 void SP2_Scene::InitMapModels()
 {
+	meshList[GEO_POWERUP] = MeshBuilder::GenerateOBJ("test", "OBJ//Bullet.obj");
+	meshList[GEO_POWERUP]->textureID = Bullet_White;
+
 	meshList[GEO_CRYSTALBASE] = MeshBuilder::GenerateOBJ("Core Platform", "OBJ//Core_Platform.obj");
 	meshList[GEO_CRYSTALBASE]->textureID = LoadTGA("Image//Tex_Core_Platform.tga");
 
@@ -310,6 +403,13 @@ void SP2_Scene::InitMapModels()
 	/*meshList[GEO_COMPUTER] = MeshBuilder::GenerateOBJ("test", "OBJ//computer.obj");
 	meshList[GEO_COMPUTER]->textureID = LoadTGA("Image//computer.tga");*/
 }
+
+/****************************************************************************/
+/*!
+\brief
+Initializes OBJ and TGA files
+*/
+/****************************************************************************/
 
 void SP2_Scene::InitRobots()
 {
@@ -381,6 +481,13 @@ void SP2_Scene::InitRobots()
 	meshList[GEO_MIXEDROBOTRIGHTLEG]->textureID = texGD3;
 }
 
+/****************************************************************************/
+/*!
+\brief
+Method that renders text in the scene
+*/
+/****************************************************************************/
+
 void SP2_Scene::RenderText(Mesh* mesh, std::string text, Color color)
 {
 	if (!mesh || mesh->textureID <= 0) //Proper error check
@@ -408,6 +515,13 @@ void SP2_Scene::RenderText(Mesh* mesh, std::string text, Color color)
 	glEnable(GL_DEPTH_TEST);
 
 }
+
+/****************************************************************************/
+/*!
+\brief
+Method that renders text on screen
+*/
+/****************************************************************************/
 
 void SP2_Scene::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
 {
@@ -452,6 +566,13 @@ void SP2_Scene::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, fl
 	glEnable(GL_DEPTH_TEST);
 }
 
+/****************************************************************************/
+/*!
+\brief
+Method that renders images in the scene
+*/
+/****************************************************************************/
+
 void SP2_Scene::RenderImageInMap(GLuint texture, float Xsize, float Ysize)
 {
 	if (!texture) //Proper error check
@@ -465,6 +586,13 @@ void SP2_Scene::RenderImageInMap(GLuint texture, float Xsize, float Ysize)
 	RenderMesh(mesh, false);
 	modelStack.PopMatrix();
 }
+
+/****************************************************************************/
+/*!
+\brief
+method that renders images on screen
+*/
+/****************************************************************************/
 
 void SP2_Scene::RenderImageOnScreen(GLuint texture, float Xsize, float Ysize, float Xpos, float Ypos)
 {
@@ -492,6 +620,13 @@ void SP2_Scene::RenderImageOnScreen(GLuint texture, float Xsize, float Ysize, fl
 	modelStack.PopMatrix();
 	glEnable(GL_DEPTH_TEST);
 }
+
+/****************************************************************************/
+/*!
+\brief
+Method that renders a weapon on screen
+*/
+/****************************************************************************/
 
 void SP2_Scene::RenderWeaponInHand(unsigned short wepVal, float size, float x, float y)
 {
@@ -614,6 +749,13 @@ void SP2_Scene::RenderWeaponInHand(unsigned short wepVal, float size, float x, f
 	modelStack.PopMatrix();
 }
 
+/****************************************************************************/
+/*!
+\brief
+Method that renders a mesh on screen
+*/
+/****************************************************************************/
+
 void SP2_Scene::RenderMeshOnScreen(Mesh* mesh, float Xsize, float Ysize, float Xpos, float Ypos, float Angle, Vector3 RotationDir)
 {
 	Mtx44 ortho;
@@ -634,6 +776,13 @@ void SP2_Scene::RenderMeshOnScreen(Mesh* mesh, float Xsize, float Ysize, float X
 	viewStack.PopMatrix();
 	modelStack.PopMatrix();
 }
+
+/****************************************************************************/
+/*!
+\brief
+Method that renders a mesh in the scene
+*/
+/****************************************************************************/
 
 void SP2_Scene::RenderMesh(Mesh *mesh, bool enableLight)
 {
@@ -677,6 +826,13 @@ void SP2_Scene::RenderMesh(Mesh *mesh, bool enableLight)
 	}
 
 }
+
+/****************************************************************************/
+/*!
+\brief
+Initializes light settings
+*/
+/****************************************************************************/
 
 void SP2_Scene::initLights()
 {
@@ -765,6 +921,13 @@ void SP2_Scene::initLights()
 	glUniform1f(m_parameters[U_LIGHT1_EXPONENT], light[1].exponent);
 }
 
+/****************************************************************************/
+/*!
+\brief
+Method that renders the base in the scene
+*/
+/****************************************************************************/
+
 void SP2_Scene::RenderBase()
 {
 	//RenderBase
@@ -786,53 +949,12 @@ void SP2_Scene::RenderBase()
 	//RB End
 }
 
-void SP2_Scene::RenderRobots()
-{
-	//for (auto i : RobotManager.RobotList)
-	//{
-	//	modelStack.PushMatrix();
-	//	//i.BoundsCheck(WepSys.BulletList);
-	//	modelStack.Translate(i.Position().x, i.Position().y + 0.5, i.Position().z);
-	//	modelStack.Rotate(i.rotateToTarget, 0, 1, 0);
-	//	modelStack.Rotate(-45, 0, 1, 0);
-	//	RenderMesh(meshList[GEO_MELEEROBOTBODY], true);
-	//	modelStack.PushMatrix();
-	//	modelStack.Rotate(rotatelefthand, 1, 0, 0);
-	//	modelStack.Translate(0, 0, -10);
-	//	modelStack.Translate(0, 0, 10);
-	//	modelStack.Translate(0.3, 0, 0);
-	//	RenderMesh(meshList[GEO_MELEEROBOTLEFTUPPERARM], true);
-	//	modelStack.PushMatrix();
-	//	modelStack.Translate(0, 0, leftarmattack);
-	//	modelStack.Rotate(rotatelefthand, 1, 0, 0);
-	//	RenderMesh(meshList[GEO_MELEEROBOTLEFTLOWERARM], true);
-	//	modelStack.PopMatrix();
-	//	modelStack.PopMatrix();
-	//	modelStack.PushMatrix();
-	//	modelStack.Rotate(rotaterighthand, 1, 0, 0);
-	//	modelStack.Translate(0, 0, -10);
-	//	modelStack.Translate(0, 0, 10);
-	//	modelStack.Translate(-0.3, 0, 0);
-	//	RenderMesh(meshList[GEO_MELEEROBOTRIGHTUPPERARM], true);
-	//	modelStack.PushMatrix();
-	//	modelStack.Translate(0, 0, rightarmattack);
-	//	modelStack.Rotate(rotaterighthand, 1, 0, 0);
-	//	RenderMesh(meshList[GEO_MELEEROBOTRIGHTLOWERARM], true);
-	//	modelStack.PopMatrix();
-	//	modelStack.PopMatrix();
-	//	modelStack.PushMatrix();
-	//	modelStack.Rotate(moveleftleg, 1, 0, 0);
-	//	modelStack.Translate(0, 0, -10);
-	//	modelStack.Translate(0, 0, 10);
-	//	RenderMesh(meshList[GEO_MELEEROBOTLEFTLEG], true);
-	//	modelStack.PopMatrix();
-	//	modelStack.PushMatrix();
-	//	modelStack.Rotate(moverightleg, 1, 0, 0);
-	//	RenderMesh(meshList[GEO_MELEEROBOTRIGHTLEG], true);
-	//	modelStack.PopMatrix();
-	//	modelStack.PopMatrix();
-	//}
-}
+/****************************************************************************/
+/*!
+\brief
+Method that controls the transition from wave to wave
+*/
+/****************************************************************************/
 
 void SP2_Scene::GameState()
 {
@@ -852,6 +974,8 @@ void SP2_Scene::GameState()
 	}
 	else if (wave == 1 && !weaponinterface && !SpawnedRobots)
 	{
+		PowerUpActive = true;
+		PowerUpVal = rand() % 3 + 1;
 		for (int i = 0; i < 10; i++)
 		{
 			RobotManager.RobotList.push_back(Robot(0, 0, Vector3(spawnPointN.x + (rand() % 80 - 39), spawnPointN.y, spawnPointN.z + (rand() % 80 - 39))));
@@ -860,6 +984,8 @@ void SP2_Scene::GameState()
 	}
 	else if (wave == 2 && !weaponinterface && !SpawnedRobots)
 	{
+		PowerUpActive = true;
+		PowerUpVal = rand() % 3 + 1;
 		for (int i = 0; i < 10; i++)
 		{
 			RobotManager.RobotList.push_back(Robot(1, 180, Vector3(spawnPointS.x + (rand() % 80 - 39), spawnPointS.y, spawnPointS.z + (rand() % 80 - 39))));
@@ -868,6 +994,8 @@ void SP2_Scene::GameState()
 	}
 	else if (wave == 3 && !weaponinterface && !SpawnedRobots)
 	{
+		PowerUpActive = true;
+		PowerUpVal = rand() % 3 + 1;
 		for (int i = 0; i < 10; i++)
 		{
 			RobotManager.RobotList.push_back(Robot(2, -90, Vector3(spawnPointE.x + (rand() % 80 - 39), spawnPointE.y, spawnPointE.z + (rand() % 80 - 39))));
@@ -876,6 +1004,8 @@ void SP2_Scene::GameState()
 	}
 	else if (wave == 4 && !weaponinterface && !SpawnedRobots)
 	{
+		PowerUpActive = true;
+		PowerUpVal = rand() % 3 + 1;
 		for (int i = 0; i < 10; i++)
 		{
 			RobotManager.RobotList.push_back(Robot(2, 90, Vector3(spawnPointW.x + (rand() % 80 - 39), spawnPointW.y, spawnPointW.z + (rand() % 80 - 39))));
@@ -884,6 +1014,8 @@ void SP2_Scene::GameState()
 	}
 	else if (wave == 5 && !weaponinterface && !SpawnedRobots)
 	{
+		PowerUpActive = true;
+		PowerUpVal = rand() % 3 + 1;
 		for (int i = 0; i < 3; i++)
 		{
 			RobotManager.RobotList.push_back(Robot(2, 0, Vector3(spawnPointN.x + (rand() % 80 - 39), spawnPointN.y, spawnPointN.z + (rand() % 80 - 39))));
@@ -961,6 +1093,131 @@ void SP2_Scene::GameState()
 	}
 }
 
+/****************************************************************************/
+/*!
+\brief
+Method that renders Power Ups in the scene
+*/
+/****************************************************************************/
+
+void SP2_Scene::RenderPowerUp(unsigned short PowerUpType)
+{
+	if (PowerUpType == 1)
+	{
+		meshList[GEO_POWERUP]->textureID = Bullet_Red;
+		if (PowerUpType == 1 && !camera.PowerUp.BoundaryCheck(camera.getCameraPosition().x, camera.getCameraPosition().z, camera.getCameraPosition().y) && (weaponValue == 1 || weaponValue == 4 || weaponValue == 7 || weaponValue == 10))
+		{
+			weaponValue = 4;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			PowerUpActive = false;
+			CurrentAmmo = WepSys.MaxAmmo;
+		}
+		else if (PowerUpType == 1 && !camera.PowerUp.BoundaryCheck(camera.getCameraPosition().x, camera.getCameraPosition().z, camera.getCameraPosition().y) && (weaponValue == 2 || weaponValue == 5 || weaponValue == 8 || weaponValue == 11))
+		{
+			weaponValue = 5;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			PowerUpActive = false;
+			CurrentAmmo = WepSys.MaxAmmo;
+		}
+		else if (PowerUpType == 1 && !camera.PowerUp.BoundaryCheck(camera.getCameraPosition().x, camera.getCameraPosition().z, camera.getCameraPosition().y) && (weaponValue == 0 || weaponValue == 3 || weaponValue == 6 || weaponValue == 9 || weaponValue == 12))
+		{
+			weaponValue = 6;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			PowerUpActive = false;
+			CurrentAmmo = WepSys.MaxAmmo;
+		}
+	}
+
+	else if (PowerUpType == 2)
+	{
+		meshList[GEO_POWERUP]->textureID = Bullet_Blue;
+		if (PowerUpType == 2 && !camera.PowerUp.BoundaryCheck(camera.getCameraPosition().x, camera.getCameraPosition().z, camera.getCameraPosition().y) && (weaponValue == 1 || weaponValue == 4 || weaponValue == 7 || weaponValue == 10))
+		{
+			weaponValue = 7;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			PowerUpActive = false;
+			CurrentAmmo = WepSys.MaxAmmo;
+		}
+		else if (PowerUpType == 2 && !camera.PowerUp.BoundaryCheck(camera.getCameraPosition().x, camera.getCameraPosition().z, camera.getCameraPosition().y) && (weaponValue == 2 || weaponValue == 5 || weaponValue == 8 || weaponValue == 11))
+		{
+			weaponValue = 8;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			PowerUpActive = false;
+			CurrentAmmo = WepSys.MaxAmmo;
+		}
+		else if (PowerUpType == 2 && !camera.PowerUp.BoundaryCheck(camera.getCameraPosition().x, camera.getCameraPosition().z, camera.getCameraPosition().y) && (weaponValue == 0 || weaponValue == 3 || weaponValue == 6 || weaponValue == 9 || weaponValue == 12))
+		{
+			weaponValue = 9;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			PowerUpActive = false;
+			CurrentAmmo = WepSys.MaxAmmo;
+		}
+	}
+	
+	else if(PowerUpType == 3)
+	{
+		meshList[GEO_POWERUP]->textureID = Bullet_Green;
+		if (PowerUpType == 3 && !camera.PowerUp.BoundaryCheck(camera.getCameraPosition().x, camera.getCameraPosition().z, camera.getCameraPosition().y) && (weaponValue == 1 || weaponValue == 4 || weaponValue == 7 || weaponValue == 10))
+		{
+			weaponValue = 10;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			CurrentAmmo = WepSys.MaxAmmo;
+			PowerUpActive = false;
+		}
+		else if (PowerUpType == 3 && !camera.PowerUp.BoundaryCheck(camera.getCameraPosition().x, camera.getCameraPosition().z, camera.getCameraPosition().y) && (weaponValue == 2 || weaponValue == 5 || weaponValue == 8 || weaponValue == 11))
+		{
+			weaponValue = 11;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			CurrentAmmo = WepSys.MaxAmmo;
+			PowerUpActive = false;
+		}
+		else if (PowerUpType == 3 && !camera.PowerUp.BoundaryCheck(camera.getCameraPosition().x, camera.getCameraPosition().z, camera.getCameraPosition().y) && (weaponValue == 0 || weaponValue == 3 || weaponValue == 6 || weaponValue == 9 || weaponValue == 12))
+		{
+			weaponValue = 12;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			CurrentAmmo = WepSys.MaxAmmo;
+			PowerUpActive = false;
+		}
+	}
+	if (PowerUpActive == true)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(0, 5, 0);
+		modelStack.Rotate(constRotation * 4, 0, 1, 0);
+		modelStack.PushMatrix();
+		modelStack.Scale(0.5, 0.5, 0.5);
+			modelStack.PushMatrix();
+			modelStack.Rotate(constRotation * 4, 1, 1, 0);
+				RenderMesh(meshList[GEO_TORUS], false);
+			modelStack.PopMatrix();
+			modelStack.PushMatrix();
+			modelStack.Rotate(constRotation * 4, -1, 0, 1);
+				RenderMesh(meshList[GEO_TORUS], false);
+			modelStack.PopMatrix();
+		modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		modelStack.Scale(0.3, 0.3, 0.3);
+		RenderMesh(meshList[GEO_POWERUP], false);
+		modelStack.PopMatrix();
+	}
+}
+
+/****************************************************************************/
+/*!
+\brief
+Method that renders text on screen at certain moments in the game
+*/
+/****************************************************************************/
+
 void SP2_Scene::RenderLevel()
 {
 	if (wave == 1)
@@ -1010,6 +1267,14 @@ void SP2_Scene::RenderLevel()
 		}
 	}
 }
+
+/****************************************************************************/
+/*!
+\brief
+Method that renders the space scene
+*/
+/****************************************************************************/
+
 void SP2_Scene::RenderSpaceMap()
 {
 	for (auto i : MothershipHandler.RobotList)
@@ -1142,6 +1407,14 @@ void SP2_Scene::RenderSpaceMap()
 		modelStack.PopMatrix();
 	}
 }
+
+/****************************************************************************/
+/*!
+\brief
+Method that renders and animates the drivable ship
+*/
+/****************************************************************************/
+
 void SP2_Scene::RenderShip()
 {
 	if (repairShipPhase == 1 || repairShipPhase == 2)
@@ -1198,6 +1471,13 @@ void SP2_Scene::RenderShip()
 	}
 }
 
+/****************************************************************************/
+/*!
+\brief
+Method that controls the bullets of the enemy mothership
+*/
+/****************************************************************************/
+
 void SP2_Scene::MothershipBulletSpawner(float BulletDamage, float BulletSpeed, int choice, Vector3 position)
 {
 	if (choice == 1){
@@ -1231,6 +1511,13 @@ void SP2_Scene::MothershipBulletSpawner(float BulletDamage, float BulletSpeed, i
 		ShotTimer = 0;
 	}
 }
+
+/****************************************************************************/
+/*!
+\brief
+Method where values are changed
+*/
+/****************************************************************************/
 
 void SP2_Scene::Update(double dt)
 {
@@ -1381,6 +1668,7 @@ void SP2_Scene::Update(double dt)
 			camera.CanMoveCamera = true;
 			MenuBGM->stop();
 			PlayBGM = false;
+			IsReloading = true;
 			InitKeyVariables();
 		}
 		else if (buttonPress && UICrystalChoice == 2 && Application::IsKeyPressed(VK_LBUTTON))
@@ -1627,7 +1915,7 @@ void SP2_Scene::Update(double dt)
 				CurrentAmmo = WepSys.MaxAmmo;
 			}
 		}
-		if (!IsReloading && CanFire && weaponValue != 13 && weaponValue <= 14 && Application::IsKeyPressed(VK_LBUTTON))
+		if (!IsReloading && CanFire && weaponValue != 13 && weaponValue < 15 && Application::IsKeyPressed(VK_LBUTTON))
 		{
 			if (CurrentAmmo <= 0)
 			{
@@ -1799,6 +2087,13 @@ void SP2_Scene::Update(double dt)
 	}
 }
 
+/****************************************************************************/
+/*!
+\brief
+Method that renders the skybox
+*/
+/****************************************************************************/
+
 void SP2_Scene::RenderSkybox(Vector3 Position)
 {
 	float scaleSB = 2500;
@@ -1854,6 +2149,13 @@ void SP2_Scene::RenderSkybox(Vector3 Position)
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
 }
+
+/****************************************************************************/
+/*!
+\brief
+Method that renders the weapon select screen
+*/
+/****************************************************************************/
 
 void SP2_Scene::RenderWepScreen(bool render, Vector3 choices)
 {
@@ -1964,6 +2266,13 @@ void SP2_Scene::RenderWepScreen(bool render, Vector3 choices)
 	}
 }
 
+/****************************************************************************/
+/*!
+\brief
+Method that renders the teleporters in the scene
+*/
+/****************************************************************************/
+
 void SP2_Scene::RenderTeleporter(bool render)
 {
 	if (render)
@@ -1975,16 +2284,12 @@ void SP2_Scene::RenderTeleporter(bool render)
 	}
 }
 
-void SP2_Scene::RenderGateText(bool render)
-{
-	if (render)
-	{
-		modelStack.PushMatrix();
-		RenderImageOnScreen(UI_BG, 30, 2.75, 80, 25);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Press <E> to open", Color(0.000f, 0.808f, 0.820f), 2.5, 68.5, 25);
-		modelStack.PopMatrix();
-	}
-}
+/****************************************************************************/
+/*!
+\brief
+Method that renders the user interface
+*/
+/****************************************************************************/
 
 void SP2_Scene::RenderUI()
 {
@@ -2075,6 +2380,13 @@ void SP2_Scene::RenderUI()
 	}
 }
 
+/****************************************************************************/
+/*!
+\brief
+Method that renders the rocks in the scene
+*/
+/****************************************************************************/
+
 void SP2_Scene::RenderRocks()
 {
 	int range = 6;
@@ -2100,6 +2412,13 @@ void SP2_Scene::RenderRocks()
 		}
 	}
 }
+
+/****************************************************************************/
+/*!
+\brief
+Method that renders everything in the game
+*/
+/****************************************************************************/
 
 void SP2_Scene::Render(double dt)
 {
@@ -2211,7 +2530,7 @@ void SP2_Scene::Render(double dt)
 		modelStack.Translate(0, 5, 0);
 		//Logo
 			modelStack.PushMatrix();
-				modelStack.Translate(-6, 4, 0);
+				modelStack.Translate(-6, 3, 0);
 				modelStack.Rotate(10, 0, 1, 0);
 				RenderImageInMap(UI_Logo, 15, 7.5);
 			modelStack.PopMatrix();
@@ -2263,8 +2582,9 @@ void SP2_Scene::Render(double dt)
 
 		//Help
 		modelStack.PushMatrix();
+		modelStack.Scale(0.75, 0.75, 0.75);
 			modelStack.Rotate(10, 0, 1, 0);
-			modelStack.Translate(-6, 2, 0);
+			modelStack.Translate(-8, 2, 0);
 			RenderImageInMap(UI_LoadingBG, 15, 5);
 			modelStack.Translate(-6, 1, 0);
 			RenderText(meshList[GEO_TEXT], "Move Your Mouse To Choose!", Color(1, 1, 1));
@@ -2357,11 +2677,21 @@ void SP2_Scene::Render(double dt)
 			RenderMesh(meshList[GEO_BULLET], false);
 			modelStack.PopMatrix();
 		}
+
 		GameState();
+		
 		//DO NOT RENDER ANYTHING UNDER THIS//
 		RenderUI();
+		RenderPowerUp(PowerUpVal);
 	}
 }
+
+/****************************************************************************/
+/*!
+\brief
+Method that closes the program
+*/
+/****************************************************************************/
 
 void SP2_Scene::Exit()
 {

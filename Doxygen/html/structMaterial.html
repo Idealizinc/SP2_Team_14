@@ -53,19 +53,23 @@
 </div><!--header-->
 <div class="contents">
 
+<p>Defines the methods and variables for light properties.  
+ <a href="structMaterial.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Material_8h_source.html">Material.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Material:</div>
 <div class="dyncontent">
 <div class="center"><img src="structMaterial__coll__graph.png" border="0" usemap="#Material_coll__map" alt="Collaboration graph"/></div>
 <map name="Material_coll__map" id="Material_coll__map">
-<area shape="rect" id="node3" href="structComponent.html" title="Component" alt="" coords="111,124,199,151"/>
+<area shape="rect" id="node3" href="structComponent.html" title="Defines the methods and variables for light properties. " alt="" coords="111,124,199,151"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a137e987401b63eb7c6c27c3e38bc74b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMaterial.html#a137e987401b63eb7c6c27c3e38bc74b5">Material</a> ()</td></tr>
+<tr class="memdesc:a137e987401b63eb7c6c27c3e38bc74b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default light properties.  <a href="#a137e987401b63eb7c6c27c3e38bc74b5">More...</a><br /></td></tr>
 <tr class="separator:a137e987401b63eb7c6c27c3e38bc74b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -80,8 +84,10 @@ Data Fields</h2></td></tr>
 <tr class="separator:a07cec8956c43f81adeb6ba7aea104915"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="Material_8h_source.html#l00011">11</a> of file <a class="el" href="Material_8h_source.html">Material.h</a>.</p>
+<div class="textblock"><p>Defines the methods and variables for light properties. </p>
+<p>Struct <a class="el" href="structMaterial.html" title="Defines the methods and variables for light properties. ">Material</a>: </p>
+
+<p>Definition at line <a class="el" href="Material_8h_source.html#l00035">35</a> of file <a class="el" href="Material_8h_source.html">Material.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a137e987401b63eb7c6c27c3e38bc74b5"></a>
 <div class="memitem">
@@ -96,9 +102,18 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Material_8cpp_source.html#l00003">3</a> of file <a class="el" href="Material_8cpp_source.html">Material.cpp</a>.</p>
+<p>Sets the default light properties. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kAmbient</td><td>- determines the amount of ambience caused by light kDiffuse - determines the amount of diffusion of light kSpecular - determines the amount of specular kShininess - determines the shininess </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>values for boundaries </dd></dl>
 
-<p>References <a class="el" href="Material_8h_source.html#l00014">kAmbient</a>, <a class="el" href="Material_8h_source.html#l00015">kDiffuse</a>, <a class="el" href="Material_8h_source.html#l00017">kShininess</a>, <a class="el" href="Material_8h_source.html#l00016">kSpecular</a>, and <a class="el" href="Material_8h_source.html#l00008">Component::Set()</a>.</p>
+<p>Definition at line <a class="el" href="Material_8cpp_source.html#l00027">27</a> of file <a class="el" href="Material_8cpp_source.html">Material.cpp</a>.</p>
+
+<p>References <a class="el" href="Material_8h_source.html#l00038">kAmbient</a>, <a class="el" href="Material_8h_source.html#l00039">kDiffuse</a>, <a class="el" href="Material_8h_source.html#l00041">kShininess</a>, <a class="el" href="Material_8h_source.html#l00040">kSpecular</a>, and <a class="el" href="Material_8h_source.html#l00025">Component::Set()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -123,9 +138,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Material_8h_source.html#l00014">14</a> of file <a class="el" href="Material_8h_source.html">Material.h</a>.</p>
+<p>Definition at line <a class="el" href="Material_8h_source.html#l00038">38</a> of file <a class="el" href="Material_8h_source.html">Material.h</a>.</p>
 
-<p>Referenced by <a class="el" href="Material_8cpp_source.html#l00003">Material()</a>, <a class="el" href="Particle_8cpp_source.html#l00169">Particle::RenderMesh()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l00629">SP2_Scene::RenderMesh()</a>.</p>
+<p>Referenced by <a class="el" href="Material_8cpp_source.html#l00027">Material()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l00788">SP2_Scene::RenderMesh()</a>.</p>
 
 </div>
 </div>
@@ -139,9 +154,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Material_8h_source.html#l00015">15</a> of file <a class="el" href="Material_8h_source.html">Material.h</a>.</p>
+<p>Definition at line <a class="el" href="Material_8h_source.html#l00039">39</a> of file <a class="el" href="Material_8h_source.html">Material.h</a>.</p>
 
-<p>Referenced by <a class="el" href="Material_8cpp_source.html#l00003">Material()</a>, <a class="el" href="Particle_8cpp_source.html#l00169">Particle::RenderMesh()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l00629">SP2_Scene::RenderMesh()</a>.</p>
+<p>Referenced by <a class="el" href="Material_8cpp_source.html#l00027">Material()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l00788">SP2_Scene::RenderMesh()</a>.</p>
 
 </div>
 </div>
@@ -155,9 +170,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Material_8h_source.html#l00017">17</a> of file <a class="el" href="Material_8h_source.html">Material.h</a>.</p>
+<p>Definition at line <a class="el" href="Material_8h_source.html#l00041">41</a> of file <a class="el" href="Material_8h_source.html">Material.h</a>.</p>
 
-<p>Referenced by <a class="el" href="Material_8cpp_source.html#l00003">Material()</a>, <a class="el" href="Particle_8cpp_source.html#l00169">Particle::RenderMesh()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l00629">SP2_Scene::RenderMesh()</a>.</p>
+<p>Referenced by <a class="el" href="Material_8cpp_source.html#l00027">Material()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l00788">SP2_Scene::RenderMesh()</a>.</p>
 
 </div>
 </div>
@@ -171,9 +186,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="Material_8h_source.html#l00016">16</a> of file <a class="el" href="Material_8h_source.html">Material.h</a>.</p>
+<p>Definition at line <a class="el" href="Material_8h_source.html#l00040">40</a> of file <a class="el" href="Material_8h_source.html">Material.h</a>.</p>
 
-<p>Referenced by <a class="el" href="Material_8cpp_source.html#l00003">Material()</a>, <a class="el" href="Particle_8cpp_source.html#l00169">Particle::RenderMesh()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l00629">SP2_Scene::RenderMesh()</a>.</p>
+<p>Referenced by <a class="el" href="Material_8cpp_source.html#l00027">Material()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l00788">SP2_Scene::RenderMesh()</a>.</p>
 
 </div>
 </div>

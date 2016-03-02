@@ -63,43 +63,43 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="360">
+      <node id="320">
         <label>irrklang::IAudioStreamLoader</label>
         <link refid="classirrklang_1_1IAudioStreamLoader"/>
-        <childnode refid="361" relation="public-inheritance">
+        <childnode refid="321" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="359">
+      <node id="319">
         <label>irrklang::CIrrKlangAudioStreamLoaderMP3</label>
         <link refid="classirrklang_1_1CIrrKlangAudioStreamLoaderMP3"/>
-        <childnode refid="360" relation="public-inheritance">
+        <childnode refid="320" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="361">
+      <node id="321">
         <label>irrklang::IRefCounted</label>
         <link refid="classirrklang_1_1IRefCounted"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="363">
+      <node id="323">
         <label>irrklang::IAudioStreamLoader</label>
         <link refid="classirrklang_1_1IAudioStreamLoader"/>
-        <childnode refid="364" relation="public-inheritance">
+        <childnode refid="324" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="365">
+      <node id="325">
         <label>int</label>
       </node>
-      <node id="362">
+      <node id="322">
         <label>irrklang::CIrrKlangAudioStreamLoaderMP3</label>
         <link refid="classirrklang_1_1CIrrKlangAudioStreamLoaderMP3"/>
-        <childnode refid="363" relation="public-inheritance">
+        <childnode refid="323" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="364">
+      <node id="324">
         <label>irrklang::IRefCounted</label>
         <link refid="classirrklang_1_1IRefCounted"/>
-        <childnode refid="365" relation="usage">
+        <childnode refid="325" relation="usage">
           <edgelabel>ReferenceCounter</edgelabel>
         </childnode>
       </node>

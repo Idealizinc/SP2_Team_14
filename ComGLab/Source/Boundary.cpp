@@ -20,7 +20,6 @@ Sets the minimum and maximum x,y and z boundaries.
 		zMax - maxinum point for z-axis
 		yMin - minimum point for y-axis
 		yMax - maximum point for y-axis
-\exception N/A
 \return
 values for boundaries
 */
@@ -50,7 +49,6 @@ Checks if the players position is outside of the boundaries set
 		playerCoordX - Player's position on the x-axis
 		playerCoordZ - Player's position on the z-axis
 		playerCoordY - Player's position on the y-axis
-\exception N/A
 \return
 Returns false if player is outside of the boundaries
 */

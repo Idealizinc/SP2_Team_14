@@ -15,10 +15,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Material.h" line="14" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="14" bodyend="-1"/>
-        <referencedby refid="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" compoundref="Material_8cpp" startline="3" endline="9">Material</referencedby>
-        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">Particle::RenderMesh</referencedby>
-        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="629" endline="670">SP2_Scene::RenderMesh</referencedby>
+        <location file="ComGLab/Source/Material.h" line="38" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" compoundref="Material_8cpp" startline="27" endline="33">Material</referencedby>
+        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="788" endline="829">SP2_Scene::RenderMesh</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structMaterial_1aa88dd619cacf46e2f26ddd23fe032898" prot="public" static="no" mutable="no">
         <type><ref refid="structComponent" kindref="compound">Component</ref></type>
@@ -31,10 +30,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Material.h" line="15" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="15" bodyend="-1"/>
-        <referencedby refid="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" compoundref="Material_8cpp" startline="3" endline="9">Material</referencedby>
-        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">Particle::RenderMesh</referencedby>
-        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="629" endline="670">SP2_Scene::RenderMesh</referencedby>
+        <location file="ComGLab/Source/Material.h" line="39" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" compoundref="Material_8cpp" startline="27" endline="33">Material</referencedby>
+        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="788" endline="829">SP2_Scene::RenderMesh</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structMaterial_1a97cc0bf34b02c758b198d12dd24e96e2" prot="public" static="no" mutable="no">
         <type><ref refid="structComponent" kindref="compound">Component</ref></type>
@@ -47,10 +45,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Material.h" line="16" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="16" bodyend="-1"/>
-        <referencedby refid="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" compoundref="Material_8cpp" startline="3" endline="9">Material</referencedby>
-        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">Particle::RenderMesh</referencedby>
-        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="629" endline="670">SP2_Scene::RenderMesh</referencedby>
+        <location file="ComGLab/Source/Material.h" line="40" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" compoundref="Material_8cpp" startline="27" endline="33">Material</referencedby>
+        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="788" endline="829">SP2_Scene::RenderMesh</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structMaterial_1a07cec8956c43f81adeb6ba7aea104915" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -63,10 +60,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Material.h" line="17" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="17" bodyend="-1"/>
-        <referencedby refid="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" compoundref="Material_8cpp" startline="3" endline="9">Material</referencedby>
-        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">Particle::RenderMesh</referencedby>
-        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="629" endline="670">SP2_Scene::RenderMesh</referencedby>
+        <location file="ComGLab/Source/Material.h" line="41" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" compoundref="Material_8cpp" startline="27" endline="33">Material</referencedby>
+        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="788" endline="829">SP2_Scene::RenderMesh</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -76,50 +72,59 @@
         <argsstring>()</argsstring>
         <name>Material</name>
         <briefdescription>
-        </briefdescription>
+<para>Sets the default light properties. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>kAmbient</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- determines the amount of ambience caused by light kDiffuse - determines the amount of diffusion of light kSpecular - determines the amount of specular kShininess - determines the shininess </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>values for boundaries </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Material.h" line="13" column="1" bodyfile="ComGLab/Source/Material.cpp" bodystart="3" bodyend="9"/>
-        <references refid="structMaterial_1ab3819b3151cbf3ac1892195ab091e3b8" compoundref="Material_8h" startline="14">kAmbient</references>
-        <references refid="structMaterial_1aa88dd619cacf46e2f26ddd23fe032898" compoundref="Material_8h" startline="15">kDiffuse</references>
-        <references refid="structMaterial_1a07cec8956c43f81adeb6ba7aea104915" compoundref="Material_8h" startline="17">kShininess</references>
-        <references refid="structMaterial_1a97cc0bf34b02c758b198d12dd24e96e2" compoundref="Material_8h" startline="16">kSpecular</references>
-        <references refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="8" endline="8">Component::Set</references>
+        <location file="ComGLab/Source/Material.h" line="37" column="1" bodyfile="ComGLab/Source/Material.cpp" bodystart="27" bodyend="33"/>
+        <references refid="structMaterial_1ab3819b3151cbf3ac1892195ab091e3b8" compoundref="Material_8h" startline="38">kAmbient</references>
+        <references refid="structMaterial_1aa88dd619cacf46e2f26ddd23fe032898" compoundref="Material_8h" startline="39">kDiffuse</references>
+        <references refid="structMaterial_1a07cec8956c43f81adeb6ba7aea104915" compoundref="Material_8h" startline="41">kShininess</references>
+        <references refid="structMaterial_1a97cc0bf34b02c758b198d12dd24e96e2" compoundref="Material_8h" startline="40">kSpecular</references>
+        <references refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="25" endline="25">Component::Set</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Defines the methods and variables for light properties. </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para>Struct <ref refid="structMaterial" kindref="compound">Material</ref>: </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="490">
+      <node id="450">
         <label>Component</label>
         <link refid="structComponent"/>
-        <childnode refid="489" relation="usage">
+        <childnode refid="449" relation="usage">
           <edgelabel>g</edgelabel>
           <edgelabel>r</edgelabel>
           <edgelabel>b</edgelabel>
         </childnode>
       </node>
-      <node id="488">
+      <node id="448">
         <label>Material</label>
         <link refid="structMaterial"/>
-        <childnode refid="489" relation="usage">
+        <childnode refid="449" relation="usage">
           <edgelabel>kShininess</edgelabel>
         </childnode>
-        <childnode refid="490" relation="usage">
+        <childnode refid="450" relation="usage">
           <edgelabel>kDiffuse</edgelabel>
           <edgelabel>kAmbient</edgelabel>
           <edgelabel>kSpecular</edgelabel>
         </childnode>
       </node>
-      <node id="489">
+      <node id="449">
         <label>float</label>
       </node>
     </collaborationgraph>
-    <location file="ComGLab/Source/Material.h" line="12" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="11" bodyend="18"/>
+    <location file="ComGLab/Source/Material.h" line="36" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="35" bodyend="42"/>
     <listofallmembers>
       <member refid="structMaterial_1ab3819b3151cbf3ac1892195ab091e3b8" prot="public" virt="non-virtual"><scope>Material</scope><name>kAmbient</name></member>
       <member refid="structMaterial_1aa88dd619cacf46e2f26ddd23fe032898" prot="public" virt="non-virtual"><scope>Material</scope><name>kDiffuse</name></member>

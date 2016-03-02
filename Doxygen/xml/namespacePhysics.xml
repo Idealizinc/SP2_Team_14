@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/CameraPhysics.h" line="6" column="1" bodyfile="ComGLab/Source/CameraPhysics.h" bodystart="6" bodyend="-1"/>
+        <location file="ComGLab/Source/CameraPhysics.h" line="16" column="1" bodyfile="ComGLab/Source/CameraPhysics.h" bodystart="16" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/CameraPhysics.h" line="8" column="1" bodyfile="ComGLab/Source/CameraPhysics.h" bodystart="8" bodyend="12"/>
+        <location file="ComGLab/Source/CameraPhysics.h" line="18" column="1" bodyfile="ComGLab/Source/CameraPhysics.h" bodystart="18" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="namespacePhysics_1ac965dc7f0546d97f6516629efae34f39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/CameraPhysics.h" line="15" column="1" bodyfile="ComGLab/Source/CameraPhysics.h" bodystart="15" bodyend="19"/>
+        <location file="ComGLab/Source/CameraPhysics.h" line="25" column="1" bodyfile="ComGLab/Source/CameraPhysics.h" bodystart="25" bodyend="29"/>
       </memberdef>
       <memberdef kind="function" id="namespacePhysics_1a7786dbf0eb40d778b6e33315d85e5631" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -112,13 +112,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/CameraPhysics.h" line="22" column="1" bodyfile="ComGLab/Source/CameraPhysics.h" bodystart="22" bodyend="25"/>
+        <location file="ComGLab/Source/CameraPhysics.h" line="32" column="1" bodyfile="ComGLab/Source/CameraPhysics.h" bodystart="32" bodyend="35"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="ComGLab/Source/CameraPhysics.h" line="5" column="1"/>
+    <location file="ComGLab/Source/CameraPhysics.h" line="15" column="1"/>
   </compounddef>
 </doxygen>

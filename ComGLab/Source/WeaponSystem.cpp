@@ -6,8 +6,17 @@
 \brief
 .cpp file that defines Weapon System
 */
-/****************************************************************************/
+/****************************************************************************/
+
 #include "WeaponSystem.h"
+
+
+/****************************************************************************/
+/*!
+\brief
+Constructor
+*/
+/****************************************************************************/
 
 WeaponSystem::~WeaponSystem()
 {
@@ -17,6 +26,14 @@ WeaponSystem::~WeaponSystem()
 	}
 }
 
+
+/****************************************************************************/
+/*!
+\brief
+Increments the position of each bullet
+*/
+/****************************************************************************/
+
 void WeaponSystem::IncrementPosition()
 {
 	for (std::list<RayCast>::iterator iter = BulletList.begin(); iter != BulletList.end(); ++iter)
@@ -24,6 +41,14 @@ void WeaponSystem::IncrementPosition()
 		(*iter).Move();
 	}
 }
+
+
+/****************************************************************************/
+/*!
+\brief
+Cleans up data to prevent memory leaks
+*/
+/****************************************************************************/
 
 void WeaponSystem::CleanUp()
 {
@@ -48,6 +73,14 @@ void WeaponSystem::CleanUp()
 	}
 }
 
+
+/****************************************************************************/
+/*!
+\brief
+Removes bullets from the list
+*/
+/****************************************************************************/
+
 void WeaponSystem::ClearList()
 {
 	for (std::list<RayCast>::iterator iter = BulletList.begin(); iter != BulletList.end(); /*++iter*/)
@@ -56,10 +89,35 @@ void WeaponSystem::ClearList()
 	}
 }
 
+
+/****************************************************************************/
+/*!
+\brief
+Returns the length of each bullet
+*/
+/****************************************************************************/
+
 float WeaponSystem::GetLength(RayCast Ray)
 {
 	return Ray.Position().Length();
 }
+
+
+/****************************************************************************/
+/*!
+\brief
+Sets the stats for each type of gun
+\param
+		wepVal - value that determines the type of gun used
+		ReloadTime - value that determines how long each gun takes to reload
+		RateOfFire - value that determines each weapon's rate of fire
+		Damage - value that determines each weapon's damage
+		Speed - value that determines the speed of each bullet
+		MaxAmmo - value that determines the maximum amount of ammo that each type of gun can hold
+\return
+Resulting values
+*/
+/****************************************************************************/
 
 void WeaponSystem::SetStats(int wepVal)
 {

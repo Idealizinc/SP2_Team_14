@@ -52,214 +52,217 @@
 <div class="title">LoadOBJ.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="LoadOBJ_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="LoadOBJ_8h.html">LoadOBJ.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="LoadOBJ_8h.html#aa634e9cac0a72d751731db6b4479cbda">    7</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="LoadOBJ_8cpp.html#aa634e9cac0a72d751731db6b4479cbda">LoadOBJ</a>(</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span> *file_path, </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        std::vector&lt;Position&gt; &amp; out_vertices, </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        std::vector&lt;TexCoord&gt; &amp; out_uvs, </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        std::vector&lt;Vector3&gt; &amp; out_normals</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;)</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        std::ifstream fileStream(file_path, std::ios::binary);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordflow">if</span> (!fileStream.is_open())</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;Impossible to open &quot;</span> &lt;&lt; file_path &lt;&lt; <span class="stringliteral">&quot;. Are you in the right directory ?\n&quot;</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        std::vector&lt;unsigned&gt; vertexIndices, uvIndices, normalIndices;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        std::vector&lt;Position&gt; temp_vertices;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        std::vector&lt;TexCoord&gt; temp_uvs;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        std::vector&lt;Vector3&gt; temp_normals;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">while</span> (!fileStream.eof()) {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <span class="keywordtype">char</span> buf[256];</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                fileStream.getline(buf, 256);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="keywordflow">if</span> (strncmp(<span class="stringliteral">&quot;v &quot;</span>, buf, 2) == 0) { </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                        <a class="code" href="structPosition.html">Position</a> vertex;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                        sscanf_s((buf + 2), <span class="stringliteral">&quot;%f%f%f&quot;</span>, &amp;vertex.<a class="code" href="structPosition.html#af684446cbf0f6d53386686283da6dcc6">x</a>, &amp;vertex.<a class="code" href="structPosition.html#a54a6182b5f7539295b32255808897d3f">y</a>, &amp;vertex.<a class="code" href="structPosition.html#a5dc8c08d3d7209ba538ad21ba604aa44">z</a>);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                        temp_vertices.push_back(vertex);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(<span class="stringliteral">&quot;vt &quot;</span>, buf, 3) == 0) { </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                        <a class="code" href="structTexCoord.html">TexCoord</a> texCoord;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                        sscanf_s((buf + 3), <span class="stringliteral">&quot;%f%f&quot;</span>, &amp;texCoord.<a class="code" href="structTexCoord.html#a3be8371ac57f9ddc6ff5853e4bb58190">u</a>, &amp;texCoord.<a class="code" href="structTexCoord.html#ad525bc2c53d6402267c51022db33f85e">v</a>);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                        temp_uvs.push_back(texCoord);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(<span class="stringliteral">&quot;vn &quot;</span>, buf, 3) == 0) { </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                        <a class="code" href="structVector3.html">Vector3</a> normal;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                        sscanf_s((buf + 3), <span class="stringliteral">&quot;%f%f%f&quot;</span>, &amp;normal.<a class="code" href="structVector3.html#a7e2d3237b29a2f29d7b3d8b2934e35f2">x</a>, &amp;normal.<a class="code" href="structVector3.html#a86eb35a9fa2d5a49e7fad66a35fa9c13">y</a>, &amp;normal.<a class="code" href="structVector3.html#aa8c9461eb24bd2c364258078811a3e9d">z</a>);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                        temp_normals.push_back(normal);</div>
+<a href="LoadOBJ_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/****************************************************************************/</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="LoadOBJ_8h.html">LoadOBJ.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="LoadOBJ_8h.html#aa634e9cac0a72d751731db6b4479cbda">   17</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="LoadOBJ_8cpp.html#aa634e9cac0a72d751731db6b4479cbda">LoadOBJ</a>(</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span> *file_path, </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        std::vector&lt;Position&gt; &amp; out_vertices, </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        std::vector&lt;TexCoord&gt; &amp; out_uvs, </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        std::vector&lt;Vector3&gt; &amp; out_normals</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        std::ifstream fileStream(file_path, std::ios::binary);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">if</span> (!fileStream.is_open())</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;Impossible to open &quot;</span> &lt;&lt; file_path &lt;&lt; <span class="stringliteral">&quot;. Are you in the right directory ?\n&quot;</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        std::vector&lt;unsigned&gt; vertexIndices, uvIndices, normalIndices;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        std::vector&lt;Position&gt; temp_vertices;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        std::vector&lt;TexCoord&gt; temp_uvs;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        std::vector&lt;Vector3&gt; temp_normals;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">while</span> (!fileStream.eof()) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordtype">char</span> buf[256];</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                fileStream.getline(buf, 256);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="keywordflow">if</span> (strncmp(<span class="stringliteral">&quot;v &quot;</span>, buf, 2) == 0) { </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                        <a class="code" href="structPosition.html">Position</a> vertex;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                        sscanf_s((buf + 2), <span class="stringliteral">&quot;%f%f%f&quot;</span>, &amp;vertex.<a class="code" href="structPosition.html#af684446cbf0f6d53386686283da6dcc6">x</a>, &amp;vertex.<a class="code" href="structPosition.html#a54a6182b5f7539295b32255808897d3f">y</a>, &amp;vertex.<a class="code" href="structPosition.html#a5dc8c08d3d7209ba538ad21ba604aa44">z</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                        temp_vertices.push_back(vertex);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(<span class="stringliteral">&quot;f &quot;</span>, buf, 2) == 0) { </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> vertexIndex[4], uvIndex[4], normalIndex[4];</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                        <span class="keywordtype">int</span> matches = sscanf_s((buf + 2), <span class="stringliteral">&quot;%d/%d/%d %d/%d/%d %d/%d/%d %d/%d/%d\n&quot;</span>,</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                &amp;vertexIndex[0], &amp;uvIndex[0], &amp;normalIndex[0],</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                &amp;vertexIndex[1], &amp;uvIndex[1], &amp;normalIndex[1],</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                                &amp;vertexIndex[2], &amp;uvIndex[2], &amp;normalIndex[2],</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                &amp;vertexIndex[3], &amp;uvIndex[3], &amp;normalIndex[3]);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                        <span class="keywordflow">if</span> (matches == 9) <span class="comment">//triangle</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                        {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                                vertexIndices.push_back(vertexIndex[0]);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                                vertexIndices.push_back(vertexIndex[1]);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                vertexIndices.push_back(vertexIndex[2]);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                                uvIndices.push_back(uvIndex[0]);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                uvIndices.push_back(uvIndex[1]);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                uvIndices.push_back(uvIndex[2]);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                normalIndices.push_back(normalIndex[0]);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                                normalIndices.push_back(normalIndex[1]);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                                normalIndices.push_back(normalIndex[2]);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                        }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (matches == 12) <span class="comment">//quad</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                        {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                                vertexIndices.push_back(vertexIndex[0]);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                                vertexIndices.push_back(vertexIndex[1]);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                vertexIndices.push_back(vertexIndex[2]);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                vertexIndices.push_back(vertexIndex[0]);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                                vertexIndices.push_back(vertexIndex[2]);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                                vertexIndices.push_back(vertexIndex[3]);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                                uvIndices.push_back(uvIndex[0]);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                uvIndices.push_back(uvIndex[1]);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                                uvIndices.push_back(uvIndex[2]);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                                uvIndices.push_back(uvIndex[0]);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                                uvIndices.push_back(uvIndex[2]);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                                uvIndices.push_back(uvIndex[3]);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                                normalIndices.push_back(normalIndex[0]);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                                normalIndices.push_back(normalIndex[1]);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                                normalIndices.push_back(normalIndex[2]);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                                normalIndices.push_back(normalIndex[0]);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                                normalIndices.push_back(normalIndex[2]);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                normalIndices.push_back(normalIndex[3]);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                        }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                        {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                std::cout &lt;&lt; <span class="stringliteral">&quot;Error line: &quot;</span> &lt;&lt; buf &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                                std::cout &lt;&lt; <span class="stringliteral">&quot;File can&#39;t be read by parser\n&quot;</span>;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                        }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        fileStream.close(); <span class="comment">// close file</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="comment">// For each vertex of each triangle, after fileStream.close()</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; vertexIndices.size(); ++i)</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <span class="comment">// Get the indices of its attributes</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> vertexIndex = vertexIndices[i];</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uvIndex = uvIndices[i];</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> normalIndex = normalIndices[i];</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                <span class="comment">// Get the attributes thanks to the index</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                <a class="code" href="structPosition.html">Position</a> vertex = temp_vertices[vertexIndex - 1];</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                <a class="code" href="structTexCoord.html">TexCoord</a> uv = temp_uvs[uvIndex - 1];</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <a class="code" href="structVector3.html">Vector3</a> normal = temp_normals[normalIndex - 1];</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <span class="comment">// Put the attributes in buffers</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                out_vertices.push_back(vertex);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                out_uvs.push_back(uv);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                out_normals.push_back(normal);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        }</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="structPackedVertex.html">  117</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structPackedVertex.html">PackedVertex</a>{</div>
-<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="structPackedVertex.html#adbd5c98e027ccce79a27381686efdb62">  118</a></span>&#160;        <a class="code" href="structPosition.html">Position</a> <a class="code" href="structPackedVertex.html#adbd5c98e027ccce79a27381686efdb62">position</a>;</div>
-<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="structPackedVertex.html#a86428554cc4e4c177eb1161bc3be0230">  119</a></span>&#160;        <a class="code" href="structTexCoord.html">TexCoord</a> <a class="code" href="structPackedVertex.html#a86428554cc4e4c177eb1161bc3be0230">uv</a>;</div>
-<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="structPackedVertex.html#ad7f8bd922bf90fb53ac5a27935179698">  120</a></span>&#160;        <a class="code" href="structVector3.html">Vector3</a> <a class="code" href="structPackedVertex.html#ad7f8bd922bf90fb53ac5a27935179698">normal</a>;</div>
-<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="structPackedVertex.html#a86a90d456e948b1105c7e8905f4fa385">  121</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="structPackedVertex.html#a86a90d456e948b1105c7e8905f4fa385">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="structPackedVertex.html">PackedVertex</a> that)<span class="keyword"> const</span>{</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                <span class="keywordflow">return</span> memcmp((<span class="keywordtype">void</span>*)<span class="keyword">this</span>, (<span class="keywordtype">void</span>*)&amp;that, <span class="keyword">sizeof</span>(<a class="code" href="structPackedVertex.html">PackedVertex</a>))&gt;0;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        };</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;};</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="LoadOBJ_8cpp.html#af43afccb67fd9c80513489b75fddb347">  126</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="LoadOBJ_8cpp.html#af43afccb67fd9c80513489b75fddb347">getSimilarVertexIndex_fast</a>( </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <a class="code" href="structPackedVertex.html">PackedVertex</a> &amp; packed, </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        std::map&lt;PackedVertex, unsigned short&gt; &amp; VertexToOutIndex,</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> &amp; result</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;){</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        std::map&lt;PackedVertex, unsigned short&gt;::iterator it = VertexToOutIndex.find(packed);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">if</span>(it == VertexToOutIndex.end())</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        }</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        {</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                result = it-&gt;second;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        }</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;}</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
-<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="LoadOBJ_8h.html#aa99ef9426a57205ed8acb8f7d41f3bae">  143</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="LoadOBJ_8cpp.html#aa99ef9426a57205ed8acb8f7d41f3bae">IndexVBO</a>(</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        std::vector&lt;Position&gt; &amp; in_vertices,</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        std::vector&lt;TexCoord&gt; &amp; in_uvs,</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        std::vector&lt;Vector3&gt; &amp; in_normals,</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        std::vector&lt;unsigned&gt; &amp; out_indices,</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        std::vector&lt;Vertex&gt; &amp; out_vertices</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;)</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;{</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        std::map&lt;PackedVertex,unsigned short&gt; VertexToOutIndex;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="comment">// For each input vertex</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; in_vertices.size(); ++i) </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(<span class="stringliteral">&quot;vt &quot;</span>, buf, 3) == 0) { </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                        <a class="code" href="structTexCoord.html">TexCoord</a> texCoord;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                        sscanf_s((buf + 3), <span class="stringliteral">&quot;%f%f&quot;</span>, &amp;texCoord.<a class="code" href="structTexCoord.html#a3be8371ac57f9ddc6ff5853e4bb58190">u</a>, &amp;texCoord.<a class="code" href="structTexCoord.html#ad525bc2c53d6402267c51022db33f85e">v</a>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                        temp_uvs.push_back(texCoord);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(<span class="stringliteral">&quot;vn &quot;</span>, buf, 3) == 0) { </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                        <a class="code" href="structVector3.html">Vector3</a> normal;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                        sscanf_s((buf + 3), <span class="stringliteral">&quot;%f%f%f&quot;</span>, &amp;normal.<a class="code" href="structVector3.html#a7e2d3237b29a2f29d7b3d8b2934e35f2">x</a>, &amp;normal.<a class="code" href="structVector3.html#a86eb35a9fa2d5a49e7fad66a35fa9c13">y</a>, &amp;normal.<a class="code" href="structVector3.html#aa8c9461eb24bd2c364258078811a3e9d">z</a>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                        temp_normals.push_back(normal);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strncmp(<span class="stringliteral">&quot;f &quot;</span>, buf, 2) == 0) { </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> vertexIndex[4], uvIndex[4], normalIndex[4];</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                        <span class="keywordtype">int</span> matches = sscanf_s((buf + 2), <span class="stringliteral">&quot;%d/%d/%d %d/%d/%d %d/%d/%d %d/%d/%d\n&quot;</span>,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                                &amp;vertexIndex[0], &amp;uvIndex[0], &amp;normalIndex[0],</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                &amp;vertexIndex[1], &amp;uvIndex[1], &amp;normalIndex[1],</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                &amp;vertexIndex[2], &amp;uvIndex[2], &amp;normalIndex[2],</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                &amp;vertexIndex[3], &amp;uvIndex[3], &amp;normalIndex[3]);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                        <span class="keywordflow">if</span> (matches == 9) <span class="comment">//triangle</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                        {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                vertexIndices.push_back(vertexIndex[0]);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                vertexIndices.push_back(vertexIndex[1]);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                                vertexIndices.push_back(vertexIndex[2]);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                                uvIndices.push_back(uvIndex[0]);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                                uvIndices.push_back(uvIndex[1]);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                uvIndices.push_back(uvIndex[2]);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                normalIndices.push_back(normalIndex[0]);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                                normalIndices.push_back(normalIndex[1]);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                                normalIndices.push_back(normalIndex[2]);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (matches == 12) <span class="comment">//quad</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                        {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                                vertexIndices.push_back(vertexIndex[0]);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                                vertexIndices.push_back(vertexIndex[1]);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                                vertexIndices.push_back(vertexIndex[2]);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                                vertexIndices.push_back(vertexIndex[0]);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                                vertexIndices.push_back(vertexIndex[2]);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                                vertexIndices.push_back(vertexIndex[3]);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                                uvIndices.push_back(uvIndex[0]);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                uvIndices.push_back(uvIndex[1]);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                                uvIndices.push_back(uvIndex[2]);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                                uvIndices.push_back(uvIndex[0]);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                                uvIndices.push_back(uvIndex[2]);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                uvIndices.push_back(uvIndex[3]);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                                normalIndices.push_back(normalIndex[0]);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                                normalIndices.push_back(normalIndex[1]);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                normalIndices.push_back(normalIndex[2]);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                                normalIndices.push_back(normalIndex[0]);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                                normalIndices.push_back(normalIndex[2]);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                                normalIndices.push_back(normalIndex[3]);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                        {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                                std::cout &lt;&lt; <span class="stringliteral">&quot;Error line: &quot;</span> &lt;&lt; buf &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                                std::cout &lt;&lt; <span class="stringliteral">&quot;File can&#39;t be read by parser\n&quot;</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                        }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        fileStream.close(); <span class="comment">// close file</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="comment">// For each vertex of each triangle, after fileStream.close()</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0; i &lt; vertexIndices.size(); ++i)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <span class="comment">// Get the indices of its attributes</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> vertexIndex = vertexIndices[i];</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uvIndex = uvIndices[i];</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> normalIndex = normalIndices[i];</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="comment">// Get the attributes thanks to the index</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <a class="code" href="structPosition.html">Position</a> vertex = temp_vertices[vertexIndex - 1];</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                <a class="code" href="structTexCoord.html">TexCoord</a> uv = temp_uvs[uvIndex - 1];</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <a class="code" href="structVector3.html">Vector3</a> normal = temp_normals[normalIndex - 1];</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                <span class="comment">// Put the attributes in buffers</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                out_vertices.push_back(vertex);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                out_uvs.push_back(uv);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                out_normals.push_back(normal);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="structPackedVertex.html">  127</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structPackedVertex.html">PackedVertex</a>{</div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="structPackedVertex.html#adbd5c98e027ccce79a27381686efdb62">  128</a></span>&#160;        <a class="code" href="structPosition.html">Position</a> <a class="code" href="structPackedVertex.html#adbd5c98e027ccce79a27381686efdb62">position</a>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="structPackedVertex.html#a86428554cc4e4c177eb1161bc3be0230">  129</a></span>&#160;        <a class="code" href="structTexCoord.html">TexCoord</a> <a class="code" href="structPackedVertex.html#a86428554cc4e4c177eb1161bc3be0230">uv</a>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="structPackedVertex.html#ad7f8bd922bf90fb53ac5a27935179698">  130</a></span>&#160;        <a class="code" href="structVector3.html">Vector3</a> <a class="code" href="structPackedVertex.html#ad7f8bd922bf90fb53ac5a27935179698">normal</a>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="structPackedVertex.html#a86a90d456e948b1105c7e8905f4fa385">  131</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="structPackedVertex.html#a86a90d456e948b1105c7e8905f4fa385">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="structPackedVertex.html">PackedVertex</a> that)<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                <span class="keywordflow">return</span> memcmp((<span class="keywordtype">void</span>*)<span class="keyword">this</span>, (<span class="keywordtype">void</span>*)&amp;that, <span class="keyword">sizeof</span>(<a class="code" href="structPackedVertex.html">PackedVertex</a>))&gt;0;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        };</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;};</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="LoadOBJ_8cpp.html#af43afccb67fd9c80513489b75fddb347">  136</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="LoadOBJ_8cpp.html#af43afccb67fd9c80513489b75fddb347">getSimilarVertexIndex_fast</a>( </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <a class="code" href="structPackedVertex.html">PackedVertex</a> &amp; packed, </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        std::map&lt;PackedVertex, unsigned short&gt; &amp; VertexToOutIndex,</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> &amp; result</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;){</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        std::map&lt;PackedVertex, unsigned short&gt;::iterator it = VertexToOutIndex.find(packed);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordflow">if</span>(it == VertexToOutIndex.end())</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                result = it-&gt;second;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="LoadOBJ_8h.html#aa99ef9426a57205ed8acb8f7d41f3bae">  153</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="LoadOBJ_8cpp.html#aa99ef9426a57205ed8acb8f7d41f3bae">IndexVBO</a>(</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        std::vector&lt;Position&gt; &amp; in_vertices,</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        std::vector&lt;TexCoord&gt; &amp; in_uvs,</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        std::vector&lt;Vector3&gt; &amp; in_normals,</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                <a class="code" href="structPackedVertex.html">PackedVertex</a> packed = {in_vertices[i], in_uvs[i], in_normals[i]};</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                <span class="comment">// Try to find a similar vertex in out_XXXX</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> index;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                <span class="keywordtype">bool</span> found = <a class="code" href="LoadOBJ_8cpp.html#af43afccb67fd9c80513489b75fddb347">getSimilarVertexIndex_fast</a>( packed, VertexToOutIndex, index);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        std::vector&lt;unsigned&gt; &amp; out_indices,</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        std::vector&lt;Vertex&gt; &amp; out_vertices</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;)</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;{</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        std::map&lt;PackedVertex,unsigned short&gt; VertexToOutIndex;</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                <span class="keywordflow">if</span> ( found )</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                { </div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                        <span class="comment">// A similar vertex is already in the VBO, use it instead !</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                        out_indices.push_back( index );</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                }</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                { </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                        <span class="comment">// If not, it needs to be added in the output data.</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                        <a class="code" href="structVertex.html">Vertex</a> v;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                        v.<a class="code" href="structVertex.html#a8791e77df49f6996a19a8dd17cee8d5c">pos</a>.<a class="code" href="structPosition.html#a2919b2441baf7a2f799791d65a1cfc15">Set</a>(in_vertices[i].x, in_vertices[i].y, in_vertices[i].z);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                        v.<a class="code" href="structVertex.html#a717d827da388b9c4847d1f5343959c78">texCoord</a>.<a class="code" href="structTexCoord.html#a64b4ceeb1733c478cb4b5b1216146c32">Set</a>(in_uvs[i].u, in_uvs[i].v);</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                        v.normal.Set(in_normals[i].x, in_normals[i].y, in_normals[i].z);</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                        v.color.Set(1, 1, 1);</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                        out_vertices.push_back(v);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                        <span class="keywordtype">unsigned</span> newindex = (unsigned)out_vertices.size() - 1;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                        out_indices.push_back( newindex );</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                        VertexToOutIndex[ packed ] = newindex;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                }</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        }</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;}</div>
-<div class="ttc" id="structPosition_html_af684446cbf0f6d53386686283da6dcc6"><div class="ttname"><a href="structPosition.html#af684446cbf0f6d53386686283da6dcc6">Position::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00008">Vertex.h:8</a></div></div>
-<div class="ttc" id="structPosition_html_a2919b2441baf7a2f799791d65a1cfc15"><div class="ttname"><a href="structPosition.html#a2919b2441baf7a2f799791d65a1cfc15">Position::Set</a></div><div class="ttdeci">void Set(float x, float y, float z)</div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00013">Vertex.h:13</a></div></div>
-<div class="ttc" id="LoadOBJ_8cpp_html_aa99ef9426a57205ed8acb8f7d41f3bae"><div class="ttname"><a href="LoadOBJ_8cpp.html#aa99ef9426a57205ed8acb8f7d41f3bae">IndexVBO</a></div><div class="ttdeci">void IndexVBO(std::vector&lt; Position &gt; &amp;in_vertices, std::vector&lt; TexCoord &gt; &amp;in_uvs, std::vector&lt; Vector3 &gt; &amp;in_normals, std::vector&lt; unsigned &gt; &amp;out_indices, std::vector&lt; Vertex &gt; &amp;out_vertices)</div><div class="ttdef"><b>Definition:</b> <a href="LoadOBJ_8cpp_source.html#l00143">LoadOBJ.cpp:143</a></div></div>
-<div class="ttc" id="structPackedVertex_html_ad7f8bd922bf90fb53ac5a27935179698"><div class="ttname"><a href="structPackedVertex.html#ad7f8bd922bf90fb53ac5a27935179698">PackedVertex::normal</a></div><div class="ttdeci">Vector3 normal</div><div class="ttdef"><b>Definition:</b> <a href="LoadOBJ_8cpp_source.html#l00120">LoadOBJ.cpp:120</a></div></div>
-<div class="ttc" id="structVertex_html_a8791e77df49f6996a19a8dd17cee8d5c"><div class="ttname"><a href="structVertex.html#a8791e77df49f6996a19a8dd17cee8d5c">Vertex::pos</a></div><div class="ttdeci">Position pos</div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00036">Vertex.h:36</a></div></div>
-<div class="ttc" id="structPackedVertex_html_a86a90d456e948b1105c7e8905f4fa385"><div class="ttname"><a href="structPackedVertex.html#a86a90d456e948b1105c7e8905f4fa385">PackedVertex::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const PackedVertex that) const </div><div class="ttdef"><b>Definition:</b> <a href="LoadOBJ_8cpp_source.html#l00121">LoadOBJ.cpp:121</a></div></div>
-<div class="ttc" id="structPackedVertex_html_adbd5c98e027ccce79a27381686efdb62"><div class="ttname"><a href="structPackedVertex.html#adbd5c98e027ccce79a27381686efdb62">PackedVertex::position</a></div><div class="ttdeci">Position position</div><div class="ttdef"><b>Definition:</b> <a href="LoadOBJ_8cpp_source.html#l00118">LoadOBJ.cpp:118</a></div></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="comment">// For each input vertex</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; in_vertices.size(); ++i) </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                <a class="code" href="structPackedVertex.html">PackedVertex</a> packed = {in_vertices[i], in_uvs[i], in_normals[i]};</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                <span class="comment">// Try to find a similar vertex in out_XXXX</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> index;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                <span class="keywordtype">bool</span> found = <a class="code" href="LoadOBJ_8cpp.html#af43afccb67fd9c80513489b75fddb347">getSimilarVertexIndex_fast</a>( packed, VertexToOutIndex, index);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                <span class="keywordflow">if</span> ( found )</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                { </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                        <span class="comment">// A similar vertex is already in the VBO, use it instead !</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                        out_indices.push_back( index );</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                { </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                        <span class="comment">// If not, it needs to be added in the output data.</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                        <a class="code" href="structVertex.html">Vertex</a> v;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                        v.<a class="code" href="structVertex.html#a8791e77df49f6996a19a8dd17cee8d5c">pos</a>.<a class="code" href="structPosition.html#a2919b2441baf7a2f799791d65a1cfc15">Set</a>(in_vertices[i].x, in_vertices[i].y, in_vertices[i].z);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                        v.<a class="code" href="structVertex.html#a717d827da388b9c4847d1f5343959c78">texCoord</a>.<a class="code" href="structTexCoord.html#a64b4ceeb1733c478cb4b5b1216146c32">Set</a>(in_uvs[i].u, in_uvs[i].v);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                        v.normal.Set(in_normals[i].x, in_normals[i].y, in_normals[i].z);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                        v.color.Set(1, 1, 1);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                        out_vertices.push_back(v);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                        <span class="keywordtype">unsigned</span> newindex = (unsigned)out_vertices.size() - 1;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                        out_indices.push_back( newindex );</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                        VertexToOutIndex[ packed ] = newindex;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;}</div>
+<div class="ttc" id="structPosition_html_af684446cbf0f6d53386686283da6dcc6"><div class="ttname"><a href="structPosition.html#af684446cbf0f6d53386686283da6dcc6">Position::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00025">Vertex.h:25</a></div></div>
+<div class="ttc" id="structPosition_html_a2919b2441baf7a2f799791d65a1cfc15"><div class="ttname"><a href="structPosition.html#a2919b2441baf7a2f799791d65a1cfc15">Position::Set</a></div><div class="ttdeci">void Set(float x, float y, float z)</div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00030">Vertex.h:30</a></div></div>
+<div class="ttc" id="LoadOBJ_8cpp_html_aa99ef9426a57205ed8acb8f7d41f3bae"><div class="ttname"><a href="LoadOBJ_8cpp.html#aa99ef9426a57205ed8acb8f7d41f3bae">IndexVBO</a></div><div class="ttdeci">void IndexVBO(std::vector&lt; Position &gt; &amp;in_vertices, std::vector&lt; TexCoord &gt; &amp;in_uvs, std::vector&lt; Vector3 &gt; &amp;in_normals, std::vector&lt; unsigned &gt; &amp;out_indices, std::vector&lt; Vertex &gt; &amp;out_vertices)</div><div class="ttdef"><b>Definition:</b> <a href="LoadOBJ_8cpp_source.html#l00153">LoadOBJ.cpp:153</a></div></div>
+<div class="ttc" id="structPackedVertex_html_ad7f8bd922bf90fb53ac5a27935179698"><div class="ttname"><a href="structPackedVertex.html#ad7f8bd922bf90fb53ac5a27935179698">PackedVertex::normal</a></div><div class="ttdeci">Vector3 normal</div><div class="ttdef"><b>Definition:</b> <a href="LoadOBJ_8cpp_source.html#l00130">LoadOBJ.cpp:130</a></div></div>
+<div class="ttc" id="structVertex_html_a8791e77df49f6996a19a8dd17cee8d5c"><div class="ttname"><a href="structVertex.html#a8791e77df49f6996a19a8dd17cee8d5c">Vertex::pos</a></div><div class="ttdeci">Position pos</div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00073">Vertex.h:73</a></div></div>
+<div class="ttc" id="structPackedVertex_html_a86a90d456e948b1105c7e8905f4fa385"><div class="ttname"><a href="structPackedVertex.html#a86a90d456e948b1105c7e8905f4fa385">PackedVertex::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const PackedVertex that) const </div><div class="ttdef"><b>Definition:</b> <a href="LoadOBJ_8cpp_source.html#l00131">LoadOBJ.cpp:131</a></div></div>
+<div class="ttc" id="structPackedVertex_html_adbd5c98e027ccce79a27381686efdb62"><div class="ttname"><a href="structPackedVertex.html#adbd5c98e027ccce79a27381686efdb62">PackedVertex::position</a></div><div class="ttdeci">Position position</div><div class="ttdef"><b>Definition:</b> <a href="LoadOBJ_8cpp_source.html#l00128">LoadOBJ.cpp:128</a></div></div>
 <div class="ttc" id="structVector3_html_aa8c9461eb24bd2c364258078811a3e9d"><div class="ttname"><a href="structVector3.html#aa8c9461eb24bd2c364258078811a3e9d">Vector3::z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definition:</b> <a href="Vector3_8h_source.html#l00027">Vector3.h:27</a></div></div>
-<div class="ttc" id="LoadOBJ_8h_html"><div class="ttname"><a href="LoadOBJ_8h.html">LoadOBJ.h</a></div></div>
-<div class="ttc" id="structVertex_html_a717d827da388b9c4847d1f5343959c78"><div class="ttname"><a href="structVertex.html#a717d827da388b9c4847d1f5343959c78">Vertex::texCoord</a></div><div class="ttdeci">TexCoord texCoord</div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00039">Vertex.h:39</a></div></div>
-<div class="ttc" id="structTexCoord_html_a64b4ceeb1733c478cb4b5b1216146c32"><div class="ttname"><a href="structTexCoord.html#a64b4ceeb1733c478cb4b5b1216146c32">TexCoord::Set</a></div><div class="ttdeci">void Set(float u, float v)</div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00030">Vertex.h:30</a></div></div>
-<div class="ttc" id="LoadOBJ_8cpp_html_af43afccb67fd9c80513489b75fddb347"><div class="ttname"><a href="LoadOBJ_8cpp.html#af43afccb67fd9c80513489b75fddb347">getSimilarVertexIndex_fast</a></div><div class="ttdeci">bool getSimilarVertexIndex_fast(PackedVertex &amp;packed, std::map&lt; PackedVertex, unsigned short &gt; &amp;VertexToOutIndex, unsigned short &amp;result)</div><div class="ttdef"><b>Definition:</b> <a href="LoadOBJ_8cpp_source.html#l00126">LoadOBJ.cpp:126</a></div></div>
-<div class="ttc" id="LoadOBJ_8cpp_html_aa634e9cac0a72d751731db6b4479cbda"><div class="ttname"><a href="LoadOBJ_8cpp.html#aa634e9cac0a72d751731db6b4479cbda">LoadOBJ</a></div><div class="ttdeci">bool LoadOBJ(const char *file_path, std::vector&lt; Position &gt; &amp;out_vertices, std::vector&lt; TexCoord &gt; &amp;out_uvs, std::vector&lt; Vector3 &gt; &amp;out_normals)</div><div class="ttdef"><b>Definition:</b> <a href="LoadOBJ_8cpp_source.html#l00007">LoadOBJ.cpp:7</a></div></div>
-<div class="ttc" id="structVertex_html"><div class="ttname"><a href="structVertex.html">Vertex</a></div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00034">Vertex.h:34</a></div></div>
+<div class="ttc" id="LoadOBJ_8h_html"><div class="ttname"><a href="LoadOBJ_8h.html">LoadOBJ.h</a></div><div class="ttdoc">Header file for code that loads OBJ files. </div></div>
+<div class="ttc" id="structVertex_html_a717d827da388b9c4847d1f5343959c78"><div class="ttname"><a href="structVertex.html#a717d827da388b9c4847d1f5343959c78">Vertex::texCoord</a></div><div class="ttdeci">TexCoord texCoord</div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00076">Vertex.h:76</a></div></div>
+<div class="ttc" id="structTexCoord_html_a64b4ceeb1733c478cb4b5b1216146c32"><div class="ttname"><a href="structTexCoord.html#a64b4ceeb1733c478cb4b5b1216146c32">TexCoord::Set</a></div><div class="ttdeci">void Set(float u, float v)</div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00061">Vertex.h:61</a></div></div>
+<div class="ttc" id="LoadOBJ_8cpp_html_af43afccb67fd9c80513489b75fddb347"><div class="ttname"><a href="LoadOBJ_8cpp.html#af43afccb67fd9c80513489b75fddb347">getSimilarVertexIndex_fast</a></div><div class="ttdeci">bool getSimilarVertexIndex_fast(PackedVertex &amp;packed, std::map&lt; PackedVertex, unsigned short &gt; &amp;VertexToOutIndex, unsigned short &amp;result)</div><div class="ttdef"><b>Definition:</b> <a href="LoadOBJ_8cpp_source.html#l00136">LoadOBJ.cpp:136</a></div></div>
+<div class="ttc" id="LoadOBJ_8cpp_html_aa634e9cac0a72d751731db6b4479cbda"><div class="ttname"><a href="LoadOBJ_8cpp.html#aa634e9cac0a72d751731db6b4479cbda">LoadOBJ</a></div><div class="ttdeci">bool LoadOBJ(const char *file_path, std::vector&lt; Position &gt; &amp;out_vertices, std::vector&lt; TexCoord &gt; &amp;out_uvs, std::vector&lt; Vector3 &gt; &amp;out_normals)</div><div class="ttdef"><b>Definition:</b> <a href="LoadOBJ_8cpp_source.html#l00017">LoadOBJ.cpp:17</a></div></div>
+<div class="ttc" id="structVertex_html"><div class="ttname"><a href="structVertex.html">Vertex</a></div><div class="ttdoc">Defines the methods for Vertex. </div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00071">Vertex.h:71</a></div></div>
 <div class="ttc" id="structVector3_html"><div class="ttname"><a href="structVector3.html">Vector3</a></div><div class="ttdoc">Defines a 3D vector and its methods. </div><div class="ttdef"><b>Definition:</b> <a href="Vector3_8h_source.html#l00025">Vector3.h:25</a></div></div>
-<div class="ttc" id="structPackedVertex_html"><div class="ttname"><a href="structPackedVertex.html">PackedVertex</a></div><div class="ttdef"><b>Definition:</b> <a href="LoadOBJ_8cpp_source.html#l00117">LoadOBJ.cpp:117</a></div></div>
-<div class="ttc" id="structPosition_html_a5dc8c08d3d7209ba538ad21ba604aa44"><div class="ttname"><a href="structPosition.html#a5dc8c08d3d7209ba538ad21ba604aa44">Position::z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00008">Vertex.h:8</a></div></div>
-<div class="ttc" id="structTexCoord_html_ad525bc2c53d6402267c51022db33f85e"><div class="ttname"><a href="structTexCoord.html#ad525bc2c53d6402267c51022db33f85e">TexCoord::v</a></div><div class="ttdeci">float v</div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00028">Vertex.h:28</a></div></div>
+<div class="ttc" id="structPackedVertex_html"><div class="ttname"><a href="structPackedVertex.html">PackedVertex</a></div><div class="ttdef"><b>Definition:</b> <a href="LoadOBJ_8cpp_source.html#l00127">LoadOBJ.cpp:127</a></div></div>
+<div class="ttc" id="structPosition_html_a5dc8c08d3d7209ba538ad21ba604aa44"><div class="ttname"><a href="structPosition.html#a5dc8c08d3d7209ba538ad21ba604aa44">Position::z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00025">Vertex.h:25</a></div></div>
+<div class="ttc" id="structTexCoord_html_ad525bc2c53d6402267c51022db33f85e"><div class="ttname"><a href="structTexCoord.html#ad525bc2c53d6402267c51022db33f85e">TexCoord::v</a></div><div class="ttdeci">float v</div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00059">Vertex.h:59</a></div></div>
 <div class="ttc" id="structVector3_html_a86eb35a9fa2d5a49e7fad66a35fa9c13"><div class="ttname"><a href="structVector3.html#a86eb35a9fa2d5a49e7fad66a35fa9c13">Vector3::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="Vector3_8h_source.html#l00027">Vector3.h:27</a></div></div>
-<div class="ttc" id="structPosition_html"><div class="ttname"><a href="structPosition.html">Position</a></div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00006">Vertex.h:6</a></div></div>
+<div class="ttc" id="structPosition_html"><div class="ttname"><a href="structPosition.html">Position</a></div><div class="ttdoc">Defines the methods and variables for setting position. </div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00023">Vertex.h:23</a></div></div>
 <div class="ttc" id="structVector3_html_a7e2d3237b29a2f29d7b3d8b2934e35f2"><div class="ttname"><a href="structVector3.html#a7e2d3237b29a2f29d7b3d8b2934e35f2">Vector3::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> <a href="Vector3_8h_source.html#l00027">Vector3.h:27</a></div></div>
-<div class="ttc" id="structPosition_html_a54a6182b5f7539295b32255808897d3f"><div class="ttname"><a href="structPosition.html#a54a6182b5f7539295b32255808897d3f">Position::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00008">Vertex.h:8</a></div></div>
-<div class="ttc" id="structTexCoord_html_a3be8371ac57f9ddc6ff5853e4bb58190"><div class="ttname"><a href="structTexCoord.html#a3be8371ac57f9ddc6ff5853e4bb58190">TexCoord::u</a></div><div class="ttdeci">float u</div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00028">Vertex.h:28</a></div></div>
-<div class="ttc" id="structTexCoord_html"><div class="ttname"><a href="structTexCoord.html">TexCoord</a></div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00026">Vertex.h:26</a></div></div>
-<div class="ttc" id="structPackedVertex_html_a86428554cc4e4c177eb1161bc3be0230"><div class="ttname"><a href="structPackedVertex.html#a86428554cc4e4c177eb1161bc3be0230">PackedVertex::uv</a></div><div class="ttdeci">TexCoord uv</div><div class="ttdef"><b>Definition:</b> <a href="LoadOBJ_8cpp_source.html#l00119">LoadOBJ.cpp:119</a></div></div>
+<div class="ttc" id="structPosition_html_a54a6182b5f7539295b32255808897d3f"><div class="ttname"><a href="structPosition.html#a54a6182b5f7539295b32255808897d3f">Position::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00025">Vertex.h:25</a></div></div>
+<div class="ttc" id="structTexCoord_html_a3be8371ac57f9ddc6ff5853e4bb58190"><div class="ttname"><a href="structTexCoord.html#a3be8371ac57f9ddc6ff5853e4bb58190">TexCoord::u</a></div><div class="ttdeci">float u</div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00059">Vertex.h:59</a></div></div>
+<div class="ttc" id="structTexCoord_html"><div class="ttname"><a href="structTexCoord.html">TexCoord</a></div><div class="ttdoc">Defines the methods and variables for setting TexCoord. </div><div class="ttdef"><b>Definition:</b> <a href="Vertex_8h_source.html#l00057">Vertex.h:57</a></div></div>
+<div class="ttc" id="structPackedVertex_html_a86428554cc4e4c177eb1161bc3be0230"><div class="ttname"><a href="structPackedVertex.html#a86428554cc4e4c177eb1161bc3be0230">PackedVertex::uv</a></div><div class="ttdeci">TexCoord uv</div><div class="ttdef"><b>Definition:</b> <a href="LoadOBJ_8cpp_source.html#l00129">LoadOBJ.cpp:129</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -272,16 +272,16 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="399">
+      <node id="359">
         <label>int32_t</label>
       </node>
-      <node id="398">
+      <node id="358">
         <label>GranuleDef</label>
         <link refid="structGranuleDef"/>
-        <childnode refid="399" relation="usage">
+        <childnode refid="359" relation="usage">
           <edgelabel>sb_hybrid</edgelabel>
         </childnode>
-        <childnode refid="400" relation="usage">
+        <childnode refid="360" relation="usage">
           <edgelabel>part2_3_length</edgelabel>
           <edgelabel>long_end</edgelabel>
           <edgelabel>preflag</edgelabel>
@@ -294,7 +294,7 @@
           <edgelabel>region_size</edgelabel>
           <edgelabel>...</edgelabel>
         </childnode>
-        <childnode refid="401" relation="usage">
+        <childnode refid="361" relation="usage">
           <edgelabel>switch_point</edgelabel>
           <edgelabel>scalefac_scale</edgelabel>
           <edgelabel>scale_factors</edgelabel>
@@ -303,10 +303,10 @@
           <edgelabel>count1table_select</edgelabel>
         </childnode>
       </node>
-      <node id="400">
+      <node id="360">
         <label>int</label>
       </node>
-      <node id="401">
+      <node id="361">
         <label>uint8_t</label>
       </node>
     </collaborationgraph>

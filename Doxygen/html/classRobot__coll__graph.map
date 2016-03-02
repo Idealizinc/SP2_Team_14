@@ -1,4 +1,4 @@
 <map id="Robot" name="Robot">
 <area shape="rect" id="node4" href="$structVector3.html" title="Defines a 3D vector and its methods. " alt="" coords="257,235,324,262"/>
-<area shape="rect" id="node6" href="$structBoundary.html" title="Boundary" alt="" coords="348,235,425,262"/>
+<area shape="rect" id="node6" href="$structBoundary.html" title="Defines 3D vectors and its methods. " alt="" coords="348,235,425,262"/>
 </map>

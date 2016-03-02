@@ -1,5 +1,4 @@
 <map id="MeshBuilder::GenerateQuad" name="MeshBuilder::GenerateQuad">
-<area shape="rect" id="node2" href="$classParticle.html#ad4131133df499c87e0a4e75ffdaae4a3" title="Particle::Init" alt="" coords="286,5,377,32"/>
-<area shape="rect" id="node3" href="$classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="SP2_Scene::Init" alt="" coords="471,81,587,108"/>
-<area shape="rect" id="node4" href="$classSP2__Scene.html#a4867e767b8f3f993a01c5c271c90d82e" title="SP2_Scene::initUIElements" alt="" coords="240,107,423,133"/>
+<area shape="rect" id="node2" href="$classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="Initializes values. " alt="" coords="471,5,587,32"/>
+<area shape="rect" id="node3" href="$classSP2__Scene.html#a4867e767b8f3f993a01c5c271c90d82e" title="SP2_Scene::initUIElements" alt="" coords="240,31,423,57"/>
 </map>

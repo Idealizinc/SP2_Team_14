@@ -59,20 +59,20 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="395">
+      <node id="355">
         <label>int</label>
       </node>
-      <node id="396">
+      <node id="356">
         <label>uint8_t</label>
       </node>
-      <node id="394">
+      <node id="354">
         <label>GetBitContext</label>
         <link refid="structGetBitContext"/>
-        <childnode refid="395" relation="usage">
+        <childnode refid="355" relation="usage">
           <edgelabel>size_in_bits</edgelabel>
           <edgelabel>index</edgelabel>
         </childnode>
-        <childnode refid="396" relation="usage">
+        <childnode refid="356" relation="usage">
           <edgelabel>buffer</edgelabel>
         </childnode>
       </node>

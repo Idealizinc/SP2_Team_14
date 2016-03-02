@@ -15,9 +15,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Vertex.h" line="28" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="28" bodyend="-1"/>
-        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="7" endline="115">LoadOBJ</referencedby>
-        <referencedby refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" compoundref="Vertex_8h" startline="30" endline="30">Set</referencedby>
+        <location file="ComGLab/Source/Vertex.h" line="59" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="17" endline="125">LoadOBJ</referencedby>
+        <referencedby refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" compoundref="Vertex_8h" startline="61" endline="61">Set</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structTexCoord_1ad525bc2c53d6402267c51022db33f85e" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -30,9 +30,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Vertex.h" line="28" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="28" bodyend="-1"/>
-        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="7" endline="115">LoadOBJ</referencedby>
-        <referencedby refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" compoundref="Vertex_8h" startline="30" endline="30">Set</referencedby>
+        <location file="ComGLab/Source/Vertex.h" line="59" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="17" endline="125">LoadOBJ</referencedby>
+        <referencedby refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" compoundref="Vertex_8h" startline="61" endline="61">Set</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -57,8 +57,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Vertex.h" line="29" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="29" bodyend="29"/>
-        <references refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" compoundref="Vertex_8h" startline="30" endline="30">Set</references>
+        <location file="ComGLab/Source/Vertex.h" line="60" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="60" bodyend="60"/>
+        <references refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" compoundref="Vertex_8h" startline="61" endline="61">Set</references>
       </memberdef>
       <memberdef kind="function" id="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -79,33 +79,33 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Vertex.h" line="30" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="30" bodyend="30"/>
-        <references refid="structTexCoord_1a3be8371ac57f9ddc6ff5853e4bb58190" compoundref="Vertex_8h" startline="28">u</references>
-        <references refid="structTexCoord_1ad525bc2c53d6402267c51022db33f85e" compoundref="Vertex_8h" startline="28">v</references>
-        <referencedby refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="80" endline="122">MeshBuilder::GenerateQuad</referencedby>
-        <referencedby refid="classMeshBuilder_1aac7c87881dbc08f8d41f2068e0f40c76" compoundref="MeshBuilder_8cpp" startline="839" endline="887">MeshBuilder::GenerateText</referencedby>
-        <referencedby refid="LoadOBJ_8h_1aa99ef9426a57205ed8acb8f7d41f3bae" compoundref="LoadOBJ_8cpp" startline="143" endline="183">IndexVBO</referencedby>
-        <referencedby refid="structTexCoord_1adec9b45bb816162fe2f22a677ebfc11c" compoundref="Vertex_8h" startline="29" endline="29">TexCoord</referencedby>
+        <location file="ComGLab/Source/Vertex.h" line="61" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="61" bodyend="61"/>
+        <references refid="structTexCoord_1a3be8371ac57f9ddc6ff5853e4bb58190" compoundref="Vertex_8h" startline="59">u</references>
+        <references refid="structTexCoord_1ad525bc2c53d6402267c51022db33f85e" compoundref="Vertex_8h" startline="59">v</references>
+        <referencedby refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="90" endline="132">MeshBuilder::GenerateQuad</referencedby>
+        <referencedby refid="classMeshBuilder_1aac7c87881dbc08f8d41f2068e0f40c76" compoundref="MeshBuilder_8cpp" startline="849" endline="897">MeshBuilder::GenerateText</referencedby>
+        <referencedby refid="LoadOBJ_8h_1aa99ef9426a57205ed8acb8f7d41f3bae" compoundref="LoadOBJ_8cpp" startline="153" endline="193">IndexVBO</referencedby>
+        <referencedby refid="structTexCoord_1adec9b45bb816162fe2f22a677ebfc11c" compoundref="Vertex_8h" startline="60" endline="60">TexCoord</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Defines the methods and variables for setting <ref refid="structTexCoord" kindref="compound">TexCoord</ref>. </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para>Struct <ref refid="structTexCoord" kindref="compound">TexCoord</ref>: </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="626">
+      <node id="560">
         <label>TexCoord</label>
         <link refid="structTexCoord"/>
-        <childnode refid="627" relation="usage">
+        <childnode refid="561" relation="usage">
           <edgelabel>u</edgelabel>
           <edgelabel>v</edgelabel>
         </childnode>
       </node>
-      <node id="627">
+      <node id="561">
         <label>float</label>
       </node>
     </collaborationgraph>
-    <location file="ComGLab/Source/Vertex.h" line="27" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="26" bodyend="31"/>
+    <location file="ComGLab/Source/Vertex.h" line="58" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="57" bodyend="62"/>
     <listofallmembers>
       <member refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" prot="public" virt="non-virtual"><scope>TexCoord</scope><name>Set</name></member>
       <member refid="structTexCoord_1adec9b45bb816162fe2f22a677ebfc11c" prot="public" virt="non-virtual"><scope>TexCoord</scope><name>TexCoord</name></member>

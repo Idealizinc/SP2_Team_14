@@ -8,8 +8,6 @@
     <innerfile refid="Boundary_8h">Boundary.h</innerfile>
     <innerfile refid="Camera_8cpp">Camera.cpp</innerfile>
     <innerfile refid="Camera_8h">Camera.h</innerfile>
-    <innerfile refid="Camera2_8cpp">Camera2.cpp</innerfile>
-    <innerfile refid="Camera2_8h">Camera2.h</innerfile>
     <innerfile refid="Camera3_8cpp">Camera3.cpp</innerfile>
     <innerfile refid="Camera3_8h">Camera3.h</innerfile>
     <innerfile refid="CameraPhysics_8h">CameraPhysics.h</innerfile>
@@ -28,8 +26,6 @@
     <innerfile refid="Mesh_8h">Mesh.h</innerfile>
     <innerfile refid="MeshBuilder_8cpp">MeshBuilder.cpp</innerfile>
     <innerfile refid="MeshBuilder_8h">MeshBuilder.h</innerfile>
-    <innerfile refid="Particle_8cpp">Particle.cpp</innerfile>
-    <innerfile refid="Particle_8h">Particle.h</innerfile>
     <innerfile refid="Raycast_8cpp">Raycast.cpp</innerfile>
     <innerfile refid="Raycast_8h">Raycast.h</innerfile>
     <innerfile refid="Robot_8cpp">Robot.cpp</innerfile>
@@ -39,8 +35,6 @@
     <innerfile refid="Scene_8h">Scene.h</innerfile>
     <innerfile refid="shader_8cpp">shader.cpp</innerfile>
     <innerfile refid="shader_8hpp">shader.hpp</innerfile>
-    <innerfile refid="SharedData_8h">SharedData.h</innerfile>
-    <innerfile refid="SoundSystem_8cpp">SoundSystem.cpp</innerfile>
     <innerfile refid="SoundSystem_8h">SoundSystem.h</innerfile>
     <innerfile refid="SP2__Scene_8cpp">SP2_Scene.cpp</innerfile>
     <innerfile refid="SP2__Scene_8h">SP2_Scene.h</innerfile>

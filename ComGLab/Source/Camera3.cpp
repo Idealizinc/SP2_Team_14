@@ -18,8 +18,6 @@
 /*!
 \brief
 Constructor for Camera
-\param N/A
-\exception N/A
 \return N/A
 */
 /****************************************************************************/
@@ -32,8 +30,6 @@ Camera3::Camera3()
 /*!
 \brief
 Destructor for Camera
-\param N/A
-\exception N/A
 \return N/A
 */
 /****************************************************************************/
@@ -68,7 +64,6 @@ Initializes variables
 		maxJump - value that determines the max jump height
 		maxJump2 - value that determines the max jump height on the second floor
 		level - value that determines what floor the player is on
-\exception N/A
 \return
 Resulting values and normalized vectors
 */
@@ -116,7 +111,6 @@ Method where values are changed
 		teleCheck - boolean that checks if the player is standing on the teleporters
 		shipCheck - boolean that checks if the player is standing close to the drivable ship
 		coreCheck - boolean that checks if the player is standing close to the base core
-\exception N/A
 \return
 Resulting boolean values
 */
@@ -165,7 +159,6 @@ Resets camera position to default value
 		pos - Vector3 coordinates for player's position
 		target - Vector3 coordinates that determines the direction the player faces
 		up - up vector used for calculation of other vectors
-\exception N/A
 \return
 Resulting normalized vectors
 */
@@ -196,7 +189,6 @@ Rotates the camera
 		pos - Vector3 coordinates for player's position
 		target - Vector3 coordinates that determines the direction the player faces
 		up - up vector used for calculation of other vectors
-\exception N/A
 \return
 Resulting normalized vectors
 */

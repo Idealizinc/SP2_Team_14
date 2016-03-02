@@ -16,9 +16,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Application.h" line="16" column="1" bodyfile="ComGLab/Source/Application.h" bodystart="16" bodyend="-1"/>
-        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="121" endline="141">Run</referencedby>
-        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+        <location file="ComGLab/Source/Application.h" line="32" column="1" bodyfile="ComGLab/Source/Application.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="130" endline="150">Run</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1523" endline="2089">SP2_Scene::Update</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -33,8 +33,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Application.h" line="20" column="1" bodyfile="ComGLab/Source/Application.h" bodystart="20" bodyend="-1"/>
-        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="121" endline="141">Run</referencedby>
+        <location file="ComGLab/Source/Application.h" line="36" column="1" bodyfile="ComGLab/Source/Application.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="130" endline="150">Run</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Application.h" line="10" column="1" bodyfile="ComGLab/Source/Application.cpp" bodystart="43" bodyend="45"/>
+        <location file="ComGLab/Source/Application.h" line="26" column="1" bodyfile="ComGLab/Source/Application.cpp" bodystart="52" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="classApplication_1a748bca84fefb9c12661cfaa2f623748d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Application.h" line="11" column="1" bodyfile="ComGLab/Source/Application.cpp" bodystart="47" bodyend="49"/>
+        <location file="ComGLab/Source/Application.h" line="27" column="1" bodyfile="ComGLab/Source/Application.cpp" bodystart="56" bodyend="58"/>
       </memberdef>
       <memberdef kind="function" id="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -75,13 +75,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Application.h" line="12" column="1" bodyfile="ComGLab/Source/Application.cpp" bodystart="56" bodyend="119"/>
-        <references refid="Application_8cpp_1a6e6d1771a9242858811be0a3569838fa" compoundref="Application_8cpp" startline="23" endline="27">error_callback</references>
-        <references refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" compoundref="Application_8cpp" startline="18">m_window</references>
-        <references refid="Application_8cpp_1aadcee9765075e232ca0720f80a76ad37" compoundref="Application_8cpp" startline="51" endline="54">resize_callback</references>
-        <references refid="Application_8cpp_1a9cd21b84bf993de559113a32edfc8e93" compoundref="Application_8cpp" startline="16">S_Height</references>
-        <references refid="Application_8cpp_1a2cbda9a4727e1cdbcae5c646d7fb0911" compoundref="Application_8cpp" startline="16">S_Width</references>
-        <referencedby refid="main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8cpp" startline="5" endline="11">main</referencedby>
+        <location file="ComGLab/Source/Application.h" line="28" column="1" bodyfile="ComGLab/Source/Application.cpp" bodystart="65" bodyend="128"/>
+        <references refid="Application_8cpp_1a6e6d1771a9242858811be0a3569838fa" compoundref="Application_8cpp" startline="32" endline="36">error_callback</references>
+        <references refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" compoundref="Application_8cpp" startline="27">m_window</references>
+        <references refid="Application_8cpp_1aadcee9765075e232ca0720f80a76ad37" compoundref="Application_8cpp" startline="60" endline="63">resize_callback</references>
+        <references refid="Application_8cpp_1a9cd21b84bf993de559113a32edfc8e93" compoundref="Application_8cpp" startline="25">S_Height</references>
+        <references refid="Application_8cpp_1a2cbda9a4727e1cdbcae5c646d7fb0911" compoundref="Application_8cpp" startline="25">S_Width</references>
+        <referencedby refid="main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8cpp" startline="13" endline="19">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -94,20 +94,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Application.h" line="13" column="1" bodyfile="ComGLab/Source/Application.cpp" bodystart="121" bodyend="141"/>
-        <references refid="classApplication_1ae02b37c3fd9151bc11e379db0fc51f22" compoundref="Application_8h" startline="16">CloseGame</references>
+        <location file="ComGLab/Source/Application.h" line="29" column="1" bodyfile="ComGLab/Source/Application.cpp" bodystart="130" bodyend="150"/>
+        <references refid="classApplication_1ae02b37c3fd9151bc11e379db0fc51f22" compoundref="Application_8h" startline="32">CloseGame</references>
         <references refid="classScene_1aae8e24654ef98c79961c2b804b12852c">Scene::Exit</references>
-        <references refid="Application_8cpp_1ae228418b33873657fa31313fb4189a8f" compoundref="Application_8cpp" startline="20">frameTime</references>
+        <references refid="Application_8cpp_1ae228418b33873657fa31313fb4189a8f" compoundref="Application_8cpp" startline="29">frameTime</references>
         <references refid="classStopWatch_1ac8be1626396d1a5ca414f74349d59eb2" compoundref="timer_8cpp" startline="34" endline="41">StopWatch::getElapsedTime</references>
         <references refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478">Scene::Init</references>
-        <references refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" compoundref="Application_8cpp" startline="38" endline="41">IsKeyPressed</references>
-        <references refid="classApplication_1ac81ea1396dc69c6d48b9a701954f53fe" compoundref="Application_8h" startline="20">m_timer</references>
-        <references refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" compoundref="Application_8cpp" startline="18">m_window</references>
+        <references refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" compoundref="Application_8cpp" startline="47" endline="50">IsKeyPressed</references>
+        <references refid="classApplication_1ac81ea1396dc69c6d48b9a701954f53fe" compoundref="Application_8h" startline="36">m_timer</references>
+        <references refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" compoundref="Application_8cpp" startline="27">m_window</references>
         <references refid="classScene_1a9319090be5d18e87f1e83dbbf191204f">Scene::Render</references>
         <references refid="classStopWatch_1a23301f735a2e3190435e39c9fd70cdf2" compoundref="timer_8cpp" startline="29" endline="32">StopWatch::startTimer</references>
         <references refid="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91">Scene::Update</references>
         <references refid="classStopWatch_1a2cd0856fc87a40038edfd66d784be8b4" compoundref="timer_8cpp" startline="43" endline="56">StopWatch::waitUntil</references>
-        <referencedby refid="main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8cpp" startline="5" endline="11">main</referencedby>
+        <referencedby refid="main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8cpp" startline="13" endline="19">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="classApplication_1a9d410604b39b8374a884b1f2a1f2a5ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -120,9 +120,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Application.h" line="14" column="1" bodyfile="ComGLab/Source/Application.cpp" bodystart="143" bodyend="149"/>
-        <references refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" compoundref="Application_8cpp" startline="18">m_window</references>
-        <referencedby refid="main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8cpp" startline="5" endline="11">main</referencedby>
+        <location file="ComGLab/Source/Application.h" line="30" column="1" bodyfile="ComGLab/Source/Application.cpp" bodystart="152" bodyend="158"/>
+        <references refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" compoundref="Application_8cpp" startline="27">m_window</references>
+        <referencedby refid="main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8cpp" startline="13" endline="19">main</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -141,54 +141,51 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Application.h" line="15" column="1" bodyfile="ComGLab/Source/Application.cpp" bodystart="38" bodyend="41"/>
-        <referencedby refid="classCamera3_1a72d040ce3726a7d6439efa15734105a5" compoundref="Camera3_8cpp" startline="217" endline="240">Camera3::cameraMovement</referencedby>
-        <referencedby refid="classCamera3_1a99440cc4eb40bfc3bbad15bfe08c8a55" compoundref="Camera3_8cpp" startline="257" endline="409">Camera3::cameraMovement2</referencedby>
-        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="121" endline="141">Run</referencedby>
-        <referencedby refid="classCamera_1acc1741feb6d9da849ea4b6c12e0711e6" compoundref="Camera_8cpp" startline="28" endline="47">Camera::Update</referencedby>
-        <referencedby refid="classCamera2_1a1a54eeb46692c8806b7abea38a6301f3" compoundref="Camera2_8cpp" startline="24" endline="85">Camera2::Update</referencedby>
-        <referencedby refid="classParticle_1a8a5412af8bbf924a183d373a64480b00" compoundref="Particle_8cpp" startline="263" endline="284">Particle::Update</referencedby>
-        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+        <location file="ComGLab/Source/Application.h" line="31" column="1" bodyfile="ComGLab/Source/Application.cpp" bodystart="47" bodyend="50"/>
+        <referencedby refid="classCamera3_1a99440cc4eb40bfc3bbad15bfe08c8a55" compoundref="Camera3_8cpp" startline="271" endline="423">Camera3::cameraMovement2</referencedby>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="130" endline="150">Run</referencedby>
+        <referencedby refid="classCamera_1acc1741feb6d9da849ea4b6c12e0711e6" compoundref="Camera_8cpp" startline="86" endline="105">Camera::Update</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1523" endline="2089">SP2_Scene::Update</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Defines the methods used to run the <ref refid="classApplication" kindref="compound">Application</ref> and define key pressed. </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para>Class <ref refid="classApplication" kindref="compound">Application</ref>: </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="326">
+      <node id="293">
         <label>Application</label>
         <link refid="classApplication"/>
-        <childnode refid="327" relation="usage">
+        <childnode refid="294" relation="usage">
           <edgelabel>m_timer</edgelabel>
         </childnode>
-        <childnode refid="330" relation="usage">
+        <childnode refid="297" relation="usage">
           <edgelabel>CloseGame</edgelabel>
         </childnode>
       </node>
-      <node id="329">
+      <node id="296">
         <label>LARGE_INTEGER</label>
       </node>
-      <node id="327">
+      <node id="294">
         <label>StopWatch</label>
         <link refid="classStopWatch"/>
-        <childnode refid="328" relation="usage">
+        <childnode refid="295" relation="usage">
           <edgelabel>wTimerRes</edgelabel>
         </childnode>
-        <childnode refid="329" relation="usage">
+        <childnode refid="296" relation="usage">
           <edgelabel>frequency</edgelabel>
           <edgelabel>currTime</edgelabel>
           <edgelabel>prevTime</edgelabel>
         </childnode>
       </node>
-      <node id="330">
+      <node id="297">
         <label>bool</label>
       </node>
-      <node id="328">
+      <node id="295">
         <label>UINT</label>
       </node>
     </collaborationgraph>
-    <location file="ComGLab/Source/Application.h" line="8" column="1" bodyfile="ComGLab/Source/Application.h" bodystart="7" bodyend="21"/>
+    <location file="ComGLab/Source/Application.h" line="24" column="1" bodyfile="ComGLab/Source/Application.h" bodystart="23" bodyend="37"/>
     <listofallmembers>
       <member refid="classApplication_1afa8cc05ce6b6092be5ecdfdae44e05f8" prot="public" virt="non-virtual"><scope>Application</scope><name>Application</name></member>
       <member refid="classApplication_1ae02b37c3fd9151bc11e379db0fc51f22" prot="public" virt="non-virtual"><scope>Application</scope><name>CloseGame</name></member>

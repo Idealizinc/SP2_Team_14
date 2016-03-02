@@ -35,37 +35,11 @@
     <member refid="classCamera_1aa46f58b32270a571ab56dde4caca46db" kind="function"><name>Reset</name></member>
     <member refid="classCamera_1acc1741feb6d9da849ea4b6c12e0711e6" kind="function"><name>Update</name></member>
   </compound>
-  <compound refid="classCamera2" kind="class"><name>Camera2</name>
-    <member refid="classCamera2_1a248471e0c272cd78f83dcf18ff907c4f" kind="variable"><name>defaultPosition</name></member>
-    <member refid="classCamera2_1ab353b257dd3bee73e305205f5fe9b0c5" kind="variable"><name>defaultTarget</name></member>
-    <member refid="classCamera2_1a2f700dc0fb49589a7f394be6f2152a7b" kind="variable"><name>defaultUp</name></member>
-    <member refid="classCamera2_1afc2b2a6761ef19c681e24b096c596e1a" kind="function"><name>Camera2</name></member>
-    <member refid="classCamera2_1ae8f11c9b1989263596875a77f08c893e" kind="function"><name>~Camera2</name></member>
-    <member refid="classCamera2_1af3d4e37be651bac9c0a94ac0af021c35" kind="function"><name>Init</name></member>
-    <member refid="classCamera2_1a1a54eeb46692c8806b7abea38a6301f3" kind="function"><name>Update</name></member>
-    <member refid="classCamera2_1aeea4a4fb229742098c0f79cddbc19280" kind="function"><name>Reset</name></member>
-  </compound>
   <compound refid="classCamera3" kind="class"><name>Camera3</name>
     <member refid="classCamera3_1a0befffc59212bf28cffddc24f2b31e67" kind="variable"><name>defaultPosition</name></member>
     <member refid="classCamera3_1a0c65c81ec5c614828b140c8125cf79da" kind="variable"><name>defaultTarget</name></member>
     <member refid="classCamera3_1a089366725666df811a969aca24168cb6" kind="variable"><name>defaultUp</name></member>
     <member refid="classCamera3_1acbb7082402f598240687c5f42a2df6e0" kind="variable"><name>teleCheck</name></member>
-    <member refid="classCamera3_1a52a7399c48e0c1f12f3f1be725d57533" kind="variable"><name>leftGateA</name></member>
-    <member refid="classCamera3_1ae6b5ba9a2dc9b1ff516a3d6a761e2a25" kind="variable"><name>leftGateB</name></member>
-    <member refid="classCamera3_1a2c8acf933bbad0269a0f02d77452858f" kind="variable"><name>rightGateA</name></member>
-    <member refid="classCamera3_1ad015293d00c2f480182efa6bdc9278e7" kind="variable"><name>rightGateB</name></member>
-    <member refid="classCamera3_1a44c641615b159b920b9c1d0d13cb89d1" kind="variable"><name>frontGateA</name></member>
-    <member refid="classCamera3_1a0894e7ceadc9ec660bed5fc593f9d66d" kind="variable"><name>frontGateB</name></member>
-    <member refid="classCamera3_1a9c9efad8c86215c4ff0ceb259cbbfe49" kind="variable"><name>backGateA</name></member>
-    <member refid="classCamera3_1a20f1e35b2c723a0d96146cd6b17a56c0" kind="variable"><name>backGateB</name></member>
-    <member refid="classCamera3_1aa0a5e55c11d9876da86feb12cd87d7b5" kind="variable"><name>checkLeftGate</name></member>
-    <member refid="classCamera3_1a7167a397883d5b5f718b966381b46737" kind="variable"><name>openLeftGate</name></member>
-    <member refid="classCamera3_1afe94cf263334ff726a1cc3b50f772055" kind="variable"><name>checkRightGate</name></member>
-    <member refid="classCamera3_1ad740bf627f7bb426ce6a42e4ac79f336" kind="variable"><name>openRightGate</name></member>
-    <member refid="classCamera3_1a5ab543cdd9a27455ab7dac4a5f7133ba" kind="variable"><name>checkFrontGate</name></member>
-    <member refid="classCamera3_1a789eca21613d94e83fd7226f56cd49f5" kind="variable"><name>openFrontGate</name></member>
-    <member refid="classCamera3_1a9541289fd51bd86310c8f6bb013a8a76" kind="variable"><name>checkBackGate</name></member>
-    <member refid="classCamera3_1a962db8de60bcc4f4d7a7d069c4e5fe47" kind="variable"><name>openBackGate</name></member>
     <member refid="classCamera3_1a250c914f51603c71358ab8997a9630a5" kind="variable"><name>shipCheck</name></member>
     <member refid="classCamera3_1a94de165cf51cdd09157a26caa2d8b875" kind="variable"><name>coreCheck</name></member>
     <member refid="classCamera3_1a884946b9bc6533107d85a2c793478faf" kind="variable"><name>spaceModeOn</name></member>
@@ -77,21 +51,16 @@
     <member refid="classCamera3_1a5b68228820f887e55da2a5bd78e48c7e" kind="variable"><name>minCameraYrotation</name></member>
     <member refid="classCamera3_1a0691252989d71a5f192c5ca96fe22a5d" kind="variable"><name>baseWalkSpeed</name></member>
     <member refid="classCamera3_1ab20b53f64c0d27dd801f94f211aa7041" kind="variable"><name>CanMoveCamera</name></member>
+    <member refid="classCamera3_1a44a0f6300a648a46e30a3da7ce9a7c7f" kind="variable"><name>PowerUp</name></member>
     <member refid="classCamera3_1ab996f4fd3740bc6d9bc3c404fa0cab3f" kind="variable"><name>view</name></member>
     <member refid="classCamera3_1a774d16fe67a7056678206fd4b1de8093" kind="variable"><name>rotate_Sensitivity</name></member>
     <member refid="classCamera3_1a18bd7a368cce40c055d0900d49cb45b7" kind="variable"><name>walkingSpeed</name></member>
     <member refid="classCamera3_1a1d5082c7e3c5607815bd3141e1fa854a" kind="variable"><name>gravity</name></member>
     <member refid="classCamera3_1a84c8561767594b40071ca8c98b66b1ad" kind="variable"><name>boxX</name></member>
     <member refid="classCamera3_1a638ade70ca3f2c622937481a16a269cf" kind="variable"><name>boxZ</name></member>
-    <member refid="classCamera3_1aa89c9e3a985f1d0aeac7bc6221d2cd5e" kind="variable"><name>outOfBounds</name></member>
-    <member refid="classCamera3_1a3b067d5d1f9c6240db03ceeb8162acc2" kind="variable"><name>cameraMass</name></member>
     <member refid="classCamera3_1a8f99c720614086ef0982ead1ce382fc2" kind="variable"><name>walkVal</name></member>
     <member refid="classCamera3_1afd2b25a9ffc10ab135792fab32927a80" kind="variable"><name>BoundVec</name></member>
     <member refid="classCamera3_1ac3ba0d08ac946a18c230a8bc85b61de4" kind="variable"><name>velocityY</name></member>
-    <member refid="classCamera3_1a860915800b66f241df54687f4dfdb447" kind="variable"><name>jumpForce</name></member>
-    <member refid="classCamera3_1ac4205181326d71745c659b061e0e8f63" kind="variable"><name>groundlevel</name></member>
-    <member refid="classCamera3_1a8a0208f71be89d653cc621476bbab1d0" kind="variable"><name>jumpImpulse</name></member>
-    <member refid="classCamera3_1a35f3cc2ef97922d25f891794d8b5d82e" kind="variable"><name>jumpSpeed</name></member>
     <member refid="classCamera3_1a0b48af5b2884a9dad7d593073043fcb2" kind="variable"><name>isGravityOn</name></member>
     <member refid="classCamera3_1abc5b56e53d72f5d9d8e6f942f3e777c3" kind="variable"><name>isMaxJump</name></member>
     <member refid="classCamera3_1a356c1fa35b9c14f99d8ba76f1a0be62f" kind="variable"><name>isJump</name></member>
@@ -124,25 +93,10 @@
     <member refid="classCamera3_1a5df5c8129b71660246a06bec62c9ddcb" kind="variable"><name>Floor2BackLeft</name></member>
     <member refid="classCamera3_1accbf0bf536d94ba4070d04b09384a0a0" kind="variable"><name>Floor2BackRight</name></member>
     <member refid="classCamera3_1aaf121294b69331e42e14d430ea28df04" kind="variable"><name>Base</name></member>
-    <member refid="classCamera3_1a4c822ed9b9c1a0654c7eb6b9663c49e1" kind="variable"><name>leftRock1</name></member>
-    <member refid="classCamera3_1ae049107cc1130cc52017b00497cc2768" kind="variable"><name>leftRock2</name></member>
-    <member refid="classCamera3_1a1eed06c7eb1865a88229c8412737fc8a" kind="variable"><name>leftRock3</name></member>
-    <member refid="classCamera3_1a531a864ff30cebac055c89289c08717e" kind="variable"><name>frontRock1</name></member>
-    <member refid="classCamera3_1ab712b4728b8bb62f88136d6a4c7444ff" kind="variable"><name>frontRock2</name></member>
-    <member refid="classCamera3_1a84233e91a0d79faac1be1c7ed4de9ae5" kind="variable"><name>rightRock1</name></member>
-    <member refid="classCamera3_1a791602f829ea1d317af5e083a065adfe" kind="variable"><name>rightRock2</name></member>
-    <member refid="classCamera3_1af3b4e63f01414c8369ceb127a21e388f" kind="variable"><name>backRock1</name></member>
-    <member refid="classCamera3_1a234890cbd92f026d069e8615da08eff8" kind="variable"><name>backRock2</name></member>
-    <member refid="classCamera3_1ad18b98138b5311fc34b754b14f49aaa1" kind="variable"><name>backRock3</name></member>
     <member refid="classCamera3_1afcdf9dc8513b2d10dc8b40f6374e1f24" kind="variable"><name>TeleporterF1NW</name></member>
     <member refid="classCamera3_1a5be994dfc25d087ca0b04e240f11d58a" kind="variable"><name>TeleporterF1NE</name></member>
     <member refid="classCamera3_1ad096765d17faf6a5530622651617a01e" kind="variable"><name>TeleporterF1SW</name></member>
     <member refid="classCamera3_1a6a679713785d07667bed3d556d4ceccd" kind="variable"><name>TeleporterF1SE</name></member>
-    <member refid="classCamera3_1a481b0a936ce86dad43b1ef13269b9bc7" kind="variable"><name>leftGate</name></member>
-    <member refid="classCamera3_1aedbf8e5e0811a398ebe1c007b5d62c23" kind="variable"><name>rightGate</name></member>
-    <member refid="classCamera3_1a65748b03cf174ca0f92f719323f7f1f0" kind="variable"><name>frontGate</name></member>
-    <member refid="classCamera3_1aea8d0a553db2ff7e5c2d7bbfe4f4fb2a" kind="variable"><name>backGate</name></member>
-    <member refid="classCamera3_1a67c1d340fda62af248cf260ed09816da" kind="variable"><name>PlayerShip</name></member>
     <member refid="classCamera3_1aec997324c2a765f918bcf34234fc2b20" kind="variable"><name>ShipCheck</name></member>
     <member refid="classCamera3_1a1b8b200fb4ed4f1da8fe8eed0c14adcb" kind="variable"><name>CoreCheck</name></member>
     <member refid="classCamera3_1aef7409cbc80ffd21a658c7055653b0ab" kind="function"><name>Camera3</name></member>
@@ -554,146 +508,6 @@
     <member refid="structPackedVertex_1ad7f8bd922bf90fb53ac5a27935179698" kind="variable"><name>normal</name></member>
     <member refid="structPackedVertex_1a86a90d456e948b1105c7e8905f4fa385" kind="function"><name>operator&lt;</name></member>
   </compound>
-  <compound refid="classParticle" kind="class"><name>Particle</name>
-    <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0" kind="enum"><name>GEOMETRY_TYPE</name></member>
-    <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0ab29835e0701cfb1890067c283e95d82b" kind="enumvalue"><name>GEO_AXES</name></member>
-    <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a9f12f633e592171c1c5af950d793ec28" kind="enumvalue"><name>GEO_QUAD</name></member>
-    <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0add8ba99b355447b97ca6cd81b3351509" kind="enumvalue"><name>GEO_CUBE</name></member>
-    <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a482d88afb6eb6e8b3308f906cafa6756" kind="enumvalue"><name>GEO_CIRCLE</name></member>
-    <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a43da3b25055ff0d117ea96b149978cb5" kind="enumvalue"><name>GEO_RING</name></member>
-    <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0acf56980a55cd11e4d0e3695e2383cd6a" kind="enumvalue"><name>GEO_SPHERE</name></member>
-    <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a907dff3acd3272320433cad5435ae283" kind="enumvalue"><name>GEO_HEMISPHERE</name></member>
-    <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0aca00a2479bdda9a38c7d4e98853bab13" kind="enumvalue"><name>GEO_TORUS</name></member>
-    <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a77c421a904d194dff65fdeacfd149b09" kind="enumvalue"><name>GEO_CYLINDER</name></member>
-    <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a7c63c9b9e259f8e56532c72d897c983c" kind="enumvalue"><name>GEO_CONE</name></member>
-    <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a91e639cd3ab6c12f76b4f4e24caec261" kind="enumvalue"><name>GEO_LEFT</name></member>
-    <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0af5f856d135ba2c7ad3ad20a3b9e5222e" kind="enumvalue"><name>GEO_RIGHT</name></member>
-    <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a04cbf13693ed04962a66831ea3a0f27d" kind="enumvalue"><name>GEO_TOP</name></member>
-    <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a28537133a0836606643ed4f4ff798033" kind="enumvalue"><name>GEO_BOTTOM</name></member>
-    <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a2d89786c69676f283422b6825a1e92dc" kind="enumvalue"><name>GEO_FRONT</name></member>
-    <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a4f8a6d15d161c4e6e518734641d05221" kind="enumvalue"><name>GEO_BACK</name></member>
-    <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a5881320750034f4430ccc7ec94da9f02" kind="enumvalue"><name>GEO_SNIPER</name></member>
-    <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a1faea113794e0d84f4c1cb763b04d25c" kind="enumvalue"><name>GEO_TEXT</name></member>
-    <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a86427b54ab93f4405581ba2c66914230" kind="enumvalue"><name>GEO_LIGHTBALL</name></member>
-    <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0afdaf86f16345bb98e7ba31729e419672" kind="enumvalue"><name>GEO_FLOOR</name></member>
-    <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a1cff3891a4393c309243090ae449bce4" kind="enumvalue"><name>NUM_GEOMETRY</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417" kind="enum"><name>UNIFORM_TYPE</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a483b257c654d34cf08830834d9365a95" kind="enumvalue"><name>U_MVP</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417acb36de0cbd0c3e035d9bf9947e0cc8f9" kind="enumvalue"><name>U_MODELVIEW</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a271c05a8408fff7e8d3011b0820611b6" kind="enumvalue"><name>U_MODELVIEW_INVERSE_TRANSPOSE</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a72c24e3e27dce82a24c47654aa74ffd3" kind="enumvalue"><name>U_MATERIAL_AMBIENT</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ae11cec2e3cf37aa04ac246b6b49f99ce" kind="enumvalue"><name>U_MATERIAL_DIFFUSE</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a28824e8ba89cfc913ac9fed33ef4f201" kind="enumvalue"><name>U_MATERIAL_SPECULAR</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ac9039befbc88e477dbe7dd79ce2bbf44" kind="enumvalue"><name>U_MATERIAL_SHININESS</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ab48ee4b51a63eee9e01443da85cdaae3" kind="enumvalue"><name>U_COLOR_TEXTURE_ENABLED</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aef305fb434760ccc86c389ad8d396b7b" kind="enumvalue"><name>U_COLOR_TEXTURE</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aefe0eff0f685ca166df05eb4a818ff35" kind="enumvalue"><name>U_TEXT_ENABLED</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a6050b4857d01990963b06e4afd02e9b8" kind="enumvalue"><name>U_TEXT_COLOR</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ab9ae705497cf3130de6aaed2835a0373" kind="enumvalue"><name>U_LIGHT0_POSITION</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a155547c689861ee0c9ee3e06bef31b61" kind="enumvalue"><name>U_LIGHT0_COLOR</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417acb437c0f90953f792a06e4f3d299a81a" kind="enumvalue"><name>U_LIGHT0_POWER</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a2f3a49d695fc3f4bb2f756ee1275087c" kind="enumvalue"><name>U_LIGHT0_KC</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ac45c8972a1b30ab3f4e4e0ea534aa924" kind="enumvalue"><name>U_LIGHT0_KL</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a6d7d913ed9cba1d8b7db44deab5d0a86" kind="enumvalue"><name>U_LIGHT0_KQ</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aedf455f825848b370fa0bfb28b496397" kind="enumvalue"><name>U_LIGHTENABLED</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aee19487bee235d44e2d0349adf58fe51" kind="enumvalue"><name>U_LIGHT0_TYPE</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417af77a2078cb2a23bbe97e144c61e82c24" kind="enumvalue"><name>U_LIGHT0_SPOTDIRECTION</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aa5bcf921a8cd5c5b603efeb496caf536" kind="enumvalue"><name>U_LIGHT0_COSCUTOFF</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ad67b9a8ef38bc5244e390ca5e5631e35" kind="enumvalue"><name>U_LIGHT0_COSINNER</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aa5e4729f3e7bedc0eaa04af1ee16c7bc" kind="enumvalue"><name>U_LIGHT0_EXPONENT</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a6f9ac6762a9da86bad59b87ee2734bb9" kind="enumvalue"><name>U_LIGHT1_POSITION</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a71639ab80db3af62b838629fc2cb4b2c" kind="enumvalue"><name>U_LIGHT1_COLOR</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aea00aaa9b5f59e4f138a2c5b6791ab89" kind="enumvalue"><name>U_LIGHT1_POWER</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ae82787532dcda277c7396d2cf49c3e0c" kind="enumvalue"><name>U_LIGHT1_KC</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a44c002472b0b6c27c7aa8d8f8474ed9e" kind="enumvalue"><name>U_LIGHT1_KL</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a3eb75d9923157cda161b559266880739" kind="enumvalue"><name>U_LIGHT1_KQ</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a5571e7d1e472560d68848151ffb1e40f" kind="enumvalue"><name>U_LIGHT1_TYPE</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417af6211c4e2fdbf9b1225833b1e6d8ef6c" kind="enumvalue"><name>U_LIGHT1_SPOTDIRECTION</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a1b8fc5b59df0554bc30334acdcbf1e1e" kind="enumvalue"><name>U_LIGHT1_COSCUTOFF</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a69e73fc59868f5bb0bccbd14d5f719a2" kind="enumvalue"><name>U_LIGHT1_COSINNER</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a40658644c85df31ef5d4b12672deab7a" kind="enumvalue"><name>U_LIGHT1_EXPONENT</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aac51ec3ff3d7c5808059912f3e6397eb" kind="enumvalue"><name>U_LIGHT2_POSITION</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417accb000e48c5538fb78b713837860b04e" kind="enumvalue"><name>U_LIGHT2_COLOR</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417acb90e8ff19a17195faea30ad86a77641" kind="enumvalue"><name>U_LIGHT2_POWER</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a0cdf8f0e59e37313efc48199f3730211" kind="enumvalue"><name>U_LIGHT2_KC</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417adfe6c343b9911a0ef69f1b98e8c6c8eb" kind="enumvalue"><name>U_LIGHT2_KL</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a350d06e4486eb041d4cdf60086da49e4" kind="enumvalue"><name>U_LIGHT2_KQ</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a7837d6062382ea96442cec838f28eadd" kind="enumvalue"><name>U_LIGHT2_TYPE</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a88d63291f9a9048164d676a4a7234d1a" kind="enumvalue"><name>U_LIGHT2_SPOTDIRECTION</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a2c5faccdc6ca9d4a922ac3d58d0c122e" kind="enumvalue"><name>U_LIGHT2_COSCUTOFF</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a17b345d6ea1f111ddc0eeb9f748b320b" kind="enumvalue"><name>U_LIGHT2_COSINNER</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a72b09294aad7d4e15f28ada918088423" kind="enumvalue"><name>U_LIGHT2_EXPONENT</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a29ceb351622077bed947060fe5c04fe3" kind="enumvalue"><name>U_NUMLIGHTS</name></member>
-    <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a6171adfc4ce9a813eba8e8abffbd5c73" kind="enumvalue"><name>U_TOTAL</name></member>
-    <member refid="classParticle_1a8e358cee41581b9dee000b1d749ca7ec" kind="variable"><name>light</name></member>
-    <member refid="classParticle_1a0360bfe54cc55914a1f4e99faa722e17" kind="variable"><name>tweenVal</name></member>
-    <member refid="classParticle_1a120fa6f4ba1067307873df1640e38f55" kind="variable"><name>constRotation</name></member>
-    <member refid="classParticle_1aada4fad854b343c1db754961ca34dfcd" kind="variable"><name>translateX</name></member>
-    <member refid="classParticle_1a2bf08f3834b6595dc5b1b2e06ab96c12" kind="variable"><name>scaleAll</name></member>
-    <member refid="classParticle_1a5e8a3a9a152a961be2ecfedc39f60ce7" kind="variable"><name>rotationalLimit</name></member>
-    <member refid="classParticle_1a2de1395cb81d91f23f6ffd73cad297fc" kind="variable"><name>translationLimit</name></member>
-    <member refid="classParticle_1ae9aa2058b571562cae7a2afdbf127c5d" kind="variable"><name>scalingLimit</name></member>
-    <member refid="classParticle_1af4359f4eb3db00b34f147568164ad56a" kind="variable"><name>rLimiter</name></member>
-    <member refid="classParticle_1acdf62bdda4bfd91179becc8c55c8bdbb" kind="variable"><name>toggleLimiters</name></member>
-    <member refid="classParticle_1ad72cd0780427b364fc344b4b09bbce66" kind="variable"><name>limitersON</name></member>
-    <member refid="classParticle_1ad2c996eefcc1e8d458a97b150a08fafe" kind="variable"><name>constTranslation</name></member>
-    <member refid="classParticle_1ac60e7be71c67ff0d0f9150c1a1c330f1" kind="variable"><name>DoorRot</name></member>
-    <member refid="classParticle_1a63db2f6485dd7f0fa8ca2f3568f8f500" kind="variable"><name>canUseDoor</name></member>
-    <member refid="classParticle_1a698f8227bdbe26d735175a0878b7e11f" kind="variable"><name>skyboxID</name></member>
-    <member refid="classParticle_1a623ea74cbe37ea0e3698bf4d0a4564bd" kind="variable"><name>lightDefaultPos</name></member>
-    <member refid="classParticle_1a9820b40648931d22daac0f77ad06d6ca" kind="variable"><name>lightOff</name></member>
-    <member refid="classParticle_1a0c6babca11daa9d9b58541c8cee3a00f" kind="variable"><name>camera</name></member>
-    <member refid="classParticle_1a0848585c81a6e75b8868fcdd92c7b153" kind="variable"><name>modelStack</name></member>
-    <member refid="classParticle_1ac3c30cc225dfbbeb7660511816f87cb6" kind="variable"><name>viewStack</name></member>
-    <member refid="classParticle_1a5ef1529d4d734dae4369c173b9595428" kind="variable"><name>projectionStack</name></member>
-    <member refid="classParticle_1a6c676341203a1ac7aa76acd2d2475fa0" kind="variable"><name>SB_Day_front</name></member>
-    <member refid="classParticle_1ac5c552c1bb8b6cd2caf4f0e2dc9c60c5" kind="variable"><name>SB_Day_back</name></member>
-    <member refid="classParticle_1aaac046b12bc4d72c51810450820ce1c4" kind="variable"><name>SB_Day_top</name></member>
-    <member refid="classParticle_1a7bbe2b5efe2326013d75f191a8af1e0e" kind="variable"><name>SB_Day_bottom</name></member>
-    <member refid="classParticle_1a92a3e937baeb3537ed75646e5fa0fcac" kind="variable"><name>SB_Day_left</name></member>
-    <member refid="classParticle_1a090dcd3140c086731171a7c1ceb62618" kind="variable"><name>SB_Day_right</name></member>
-    <member refid="classParticle_1a19b272abb533b4b6ea302155dc84504c" kind="variable"><name>SB_Nite_front</name></member>
-    <member refid="classParticle_1abbdf167e5dd2a108de0448913b2fa5a6" kind="variable"><name>SB_Nite_back</name></member>
-    <member refid="classParticle_1ac07543bbb047b68bdc77aac5e14d9440" kind="variable"><name>SB_Nite_top</name></member>
-    <member refid="classParticle_1a6939a00fd1e38654e0281cfc76d4e85d" kind="variable"><name>SB_Nite_bottom</name></member>
-    <member refid="classParticle_1a04a1deae9ffa6a8beed512b250d7ebc6" kind="variable"><name>SB_Nite_left</name></member>
-    <member refid="classParticle_1af0a34b49ec15adff390ec00aa71ee49f" kind="variable"><name>SB_Nite_right</name></member>
-    <member refid="classParticle_1a5b22b7c8ad5789d92744736ca7aa52ef" kind="variable"><name>m_vertexArrayID</name></member>
-    <member refid="classParticle_1abfa04048158fb809222748cec9e2e64b" kind="variable"><name>m_programID</name></member>
-    <member refid="classParticle_1ae607e7961763caa29d4dc94fe7a56092" kind="variable"><name>m_parameters</name></member>
-    <member refid="classParticle_1a87f3491345b1abb1d0c1eba83369cce6" kind="variable"><name>meshList</name></member>
-    <member refid="classParticle_1a5097d786e4c0d76a7bc5ffca19a5807e" kind="variable"><name>canPlacePlank</name></member>
-    <member refid="classParticle_1aa1bf7f93c71c7ce4d1fff50aa8bc2b26" kind="variable"><name>plankPlaced</name></member>
-    <member refid="classParticle_1a43fec557b199575ab9c3799e597d583a" kind="variable"><name>PlankIxB</name></member>
-    <member refid="classParticle_1acf8c6f2052b31b0dd587234a56f512f1" kind="variable"><name>canInteractWithKyogre</name></member>
-    <member refid="classParticle_1ab547125999f16c7bfab8a17900dfb251" kind="variable"><name>interactedWithKyogre</name></member>
-    <member refid="classParticle_1a73af0688b53702039ef0c08429cfefd6" kind="variable"><name>KyogreIxB</name></member>
-    <member refid="classParticle_1acc9e91bc749f87410329259f6c1e2497" kind="variable"><name>framesPerSecond</name></member>
-    <member refid="classParticle_1a4290b9668a1d7d42207f6202984ddb34" kind="variable"><name>DoorIxB</name></member>
-    <member refid="classParticle_1a4dfccffb918f8069982c3c8bea70ac45" kind="variable"><name>canOpenDoor</name></member>
-    <member refid="classParticle_1afc464eb42b773e9d5fedc1951ca6f03d" kind="variable"><name>DoorOpened</name></member>
-    <member refid="classParticle_1a6fdedcbfb56a33bacb45df5c4de665e3" kind="variable"><name>LampIxB</name></member>
-    <member refid="classParticle_1ac8b01ae6a59d5f3f41b4c9db0e7bc310" kind="variable"><name>canUseLamp</name></member>
-    <member refid="classParticle_1ab66f147ff4e5c51e6463798221678e8b" kind="variable"><name>IsNight</name></member>
-    <member refid="classParticle_1a08ea1dd223f0725d8602b2647f277a9b" kind="variable"><name>LampActive</name></member>
-    <member refid="classParticle_1a75555520dfa9209db949db7b93047ef4" kind="variable"><name>timeCheck</name></member>
-    <member refid="classParticle_1aa6fbda28ede4ff37b70cd107e793dade" kind="variable"><name>TownLightPosition</name></member>
-    <member refid="classParticle_1a25af740f7fdc338cd15d0ef0030067c4" kind="variable"><name>RoomLightPosition</name></member>
-    <member refid="classParticle_1a40f4c7e248029d72e7714b7802d5e5e1" kind="function"><name>Particle</name></member>
-    <member refid="classParticle_1ad030d0fe7b88cf81744b127c99244ff4" kind="function"><name>~Particle</name></member>
-    <member refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" kind="function"><name>RenderMesh</name></member>
-    <member refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" kind="function"><name>Init</name></member>
-    <member refid="classParticle_1a8a5412af8bbf924a183d373a64480b00" kind="function"><name>Update</name></member>
-    <member refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" kind="function"><name>Render</name></member>
-    <member refid="classParticle_1a693c2891a7cfbad23956879515d60418" kind="function"><name>Exit</name></member>
-    <member refid="classParticle_1abad5adaed21693c0bed86aca19f982df" kind="function"><name>RenderSkybox</name></member>
-    <member refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" kind="function"><name>initLights</name></member>
-    <member refid="classParticle_1ae3b87275d545d2b4d6b266fa6777b8e8" kind="function"><name>RenderText</name></member>
-    <member refid="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" kind="function"><name>RenderTextOnScreen</name></member>
-    <member refid="classParticle_1a15baf3973896879caf118fb005973fb7" kind="function"><name>InteractionBoundsCheck</name></member>
-    <member refid="classParticle_1a29c087fae860a25b0d488f2c57903f82" kind="function"><name>initBounds</name></member>
-    <member refid="classParticle_1a37afd6d47fda746f93062ed4e1a00551" kind="function"><name>renderParticleEmitter</name></member>
-  </compound>
   <compound refid="structPosition" kind="struct"><name>Position</name>
     <member refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" kind="variable"><name>x</name></member>
     <member refid="structPosition_1a54a6182b5f7539295b32255808897d3f" kind="variable"><name>y</name></member>
@@ -885,6 +699,7 @@
     <member refid="classSP2__Scene_1a57127ae32bbc5a2a385a1300e46075c8a115b7d25c6c0b07a657b89aeda552ed4" kind="enumvalue"><name>GEO_FLOOR</name></member>
     <member refid="classSP2__Scene_1a57127ae32bbc5a2a385a1300e46075c8ab406d0939effe50a9ce1d45ac1ce1044" kind="enumvalue"><name>GEO_BASE</name></member>
     <member refid="classSP2__Scene_1a57127ae32bbc5a2a385a1300e46075c8a5bd30fa8fcbb173ff7e8834dfe1cfe42" kind="enumvalue"><name>GEO_GATE_SIDE</name></member>
+    <member refid="classSP2__Scene_1a57127ae32bbc5a2a385a1300e46075c8a1fab8ee33e3e379dee7fb3c18d5bc4dd" kind="enumvalue"><name>GEO_POWERUP</name></member>
     <member refid="classSP2__Scene_1a57127ae32bbc5a2a385a1300e46075c8a3b7b3e09beb4e0af79c405d5f31964b3" kind="enumvalue"><name>NUM_GEOMETRY</name></member>
     <member refid="classSP2__Scene_1a99ca7641c8ccb14adeb6e3fa7fd1f113" kind="enum"><name>UNIFORM_TYPE</name></member>
     <member refid="classSP2__Scene_1a99ca7641c8ccb14adeb6e3fa7fd1f113a33ff2ba85ea1c05fa2040d19e75a3524" kind="enumvalue"><name>U_MVP</name></member>
@@ -1084,6 +899,9 @@
     <member refid="classSP2__Scene_1a177ad71e149085c8af48a59b2167fe62" kind="variable"><name>loadRobots</name></member>
     <member refid="classSP2__Scene_1ad4b0ac43f0566230b1a38580e924aef9" kind="variable"><name>loadMap</name></member>
     <member refid="classSP2__Scene_1a6f78b94c90a2fd4571860d0321a6e3cd" kind="variable"><name>loadWep</name></member>
+    <member refid="classSP2__Scene_1ab8f3287284f2685ee51c0d75010d711e" kind="variable"><name>explosion</name></member>
+    <member refid="classSP2__Scene_1a1e6f57a2e7ed40ca0ec5d378c24706c7" kind="variable"><name>PowerUpActive</name></member>
+    <member refid="classSP2__Scene_1af5f0417efa1b578d6941dcd2d1b2d9b4" kind="variable"><name>PowerUpVal</name></member>
     <member refid="classSP2__Scene_1ad0f34f64ca4c8cbf09f4a0195f020dc0" kind="function"><name>SP2_Scene</name></member>
     <member refid="classSP2__Scene_1acc8f3d8d570a84bf58ca7518b16a6ba8" kind="function"><name>~SP2_Scene</name></member>
     <member refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" kind="function"><name>RenderMesh</name></member>
@@ -1119,6 +937,7 @@
     <member refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" kind="function"><name>RenderSpaceMap</name></member>
     <member refid="classSP2__Scene_1af1c59e2fb386a9a8417e88f59cee95ba" kind="function"><name>RenderBase</name></member>
     <member refid="classSP2__Scene_1ab61fa96e2e915c561e8bfd9935989784" kind="function"><name>RenderRobots</name></member>
+    <member refid="classSP2__Scene_1a1251677b641cce30ba451e9e02418cf2" kind="function"><name>RenderPowerUp</name></member>
   </compound>
   <compound refid="classStopWatch" kind="class"><name>StopWatch</name>
     <member refid="classStopWatch_1a102c4e3275d87798eca31673192c97ed" kind="variable"><name>frequency</name></member>
@@ -1351,10 +1170,6 @@
   </compound>
   <compound refid="Camera_8h" kind="file"><name>Camera.h</name>
   </compound>
-  <compound refid="Camera2_8cpp" kind="file"><name>Camera2.cpp</name>
-  </compound>
-  <compound refid="Camera2_8h" kind="file"><name>Camera2.h</name>
-  </compound>
   <compound refid="Camera3_8cpp" kind="file"><name>Camera3.cpp</name>
   </compound>
   <compound refid="Camera3_8h" kind="file"><name>Camera3.h</name>
@@ -1406,12 +1221,6 @@
   </compound>
   <compound refid="MeshBuilder_8h" kind="file"><name>MeshBuilder.h</name>
   </compound>
-  <compound refid="Particle_8cpp" kind="file"><name>Particle.cpp</name>
-  </compound>
-  <compound refid="Particle_8h" kind="file"><name>Particle.h</name>
-    <member refid="Particle_8h_1a2cbda9a4727e1cdbcae5c646d7fb0911" kind="variable"><name>S_Width</name></member>
-    <member refid="Particle_8h_1a9cd21b84bf993de559113a32edfc8e93" kind="variable"><name>S_Height</name></member>
-  </compound>
   <compound refid="Raycast_8cpp" kind="file"><name>Raycast.cpp</name>
   </compound>
   <compound refid="Raycast_8h" kind="file"><name>Raycast.h</name>
@@ -1432,10 +1241,6 @@
   </compound>
   <compound refid="shader_8hpp" kind="file"><name>shader.hpp</name>
     <member refid="shader_8hpp_1a833f10cca6a76fe34ae9efa23ac5e73c" kind="function"><name>LoadShaders</name></member>
-  </compound>
-  <compound refid="SharedData_8h" kind="file"><name>SharedData.h</name>
-  </compound>
-  <compound refid="SoundSystem_8cpp" kind="file"><name>SoundSystem.cpp</name>
   </compound>
   <compound refid="SoundSystem_8h" kind="file"><name>SoundSystem.h</name>
   </compound>

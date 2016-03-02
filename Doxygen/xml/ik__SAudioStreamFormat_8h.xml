@@ -9,143 +9,129 @@
     <includedby refid="ik__ISoundStopEventReceiver_8h" local="yes">irrKlang-1.5.0/include/ik_ISoundStopEventReceiver.h</includedby>
     <includedby refid="irrKlang_8h" local="yes">irrKlang-1.5.0/include/irrKlang.h</includedby>
     <incdepgraph>
-      <node id="2801">
+      <node id="2295">
         <label>ik_IRefCounted.h</label>
         <link refid="ik__IRefCounted_8h"/>
-        <childnode refid="2802" relation="include">
+        <childnode refid="2296" relation="include">
         </childnode>
       </node>
-      <node id="2800">
+      <node id="2294">
         <label>irrKlang-1.5.0/include/ik_SAudioStreamFormat.h</label>
         <link refid="ik_SAudioStreamFormat.h"/>
-        <childnode refid="2801" relation="include">
+        <childnode refid="2295" relation="include">
         </childnode>
       </node>
-      <node id="2803">
+      <node id="2297">
         <label>wchar.h</label>
       </node>
-      <node id="2802">
+      <node id="2296">
         <label>ik_irrKlangTypes.h</label>
         <link refid="ik__irrKlangTypes_8h"/>
-        <childnode refid="2803" relation="include">
+        <childnode refid="2297" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2816">
+      <node id="2308">
         <label>irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h</label>
         <link refid="CIrrKlangAudioStreamMP3_8h"/>
-        <childnode refid="2817" relation="include">
+        <childnode refid="2309" relation="include">
         </childnode>
-        <childnode refid="2818" relation="include">
+        <childnode refid="2310" relation="include">
         </childnode>
       </node>
-      <node id="2806">
+      <node id="2300">
         <label>irrKlang-1.5.0/include/ik_IAudioRecorder.h</label>
         <link refid="ik__IAudioRecorder_8h"/>
-        <childnode refid="2807" relation="include">
+        <childnode refid="2301" relation="include">
         </childnode>
       </node>
-      <node id="2812">
-        <label>ComGLab/Source/Particle.cpp</label>
-        <link refid="Particle_8cpp"/>
-      </node>
-      <node id="2813">
+      <node id="2305">
         <label>irrKlang-1.5.0/plugins/ikpMP3/ikpMP3.cpp</label>
         <link refid="ikpMP3_8cpp"/>
       </node>
-      <node id="2807">
+      <node id="2301">
         <label>irrKlang-1.5.0/include/irrKlang.h</label>
         <link refid="irrKlang_8h"/>
-        <childnode refid="2808" relation="include">
+        <childnode refid="2302" relation="include">
         </childnode>
-        <childnode refid="2811" relation="include">
-        </childnode>
-        <childnode refid="2813" relation="include">
+        <childnode refid="2305" relation="include">
         </childnode>
       </node>
-      <node id="2817">
+      <node id="2309">
         <label>irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamLoaderMP3.cpp</label>
         <link refid="CIrrKlangAudioStreamLoaderMP3_8cpp"/>
       </node>
-      <node id="2819">
+      <node id="2311">
         <label>irrKlang-1.5.0/include/ik_ISoundMixedOutputReceiver.h</label>
         <link refid="ik__ISoundMixedOutputReceiver_8h"/>
-        <childnode refid="2814" relation="include">
+        <childnode refid="2306" relation="include">
         </childnode>
-        <childnode refid="2807" relation="include">
+        <childnode refid="2301" relation="include">
         </childnode>
       </node>
-      <node id="2810">
+      <node id="2304">
         <label>ComGLab/Source/SP2_Scene.cpp</label>
         <link refid="SP2__Scene_8cpp"/>
       </node>
-      <node id="2809">
+      <node id="2303">
         <label>ComGLab/Source/Application.cpp</label>
         <link refid="Application_8cpp"/>
       </node>
-      <node id="2804">
+      <node id="2298">
         <label>irrKlang-1.5.0/include/ik_SAudioStreamFormat.h</label>
         <link refid="ik_SAudioStreamFormat.h"/>
-        <childnode refid="2805" relation="include">
+        <childnode refid="2299" relation="include">
         </childnode>
-        <childnode refid="2815" relation="include">
+        <childnode refid="2307" relation="include">
         </childnode>
-        <childnode refid="2819" relation="include">
+        <childnode refid="2311" relation="include">
         </childnode>
-        <childnode refid="2820" relation="include">
+        <childnode refid="2312" relation="include">
         </childnode>
-        <childnode refid="2807" relation="include">
+        <childnode refid="2301" relation="include">
         </childnode>
       </node>
-      <node id="2818">
+      <node id="2310">
         <label>irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.cpp</label>
         <link refid="CIrrKlangAudioStreamMP3_8cpp"/>
       </node>
-      <node id="2805">
+      <node id="2299">
         <label>irrKlang-1.5.0/include/ik_ISoundSource.h</label>
         <link refid="ik__ISoundSource_8h"/>
-        <childnode refid="2806" relation="include">
+        <childnode refid="2300" relation="include">
         </childnode>
-        <childnode refid="2814" relation="include">
+        <childnode refid="2306" relation="include">
         </childnode>
-        <childnode refid="2807" relation="include">
+        <childnode refid="2301" relation="include">
         </childnode>
       </node>
-      <node id="2808">
+      <node id="2302">
         <label>ComGLab/Source/SP2_Scene.h</label>
         <link refid="SP2__Scene_8h"/>
-        <childnode refid="2809" relation="include">
+        <childnode refid="2303" relation="include">
         </childnode>
-        <childnode refid="2810" relation="include">
-        </childnode>
-      </node>
-      <node id="2811">
-        <label>ComGLab/Source/Particle.h</label>
-        <link refid="Particle_8h"/>
-        <childnode refid="2809" relation="include">
-        </childnode>
-        <childnode refid="2812" relation="include">
+        <childnode refid="2304" relation="include">
         </childnode>
       </node>
-      <node id="2814">
+      <node id="2306">
         <label>irrKlang-1.5.0/include/ik_ISoundEngine.h</label>
         <link refid="ik__ISoundEngine_8h"/>
-        <childnode refid="2807" relation="include">
+        <childnode refid="2301" relation="include">
         </childnode>
       </node>
-      <node id="2820">
+      <node id="2312">
         <label>irrKlang-1.5.0/include/ik_ISoundStopEventReceiver.h</label>
         <link refid="ik__ISoundStopEventReceiver_8h"/>
-        <childnode refid="2807" relation="include">
+        <childnode refid="2301" relation="include">
         </childnode>
       </node>
-      <node id="2815">
+      <node id="2307">
         <label>irrKlang-1.5.0/include/ik_IAudioStream.h</label>
         <link refid="ik__IAudioStream_8h"/>
-        <childnode refid="2807" relation="include">
+        <childnode refid="2301" relation="include">
         </childnode>
-        <childnode refid="2816" relation="include">
+        <childnode refid="2308" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

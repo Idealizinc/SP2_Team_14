@@ -18,16 +18,13 @@
         <location file="Common/Source/Mtx44.h" line="50" column="1" bodyfile="Common/Source/Mtx44.h" bodystart="50" bodyend="-1"/>
         <referencedby refid="classMtx44_1aac1ba21ddfc5f3c24baa4f58d9c5c256" compoundref="Mtx44_8cpp" startline="139" endline="195">GetInverse</referencedby>
         <referencedby refid="classMtx44_1a1b985913080679da29ff94217935b3c7" compoundref="Mtx44_8cpp" startline="22" endline="39">Mtx44</referencedby>
-        <referencedby refid="Utility_8h_1adfba271c0b8f223d01dd4f35e62e27af" compoundref="Utility_8cpp" startline="3" endline="11">operator*</referencedby>
+        <referencedby refid="Utility_8h_1adfba271c0b8f223d01dd4f35e62e27af" compoundref="Utility_8cpp" startline="13" endline="21">operator*</referencedby>
         <referencedby refid="classMtx44_1a135dfd76460c4ad2678258807dd0c078" compoundref="Mtx44_8cpp" startline="208" endline="214">operator*</referencedby>
         <referencedby refid="classMtx44_1abcdecb3276c18f29847eb8864b809fa5" compoundref="Mtx44_8cpp" startline="227" endline="246">operator+</referencedby>
         <referencedby refid="classMtx44_1aca2d9f316d39c9baa4e439219c1a6447" compoundref="Mtx44_8cpp" startline="259" endline="263">operator=</referencedby>
-        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">Particle::RenderMesh</referencedby>
-        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="629" endline="670">SP2_Scene::RenderMesh</referencedby>
-        <referencedby refid="classParticle_1ae3b87275d545d2b4d6b266fa6777b8e8" compoundref="Particle_8cpp" startline="97" endline="123">Particle::RenderText</referencedby>
-        <referencedby refid="classSP2__Scene_1aba0bba98a66ffc88a253833486bc90e9" compoundref="SP2__Scene_8cpp" startline="375" endline="401">SP2_Scene::RenderText</referencedby>
-        <referencedby refid="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" compoundref="Particle_8cpp" startline="125" endline="167">Particle::RenderTextOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="403" endline="444">SP2_Scene::RenderTextOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="788" endline="829">SP2_Scene::RenderMesh</referencedby>
+        <referencedby refid="classSP2__Scene_1aba0bba98a66ffc88a253833486bc90e9" compoundref="SP2__Scene_8cpp" startline="492" endline="518">SP2_Scene::RenderText</referencedby>
+        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="527" endline="568">SP2_Scene::RenderTextOnScreen</referencedby>
         <referencedby refid="classMtx44_1a3ac8a0afd66412e15e4246474b893da2" compoundref="Mtx44_8cpp" startline="74" endline="77">SetToIdentity</referencedby>
         <referencedby refid="classMtx44_1a04c49a922f8e8ffcb57a90c6ce955600" compoundref="Mtx44_8cpp" startline="356" endline="361">SetToScale</referencedby>
         <referencedby refid="classMtx44_1a0cc88cc5c648da14effba480c4d2ac70" compoundref="Mtx44_8cpp" startline="376" endline="381">SetToTranslation</referencedby>
@@ -278,8 +275,7 @@
         </inbodydescription>
         <location file="Common/Source/Mtx44.h" line="33" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="123" bodyend="127"/>
         <references refid="classMtx44_1a6c95e149e42cba381918782a93f8a68b" compoundref="Mtx44_8cpp" startline="97" endline="101">Transpose</references>
-        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">Particle::RenderMesh</referencedby>
-        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="629" endline="670">SP2_Scene::RenderMesh</referencedby>
+        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="788" endline="829">SP2_Scene::RenderMesh</referencedby>
       </memberdef>
       <memberdef kind="function" id="classMtx44_1aac1ba21ddfc5f3c24baa4f58d9c5c256" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classMtx44" kindref="compound">Mtx44</ref></type>
@@ -306,8 +302,7 @@
         <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">a</references>
         <references refid="namespaceMath_1a5ee876d5cb049f0b3b71f3c54ed8efa0" compoundref="MyMath_8h" startline="27">Math::EPSILON</references>
         <references refid="namespaceMath_1ac91173ab2efdf7313fe7aaeb6cb44cf6" compoundref="MyMath_8h" startline="33" endline="36">Math::FAbs</references>
-        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">Particle::RenderMesh</referencedby>
-        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="629" endline="670">SP2_Scene::RenderMesh</referencedby>
+        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="788" endline="829">SP2_Scene::RenderMesh</referencedby>
       </memberdef>
       <memberdef kind="function" id="classMtx44_1a135dfd76460c4ad2678258807dd0c078" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classMtx44" kindref="compound">Mtx44</ref></type>
@@ -518,7 +513,6 @@
         <references refid="namespaceMath_1ac91173ab2efdf7313fe7aaeb6cb44cf6" compoundref="MyMath_8h" startline="33" endline="36">Math::FAbs</references>
         <references refid="namespaceMath_1af8c064b6b688407b9999ee677efd715d" compoundref="MyMath_8h" startline="28">Math::PI</references>
         <referencedby refid="classMS_1a6ce592114042b920b648bca5519690cd" compoundref="MatrixStack_8cpp" startline="130" endline="134">MS::Rotate</referencedby>
-        <referencedby refid="classCamera2_1a1a54eeb46692c8806b7abea38a6301f3" compoundref="Camera2_8cpp" startline="24" endline="85">Camera2::Update</referencedby>
       </memberdef>
       <memberdef kind="function" id="classMtx44_1a04c49a922f8e8ffcb57a90c6ce955600" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -618,10 +612,8 @@
         <location file="Common/Source/Mtx44.h" line="42" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="376" bodyend="381"/>
         <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">a</references>
         <references refid="classMtx44_1a3ac8a0afd66412e15e4246474b893da2" compoundref="Mtx44_8cpp" startline="74" endline="77">SetToIdentity</references>
-        <referencedby refid="classParticle_1ae3b87275d545d2b4d6b266fa6777b8e8" compoundref="Particle_8cpp" startline="97" endline="123">Particle::RenderText</referencedby>
-        <referencedby refid="classSP2__Scene_1aba0bba98a66ffc88a253833486bc90e9" compoundref="SP2__Scene_8cpp" startline="375" endline="401">SP2_Scene::RenderText</referencedby>
-        <referencedby refid="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" compoundref="Particle_8cpp" startline="125" endline="167">Particle::RenderTextOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="403" endline="444">SP2_Scene::RenderTextOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1aba0bba98a66ffc88a253833486bc90e9" compoundref="SP2__Scene_8cpp" startline="492" endline="518">SP2_Scene::RenderText</referencedby>
+        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="527" endline="568">SP2_Scene::RenderTextOnScreen</referencedby>
         <referencedby refid="classMtx44_1a7c3d2d30d9ed5bfca2ba97d0e570930f" compoundref="Mtx44_8cpp" startline="433" endline="450">SetToLookAt</referencedby>
         <referencedby refid="classMS_1a7e94a35ce566fe3ec49c92b6c4bb663a" compoundref="MatrixStack_8cpp" startline="169" endline="173">MS::Translate</referencedby>
       </memberdef>
@@ -886,9 +878,8 @@
         <location file="Common/Source/Mtx44.h" line="47" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="466" bodyend="472"/>
         <references refid="classMtx44_1a1b985913080679da29ff94217935b3c7" compoundref="Mtx44_8cpp" startline="22" endline="39">Mtx44</references>
         <references refid="namespaceMath_1af8c064b6b688407b9999ee677efd715d" compoundref="MyMath_8h" startline="28">Math::PI</references>
-        <referencedby refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" compoundref="Particle_8cpp" startline="18" endline="95">Particle::Init</referencedby>
-        <referencedby refid="classSP2__Scene_1ae7483c042e4a1861b71137f1a564ad7a" compoundref="SP2__Scene_8cpp" startline="60" endline="130">SP2_Scene::Init</referencedby>
-        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+        <referencedby refid="classSP2__Scene_1ae7483c042e4a1861b71137f1a564ad7a" compoundref="SP2__Scene_8cpp" startline="102" endline="172">SP2_Scene::Init</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1523" endline="2089">SP2_Scene::Update</referencedby>
       </memberdef>
       <memberdef kind="function" id="classMtx44_1a0a4c7818be7c1aeb0601ad069c1a591d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -970,11 +961,10 @@
         </inbodydescription>
         <location file="Common/Source/Mtx44.h" line="48" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="492" bodyend="497"/>
         <references refid="classMtx44_1a1b985913080679da29ff94217935b3c7" compoundref="Mtx44_8cpp" startline="22" endline="39">Mtx44</references>
-        <referencedby refid="classSP2__Scene_1ae91e39146c4052e9e959cb1ff6a2890a" compoundref="SP2__Scene_8cpp" startline="460" endline="485">SP2_Scene::RenderImageOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="608" endline="627">SP2_Scene::RenderMeshOnScreen</referencedby>
-        <referencedby refid="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" compoundref="Particle_8cpp" startline="125" endline="167">Particle::RenderTextOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="403" endline="444">SP2_Scene::RenderTextOnScreen</referencedby>
-        <referencedby refid="classSP2__Scene_1a4105499f6a2e4cc7eeedac1af5248126" compoundref="SP2__Scene_8cpp" startline="487" endline="606">SP2_Scene::RenderWeaponInHand</referencedby>
+        <referencedby refid="classSP2__Scene_1ae91e39146c4052e9e959cb1ff6a2890a" compoundref="SP2__Scene_8cpp" startline="598" endline="623">SP2_Scene::RenderImageOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="760" endline="779">SP2_Scene::RenderMeshOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="527" endline="568">SP2_Scene::RenderTextOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a4105499f6a2e4cc7eeedac1af5248126" compoundref="SP2__Scene_8cpp" startline="632" endline="751">SP2_Scene::RenderWeaponInHand</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -982,13 +972,13 @@
     <detaileddescription>
 <para>Class <ref refid="classMtx44" kindref="compound">Mtx44</ref>: </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="516">
+      <node id="476">
         <label>float</label>
       </node>
-      <node id="515">
+      <node id="475">
         <label>Mtx44</label>
         <link refid="classMtx44"/>
-        <childnode refid="516" relation="usage">
+        <childnode refid="476" relation="usage">
           <edgelabel>a</edgelabel>
         </childnode>
       </node>

@@ -7,159 +7,167 @@
     <includedby refid="WeaponSystem_8h" local="yes">ComGLab/Source/WeaponSystem.h</includedby>
     <includedby refid="Raycast_8cpp" local="yes">ComGLab/Source/Raycast.cpp</includedby>
     <incdepgraph>
-      <node id="1989">
+      <node id="1568">
         <label>MyMath.h</label>
         <link refid="MyMath_8h"/>
-        <childnode refid="1990" relation="include">
+        <childnode refid="1569" relation="include">
         </childnode>
-        <childnode refid="1991" relation="include">
+        <childnode refid="1570" relation="include">
         </childnode>
-        <childnode refid="1992" relation="include">
+        <childnode refid="1571" relation="include">
         </childnode>
-        <childnode refid="1993" relation="include">
+        <childnode refid="1572" relation="include">
         </childnode>
       </node>
-      <node id="1987">
+      <node id="1566">
         <label>ComGLab/Source/Raycast.h</label>
         <link refid="Raycast.h"/>
-        <childnode refid="1988" relation="include">
+        <childnode refid="1567" relation="include">
         </childnode>
-        <childnode refid="1995" relation="include">
+        <childnode refid="1574" relation="include">
         </childnode>
       </node>
-      <node id="1990">
+      <node id="1569">
         <label>cmath</label>
       </node>
-      <node id="1988">
+      <node id="1567">
         <label>Vector3.h</label>
         <link refid="Vector3_8h"/>
-        <childnode refid="1989" relation="include">
+        <childnode refid="1568" relation="include">
         </childnode>
-        <childnode refid="1994" relation="include">
+        <childnode refid="1573" relation="include">
         </childnode>
       </node>
-      <node id="1991">
+      <node id="1570">
         <label>exception</label>
       </node>
-      <node id="1995">
+      <node id="1574">
         <label>Boundary.h</label>
         <link refid="Boundary_8h"/>
       </node>
-      <node id="1992">
+      <node id="1571">
         <label>ctime</label>
       </node>
-      <node id="1993">
+      <node id="1572">
         <label>cstdlib</label>
       </node>
-      <node id="1994">
+      <node id="1573">
         <label>iostream</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="1996">
+      <node id="1575">
         <label>ComGLab/Source/Raycast.h</label>
         <link refid="Raycast.h"/>
-        <childnode refid="1997" relation="include">
+        <childnode refid="1576" relation="include">
         </childnode>
-        <childnode refid="2006" relation="include">
+        <childnode refid="1585" relation="include">
         </childnode>
       </node>
-      <node id="1997">
+      <node id="1576">
         <label>ComGLab/Source/WeaponSystem.h</label>
         <link refid="WeaponSystem_8h"/>
-        <childnode refid="1998" relation="include">
+        <childnode refid="1577" relation="include">
         </childnode>
-        <childnode refid="2001" relation="include">
+        <childnode refid="1580" relation="include">
         </childnode>
-        <childnode refid="2005" relation="include">
+        <childnode refid="1584" relation="include">
         </childnode>
       </node>
-      <node id="2000">
+      <node id="1579">
         <label>ComGLab/Source/SP2_Scene.cpp</label>
         <link refid="SP2__Scene_8cpp"/>
       </node>
-      <node id="1999">
+      <node id="1578">
         <label>ComGLab/Source/Application.cpp</label>
         <link refid="Application_8cpp"/>
       </node>
-      <node id="2006">
+      <node id="1585">
         <label>ComGLab/Source/Raycast.cpp</label>
         <link refid="Raycast_8cpp"/>
       </node>
-      <node id="1998">
+      <node id="1577">
         <label>ComGLab/Source/SP2_Scene.h</label>
         <link refid="SP2__Scene_8h"/>
-        <childnode refid="1999" relation="include">
+        <childnode refid="1578" relation="include">
         </childnode>
-        <childnode refid="2000" relation="include">
+        <childnode refid="1579" relation="include">
         </childnode>
       </node>
-      <node id="2005">
+      <node id="1584">
         <label>ComGLab/Source/WeaponSystem.cpp</label>
         <link refid="WeaponSystem_8cpp"/>
       </node>
-      <node id="2003">
+      <node id="1582">
         <label>ComGLab/Source/RobotManager.cpp</label>
         <link refid="RobotManager_8cpp"/>
       </node>
-      <node id="2001">
+      <node id="1580">
         <label>ComGLab/Source/Robot.h</label>
         <link refid="Robot_8h"/>
-        <childnode refid="1998" relation="include">
+        <childnode refid="1577" relation="include">
         </childnode>
-        <childnode refid="2002" relation="include">
+        <childnode refid="1581" relation="include">
         </childnode>
-        <childnode refid="2004" relation="include">
+        <childnode refid="1583" relation="include">
         </childnode>
-        <childnode refid="2000" relation="include">
+        <childnode refid="1579" relation="include">
         </childnode>
       </node>
-      <node id="2002">
+      <node id="1581">
         <label>ComGLab/Source/RobotManager.h</label>
         <link refid="RobotManager_8h"/>
-        <childnode refid="1998" relation="include">
+        <childnode refid="1577" relation="include">
         </childnode>
-        <childnode refid="2003" relation="include">
+        <childnode refid="1582" relation="include">
         </childnode>
       </node>
-      <node id="2004">
+      <node id="1583">
         <label>ComGLab/Source/Robot.cpp</label>
         <link refid="Robot_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classRayCast" prot="public">RayCast</innerclass>
     <briefdescription>
-    </briefdescription>
+<para>Class to define <ref refid="classRayCast" kindref="compound">RayCast</ref>. </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para><simplesect kind="author"><para>Ryan Lim Rui An </para></simplesect>
+<simplesect kind="par"><title>email: 150577L.nyp.edu.sg</title><para></para></simplesect>
+</para>    </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_RAYCAST_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_RAYCAST_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Vector3_8h" kindref="compound">Vector3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Boundary_8h" kindref="compound">Boundary.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight></codeline>
-<codeline lineno="7" refid="classRayCast" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classRayCast" kindref="compound">RayCast</ref></highlight></codeline>
-<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="10" refid="classRayCast_1aa1bc94d1420bf1de6074aebefcaf4692" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRayCast_1aa1bc94d1420bf1de6074aebefcaf4692" kindref="member">RayCast</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classRayCast_1aca31d257e83ba88a4120f5cef2bab43b" kindref="member">Damage</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>velocity,<sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="structPosition" kindref="compound">Position</ref>,<sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/>DVector)<sp/>:<sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>(Position),<sp/><ref refid="classRayCast_1ad5cc0ccf28e713ea0e4bc57ef5bb2d15" kindref="member">StoredDirVec</ref>(DVector),<sp/>Damage(Damage),<sp/><ref refid="classRayCast_1a28653a0f75add596b9be09ac05264f60" kindref="member">Speed</ref>(velocity){<sp/><ref refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" kindref="member">CalcBounds</ref>();<sp/>};</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRayCast_1a9f407ff03066ed3ff8c38a19c00567d5" kindref="member">~RayCast</ref>();</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classRayCast_1adbf2ca40b63d9d3507c160579afa575a" kindref="member">Move</ref>();</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classRayCast_1a9f508cc3e3f75cb0a9e4079424753bcb" kindref="member">Position</ref>();</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//bool<sp/>BoundsCheck(std::list&lt;Robot&gt;<sp/>RobotList);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" kindref="member">CalcBounds</ref>();</highlight></codeline>
-<codeline lineno="16" refid="classRayCast_1aca31d257e83ba88a4120f5cef2bab43b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classRayCast_1aca31d257e83ba88a4120f5cef2bab43b" kindref="member">Damage</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="17" refid="classRayCast_1a05dde18068af964b819dc44cfcc16300" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classRayCast_1a05dde18068af964b819dc44cfcc16300" kindref="member">BulletUsed</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="20" refid="classRayCast_1a28653a0f75add596b9be09ac05264f60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classRayCast_1a28653a0f75add596b9be09ac05264f60" kindref="member">Speed</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="21" refid="classRayCast_1ad5cc0ccf28e713ea0e4bc57ef5bb2d15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classRayCast_1ad5cc0ccf28e713ea0e4bc57ef5bb2d15" kindref="member">StoredDirVec</ref>;</highlight></codeline>
-<codeline lineno="22" refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>;</highlight></codeline>
-<codeline lineno="23" refid="classRayCast_1a146263922bb07f396a06455bf86c22a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classRayCast_1a146263922bb07f396a06455bf86c22a8" kindref="member">BoundingBox</ref>;</highlight></codeline>
-<codeline lineno="24" refid="classRayCast_1adbef1a7ed4a0323bc24693013240febb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classRayCast_1adbef1a7ed4a0323bc24693013240febb" kindref="member">increment</ref><sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_RAYCAST_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_RAYCAST_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Vector3_8h" kindref="compound">Vector3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Boundary_8h" kindref="compound">Boundary.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classRayCast" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classRayCast" kindref="compound">RayCast</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27" refid="classRayCast_1aa1bc94d1420bf1de6074aebefcaf4692" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRayCast_1aa1bc94d1420bf1de6074aebefcaf4692" kindref="member">RayCast</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classRayCast_1aca31d257e83ba88a4120f5cef2bab43b" kindref="member">Damage</ref>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>velocity,<sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="structPosition" kindref="compound">Position</ref>,<sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/>DVector)<sp/>:<sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>(Position),<sp/><ref refid="classRayCast_1ad5cc0ccf28e713ea0e4bc57ef5bb2d15" kindref="member">StoredDirVec</ref>(DVector),<sp/>Damage(Damage),<sp/><ref refid="classRayCast_1a28653a0f75add596b9be09ac05264f60" kindref="member">Speed</ref>(velocity){<sp/><ref refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" kindref="member">CalcBounds</ref>();<sp/>};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRayCast_1a9f407ff03066ed3ff8c38a19c00567d5" kindref="member">~RayCast</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classRayCast_1adbf2ca40b63d9d3507c160579afa575a" kindref="member">Move</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classRayCast_1a9f508cc3e3f75cb0a9e4079424753bcb" kindref="member">Position</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//bool<sp/>BoundsCheck(std::list&lt;Robot&gt;<sp/>RobotList);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" kindref="member">CalcBounds</ref>();</highlight></codeline>
+<codeline lineno="33" refid="classRayCast_1aca31d257e83ba88a4120f5cef2bab43b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classRayCast_1aca31d257e83ba88a4120f5cef2bab43b" kindref="member">Damage</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="34" refid="classRayCast_1a05dde18068af964b819dc44cfcc16300" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classRayCast_1a05dde18068af964b819dc44cfcc16300" kindref="member">BulletUsed</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37" refid="classRayCast_1a28653a0f75add596b9be09ac05264f60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classRayCast_1a28653a0f75add596b9be09ac05264f60" kindref="member">Speed</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="38" refid="classRayCast_1ad5cc0ccf28e713ea0e4bc57ef5bb2d15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classRayCast_1ad5cc0ccf28e713ea0e4bc57ef5bb2d15" kindref="member">StoredDirVec</ref>;</highlight></codeline>
+<codeline lineno="39" refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classRayCast_1adf0c8e5a51a6e230d8ee52c1a18089c8" kindref="member">RayPos</ref>;</highlight></codeline>
+<codeline lineno="40" refid="classRayCast_1a146263922bb07f396a06455bf86c22a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classRayCast_1a146263922bb07f396a06455bf86c22a8" kindref="member">BoundingBox</ref>;</highlight></codeline>
+<codeline lineno="41" refid="classRayCast_1adbef1a7ed4a0323bc24693013240febb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classRayCast_1adbef1a7ed4a0323bc24693013240febb" kindref="member">increment</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="ComGLab/Source/Raycast.h"/>
   </compounddef>

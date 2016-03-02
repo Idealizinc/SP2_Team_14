@@ -1,24 +1,24 @@
 <map id="SP2_Scene::GameState" name="SP2_Scene::GameState">
-<area shape="rect" id="node2" href="$classRobotManager.html#a836b4959e675f78e146bba9444ac1834" title="RobotManager::ClearList" alt="" coords="227,107,393,133"/>
-<area shape="rect" id="node3" href="$classWeaponSystem.html#a233da9c15e711ac1f5ce5fcf2945d91f" title="WeaponSystem::ClearList" alt="" coords="223,157,397,184"/>
-<area shape="rect" id="node4" href="$classCamera3.html#a1029fbe574de09b19ff8908748031289" title="Camera3::Init" alt="" coords="511,107,610,133"/>
+<area shape="rect" id="node2" href="$classRobotManager.html#a836b4959e675f78e146bba9444ac1834" title="Removes dead robots from the list. " alt="" coords="227,107,393,133"/>
+<area shape="rect" id="node3" href="$classWeaponSystem.html#a233da9c15e711ac1f5ce5fcf2945d91f" title="Removes bullets from the list. " alt="" coords="223,157,397,184"/>
+<area shape="rect" id="node4" href="$classCamera3.html#a1029fbe574de09b19ff8908748031289" title="Initializes variables. " alt="" coords="511,107,610,133"/>
 <area shape="rect" id="node12" href="$classirrklang_1_1ISoundEngine.html#a25f612fe6479d3b22dc5bab2a2eaa927" title="loads a sound source (if not loaded already) from a file and plays it. " alt="" coords="234,462,386,503"/>
-<area shape="rect" id="node13" href="$classSP2__Scene.html#af1c59e2fb386a9a8417e88f59cee95ba" title="SP2_Scene::RenderBase" alt="" coords="475,360,646,387"/>
-<area shape="rect" id="node32" href="$classSP2__Scene.html#a934794f65e93751b1e1106a85a08ae73" title="SP2_Scene::RenderRocks" alt="" coords="472,259,649,285"/>
-<area shape="rect" id="node34" href="$classSP2__Scene.html#a68b65e14328ef7b87a9e1c516499ee44" title="SP2_Scene::RenderShip" alt="" coords="227,411,393,437"/>
-<area shape="rect" id="node41" href="$classSP2__Scene.html#a37c188d23f49eb676fbf86144dd1ac94" title="SP2_Scene::RenderSpaceMap" alt="" coords="459,309,662,336"/>
-<area shape="rect" id="node42" href="$classWeaponSystem.html#ae014e0236d0f8a401a0ec848b25a2896" title="WeaponSystem::SetStats" alt="" coords="223,528,397,555"/>
+<area shape="rect" id="node13" href="$classSP2__Scene.html#af1c59e2fb386a9a8417e88f59cee95ba" title="Method that renders the base in the scene. " alt="" coords="475,360,646,387"/>
+<area shape="rect" id="node32" href="$classSP2__Scene.html#a934794f65e93751b1e1106a85a08ae73" title="Method that renders the rocks in the scene. " alt="" coords="472,259,649,285"/>
+<area shape="rect" id="node34" href="$classSP2__Scene.html#a68b65e14328ef7b87a9e1c516499ee44" title="Method that renders and animates the drivable ship. " alt="" coords="227,411,393,437"/>
+<area shape="rect" id="node41" href="$classSP2__Scene.html#a37c188d23f49eb676fbf86144dd1ac94" title="Method that renders the space scene. " alt="" coords="459,309,662,336"/>
+<area shape="rect" id="node42" href="$classWeaponSystem.html#ae014e0236d0f8a401a0ec848b25a2896" title="Sets the stats for each type of gun. " alt="" coords="223,528,397,555"/>
 <area shape="rect" id="node43" href="$classirrklang_1_1ISound.html#a4c91357775f1d15e2c276ced09a40599" title="sets the volume of the sound, a value between 0 (mute) and 1 (full volume). " alt="" coords="219,579,401,605"/>
 <area shape="rect" id="node44" href="$classirrklang_1_1ISound.html#a108485fe64658441cecd70917782961f" title="Will stop the sound and free its resources. " alt="" coords="237,629,383,656"/>
 <area shape="rect" id="node5" href="$structVector3.html#aa1cdc5357009b47fe585ddd61e263aad" title="Cross product of 2 vectors. " alt="" coords="751,56,861,83"/>
-<area shape="rect" id="node7" href="$classCamera3.html#ae8bf411b15978eaeb425b6fe169a0f05" title="Camera3::initBoundVec" alt="" coords="727,5,885,32"/>
+<area shape="rect" id="node7" href="$classCamera3.html#ae8bf411b15978eaeb425b6fe169a0f05" title="Initializes Boundary values. " alt="" coords="727,5,885,32"/>
 <area shape="rect" id="node9" href="$structVector3.html#aaef4f25a38878a640ab4a48002a7eff8" title="Normalize this vector and return a reference to it. " alt="" coords="739,157,873,184"/>
 <area shape="rect" id="node11" href="$structVector3.html#a2da0f00c5529bced69763320dac9c414" title="Return a copy of this vector, normalized. " alt="" coords="736,107,876,133"/>
 <area shape="rect" id="node6" href="$structVector3.html#afa5e0c801fc2c8a820a54ea99302fe08" title="Vector3 default constructor. " alt="" coords="961,69,1081,96"/>
-<area shape="rect" id="node8" href="$structBoundary.html#a3cf640001c6bbc842d129f453fb3441b" title="Boundary::set" alt="" coords="970,5,1073,32"/>
+<area shape="rect" id="node8" href="$structBoundary.html#a3cf640001c6bbc842d129f453fb3441b" title="Sets the minimum and maximum x,y and z boundaries. " alt="" coords="970,5,1073,32"/>
 <area shape="rect" id="node10" href="$structVector3.html#a200024a8442329de9a625ed58ffe7075" title="Return length of vector. " alt="" coords="964,145,1079,172"/>
 <area shape="rect" id="node14" href="$classMS.html#a9fb4fff5036f3f197b893f9a579c97b2" title="Make a copy of the top matrix on the matrix stack and push it on top. " alt="" coords="748,360,864,387"/>
-<area shape="rect" id="node15" href="$classSP2__Scene.html#a0cd5fd0736fa9288f21b0712d22ff17c" title="SP2_Scene::RenderMesh" alt="" coords="720,309,892,336"/>
+<area shape="rect" id="node15" href="$classSP2__Scene.html#a0cd5fd0736fa9288f21b0712d22ff17c" title="Method that renders a mesh in the scene. " alt="" coords="720,309,892,336"/>
 <area shape="rect" id="node23" href="$classMS.html#a7e94a35ce566fe3ec49c92b6c4bb663a" title="Multiply the top matrix with a translation matrix based on the following parameters. " alt="" coords="755,512,857,539"/>
 <area shape="rect" id="node27" href="$classMS.html#a6ce592114042b920b648bca5519690cd" title="Multiply the top matrix with a rotation matrix based on the following parameters. ..." alt="" coords="762,259,850,285"/>
 <area shape="rect" id="node29" href="$classMS.html#aac22e39d0ac437fcb85403a9f0a7a25f" title="Pop the top matrix on the matrix stack. " alt="" coords="751,461,861,488"/>
@@ -36,8 +36,8 @@
 <area shape="rect" id="node28" href="$classMtx44.html#ac0587ffb5ff9fd58ad5768d28fc06574" title="Set Matrix to a rotation matrix about arbitrary axis. " alt="" coords="947,259,1095,285"/>
 <area shape="rect" id="node31" href="$classMtx44.html#a04c49a922f8e8ffcb57a90c6ce955600" title="Set this matrix to a scaling matrix with scale factors sx, sy and sz. " alt="" coords="955,411,1088,437"/>
 <area shape="rect" id="node33" href="$namespaceMath.html#ac04b987cc6c574a059e68cb58f58c09a" title="Converts from degrees to radians. " alt="" coords="729,208,883,235"/>
-<area shape="rect" id="node35" href="$classSP2__Scene.html#ae91e39146c4052e9e959cb1ff6a2890a" title="SP2_Scene::RenderImageOn\lScreen" alt="" coords="465,513,657,554"/>
-<area shape="rect" id="node40" href="$classSP2__Scene.html#a40721f5409a15245989ab79baf848996" title="SP2_Scene::RenderTextOnScreen" alt="" coords="449,680,672,707"/>
+<area shape="rect" id="node35" href="$classSP2__Scene.html#ae91e39146c4052e9e959cb1ff6a2890a" title="method that renders images on screen " alt="" coords="465,513,657,554"/>
+<area shape="rect" id="node40" href="$classSP2__Scene.html#a40721f5409a15245989ab79baf848996" title="Method that renders text on screen. " alt="" coords="449,680,672,707"/>
 <area shape="rect" id="node36" href="$classMtx44.html#a0a4c7818be7c1aeb0601ad069c1a591d" title="Setup orthogonal matrix. " alt="" coords="740,563,872,589"/>
 <area shape="rect" id="node38" href="$classMS.html#a86606fe9f575ccb747d77195c8aefdaf" title="Return the top matrix with a new matrix. " alt="" coords="749,664,863,691"/>
 <area shape="rect" id="node39" href="$classMS.html#a77c5f7e4a21ea48dcf902a7ff6824a11" title="Replace the top matrix with an identity matrix. " alt="" coords="746,613,866,640"/>

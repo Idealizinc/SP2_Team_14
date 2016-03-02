@@ -135,19 +135,19 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="577">
+      <node id="512">
         <label>ESampleFormat</label>
       </node>
-      <node id="578">
+      <node id="513">
         <label>int</label>
       </node>
-      <node id="576">
+      <node id="511">
         <label>irrklang::SAudioStreamFormat</label>
         <link refid="structirrklang_1_1SAudioStreamFormat"/>
-        <childnode refid="577" relation="usage">
+        <childnode refid="512" relation="usage">
           <edgelabel>SampleFormat</edgelabel>
         </childnode>
-        <childnode refid="578" relation="usage">
+        <childnode refid="513" relation="usage">
           <edgelabel>ChannelCount</edgelabel>
           <edgelabel>FrameCount</edgelabel>
           <edgelabel>SampleRate</edgelabel>

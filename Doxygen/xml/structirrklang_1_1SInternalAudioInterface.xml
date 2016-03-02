@@ -75,23 +75,23 @@
     <detaileddescription>
 <para>Use <ref refid="classirrklang_1_1ISoundEngine_1a31cb74d06d3312cafb243498d97cb0ca" kindref="member">ISoundEngine::getInternalAudioInterface()</ref> to get this. </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="589">
+      <node id="523">
         <label>void *</label>
       </node>
-      <node id="587">
+      <node id="521">
         <label>irrklang::SInternalAudioInterface</label>
         <link refid="structirrklang_1_1SInternalAudioInterface"/>
-        <childnode refid="588" relation="usage">
+        <childnode refid="522" relation="usage">
           <edgelabel>pCoreAudioDeciceID</edgelabel>
         </childnode>
-        <childnode refid="589" relation="usage">
+        <childnode refid="523" relation="usage">
           <edgelabel>pALSA_SND_PCM</edgelabel>
           <edgelabel>pWinMM_HWaveOut</edgelabel>
           <edgelabel>pIDirectSound</edgelabel>
           <edgelabel>pIDirectSound8</edgelabel>
         </childnode>
       </node>
-      <node id="588">
+      <node id="522">
         <label>unsigned</label>
       </node>
     </collaborationgraph>

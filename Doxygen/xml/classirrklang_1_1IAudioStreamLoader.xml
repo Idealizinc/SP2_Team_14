@@ -62,37 +62,37 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="418">
+      <node id="378">
         <label>irrklang::IAudioStreamLoader</label>
         <link refid="classirrklang_1_1IAudioStreamLoader"/>
-        <childnode refid="419" relation="public-inheritance">
+        <childnode refid="379" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="420">
+      <node id="380">
         <label>irrklang::CIrrKlangAudioStreamLoaderMP3</label>
         <link refid="classirrklang_1_1CIrrKlangAudioStreamLoaderMP3"/>
-        <childnode refid="418" relation="public-inheritance">
+        <childnode refid="378" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="419">
+      <node id="379">
         <label>irrklang::IRefCounted</label>
         <link refid="classirrklang_1_1IRefCounted"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="421">
+      <node id="381">
         <label>irrklang::IAudioStreamLoader</label>
         <link refid="classirrklang_1_1IAudioStreamLoader"/>
-        <childnode refid="422" relation="public-inheritance">
+        <childnode refid="382" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="423">
+      <node id="383">
         <label>int</label>
       </node>
-      <node id="422">
+      <node id="382">
         <label>irrklang::IRefCounted</label>
         <link refid="classirrklang_1_1IRefCounted"/>
-        <childnode refid="423" relation="usage">
+        <childnode refid="383" relation="usage">
           <edgelabel>ReferenceCounter</edgelabel>
         </childnode>
       </node>

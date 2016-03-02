@@ -54,6 +54,9 @@
 <div class="title">LoadOBJ.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Header file for code that loads OBJ files.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="Vertex_8h_source.html">Vertex.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Vector3_8h_source.html">Vector3.h</a>&quot;</code><br />
@@ -62,7 +65,7 @@ Include dependency graph for LoadOBJ.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="LoadOBJ_8h__incl.png" border="0" usemap="#ComGLab_2Source_2LoadOBJ_8h" alt=""/></div>
 <map name="ComGLab_2Source_2LoadOBJ_8h" id="ComGLab_2Source_2LoadOBJ_8h">
-<area shape="rect" id="node3" href="Vertex_8h.html" title="Vertex.h" alt="" coords="151,80,222,107"/>
+<area shape="rect" id="node3" href="Vertex_8h.html" title="Header file for vertex. " alt="" coords="151,80,222,107"/>
 <area shape="rect" id="node4" href="Vector3_8h.html" title="Struct to define a 3D vector. " alt="" coords="183,155,262,181"/>
 <area shape="rect" id="node5" href="MyMath_8h.html" title="Header file for math helper functions. " alt="" coords="133,229,213,256"/>
 </map>
@@ -72,11 +75,10 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="LoadOBJ_8h__dep__incl.png" border="0" usemap="#ComGLab_2Source_2LoadOBJ_8hdep" alt=""/></div>
 <map name="ComGLab_2Source_2LoadOBJ_8hdep" id="ComGLab_2Source_2LoadOBJ_8hdep">
-<area shape="rect" id="node2" href="LoadOBJ_8cpp.html" title="ComGLab/Source/LoadOBJ.cpp" alt="" coords="19,80,226,107"/>
-<area shape="rect" id="node3" href="MeshBuilder_8h.html" title="ComGLab/Source/MeshBuilder.h" alt="" coords="250,80,462,107"/>
-<area shape="rect" id="node4" href="MeshBuilder_8cpp.html" title="ComGLab/Source/MeshBuilder.cpp" alt="" coords="5,162,232,189"/>
-<area shape="rect" id="node5" href="Particle_8cpp.html" title="ComGLab/Source/Particle.cpp" alt="" coords="257,162,455,189"/>
-<area shape="rect" id="node6" href="SP2__Scene_8cpp.html" title="ComGLab/Source/SP2\l_Scene.cpp" alt="" coords="480,155,635,196"/>
+<area shape="rect" id="node2" href="LoadOBJ_8cpp.html" title=".cpp file that read OBJ files " alt="" coords="5,80,212,107"/>
+<area shape="rect" id="node3" href="MeshBuilder_8h.html" title="Class to build meshess. " alt="" coords="236,80,448,107"/>
+<area shape="rect" id="node4" href="MeshBuilder_8cpp.html" title=".cpp file that builds meshes " alt="" coords="121,162,347,189"/>
+<area shape="rect" id="node5" href="SP2__Scene_8cpp.html" title=".cpp file that defines scenes " alt="" coords="371,155,526,196"/>
 </map>
 </div>
 </div>
@@ -89,7 +91,13 @@ Functions</h2></td></tr>
 <tr class="memitem:aa99ef9426a57205ed8acb8f7d41f3bae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="LoadOBJ_8h.html#aa99ef9426a57205ed8acb8f7d41f3bae">IndexVBO</a> (std::vector&lt; <a class="el" href="structPosition.html">Position</a> &gt; &amp;in_vertices, std::vector&lt; <a class="el" href="structTexCoord.html">TexCoord</a> &gt; &amp;in_uvs, std::vector&lt; <a class="el" href="structVector3.html">Vector3</a> &gt; &amp;in_normals, std::vector&lt; unsigned &gt; &amp;out_indices, std::vector&lt; <a class="el" href="structVertex.html">Vertex</a> &gt; &amp;out_vertices)</td></tr>
 <tr class="separator:aa99ef9426a57205ed8acb8f7d41f3bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Header file for code that loads OBJ files. </p>
+<dl class="section author"><dt>Author</dt><dd>Wen Sheng Tang </dd></dl>
+<dl class="section user"><dt>email: tang_wen_sheng@nyp.edu.sg</dt><dd></dd></dl>
+
+<p>Definition in file <a class="el" href="LoadOBJ_8h_source.html">LoadOBJ.h</a>.</p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="aa99ef9426a57205ed8acb8f7d41f3bae"></a>
 <div class="memitem">
 <div class="memproto">
@@ -132,11 +140,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="LoadOBJ_8cpp_source.html#l00143">143</a> of file <a class="el" href="LoadOBJ_8cpp_source.html">LoadOBJ.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LoadOBJ_8cpp_source.html#l00153">153</a> of file <a class="el" href="LoadOBJ_8cpp_source.html">LoadOBJ.cpp</a>.</p>
 
-<p>References <a class="el" href="LoadOBJ_8cpp_source.html#l00126">getSimilarVertexIndex_fast()</a>, <a class="el" href="Vertex_8h_source.html#l00036">Vertex::pos</a>, <a class="el" href="Vertex_8h_source.html#l00013">Position::Set()</a>, <a class="el" href="Vertex_8h_source.html#l00030">TexCoord::Set()</a>, and <a class="el" href="Vertex_8h_source.html#l00039">Vertex::texCoord</a>.</p>
+<p>References <a class="el" href="LoadOBJ_8cpp_source.html#l00136">getSimilarVertexIndex_fast()</a>, <a class="el" href="Vertex_8h_source.html#l00073">Vertex::pos</a>, <a class="el" href="Vertex_8h_source.html#l00030">Position::Set()</a>, <a class="el" href="Vertex_8h_source.html#l00061">TexCoord::Set()</a>, and <a class="el" href="Vertex_8h_source.html#l00076">Vertex::texCoord</a>.</p>
 
-<p>Referenced by <a class="el" href="MeshBuilder_8cpp_source.html#l00811">MeshBuilder::GenerateOBJ()</a>.</p>
+<p>Referenced by <a class="el" href="MeshBuilder_8cpp_source.html#l00821">MeshBuilder::GenerateOBJ()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -156,10 +164,10 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="LoadOBJ_8h_aa99ef9426a57205ed8acb8f7d41f3bae_icgraph.png" border="0" usemap="#LoadOBJ_8h_aa99ef9426a57205ed8acb8f7d41f3bae_icgraph" alt=""/></div>
 <map name="LoadOBJ_8h_aa99ef9426a57205ed8acb8f7d41f3bae_icgraph" id="LoadOBJ_8h_aa99ef9426a57205ed8acb8f7d41f3bae_icgraph">
 <area shape="rect" id="node2" href="classMeshBuilder.html#aba87550d7726a610c911fbb977fd3575" title="MeshBuilder::GenerateOBJ" alt="" coords="135,56,315,83"/>
-<area shape="rect" id="node3" href="classSP2__Scene.html#a6db32e7632b8b3d3a57d949d3029b4a7" title="SP2_Scene::InitWeaponModels" alt="" coords="363,5,569,32"/>
-<area shape="rect" id="node5" href="classSP2__Scene.html#aea95ab9454db62830823d42d053c191e" title="SP2_Scene::InitMapModels" alt="" coords="375,56,557,83"/>
-<area shape="rect" id="node6" href="classSP2__Scene.html#aeef4e3096a06665be510e2b4bd6c2b79" title="SP2_Scene::InitRobots" alt="" coords="387,107,545,133"/>
-<area shape="rect" id="node4" href="classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="SP2_Scene::Update" alt="" coords="617,56,757,83"/>
+<area shape="rect" id="node3" href="classSP2__Scene.html#a6db32e7632b8b3d3a57d949d3029b4a7" title="Initializes OBJ and TGA files. " alt="" coords="363,5,569,32"/>
+<area shape="rect" id="node5" href="classSP2__Scene.html#aea95ab9454db62830823d42d053c191e" title="Initializes OBJ and TGA files. " alt="" coords="375,56,557,83"/>
+<area shape="rect" id="node6" href="classSP2__Scene.html#aeef4e3096a06665be510e2b4bd6c2b79" title="Initializes OBJ and TGA files. " alt="" coords="387,107,545,133"/>
+<area shape="rect" id="node4" href="classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="Method where values are changed. " alt="" coords="617,56,757,83"/>
 </map>
 </div>
 </p>
@@ -202,11 +210,11 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="LoadOBJ_8cpp_source.html#l00007">7</a> of file <a class="el" href="LoadOBJ_8cpp_source.html">LoadOBJ.cpp</a>.</p>
+<p>Definition at line <a class="el" href="LoadOBJ_8cpp_source.html#l00017">17</a> of file <a class="el" href="LoadOBJ_8cpp_source.html">LoadOBJ.cpp</a>.</p>
 
-<p>References <a class="el" href="Vertex_8h_source.html#l00028">TexCoord::u</a>, <a class="el" href="Vertex_8h_source.html#l00028">TexCoord::v</a>, <a class="el" href="Vertex_8h_source.html#l00008">Position::x</a>, <a class="el" href="Vector3_8h_source.html#l00027">Vector3::x</a>, <a class="el" href="Vertex_8h_source.html#l00008">Position::y</a>, <a class="el" href="Vector3_8h_source.html#l00027">Vector3::y</a>, <a class="el" href="Vertex_8h_source.html#l00008">Position::z</a>, and <a class="el" href="Vector3_8h_source.html#l00027">Vector3::z</a>.</p>
+<p>References <a class="el" href="Vertex_8h_source.html#l00059">TexCoord::u</a>, <a class="el" href="Vertex_8h_source.html#l00059">TexCoord::v</a>, <a class="el" href="Vertex_8h_source.html#l00025">Position::x</a>, <a class="el" href="Vector3_8h_source.html#l00027">Vector3::x</a>, <a class="el" href="Vertex_8h_source.html#l00025">Position::y</a>, <a class="el" href="Vector3_8h_source.html#l00027">Vector3::y</a>, <a class="el" href="Vertex_8h_source.html#l00025">Position::z</a>, and <a class="el" href="Vector3_8h_source.html#l00027">Vector3::z</a>.</p>
 
-<p>Referenced by <a class="el" href="MeshBuilder_8cpp_source.html#l00811">MeshBuilder::GenerateOBJ()</a>.</p>
+<p>Referenced by <a class="el" href="MeshBuilder_8cpp_source.html#l00821">MeshBuilder::GenerateOBJ()</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -214,10 +222,10 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="LoadOBJ_8h_aa634e9cac0a72d751731db6b4479cbda_icgraph.png" border="0" usemap="#LoadOBJ_8h_aa634e9cac0a72d751731db6b4479cbda_icgraph" alt=""/></div>
 <map name="LoadOBJ_8h_aa634e9cac0a72d751731db6b4479cbda_icgraph" id="LoadOBJ_8h_aa634e9cac0a72d751731db6b4479cbda_icgraph">
 <area shape="rect" id="node2" href="classMeshBuilder.html#aba87550d7726a610c911fbb977fd3575" title="MeshBuilder::GenerateOBJ" alt="" coords="128,56,308,83"/>
-<area shape="rect" id="node3" href="classSP2__Scene.html#a6db32e7632b8b3d3a57d949d3029b4a7" title="SP2_Scene::InitWeaponModels" alt="" coords="356,5,563,32"/>
-<area shape="rect" id="node5" href="classSP2__Scene.html#aea95ab9454db62830823d42d053c191e" title="SP2_Scene::InitMapModels" alt="" coords="368,56,551,83"/>
-<area shape="rect" id="node6" href="classSP2__Scene.html#aeef4e3096a06665be510e2b4bd6c2b79" title="SP2_Scene::InitRobots" alt="" coords="381,107,538,133"/>
-<area shape="rect" id="node4" href="classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="SP2_Scene::Update" alt="" coords="611,56,751,83"/>
+<area shape="rect" id="node3" href="classSP2__Scene.html#a6db32e7632b8b3d3a57d949d3029b4a7" title="Initializes OBJ and TGA files. " alt="" coords="356,5,563,32"/>
+<area shape="rect" id="node5" href="classSP2__Scene.html#aea95ab9454db62830823d42d053c191e" title="Initializes OBJ and TGA files. " alt="" coords="368,56,551,83"/>
+<area shape="rect" id="node6" href="classSP2__Scene.html#aeef4e3096a06665be510e2b4bd6c2b79" title="Initializes OBJ and TGA files. " alt="" coords="381,107,538,133"/>
+<area shape="rect" id="node4" href="classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="Method where values are changed. " alt="" coords="611,56,751,83"/>
 </map>
 </div>
 </p>

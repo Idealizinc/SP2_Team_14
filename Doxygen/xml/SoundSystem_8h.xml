@@ -4,68 +4,54 @@
     <compoundname>SoundSystem.h</compoundname>
     <includes refid="Application_8h" local="yes">Application.h</includes>
     <includes local="no">string</includes>
-    <includedby refid="SoundSystem_8cpp" local="yes">ComGLab/Source/SoundSystem.cpp</includedby>
     <incdepgraph>
-      <node id="2127">
+      <node id="1680">
         <label>windows.h</label>
       </node>
-      <node id="2128">
-        <label>SharedData.h</label>
-        <link refid="SharedData_8h"/>
-      </node>
-      <node id="2126">
+      <node id="1679">
         <label>timer.h</label>
         <link refid="timer_8h"/>
-        <childnode refid="2127" relation="include">
+        <childnode refid="1680" relation="include">
         </childnode>
       </node>
-      <node id="2125">
+      <node id="1678">
         <label>Application.h</label>
         <link refid="Application_8h"/>
-        <childnode refid="2126" relation="include">
-        </childnode>
-        <childnode refid="2128" relation="include">
+        <childnode refid="1679" relation="include">
         </childnode>
       </node>
-      <node id="2129">
+      <node id="1681">
         <label>string</label>
       </node>
-      <node id="2124">
+      <node id="1677">
         <label>ComGLab/Source/SoundSystem.h</label>
         <link refid="SoundSystem.h"/>
-        <childnode refid="2125" relation="include">
+        <childnode refid="1678" relation="include">
         </childnode>
-        <childnode refid="2129" relation="include">
+        <childnode refid="1681" relation="include">
         </childnode>
       </node>
     </incdepgraph>
-    <invincdepgraph>
-      <node id="2131">
-        <label>ComGLab/Source/SoundSystem.cpp</label>
-        <link refid="SoundSystem_8cpp"/>
-      </node>
-      <node id="2130">
-        <label>ComGLab/Source/SoundSystem.h</label>
-        <link refid="SoundSystem.h"/>
-        <childnode refid="2131" relation="include">
-        </childnode>
-      </node>
-    </invincdepgraph>
     <briefdescription>
-    </briefdescription>
+<para>Header file for sound system. </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para><simplesect kind="author"><para>Ryan Lim Rui An </para></simplesect>
+<simplesect kind="par"><title>email: 150577L.nyp.edu.sg</title><para></para></simplesect>
+</para>    </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_SOUND_SYSTEM_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SOUND_SYSTEM_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Application_8h" kindref="compound">Application.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::string;</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>_SOUND_SYSTEM_H</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_SOUND_SYSTEM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SOUND_SYSTEM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Application_8h" kindref="compound">Application.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::string;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>_SOUND_SYSTEM_H</highlight></codeline>
     </programlisting>
     <location file="ComGLab/Source/SoundSystem.h"/>
   </compounddef>

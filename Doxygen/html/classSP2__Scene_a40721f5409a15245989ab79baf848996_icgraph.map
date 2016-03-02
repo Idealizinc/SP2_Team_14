@@ -1,10 +1,9 @@
 <map id="SP2_Scene::RenderTextOnScreen" name="SP2_Scene::RenderTextOnScreen">
-<area shape="rect" id="node2" href="$classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="SP2_Scene::Render" alt="" coords="745,138,885,165"/>
-<area shape="rect" id="node3" href="$classSP2__Scene.html#a84a5528561c5696e8f2161da2820a419" title="SP2_Scene::RenderGateText" alt="" coords="283,37,477,64"/>
-<area shape="rect" id="node4" href="$classSP2__Scene.html#a617111439177700d9903e7777c821926" title="SP2_Scene::RenderLevel" alt="" coords="295,88,465,114"/>
-<area shape="rect" id="node5" href="$classSP2__Scene.html#a68b65e14328ef7b87a9e1c516499ee44" title="SP2_Scene::RenderShip" alt="" coords="297,138,463,165"/>
-<area shape="rect" id="node7" href="$classSP2__Scene.html#a6d8a3b4fea5fd0e17f86bc4f5a8ce315" title="SP2_Scene::RenderTeleporter" alt="" coords="281,189,479,216"/>
-<area shape="rect" id="node8" href="$classSP2__Scene.html#aeb5b6dadeb1ee8d943f2e52e69d6d9e0" title="SP2_Scene::RenderUI" alt="" coords="539,214,691,241"/>
-<area shape="rect" id="node9" href="$classSP2__Scene.html#a6448011a887d25ea57d981ca7753810b" title="SP2_Scene::RenderWepScreen" alt="" coords="276,290,484,317"/>
-<area shape="rect" id="node6" href="$classSP2__Scene.html#a3cd10ebc989e3f3e2f84f59d74b76ef2" title="SP2_Scene::GameState" alt="" coords="532,138,697,165"/>
+<area shape="rect" id="node2" href="$classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="Method that renders everything in the game. " alt="" coords="745,87,885,113"/>
+<area shape="rect" id="node3" href="$classSP2__Scene.html#a617111439177700d9903e7777c821926" title="Method that renders text on screen at certain moments in the game. " alt="" coords="295,36,465,63"/>
+<area shape="rect" id="node4" href="$classSP2__Scene.html#a68b65e14328ef7b87a9e1c516499ee44" title="Method that renders and animates the drivable ship. " alt="" coords="297,87,463,113"/>
+<area shape="rect" id="node6" href="$classSP2__Scene.html#a6d8a3b4fea5fd0e17f86bc4f5a8ce315" title="Method that renders the teleporters in the scene. " alt="" coords="281,137,479,164"/>
+<area shape="rect" id="node7" href="$classSP2__Scene.html#aeb5b6dadeb1ee8d943f2e52e69d6d9e0" title="Method that renders the user interface. " alt="" coords="539,163,691,189"/>
+<area shape="rect" id="node8" href="$classSP2__Scene.html#a6448011a887d25ea57d981ca7753810b" title="Method that renders the weapon select screen. " alt="" coords="276,239,484,265"/>
+<area shape="rect" id="node5" href="$classSP2__Scene.html#a3cd10ebc989e3f3e2f84f59d74b76ef2" title="Method that controls the transition from wave to wave. " alt="" coords="532,87,697,113"/>
 </map>

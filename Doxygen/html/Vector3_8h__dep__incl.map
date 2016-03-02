@@ -1,36 +1,32 @@
 <map id="Common/Source/Vector3.h" name="Common/Source/Vector3.h">
-<area shape="rect" id="node2" href="$Vertex_8h.html" title="ComGLab/Source/Vertex.h" alt="" coords="453,229,631,256"/>
-<area shape="rect" id="node10" href="$LoadOBJ_8h.html" title="ComGLab/Source/LoadOBJ.h" alt="" coords="12,304,205,331"/>
-<area shape="rect" id="node17" href="$Camera_8h.html" title="ComGLab/Source/Camera.h" alt="" coords="2171,229,2356,256"/>
-<area shape="rect" id="node23" href="$Raycast_8h.html" title="ComGLab/Source/Raycast.h" alt="" coords="1480,80,1668,107"/>
-<area shape="rect" id="node25" href="$Robot_8h.html" title="ComGLab/Source/Robot.h" alt="" coords="1193,229,1368,256"/>
-<area shape="rect" id="node31" href="$Mtx44_8h.html" title="Matrix 4 by 4 use for affine transformation. " alt="" coords="1770,229,1941,256"/>
-<area shape="rect" id="node35" href="$Vector3_8cpp.html" title="Struct to define a 3D vector. " alt="" coords="1923,80,2116,107"/>
-<area shape="rect" id="node3" href="$Light_8h.html" title="ComGLab/Source/Light.h" alt="" coords="987,304,1155,331"/>
-<area shape="rect" id="node12" href="$MeshBuilder_8h.html" title="ComGLab/Source/MeshBuilder.h" alt="" coords="249,386,461,413"/>
-<area shape="rect" id="node14" href="$Mesh_8cpp.html" title="ComGLab/Source/Mesh.cpp" alt="" coords="230,304,417,331"/>
-<area shape="rect" id="node15" href="$Utility_8h.html" title="ComGLab/Source/Utility.h" alt="" coords="542,304,715,331"/>
-<area shape="rect" id="node4" href="$SP2__Scene_8h.html" title="ComGLab/Source/SP2\l_Scene.h" alt="" coords="1319,379,1474,420"/>
-<area shape="rect" id="node7" href="$Particle_8h.html" title="ComGLab/Source/Particle.h" alt="" coords="1791,386,1975,413"/>
-<area shape="rect" id="node9" href="$Light_8cpp.html" title="ComGLab/Source/Light.cpp" alt="" coords="1112,386,1295,413"/>
-<area shape="rect" id="node5" href="$Application_8cpp.html" title="ComGLab/Source/Application.cpp" alt="" coords="1530,475,1749,502"/>
-<area shape="rect" id="node6" href="$SP2__Scene_8cpp.html" title="ComGLab/Source/SP2\l_Scene.cpp" alt="" coords="483,468,638,509"/>
-<area shape="rect" id="node8" href="$Particle_8cpp.html" title="ComGLab/Source/Particle.cpp" alt="" coords="1009,475,1208,502"/>
-<area shape="rect" id="node11" href="$LoadOBJ_8cpp.html" title="ComGLab/Source/LoadOBJ.cpp" alt="" coords="5,386,212,413"/>
-<area shape="rect" id="node13" href="$MeshBuilder_8cpp.html" title="ComGLab/Source/MeshBuilder.cpp" alt="" coords="233,475,459,502"/>
-<area shape="rect" id="node16" href="$Utility_8cpp.html" title="ComGLab/Source/Utility.cpp" alt="" coords="587,386,774,413"/>
-<area shape="rect" id="node18" href="$Camera3_8h.html" title="ComGLab/Source/Camera3.h" alt="" coords="1982,304,2174,331"/>
-<area shape="rect" id="node20" href="$Camera_8cpp.html" title="ComGLab/Source/Camera.cpp" alt="" coords="2351,304,2549,331"/>
-<area shape="rect" id="node21" href="$Camera2_8h.html" title="ComGLab/Source/Camera2.h" alt="" coords="2574,304,2766,331"/>
-<area shape="rect" id="node19" href="$Camera3_8cpp.html" title="ComGLab/Source/Camera3.cpp" alt="" coords="2007,386,2213,413"/>
-<area shape="rect" id="node22" href="$Camera2_8cpp.html" title="ComGLab/Source/Camera2.cpp" alt="" coords="2433,386,2640,413"/>
-<area shape="rect" id="node24" href="$WeaponSystem_8h.html" title="ComGLab/Source/WeaponSystem.h" alt="" coords="1336,155,1569,181"/>
-<area shape="rect" id="node30" href="$Raycast_8cpp.html" title="ComGLab/Source/Raycast.cpp" alt="" coords="1594,155,1797,181"/>
-<area shape="rect" id="node29" href="$WeaponSystem_8cpp.html" title="ComGLab/Source/WeaponSystem.cpp" alt="" coords="1495,229,1741,256"/>
-<area shape="rect" id="node26" href="$RobotManager_8h.html" title="ComGLab/Source/RobotManager.h" alt="" coords="739,304,963,331"/>
-<area shape="rect" id="node28" href="$Robot_8cpp.html" title="ComGLab/Source/Robot.cpp" alt="" coords="1180,304,1368,331"/>
-<area shape="rect" id="node27" href="$RobotManager_8cpp.html" title="ComGLab/Source/RobotManager.cpp" alt="" coords="849,386,1088,413"/>
-<area shape="rect" id="node32" href="$MatrixStack_8h.html" title="Matrix Stack to replace openGL math function. " alt="" coords="1753,304,1957,331"/>
-<area shape="rect" id="node34" href="$Mtx44_8cpp.html" title="Matrix 4 by 4 use for affine transformation. " alt="" coords="1545,304,1729,331"/>
-<area shape="rect" id="node33" href="$MatrixStack_8cpp.html" title="Matrix Stack to replace openGL math function. " alt="" coords="1549,386,1767,413"/>
+<area shape="rect" id="node2" href="$Vertex_8h.html" title="Header file for vertex. " alt="" coords="475,229,654,256"/>
+<area shape="rect" id="node8" href="$LoadOBJ_8h.html" title="Header file for code that loads OBJ files. " alt="" coords="84,304,277,331"/>
+<area shape="rect" id="node15" href="$Camera_8h.html" title="Class to define camera. " alt="" coords="1449,229,1635,256"/>
+<area shape="rect" id="node19" href="$Raycast_8h.html" title="Class to define RayCast. " alt="" coords="1516,80,1704,107"/>
+<area shape="rect" id="node21" href="$Robot_8h.html" title="Class to define Robot. " alt="" coords="2080,229,2255,256"/>
+<area shape="rect" id="node27" href="$Mtx44_8h.html" title="Matrix 4 by 4 use for affine transformation. " alt="" coords="1139,229,1310,256"/>
+<area shape="rect" id="node31" href="$Vector3_8cpp.html" title="Struct to define a 3D vector. " alt="" coords="2045,80,2239,107"/>
+<area shape="rect" id="node3" href="$Light_8h.html" title="Class to control light. " alt="" coords="811,304,979,331"/>
+<area shape="rect" id="node10" href="$MeshBuilder_8h.html" title="Class to build meshess. " alt="" coords="236,386,448,413"/>
+<area shape="rect" id="node12" href="$Mesh_8cpp.html" title=".cpp file that draws meshes " alt="" coords="353,304,539,331"/>
+<area shape="rect" id="node13" href="$Utility_8h.html" title="Header file for utility. " alt="" coords="563,304,737,331"/>
+<area shape="rect" id="node4" href="$SP2__Scene_8h.html" title="Header file for scene. " alt="" coords="1733,379,1887,420"/>
+<area shape="rect" id="node7" href="$Light_8cpp.html" title=".cpp file that defines Light " alt="" coords="812,386,995,413"/>
+<area shape="rect" id="node5" href="$Application_8cpp.html" title="Runs the application. " alt="" coords="1701,475,1919,502"/>
+<area shape="rect" id="node6" href="$SP2__Scene_8cpp.html" title=".cpp file that defines scenes " alt="" coords="697,468,851,509"/>
+<area shape="rect" id="node9" href="$LoadOBJ_8cpp.html" title=".cpp file that read OBJ files " alt="" coords="5,386,212,413"/>
+<area shape="rect" id="node11" href="$MeshBuilder_8cpp.html" title=".cpp file that builds meshes " alt="" coords="229,475,455,502"/>
+<area shape="rect" id="node14" href="$Utility_8cpp.html" title=".cpp file that defines Utility " alt="" coords="499,386,686,413"/>
+<area shape="rect" id="node16" href="$Camera3_8h.html" title="Class to define camera. " alt="" coords="1714,304,1906,331"/>
+<area shape="rect" id="node18" href="$Camera_8cpp.html" title=".cpp file that defines camera " alt="" coords="1491,304,1689,331"/>
+<area shape="rect" id="node17" href="$Camera3_8cpp.html" title=".cpp file that defines camera " alt="" coords="1500,386,1707,413"/>
+<area shape="rect" id="node20" href="$WeaponSystem_8h.html" title="Header file for Weapon System. " alt="" coords="1736,155,1969,181"/>
+<area shape="rect" id="node26" href="$Raycast_8cpp.html" title=".cpp file that defines Raycast " alt="" coords="1509,155,1711,181"/>
+<area shape="rect" id="node25" href="$WeaponSystem_8cpp.html" title=".cpp file that defines Weapon System " alt="" coords="1659,229,1905,256"/>
+<area shape="rect" id="node22" href="$RobotManager_8h.html" title="Class that defines the system that manages the robots. " alt="" coords="1981,304,2205,331"/>
+<area shape="rect" id="node24" href="$Robot_8cpp.html" title=".cpp file that defines Robot " alt="" coords="2280,304,2468,331"/>
+<area shape="rect" id="node23" href="$RobotManager_8cpp.html" title=".cpp file that manages robots in the scene " alt="" coords="1965,386,2204,413"/>
+<area shape="rect" id="node28" href="$MatrixStack_8h.html" title="Matrix Stack to replace openGL math function. " alt="" coords="1263,304,1467,331"/>
+<area shape="rect" id="node30" href="$Mtx44_8cpp.html" title="Matrix 4 by 4 use for affine transformation. " alt="" coords="1003,304,1187,331"/>
+<area shape="rect" id="node29" href="$MatrixStack_8cpp.html" title="Matrix Stack to replace openGL math function. " alt="" coords="1255,386,1474,413"/>
 </map>

@@ -1,27 +1,21 @@
 <map id="Math::FAbs" name="Math::FAbs">
-<area shape="rect" id="node2" href="$classMtx44.html#aac1ba21ddfc5f3c24baa4f58d9c5c256" title="Return a new matrix that is an inverse. " alt="" coords="155,426,281,453"/>
-<area shape="rect" id="node24" href="$classMtx44.html#ac0587ffb5ff9fd58ad5768d28fc06574" title="Set Matrix to a rotation matrix about arbitrary axis. " alt="" coords="144,477,292,503"/>
-<area shape="rect" id="node3" href="$classParticle.html#a8aea59081fe6e9a7bf00f1b9c5679821" title="Particle::RenderMesh" alt="" coords="353,97,499,123"/>
-<area shape="rect" id="node7" href="$classSP2__Scene.html#a0cd5fd0736fa9288f21b0712d22ff17c" title="SP2_Scene::RenderMesh" alt="" coords="340,426,512,453"/>
-<area shape="rect" id="node4" href="$classParticle.html#aff7cd61e7a2b82cebc3e9494fa54aa5d" title="Particle::Render" alt="" coords="895,97,1010,123"/>
-<area shape="rect" id="node5" href="$classParticle.html#a37afd6d47fda746f93062ed4e1a00551" title="Particle::renderParticle\lEmitter" alt="" coords="598,5,753,47"/>
-<area shape="rect" id="node6" href="$classParticle.html#abad5adaed21693c0bed86aca19f982df" title="Particle::RenderSkybox" alt="" coords="596,122,755,149"/>
-<area shape="rect" id="node8" href="$classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="SP2_Scene::Render" alt="" coords="1328,366,1468,393"/>
-<area shape="rect" id="node9" href="$classSP2__Scene.html#af1c59e2fb386a9a8417e88f59cee95ba" title="SP2_Scene::RenderBase" alt="" coords="590,645,761,671"/>
-<area shape="rect" id="node11" href="$classSP2__Scene.html#a3e26f7a9aa903c8f659e341be2b65ccf" title="SP2_Scene::RenderGate" alt="" coords="591,426,759,453"/>
-<area shape="rect" id="node12" href="$classSP2__Scene.html#a5b8cc318fb5a712285abce0fad2a3dba" title="SP2_Scene::RenderImageInMap" alt="" coords="570,274,781,301"/>
-<area shape="rect" id="node13" href="$classSP2__Scene.html#ae91e39146c4052e9e959cb1ff6a2890a" title="SP2_Scene::RenderImageOn\lScreen" alt="" coords="579,528,771,569"/>
-<area shape="rect" id="node15" href="$classSP2__Scene.html#a68b65e14328ef7b87a9e1c516499ee44" title="SP2_Scene::RenderShip" alt="" coords="869,645,1036,671"/>
-<area shape="rect" id="node19" href="$classSP2__Scene.html#a523ce5a26d1efa53a575081ebb2a2919" title="SP2_Scene::RenderMeshOnScreen" alt="" coords="560,375,791,402"/>
-<area shape="rect" id="node20" href="$classSP2__Scene.html#a934794f65e93751b1e1106a85a08ae73" title="SP2_Scene::RenderRocks" alt="" coords="587,797,764,823"/>
-<area shape="rect" id="node21" href="$classSP2__Scene.html#a2de18ab05abb2a3ea98dbcadb4f518a7" title="SP2_Scene::RenderSkybox" alt="" coords="583,325,767,351"/>
-<area shape="rect" id="node22" href="$classSP2__Scene.html#a37c188d23f49eb676fbf86144dd1ac94" title="SP2_Scene::RenderSpaceMap" alt="" coords="574,746,777,773"/>
-<area shape="rect" id="node23" href="$classSP2__Scene.html#a4105499f6a2e4cc7eeedac1af5248126" title="SP2_Scene::RenderWeaponInHand" alt="" coords="839,341,1067,367"/>
-<area shape="rect" id="node10" href="$classSP2__Scene.html#a3cd10ebc989e3f3e2f84f59d74b76ef2" title="SP2_Scene::GameState" alt="" coords="1115,695,1280,722"/>
-<area shape="rect" id="node14" href="$classSP2__Scene.html#a84a5528561c5696e8f2161da2820a419" title="SP2_Scene::RenderGateText" alt="" coords="856,594,1049,621"/>
-<area shape="rect" id="node16" href="$classSP2__Scene.html#a6d8a3b4fea5fd0e17f86bc4f5a8ce315" title="SP2_Scene::RenderTeleporter" alt="" coords="854,493,1051,519"/>
-<area shape="rect" id="node17" href="$classSP2__Scene.html#aeb5b6dadeb1ee8d943f2e52e69d6d9e0" title="SP2_Scene::RenderUI" alt="" coords="1121,391,1273,418"/>
-<area shape="rect" id="node18" href="$classSP2__Scene.html#a6448011a887d25ea57d981ca7753810b" title="SP2_Scene::RenderWepScreen" alt="" coords="849,391,1057,418"/>
-<area shape="rect" id="node25" href="$classMS.html#a6ce592114042b920b648bca5519690cd" title="Multiply the top matrix with a rotation matrix based on the following parameters. ..." alt="" coords="382,477,470,503"/>
-<area shape="rect" id="node26" href="$classCamera2.html#a1a54eeb46692c8806b7abea38a6301f3" title="Camera2::Update" alt="" coords="365,527,487,554"/>
+<area shape="rect" id="node2" href="$classMtx44.html#aac1ba21ddfc5f3c24baa4f58d9c5c256" title="Return a new matrix that is an inverse. " alt="" coords="155,260,281,286"/>
+<area shape="rect" id="node19" href="$classMtx44.html#ac0587ffb5ff9fd58ad5768d28fc06574" title="Set Matrix to a rotation matrix about arbitrary axis. " alt="" coords="144,310,292,337"/>
+<area shape="rect" id="node3" href="$classSP2__Scene.html#a0cd5fd0736fa9288f21b0712d22ff17c" title="Method that renders a mesh in the scene. " alt="" coords="340,260,512,286"/>
+<area shape="rect" id="node4" href="$classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="Method that renders everything in the game. " alt="" coords="1328,310,1468,337"/>
+<area shape="rect" id="node5" href="$classSP2__Scene.html#af1c59e2fb386a9a8417e88f59cee95ba" title="Method that renders the base in the scene. " alt="" coords="590,285,761,312"/>
+<area shape="rect" id="node7" href="$classSP2__Scene.html#a5b8cc318fb5a712285abce0fad2a3dba" title="Method that renders images in the scene. " alt="" coords="570,184,781,210"/>
+<area shape="rect" id="node8" href="$classSP2__Scene.html#ae91e39146c4052e9e959cb1ff6a2890a" title="method that renders images on screen " alt="" coords="579,590,771,631"/>
+<area shape="rect" id="node9" href="$classSP2__Scene.html#a68b65e14328ef7b87a9e1c516499ee44" title="Method that renders and animates the drivable ship. " alt="" coords="869,386,1036,413"/>
+<area shape="rect" id="node13" href="$classSP2__Scene.html#a523ce5a26d1efa53a575081ebb2a2919" title="Method that renders a mesh on screen. " alt="" coords="560,488,791,514"/>
+<area shape="rect" id="node14" href="$classSP2__Scene.html#a1251677b641cce30ba451e9e02418cf2" title="Method that renders Power Ups in the scene. " alt="" coords="579,133,771,160"/>
+<area shape="rect" id="node15" href="$classSP2__Scene.html#a934794f65e93751b1e1106a85a08ae73" title="Method that renders the rocks in the scene. " alt="" coords="587,234,764,261"/>
+<area shape="rect" id="node16" href="$classSP2__Scene.html#a2de18ab05abb2a3ea98dbcadb4f518a7" title="Method that renders the skybox. " alt="" coords="583,82,767,109"/>
+<area shape="rect" id="node17" href="$classSP2__Scene.html#a37c188d23f49eb676fbf86144dd1ac94" title="Method that renders the space scene. " alt="" coords="574,336,777,362"/>
+<area shape="rect" id="node18" href="$classSP2__Scene.html#a4105499f6a2e4cc7eeedac1af5248126" title="Method that renders a weapon on screen. " alt="" coords="839,437,1067,464"/>
+<area shape="rect" id="node6" href="$classSP2__Scene.html#a3cd10ebc989e3f3e2f84f59d74b76ef2" title="Method that controls the transition from wave to wave. " alt="" coords="1115,310,1280,337"/>
+<area shape="rect" id="node10" href="$classSP2__Scene.html#a6d8a3b4fea5fd0e17f86bc4f5a8ce315" title="Method that renders the teleporters in the scene. " alt="" coords="854,589,1051,616"/>
+<area shape="rect" id="node11" href="$classSP2__Scene.html#aeb5b6dadeb1ee8d943f2e52e69d6d9e0" title="Method that renders the user interface. " alt="" coords="1121,488,1273,514"/>
+<area shape="rect" id="node12" href="$classSP2__Scene.html#a6448011a887d25ea57d981ca7753810b" title="Method that renders the weapon select screen. " alt="" coords="849,488,1057,514"/>
+<area shape="rect" id="node20" href="$classMS.html#a6ce592114042b920b648bca5519690cd" title="Multiply the top matrix with a rotation matrix based on the following parameters. ..." alt="" coords="382,336,470,362"/>
 </map>

@@ -1,4 +1,3 @@
 <map id="Camera3::Update" name="Camera3::Update">
-<area shape="rect" id="node2" href="$classParticle.html#a8a5412af8bbf924a183d373a64480b00" title="Particle::Update" alt="" coords="189,5,303,32"/>
-<area shape="rect" id="node3" href="$classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="SP2_Scene::Update" alt="" coords="176,56,316,83"/>
+<area shape="rect" id="node2" href="$classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="Method where values are changed. " alt="" coords="176,5,316,32"/>
 </map>

@@ -9,10 +9,30 @@
 /****************************************************************************/
 #include "RayCast.h"
 
+/****************************************************************************/
+/*!
+\brief
+Constructor
+*/
+/****************************************************************************/
+
 RayCast::~RayCast()
 {
 
 }
+
+/****************************************************************************/
+/*!
+\brief
+Moves the RayCast
+\param
+		RayPos - determines the position of the RayCast
+		StoredDirVec - returns the value of a stored direction vector
+		Speed - determines the speed of the RayCast
+\return
+Resulting normalized vectors
+*/
+/****************************************************************************/
 
 Vector3 RayCast::Move()
 {
@@ -24,32 +44,34 @@ Vector3 RayCast::Move()
 	return RayPos;
 }
 
+/****************************************************************************/
+/*!
+\brief
+Calculates the boundary of each RayCast
+\param
+		RayPos - determines the position of the RayCast
+\return
+Resulting normalized vectors
+*/
+/****************************************************************************/
+
 void RayCast::CalcBounds()
 {
 	BoundingBox.set(RayPos.x - 3, RayPos.x + 3, RayPos.z - 3, RayPos.z + 3, RayPos.y - 3, RayPos.y + 3);
 }
 
+/****************************************************************************/
+/*!
+\brief
+Calls the current position of each RayCast
+\param
+		RayPos - determines the position of the RayCast
+\return
+Resulting normalized vectors
+*/
+/****************************************************************************/
+
 Vector3 RayCast::Position()
 {
 	return RayPos;
 }
-
-//bool RayCast::BoundsCheck(std::list<Robot> RobotList)
-//{
-//	// If Bullet in specific bounds, Wall Collision
-//	// Pop Bullet. 
-//
-//	//Bot Bullet Trigger Check
-//	for (auto i : RobotList)
-//	{
-//		if (!i.BoundingBox.BoundaryCheck(RayPos.x, RayPos.z, RayPos.y))
-//		{
-//			i.Health = i.Health - Damage;
-//			return true;
-//			// Weapon Sys Detects if True, if so pop shot.
-//		}
-//		i.Health = i.Health - Damage;
-//		return true;
-//	}
-//	return false;
-//}

@@ -75,31 +75,31 @@
     <detaileddescription>
 <para>The function <ref refid="namespaceirrklang_1ad9829f898bc0665fdd2554a6f5c7ca1c" kindref="member">createIrrKlangDevice()</ref> has a parameter &apos;deviceID&apos; which takes the value returned by <ref refid="classirrklang_1_1ISoundDeviceList_1a77509686d507ea5939a50d31ca8fdf93" kindref="member">ISoundDeviceList::getDeviceID()</ref> and uses that device then. The list of devices in <ref refid="classirrklang_1_1ISoundDeviceList" kindref="compound">ISoundDeviceList</ref> usually also includes the default device which is the first entry and has an empty deviceID string (&quot;&quot;) and the description &quot;default device&quot;. There is some example code on how to use the <ref refid="classirrklang_1_1ISoundDeviceList" kindref="compound">ISoundDeviceList</ref> in <ref refid="index_1enumeratingDevices" kindref="member">Enumerating sound devices</ref>. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="456">
+      <node id="416">
         <label>irrklang::ISoundDeviceList</label>
         <link refid="classirrklang_1_1ISoundDeviceList"/>
-        <childnode refid="457" relation="public-inheritance">
+        <childnode refid="417" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="457">
+      <node id="417">
         <label>irrklang::IRefCounted</label>
         <link refid="classirrklang_1_1IRefCounted"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="458">
+      <node id="418">
         <label>irrklang::ISoundDeviceList</label>
         <link refid="classirrklang_1_1ISoundDeviceList"/>
-        <childnode refid="459" relation="public-inheritance">
+        <childnode refid="419" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="460">
+      <node id="420">
         <label>int</label>
       </node>
-      <node id="459">
+      <node id="419">
         <label>irrklang::IRefCounted</label>
         <link refid="classirrklang_1_1IRefCounted"/>
-        <childnode refid="460" relation="usage">
+        <childnode refid="420" relation="usage">
           <edgelabel>ReferenceCounter</edgelabel>
         </childnode>
       </node>

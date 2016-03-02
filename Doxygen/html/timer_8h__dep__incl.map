@@ -1,13 +1,10 @@
 <map id="Common/Source/timer.h" name="Common/Source/timer.h">
-<area shape="rect" id="node2" href="$Application_8h.html" title="ComGLab/Source/Application.h" alt="" coords="813,80,1017,107"/>
-<area shape="rect" id="node12" href="$timer_8cpp.html" title="Common/Source/timer.cpp" alt="" coords="1041,80,1218,107"/>
-<area shape="rect" id="node3" href="$Application_8cpp.html" title="ComGLab/Source/Application.cpp" alt="" coords="5,162,224,189"/>
-<area shape="rect" id="node4" href="$Camera_8cpp.html" title="ComGLab/Source/Camera.cpp" alt="" coords="249,162,447,189"/>
-<area shape="rect" id="node5" href="$Camera2_8cpp.html" title="ComGLab/Source/Camera2.cpp" alt="" coords="471,162,678,189"/>
-<area shape="rect" id="node6" href="$Camera3_8cpp.html" title="ComGLab/Source/Camera3.cpp" alt="" coords="702,162,909,189"/>
-<area shape="rect" id="node7" href="$main_8cpp.html" title="ComGLab/Source/main.cpp" alt="" coords="933,162,1115,189"/>
-<area shape="rect" id="node8" href="$Particle_8cpp.html" title="ComGLab/Source/Particle.cpp" alt="" coords="1139,162,1338,189"/>
-<area shape="rect" id="node9" href="$SoundSystem_8h.html" title="ComGLab/Source/SoundSystem.h" alt="" coords="1362,162,1585,189"/>
-<area shape="rect" id="node11" href="$SP2__Scene_8cpp.html" title="ComGLab/Source/SP2\l_Scene.cpp" alt="" coords="1609,155,1764,196"/>
-<area shape="rect" id="node10" href="$SoundSystem_8cpp.html" title="ComGLab/Source/SoundSystem.cpp" alt="" coords="1355,244,1591,271"/>
+<area shape="rect" id="node2" href="$Application_8h.html" title="Header file that contains the class to run the application. " alt="" coords="582,80,786,107"/>
+<area shape="rect" id="node9" href="$timer_8cpp.html" title="Common/Source/timer.cpp" alt="" coords="810,80,987,107"/>
+<area shape="rect" id="node3" href="$Application_8cpp.html" title="Runs the application. " alt="" coords="5,162,224,189"/>
+<area shape="rect" id="node4" href="$Camera_8cpp.html" title=".cpp file that defines camera " alt="" coords="249,162,447,189"/>
+<area shape="rect" id="node5" href="$Camera3_8cpp.html" title=".cpp file that defines camera " alt="" coords="471,162,678,189"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title="ComGLab/Source/main.cpp" alt="" coords="702,162,885,189"/>
+<area shape="rect" id="node7" href="$SoundSystem_8h.html" title="Header file for sound system. " alt="" coords="909,162,1131,189"/>
+<area shape="rect" id="node8" href="$SP2__Scene_8cpp.html" title=".cpp file that defines scenes " alt="" coords="1156,155,1311,196"/>
 </map>

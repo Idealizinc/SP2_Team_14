@@ -54,19 +54,22 @@
 <div class="title">MeshBuilder.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>.cpp file that builds meshes  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="MeshBuilder_8h_source.html">MeshBuilder.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for MeshBuilder.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="MeshBuilder_8cpp__incl.png" border="0" usemap="#ComGLab_2Source_2MeshBuilder_8cpp" alt=""/></div>
 <map name="ComGLab_2Source_2MeshBuilder_8cpp" id="ComGLab_2Source_2MeshBuilder_8cpp">
-<area shape="rect" id="node2" href="MeshBuilder_8h.html" title="MeshBuilder.h" alt="" coords="375,80,481,107"/>
-<area shape="rect" id="node3" href="Vertex_8h.html" title="Vertex.h" alt="" coords="474,229,545,256"/>
-<area shape="rect" id="node11" href="Mesh_8h.html" title="Mesh.h" alt="" coords="241,155,306,181"/>
-<area shape="rect" id="node16" href="LoadOBJ_8h.html" title="LoadOBJ.h" alt="" coords="385,155,471,181"/>
+<area shape="rect" id="node2" href="MeshBuilder_8h.html" title="Class to build meshess. " alt="" coords="375,80,481,107"/>
+<area shape="rect" id="node3" href="Vertex_8h.html" title="Header file for vertex. " alt="" coords="474,229,545,256"/>
+<area shape="rect" id="node11" href="Mesh_8h.html" title="Class to draw meshes. " alt="" coords="241,155,306,181"/>
+<area shape="rect" id="node16" href="LoadOBJ_8h.html" title="Header file for code that loads OBJ files. " alt="" coords="385,155,471,181"/>
 <area shape="rect" id="node4" href="Vector3_8h.html" title="Struct to define a 3D vector. " alt="" coords="397,304,475,331"/>
 <area shape="rect" id="node5" href="MyMath_8h.html" title="Header file for math helper functions. " alt="" coords="281,379,361,405"/>
-<area shape="rect" id="node14" href="Material_8h.html" title="Material.h" alt="" coords="110,229,189,256"/>
+<area shape="rect" id="node14" href="Material_8h.html" title="Struct that defines light properties. " alt="" coords="110,229,189,256"/>
 </map>
 </div>
 </div>
@@ -85,7 +88,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a635e807e82196e114ec59993fe28838a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MeshBuilder_8cpp.html#a635e807e82196e114ec59993fe28838a">SphereZ</a> (float phi, float theta)</td></tr>
 <tr class="separator:a635e807e82196e114ec59993fe28838a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>.cpp file that builds meshes </p>
+<dl class="section author"><dt>Author</dt><dd>Wen Sheng Tang </dd></dl>
+<dl class="section user"><dt>email: tang_wen_sheng@nyp.edu.sg</dt><dd></dd></dl>
+
+<p>Definition in file <a class="el" href="MeshBuilder_8cpp_source.html">MeshBuilder.cpp</a>.</p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a452206fa7621781c2b35fcd17b816239"></a>
 <div class="memitem">
 <div class="memproto">
@@ -100,11 +109,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="MeshBuilder_8cpp_source.html#l00257">257</a> of file <a class="el" href="MeshBuilder_8cpp_source.html">MeshBuilder.cpp</a>.</p>
+<p>Definition at line <a class="el" href="MeshBuilder_8cpp_source.html#l00267">267</a> of file <a class="el" href="MeshBuilder_8cpp_source.html">MeshBuilder.cpp</a>.</p>
 
 <p>References <a class="el" href="MyMath_8h_source.html#l00049">Math::DegreeToRadian()</a>.</p>
 
-<p>Referenced by <a class="el" href="MeshBuilder_8cpp_source.html#l00267">MeshBuilder::GenerateCircle()</a>, <a class="el" href="MeshBuilder_8cpp_source.html#l00694">MeshBuilder::GenerateCone()</a>, <a class="el" href="MeshBuilder_8cpp_source.html#l00623">MeshBuilder::GenerateCylinder()</a>, and <a class="el" href="MeshBuilder_8cpp_source.html#l00315">MeshBuilder::GenerateRing()</a>.</p>
+<p>Referenced by <a class="el" href="MeshBuilder_8cpp_source.html#l00277">MeshBuilder::GenerateCircle()</a>, <a class="el" href="MeshBuilder_8cpp_source.html#l00704">MeshBuilder::GenerateCone()</a>, <a class="el" href="MeshBuilder_8cpp_source.html#l00633">MeshBuilder::GenerateCylinder()</a>, and <a class="el" href="MeshBuilder_8cpp_source.html#l00325">MeshBuilder::GenerateRing()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -125,7 +134,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node4" href="classMeshBuilder.html#a3123aa273acbacf182adc536433c4911" title="MeshBuilder::GenerateCone" alt="" coords="125,56,310,83"/>
 <area shape="rect" id="node5" href="classMeshBuilder.html#a06796a82056f0a291f6cda3d8318531c" title="MeshBuilder::GenerateCylinder" alt="" coords="116,107,319,133"/>
 <area shape="rect" id="node6" href="classMeshBuilder.html#a53f9fa5f58c23dfce5327d27e6fa1783" title="MeshBuilder::GenerateRing" alt="" coords="127,157,308,184"/>
-<area shape="rect" id="node3" href="classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="SP2_Scene::Init" alt="" coords="367,81,483,108"/>
+<area shape="rect" id="node3" href="classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="Initializes values. " alt="" coords="367,81,483,108"/>
 </map>
 </div>
 </p>
@@ -146,11 +155,11 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="MeshBuilder_8cpp_source.html#l00262">262</a> of file <a class="el" href="MeshBuilder_8cpp_source.html">MeshBuilder.cpp</a>.</p>
+<p>Definition at line <a class="el" href="MeshBuilder_8cpp_source.html#l00272">272</a> of file <a class="el" href="MeshBuilder_8cpp_source.html">MeshBuilder.cpp</a>.</p>
 
 <p>References <a class="el" href="MyMath_8h_source.html#l00049">Math::DegreeToRadian()</a>.</p>
 
-<p>Referenced by <a class="el" href="MeshBuilder_8cpp_source.html#l00267">MeshBuilder::GenerateCircle()</a>, <a class="el" href="MeshBuilder_8cpp_source.html#l00694">MeshBuilder::GenerateCone()</a>, <a class="el" href="MeshBuilder_8cpp_source.html#l00623">MeshBuilder::GenerateCylinder()</a>, and <a class="el" href="MeshBuilder_8cpp_source.html#l00315">MeshBuilder::GenerateRing()</a>.</p>
+<p>Referenced by <a class="el" href="MeshBuilder_8cpp_source.html#l00277">MeshBuilder::GenerateCircle()</a>, <a class="el" href="MeshBuilder_8cpp_source.html#l00704">MeshBuilder::GenerateCone()</a>, <a class="el" href="MeshBuilder_8cpp_source.html#l00633">MeshBuilder::GenerateCylinder()</a>, and <a class="el" href="MeshBuilder_8cpp_source.html#l00325">MeshBuilder::GenerateRing()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -171,7 +180,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node4" href="classMeshBuilder.html#a3123aa273acbacf182adc536433c4911" title="MeshBuilder::GenerateCone" alt="" coords="125,56,310,83"/>
 <area shape="rect" id="node5" href="classMeshBuilder.html#a06796a82056f0a291f6cda3d8318531c" title="MeshBuilder::GenerateCylinder" alt="" coords="116,107,319,133"/>
 <area shape="rect" id="node6" href="classMeshBuilder.html#a53f9fa5f58c23dfce5327d27e6fa1783" title="MeshBuilder::GenerateRing" alt="" coords="127,157,308,184"/>
-<area shape="rect" id="node3" href="classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="SP2_Scene::Init" alt="" coords="367,81,483,108"/>
+<area shape="rect" id="node3" href="classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="Initializes values. " alt="" coords="367,81,483,108"/>
 </map>
 </div>
 </p>
@@ -202,11 +211,11 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="MeshBuilder_8cpp_source.html#l00370">370</a> of file <a class="el" href="MeshBuilder_8cpp_source.html">MeshBuilder.cpp</a>.</p>
+<p>Definition at line <a class="el" href="MeshBuilder_8cpp_source.html#l00380">380</a> of file <a class="el" href="MeshBuilder_8cpp_source.html">MeshBuilder.cpp</a>.</p>
 
 <p>References <a class="el" href="MyMath_8h_source.html#l00049">Math::DegreeToRadian()</a>.</p>
 
-<p>Referenced by <a class="el" href="MeshBuilder_8cpp_source.html#l00479">MeshBuilder::GenerateHemisphere()</a>, <a class="el" href="MeshBuilder_8cpp_source.html#l00433">MeshBuilder::GenerateQuarterSphere()</a>, and <a class="el" href="MeshBuilder_8cpp_source.html#l00385">MeshBuilder::GenerateSphere()</a>.</p>
+<p>Referenced by <a class="el" href="MeshBuilder_8cpp_source.html#l00489">MeshBuilder::GenerateHemisphere()</a>, <a class="el" href="MeshBuilder_8cpp_source.html#l00443">MeshBuilder::GenerateQuarterSphere()</a>, and <a class="el" href="MeshBuilder_8cpp_source.html#l00395">MeshBuilder::GenerateSphere()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -226,7 +235,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node2" href="classMeshBuilder.html#a36320c69da431e763f864e3247c58a9b" title="MeshBuilder::GenerateHemisphere" alt="" coords="124,5,348,32"/>
 <area shape="rect" id="node4" href="classMeshBuilder.html#a227ca853ca1ea18521bae1c1d46d6715" title="MeshBuilder::GenerateQuarter\lSphere" alt="" coords="137,57,335,98"/>
 <area shape="rect" id="node5" href="classMeshBuilder.html#a569c4966c1422841fc79118803f5ca7e" title="MeshBuilder::GenerateSphere" alt="" coords="138,123,334,149"/>
-<area shape="rect" id="node3" href="classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="SP2_Scene::Init" alt="" coords="396,64,512,91"/>
+<area shape="rect" id="node3" href="classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="Initializes values. " alt="" coords="396,64,512,91"/>
 </map>
 </div>
 </p>
@@ -257,11 +266,11 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="MeshBuilder_8cpp_source.html#l00375">375</a> of file <a class="el" href="MeshBuilder_8cpp_source.html">MeshBuilder.cpp</a>.</p>
+<p>Definition at line <a class="el" href="MeshBuilder_8cpp_source.html#l00385">385</a> of file <a class="el" href="MeshBuilder_8cpp_source.html">MeshBuilder.cpp</a>.</p>
 
 <p>References <a class="el" href="MyMath_8h_source.html#l00049">Math::DegreeToRadian()</a>.</p>
 
-<p>Referenced by <a class="el" href="MeshBuilder_8cpp_source.html#l00479">MeshBuilder::GenerateHemisphere()</a>, <a class="el" href="MeshBuilder_8cpp_source.html#l00433">MeshBuilder::GenerateQuarterSphere()</a>, and <a class="el" href="MeshBuilder_8cpp_source.html#l00385">MeshBuilder::GenerateSphere()</a>.</p>
+<p>Referenced by <a class="el" href="MeshBuilder_8cpp_source.html#l00489">MeshBuilder::GenerateHemisphere()</a>, <a class="el" href="MeshBuilder_8cpp_source.html#l00443">MeshBuilder::GenerateQuarterSphere()</a>, and <a class="el" href="MeshBuilder_8cpp_source.html#l00395">MeshBuilder::GenerateSphere()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -281,7 +290,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node2" href="classMeshBuilder.html#a36320c69da431e763f864e3247c58a9b" title="MeshBuilder::GenerateHemisphere" alt="" coords="125,5,349,32"/>
 <area shape="rect" id="node4" href="classMeshBuilder.html#a227ca853ca1ea18521bae1c1d46d6715" title="MeshBuilder::GenerateQuarter\lSphere" alt="" coords="138,57,337,98"/>
 <area shape="rect" id="node5" href="classMeshBuilder.html#a569c4966c1422841fc79118803f5ca7e" title="MeshBuilder::GenerateSphere" alt="" coords="139,123,335,149"/>
-<area shape="rect" id="node3" href="classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="SP2_Scene::Init" alt="" coords="397,64,513,91"/>
+<area shape="rect" id="node3" href="classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="Initializes values. " alt="" coords="397,64,513,91"/>
 </map>
 </div>
 </p>
@@ -312,11 +321,11 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="MeshBuilder_8cpp_source.html#l00380">380</a> of file <a class="el" href="MeshBuilder_8cpp_source.html">MeshBuilder.cpp</a>.</p>
+<p>Definition at line <a class="el" href="MeshBuilder_8cpp_source.html#l00390">390</a> of file <a class="el" href="MeshBuilder_8cpp_source.html">MeshBuilder.cpp</a>.</p>
 
 <p>References <a class="el" href="MyMath_8h_source.html#l00049">Math::DegreeToRadian()</a>.</p>
 
-<p>Referenced by <a class="el" href="MeshBuilder_8cpp_source.html#l00479">MeshBuilder::GenerateHemisphere()</a>, <a class="el" href="MeshBuilder_8cpp_source.html#l00433">MeshBuilder::GenerateQuarterSphere()</a>, and <a class="el" href="MeshBuilder_8cpp_source.html#l00385">MeshBuilder::GenerateSphere()</a>.</p>
+<p>Referenced by <a class="el" href="MeshBuilder_8cpp_source.html#l00489">MeshBuilder::GenerateHemisphere()</a>, <a class="el" href="MeshBuilder_8cpp_source.html#l00443">MeshBuilder::GenerateQuarterSphere()</a>, and <a class="el" href="MeshBuilder_8cpp_source.html#l00395">MeshBuilder::GenerateSphere()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -336,7 +345,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node2" href="classMeshBuilder.html#a36320c69da431e763f864e3247c58a9b" title="MeshBuilder::GenerateHemisphere" alt="" coords="124,5,348,32"/>
 <area shape="rect" id="node4" href="classMeshBuilder.html#a227ca853ca1ea18521bae1c1d46d6715" title="MeshBuilder::GenerateQuarter\lSphere" alt="" coords="137,57,335,98"/>
 <area shape="rect" id="node5" href="classMeshBuilder.html#a569c4966c1422841fc79118803f5ca7e" title="MeshBuilder::GenerateSphere" alt="" coords="138,123,334,149"/>
-<area shape="rect" id="node3" href="classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="SP2_Scene::Init" alt="" coords="396,64,512,91"/>
+<area shape="rect" id="node3" href="classSP2__Scene.html#ae7483c042e4a1861b71137f1a564ad7a" title="Initializes values. " alt="" coords="396,64,512,91"/>
 </map>
 </div>
 </p>

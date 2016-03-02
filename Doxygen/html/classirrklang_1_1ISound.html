@@ -725,7 +725,7 @@ Public Member Functions</h2></td></tr>
 <p>sets the current play position of the sound in milliseconds. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pos</td><td><a class="el" href="structPosition.html">Position</a> in milliseconds. Must be between 0 and the value returned by <a class="el" href="classirrklang_1_1ISound.html#ad8edf019757e44c683b14424abc2275c" title="returns the current play position of the sound in milliseconds. ">getPlayPosition()</a>. </td></tr>
+    <tr><td class="paramname">pos</td><td><a class="el" href="structPosition.html" title="Defines the methods and variables for setting position. ">Position</a> in milliseconds. Must be between 0 and the value returned by <a class="el" href="classirrklang_1_1ISound.html#ad8edf019757e44c683b14424abc2275c" title="returns the current play position of the sound in milliseconds. ">getPlayPosition()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -854,16 +854,16 @@ Public Member Functions</h2></td></tr>
 <p>sets the volume of the sound, a value between 0 (mute) and 1 (full volume). </p>
 <p>This volume gets multiplied with the master volume of the sound engine and other parameters like distance to listener when played as 3d sound. </p>
 
-<p>Referenced by <a class="el" href="SP2__Scene_8cpp_source.html#l00828">SP2_Scene::GameState()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l01226">SP2_Scene::Update()</a>.</p>
+<p>Referenced by <a class="el" href="SP2__Scene_8cpp_source.html#l00960">SP2_Scene::GameState()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l01523">SP2_Scene::Update()</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classirrklang_1_1ISound_a4c91357775f1d15e2c276ced09a40599_icgraph.png" border="0" usemap="#classirrklang_1_1ISound_a4c91357775f1d15e2c276ced09a40599_icgraph" alt=""/></div>
 <map name="classirrklang_1_1ISound_a4c91357775f1d15e2c276ced09a40599_icgraph" id="classirrklang_1_1ISound_a4c91357775f1d15e2c276ced09a40599_icgraph">
-<area shape="rect" id="node2" href="classSP2__Scene.html#a3cd10ebc989e3f3e2f84f59d74b76ef2" title="SP2_Scene::GameState" alt="" coords="236,5,401,32"/>
-<area shape="rect" id="node4" href="classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="SP2_Scene::Update" alt="" coords="249,56,389,83"/>
-<area shape="rect" id="node3" href="classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="SP2_Scene::Render" alt="" coords="449,5,589,32"/>
+<area shape="rect" id="node2" href="classSP2__Scene.html#a3cd10ebc989e3f3e2f84f59d74b76ef2" title="Method that controls the transition from wave to wave. " alt="" coords="236,5,401,32"/>
+<area shape="rect" id="node4" href="classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="Method where values are changed. " alt="" coords="249,56,389,83"/>
+<area shape="rect" id="node3" href="classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="Method that renders everything in the game. " alt="" coords="449,5,589,32"/>
 </map>
 </div>
 </p>
@@ -894,16 +894,16 @@ Here is the caller graph for this function:</div>
 <p>Will stop the sound and free its resources. </p>
 <p>If you just want to pause the sound, use <a class="el" href="classirrklang_1_1ISound.html#a399fef60d1c48e2dffdf76d83173a15a" title="returns if the sound is paused ">setIsPaused()</a>. After calling <a class="el" href="classirrklang_1_1ISound.html#a108485fe64658441cecd70917782961f" title="Will stop the sound and free its resources. ">stop()</a>, <a class="el" href="classirrklang_1_1ISound.html#a9d9e758f8500b194580de339c7f96768" title="returns if the sound has finished playing. ">isFinished()</a> will usually return true. Be sure to also call -&gt;<a class="el" href="classirrklang_1_1IVirtualRefCounted.html#a6602c3d110f23410c5bca8a08b709aa4" title="Drops the object. Decrements the reference counter by one. ">drop()</a> once you are done. </p>
 
-<p>Referenced by <a class="el" href="SP2__Scene_8cpp_source.html#l00828">SP2_Scene::GameState()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l01226">SP2_Scene::Update()</a>.</p>
+<p>Referenced by <a class="el" href="SP2__Scene_8cpp_source.html#l00960">SP2_Scene::GameState()</a>, and <a class="el" href="SP2__Scene_8cpp_source.html#l01523">SP2_Scene::Update()</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classirrklang_1_1ISound_a108485fe64658441cecd70917782961f_icgraph.png" border="0" usemap="#classirrklang_1_1ISound_a108485fe64658441cecd70917782961f_icgraph" alt=""/></div>
 <map name="classirrklang_1_1ISound_a108485fe64658441cecd70917782961f_icgraph" id="classirrklang_1_1ISound_a108485fe64658441cecd70917782961f_icgraph">
-<area shape="rect" id="node2" href="classSP2__Scene.html#a3cd10ebc989e3f3e2f84f59d74b76ef2" title="SP2_Scene::GameState" alt="" coords="199,5,364,32"/>
-<area shape="rect" id="node4" href="classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="SP2_Scene::Update" alt="" coords="211,56,351,83"/>
-<area shape="rect" id="node3" href="classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="SP2_Scene::Render" alt="" coords="412,5,552,32"/>
+<area shape="rect" id="node2" href="classSP2__Scene.html#a3cd10ebc989e3f3e2f84f59d74b76ef2" title="Method that controls the transition from wave to wave. " alt="" coords="199,5,364,32"/>
+<area shape="rect" id="node4" href="classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="Method where values are changed. " alt="" coords="211,56,351,83"/>
+<area shape="rect" id="node3" href="classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="Method that renders everything in the game. " alt="" coords="412,5,552,32"/>
 </map>
 </div>
 </p>

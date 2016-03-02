@@ -1,6 +1,6 @@
 <map id="SP2_Scene::initLights" name="SP2_Scene::initLights">
 <area shape="rect" id="node2" href="$namespaceMath.html#ac04b987cc6c574a059e68cb58f58c09a" title="Converts from degrees to radians. " alt="" coords="204,5,359,32"/>
 <area shape="rect" id="node3" href="$structPosition.html#a2919b2441baf7a2f799791d65a1cfc15" title="Position::Set" alt="" coords="233,56,330,83"/>
-<area shape="rect" id="node4" href="$structColor.html#acc77e4e3583d3eca7e476952e51bfb80" title="Color::Set" alt="" coords="241,107,321,133"/>
-<area shape="rect" id="node5" href="$structVector3.html#a9c25d604bd52b162cfcb56302ef032bb" title="Set the elements of this vector. " alt="" coords="234,157,329,184"/>
+<area shape="rect" id="node4" href="$structVector3.html#a9c25d604bd52b162cfcb56302ef032bb" title="Set the elements of this vector. " alt="" coords="234,107,329,133"/>
+<area shape="rect" id="node5" href="$structColor.html#acc77e4e3583d3eca7e476952e51bfb80" title="Color::Set" alt="" coords="241,157,321,184"/>
 </map>

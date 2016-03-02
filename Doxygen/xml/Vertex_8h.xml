@@ -9,147 +9,129 @@
     <includedby refid="MeshBuilder_8h" local="yes">ComGLab/Source/MeshBuilder.h</includedby>
     <includedby refid="Utility_8h" local="yes">ComGLab/Source/Utility.h</includedby>
     <incdepgraph>
-      <node id="2281">
+      <node id="1829">
         <label>MyMath.h</label>
         <link refid="MyMath_8h"/>
-        <childnode refid="2282" relation="include">
+        <childnode refid="1830" relation="include">
         </childnode>
-        <childnode refid="2283" relation="include">
+        <childnode refid="1831" relation="include">
         </childnode>
-        <childnode refid="2284" relation="include">
+        <childnode refid="1832" relation="include">
         </childnode>
-        <childnode refid="2285" relation="include">
+        <childnode refid="1833" relation="include">
         </childnode>
       </node>
-      <node id="2282">
+      <node id="1830">
         <label>cmath</label>
       </node>
-      <node id="2280">
+      <node id="1828">
         <label>Vector3.h</label>
         <link refid="Vector3_8h"/>
-        <childnode refid="2281" relation="include">
+        <childnode refid="1829" relation="include">
         </childnode>
-        <childnode refid="2286" relation="include">
+        <childnode refid="1834" relation="include">
         </childnode>
       </node>
-      <node id="2283">
+      <node id="1831">
         <label>exception</label>
       </node>
-      <node id="2279">
+      <node id="1827">
         <label>ComGLab/Source/Vertex.h</label>
         <link refid="Vertex.h"/>
-        <childnode refid="2280" relation="include">
+        <childnode refid="1828" relation="include">
         </childnode>
       </node>
-      <node id="2284">
+      <node id="1832">
         <label>ctime</label>
       </node>
-      <node id="2285">
+      <node id="1833">
         <label>cstdlib</label>
       </node>
-      <node id="2286">
+      <node id="1834">
         <label>iostream</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2295">
+      <node id="1841">
         <label>ComGLab/Source/LoadOBJ.h</label>
         <link refid="LoadOBJ_8h"/>
-        <childnode refid="2296" relation="include">
+        <childnode refid="1842" relation="include">
         </childnode>
-        <childnode refid="2297" relation="include">
+        <childnode refid="1843" relation="include">
         </childnode>
       </node>
-      <node id="2299">
+      <node id="1845">
         <label>ComGLab/Source/Mesh.cpp</label>
         <link refid="Mesh_8cpp"/>
       </node>
-      <node id="2293">
-        <label>ComGLab/Source/Particle.cpp</label>
-        <link refid="Particle_8cpp"/>
-      </node>
-      <node id="2288">
+      <node id="1836">
         <label>ComGLab/Source/Light.h</label>
         <link refid="Light_8h"/>
-        <childnode refid="2289" relation="include">
+        <childnode refid="1837" relation="include">
         </childnode>
-        <childnode refid="2292" relation="include">
-        </childnode>
-        <childnode refid="2294" relation="include">
+        <childnode refid="1840" relation="include">
         </childnode>
       </node>
-      <node id="2291">
+      <node id="1839">
         <label>ComGLab/Source/SP2_Scene.cpp</label>
         <link refid="SP2__Scene_8cpp"/>
       </node>
-      <node id="2301">
+      <node id="1847">
         <label>ComGLab/Source/Utility.cpp</label>
         <link refid="Utility_8cpp"/>
       </node>
-      <node id="2290">
+      <node id="1838">
         <label>ComGLab/Source/Application.cpp</label>
         <link refid="Application_8cpp"/>
       </node>
-      <node id="2298">
+      <node id="1844">
         <label>ComGLab/Source/MeshBuilder.cpp</label>
         <link refid="MeshBuilder_8cpp"/>
       </node>
-      <node id="2296">
+      <node id="1842">
         <label>ComGLab/Source/LoadOBJ.cpp</label>
         <link refid="LoadOBJ_8cpp"/>
       </node>
-      <node id="2287">
+      <node id="1835">
         <label>ComGLab/Source/Vertex.h</label>
         <link refid="Vertex.h"/>
-        <childnode refid="2288" relation="include">
+        <childnode refid="1836" relation="include">
         </childnode>
-        <childnode refid="2295" relation="include">
+        <childnode refid="1841" relation="include">
         </childnode>
-        <childnode refid="2299" relation="include">
+        <childnode refid="1845" relation="include">
         </childnode>
-        <childnode refid="2297" relation="include">
+        <childnode refid="1843" relation="include">
         </childnode>
-        <childnode refid="2300" relation="include">
+        <childnode refid="1846" relation="include">
         </childnode>
       </node>
-      <node id="2300">
+      <node id="1846">
         <label>ComGLab/Source/Utility.h</label>
         <link refid="Utility_8h"/>
-        <childnode refid="2293" relation="include">
+        <childnode refid="1839" relation="include">
         </childnode>
-        <childnode refid="2291" relation="include">
-        </childnode>
-        <childnode refid="2301" relation="include">
+        <childnode refid="1847" relation="include">
         </childnode>
       </node>
-      <node id="2289">
+      <node id="1837">
         <label>ComGLab/Source/SP2_Scene.h</label>
         <link refid="SP2__Scene_8h"/>
-        <childnode refid="2290" relation="include">
+        <childnode refid="1838" relation="include">
         </childnode>
-        <childnode refid="2291" relation="include">
-        </childnode>
-      </node>
-      <node id="2292">
-        <label>ComGLab/Source/Particle.h</label>
-        <link refid="Particle_8h"/>
-        <childnode refid="2290" relation="include">
-        </childnode>
-        <childnode refid="2293" relation="include">
+        <childnode refid="1839" relation="include">
         </childnode>
       </node>
-      <node id="2294">
+      <node id="1840">
         <label>ComGLab/Source/Light.cpp</label>
         <link refid="Light_8cpp"/>
       </node>
-      <node id="2297">
+      <node id="1843">
         <label>ComGLab/Source/MeshBuilder.h</label>
         <link refid="MeshBuilder_8h"/>
-        <childnode refid="2298" relation="include">
+        <childnode refid="1844" relation="include">
         </childnode>
-        <childnode refid="2293" relation="include">
-        </childnode>
-        <childnode refid="2291" relation="include">
+        <childnode refid="1839" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -158,52 +140,68 @@
     <innerclass refid="structTexCoord" prot="public">TexCoord</innerclass>
     <innerclass refid="structVertex" prot="public">Vertex</innerclass>
     <briefdescription>
-    </briefdescription>
+<para>Header file for vertex. </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para><simplesect kind="author"><para>Wen Sheng Tang </para></simplesect>
+<simplesect kind="par"><title>email: tang_wen_sheng@nyp.edu.sg</title><para></para></simplesect>
+</para>    </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>VERTEX_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VERTEX_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Vector3_8h" kindref="compound">Vector3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6" refid="structPosition" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structPosition" kindref="compound">Position</ref></highlight></codeline>
-<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="8" refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" kindref="member">x</ref>,<sp/><ref refid="structPosition_1a54a6182b5f7539295b32255808897d3f" kindref="member">y</ref>,<sp/><ref refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" kindref="member">z</ref>;</highlight></codeline>
-<codeline lineno="9" refid="structPosition_1ab73d81912c4ead48cee5342d7cf5a33b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structPosition_1ab73d81912c4ead48cee5342d7cf5a33b" kindref="member">Position</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z<sp/>=<sp/>0)</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" kindref="member">Set</ref>(x,<sp/>y,<sp/>z);</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="13" refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" kindref="member">Set</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z)<sp/>{<sp/>this-&gt;x<sp/>=<sp/><ref refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" kindref="member">x</ref>;<sp/>this-&gt;y<sp/>=<sp/><ref refid="structPosition_1a54a6182b5f7539295b32255808897d3f" kindref="member">y</ref>;<sp/>this-&gt;z<sp/>=<sp/><ref refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" kindref="member">z</ref>;<sp/>}</highlight></codeline>
-<codeline lineno="14"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VERTEX_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VERTEX_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Vector3_8h" kindref="compound">Vector3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16" refid="structColor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structColor" kindref="compound">Color</ref></highlight></codeline>
-<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="18" refid="structColor_1a3958a556b47d2de3dd45c75aac833c20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structColor_1a3958a556b47d2de3dd45c75aac833c20" kindref="member">r</ref>,<sp/><ref refid="structColor_1a5defbb21620e480e556181772d665f34" kindref="member">g</ref>,<sp/><ref refid="structColor_1a33e482be18d6ea31d2b403bee13683b7" kindref="member">b</ref>;</highlight></codeline>
-<codeline lineno="19" refid="structColor_1a5890bddbeb135abcd997efdb65b9d5f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structColor_1a5890bddbeb135abcd997efdb65b9d5f9" kindref="member">Color</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>1,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>g<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>1)</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" kindref="member">Set</ref>(r,<sp/>g,<sp/>b);</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="23" refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" kindref="member">Set</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>g,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>b)<sp/>{<sp/>this-&gt;r<sp/>=<sp/><ref refid="structColor_1a3958a556b47d2de3dd45c75aac833c20" kindref="member">r</ref>;<sp/>this-&gt;g<sp/>=<sp/><ref refid="structColor_1a5defbb21620e480e556181772d665f34" kindref="member">g</ref>;<sp/>this-&gt;b<sp/>=<sp/><ref refid="structColor_1a33e482be18d6ea31d2b403bee13683b7" kindref="member">b</ref>;<sp/>}</highlight></codeline>
-<codeline lineno="24"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26" refid="structTexCoord" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structTexCoord" kindref="compound">TexCoord</ref></highlight></codeline>
-<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="28" refid="structTexCoord_1ad525bc2c53d6402267c51022db33f85e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structTexCoord_1a3be8371ac57f9ddc6ff5853e4bb58190" kindref="member">u</ref>,<sp/><ref refid="structTexCoord_1ad525bc2c53d6402267c51022db33f85e" kindref="member">v</ref>;</highlight></codeline>
-<codeline lineno="29" refid="structTexCoord_1adec9b45bb816162fe2f22a677ebfc11c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTexCoord_1adec9b45bb816162fe2f22a677ebfc11c" kindref="member">TexCoord</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>u<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>v<sp/>=<sp/>0)<sp/>{<sp/><ref refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" kindref="member">Set</ref>(u,<sp/>v);<sp/>}</highlight></codeline>
-<codeline lineno="30" refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" kindref="member">Set</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>u,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>v)<sp/>{<sp/>this-&gt;u<sp/>=<sp/><ref refid="structTexCoord_1a3be8371ac57f9ddc6ff5853e4bb58190" kindref="member">u</ref>;<sp/>this-&gt;v<sp/>=<sp/><ref refid="structTexCoord_1ad525bc2c53d6402267c51022db33f85e" kindref="member">v</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="structPosition" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structPosition" kindref="compound">Position</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25" refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" kindref="member">x</ref>,<sp/><ref refid="structPosition_1a54a6182b5f7539295b32255808897d3f" kindref="member">y</ref>,<sp/><ref refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="26" refid="structPosition_1ab73d81912c4ead48cee5342d7cf5a33b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structPosition_1ab73d81912c4ead48cee5342d7cf5a33b" kindref="member">Position</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z<sp/>=<sp/>0)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" kindref="member">Set</ref>(x,<sp/>y,<sp/>z);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="30" refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" kindref="member">Set</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z)<sp/>{<sp/>this-&gt;x<sp/>=<sp/><ref refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" kindref="member">x</ref>;<sp/>this-&gt;y<sp/>=<sp/><ref refid="structPosition_1a54a6182b5f7539295b32255808897d3f" kindref="member">y</ref>;<sp/>this-&gt;z<sp/>=<sp/><ref refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" kindref="member">z</ref>;<sp/>}</highlight></codeline>
 <codeline lineno="31"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="structVertex" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structVertex" kindref="compound">Vertex</ref></highlight></codeline>
-<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="36" refid="structVertex_1a8791e77df49f6996a19a8dd17cee8d5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="structVertex_1a8791e77df49f6996a19a8dd17cee8d5c" kindref="member">pos</ref>;</highlight></codeline>
-<codeline lineno="37" refid="structVertex_1a3a3ff3f6cf46b1848795991e8159b922" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structColor" kindref="compound">Color</ref><sp/><ref refid="structVertex_1a3a3ff3f6cf46b1848795991e8159b922" kindref="member">color</ref>;</highlight></codeline>
-<codeline lineno="38" refid="structVertex_1adce2d4b3d1191c69328519bdf231c344" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="structVertex_1adce2d4b3d1191c69328519bdf231c344" kindref="member">normal</ref>;</highlight></codeline>
-<codeline lineno="39" refid="structVertex_1a717d827da388b9c4847d1f5343959c78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTexCoord" kindref="compound">TexCoord</ref><sp/><ref refid="structVertex_1a717d827da388b9c4847d1f5343959c78" kindref="member">texCoord</ref>;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="structColor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structColor" kindref="compound">Color</ref></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42" refid="structColor_1a3958a556b47d2de3dd45c75aac833c20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structColor_1a3958a556b47d2de3dd45c75aac833c20" kindref="member">r</ref>,<sp/><ref refid="structColor_1a5defbb21620e480e556181772d665f34" kindref="member">g</ref>,<sp/><ref refid="structColor_1a33e482be18d6ea31d2b403bee13683b7" kindref="member">b</ref>;</highlight></codeline>
+<codeline lineno="43" refid="structColor_1a5890bddbeb135abcd997efdb65b9d5f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structColor_1a5890bddbeb135abcd997efdb65b9d5f9" kindref="member">Color</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>1,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>g<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>1)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" kindref="member">Set</ref>(r,<sp/>g,<sp/>b);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="47" refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" kindref="member">Set</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>r,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>g,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>b)<sp/>{<sp/>this-&gt;r<sp/>=<sp/><ref refid="structColor_1a3958a556b47d2de3dd45c75aac833c20" kindref="member">r</ref>;<sp/>this-&gt;g<sp/>=<sp/><ref refid="structColor_1a5defbb21620e480e556181772d665f34" kindref="member">g</ref>;<sp/>this-&gt;b<sp/>=<sp/><ref refid="structColor_1a33e482be18d6ea31d2b403bee13683b7" kindref="member">b</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="structTexCoord" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structTexCoord" kindref="compound">TexCoord</ref></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59" refid="structTexCoord_1ad525bc2c53d6402267c51022db33f85e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structTexCoord_1a3be8371ac57f9ddc6ff5853e4bb58190" kindref="member">u</ref>,<sp/><ref refid="structTexCoord_1ad525bc2c53d6402267c51022db33f85e" kindref="member">v</ref>;</highlight></codeline>
+<codeline lineno="60" refid="structTexCoord_1adec9b45bb816162fe2f22a677ebfc11c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTexCoord_1adec9b45bb816162fe2f22a677ebfc11c" kindref="member">TexCoord</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>u<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>v<sp/>=<sp/>0)<sp/>{<sp/><ref refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" kindref="member">Set</ref>(u,<sp/>v);<sp/>}</highlight></codeline>
+<codeline lineno="61" refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" kindref="member">Set</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>u,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>v)<sp/>{<sp/>this-&gt;u<sp/>=<sp/><ref refid="structTexCoord_1a3be8371ac57f9ddc6ff5853e4bb58190" kindref="member">u</ref>;<sp/>this-&gt;v<sp/>=<sp/><ref refid="structTexCoord_1ad525bc2c53d6402267c51022db33f85e" kindref="member">v</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="69"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="structVertex" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structVertex" kindref="compound">Vertex</ref></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73" refid="structVertex_1a8791e77df49f6996a19a8dd17cee8d5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="structVertex_1a8791e77df49f6996a19a8dd17cee8d5c" kindref="member">pos</ref>;</highlight></codeline>
+<codeline lineno="74" refid="structVertex_1a3a3ff3f6cf46b1848795991e8159b922" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structColor" kindref="compound">Color</ref><sp/><ref refid="structVertex_1a3a3ff3f6cf46b1848795991e8159b922" kindref="member">color</ref>;</highlight></codeline>
+<codeline lineno="75" refid="structVertex_1adce2d4b3d1191c69328519bdf231c344" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="structVertex_1adce2d4b3d1191c69328519bdf231c344" kindref="member">normal</ref>;</highlight></codeline>
+<codeline lineno="76" refid="structVertex_1a717d827da388b9c4847d1f5343959c78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTexCoord" kindref="compound">TexCoord</ref><sp/><ref refid="structVertex_1a717d827da388b9c4847d1f5343959c78" kindref="member">texCoord</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="ComGLab/Source/Vertex.h"/>
   </compounddef>

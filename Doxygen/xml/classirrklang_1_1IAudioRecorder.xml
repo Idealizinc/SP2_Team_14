@@ -227,32 +227,32 @@
     <detaileddescription>
 <para>It creates sound sources into an <ref refid="classirrklang_1_1ISoundEngine" kindref="compound">ISoundEngine</ref> which then can be played there. See <ref refid="index_1recordingAudio" kindref="member">Recording Audio</ref> for an example on how to use this. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="408">
+      <node id="368">
         <label>irrklang::IRefCounted</label>
         <link refid="classirrklang_1_1IRefCounted"/>
       </node>
-      <node id="407">
+      <node id="367">
         <label>irrklang::IAudioRecorder</label>
         <link refid="classirrklang_1_1IAudioRecorder"/>
-        <childnode refid="408" relation="public-inheritance">
+        <childnode refid="368" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="411">
+      <node id="371">
         <label>int</label>
       </node>
-      <node id="410">
+      <node id="370">
         <label>irrklang::IRefCounted</label>
         <link refid="classirrklang_1_1IRefCounted"/>
-        <childnode refid="411" relation="usage">
+        <childnode refid="371" relation="usage">
           <edgelabel>ReferenceCounter</edgelabel>
         </childnode>
       </node>
-      <node id="409">
+      <node id="369">
         <label>irrklang::IAudioRecorder</label>
         <link refid="classirrklang_1_1IAudioRecorder"/>
-        <childnode refid="410" relation="public-inheritance">
+        <childnode refid="370" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

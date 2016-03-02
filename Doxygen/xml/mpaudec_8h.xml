@@ -5,43 +5,43 @@
     <includedby refid="CIrrKlangAudioStreamMP3_8h" local="yes">irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h</includedby>
     <includedby refid="internal_8h" local="yes">irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h</includedby>
     <invincdepgraph>
-      <node id="2958">
+      <node id="2446">
         <label>irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h</label>
         <link refid="CIrrKlangAudioStreamMP3_8h"/>
-        <childnode refid="2959" relation="include">
+        <childnode refid="2447" relation="include">
         </childnode>
-        <childnode refid="2960" relation="include">
+        <childnode refid="2448" relation="include">
         </childnode>
       </node>
-      <node id="2961">
+      <node id="2449">
         <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h</label>
         <link refid="internal_8h"/>
-        <childnode refid="2962" relation="include">
+        <childnode refid="2450" relation="include">
         </childnode>
-        <childnode refid="2963" relation="include">
+        <childnode refid="2451" relation="include">
         </childnode>
       </node>
-      <node id="2959">
+      <node id="2447">
         <label>irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamLoaderMP3.cpp</label>
         <link refid="CIrrKlangAudioStreamLoaderMP3_8cpp"/>
       </node>
-      <node id="2963">
+      <node id="2451">
         <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c</label>
         <link refid="mpaudec_8c"/>
       </node>
-      <node id="2957">
+      <node id="2445">
         <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h</label>
         <link refid="mpaudec.h"/>
-        <childnode refid="2958" relation="include">
+        <childnode refid="2446" relation="include">
         </childnode>
-        <childnode refid="2961" relation="include">
+        <childnode refid="2449" relation="include">
         </childnode>
       </node>
-      <node id="2960">
+      <node id="2448">
         <label>irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.cpp</label>
         <link refid="CIrrKlangAudioStreamMP3_8cpp"/>
       </node>
-      <node id="2962">
+      <node id="2450">
         <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c</label>
         <link refid="bits_8c"/>
       </node>

@@ -15,10 +15,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Material.h" line="6" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="6" bodyend="-1"/>
-        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">Particle::RenderMesh</referencedby>
-        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="629" endline="670">SP2_Scene::RenderMesh</referencedby>
-        <referencedby refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="8" endline="8">Set</referencedby>
+        <location file="ComGLab/Source/Material.h" line="23" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="788" endline="829">SP2_Scene::RenderMesh</referencedby>
+        <referencedby refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="25" endline="25">Set</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structComponent_1a6cf7bfac62ac8aa4a8aa8c3f847428d8" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -31,8 +30,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Material.h" line="6" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="6" bodyend="-1"/>
-        <referencedby refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="8" endline="8">Set</referencedby>
+        <location file="ComGLab/Source/Material.h" line="23" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="25" endline="25">Set</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structComponent_1abd55184abe2aaf269b38f5913721821c" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -45,8 +44,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Material.h" line="6" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="6" bodyend="-1"/>
-        <referencedby refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="8" endline="8">Set</referencedby>
+        <location file="ComGLab/Source/Material.h" line="23" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="25" endline="25">Set</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -76,8 +75,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Material.h" line="7" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="7" bodyend="7"/>
-        <references refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="8" endline="8">Set</references>
+        <location file="ComGLab/Source/Material.h" line="24" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="24" bodyend="24"/>
+        <references refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="25" endline="25">Set</references>
       </memberdef>
       <memberdef kind="function" id="structComponent_1a85f599b839327709953f0115dc5dfd49" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -102,33 +101,33 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Material.h" line="8" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="8" bodyend="8"/>
-        <references refid="structComponent_1abd55184abe2aaf269b38f5913721821c" compoundref="Material_8h" startline="6">b</references>
-        <references refid="structComponent_1a6cf7bfac62ac8aa4a8aa8c3f847428d8" compoundref="Material_8h" startline="6">g</references>
-        <references refid="structComponent_1a490db57cde183ef5a233b6ff3386ef6f" compoundref="Material_8h" startline="6">r</references>
-        <referencedby refid="structComponent_1ae110a300786be861f7ea647ef77d9d18" compoundref="Material_8h" startline="7" endline="7">Component</referencedby>
-        <referencedby refid="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" compoundref="Material_8cpp" startline="3" endline="9">Material::Material</referencedby>
+        <location file="ComGLab/Source/Material.h" line="25" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="25" bodyend="25"/>
+        <references refid="structComponent_1abd55184abe2aaf269b38f5913721821c" compoundref="Material_8h" startline="23">b</references>
+        <references refid="structComponent_1a6cf7bfac62ac8aa4a8aa8c3f847428d8" compoundref="Material_8h" startline="23">g</references>
+        <references refid="structComponent_1a490db57cde183ef5a233b6ff3386ef6f" compoundref="Material_8h" startline="23">r</references>
+        <referencedby refid="structComponent_1ae110a300786be861f7ea647ef77d9d18" compoundref="Material_8h" startline="24" endline="24">Component</referencedby>
+        <referencedby refid="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" compoundref="Material_8cpp" startline="27" endline="33">Material::Material</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Defines the methods and variables for light properties. </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para>Struct <ref refid="structComponent" kindref="compound">Component</ref>: </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="387">
+      <node id="347">
         <label>Component</label>
         <link refid="structComponent"/>
-        <childnode refid="388" relation="usage">
+        <childnode refid="348" relation="usage">
           <edgelabel>g</edgelabel>
           <edgelabel>r</edgelabel>
           <edgelabel>b</edgelabel>
         </childnode>
       </node>
-      <node id="388">
+      <node id="348">
         <label>float</label>
       </node>
     </collaborationgraph>
-    <location file="ComGLab/Source/Material.h" line="5" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="4" bodyend="9"/>
+    <location file="ComGLab/Source/Material.h" line="22" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="21" bodyend="26"/>
     <listofallmembers>
       <member refid="structComponent_1abd55184abe2aaf269b38f5913721821c" prot="public" virt="non-virtual"><scope>Component</scope><name>b</name></member>
       <member refid="structComponent_1ae110a300786be861f7ea647ef77d9d18" prot="public" virt="non-virtual"><scope>Component</scope><name>Component</name></member>

@@ -668,7 +668,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="irrKlang-1.5.0/include/irrKlang.h" line="952" column="1"/>
-        <referencedby refid="classSP2__Scene_1ae7483c042e4a1861b71137f1a564ad7a" compoundref="SP2__Scene_8cpp" startline="60" endline="130">SP2_Scene::Init</referencedby>
+        <referencedby refid="classSP2__Scene_1ae7483c042e4a1861b71137f1a564ad7a" compoundref="SP2__Scene_8cpp" startline="102" endline="172">SP2_Scene::Init</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespaceirrklang_1a38d9a69bf54fd60e76e80e199e44faee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="irrKlang_8h_1a46984c40d70515d79d72043bfbd554d5" kindref="member">IRRKLANG_API</ref> <ref refid="classirrklang_1_1ISoundDeviceList" kindref="compound">ISoundDeviceList</ref> *<ref refid="irrKlang_8h_1abd61a1fa49408e803e5aa3049fdf43f8" kindref="member">IRRKLANGCALLCONV</ref></type>

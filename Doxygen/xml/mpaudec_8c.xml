@@ -6,72 +6,72 @@
     <includes refid="mpegaudio_8h" local="yes">mpegaudio.h</includes>
     <includes refid="mpaudectab_8h" local="yes">mpaudectab.h</includes>
     <incdepgraph>
-      <node id="2943">
+      <node id="2431">
         <label>internal.h</label>
         <link refid="internal_8h"/>
-        <childnode refid="2944" relation="include">
+        <childnode refid="2432" relation="include">
         </childnode>
-        <childnode refid="2945" relation="include">
+        <childnode refid="2433" relation="include">
         </childnode>
-        <childnode refid="2946" relation="include">
+        <childnode refid="2434" relation="include">
         </childnode>
-        <childnode refid="2947" relation="include">
+        <childnode refid="2435" relation="include">
         </childnode>
-        <childnode refid="2948" relation="include">
+        <childnode refid="2436" relation="include">
         </childnode>
-        <childnode refid="2949" relation="include">
+        <childnode refid="2437" relation="include">
         </childnode>
-        <childnode refid="2950" relation="include">
+        <childnode refid="2438" relation="include">
         </childnode>
-        <childnode refid="2951" relation="include">
+        <childnode refid="2439" relation="include">
         </childnode>
-        <childnode refid="2952" relation="include">
+        <childnode refid="2440" relation="include">
         </childnode>
       </node>
-      <node id="2952">
+      <node id="2440">
         <label>assert.h</label>
       </node>
-      <node id="2953">
+      <node id="2441">
         <label>mpegaudio.h</label>
         <link refid="mpegaudio_8h"/>
       </node>
-      <node id="2944">
+      <node id="2432">
         <label>stdlib.h</label>
       </node>
-      <node id="2949">
+      <node id="2437">
         <label>stddef.h</label>
       </node>
-      <node id="2942">
+      <node id="2430">
         <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c</label>
         <link refid="mpaudec.c"/>
-        <childnode refid="2943" relation="include">
+        <childnode refid="2431" relation="include">
         </childnode>
-        <childnode refid="2953" relation="include">
+        <childnode refid="2441" relation="include">
         </childnode>
-        <childnode refid="2954" relation="include">
+        <childnode refid="2442" relation="include">
         </childnode>
       </node>
-      <node id="2950">
+      <node id="2438">
         <label>mpaudec.h</label>
         <link refid="mpaudec_8h"/>
       </node>
-      <node id="2954">
+      <node id="2442">
         <label>mpaudectab.h</label>
         <link refid="mpaudectab_8h"/>
       </node>
-      <node id="2946">
+      <node id="2434">
         <label>string.h</label>
       </node>
-      <node id="2948">
+      <node id="2436">
         <label>math.h</label>
       </node>
-      <node id="2947">
+      <node id="2435">
         <label>ctype.h</label>
       </node>
-      <node id="2945">
+      <node id="2433">
         <label>stdio.h</label>
       </node>
-      <node id="2951">
+      <node id="2439">
         <label>inttypes.h</label>
       </node>
     </incdepgraph>

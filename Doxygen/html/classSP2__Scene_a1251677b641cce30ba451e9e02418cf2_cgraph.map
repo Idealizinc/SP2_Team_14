@@ -1,0 +1,24 @@
+<map id="SP2_Scene::RenderPowerUp" name="SP2_Scene::RenderPowerUp">
+<area shape="rect" id="node2" href="$structBoundary.html#ac8729f6b5ec80c5af1151892c0a3e9b8" title="Checks if the players position is outside of the boundaries set. " alt="" coords="253,5,430,32"/>
+<area shape="rect" id="node3" href="$classWeaponSystem.html#a233da9c15e711ac1f5ce5fcf2945d91f" title="Removes bullets from the list. " alt="" coords="254,56,429,83"/>
+<area shape="rect" id="node4" href="$classCamera3.html#adba0ccda28b9537ec3c3f8ee23048abd" title="Calls the value for current position. " alt="" coords="245,107,437,133"/>
+<area shape="rect" id="node5" href="$classMS.html#aac22e39d0ac437fcb85403a9f0a7a25f" title="Pop the top matrix on the matrix stack. " alt="" coords="287,157,396,184"/>
+<area shape="rect" id="node6" href="$classMS.html#a9fb4fff5036f3f197b893f9a579c97b2" title="Make a copy of the top matrix on the matrix stack and push it on top. " alt="" coords="283,208,399,235"/>
+<area shape="rect" id="node7" href="$classSP2__Scene.html#a0cd5fd0736fa9288f21b0712d22ff17c" title="Method that renders a mesh in the scene. " alt="" coords="255,259,427,285"/>
+<area shape="rect" id="node15" href="$classMS.html#a6ce592114042b920b648bca5519690cd" title="Multiply the top matrix with a rotation matrix based on the following parameters. ..." alt="" coords="297,309,385,336"/>
+<area shape="rect" id="node17" href="$classMS.html#a52109795de960e24663b315e9128533f" title="Multiply the top matrix with a scale matrix based on the following parameters. " alt="" coords="300,360,383,387"/>
+<area shape="rect" id="node21" href="$classWeaponSystem.html#ae014e0236d0f8a401a0ec848b25a2896" title="Sets the stats for each type of gun. " alt="" coords="254,411,429,437"/>
+<area shape="rect" id="node22" href="$classMS.html#a7e94a35ce566fe3ec49c92b6c4bb663a" title="Multiply the top matrix with a translation matrix based on the following parameters. " alt="" coords="290,461,393,488"/>
+<area shape="rect" id="node8" href="$classMtx44.html#aac1ba21ddfc5f3c24baa4f58d9c5c256" title="Return a new matrix that is an inverse. " alt="" coords="503,309,630,336"/>
+<area shape="rect" id="node10" href="$classMtx44.html#aebb16a0329c5237e314af0d75d8081fd" title="Return a new matrix that is a transpose of this matrix. " alt="" coords="493,157,640,184"/>
+<area shape="rect" id="node13" href="$classMesh.html#a75e66bcd90c09492676a4cfe5b23c3af" title="OpenGL render code. " alt="" coords="515,208,618,235"/>
+<area shape="rect" id="node14" href="$classMS.html#a21291d7fb488f63c589bdc9bd620ba58" title="Return the top matrix on the matrix stack. " alt="" coords="531,259,602,285"/>
+<area shape="rect" id="node9" href="$namespaceMath.html#ac91173ab2efdf7313fe7aaeb6cb44cf6" title="Math::FAbs" alt="" coords="722,335,813,361"/>
+<area shape="rect" id="node11" href="$classMtx44.html#a6c95e149e42cba381918782a93f8a68b" title="Set this matrix to its Transpose. " alt="" coords="704,157,831,184"/>
+<area shape="rect" id="node12" href="$Mtx44_8cpp.html#a1ef521a2e5e5ae2ef55d1bc0c3b0c437" title="Helper function swap. " alt="" coords="923,157,975,184"/>
+<area shape="rect" id="node16" href="$classMtx44.html#ac0587ffb5ff9fd58ad5768d28fc06574" title="Set Matrix to a rotation matrix about arbitrary axis. " alt="" coords="493,360,641,387"/>
+<area shape="rect" id="node18" href="$classMtx44.html#a04c49a922f8e8ffcb57a90c6ce955600" title="Set this matrix to a scaling matrix with scale factors sx, sy and sz. " alt="" coords="500,411,633,437"/>
+<area shape="rect" id="node19" href="$classMtx44.html#a3ac8a0afd66412e15e4246474b893da2" title="Set the matrix to an identity matrix (1&#39;s along the diagonal) " alt="" coords="696,436,839,463"/>
+<area shape="rect" id="node20" href="$classMtx44.html#a3aea63c08759ac98b8a4f23fdc0d6a28" title="Set this matrix to zero. " alt="" coords="887,436,1012,463"/>
+<area shape="rect" id="node23" href="$classMtx44.html#a0cc88cc5c648da14effba480c4d2ac70" title="Set this matrix to a translation matrix with translation of (x, y, z) " alt="" coords="485,461,648,488"/>
+</map>

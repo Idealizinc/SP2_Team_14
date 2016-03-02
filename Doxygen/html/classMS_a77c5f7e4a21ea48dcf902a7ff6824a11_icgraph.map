@@ -1,16 +1,13 @@
 <map id="MS::LoadIdentity" name="MS::LoadIdentity">
-<area shape="rect" id="node2" href="$classParticle.html#aff7cd61e7a2b82cebc3e9494fa54aa5d" title="Particle::Render" alt="" coords="231,5,346,32"/>
-<area shape="rect" id="node3" href="$classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="SP2_Scene::Render" alt="" coords="941,361,1081,388"/>
-<area shape="rect" id="node4" href="$classSP2__Scene.html#ae91e39146c4052e9e959cb1ff6a2890a" title="SP2_Scene::RenderImageOn\lScreen" alt="" coords="193,251,385,293"/>
-<area shape="rect" id="node11" href="$classSP2__Scene.html#a523ce5a26d1efa53a575081ebb2a2919" title="SP2_Scene::RenderMeshOnScreen" alt="" coords="173,200,404,227"/>
-<area shape="rect" id="node12" href="$classParticle.html#ae8737c510c4080f5bcf7dd8cd61564a5" title="Particle::RenderTextOnScreen" alt="" coords="189,419,388,445"/>
-<area shape="rect" id="node13" href="$classSP2__Scene.html#a40721f5409a15245989ab79baf848996" title="SP2_Scene::RenderTextOnScreen" alt="" coords="177,317,400,344"/>
-<area shape="rect" id="node15" href="$classSP2__Scene.html#a4105499f6a2e4cc7eeedac1af5248126" title="SP2_Scene::RenderWeaponInHand" alt="" coords="452,563,680,589"/>
-<area shape="rect" id="node5" href="$classSP2__Scene.html#a68b65e14328ef7b87a9e1c516499ee44" title="SP2_Scene::RenderShip" alt="" coords="483,411,649,437"/>
-<area shape="rect" id="node7" href="$classSP2__Scene.html#a6448011a887d25ea57d981ca7753810b" title="SP2_Scene::RenderWepScreen" alt="" coords="462,208,670,235"/>
-<area shape="rect" id="node8" href="$classSP2__Scene.html#aeb5b6dadeb1ee8d943f2e52e69d6d9e0" title="SP2_Scene::RenderUI" alt="" coords="735,323,887,349"/>
-<area shape="rect" id="node9" href="$classSP2__Scene.html#a6d8a3b4fea5fd0e17f86bc4f5a8ce315" title="SP2_Scene::RenderTeleporter" alt="" coords="467,309,665,336"/>
-<area shape="rect" id="node10" href="$classSP2__Scene.html#a84a5528561c5696e8f2161da2820a419" title="SP2_Scene::RenderGateText" alt="" coords="469,259,663,285"/>
-<area shape="rect" id="node6" href="$classSP2__Scene.html#a3cd10ebc989e3f3e2f84f59d74b76ef2" title="SP2_Scene::GameState" alt="" coords="728,399,893,425"/>
-<area shape="rect" id="node14" href="$classSP2__Scene.html#a617111439177700d9903e7777c821926" title="SP2_Scene::RenderLevel" alt="" coords="481,461,651,488"/>
+<area shape="rect" id="node2" href="$classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="Method that renders everything in the game. " alt="" coords="941,166,1081,193"/>
+<area shape="rect" id="node3" href="$classSP2__Scene.html#ae91e39146c4052e9e959cb1ff6a2890a" title="method that renders images on screen " alt="" coords="193,141,385,183"/>
+<area shape="rect" id="node9" href="$classSP2__Scene.html#a523ce5a26d1efa53a575081ebb2a2919" title="Method that renders a mesh on screen. " alt="" coords="173,218,404,245"/>
+<area shape="rect" id="node10" href="$classSP2__Scene.html#a40721f5409a15245989ab79baf848996" title="Method that renders text on screen. " alt="" coords="177,269,400,295"/>
+<area shape="rect" id="node12" href="$classSP2__Scene.html#a4105499f6a2e4cc7eeedac1af5248126" title="Method that renders a weapon on screen. " alt="" coords="452,431,680,458"/>
+<area shape="rect" id="node4" href="$classSP2__Scene.html#a68b65e14328ef7b87a9e1c516499ee44" title="Method that renders and animates the drivable ship. " alt="" coords="483,77,649,103"/>
+<area shape="rect" id="node6" href="$classSP2__Scene.html#a6448011a887d25ea57d981ca7753810b" title="Method that renders the weapon select screen. " alt="" coords="462,229,670,255"/>
+<area shape="rect" id="node7" href="$classSP2__Scene.html#aeb5b6dadeb1ee8d943f2e52e69d6d9e0" title="Method that renders the user interface. " alt="" coords="735,203,887,230"/>
+<area shape="rect" id="node8" href="$classSP2__Scene.html#a6d8a3b4fea5fd0e17f86bc4f5a8ce315" title="Method that renders the teleporters in the scene. " alt="" coords="467,178,665,205"/>
+<area shape="rect" id="node5" href="$classSP2__Scene.html#a3cd10ebc989e3f3e2f84f59d74b76ef2" title="Method that controls the transition from wave to wave. " alt="" coords="728,127,893,154"/>
+<area shape="rect" id="node11" href="$classSP2__Scene.html#a617111439177700d9903e7777c821926" title="Method that renders text on screen at certain moments in the game. " alt="" coords="481,330,651,357"/>
 </map>

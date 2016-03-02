@@ -38,13 +38,13 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="585">
+      <node id="519">
         <label>int</label>
       </node>
-      <node id="584">
+      <node id="518">
         <label>irrklang::CIrrKlangAudioStreamMP3::SFramePositionData</label>
         <link refid="structirrklang_1_1CIrrKlangAudioStreamMP3_1_1SFramePositionData"/>
-        <childnode refid="585" relation="usage">
+        <childnode refid="519" relation="usage">
           <edgelabel>offset</edgelabel>
           <edgelabel>size</edgelabel>
         </childnode>

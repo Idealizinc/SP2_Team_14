@@ -74,22 +74,22 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="644">
+      <node id="578">
         <label>VLC_TYPE(*)[2]</label>
       </node>
-      <node id="642">
+      <node id="576">
         <label>VLC</label>
         <link refid="structVLC"/>
-        <childnode refid="643" relation="usage">
+        <childnode refid="577" relation="usage">
           <edgelabel>bits</edgelabel>
           <edgelabel>table_allocated</edgelabel>
           <edgelabel>table_size</edgelabel>
         </childnode>
-        <childnode refid="644" relation="usage">
+        <childnode refid="578" relation="usage">
           <edgelabel>table</edgelabel>
         </childnode>
       </node>
-      <node id="643">
+      <node id="577">
         <label>int</label>
       </node>
     </collaborationgraph>

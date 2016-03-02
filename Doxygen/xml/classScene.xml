@@ -2,7 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
   <compounddef id="classScene" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>Scene</compoundname>
-    <derivedcompoundref refid="classParticle" prot="public" virt="non-virtual">Particle</derivedcompoundref>
     <derivedcompoundref refid="classSP2__Scene" prot="public" virt="non-virtual">SP2_Scene</derivedcompoundref>
     <includes refid="Scene_8h" local="no">Scene.h</includes>
       <sectiondef kind="public-func">
@@ -17,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Scene.h" line="7" column="1" bodyfile="ComGLab/Source/Scene.h" bodystart="7" bodyend="7"/>
+        <location file="ComGLab/Source/Scene.h" line="24" column="1" bodyfile="ComGLab/Source/Scene.h" bodystart="24" bodyend="24"/>
       </memberdef>
       <memberdef kind="function" id="classScene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -30,14 +29,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Scene.h" line="8" column="1" bodyfile="ComGLab/Source/Scene.h" bodystart="8" bodyend="8"/>
+        <location file="ComGLab/Source/Scene.h" line="25" column="1" bodyfile="ComGLab/Source/Scene.h" bodystart="25" bodyend="25"/>
       </memberdef>
       <memberdef kind="function" id="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
         <definition>virtual void Scene::Init</definition>
         <argsstring>()=0</argsstring>
         <name>Init</name>
-        <reimplementedby refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3">Init</reimplementedby>
         <reimplementedby refid="classSP2__Scene_1ae7483c042e4a1861b71137f1a564ad7a">Init</reimplementedby>
         <briefdescription>
         </briefdescription>
@@ -45,15 +43,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Scene.h" line="10" column="1"/>
-        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="121" endline="141">Application::Run</referencedby>
+        <location file="ComGLab/Source/Scene.h" line="27" column="1"/>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="130" endline="150">Application::Run</referencedby>
       </memberdef>
       <memberdef kind="function" id="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
         <definition>virtual void Scene::Update</definition>
         <argsstring>(double dt)=0</argsstring>
         <name>Update</name>
-        <reimplementedby refid="classParticle_1a8a5412af8bbf924a183d373a64480b00">Update</reimplementedby>
         <reimplementedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0">Update</reimplementedby>
         <param>
           <type>double</type>
@@ -65,15 +62,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Scene.h" line="11" column="1"/>
-        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="121" endline="141">Application::Run</referencedby>
+        <location file="ComGLab/Source/Scene.h" line="28" column="1"/>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="130" endline="150">Application::Run</referencedby>
       </memberdef>
       <memberdef kind="function" id="classScene_1a9319090be5d18e87f1e83dbbf191204f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
         <definition>virtual void Scene::Render</definition>
         <argsstring>(double dt)=0</argsstring>
         <name>Render</name>
-        <reimplementedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d">Render</reimplementedby>
         <reimplementedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61">Render</reimplementedby>
         <param>
           <type>double</type>
@@ -85,15 +81,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Scene.h" line="12" column="1"/>
-        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="121" endline="141">Application::Run</referencedby>
+        <location file="ComGLab/Source/Scene.h" line="29" column="1"/>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="130" endline="150">Application::Run</referencedby>
       </memberdef>
       <memberdef kind="function" id="classScene_1aae8e24654ef98c79961c2b804b12852c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
         <definition>virtual void Scene::Exit</definition>
         <argsstring>()=0</argsstring>
         <name>Exit</name>
-        <reimplementedby refid="classParticle_1a693c2891a7cfbad23956879515d60418">Exit</reimplementedby>
         <reimplementedby refid="classSP2__Scene_1a38d997a641e805ed5a1cd32bd1c7ead4">Exit</reimplementedby>
         <briefdescription>
         </briefdescription>
@@ -101,33 +96,27 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="ComGLab/Source/Scene.h" line="13" column="1"/>
-        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="121" endline="141">Application::Run</referencedby>
+        <location file="ComGLab/Source/Scene.h" line="30" column="1"/>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="130" endline="150">Application::Run</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Defines the methods for <ref refid="classScene" kindref="compound">Scene</ref>. </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para>Class <ref refid="classScene" kindref="compound">Scene</ref>: </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="580">
-        <label>Particle</label>
-        <link refid="classParticle"/>
-        <childnode refid="579" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="579">
+      <node id="514">
         <label>Scene</label>
         <link refid="classScene"/>
       </node>
-      <node id="581">
+      <node id="515">
         <label>SP2_Scene</label>
         <link refid="classSP2__Scene"/>
-        <childnode refid="579" relation="public-inheritance">
+        <childnode refid="514" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="ComGLab/Source/Scene.h" line="5" column="1" bodyfile="ComGLab/Source/Scene.h" bodystart="4" bodyend="14"/>
+    <location file="ComGLab/Source/Scene.h" line="22" column="1" bodyfile="ComGLab/Source/Scene.h" bodystart="21" bodyend="31"/>
     <listofallmembers>
       <member refid="classScene_1aae8e24654ef98c79961c2b804b12852c" prot="public" virt="pure-virtual"><scope>Scene</scope><name>Exit</name></member>
       <member refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478" prot="public" virt="pure-virtual"><scope>Scene</scope><name>Init</name></member>

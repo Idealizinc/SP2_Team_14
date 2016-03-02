@@ -4,74 +4,82 @@
     <compoundname>Light.cpp</compoundname>
     <includes refid="Light_8h" local="yes">Light.h</includes>
     <incdepgraph>
-      <node id="1708">
+      <node id="1408">
         <label>MyMath.h</label>
         <link refid="MyMath_8h"/>
-        <childnode refid="1709" relation="include">
+        <childnode refid="1409" relation="include">
         </childnode>
-        <childnode refid="1710" relation="include">
+        <childnode refid="1410" relation="include">
         </childnode>
-        <childnode refid="1711" relation="include">
+        <childnode refid="1411" relation="include">
         </childnode>
-        <childnode refid="1712" relation="include">
+        <childnode refid="1412" relation="include">
         </childnode>
       </node>
-      <node id="1709">
+      <node id="1409">
         <label>cmath</label>
       </node>
-      <node id="1707">
+      <node id="1407">
         <label>Vector3.h</label>
         <link refid="Vector3_8h"/>
-        <childnode refid="1708" relation="include">
+        <childnode refid="1408" relation="include">
         </childnode>
-        <childnode refid="1713" relation="include">
+        <childnode refid="1413" relation="include">
         </childnode>
       </node>
-      <node id="1705">
+      <node id="1405">
         <label>Light.h</label>
         <link refid="Light_8h"/>
-        <childnode refid="1706" relation="include">
+        <childnode refid="1406" relation="include">
         </childnode>
       </node>
-      <node id="1710">
+      <node id="1410">
         <label>exception</label>
       </node>
-      <node id="1706">
+      <node id="1406">
         <label>Vertex.h</label>
         <link refid="Vertex_8h"/>
-        <childnode refid="1707" relation="include">
+        <childnode refid="1407" relation="include">
         </childnode>
       </node>
-      <node id="1711">
+      <node id="1411">
         <label>ctime</label>
       </node>
-      <node id="1712">
+      <node id="1412">
         <label>cstdlib</label>
       </node>
-      <node id="1713">
+      <node id="1413">
         <label>iostream</label>
       </node>
-      <node id="1704">
+      <node id="1404">
         <label>ComGLab/Source/Light.cpp</label>
         <link refid="Light.cpp"/>
-        <childnode refid="1705" relation="include">
+        <childnode refid="1405" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <briefdescription>
-    </briefdescription>
+<para>.cpp file that defines <ref refid="structLight" kindref="compound">Light</ref> </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para><simplesect kind="author"><para>Wen Sheng Tang </para></simplesect>
+<simplesect kind="par"><title>email: tang_wen_sheng@nyp.edu.sg</title><para></para></simplesect>
+</para>    </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Light_8h" kindref="compound">Light.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3" refid="structLight_1aeb5df09a25a32f19fdffa761268ba24f" refkind="member"><highlight class="normal"><ref refid="structLight_1aeb5df09a25a32f19fdffa761268ba24f" kindref="member">Light::Light</ref>()</highlight></codeline>
-<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structLight_1afeb738db41e987719e359166ef93314f" kindref="member">position</ref>.<ref refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" kindref="member">Set</ref>(0,<sp/>0,<sp/>0);</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structLight_1ad7a168d26aed1bf7cca1a8d8e6f8ada4" kindref="member">color</ref>.<ref refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" kindref="member">Set</ref>(1.0f,<sp/>1.0f,<sp/>1.0f);</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structLight_1a6c4c401141c4cdb3b9b9b3bab7dd6fbb" kindref="member">power</ref><sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structLight_1a888f11000d2baf1228d9e5c8d8c90fcb" kindref="member">kC</ref><sp/>=<sp/><ref refid="structLight_1ab3918c449fb40fa5c6cc5283f2c9687d" kindref="member">kL</ref><sp/>=<sp/><ref refid="structLight_1a79c8e47de58f131ff5403fc2d823cc21" kindref="member">kQ</ref><sp/>=<sp/>0.0f;</highlight></codeline>
-<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Light_8h" kindref="compound">Light.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************/</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">/****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="structLight_1aeb5df09a25a32f19fdffa761268ba24f" refkind="member"><highlight class="normal"><ref refid="structLight_1aeb5df09a25a32f19fdffa761268ba24f" kindref="member">Light::Light</ref>()</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structLight_1afeb738db41e987719e359166ef93314f" kindref="member">position</ref>.<ref refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" kindref="member">Set</ref>(0,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structLight_1ad7a168d26aed1bf7cca1a8d8e6f8ada4" kindref="member">color</ref>.<ref refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" kindref="member">Set</ref>(1.0f,<sp/>1.0f,<sp/>1.0f);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structLight_1a6c4c401141c4cdb3b9b9b3bab7dd6fbb" kindref="member">power</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structLight_1a888f11000d2baf1228d9e5c8d8c90fcb" kindref="member">kC</ref><sp/>=<sp/><ref refid="structLight_1ab3918c449fb40fa5c6cc5283f2c9687d" kindref="member">kL</ref><sp/>=<sp/><ref refid="structLight_1a79c8e47de58f131ff5403fc2d823cc21" kindref="member">kQ</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="ComGLab/Source/Light.cpp"/>
   </compounddef>
