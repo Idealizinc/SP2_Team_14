@@ -45,14 +45,10 @@ public:
 	bool openBackGate;
 	bool shipCheck;
 	bool coreCheck;
-	bool sniperCheck;
-	bool rifleCheck;
-	bool shotgunCheck;
-	bool rifle2Check;
-	bool shotgun2Check;
 	bool spaceModeOn = false;
 	float CameraXrotation, CameraYrotation, maxCameraXrotation, minCameraXrotation, maxCameraYrotation, minCameraYrotation;
-	float baseWalkSpeed = 5;
+	float baseWalkSpeed = 4;
+	bool CanMoveCamera = true;
 
 private:
 	Vector3 view;
@@ -124,17 +120,16 @@ private:
 
 	Boundary Base;
 
-	Boundary Rock1;
-	Boundary Rock2;
-	Boundary Rock3;
-	Boundary Rock4;
-	Boundary Rock5;
-	Boundary Rock6;
-	Boundary Rock7;
-	Boundary Rock8;
-	Boundary Rock9;
-	Boundary Rock10;
-	Boundary Rock11;
+	Boundary leftRock1;
+	Boundary leftRock2;
+	Boundary leftRock3;
+	Boundary frontRock1;
+	Boundary frontRock2;
+	Boundary rightRock1;
+	Boundary rightRock2;
+	Boundary backRock1;
+	Boundary backRock2;
+	Boundary backRock3;
 
 	//Interactive
 	Boundary TeleporterF1NW;
@@ -150,11 +145,6 @@ private:
 	Boundary PlayerShip;
 	Boundary ShipCheck;
 	Boundary CoreCheck;
-	Boundary SniperCheck;
-	Boundary RifleCheck;
-	Boundary ShotgunCheck;
-	Boundary Rifle2Check;
-	Boundary Shotgun2Check;
 };
 
 #endif

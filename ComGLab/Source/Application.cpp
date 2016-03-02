@@ -33,6 +33,8 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
 		glfwSetWindowShouldClose(window, GL_TRUE);
 }
 
+bool Application::CloseGame = false;
+
 bool Application::IsKeyPressed(unsigned short key)
 {
     return ((GetAsyncKeyState(key) & 0x8001) != 0);
@@ -81,9 +83,9 @@ void Application::Init()
 	S_Height = mode->height;
 	//Choose ONE
 	//Set to be windowed at primary monitor's resolution;
-	m_window = glfwCreateWindow(S_Width, S_Height, "Computer Graphics", NULL, NULL);
+	//m_window = glfwCreateWindow(S_Width, S_Height, "Computer Graphics", NULL, NULL);
 	//Set to fullscreen at primary monitor's resolution;
-	//m_window = glfwCreateWindow(S_Width, S_Height, "Computer Graphics", glfwGetPrimaryMonitor(), NULL);
+	m_window = glfwCreateWindow(S_Width, S_Height, "Computer Graphics", glfwGetPrimaryMonitor(), NULL);
 	//
 
 	//Hide The Cursor Within the Application;
@@ -123,7 +125,7 @@ void Application::Run()
 	scene->Init();
 
 	m_timer.startTimer();    // Start timer to calculate how long it takes to render this frame
-	while (!glfwWindowShouldClose(m_window) && !IsKeyPressed(VK_ESCAPE))
+	while (!glfwWindowShouldClose(m_window) && !IsKeyPressed(VK_ESCAPE) && !CloseGame)
 	{
 		scene->Update(m_timer.getElapsedTime());
 		scene->Render(m_timer.getElapsedTime());

@@ -57,11 +57,7 @@ class SP2_Scene : public Scene
 
 		//Ships
 		GEO_PLAYERSHIP,
-		GEO_MOTHERSHIP_TOP,
-		GEO_MOTHERSHIP_UPPERBODY,
-		GEO_MOTHERSHIP_LOWERBODY,
-		GEO_MOTHERSHIP_BOTTOM,
-		GEO_MOTHERSHIP_TAIL,
+		GEO_MOTHERSHIP,
 
 		//drone
 		GEO_DRONEBODY,
@@ -108,6 +104,7 @@ class SP2_Scene : public Scene
 		GEO_MOONFLOOR,
 		GEO_TELEPORTER,
 		GEO_BULLET,
+		GEO_ENEMYBULLET,
 
 		//add these enum in GEOMETRY_TYPE before NUM_GEOMETRY
 		GEO_TEXT,
@@ -203,46 +200,22 @@ public:
 	float ShipY;
 	float ShipRot;
 	unsigned short repairShipPhase;
-
-	unsigned int curRobotCount;
-	//unsigned int curMeteorCount;
-	//robot animation
 	bool walk;
-
-	bool droidrepair;
-	float droidrepairgate;
-	float droidlimit;
-	//end of robot
 	//mothership
 	bool moveMship;
 	float moveMshipUp;
 	float rotateMship;
 	bool floatRocks;
-	float moveRocks; //for space map wave 6
-
-	//mothership defeated animation
-	bool defeat;
-	float explosion;
+	float moveRocks; //for space map wave 6float droidrepairgate;
 
 	bool rLimiter;
 	bool toggleLimiters;
 	bool limitersON;
 	float constTranslation;
-	float DoorRot;
 	bool canUseDoor = true;
-	float leftgate;
-	float rightgate;
-	bool openleftgate;
-	bool openrightgate;
 	int weaponSelect;
 	bool sniper, rifle;
-	//unsigned short curRobotCount;
-	//unsigned int pause;
-	bool SpecialSniperPickedUp;
-	bool SpecialRiflePickedUp;
-	bool SpecialShotgunPickedUp;
-	bool SpecialRifle2PickedUp;
-	bool SpecialShotgun2PickedUp;
+
 	unsigned short skyboxID = 0;
 
 	Position lightDefaultPos;
@@ -256,14 +229,18 @@ public:
 	//Mothership Stuff
 	WeaponSystem EnemyWepSys;
 	RobotManager MothershipHandler;
+	bool Intro = false;
+	bool weaponsOn = false;
 	bool ShipSpawned = false;
-	Vector3 ShipPos1 = Vector3(0, 10, 650);
-	Vector3 ShipPos2 = Vector3(-60, 30, 650);
-	Vector3 ShipPos3 = Vector3(60, 30, 650);
+	Vector3 ShipPos1 = Vector3(0, 10, 700);
+	Vector3 ShipPos2 = Vector3(-60, 40, 700);
+	Vector3 ShipPos3 = Vector3(60, 40, 700);
 	float ChoiceTimer = 0;
 	float ShotTimer = 0;
-
-	//End
+	float ShipRotation = 90;
+	Boundary PlayerShipBounds;
+	Vector3 PlayerShipCoord;
+	void MothershipBulletSpawner(float BulletDamage, float BulletSpeed, int choice, Vector3 position);
 
 	WeaponSystem WepSys;
 	RobotManager RobotManager;
@@ -296,16 +273,23 @@ public:
 	float MaxAmmo = 0;
 	float CurrAmmo = MaxAmmo;
 
+	bool GameOver = false;
+
+	void InitKeyVariables();
+
 private:
 	unsigned short weaponValue;
 	GLuint SB_Day_front, SB_Day_back, SB_Day_top, SB_Day_bottom, SB_Day_left, SB_Day_right;
 	GLuint SB_Nite_front, SB_Nite_back, SB_Nite_top, SB_Nite_bottom, SB_Nite_left, SB_Nite_right;
-	GLuint Normal_Sniper, Normal_Rifle, Normal_Shotgun;
-	GLuint Damage_Sniper, Damage_Rifle, Damage_Shotgun;
-	GLuint Capacity_Sniper, Capacity_Rifle, Capacity_Shotgun;
-	GLuint Fast_Sniper, Fast_Rifle, Fast_Shotgun;
+	GLuint Normal_Sniper, Normal_Rifle, Normal_SMG;
+	GLuint Damage_Sniper, Damage_Rifle, Damage_SMG;
+	GLuint Capacity_Sniper, Capacity_Rifle, Capacity_SMG;
+	GLuint Fast_Sniper, Fast_Rifle, Fast_SMG;
 	GLuint Crosshair, Crosshair2;
 	GLuint UI_BG, UI_HP_Red, UI_HP_Green, UI_WepSel_BG, UI_LoadingBG, UI_LoadingBarOverlay;
+	GLuint UI_Logo;
+	GLuint Bullet_Red, Bullet_Teal, Bullet_Blue, Bullet_Green, Bullet_White;
+	
 	void RenderSkybox(Vector3 Position);
 	unsigned m_vertexArrayID;
 	unsigned m_programID;
@@ -319,20 +303,13 @@ private:
 	void InitMapModels();
 	void initUIElements();
 
-	//Load Values
-	float LoadTimer = 0;
-	float MaxLoadTime = 1;
-	bool GameLoading = true;
-	bool loadRobots = false;
-	bool loadMap = false;
-	bool loadWep = false;
-
 	//Render Calls
 	void readtextfile();
 	void GameState();
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size = 1, float x = 0, float y = 0);
 	void RenderWeaponInHand(unsigned short wepVal = 0, float size = 1, float x = 0, float y = 0);
+	void RenderImageInMap(GLuint texture, float Xsize = 1, float Ysize = 1);
 	void RenderImageOnScreen(GLuint texture, float Xsize = 1, float Ysize = 1, float Xpos = 0, float Ypos = 0);
 	void RenderMeshOnScreen(Mesh* mesh, float Xsize = 1, float Ysize = 1, float Xpos = 0, float Ypos = 0, float Angle = 0, Vector3 RotationDir = Vector3(0, 0, 0));
 	void RenderWepScreen(bool render = false, Vector3 choices = Vector3(0, 0, 0));
@@ -356,7 +333,6 @@ private:
 	//test on screen values
 	double fps;
 	unsigned int basehp;
-	unsigned int gatehp;
 	unsigned int bosshp;
 	unsigned int playerhp;
 	unsigned int ammo;
@@ -374,12 +350,12 @@ private:
 	Vector3 spawnPointW;
 
 	//check game state
-	int state;
 	float timer;
 	bool weaponinterface;
-	bool repairgate;
 	bool SpawnedRobots = false;
 	bool PlayBGM = false;
+	bool beforeWave7 = false;
+
 
 	//Light Stuff
 	Vector3 TownLightPosition;
@@ -388,6 +364,20 @@ private:
 	// Base Stuff
 	Vector3 basePosition;
 
+	//Main Menu Stuff
+	Vector3 UICrystalPosition = Vector3(2, 0, 0);
+	unsigned short UICrystalChoice;
+	bool InMainMenu = false;
+	bool GameStarted = false;
+	bool InSettings = false;
+
+	//Load Values
+	float LoadTimer = 0;
+	float MaxLoadTime = 1;
+	bool GameLoading = true;
+	bool loadRobots = false;
+	bool loadMap = false;
+	bool loadWep = false;
 };
 
 

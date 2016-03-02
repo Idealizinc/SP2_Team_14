@@ -9,6 +9,7 @@ Robot::Robot(int RobotType, float Rotation, Vector3 SpawnPos)
 	GetDirVec(TargetPos);
 	SetStats(RobotType);
 	CalcBounds();
+	this->Rotation = Rotation;
 	//RobotAnimation(dt);
 	//(CurrPos.x + 3) * rotateToTarget
 }
@@ -208,7 +209,7 @@ void Robot::CalcBounds()
 	{
 		BoundingBox.set(CurrPos.x - 2.5, CurrPos.x + 2.5, CurrPos.z - 2.5, CurrPos.z + 2.5, CurrPos.y - 3, CurrPos.y + 7);
 	}
-	else 	BoundingBox.set(CurrPos.x - 10, CurrPos.x + 10, CurrPos.z - 10, CurrPos.z + 10, CurrPos.y - 10, CurrPos.y + 7);
+	else 	BoundingBox.set(CurrPos.x - 30, CurrPos.x + 30, CurrPos.z - 60, CurrPos.z + 60, CurrPos.y - 20, CurrPos.y + 20);
 }
 
 Vector3 Robot::GetDirVec(Vector3 Target)
@@ -245,9 +246,9 @@ void Robot::SetStats(int Level)
 		break;
 	case 3:
 		//RobotType = ; Mothership
-		Health = 2000;
+		Health = 5000;
 		Damage = 10;
-		Speed = 0.1;
+		Speed = 0.2;
 		break;
 	default:
 		Health = 0;

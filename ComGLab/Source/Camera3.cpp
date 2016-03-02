@@ -29,6 +29,8 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up,
 	maxCameraYrotation = 360;
 	minCameraYrotation = -360;
 
+	CanMoveCamera = true;
+
 	rotate_Sensitivity = 2;
 	cameraMass = mass;
 	outOfBounds = false;
@@ -82,51 +84,6 @@ void Camera3::Update(double dt)
 		teleCheck = false;
 	}
 	
-	if (!SniperCheck.BoundaryCheck(position.x, position.z, position.y))
-	{
-		sniperCheck = true;
-	}
-	else
-	{
-		sniperCheck = false;
-	}
-
-	if (!RifleCheck.BoundaryCheck(position.x, position.z, position.y))
-	{
-		rifleCheck = true;
-	}
-	else
-	{
-		rifleCheck = false;
-	}
-
-	if (!ShotgunCheck.BoundaryCheck(position.x, position.z, position.y))
-	{
-		shotgunCheck = true;
-	}
-	else
-	{
-		shotgunCheck = false;
-	}
-
-	if (!Rifle2Check.BoundaryCheck(position.x, position.z, position.y))
-	{
-		rifle2Check = true;
-	}
-	else
-	{
-		rifle2Check = false;
-	}
-
-	if (!Shotgun2Check.BoundaryCheck(position.x, position.z, position.y))
-	{
-		shotgun2Check = true;
-	}
-	else
-	{
-		shotgun2Check = false;
-	}
-
 	if (!ShipCheck.BoundaryCheck(position.x, position.z, position.y))
 	{
 		shipCheck = true;
@@ -311,50 +268,45 @@ void Camera3::cameraMovement2(double dt)
 	
 	if (!spaceModeOn && Application::IsKeyPressed(VK_LSHIFT) || Application::IsKeyPressed(VK_RSHIFT))
 	{
-		walkingSpeed = 2.5;
+		walkingSpeed = 2;
 	}
 	else walkingSpeed = baseWalkSpeed;
 
-	if (Application::IsKeyPressed('W') || Application::IsKeyPressed(VK_UP))
+	if (spaceModeOn)
 	{
-		walkingX += (float)(sin(Math::DegreeToRadian(CameraYrotation)) / walkingSpeed);
-		walkingZ += (float)(cos(Math::DegreeToRadian(CameraYrotation)) / walkingSpeed);
+		if (CanMoveCamera && Application::IsKeyPressed('W') || Application::IsKeyPressed(VK_UP))
+		{
+			walkingY += (float)(sin(Math::DegreeToRadian(CameraYrotation)) / walkingSpeed);
+			walkingY += (float)(cos(Math::DegreeToRadian(CameraYrotation)) / walkingSpeed);
+		}
+		if (CanMoveCamera && Application::IsKeyPressed('S') || Application::IsKeyPressed(VK_DOWN))
+		{
+			walkingY += (float)(sin(Math::DegreeToRadian(CameraYrotation + 180)) / walkingSpeed);
+			walkingY += (float)(cos(Math::DegreeToRadian(CameraYrotation + 180)) / walkingSpeed);
+		}
 	}
-	if (Application::IsKeyPressed('A') || Application::IsKeyPressed(VK_LEFT))
+	else{
+		if (CanMoveCamera && Application::IsKeyPressed('W') || Application::IsKeyPressed(VK_UP))
+		{
+			walkingX += (float)(sin(Math::DegreeToRadian(CameraYrotation)) / walkingSpeed);
+			walkingZ += (float)(cos(Math::DegreeToRadian(CameraYrotation)) / walkingSpeed);
+		}
+		if (CanMoveCamera && Application::IsKeyPressed('S') || Application::IsKeyPressed(VK_DOWN))
+		{
+			walkingX += (float)(sin(Math::DegreeToRadian(CameraYrotation + 180)) / walkingSpeed);
+			walkingZ += (float)(cos(Math::DegreeToRadian(CameraYrotation + 180)) / walkingSpeed);
+		}
+	}
+	if (CanMoveCamera && Application::IsKeyPressed('A') || Application::IsKeyPressed(VK_LEFT))
 	{
 		walkingX += (float)(sin(Math::DegreeToRadian(CameraYrotation + 90)) / walkingSpeed);
 		walkingZ += (float)(cos(Math::DegreeToRadian(CameraYrotation + 90)) / walkingSpeed);
 	}
-	if (Application::IsKeyPressed('S') || Application::IsKeyPressed(VK_DOWN))
-	{
-		walkingX += (float)(sin(Math::DegreeToRadian(CameraYrotation + 180)) / walkingSpeed);
-		walkingZ += (float)(cos(Math::DegreeToRadian(CameraYrotation + 180)) / walkingSpeed);
-	}
-	if (Application::IsKeyPressed('D') || Application::IsKeyPressed(VK_RIGHT))
+	if (CanMoveCamera && Application::IsKeyPressed('D') || Application::IsKeyPressed(VK_RIGHT))
 	{
 		walkingX += (float)(sin(Math::DegreeToRadian(CameraYrotation + 270)) / walkingSpeed);
 		walkingZ += (float)(cos(Math::DegreeToRadian(CameraYrotation + 270)) / walkingSpeed);
 	}
-	//if (Application::IsKeyPressed(' ') || Application::IsKeyPressed(VK_SPACE))
-	//{
-		//position.y -= velocityY * 0.5;
-		//velocityY -= gravity;
-	//}
-	//if (Application::IsKeyPressed(VK_SPACE))
-	//{
-		/*if (position.y <= groundlevel)
-		{*/
-			/*jumpImpulse = 2 * dt;
-			jumpForce = 15000;
-			jumpSpeed = static_cast<float>(Physics::getAcceleration(jumpForce, cameraMass));
-			position.y += jumpSpeed * (float)jumpImpulse;*/
-		//}
-	//}
-	/*if (position.y > groundlevel)
-	{
-		jumpSpeed = Physics::gravitational_pulled(jumpSpeed, dt);
-		position.y += jumpSpeed * (float)dt;
-	}*/
 	if (!spaceModeOn && Application::IsKeyPressed(' '))
 	{
 		isGravityOn = false;
@@ -381,9 +333,7 @@ void Camera3::cameraMovement2(double dt)
 			&& westwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && westwall2.BoundaryCheck(walkingX + position.x, position.z, position.y)
 			&& eastwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && eastwall2.BoundaryCheck(walkingX + position.x, position.z, position.y) && PlayerShip.BoundaryCheck(walkingX + position.x, position.z, position.y)
 			&& southwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && southwall2.BoundaryCheck(walkingX + position.x, position.z, position.y) && corebase.BoundaryCheck(walkingX + position.x, position.z, position.y)
-			&& Rock1.BoundaryCheck(walkingX + position.x, position.z, position.y) && Rock2.BoundaryCheck(walkingX + position.x, position.z, position.y) && Rock3.BoundaryCheck(walkingX + position.x, position.z, position.y)
-			&& Rock4.BoundaryCheck(walkingX + position.x, position.z, position.y) && Rock5.BoundaryCheck(walkingX + position.x, position.z, position.y) && Rock6.BoundaryCheck(walkingX + position.x, position.z, position.y)
-			&& Rock7.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldBack.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldFront.BoundaryCheck(walkingX + position.x, position.z, position.y)
+			&& WorldBack.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldFront.BoundaryCheck(walkingX + position.x, position.z, position.y)
 			&& WorldLeft.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldRight.BoundaryCheck(walkingX + position.x, position.z, position.y)
 			&& WorldTop.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldBot.BoundaryCheck(walkingX + position.x, position.z, position.y)
 			&& Floor2BackLeft.BoundaryCheck(walkingX + position.x, position.z, position.y) && Floor2BackRight.BoundaryCheck(walkingX + position.x, position.z, position.y)
@@ -398,9 +348,7 @@ void Camera3::cameraMovement2(double dt)
 			&& westwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && westwall2.BoundaryCheck(position.x, position.z + walkingZ, position.y)
 			&& eastwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && eastwall2.BoundaryCheck(position.x, position.z + walkingZ, position.y) && PlayerShip.BoundaryCheck(walkingX, position.z + walkingZ, position.y)
 			&& southwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && southwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && corebase.BoundaryCheck(position.x, position.z + walkingZ, position.y)
-			&& Rock1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Rock2.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Rock3.BoundaryCheck(position.x, position.z + walkingZ, position.y)
-			&& Rock4.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Rock5.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Rock6.BoundaryCheck(position.x, position.z + walkingZ, position.y)
-			&& Rock7.BoundaryCheck(position.x, position.z + walkingZ, position.y) && WorldBack.BoundaryCheck(position.x, position.z + walkingZ, position.y) && WorldFront.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+			&& WorldBack.BoundaryCheck(position.x, position.z + walkingZ, position.y) && WorldFront.BoundaryCheck(position.x, position.z + walkingZ, position.y)
 			&& WorldLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && WorldRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
 			&& WorldTop.BoundaryCheck(position.x, position.z + walkingZ, position.y) && WorldBot.BoundaryCheck(position.x, position.z + walkingZ, position.y)
 			&& Floor2BackLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2BackRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
@@ -418,9 +366,7 @@ void Camera3::cameraMovement2(double dt)
 				&& westwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && westwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
 				&& eastwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && eastwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && PlayerShip.BoundaryCheck(walkingX, position.z, (position.y - 5) - gravity)
 				&& southwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && southwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && corebase.BoundaryCheck(walkingX, position.z, (position.y - 5) - gravity)
-				&& Rock1.BoundaryCheck(walkingX, position.z, (position.y - 5) - gravity) && Rock2.BoundaryCheck(walkingX, position.z, (position.y - 5) - gravity) && Rock3.BoundaryCheck(walkingX, position.z, (position.y - 5) - gravity)
-				&& Rock4.BoundaryCheck(walkingX, position.z, (position.y - 5) - gravity) && Rock5.BoundaryCheck(walkingX, position.z, (position.y - 5) - gravity) && Rock6.BoundaryCheck(walkingX, position.z, (position.y - 5) - gravity)
-				&& Rock7.BoundaryCheck(walkingX, position.z, (position.y - 5) - gravity) && WorldBack.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldFront.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+				&& WorldBack.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldFront.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
 				&& WorldLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
 				&& WorldTop.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldBot.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
 				&& Floor2BackLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2BackRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
@@ -443,12 +389,22 @@ void Camera3::cameraMovement2(double dt)
 			position.z = 3;
 		}
 	}
-	else if (walkingX != 0 
-		&& WorldBack.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldFront.BoundaryCheck(walkingX + position.x, position.z, position.y)
-		&& WorldLeft.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldRight.BoundaryCheck(walkingX + position.x, position.z, position.y)
-		&& WorldTop.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldBot.BoundaryCheck(walkingX + position.x, position.z, position.y))
+	else
 	{
-		position.x += walkingX;
+		if (walkingX != 0
+			&& WorldBack.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldFront.BoundaryCheck(walkingX + position.x, position.z, position.y)
+			&& WorldLeft.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldRight.BoundaryCheck(walkingX + position.x, position.z, position.y)
+			&& WorldTop.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldBot.BoundaryCheck(walkingX + position.x, position.z, position.y))
+		{
+			position.x += walkingX;
+		}
+		if (walkingY != 0
+			&& WorldBack.BoundaryCheck(position.x, position.z, position.y + walkingY) && WorldFront.BoundaryCheck(position.x, position.z, position.y + walkingY)
+			&& WorldLeft.BoundaryCheck(position.x, position.z, position.y + walkingY) && WorldRight.BoundaryCheck(position.x, position.z, position.y + walkingY)
+			&& WorldTop.BoundaryCheck(position.x, position.z, position.y + walkingY) && WorldBot.BoundaryCheck(position.x, position.z, position.y + walkingY))
+		{
+			position.y += walkingY;
+		}
 	}
 }
 
@@ -486,18 +442,16 @@ void Camera3::initBoundVec()
 
 	Base.set(-18, 18, -19, 19, -5, 10);
 
-	Rock1.set(29.6, 36.8, 55.3, 64.3, 0, 10);
-	Rock2.set(-52.4, -40.8, -23.5, -17.1, 0, 10);
-	Rock3.set(-120.8, -98.8, -66.3, -37.5, 0, 10);
-	Rock4.set(16.7, 25.3, -65.5, -53.4, 0, 10);
-	Rock5.set(40.4, 49.3, -33.5, -25.6, 0, 10);
-	Rock6.set(47.4, 72.9, -63.5, -34.9, 0, 10);
-	Rock7.set(30.2, 47.2, -84.8, -65.9, 0, 10);
-	/*Rock8.set();
-	Rock9.set();
-	Rock10.set();
-	Rock11.set();*/
-
+	//leftRock1.set(-44.9, -55.6, -2.8, -12.5, 0, 8);
+	//leftRock2.set(-80.4, -109.4, -17.2, -46.7, 0, 8);
+	//leftRock3.set(-92.4, -130, -105.6, -138.9, 0, 8);
+	//frontRock1.set(4.9, -5.7, -53.6, -66, 0, 8);
+	//frontRock2.set(53.5, 66.9, -110, -128.3, 0, 8);
+	//rightRock1.set(44.8, 55.2, 5.4, -5.4, 0, 8);
+	//rightRock2.set(95.3, 123.5, -14.7, -44.7, 0, 8);
+	//backRock1.set(-4.8, 5.2, 54.2, 65.7, 0, 8);
+	//backRock2.set(18.1, 34.1, 117.1, 144, 0, 8);
+	//backRock3.set(-150, -140, 116.8, 144.4, 0, 8);
 
 	TeleporterF1NW.set(10, 17, 9, 17, -5, 10);
 	TeleporterF1NE.set(-17, -10, 9, 17, -5, 10);
@@ -507,11 +461,6 @@ void Camera3::initBoundVec()
 	//PlayerShip.set(-18, 10, 60, 88, 0, 10);
 	ShipCheck.set(-25, 15, 54, 96, 0, 10);
 	CoreCheck.set(-2.5, 2.5, -2.5, 2.5, 0, 10);
-	SniperCheck.set(46.6, 52.6, 45.9, 53.5, 0, 10);
-	RifleCheck.set(-52.6, -47.9, -32.6, -27.4, 0, 10);
-	ShotgunCheck.set(18.8, 22.0, 11.4, 18.4, 0, 10);
-	Rifle2Check.set(-32.4, -28.3, -22.5, -17.3, 0, 10);
-	Shotgun2Check.set(8.8, 11.9, -53.3, -46.5, 0, 10);
 }
 
 void Camera3::jump(double dt, int level)
@@ -543,11 +492,11 @@ void Camera3::jump(double dt, int level)
 	{
 		if (isMaxJump == false) 
 		{
-			position.y += (float)(4 * dt);
+			position.y += (float)(5 * dt);
 		}
 		else
 		{
-			position.y -= (float)(4 * dt);
+			position.y -= (float)(5 * dt);
 		}
 		if (position.y > maxJump2)
 		{

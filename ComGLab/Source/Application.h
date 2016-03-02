@@ -13,9 +13,9 @@ public:
 	void Run();
 	void Exit();
 	static bool IsKeyPressed(unsigned short key);
+	static bool CloseGame;
 
 private:
-
 	//Declare a window object
 	StopWatch m_timer;
 };
