@@ -9,6 +9,23 @@
 /****************************************************************************/
 #include "Boundary.h"
 
+/****************************************************************************/
+/*!
+\brief
+Sets the minimum and maximum x,y and z boundaries.
+\param 
+		xMin - miminum point for x-axis
+		xMax - maximum point for x-axis
+		zMin - minimum point for z-axis
+		zMax - maxinum point for z-axis
+		yMin - minimum point for y-axis
+		yMax - maximum point for y-axis
+\exception N/A
+\return
+values for boundaries
+*/
+/****************************************************************************/
+
 void Boundary::set(float xMin, float xMax, float zMin, float zMax, float yMin, float yMax)
 {
 	this->xMin = xMin;
@@ -18,6 +35,26 @@ void Boundary::set(float xMin, float xMax, float zMin, float zMax, float yMin, f
 	this->yMin = yMin;
 	this->yMax = yMax;
 }
+
+/****************************************************************************/
+/*!
+\brief
+Checks if the players position is outside of the boundaries set
+\param 
+		xMin - miminum point for x-axis
+		xMax - maximum point for x-axis
+		zMin - minimum point for z-axis
+		zMax - maxinum point for z-axis
+		yMin - minimum point for y-axis
+		yMax - maximum point for y-axis
+		playerCoordX - Player's position on the x-axis
+		playerCoordZ - Player's position on the z-axis
+		playerCoordY - Player's position on the y-axis
+\exception N/A
+\return
+Returns false if player is outside of the boundaries
+*/
+/****************************************************************************/
 
 bool Boundary::BoundaryCheck(const float& playerCoordX, const float& playerCoordZ, const float& playerCoordY) {
 	if (xMax > playerCoordX &&

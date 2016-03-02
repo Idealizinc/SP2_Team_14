@@ -43,22 +43,6 @@ public:
 
     bool isOutofBounds();
 	bool teleCheck;
-	float leftGateA;
-	float leftGateB;
-	float rightGateA;
-	float rightGateB;
-	float frontGateA;
-	float frontGateB;
-	float backGateA;
-	float backGateB;
-	bool checkLeftGate;
-	bool openLeftGate;
-	bool checkRightGate;
-	bool openRightGate;
-	bool checkFrontGate;
-	bool openFrontGate;
-	bool checkBackGate;
-	bool openBackGate;
 	bool shipCheck;
 	bool coreCheck;
 	bool spaceModeOn = false;
@@ -79,8 +63,6 @@ private:
     int boxX, boxZ;
 
     bool boundsCheck2D(const int& x, const int& z, float& posX, float& posZ);
-    bool outOfBounds;
-    int cameraMass;
 
 	void cameraMovement2(double dt);
 
@@ -89,11 +71,6 @@ private:
 	std::vector<Boundary> BoundVec;
 	
 	float velocityY = 0;
-
-	int jumpForce;
-	int groundlevel;
-	int jumpImpulse;
-	int jumpSpeed;
 
 	bool isGravityOn;
 	bool isMaxJump;
@@ -135,30 +112,12 @@ private:
 	Boundary Floor2BackRight;
 
 	Boundary Base;
-
-	Boundary leftRock1;
-	Boundary leftRock2;
-	Boundary leftRock3;
-	Boundary frontRock1;
-	Boundary frontRock2;
-	Boundary rightRock1;
-	Boundary rightRock2;
-	Boundary backRock1;
-	Boundary backRock2;
-	Boundary backRock3;
-
 	//Interactive
 	Boundary TeleporterF1NW;
 	Boundary TeleporterF1NE;
 	Boundary TeleporterF1SW;
 	Boundary TeleporterF1SE;
 
-	Boundary leftGate;
-	Boundary rightGate;
-	Boundary frontGate;
-	Boundary backGate;
-	
-	Boundary PlayerShip;
 	Boundary ShipCheck;
 	Boundary CoreCheck;
 };

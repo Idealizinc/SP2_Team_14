@@ -11,14 +11,48 @@
 #include "Application.h"
 #include "Mtx44.h"
 
+/****************************************************************************/
+/*!
+\brief
+Constructor for Camera
+\param N/A
+\exception N/A
+\return N/A
+*/
+/****************************************************************************/
+
 Camera::Camera()
 {
 	Reset();
 }
 
+/****************************************************************************/
+/*!
+\brief
+Destructor for Camera
+\param N/A
+\exception N/A
+\return N/A
+*/
+/****************************************************************************/
+
 Camera::~Camera()
 {
 }
+
+/****************************************************************************/
+/*!
+\brief
+Initializes variables
+\param
+		pos - Vector3 coordinates for player's position
+		target - Vector3 coordinates that determines the direction the player faces
+		up - up vector used for calculation of other vectors
+\exception N/A
+\return
+Resulting normalized vectors
+*/
+/****************************************************************************/
 
 void Camera::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 {
@@ -26,6 +60,20 @@ void Camera::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 	this->target = target;
 	this->up = up;
 }
+
+/****************************************************************************/
+/*!
+\brief
+Sets the minimum and maximum x,y and z boundaries.
+\param
+		position - Vector3 coordinates for player's position
+		target - Vector3 coordinates that determines the direction the player faces
+		up - up vector used for calculation of other vectors
+\exception N/A
+\return
+Default Vector3 values
+*/
+/****************************************************************************/
 
 void Camera::Reset()
 {

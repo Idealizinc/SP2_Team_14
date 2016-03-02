@@ -14,13 +14,65 @@
 #include "CameraPhysics.h"
 #include "MyMath.h"
 
+/****************************************************************************/
+/*!
+\brief
+Constructor for Camera
+\param N/A
+\exception N/A
+\return N/A
+*/
+/****************************************************************************/
+
 Camera3::Camera3()
 {
 }
 
+/****************************************************************************/
+/*!
+\brief
+Destructor for Camera
+\param N/A
+\exception N/A
+\return N/A
+*/
+/****************************************************************************/
+
 Camera3::~Camera3()
 {
 }
+
+/****************************************************************************/
+/*!
+\brief
+Initializes variables
+\param
+		pos - Vector3 coordinates for player's position
+		target - Vector3 coordinates that determines the direction the player faces
+		up - up vector used for calculation of other vectors
+		mass - defines the player's mass
+		CameraXrotation - self explanatory
+		CameraYrotation - self explanatory
+		minCameraXrotation - Minimum camera rotation on the x-axis
+		maxCameraXrotation - Maximum camera rotation on the x-axis
+		minCameraYrotation - Minimum camera rotation on the y-axis
+		maxCameraYrotation - Maximum camera rotation on the y-axis
+		CanMoveCamera - boolean that determines whether the camera can be moved
+		rotate_Sensitivity - value that adjusts mouse sensitivity
+		teleCheck - boolean that checks if the player is standing on the teleporters
+		shipCheck - boolean that checks if the player is standing close to the drivable ship
+		coreCheck - boolean that checks if the player is standing close to the base core
+		isGravityOn - boolean that determines if Gravity is toggled on or off
+		isMaxJump - boolean that checks if the player has reached max jump height
+		isJump - boolean that checks if the player is jumping
+		maxJump - value that determines the max jump height
+		maxJump2 - value that determines the max jump height on the second floor
+		level - value that determines what floor the player is on
+\exception N/A
+\return
+Resulting values and normalized vectors
+*/
+/****************************************************************************/
 
 void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up, int mass)
 {
@@ -42,32 +94,11 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up,
 	CanMoveCamera = true;
 
 	rotate_Sensitivity = 2;
-	cameraMass = mass;
-	outOfBounds = false;
 	initBoundVec();
+
 	teleCheck = false;
-	leftGateA = -2.3;
-	leftGateB = 2.3;
-	rightGateA = 2.3;
-	rightGateB = -2.3;
-	frontGateA = 2.3;
-	frontGateB = -2.3;
-	backGateA = 2.3;
-	backGateB = -2.3;
-	checkLeftGate = false;
-	openLeftGate = false;
-	checkRightGate = false;
-	openRightGate = false;
-	checkFrontGate = false;
-	openFrontGate = false;
-	checkBackGate = false;
-	openBackGate = false;
-
 	shipCheck = false;
-
-	jumpForce = 0;
-	groundlevel = 6;
-	jumpImpulse = 0;
+	coreCheck = false;
 
 	isGravityOn = true;
 	isMaxJump = false;
@@ -77,11 +108,24 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up,
 	level = 1;
 }
 
+/****************************************************************************/
+/*!
+\brief
+Method where values are changed
+\param
+		teleCheck - boolean that checks if the player is standing on the teleporters
+		shipCheck - boolean that checks if the player is standing close to the drivable ship
+		coreCheck - boolean that checks if the player is standing close to the base core
+\exception N/A
+\return
+Resulting boolean values
+*/
+/****************************************************************************/
+
 void Camera3::Update(double dt)
 {
 
 	cameraMovement2(dt);
-	outOfBounds = false;
 	rotateCamera(dt);
 
 	if (!TeleporterF1NW.BoundaryCheck(position.x, position.z, position.y) || !TeleporterF1NE.BoundaryCheck(position.x, position.z, position.y)
@@ -111,52 +155,21 @@ void Camera3::Update(double dt)
 	{
 		coreCheck = false;
 	}
-
-	if (!leftGate.BoundaryCheck(position.x, position.z, position.y))
-	{
-		checkLeftGate = true;
-	}
-	else
-	{
-		checkLeftGate = false;
-	}
-	if (openLeftGate == true)
-	{
-		leftGateA -= 1;
-		leftGateB += 1;
-	}
-	if (leftGateA <= -5.3 && leftGateB >= 5.3)
-	{
-		openLeftGate = false;
-	}
-	if (openRightGate == true)
-	{
-		rightGateA += 1;
-		rightGateB -= 1;
-	}
-	if (rightGateA >= 5.3 && rightGateB <= -5.3)
-	{
-		openRightGate = false;
-	}
-	if (openFrontGate == true)
-	{
-		frontGateA += 1;
-		frontGateB -= 1;
-	}
-	if (frontGateA >= 5.3 && frontGateB <= -5.3)
-	{
-		openFrontGate = false;
-	}
-	if (openBackGate == true)
-	{
-		backGateA += 1;
-		backGateB -= 1;
-	}
-	if (backGateA >= 5.3 && backGateB <= -5.3)
-	{
-		openBackGate = false;
-	}
 }
+
+/****************************************************************************/
+/*!
+\brief
+Resets camera position to default value
+\param
+		pos - Vector3 coordinates for player's position
+		target - Vector3 coordinates that determines the direction the player faces
+		up - up vector used for calculation of other vectors
+\exception N/A
+\return
+Resulting normalized vectors
+*/
+/****************************************************************************/
 
 void Camera3::Reset()
 {
@@ -164,6 +177,30 @@ void Camera3::Reset()
 	target = defaultTarget;
 	up = defaultUp;
 }
+
+/****************************************************************************/
+/*!
+\brief
+Rotates the camera
+\param
+		moveX - value that determines camera movement on the x-axis
+		moveY - value that determines camera movement on the y-axis
+		S_Width - value that determines the screen width
+		S_Height - value that determines the screen height
+		CameraXrotation - self explanatory
+		CameraYrotation - self explanatory
+		minCameraXrotation - Minimum camera rotation on the x-axis
+		maxCameraXrotation - Maximum camera rotation on the x-axis
+		minCameraYrotation - Minimum camera rotation on the y-axis
+		maxCameraYrotation - Maximum camera rotation on the y-axis
+		pos - Vector3 coordinates for player's position
+		target - Vector3 coordinates that determines the direction the player faces
+		up - up vector used for calculation of other vectors
+\exception N/A
+\return
+Resulting normalized vectors
+*/
+/****************************************************************************/
 
 void Camera3::rotateCamera(double dt)
 {
@@ -188,81 +225,56 @@ void Camera3::rotateCamera(double dt)
 	up = right.Cross(view);
 }
 
-bool Camera3::boundsCheck2D(const int& xBound, const int& zBound, float& currXPos, float& currZPos)
-{
-	float pushBackValue = 0.001f;
-	float offset = 1 / walkingSpeed;
-	float xCopy, zCopy;
-	xCopy = currXPos;
-	zCopy = currZPos;
-	//bound checks
-	if (xBound < xCopy + offset)
-	{
-		currXPos -= pushBackValue;
-		return false;
-	}
-	else if (zBound < zCopy + offset)
-	{
-		currZPos -= pushBackValue;
-		return false;
-	}
-	else if (-xBound > xCopy - offset)
-	{
-		currXPos += pushBackValue;
-		return false;
-	}
-	else if (-zBound > zCopy - offset)
-	{
-		currZPos += pushBackValue;
-		return false;
-	}
-	//still within bounds
-	else //if (currXPos <= xBound && currZPos <= zBound && currXPos >= -xBound && currZPos >= -zBound)
-	{
-		//outOfBounds = false;
-		return true;
-	}
-}
-
-void Camera3::cameraMovement(double dt)
-{
-	float offsetX, offsetZ;
-	if (Application::IsKeyPressed('W') && boundsCheck2D(boxX, boxZ, position.x, position.z))
-	{
-		position.x += (float)(sin(Math::DegreeToRadian(CameraYrotation)) / walkingSpeed);
-		position.z += (float)(cos(Math::DegreeToRadian(CameraYrotation)) / walkingSpeed);
-	}
-	if (Application::IsKeyPressed('A') && boundsCheck2D(boxX, boxZ, position.x, position.z))
-	{
-		position.x += (float)(sin(Math::DegreeToRadian(CameraYrotation + 90)) / walkingSpeed);
-		position.z += (float)(cos(Math::DegreeToRadian(CameraYrotation + 90)) / walkingSpeed);
-	}
-	if (Application::IsKeyPressed('S') && boundsCheck2D(boxX, boxZ, position.x, position.z))
-	{
-		position.x += (float)(sin(Math::DegreeToRadian(CameraYrotation + 180)) / walkingSpeed);
-		position.z += (float)(cos(Math::DegreeToRadian(CameraYrotation + 180)) / walkingSpeed);
-	}
-	if (Application::IsKeyPressed('D') && boundsCheck2D(boxX, boxZ, position.x, position.z))
-	{
-		position.x += (float)(sin(Math::DegreeToRadian(CameraYrotation + 270)) / walkingSpeed);
-		position.z += (float)(cos(Math::DegreeToRadian(CameraYrotation + 270)) / walkingSpeed);
-	}
-}
+/****************************************************************************/
+/*!
+\brief
+Calls the value for the Look Vector
+\param
+		view - Vector3 value for Look Vector
+\return
+view
+*/
+/****************************************************************************/
 
 Vector3 Camera3::getLookVector()
 {
 	return view;
 }
 
+/****************************************************************************/
+/*!
+\brief
+Calls the value for current position
+\param
+		position - Vector3 value for current position
+\return
+view
+*/
+/****************************************************************************/
+
 Vector3 Camera3::getCameraPosition()
 {
 	return position;
 }
 
-bool Camera3::isOutofBounds()
-{
-	return outOfBounds;
-}
+/****************************************************************************/
+/*!
+\brief
+Method for player movement
+\param
+		walkingX - value for modifying walking speed along the x-axis
+		walkingZ - value for modifying walking speed along the z-axis
+		walkingY - value for modifying walking speed along the y-axis
+		gravity - value for gravity
+		spaceModeOn - boolean that determines which map is rendered on screen
+		CanMoveCamera - boolean that determines whether the camera can be moved
+		isGravityOn - boolean that determines if Gravity is toggled on or off
+		isJump - boolean that checks if the player is jumping
+		position - Vector3 value for current position
+\return
+Resulting values and normalized vectors
+*/
+/****************************************************************************/
 
 void Camera3::cameraMovement2(double dt)
 {
@@ -341,7 +353,7 @@ void Camera3::cameraMovement2(double dt)
 	if (spaceModeOn == false){
 		if (walkingX != 0 && northwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && northwall2.BoundaryCheck(walkingX + position.x, position.z, position.y)
 			&& westwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && westwall2.BoundaryCheck(walkingX + position.x, position.z, position.y)
-			&& eastwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && eastwall2.BoundaryCheck(walkingX + position.x, position.z, position.y) && PlayerShip.BoundaryCheck(walkingX + position.x, position.z, position.y)
+			&& eastwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && eastwall2.BoundaryCheck(walkingX + position.x, position.z, position.y)
 			&& southwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && southwall2.BoundaryCheck(walkingX + position.x, position.z, position.y) && corebase.BoundaryCheck(walkingX + position.x, position.z, position.y)
 			&& WorldBack.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldFront.BoundaryCheck(walkingX + position.x, position.z, position.y)
 			&& WorldLeft.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldRight.BoundaryCheck(walkingX + position.x, position.z, position.y)
@@ -356,7 +368,7 @@ void Camera3::cameraMovement2(double dt)
 		}
 		if (walkingZ != 0 && northwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && northwall2.BoundaryCheck(position.x, position.z + walkingZ, position.y)
 			&& westwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && westwall2.BoundaryCheck(position.x, position.z + walkingZ, position.y)
-			&& eastwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && eastwall2.BoundaryCheck(position.x, position.z + walkingZ, position.y) && PlayerShip.BoundaryCheck(walkingX, position.z + walkingZ, position.y)
+			&& eastwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && eastwall2.BoundaryCheck(position.x, position.z + walkingZ, position.y)
 			&& southwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && southwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && corebase.BoundaryCheck(position.x, position.z + walkingZ, position.y)
 			&& WorldBack.BoundaryCheck(position.x, position.z + walkingZ, position.y) && WorldFront.BoundaryCheck(position.x, position.z + walkingZ, position.y)
 			&& WorldLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && WorldRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
@@ -374,7 +386,7 @@ void Camera3::cameraMovement2(double dt)
 		{
 			if (/*velocityY != 0 &&*/ northwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && northwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
 				&& westwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && westwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-				&& eastwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && eastwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && PlayerShip.BoundaryCheck(walkingX, position.z, (position.y - 5) - gravity)
+				&& eastwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && eastwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) 
 				&& southwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && southwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && corebase.BoundaryCheck(walkingX, position.z, (position.y - 5) - gravity)
 				&& WorldBack.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldFront.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
 				&& WorldLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
@@ -418,6 +430,47 @@ void Camera3::cameraMovement2(double dt)
 	}
 }
 
+/****************************************************************************/
+/*!
+\brief
+Initializes Boundary values
+\param
+		northwall1 - Boundary for the wall facing the north on the first floor of the base
+		southwall1 - Boundary for the wall facing the south on the first floor of the base
+		eastwall1 - Boundary for the wall facing the east on the first floor of the base
+		westwall1 - Boundary for the wall facing the west on the first floor of the base
+		northwall2 - Boundary for the wall facing the north on the first floor of the base
+		southwall2 - Boundary for the wall facing the south on the first floor of the base
+		eastwall2 - Boundary for the wall facing the east on the first floor of the base
+		westwall2 - Boundary for the wall facing the west on the first floor of the base
+		corebase - Boundary for the base core
+		WorldBot - Boundary for the floor of the world
+		WorldTop - Boundary for the top of the world
+		WorldFront - Boundary for the wall at the north of the world
+		WorldBack - Boundary for the wall at the south of the world
+		WorldLeft - Boundary for the wall at the west of the world
+		WorldRight - Boundary for the wall at the eart of the world
+		Floor2WestLeft - Boundary for the left wall facing the west on the second floor of the base
+		Floor2WestRight - Boundary for the right wall facing the west on the second floor of the base
+		Floor2EastLeft - Boundary for the left wall facing the east on the second floor of the base
+		Floor2EastRight - Boundary for the right wall facing the east on the second floor of the base
+		Floor2FrontLeft - Boundary for the left wall facing the north on the second floor of the base
+		Floor2FrontRight - Boundary for the right wall facing the north on the second floor of the base
+		Floor2BackLeft - Boundary for the left wall facing the south on the second floor of the base
+		Floor2BackRight - Boundary for the right wall facing the south on the second floor of the base
+		Floor2Top - Boundary for the ceiling of the second floor of the base
+		Floor2Bot - Boundary for the floor of the second floor of the base
+		TeleporterF1NW - Boundary for the teleporter in the north west corner of the first floor of the base
+		TeleporterF1NE - Boundary for the teleporter in the north east corner of the first floor of the base
+		TeleporterF1SW - Boundary for the teleporter in the south west corner of the first floor of the base
+		TeleporterF1SE - Boundary for the teleporter in the south earth corner of the first floor of the base
+		ShipCheck - Boundary for the area around the drivable ship
+		CoreCheck - Boundary for the area around the core in the middle of the base
+\return
+Resulting values and normalized vectors
+*/
+/****************************************************************************/
+
 void Camera3::initBoundVec()
 {	
 	/*min =  trans - scale/2 ;
@@ -450,28 +503,31 @@ void Camera3::initBoundVec()
 	Floor2Top.set(-14, 14, -14, 14, 20, 23);
 	Floor2Bot.set(-18, 18, -18, 18, 8, 10);
 
-	Base.set(-18, 18, -19, 19, -5, 10);
-
-	//leftRock1.set(-44.9, -55.6, -2.8, -12.5, 0, 8);
-	//leftRock2.set(-80.4, -109.4, -17.2, -46.7, 0, 8);
-	//leftRock3.set(-92.4, -130, -105.6, -138.9, 0, 8);
-	//frontRock1.set(4.9, -5.7, -53.6, -66, 0, 8);
-	//frontRock2.set(53.5, 66.9, -110, -128.3, 0, 8);
-	//rightRock1.set(44.8, 55.2, 5.4, -5.4, 0, 8);
-	//rightRock2.set(95.3, 123.5, -14.7, -44.7, 0, 8);
-	//backRock1.set(-4.8, 5.2, 54.2, 65.7, 0, 8);
-	//backRock2.set(18.1, 34.1, 117.1, 144, 0, 8);
-	//backRock3.set(-150, -140, 116.8, 144.4, 0, 8);
-
 	TeleporterF1NW.set(10, 17, 9, 17, -5, 10);
 	TeleporterF1NE.set(-17, -10, 9, 17, -5, 10);
 	TeleporterF1SW.set(10, 17, -17, -9, -5, 10);
 	TeleporterF1SE.set(-17, -10, -17, -9, -5, 10);
 
-	//PlayerShip.set(-18, 10, 60, 88, 0, 10);
 	ShipCheck.set(-25, 15, 54, 96, 0, 10);
 	CoreCheck.set(-2.5, 2.5, -2.5, 2.5, 0, 10);
 }
+
+/****************************************************************************/
+/*!
+\brief
+Method that allows the player to jump
+\param
+		isGravityOn - boolean that determines if Gravity is toggled on or off
+		isMaxJump - boolean that checks if the player has reached max jump height
+		isJump - boolean that checks if the player is jumping
+		maxJump - value that determines the max jump height
+		maxJump2 - value that determines the max jump height on the second floor
+		level - value that determines what floor the player is on
+		position - Vector3 value for current position
+\return
+Resulting values and normalized vectors
+*/
+/****************************************************************************/
 
 void Camera3::jump(double dt, int level)
 {
