@@ -230,19 +230,19 @@ void Robot::SetStats(int Level)
 		RobotType = Melee;
 		Health = 100;
 		Damage = 10;
-		Speed = 0.1;
+		Speed = 0.15;
 		break;
 	case 1:
 		RobotType = Melee;
 		Health = 120;
 		Damage = 10;
-		Speed = 0.1;
+		Speed = 0.15;
 		break;
 	case 2:
 		RobotType = Melee;
 		Health = 140;
 		Damage = 10;
-		Speed = 0.1;
+		Speed = 0.175;
 		break;
 	case 3:
 		//RobotType = ; Mothership

@@ -49,6 +49,7 @@ public:
 	float CameraXrotation, CameraYrotation, maxCameraXrotation, minCameraXrotation, maxCameraYrotation, minCameraYrotation;
 	float baseWalkSpeed = 4;
 	bool CanMoveCamera = true;
+	Boundary PowerUp;
 
 private:
 	Vector3 view;

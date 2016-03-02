@@ -118,7 +118,7 @@ void SP2_Scene::Init()
 	meshList[GEO_CUBE] = MeshBuilder::GenerateCube("cube", white);
 	meshList[GEO_CIRCLE] = MeshBuilder::GenerateCircle("circle", white, 36);
 	meshList[GEO_RING] = MeshBuilder::GenerateRing("ring", white, 0.5, 36);
-	meshList[GEO_TORUS] = MeshBuilder::GenerateTorus("torus", white, 1, 0.5, 20, 20);
+	meshList[GEO_TORUS] = MeshBuilder::GenerateTorus("torus", white, 1, 0.1, 20, 20);
 	meshList[GEO_CYLINDER] = MeshBuilder::GenerateCylinder("cylinder", white, 20);
 	meshList[GEO_CONE] = MeshBuilder::GenerateCone("cone", white, 20);
 	meshList[GEO_HEMISPHERE] = MeshBuilder::GenerateHemisphere("hemisphere", white, 20, 20);
@@ -202,6 +202,8 @@ void SP2_Scene::InitKeyVariables()
 	Intro = false;
 	weaponsOn = false;
 	ShipSpawned = false;
+	explosion = 0;
+	PowerUpActive = true;
 
 	//robotleftattack = false;
 	//robotrightattack = false;
@@ -271,6 +273,9 @@ void SP2_Scene::InitWeaponModels()
 
 void SP2_Scene::InitMapModels()
 {
+	meshList[GEO_POWERUP] = MeshBuilder::GenerateOBJ("test", "OBJ//Bullet.obj");
+	meshList[GEO_POWERUP]->textureID = Bullet_White;
+
 	meshList[GEO_CRYSTALBASE] = MeshBuilder::GenerateOBJ("Core Platform", "OBJ//Core_Platform.obj");
 	meshList[GEO_CRYSTALBASE]->textureID = LoadTGA("Image//Tex_Core_Platform.tga");
 
@@ -843,6 +848,8 @@ void SP2_Scene::GameState()
 	}
 	else if (wave == 1 && !weaponinterface && !SpawnedRobots)
 	{
+		PowerUpActive = true;
+		PowerUpVal = rand() % 3 + 1;
 		for (int i = 0; i < 10; i++)
 		{
 			RobotManager.RobotList.push_back(Robot(0, 0, Vector3(spawnPointN.x + (rand() % 80 - 39), spawnPointN.y, spawnPointN.z + (rand() % 80 - 39))));
@@ -851,6 +858,8 @@ void SP2_Scene::GameState()
 	}
 	else if (wave == 2 && !weaponinterface && !SpawnedRobots)
 	{
+		PowerUpActive = true;
+		PowerUpVal = rand() % 3 + 1;
 		for (int i = 0; i < 10; i++)
 		{
 			RobotManager.RobotList.push_back(Robot(1, 180, Vector3(spawnPointS.x + (rand() % 80 - 39), spawnPointS.y, spawnPointS.z + (rand() % 80 - 39))));
@@ -859,6 +868,8 @@ void SP2_Scene::GameState()
 	}
 	else if (wave == 3 && !weaponinterface && !SpawnedRobots)
 	{
+		PowerUpActive = true;
+		PowerUpVal = rand() % 3 + 1;
 		for (int i = 0; i < 10; i++)
 		{
 			RobotManager.RobotList.push_back(Robot(2, -90, Vector3(spawnPointE.x + (rand() % 80 - 39), spawnPointE.y, spawnPointE.z + (rand() % 80 - 39))));
@@ -867,6 +878,8 @@ void SP2_Scene::GameState()
 	}
 	else if (wave == 4 && !weaponinterface && !SpawnedRobots)
 	{
+		PowerUpActive = true;
+		PowerUpVal = rand() % 3 + 1;
 		for (int i = 0; i < 10; i++)
 		{
 			RobotManager.RobotList.push_back(Robot(2, 90, Vector3(spawnPointW.x + (rand() % 80 - 39), spawnPointW.y, spawnPointW.z + (rand() % 80 - 39))));
@@ -875,6 +888,8 @@ void SP2_Scene::GameState()
 	}
 	else if (wave == 5 && !weaponinterface && !SpawnedRobots)
 	{
+		PowerUpActive = true;
+		PowerUpVal = rand() % 3 + 1;
 		for (int i = 0; i < 3; i++)
 		{
 			RobotManager.RobotList.push_back(Robot(2, 0, Vector3(spawnPointN.x + (rand() % 80 - 39), spawnPointN.y, spawnPointN.z + (rand() % 80 - 39))));
@@ -951,7 +966,116 @@ void SP2_Scene::GameState()
 		RenderSpaceMap();
 	}
 }
+void SP2_Scene::RenderPowerUp(unsigned short PowerUpType)
+{
+	if (PowerUpType == 1)
+	{
+		meshList[GEO_POWERUP]->textureID = Bullet_Red;
+		if (PowerUpType == 1 && !camera.PowerUp.BoundaryCheck(camera.getCameraPosition().x, camera.getCameraPosition().z, camera.getCameraPosition().y) && (weaponValue == 1 || weaponValue == 4 || weaponValue == 7 || weaponValue == 10))
+		{
+			weaponValue = 4;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			PowerUpActive = false;
+			CurrentAmmo = WepSys.MaxAmmo;
+		}
+		else if (PowerUpType == 1 && !camera.PowerUp.BoundaryCheck(camera.getCameraPosition().x, camera.getCameraPosition().z, camera.getCameraPosition().y) && (weaponValue == 2 || weaponValue == 5 || weaponValue == 8 || weaponValue == 11))
+		{
+			weaponValue = 5;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			PowerUpActive = false;
+			CurrentAmmo = WepSys.MaxAmmo;
+		}
+		else if (PowerUpType == 1 && !camera.PowerUp.BoundaryCheck(camera.getCameraPosition().x, camera.getCameraPosition().z, camera.getCameraPosition().y) && (weaponValue == 0 || weaponValue == 3 || weaponValue == 6 || weaponValue == 9 || weaponValue == 12))
+		{
+			weaponValue = 6;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			PowerUpActive = false;
+			CurrentAmmo = WepSys.MaxAmmo;
+		}
+	}
 
+	else if (PowerUpType == 2)
+	{
+		meshList[GEO_POWERUP]->textureID = Bullet_Blue;
+		if (PowerUpType == 2 && !camera.PowerUp.BoundaryCheck(camera.getCameraPosition().x, camera.getCameraPosition().z, camera.getCameraPosition().y) && (weaponValue == 1 || weaponValue == 4 || weaponValue == 7 || weaponValue == 10))
+		{
+			weaponValue = 7;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			PowerUpActive = false;
+			CurrentAmmo = WepSys.MaxAmmo;
+		}
+		else if (PowerUpType == 2 && !camera.PowerUp.BoundaryCheck(camera.getCameraPosition().x, camera.getCameraPosition().z, camera.getCameraPosition().y) && (weaponValue == 2 || weaponValue == 5 || weaponValue == 8 || weaponValue == 11))
+		{
+			weaponValue = 8;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			PowerUpActive = false;
+			CurrentAmmo = WepSys.MaxAmmo;
+		}
+		else if (PowerUpType == 2 && !camera.PowerUp.BoundaryCheck(camera.getCameraPosition().x, camera.getCameraPosition().z, camera.getCameraPosition().y) && (weaponValue == 0 || weaponValue == 3 || weaponValue == 6 || weaponValue == 9 || weaponValue == 12))
+		{
+			weaponValue = 9;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			PowerUpActive = false;
+			CurrentAmmo = WepSys.MaxAmmo;
+		}
+	}
+	
+	else if(PowerUpType == 3)
+	{
+		meshList[GEO_POWERUP]->textureID = Bullet_Green;
+		if (PowerUpType == 3 && !camera.PowerUp.BoundaryCheck(camera.getCameraPosition().x, camera.getCameraPosition().z, camera.getCameraPosition().y) && (weaponValue == 1 || weaponValue == 4 || weaponValue == 7 || weaponValue == 10))
+		{
+			weaponValue = 10;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			CurrentAmmo = WepSys.MaxAmmo;
+			PowerUpActive = false;
+		}
+		else if (PowerUpType == 3 && !camera.PowerUp.BoundaryCheck(camera.getCameraPosition().x, camera.getCameraPosition().z, camera.getCameraPosition().y) && (weaponValue == 2 || weaponValue == 5 || weaponValue == 8 || weaponValue == 11))
+		{
+			weaponValue = 11;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			CurrentAmmo = WepSys.MaxAmmo;
+			PowerUpActive = false;
+		}
+		else if (PowerUpType == 3 && !camera.PowerUp.BoundaryCheck(camera.getCameraPosition().x, camera.getCameraPosition().z, camera.getCameraPosition().y) && (weaponValue == 0 || weaponValue == 3 || weaponValue == 6 || weaponValue == 9 || weaponValue == 12))
+		{
+			weaponValue = 12;
+			WepSys.ClearList();
+			WepSys.SetStats(weaponValue);
+			CurrentAmmo = WepSys.MaxAmmo;
+			PowerUpActive = false;
+		}
+	}
+	if (PowerUpActive == true)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(0, 5, 0);
+		modelStack.Rotate(constRotation * 4, 0, 1, 0);
+		modelStack.PushMatrix();
+		modelStack.Scale(0.5, 0.5, 0.5);
+			modelStack.PushMatrix();
+			modelStack.Rotate(constRotation * 4, 1, 1, 0);
+				RenderMesh(meshList[GEO_TORUS], false);
+			modelStack.PopMatrix();
+			modelStack.PushMatrix();
+			modelStack.Rotate(constRotation * 4, -1, 0, 1);
+				RenderMesh(meshList[GEO_TORUS], false);
+			modelStack.PopMatrix();
+		modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		modelStack.Scale(0.3, 0.3, 0.3);
+		RenderMesh(meshList[GEO_POWERUP], false);
+		modelStack.PopMatrix();
+	}
+}
 void SP2_Scene::RenderLevel()
 {
 	if (wave == 1)
@@ -1372,6 +1496,7 @@ void SP2_Scene::Update(double dt)
 			camera.CanMoveCamera = true;
 			MenuBGM->stop();
 			PlayBGM = false;
+			IsReloading = true;
 			InitKeyVariables();
 		}
 		else if (buttonPress && UICrystalChoice == 2 && Application::IsKeyPressed(VK_LBUTTON))
@@ -1618,7 +1743,7 @@ void SP2_Scene::Update(double dt)
 				CurrentAmmo = WepSys.MaxAmmo;
 			}
 		}
-		if (!IsReloading && CanFire && weaponValue != 13 && weaponValue <= 14 && Application::IsKeyPressed(VK_LBUTTON))
+		if (!IsReloading && CanFire && weaponValue != 13 && weaponValue < 15 && Application::IsKeyPressed(VK_LBUTTON))
 		{
 			if (CurrentAmmo <= 0)
 			{
@@ -2355,7 +2480,7 @@ void SP2_Scene::Render(double dt)
 		modelStack.Translate(0, 5, 0);
 		//Logo
 			modelStack.PushMatrix();
-				modelStack.Translate(-6, 4, 0);
+				modelStack.Translate(-6, 3, 0);
 				modelStack.Rotate(10, 0, 1, 0);
 				RenderImageInMap(UI_Logo, 15, 7.5);
 			modelStack.PopMatrix();
@@ -2407,8 +2532,9 @@ void SP2_Scene::Render(double dt)
 
 		//Help
 		modelStack.PushMatrix();
+		modelStack.Scale(0.75, 0.75, 0.75);
 			modelStack.Rotate(10, 0, 1, 0);
-			modelStack.Translate(-6, 2, 0);
+			modelStack.Translate(-8, 2, 0);
 			RenderImageInMap(UI_LoadingBG, 15, 5);
 			modelStack.Translate(-6, 1, 0);
 			RenderText(meshList[GEO_TEXT], "Move Your Mouse To Choose!", Color(1, 1, 1));
@@ -2501,9 +2627,12 @@ void SP2_Scene::Render(double dt)
 			RenderMesh(meshList[GEO_BULLET], false);
 			modelStack.PopMatrix();
 		}
+
 		GameState();
+		
 		//DO NOT RENDER ANYTHING UNDER THIS//
 		RenderUI();
+		RenderPowerUp(PowerUpVal);
 	}
 }
 

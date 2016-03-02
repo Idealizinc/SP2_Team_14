@@ -274,35 +274,35 @@ void Camera3::cameraMovement2(double dt)
 
 	if (spaceModeOn)
 	{
-		if (CanMoveCamera && Application::IsKeyPressed('W') || Application::IsKeyPressed(VK_UP))
+		if (CanMoveCamera && (Application::IsKeyPressed('W') || Application::IsKeyPressed(VK_UP)))
 		{
 			walkingY += (float)(sin(Math::DegreeToRadian(CameraYrotation)) / walkingSpeed);
 			walkingY += (float)(cos(Math::DegreeToRadian(CameraYrotation)) / walkingSpeed);
 		}
-		if (CanMoveCamera && Application::IsKeyPressed('S') || Application::IsKeyPressed(VK_DOWN))
+		if (CanMoveCamera && (Application::IsKeyPressed('S') || Application::IsKeyPressed(VK_DOWN)))
 		{
 			walkingY += (float)(sin(Math::DegreeToRadian(CameraYrotation + 180)) / walkingSpeed);
 			walkingY += (float)(cos(Math::DegreeToRadian(CameraYrotation + 180)) / walkingSpeed);
 		}
 	}
 	else{
-		if (CanMoveCamera && Application::IsKeyPressed('W') || Application::IsKeyPressed(VK_UP))
+		if (CanMoveCamera && (Application::IsKeyPressed('W') || Application::IsKeyPressed(VK_UP)))
 		{
 			walkingX += (float)(sin(Math::DegreeToRadian(CameraYrotation)) / walkingSpeed);
 			walkingZ += (float)(cos(Math::DegreeToRadian(CameraYrotation)) / walkingSpeed);
 		}
-		if (CanMoveCamera && Application::IsKeyPressed('S') || Application::IsKeyPressed(VK_DOWN))
+		if (CanMoveCamera && (Application::IsKeyPressed('S') || Application::IsKeyPressed(VK_DOWN)))
 		{
 			walkingX += (float)(sin(Math::DegreeToRadian(CameraYrotation + 180)) / walkingSpeed);
 			walkingZ += (float)(cos(Math::DegreeToRadian(CameraYrotation + 180)) / walkingSpeed);
 		}
 	}
-	if (CanMoveCamera && Application::IsKeyPressed('A') || Application::IsKeyPressed(VK_LEFT))
+	if (CanMoveCamera && (Application::IsKeyPressed('A') || Application::IsKeyPressed(VK_LEFT)))
 	{
 		walkingX += (float)(sin(Math::DegreeToRadian(CameraYrotation + 90)) / walkingSpeed);
 		walkingZ += (float)(cos(Math::DegreeToRadian(CameraYrotation + 90)) / walkingSpeed);
 	}
-	if (CanMoveCamera && Application::IsKeyPressed('D') || Application::IsKeyPressed(VK_RIGHT))
+	if (CanMoveCamera && (Application::IsKeyPressed('D') || Application::IsKeyPressed(VK_RIGHT)))
 	{
 		walkingX += (float)(sin(Math::DegreeToRadian(CameraYrotation + 270)) / walkingSpeed);
 		walkingZ += (float)(cos(Math::DegreeToRadian(CameraYrotation + 270)) / walkingSpeed);
@@ -461,6 +461,7 @@ void Camera3::initBoundVec()
 	//PlayerShip.set(-18, 10, 60, 88, 0, 10);
 	ShipCheck.set(-25, 15, 54, 96, 0, 10);
 	CoreCheck.set(-2.5, 2.5, -2.5, 2.5, 0, 10);
+	PowerUp.set(-2, 2, -2, 2, 10, 20);
 }
 
 void Camera3::jump(double dt, int level)

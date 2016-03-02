@@ -149,9 +149,9 @@ void WeaponSystem::SetStats(int wepVal)
 		break;
 	case 13:
 		ReloadTime = 0;
-		RateOfFire = 0;
+		RateOfFire = 1000;
 		Damage = 0;
-		Speed = 0;
+		Speed = 1000;
 		MaxAmmo = 0;
 		break;
 	case 14:
