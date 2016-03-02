@@ -50,13 +50,15 @@ public:
 	float baseWalkSpeed = 4;
 	bool CanMoveCamera = true;
 	Boundary PowerUp;
+	float MouseSensitivity = 1;
 
 private:
 	Vector3 view;
 
+	float rotate_Sensitivity = S_Width / S_Height * 2 * MouseSensitivity;
+
     void rotateCamera(double dt);
 	void initBoundVec();
-	float rotate_Sensitivity = S_Width / S_Height * 2;
 	float walkingSpeed = 10.f;
 	float gravity;
 

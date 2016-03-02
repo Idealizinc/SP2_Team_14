@@ -128,7 +128,7 @@ void Application::Run()
 	while (!glfwWindowShouldClose(m_window) && !IsKeyPressed(VK_ESCAPE) && !CloseGame)
 	{
 		scene->Update(m_timer.getElapsedTime());
-		scene->Render(m_timer.getElapsedTime());
+		scene->Render();
 		//Swap buffers
 		glfwSwapBuffers(m_window);
 		//Get and organize events, like keyboard and mouse input, window resizing, etc...

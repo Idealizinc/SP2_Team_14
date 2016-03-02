@@ -69,10 +69,10 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up,
 
 void Camera3::Update(double dt)
 {
-
 	cameraMovement2(dt);
 	outOfBounds = false;
 	rotateCamera(dt);
+	rotate_Sensitivity = S_Width / S_Height * 2 * MouseSensitivity;
 
 	if (!TeleporterF1NW.BoundaryCheck(position.x, position.z, position.y) || !TeleporterF1NE.BoundaryCheck(position.x, position.z, position.y)
 		|| !TeleporterF1SW.BoundaryCheck(position.x, position.z, position.y) || !TeleporterF1SE.BoundaryCheck(position.x, position.z, position.y))
