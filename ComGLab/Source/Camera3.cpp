@@ -26,6 +26,10 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up,
 	CameraYrotation = 0;
 	maxCameraXrotation = 89;
 	minCameraXrotation = -89;
+	maxCameraYrotation = 360;
+	minCameraYrotation = -360;
+
+	CanMoveCamera = true;
 
 	rotate_Sensitivity = 2;
 	cameraMass = mass;
@@ -162,7 +166,10 @@ void Camera3::rotateCamera(double dt)
 	CameraYrotation -= ((mousePosition.x - moveX) * (float)(dt)* rotate_Sensitivity);
 	CameraXrotation += ((mousePosition.y - moveY) * (float)(dt)* rotate_Sensitivity);
 	CameraXrotation = Math::Clamp(CameraXrotation, minCameraXrotation, maxCameraXrotation);
-
+	if (maxCameraYrotation < 360 && minCameraYrotation < 360)
+	{
+		CameraYrotation = Math::Clamp(CameraYrotation, minCameraYrotation, maxCameraYrotation);
+	}
 	target = Vector3(sin(Math::DegreeToRadian(CameraYrotation)) * cos(Math::DegreeToRadian(CameraXrotation)) + position.x,
 		-sin(Math::DegreeToRadian(CameraXrotation)) + position.y,
 		cos(Math::DegreeToRadian(CameraYrotation)) * cos(Math::DegreeToRadian(CameraXrotation)) + position.z);
@@ -259,53 +266,48 @@ void Camera3::cameraMovement2(double dt)
 	//velocityY += gravity * dt;
 	//walkingY = velocityY * dt;
 	
-	if (Application::IsKeyPressed(VK_LSHIFT) || Application::IsKeyPressed(VK_RSHIFT))
+	if (!spaceModeOn && Application::IsKeyPressed(VK_LSHIFT) || Application::IsKeyPressed(VK_RSHIFT))
 	{
-		walkingSpeed = 2.5;
+		walkingSpeed = 2;
 	}
-	else walkingSpeed = 5;
+	else walkingSpeed = baseWalkSpeed;
 
-	if (Application::IsKeyPressed('W') || Application::IsKeyPressed(VK_UP))
+	if (spaceModeOn)
 	{
-		walkingX += (float)(sin(Math::DegreeToRadian(CameraYrotation)) / walkingSpeed);
-		walkingZ += (float)(cos(Math::DegreeToRadian(CameraYrotation)) / walkingSpeed);
+		if (CanMoveCamera && Application::IsKeyPressed('W') || Application::IsKeyPressed(VK_UP))
+		{
+			walkingY += (float)(sin(Math::DegreeToRadian(CameraYrotation)) / walkingSpeed);
+			walkingY += (float)(cos(Math::DegreeToRadian(CameraYrotation)) / walkingSpeed);
+		}
+		if (CanMoveCamera && Application::IsKeyPressed('S') || Application::IsKeyPressed(VK_DOWN))
+		{
+			walkingY += (float)(sin(Math::DegreeToRadian(CameraYrotation + 180)) / walkingSpeed);
+			walkingY += (float)(cos(Math::DegreeToRadian(CameraYrotation + 180)) / walkingSpeed);
+		}
 	}
-	if (Application::IsKeyPressed('A') || Application::IsKeyPressed(VK_LEFT))
+	else{
+		if (CanMoveCamera && Application::IsKeyPressed('W') || Application::IsKeyPressed(VK_UP))
+		{
+			walkingX += (float)(sin(Math::DegreeToRadian(CameraYrotation)) / walkingSpeed);
+			walkingZ += (float)(cos(Math::DegreeToRadian(CameraYrotation)) / walkingSpeed);
+		}
+		if (CanMoveCamera && Application::IsKeyPressed('S') || Application::IsKeyPressed(VK_DOWN))
+		{
+			walkingX += (float)(sin(Math::DegreeToRadian(CameraYrotation + 180)) / walkingSpeed);
+			walkingZ += (float)(cos(Math::DegreeToRadian(CameraYrotation + 180)) / walkingSpeed);
+		}
+	}
+	if (CanMoveCamera && Application::IsKeyPressed('A') || Application::IsKeyPressed(VK_LEFT))
 	{
 		walkingX += (float)(sin(Math::DegreeToRadian(CameraYrotation + 90)) / walkingSpeed);
 		walkingZ += (float)(cos(Math::DegreeToRadian(CameraYrotation + 90)) / walkingSpeed);
 	}
-	if (Application::IsKeyPressed('S') || Application::IsKeyPressed(VK_DOWN))
-	{
-		walkingX += (float)(sin(Math::DegreeToRadian(CameraYrotation + 180)) / walkingSpeed);
-		walkingZ += (float)(cos(Math::DegreeToRadian(CameraYrotation + 180)) / walkingSpeed);
-	}
-	if (Application::IsKeyPressed('D') || Application::IsKeyPressed(VK_RIGHT))
+	if (CanMoveCamera && Application::IsKeyPressed('D') || Application::IsKeyPressed(VK_RIGHT))
 	{
 		walkingX += (float)(sin(Math::DegreeToRadian(CameraYrotation + 270)) / walkingSpeed);
 		walkingZ += (float)(cos(Math::DegreeToRadian(CameraYrotation + 270)) / walkingSpeed);
 	}
-	//if (Application::IsKeyPressed(' ') || Application::IsKeyPressed(VK_SPACE))
-	//{
-		//position.y -= velocityY * 0.5;
-		//velocityY -= gravity;
-	//}
-	//if (Application::IsKeyPressed(VK_SPACE))
-	//{
-		/*if (position.y <= groundlevel)
-		{*/
-			/*jumpImpulse = 2 * dt;
-			jumpForce = 15000;
-			jumpSpeed = static_cast<float>(Physics::getAcceleration(jumpForce, cameraMass));
-			position.y += jumpSpeed * (float)jumpImpulse;*/
-		//}
-	//}
-	/*if (position.y > groundlevel)
-	{
-		jumpSpeed = Physics::gravitational_pulled(jumpSpeed, dt);
-		position.y += jumpSpeed * (float)dt;
-	}*/
-	if (Application::IsKeyPressed(' '))
+	if (!spaceModeOn && Application::IsKeyPressed(' '))
 	{
 		isGravityOn = false;
 		isJump = true;
@@ -326,64 +328,83 @@ void Camera3::cameraMovement2(double dt)
 	{
 	    Reset();
 	}*/
-	if (walkingX != 0 && northwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && northwall2.BoundaryCheck(walkingX + position.x, position.z, position.y)
-		&& westwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && westwall2.BoundaryCheck(walkingX + position.x, position.z, position.y)
-		&& eastwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && eastwall2.BoundaryCheck(walkingX + position.x, position.z, position.y) && PlayerShip.BoundaryCheck(walkingX + position.x, position.z, position.y)
-		&& southwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && southwall2.BoundaryCheck(walkingX + position.x, position.z, position.y) && corebase.BoundaryCheck(walkingX + position.x, position.z, position.y)
-		&& WorldBack.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldFront.BoundaryCheck(walkingX + position.x, position.z, position.y)
-		&& WorldLeft.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldRight.BoundaryCheck(walkingX + position.x, position.z, position.y)
-		&& WorldTop.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldBot.BoundaryCheck(walkingX + position.x, position.z, position.y)
-		&& Floor2BackLeft.BoundaryCheck(walkingX + position.x, position.z, position.y) && Floor2BackRight.BoundaryCheck(walkingX + position.x, position.z, position.y)
-		&& Floor2FrontLeft.BoundaryCheck(walkingX + position.x, position.z, position.y) && Floor2FrontRight.BoundaryCheck(walkingX + position.x, position.z, position.y)
-		&& Floor2WestLeft.BoundaryCheck(walkingX + position.x, position.z, position.y) && Floor2WestRight.BoundaryCheck(walkingX + position.x, position.z, position.y)
-		&& Floor2EastLeft.BoundaryCheck(walkingX + position.x, position.z, position.y) && Floor2EastRight.BoundaryCheck(walkingX + position.x, position.z, position.y)
-		&& Floor2Top.BoundaryCheck(walkingX + position.x, position.z, position.y) && Floor2Bot.BoundaryCheck(walkingX + position.x, position.z, position.y))
-	{
-		position.x += walkingX;
-	}
-	if (walkingZ != 0 && northwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && northwall2.BoundaryCheck(position.x, position.z + walkingZ, position.y)
-		&& westwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && westwall2.BoundaryCheck(position.x, position.z + walkingZ, position.y)
-		&& eastwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && eastwall2.BoundaryCheck(position.x, position.z + walkingZ, position.y) && PlayerShip.BoundaryCheck(walkingX, position.z + walkingZ, position.y)
-		&& southwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && southwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && corebase.BoundaryCheck(position.x, position.z + walkingZ, position.y)
-		&& WorldBack.BoundaryCheck(position.x, position.z + walkingZ, position.y) && WorldFront.BoundaryCheck(position.x, position.z + walkingZ, position.y)
-		&& WorldLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && WorldRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
-		&& WorldTop.BoundaryCheck(position.x, position.z + walkingZ, position.y) && WorldBot.BoundaryCheck(position.x, position.z + walkingZ, position.y)
-		&& Floor2BackLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2BackRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
-		&& Floor2FrontLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2FrontRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
-		&& Floor2WestLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2WestRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
-		&& Floor2EastLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2EastRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
-		&& Floor2Top.BoundaryCheck(walkingX, position.z + walkingZ, position.y) && Floor2Bot.BoundaryCheck(walkingX, position.z + walkingZ, position.y))
-	{
-		position.z += walkingZ;
-	}
-	//Gravity
-	if (isGravityOn == true)
-	{
-		if (/*velocityY != 0 &&*/ northwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && northwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-			&& westwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && westwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-			&& eastwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && eastwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && PlayerShip.BoundaryCheck(walkingX, position.z, (position.y - 5) - gravity)
-			&& southwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && southwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && corebase.BoundaryCheck(walkingX, position.z, (position.y - 5) - gravity)
-			&& WorldBack.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldFront.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-			&& WorldLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-			&& WorldTop.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldBot.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-			&& Floor2BackLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2BackRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-			&& Floor2FrontLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2FrontRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-			&& Floor2WestLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2WestRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-			&& Floor2EastLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2EastRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
-			&& Floor2Top.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2Bot.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity))
-	{
-			position.y -= gravity;
+	if (spaceModeOn == false){
+		if (walkingX != 0 && northwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && northwall2.BoundaryCheck(walkingX + position.x, position.z, position.y)
+			&& westwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && westwall2.BoundaryCheck(walkingX + position.x, position.z, position.y)
+			&& eastwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && eastwall2.BoundaryCheck(walkingX + position.x, position.z, position.y) && PlayerShip.BoundaryCheck(walkingX + position.x, position.z, position.y)
+			&& southwall1.BoundaryCheck(walkingX + position.x, position.z, position.y) && southwall2.BoundaryCheck(walkingX + position.x, position.z, position.y) && corebase.BoundaryCheck(walkingX + position.x, position.z, position.y)
+			&& WorldBack.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldFront.BoundaryCheck(walkingX + position.x, position.z, position.y)
+			&& WorldLeft.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldRight.BoundaryCheck(walkingX + position.x, position.z, position.y)
+			&& WorldTop.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldBot.BoundaryCheck(walkingX + position.x, position.z, position.y)
+			&& Floor2BackLeft.BoundaryCheck(walkingX + position.x, position.z, position.y) && Floor2BackRight.BoundaryCheck(walkingX + position.x, position.z, position.y)
+			&& Floor2FrontLeft.BoundaryCheck(walkingX + position.x, position.z, position.y) && Floor2FrontRight.BoundaryCheck(walkingX + position.x, position.z, position.y)
+			&& Floor2WestLeft.BoundaryCheck(walkingX + position.x, position.z, position.y) && Floor2WestRight.BoundaryCheck(walkingX + position.x, position.z, position.y)
+			&& Floor2EastLeft.BoundaryCheck(walkingX + position.x, position.z, position.y) && Floor2EastRight.BoundaryCheck(walkingX + position.x, position.z, position.y)
+			&& Floor2Top.BoundaryCheck(walkingX + position.x, position.z, position.y) && Floor2Bot.BoundaryCheck(walkingX + position.x, position.z, position.y))
+		{
+			position.x += walkingX;
+		}
+		if (walkingZ != 0 && northwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && northwall2.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+			&& westwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && westwall2.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+			&& eastwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && eastwall2.BoundaryCheck(position.x, position.z + walkingZ, position.y) && PlayerShip.BoundaryCheck(walkingX, position.z + walkingZ, position.y)
+			&& southwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && southwall1.BoundaryCheck(position.x, position.z + walkingZ, position.y) && corebase.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+			&& WorldBack.BoundaryCheck(position.x, position.z + walkingZ, position.y) && WorldFront.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+			&& WorldLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && WorldRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+			&& WorldTop.BoundaryCheck(position.x, position.z + walkingZ, position.y) && WorldBot.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+			&& Floor2BackLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2BackRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+			&& Floor2FrontLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2FrontRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+			&& Floor2WestLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2WestRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+			&& Floor2EastLeft.BoundaryCheck(position.x, position.z + walkingZ, position.y) && Floor2EastRight.BoundaryCheck(position.x, position.z + walkingZ, position.y)
+			&& Floor2Top.BoundaryCheck(walkingX, position.z + walkingZ, position.y) && Floor2Bot.BoundaryCheck(walkingX, position.z + walkingZ, position.y))
+		{
+			position.z += walkingZ;
+		}
+		//Gravity
+		if (isGravityOn == true)
+		{
+			if (/*velocityY != 0 &&*/ northwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && northwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+				&& westwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && westwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+				&& eastwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && eastwall2.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && PlayerShip.BoundaryCheck(walkingX, position.z, (position.y - 5) - gravity)
+				&& southwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && southwall1.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && corebase.BoundaryCheck(walkingX, position.z, (position.y - 5) - gravity)
+				&& WorldBack.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldFront.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+				&& WorldLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+				&& WorldTop.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && WorldBot.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+				&& Floor2BackLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2BackRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+				&& Floor2FrontLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2FrontRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+				&& Floor2WestLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2WestRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+				&& Floor2EastLeft.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2EastRight.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity)
+				&& Floor2Top.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity) && Floor2Bot.BoundaryCheck(position.x, position.z, (position.y - 5) - gravity))
+			{
+				position.y -= gravity;
+			}
+		}
+		//Teleporter
+		if ((teleCheck == true && TeleporterF1NW.BoundaryCheck(position.x, position.z, position.y)
+			|| (teleCheck == true && TeleporterF1NE.BoundaryCheck(position.x, position.z, position.y))
+			|| (teleCheck == true && TeleporterF1SW.BoundaryCheck(position.x, position.z, position.y))
+			|| (teleCheck == true && TeleporterF1SE.BoundaryCheck(position.x, position.z, position.y))) && Application::IsKeyPressed('E'))
+		{
+			position.x = 5;
+			position.y = 16;
+			position.z = 3;
 		}
 	}
-	//Teleporter
-	if ((teleCheck == true && TeleporterF1NW.BoundaryCheck(position.x, position.z, position.y)
-		|| (teleCheck == true && TeleporterF1NE.BoundaryCheck(position.x, position.z, position.y))
-		|| (teleCheck == true && TeleporterF1SW.BoundaryCheck(position.x, position.z, position.y))
-		|| (teleCheck == true && TeleporterF1SE.BoundaryCheck(position.x, position.z, position.y))) && Application::IsKeyPressed('E'))
+	else
 	{
-		position.x = 5;
-		position.y = 16;
-		position.z = 3;
+		if (walkingX != 0
+			&& WorldBack.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldFront.BoundaryCheck(walkingX + position.x, position.z, position.y)
+			&& WorldLeft.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldRight.BoundaryCheck(walkingX + position.x, position.z, position.y)
+			&& WorldTop.BoundaryCheck(walkingX + position.x, position.z, position.y) && WorldBot.BoundaryCheck(walkingX + position.x, position.z, position.y))
+		{
+			position.x += walkingX;
+		}
+		if (walkingY != 0
+			&& WorldBack.BoundaryCheck(position.x, position.z, position.y + walkingY) && WorldFront.BoundaryCheck(position.x, position.z, position.y + walkingY)
+			&& WorldLeft.BoundaryCheck(position.x, position.z, position.y + walkingY) && WorldRight.BoundaryCheck(position.x, position.z, position.y + walkingY)
+			&& WorldTop.BoundaryCheck(position.x, position.z, position.y + walkingY) && WorldBot.BoundaryCheck(position.x, position.z, position.y + walkingY))
+		{
+			position.y += walkingY;
+		}
 	}
 }
 
@@ -471,11 +492,11 @@ void Camera3::jump(double dt, int level)
 	{
 		if (isMaxJump == false) 
 		{
-			position.y += (float)(4 * dt);
+			position.y += (float)(5 * dt);
 		}
 		else
 		{
-			position.y -= (float)(4 * dt);
+			position.y -= (float)(5 * dt);
 		}
 		if (position.y > maxJump2)
 		{

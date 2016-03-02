@@ -45,12 +45,15 @@ public:
 	bool openBackGate;
 	bool shipCheck;
 	bool coreCheck;
+	bool spaceModeOn = false;
+	float CameraXrotation, CameraYrotation, maxCameraXrotation, minCameraXrotation, maxCameraYrotation, minCameraYrotation;
+	float baseWalkSpeed = 4;
+	bool CanMoveCamera = true;
+
 private:
 	Vector3 view;
 
     void rotateCamera(double dt);
-    float CameraXrotation;
-    float CameraYrotation, maxCameraXrotation, minCameraXrotation;
 	void initBoundVec();
 	float rotate_Sensitivity = S_Width / S_Height * 2;
 	float walkingSpeed = 10.f;

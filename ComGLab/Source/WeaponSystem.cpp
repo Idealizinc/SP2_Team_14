@@ -58,83 +58,83 @@ void WeaponSystem::SetStats(int wepVal)
 	{
 	case 0:
 		ReloadTime = 3;
-		RateOfFire = 0;// 0.1;
+		RateOfFire = 0.1;
 		Damage = 5;
-		Speed = 10; //3
-		MaxAmmo = 1337;// 30;
+		Speed = 4;
+		MaxAmmo = 30;
 		break;
 	case 1:
-		ReloadTime = 4;
+		ReloadTime = 2;
 		RateOfFire = 0.15;
 		Damage = 8;
 		Speed = 4;
 		MaxAmmo = 40;
 		break;
 	case 2:
-		ReloadTime = 5;
+		ReloadTime = 3;
 		RateOfFire = 0.5;
 		Damage = 70;
 		Speed = 5;
 		MaxAmmo = 10;
 		break;
 	case 3:
-		ReloadTime = 3;
+		ReloadTime = 2;
 		RateOfFire = 0.1;
 		Damage = 5;
-		Speed = 3;
+		Speed = 4;
 		MaxAmmo = 30;
 		break;
 	case 4:
-		ReloadTime = 4;
+		ReloadTime = 2;
 		RateOfFire = 0.15;
 		Damage = 12;
 		Speed = 4;
 		MaxAmmo = 40;
 		break;
 	case 5:
-		ReloadTime = 5;
+		ReloadTime = 3;
 		RateOfFire = 0.5;
-		Damage = 120;
+		Damage = 140;
 		Speed = 5;
 		MaxAmmo = 10;
 		break;
 	case 6:
-		ReloadTime = 3;
+		ReloadTime = 2;
 		RateOfFire = 0.1;
 		Damage = 8;
-		Speed = 3;
+		Speed = 4;
 		MaxAmmo = 30;
 		break;
 	case 7:
-		ReloadTime = 4;
+		ReloadTime = 2;
 		RateOfFire = 0.15;
 		Damage = 8;
 		Speed = 4;
-		MaxAmmo = 60;
+		MaxAmmo = 80;
 		break;
 	case 8:
-		ReloadTime = 5;
+		ReloadTime = 3;
 		RateOfFire = 0.5;
 		Damage = 70;
 		Speed = 5;
-		MaxAmmo = 15;
+		MaxAmmo = 20;
 		break;
 	case 9:
-		ReloadTime = 3;
+		ReloadTime = 2;
 		RateOfFire = 0.1;
 		Damage = 5;
-		Speed = 3;
-		MaxAmmo = 45;
+		Speed = 4;
+		MaxAmmo = 60;
 		break;
 	case 10:
-		ReloadTime = 2;
+		ReloadTime = 1;
 		RateOfFire = 0.075;
 		Damage = 8;
 		Speed = 4;
 		MaxAmmo = 40;
 		break;
 	case 11:
-		ReloadTime = 3;
+		ReloadTime = 2;
 		RateOfFire = 0.3;
 		Damage = 70;
 		Speed = 5;
@@ -144,8 +144,22 @@ void WeaponSystem::SetStats(int wepVal)
 		ReloadTime = 1;
 		RateOfFire = 0.05;
 		Damage = 5;
-		Speed = 3;
+		Speed = 4;
 		MaxAmmo = 30;
+		break;
+	case 13:
+		ReloadTime = 0;
+		RateOfFire = 0;
+		Damage = 0;
+		Speed = 0;
+		MaxAmmo = 0;
+		break;
+	case 14:
+		ReloadTime = 3;
+		RateOfFire = 0.15;
+		Damage = 3;
+		Speed = 15;
+		MaxAmmo = 50;
 		break;
 	default:
 		ReloadTime = 0;

@@ -2,13 +2,14 @@
 
 #define PI 3.1415926535
 
-Robot::Robot(int RobotType, Vector3 SpawnPos)
+Robot::Robot(int RobotType, float Rotation, Vector3 SpawnPos)
 {
+	this->RobotTypeVal = RobotType;
 	CurrPos = SpawnPos;
 	GetDirVec(TargetPos);
-	findAngle();
 	SetStats(RobotType);
 	CalcBounds();
+	this->Rotation = Rotation;
 	//RobotAnimation(dt);
 	//(CurrPos.x + 3) * rotateToTarget
 }
@@ -18,53 +19,6 @@ Robot::~Robot()
 
 }
 
-void Robot::findAngle()
-{
-	/*float A, B, C, total;
-	A = ((0 * DirVec.x) + (0 * DirVec.y) + (1 * DirVec.z));
-
-	B = pow(0, 2) + pow(0, 2), pow(1, 2);
-	B = sqrt(B);
-
-	B = pow(0, 2) + pow(1, 2), pow(0, 2);
-	B = sqrt(B);
-
-	C = pow(DirVec.x, 2) + pow(DirVec.z, 2) + pow(DirVec.y, 2);
-	C = sqrt(C);
-
-	total = (B * C);
-
-	rotateToTarget = A / total;
-
-	rotateToTarget = acos(rotateToTarget) * 180.0 / PI;*/
-
-	/*float A;
-
-	A = atan2(1 - DirVec.z, 0 - DirVec.x);
-	rotateToTarget = A * 180.0 / PI;*/
-
-	//float dot, lenSq1, lenSq2;
-
-	//dot = (0 * DirVec.x) + (0 * DirVec.y) + (1 * DirVec.z);
-	//lenSq1 = 0 + 0 + 1;
-	//lenSq2 = (DirVec.x * DirVec.x) + (DirVec.y * DirVec.y) + (DirVec.z * DirVec.z);
-	//rotateToTarget = acos(dot / sqrt(lenSq1 * lenSq2));
-
-	/*std::cout << DirVec.x << ", " << DirVec.y << ", " << DirVec.z << std::endl;
-	std::cout << rotateToTarget << std::endl;
-	*/
-	float dot, det;
-	dot = (0 * DirVec.x) + (1 * DirVec.z);
-	det = (0 * DirVec.z) - (1 * DirVec.x);
-	rotateToTarget = Math::RadianToDegree(atan2(det, dot));
-	//std::cout << DirVec.x << ", " << DirVec.y << ", " << DirVec.z << std::endl;
-	//std::cout << rotateToTarget << std::endl;
-
-	/*Vector3 a(0, 0, 1);
-	float dot2 = DirVec.Dot(a);
-	rotateToTarget = Math::RadianToDegree(acos(dot2 / sqrt(a.LengthSquared() * DirVec.LengthSquared())));
-	std::cout << rotateToTarget << std::endl;*/
-}
 
 Vector3 Robot::Move()
 {
@@ -86,31 +40,39 @@ Vector3 Robot::Move()
 
 void Robot::FindNewTarget()
 {
-	int Randomize = rand() % 10 + 1;
-	if (Randomize > 5)
+	if (!isMothership)
 	{
-		Boundary Base(-19, 19, -19, 19, -5, 10);
-		Boundary BaseOuter(-25, 25, -25, 25, -5, 10);
-		if (BaseOuter.BoundaryCheck(CurrPos.x, CurrPos.y, CurrPos.z))
+		int Randomize = rand() % 10 + 1;
+		if (Randomize > 5)
 		{
-			int choice = rand() % 4 + 1;
-			switch (choice)
+			Boundary Base(-19, 19, -19, 19, -5, 10);
+			Boundary BaseOuter(-25, 25, -25, 25, -5, 10);
+			if (BaseOuter.BoundaryCheck(CurrPos.x, CurrPos.y, CurrPos.z))
 			{
-			case 1: TargetPos = (20, 0, 0);
-				break;
-			case 2: TargetPos = (-20, 0, 0);
-				break;
-			case 3: TargetPos = (0, 0, 20);
-				break;
-			case 4: TargetPos = (0, 0, -20);
-				break;
-			default: TargetPos = (0, 0, 0);
-				break;
+				int choice = rand() % 4 + 1;
+				switch (choice)
+				{
+				case 1: TargetPos = (20, 0, 0);
+					break;
+				case 2: TargetPos = (-20, 0, 0);
+					break;
+				case 3: TargetPos = (0, 0, 20);
+					break;
+				case 4: TargetPos = (0, 0, -20);
+					break;
+				default: TargetPos = (0, 0, 0);
+					break;
+				}
 			}
+			else TargetPos = (0, 0, 0);
 		}
 		else TargetPos = (0, 0, 0);
 	}
-	else TargetPos = (0, 0, 0);
+}
+
+void Robot::SetShipTarget(Vector3 newTarget)
+{
+	TargetPos = newTarget;
 }
 
 Vector3 Robot::Position()
@@ -140,6 +102,7 @@ void Robot::SetHealth(float newHP)
 {
 	Health = newHP;
 }
+
 void Robot::RobotAnimation(double dt)
 {
 	//left arm
@@ -239,15 +202,23 @@ void Robot::RobotAnimation(double dt)
 	//droid repair animation
 	
 }
+
 void Robot::CalcBounds()
 {
-	BoundingBox.set(CurrPos.x - 2.5, CurrPos.x + 2.5, CurrPos.z - 2.5, CurrPos.z + 2.5, CurrPos.y - 3, CurrPos.y + 7);
+	if (RobotTypeVal != 3)
+	{
+		BoundingBox.set(CurrPos.x - 2.5, CurrPos.x + 2.5, CurrPos.z - 2.5, CurrPos.z + 2.5, CurrPos.y - 3, CurrPos.y + 7);
+	}
+	else 	BoundingBox.set(CurrPos.x - 30, CurrPos.x + 30, CurrPos.z - 60, CurrPos.z + 60, CurrPos.y - 20, CurrPos.y + 20);
 }
 
 Vector3 Robot::GetDirVec(Vector3 Target)
 {
 	DirVec = Target - CurrPos;
-	DirVec = DirVec.Normalize();
+	if (DirVec.Length() > 0)
+	{
+		DirVec = DirVec.Normalize();
+	}
 	return DirVec;
 }
 
@@ -259,19 +230,25 @@ void Robot::SetStats(int Level)
 		RobotType = Melee;
 		Health = 100;
 		Damage = 10;
-		Speed = 0.15;
+		Speed = 0.1;
 		break;
 	case 1:
 		RobotType = Melee;
-		Health = 150;
+		Health = 120;
 		Damage = 10;
-		Speed = 0.15;
+		Speed = 0.1;
 		break;
 	case 2:
 		RobotType = Melee;
-		Health = 200;
+		Health = 140;
 		Damage = 10;
-		Speed = 0.15;
+		Speed = 0.1;
+		break;
+	case 3:
+		//RobotType = ; Mothership
+		Health = 5000;
+		Damage = 10;
+		Speed = 0.2;
 		break;
 	default:
 		Health = 0;
