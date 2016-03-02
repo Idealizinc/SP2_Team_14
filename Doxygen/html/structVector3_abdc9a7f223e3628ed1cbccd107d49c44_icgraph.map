@@ -1,0 +1,5 @@
+<map id="Vector3::IsEqual" name="Vector3::IsEqual">
+<area shape="rect" id="node2" href="$structVector3.html#affeb6d657b146584b5cb0b42a0d6eaeb" title="Check if vector is zero, using Math::Epsilon. " alt="" coords="186,5,297,32"/>
+<area shape="rect" id="node3" href="$structVector3.html#a27ba9abc0d1b5cd47a0365a4ebcfeb7c" title="operator!= overload for inequality check, using Math::EPSILON " alt="" coords="175,56,308,83"/>
+<area shape="rect" id="node4" href="$structVector3.html#ae084cfb19c537457f52bfb3cb3a7054d" title="operator== overload for equality check, using Math::EPSILON " alt="" coords="172,107,311,133"/>
+</map>

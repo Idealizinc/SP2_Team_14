@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file Camera3.cpp
+\author Ryan Lim Rui An, Teh Kai Hong Bryan
+\par email: 150577L@mymail.nyp.edu.sg, 150587A@mymail.nyp.edu.sg
+\brief
+.cpp file that defines camera
+*/
+/****************************************************************************/
 #include "Camera3.h"
 #include "Application.h"
 #include "Mtx44.h"

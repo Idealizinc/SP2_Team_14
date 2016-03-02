@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="CIrrKlangAudioStreamLoaderMP3_8h" kind="file" language="C++">
+    <compoundname>CIrrKlangAudioStreamLoaderMP3.h</compoundname>
+    <includes refid="ik__IAudioStreamLoader_8h" local="no">ik_IAudioStreamLoader.h</includes>
+    <includedby refid="CIrrKlangAudioStreamLoaderMP3_8cpp" local="yes">irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamLoaderMP3.cpp</includedby>
+    <includedby refid="ikpMP3_8cpp" local="yes">irrKlang-1.5.0/plugins/ikpMP3/ikpMP3.cpp</includedby>
+    <incdepgraph>
+      <node id="2884">
+        <label>ik_IRefCounted.h</label>
+        <link refid="ik__IRefCounted_8h"/>
+        <childnode refid="2885" relation="include">
+        </childnode>
+      </node>
+      <node id="2887">
+        <label>ik_IFileReader.h</label>
+        <link refid="ik__IFileReader_8h"/>
+        <childnode refid="2884" relation="include">
+        </childnode>
+      </node>
+      <node id="2886">
+        <label>wchar.h</label>
+      </node>
+      <node id="2882">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamLoaderMP3.h</label>
+        <link refid="CIrrKlangAudioStreamLoaderMP3.h"/>
+        <childnode refid="2883" relation="include">
+        </childnode>
+      </node>
+      <node id="2885">
+        <label>ik_irrKlangTypes.h</label>
+        <link refid="ik__irrKlangTypes_8h"/>
+        <childnode refid="2886" relation="include">
+        </childnode>
+      </node>
+      <node id="2883">
+        <label>ik_IAudioStreamLoader.h</label>
+        <link refid="ik__IAudioStreamLoader_8h"/>
+        <childnode refid="2884" relation="include">
+        </childnode>
+        <childnode refid="2887" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2890">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/ikpMP3.cpp</label>
+        <link refid="ikpMP3_8cpp"/>
+      </node>
+      <node id="2889">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamLoaderMP3.cpp</label>
+        <link refid="CIrrKlangAudioStreamLoaderMP3_8cpp"/>
+      </node>
+      <node id="2888">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamLoaderMP3.h</label>
+        <link refid="CIrrKlangAudioStreamLoaderMP3.h"/>
+        <childnode refid="2889" relation="include">
+        </childnode>
+        <childnode refid="2890" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classirrklang_1_1CIrrKlangAudioStreamLoaderMP3" prot="public">irrklang::CIrrKlangAudioStreamLoaderMP3</innerclass>
+    <innernamespace refid="namespaceirrklang">irrklang</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2002-2007<sp/>Nikolaus<sp/>Gebhardt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>&quot;irrKlang&quot;<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>For<sp/>conditions<sp/>of<sp/>distribution<sp/>and<sp/>use,<sp/>see<sp/>copyright<sp/>notice<sp/>in<sp/>irrKlang.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__C_IRRKLANG_AUDIO_STREAM_LOADER_MP3_H_INCLUDED__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__C_IRRKLANG_AUDIO_STREAM_LOADER_MP3_H_INCLUDED__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="ik__IAudioStreamLoader_8h" kindref="compound">ik_IAudioStreamLoader.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceirrklang" kindref="compound">irrklang</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13" refid="classirrklang_1_1CIrrKlangAudioStreamLoaderMP3" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classirrklang_1_1CIrrKlangAudioStreamLoaderMP3" kindref="compound">CIrrKlangAudioStreamLoaderMP3</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1IAudioStreamLoader" kindref="compound">IAudioStreamLoader</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamLoaderMP3_1a1301d1a2032654d84ba2571623e4d892" kindref="member">CIrrKlangAudioStreamLoaderMP3</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamLoaderMP3_1a59e1e80a0df8fe554cb1db179c19b6f7" kindref="member">isALoadableFileExtension</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceirrklang_1af179ad966eb79d01f6d1cf8927087449" kindref="member">ik_c8</ref>*<sp/>fileName);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1IAudioStream" kindref="compound">IAudioStream</ref>*<sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamLoaderMP3_1aa2abcfd3b38eb8bb49e782678aac3ab2" kindref="member">createAudioStream</ref>(<ref refid="classirrklang_1_1IFileReader" kindref="compound">irrklang::IFileReader</ref>*<sp/>file);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>irrklang</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamLoaderMP3.h"/>
+  </compounddef>
+</doxygen>

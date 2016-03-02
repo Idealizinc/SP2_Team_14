@@ -1,0 +1,7 @@
+<map id="MeshBuilder::GenerateRing" name="MeshBuilder::GenerateRing">
+<area shape="rect" id="node2" href="$MeshBuilder_8cpp.html#a452206fa7621781c2b35fcd17b816239" title="CircleX" alt="" coords="252,5,315,32"/>
+<area shape="rect" id="node4" href="$MeshBuilder_8cpp.html#aede6465b0e45fc027ae0e8ec50d68ffb" title="CircleZ" alt="" coords="252,56,315,83"/>
+<area shape="rect" id="node5" href="$structPosition.html#a2919b2441baf7a2f799791d65a1cfc15" title="Position::Set" alt="" coords="235,107,332,133"/>
+<area shape="rect" id="node6" href="$structVector3.html#a9c25d604bd52b162cfcb56302ef032bb" title="Set the elements of this vector. " alt="" coords="236,157,331,184"/>
+<area shape="rect" id="node3" href="$namespaceMath.html#ac04b987cc6c574a059e68cb58f58c09a" title="Converts from degrees to radians. " alt="" coords="380,31,535,57"/>
+</map>

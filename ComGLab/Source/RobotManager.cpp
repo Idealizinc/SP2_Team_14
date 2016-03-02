@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file RobotManager.cpp
+\author Ryan Lim Rui An
+\par email: 150577L@mymail.nyp.edu.sg
+\brief
+.cpp file that manages robots in the scene
+*/
+/****************************************************************************/
 #include "RobotManager.h"
 
 RobotManager::~RobotManager()

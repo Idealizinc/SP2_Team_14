@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="SharedData_8h" kind="file" language="C++">
+    <compoundname>SharedData.h</compoundname>
+    <includedby refid="Application_8h" local="yes">ComGLab/Source/Application.h</includedby>
+    <includedby refid="Camera3_8h" local="yes">ComGLab/Source/Camera3.h</includedby>
+    <invincdepgraph>
+      <node id="2102">
+        <label>ComGLab/Source/SharedData.h</label>
+        <link refid="SharedData.h"/>
+        <childnode refid="2103" relation="include">
+        </childnode>
+        <childnode refid="2113" relation="include">
+        </childnode>
+      </node>
+      <node id="2111">
+        <label>ComGLab/Source/SoundSystem.cpp</label>
+        <link refid="SoundSystem_8cpp"/>
+      </node>
+      <node id="2109">
+        <label>ComGLab/Source/Particle.cpp</label>
+        <link refid="Particle_8cpp"/>
+      </node>
+      <node id="2103">
+        <label>ComGLab/Source/Application.h</label>
+        <link refid="Application_8h"/>
+        <childnode refid="2104" relation="include">
+        </childnode>
+        <childnode refid="2105" relation="include">
+        </childnode>
+        <childnode refid="2106" relation="include">
+        </childnode>
+        <childnode refid="2107" relation="include">
+        </childnode>
+        <childnode refid="2108" relation="include">
+        </childnode>
+        <childnode refid="2109" relation="include">
+        </childnode>
+        <childnode refid="2110" relation="include">
+        </childnode>
+        <childnode refid="2112" relation="include">
+        </childnode>
+      </node>
+      <node id="2112">
+        <label>ComGLab/Source/SP2_Scene.cpp</label>
+        <link refid="SP2__Scene_8cpp"/>
+      </node>
+      <node id="2104">
+        <label>ComGLab/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="2110">
+        <label>ComGLab/Source/SoundSystem.h</label>
+        <link refid="SoundSystem_8h"/>
+        <childnode refid="2111" relation="include">
+        </childnode>
+      </node>
+      <node id="2114">
+        <label>ComGLab/Source/SP2_Scene.h</label>
+        <link refid="SP2__Scene_8h"/>
+        <childnode refid="2104" relation="include">
+        </childnode>
+        <childnode refid="2112" relation="include">
+        </childnode>
+      </node>
+      <node id="2106">
+        <label>ComGLab/Source/Camera2.cpp</label>
+        <link refid="Camera2_8cpp"/>
+      </node>
+      <node id="2107">
+        <label>ComGLab/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="2113">
+        <label>ComGLab/Source/Camera3.h</label>
+        <link refid="Camera3_8h"/>
+        <childnode refid="2114" relation="include">
+        </childnode>
+        <childnode refid="2115" relation="include">
+        </childnode>
+        <childnode refid="2107" relation="include">
+        </childnode>
+      </node>
+      <node id="2115">
+        <label>ComGLab/Source/Particle.h</label>
+        <link refid="Particle_8h"/>
+        <childnode refid="2104" relation="include">
+        </childnode>
+        <childnode refid="2109" relation="include">
+        </childnode>
+      </node>
+      <node id="2108">
+        <label>ComGLab/Source/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="2105">
+        <label>ComGLab/Source/Camera.cpp</label>
+        <link refid="Camera_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//#ifndef<sp/>SHARED_DATA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>SHARED_DATA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//class<sp/>SharedData</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//public:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>SharedData<sp/>*GetInstance()<sp/>{<sp/>static<sp/>SharedData<sp/>data;<sp/>return<sp/>&amp;data;<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>SharedData();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>S_Width;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>S_Height;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//#endif</highlight></codeline>
+    </programlisting>
+    <location file="ComGLab/Source/SharedData.h"/>
+  </compounddef>
+</doxygen>

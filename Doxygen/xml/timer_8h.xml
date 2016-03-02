@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="timer_8h" kind="file" language="C++">
+    <compoundname>timer.h</compoundname>
+    <includes local="no">windows.h</includes>
+    <includedby refid="Application_8h" local="yes">ComGLab/Source/Application.h</includedby>
+    <includedby refid="timer_8cpp" local="yes">Common/Source/timer.cpp</includedby>
+    <incdepgraph>
+      <node id="2443">
+        <label>windows.h</label>
+      </node>
+      <node id="2442">
+        <label>Common/Source/timer.h</label>
+        <link refid="timer.h"/>
+        <childnode refid="2443" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2455">
+        <label>Common/Source/timer.cpp</label>
+        <link refid="timer_8cpp"/>
+      </node>
+      <node id="2453">
+        <label>ComGLab/Source/SoundSystem.cpp</label>
+        <link refid="SoundSystem_8cpp"/>
+      </node>
+      <node id="2451">
+        <label>ComGLab/Source/Particle.cpp</label>
+        <link refid="Particle_8cpp"/>
+      </node>
+      <node id="2444">
+        <label>Common/Source/timer.h</label>
+        <link refid="timer.h"/>
+        <childnode refid="2445" relation="include">
+        </childnode>
+        <childnode refid="2455" relation="include">
+        </childnode>
+      </node>
+      <node id="2445">
+        <label>ComGLab/Source/Application.h</label>
+        <link refid="Application_8h"/>
+        <childnode refid="2446" relation="include">
+        </childnode>
+        <childnode refid="2447" relation="include">
+        </childnode>
+        <childnode refid="2448" relation="include">
+        </childnode>
+        <childnode refid="2449" relation="include">
+        </childnode>
+        <childnode refid="2450" relation="include">
+        </childnode>
+        <childnode refid="2451" relation="include">
+        </childnode>
+        <childnode refid="2452" relation="include">
+        </childnode>
+        <childnode refid="2454" relation="include">
+        </childnode>
+      </node>
+      <node id="2454">
+        <label>ComGLab/Source/SP2_Scene.cpp</label>
+        <link refid="SP2__Scene_8cpp"/>
+      </node>
+      <node id="2446">
+        <label>ComGLab/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="2452">
+        <label>ComGLab/Source/SoundSystem.h</label>
+        <link refid="SoundSystem_8h"/>
+        <childnode refid="2453" relation="include">
+        </childnode>
+      </node>
+      <node id="2448">
+        <label>ComGLab/Source/Camera2.cpp</label>
+        <link refid="Camera2_8cpp"/>
+      </node>
+      <node id="2449">
+        <label>ComGLab/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="2450">
+        <label>ComGLab/Source/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="2447">
+        <label>ComGLab/Source/Camera.cpp</label>
+        <link refid="Camera_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classStopWatch" prot="public">StopWatch</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_TIMER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_TIMER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="classStopWatch" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classStopWatch" kindref="compound">StopWatch</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="11" refid="classStopWatch_1a102c4e3275d87798eca31673192c97ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>LARGE_INTEGER<sp/><ref refid="classStopWatch_1a102c4e3275d87798eca31673192c97ed" kindref="member">frequency</ref>;</highlight></codeline>
+<codeline lineno="12" refid="classStopWatch_1a1bf2210ebf10821c4b2eb849e5e98502" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>LARGE_INTEGER<sp/><ref refid="classStopWatch_1a1bf2210ebf10821c4b2eb849e5e98502" kindref="member">prevTime</ref>,<sp/><ref refid="classStopWatch_1a9ff6d4ddf698ba9cb82bdb0d27af72e8" kindref="member">currTime</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classStopWatch_1a2e61acbf46638eb3275cc8a7c1ea768d" kindref="member">LIToSecs</ref>(<sp/>LARGE_INTEGER<sp/>&amp;<sp/>L)<sp/>;</highlight></codeline>
+<codeline lineno="14" refid="classStopWatch_1afe4830ee290e9d152d6ce07b9ffc2642" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>UINT<sp/><sp/><sp/><sp/><sp/><ref refid="classStopWatch_1afe4830ee290e9d152d6ce07b9ffc2642" kindref="member">wTimerRes</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="classStopWatch_1ad715945060eeb23baa3c036ad19b1edb" kindref="member">StopWatch</ref>()<sp/>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="classStopWatch_1a223ec0da71dd0bc4f2b14d1af44bf20a" kindref="member">~StopWatch</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStopWatch_1a23301f735a2e3190435e39c9fd70cdf2" kindref="member">startTimer</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classStopWatch_1ac8be1626396d1a5ca414f74349d59eb2" kindref="member">getElapsedTime</ref>();<sp/></highlight><highlight class="comment">//<sp/>get<sp/>time<sp/>in<sp/>seconds<sp/>since<sp/>the<sp/>last<sp/>call<sp/>to<sp/>this<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStopWatch_1a2cd0856fc87a40038edfd66d784be8b4" kindref="member">waitUntil</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>time);<sp/><sp/></highlight><highlight class="comment">//<sp/>wait<sp/>until<sp/>this<sp/>time<sp/>in<sp/>milliseconds<sp/>has<sp/>passed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>_TIMER_H</highlight></codeline>
+    </programlisting>
+    <location file="Common/Source/timer.h"/>
+  </compounddef>
+</doxygen>

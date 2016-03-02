@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="dir_d1409ab5769302597d92f4634141ad4e" kind="dir">
+    <compoundname>irrKlang-1.5.0/plugins/ikpMP3/decoder</compoundname>
+    <innerfile refid="bits_8c">bits.c</innerfile>
+    <innerfile refid="internal_8h">internal.h</innerfile>
+    <innerfile refid="mpaudec_8c">mpaudec.c</innerfile>
+    <innerfile refid="mpaudec_8h">mpaudec.h</innerfile>
+    <innerfile refid="mpaudectab_8h">mpaudectab.h</innerfile>
+    <innerfile refid="mpegaudio_8h">mpegaudio.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/"/>
+  </compounddef>
+</doxygen>

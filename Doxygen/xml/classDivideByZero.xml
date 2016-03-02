@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classDivideByZero" kind="class" language="C++" prot="public">
+    <compoundname>DivideByZero</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">exception</basecompoundref>
+    <includes refid="MyMath_8h" local="no">MyMath.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classDivideByZero_1a4756aaefaf5e864c29a68ff24a8a8f10" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* DivideByZero::what</definition>
+        <argsstring>()</argsstring>
+        <name>what</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/MyMath.h" line="264" column="1" bodyfile="Common/Source/MyMath.h" bodystart="264" bodyend="264"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Exception for divide by zero. </para>    </briefdescription>
+    <detaileddescription>
+<para>Class <ref refid="classDivideByZero" kindref="compound">DivideByZero</ref>: </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="390">
+        <label>std::exception</label>
+      </node>
+      <node id="389">
+        <label>DivideByZero</label>
+        <link refid="classDivideByZero"/>
+        <childnode refid="390" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="392">
+        <label>std::exception</label>
+      </node>
+      <node id="391">
+        <label>DivideByZero</label>
+        <link refid="classDivideByZero"/>
+        <childnode refid="392" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Common/Source/MyMath.h" line="262" column="1" bodyfile="Common/Source/MyMath.h" bodystart="261" bodyend="265"/>
+    <listofallmembers>
+      <member refid="classDivideByZero_1a4756aaefaf5e864c29a68ff24a8a8f10" prot="public" virt="non-virtual"><scope>DivideByZero</scope><name>what</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

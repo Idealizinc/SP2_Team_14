@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="dir_c8c4f62bd7db86224cb487692f2a3c53" kind="dir">
+    <compoundname>Common/Source</compoundname>
+    <innerfile refid="MatrixStack_8cpp">MatrixStack.cpp</innerfile>
+    <innerfile refid="MatrixStack_8h">MatrixStack.h</innerfile>
+    <innerfile refid="Mtx44_8cpp">Mtx44.cpp</innerfile>
+    <innerfile refid="Mtx44_8h">Mtx44.h</innerfile>
+    <innerfile refid="MyMath_8h">MyMath.h</innerfile>
+    <innerfile refid="timer_8cpp">timer.cpp</innerfile>
+    <innerfile refid="timer_8h">timer.h</innerfile>
+    <innerfile refid="Vector3_8cpp">Vector3.cpp</innerfile>
+    <innerfile refid="Vector3_8h">Vector3.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Common/Source/"/>
+  </compounddef>
+</doxygen>

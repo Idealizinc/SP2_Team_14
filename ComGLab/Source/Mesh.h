@@ -1,3 +1,13 @@
+/****************************************************************************/
+/*!
+\file Mesh.h
+\author Wen Sheng Tang
+\par email: tang_wen_sheng\@nyp.edu.sg
+\brief
+Class to draw meshes
+*/
+/****************************************************************************/
+
 #ifndef MESH_H
 #define MESH_H
 

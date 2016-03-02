@@ -1,0 +1,5 @@
+<map id="irrklang::CIrrKlangAudioStreamMP3::QueueBuffer::getSize" name="irrklang::CIrrKlangAudioStreamMP3::QueueBuffer::getSize">
+<area shape="rect" id="node2" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#a85374ba5ed9178fa74dd256d59018ca0" title="tells the audio stream to read n audio frames into the specified buffer " alt="" coords="224,13,392,54"/>
+<area shape="rect" id="node3" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#ae615c171d074153463af08a11118ceaf" title="sets the position of the audio stream. " alt="" coords="440,13,604,54"/>
+<area shape="rect" id="node4" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#aa0525477376ae287275da88a17f4825d" title="irrklang::CIrrKlangAudio\lStreamMP3::CIrrKlangAudioStreamMP3" alt="" coords="652,13,907,54"/>
+</map>

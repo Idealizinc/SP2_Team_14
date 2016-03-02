@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="Camera3_8h" kind="file" language="C++">
+    <compoundname>Camera3.h</compoundname>
+    <includes refid="Camera_8h" local="yes">Camera.h</includes>
+    <includes refid="Boundary_8h" local="yes">Boundary.h</includes>
+    <includes refid="SharedData_8h" local="yes">SharedData.h</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="SP2__Scene_8h" local="yes">ComGLab/Source/SP2_Scene.h</includedby>
+    <includedby refid="Particle_8h" local="yes">ComGLab/Source/Particle.h</includedby>
+    <includedby refid="Camera3_8cpp" local="yes">ComGLab/Source/Camera3.cpp</includedby>
+    <incdepgraph>
+      <node id="1681">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="1682" relation="include">
+        </childnode>
+        <childnode refid="1683" relation="include">
+        </childnode>
+        <childnode refid="1684" relation="include">
+        </childnode>
+        <childnode refid="1685" relation="include">
+        </childnode>
+      </node>
+      <node id="1688">
+        <label>SharedData.h</label>
+        <link refid="SharedData_8h"/>
+      </node>
+      <node id="1679">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="1680" relation="include">
+        </childnode>
+      </node>
+      <node id="1682">
+        <label>cmath</label>
+      </node>
+      <node id="1680">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="1681" relation="include">
+        </childnode>
+        <childnode refid="1686" relation="include">
+        </childnode>
+      </node>
+      <node id="1683">
+        <label>exception</label>
+      </node>
+      <node id="1687">
+        <label>Boundary.h</label>
+        <link refid="Boundary_8h"/>
+      </node>
+      <node id="1684">
+        <label>ctime</label>
+      </node>
+      <node id="1689">
+        <label>vector</label>
+      </node>
+      <node id="1685">
+        <label>cstdlib</label>
+      </node>
+      <node id="1686">
+        <label>iostream</label>
+      </node>
+      <node id="1678">
+        <label>ComGLab/Source/Camera3.h</label>
+        <link refid="Camera3.h"/>
+        <childnode refid="1679" relation="include">
+        </childnode>
+        <childnode refid="1687" relation="include">
+        </childnode>
+        <childnode refid="1688" relation="include">
+        </childnode>
+        <childnode refid="1689" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1695">
+        <label>ComGLab/Source/Particle.cpp</label>
+        <link refid="Particle_8cpp"/>
+      </node>
+      <node id="1693">
+        <label>ComGLab/Source/SP2_Scene.cpp</label>
+        <link refid="SP2__Scene_8cpp"/>
+      </node>
+      <node id="1692">
+        <label>ComGLab/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="1691">
+        <label>ComGLab/Source/SP2_Scene.h</label>
+        <link refid="SP2__Scene_8h"/>
+        <childnode refid="1692" relation="include">
+        </childnode>
+        <childnode refid="1693" relation="include">
+        </childnode>
+      </node>
+      <node id="1696">
+        <label>ComGLab/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="1690">
+        <label>ComGLab/Source/Camera3.h</label>
+        <link refid="Camera3.h"/>
+        <childnode refid="1691" relation="include">
+        </childnode>
+        <childnode refid="1694" relation="include">
+        </childnode>
+        <childnode refid="1696" relation="include">
+        </childnode>
+      </node>
+      <node id="1694">
+        <label>ComGLab/Source/Particle.h</label>
+        <link refid="Particle_8h"/>
+        <childnode refid="1692" relation="include">
+        </childnode>
+        <childnode refid="1695" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classCamera3" prot="public">Camera3</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="Camera3_8h_1a2cbda9a4727e1cdbcae5c646d7fb0911" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int S_Width</definition>
+        <argsstring></argsstring>
+        <name>S_Width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Camera3.h" line="9" column="1" bodyfile="ComGLab/Source/Application.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="Camera3_8h_1a9cd21b84bf993de559113a32edfc8e93" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int S_Height</definition>
+        <argsstring></argsstring>
+        <name>S_Height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Camera3.h" line="9" column="1" bodyfile="ComGLab/Source/Application.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CAMERA_3_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAMERA_3_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Camera_8h" kindref="compound">Camera.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Boundary_8h" kindref="compound">Boundary.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SharedData_8h" kindref="compound">SharedData.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="Camera3_8h_1a2cbda9a4727e1cdbcae5c646d7fb0911" kindref="member">S_Width</ref>,<sp/><ref refid="Camera3_8h_1a9cd21b84bf993de559113a32edfc8e93" kindref="member">S_Height</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="classCamera3" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classCamera3" kindref="compound">Camera3</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classCamera" kindref="compound">Camera</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14" refid="classCamera3_1a0befffc59212bf28cffddc24f2b31e67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classCamera3_1a0befffc59212bf28cffddc24f2b31e67" kindref="member">defaultPosition</ref>;</highlight></codeline>
+<codeline lineno="15" refid="classCamera3_1a0c65c81ec5c614828b140c8125cf79da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classCamera3_1a0c65c81ec5c614828b140c8125cf79da" kindref="member">defaultTarget</ref>;</highlight></codeline>
+<codeline lineno="16" refid="classCamera3_1a089366725666df811a969aca24168cb6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classCamera3_1a089366725666df811a969aca24168cb6" kindref="member">defaultUp</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classCamera3_1aef7409cbc80ffd21a658c7055653b0ab" kindref="member">Camera3</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classCamera3_1a386fa089e2507622ef79675cd95efd69" kindref="member">~Camera3</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a1029fbe574de09b19ff8908748031289" kindref="member">Init</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/>pos,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/><ref refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" kindref="member">target</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/><ref refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" kindref="member">up</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mass<sp/>=<sp/>1);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1acc5d4103826cda6d20b80a0d35eacdbe" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a4b10106bcd89f21e3cf3e39f04d8c1cb" kindref="member">Reset</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classCamera3_1adba0ccda28b9537ec3c3f8ee23048abd" kindref="member">getCameraPosition</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classCamera3_1a7c74b73c43b5cce034b6c6ea8b072e58" kindref="member">getLookVector</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a7d2a3918d6b3c07720b01cf363aa609f" kindref="member">isOutofBounds</ref>();</highlight></codeline>
+<codeline lineno="29" refid="classCamera3_1acbb7082402f598240687c5f42a2df6e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1acbb7082402f598240687c5f42a2df6e0" kindref="member">teleCheck</ref>;</highlight></codeline>
+<codeline lineno="30" refid="classCamera3_1a52a7399c48e0c1f12f3f1be725d57533" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a52a7399c48e0c1f12f3f1be725d57533" kindref="member">leftGateA</ref>;</highlight></codeline>
+<codeline lineno="31" refid="classCamera3_1ae6b5ba9a2dc9b1ff516a3d6a761e2a25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1ae6b5ba9a2dc9b1ff516a3d6a761e2a25" kindref="member">leftGateB</ref>;</highlight></codeline>
+<codeline lineno="32" refid="classCamera3_1a2c8acf933bbad0269a0f02d77452858f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a2c8acf933bbad0269a0f02d77452858f" kindref="member">rightGateA</ref>;</highlight></codeline>
+<codeline lineno="33" refid="classCamera3_1ad015293d00c2f480182efa6bdc9278e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1ad015293d00c2f480182efa6bdc9278e7" kindref="member">rightGateB</ref>;</highlight></codeline>
+<codeline lineno="34" refid="classCamera3_1a44c641615b159b920b9c1d0d13cb89d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a44c641615b159b920b9c1d0d13cb89d1" kindref="member">frontGateA</ref>;</highlight></codeline>
+<codeline lineno="35" refid="classCamera3_1a0894e7ceadc9ec660bed5fc593f9d66d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a0894e7ceadc9ec660bed5fc593f9d66d" kindref="member">frontGateB</ref>;</highlight></codeline>
+<codeline lineno="36" refid="classCamera3_1a9c9efad8c86215c4ff0ceb259cbbfe49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a9c9efad8c86215c4ff0ceb259cbbfe49" kindref="member">backGateA</ref>;</highlight></codeline>
+<codeline lineno="37" refid="classCamera3_1a20f1e35b2c723a0d96146cd6b17a56c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a20f1e35b2c723a0d96146cd6b17a56c0" kindref="member">backGateB</ref>;</highlight></codeline>
+<codeline lineno="38" refid="classCamera3_1aa0a5e55c11d9876da86feb12cd87d7b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1aa0a5e55c11d9876da86feb12cd87d7b5" kindref="member">checkLeftGate</ref>;</highlight></codeline>
+<codeline lineno="39" refid="classCamera3_1a7167a397883d5b5f718b966381b46737" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a7167a397883d5b5f718b966381b46737" kindref="member">openLeftGate</ref>;</highlight></codeline>
+<codeline lineno="40" refid="classCamera3_1afe94cf263334ff726a1cc3b50f772055" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1afe94cf263334ff726a1cc3b50f772055" kindref="member">checkRightGate</ref>;</highlight></codeline>
+<codeline lineno="41" refid="classCamera3_1ad740bf627f7bb426ce6a42e4ac79f336" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1ad740bf627f7bb426ce6a42e4ac79f336" kindref="member">openRightGate</ref>;</highlight></codeline>
+<codeline lineno="42" refid="classCamera3_1a5ab543cdd9a27455ab7dac4a5f7133ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a5ab543cdd9a27455ab7dac4a5f7133ba" kindref="member">checkFrontGate</ref>;</highlight></codeline>
+<codeline lineno="43" refid="classCamera3_1a789eca21613d94e83fd7226f56cd49f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a789eca21613d94e83fd7226f56cd49f5" kindref="member">openFrontGate</ref>;</highlight></codeline>
+<codeline lineno="44" refid="classCamera3_1a9541289fd51bd86310c8f6bb013a8a76" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a9541289fd51bd86310c8f6bb013a8a76" kindref="member">checkBackGate</ref>;</highlight></codeline>
+<codeline lineno="45" refid="classCamera3_1a962db8de60bcc4f4d7a7d069c4e5fe47" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a962db8de60bcc4f4d7a7d069c4e5fe47" kindref="member">openBackGate</ref>;</highlight></codeline>
+<codeline lineno="46" refid="classCamera3_1a250c914f51603c71358ab8997a9630a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a250c914f51603c71358ab8997a9630a5" kindref="member">shipCheck</ref>;</highlight></codeline>
+<codeline lineno="47" refid="classCamera3_1a94de165cf51cdd09157a26caa2d8b875" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a94de165cf51cdd09157a26caa2d8b875" kindref="member">coreCheck</ref>;</highlight></codeline>
+<codeline lineno="48" refid="classCamera3_1a884946b9bc6533107d85a2c793478faf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a884946b9bc6533107d85a2c793478faf" kindref="member">spaceModeOn</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49" refid="classCamera3_1a5b68228820f887e55da2a5bd78e48c7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a418f7d015b76a1c31dd13832941bb733" kindref="member">CameraXrotation</ref>,<sp/><ref refid="classCamera3_1a3326292fad00907ec008f9df3273612f" kindref="member">CameraYrotation</ref>,<sp/><ref refid="classCamera3_1ae3796c46a7a058910026527fc2553742" kindref="member">maxCameraXrotation</ref>,<sp/><ref refid="classCamera3_1a6394321c76487e1b3423f8dc8e0b3ca5" kindref="member">minCameraXrotation</ref>,<sp/><ref refid="classCamera3_1a3ffb51e02580c6f3d5355b9373be4751" kindref="member">maxCameraYrotation</ref>,<sp/><ref refid="classCamera3_1a5b68228820f887e55da2a5bd78e48c7e" kindref="member">minCameraYrotation</ref>;</highlight></codeline>
+<codeline lineno="50" refid="classCamera3_1a0691252989d71a5f192c5ca96fe22a5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a0691252989d71a5f192c5ca96fe22a5d" kindref="member">baseWalkSpeed</ref><sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="51" refid="classCamera3_1ab20b53f64c0d27dd801f94f211aa7041" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1ab20b53f64c0d27dd801f94f211aa7041" kindref="member">CanMoveCamera</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54" refid="classCamera3_1ab996f4fd3740bc6d9bc3c404fa0cab3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classCamera3_1ab996f4fd3740bc6d9bc3c404fa0cab3f" kindref="member">view</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a81897b566fc3a2142c40276eb7c6a57b" kindref="member">rotateCamera</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1ae8bf411b15978eaeb425b6fe169a0f05" kindref="member">initBoundVec</ref>();</highlight></codeline>
+<codeline lineno="58" refid="classCamera3_1a774d16fe67a7056678206fd4b1de8093" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a774d16fe67a7056678206fd4b1de8093" kindref="member">rotate_Sensitivity</ref><sp/>=<sp/><ref refid="Camera3_8h_1a2cbda9a4727e1cdbcae5c646d7fb0911" kindref="member">S_Width</ref><sp/>/<sp/><ref refid="Camera3_8h_1a9cd21b84bf993de559113a32edfc8e93" kindref="member">S_Height</ref><sp/>*<sp/>2;</highlight></codeline>
+<codeline lineno="59" refid="classCamera3_1a18bd7a368cce40c055d0900d49cb45b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a18bd7a368cce40c055d0900d49cb45b7" kindref="member">walkingSpeed</ref><sp/>=<sp/>10.f;</highlight></codeline>
+<codeline lineno="60" refid="classCamera3_1a1d5082c7e3c5607815bd3141e1fa854a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a1d5082c7e3c5607815bd3141e1fa854a" kindref="member">gravity</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a72d040ce3726a7d6439efa15734105a5" kindref="member">cameraMovement</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="63" refid="classCamera3_1a638ade70ca3f2c622937481a16a269cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a84c8561767594b40071ca8c98b66b1ad" kindref="member">boxX</ref>,<sp/><ref refid="classCamera3_1a638ade70ca3f2c622937481a16a269cf" kindref="member">boxZ</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a650f17baf11f73010354cc6c75803d88" kindref="member">boundsCheck2D</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>z,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>posX,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>posZ);</highlight></codeline>
+<codeline lineno="66" refid="classCamera3_1aa89c9e3a985f1d0aeac7bc6221d2cd5e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1aa89c9e3a985f1d0aeac7bc6221d2cd5e" kindref="member">outOfBounds</ref>;</highlight></codeline>
+<codeline lineno="67" refid="classCamera3_1a3b067d5d1f9c6240db03ceeb8162acc2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a3b067d5d1f9c6240db03ceeb8162acc2" kindref="member">cameraMass</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a99440cc4eb40bfc3bbad15bfe08c8a55" kindref="member">cameraMovement2</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classCamera3_1a8f99c720614086ef0982ead1ce382fc2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a8f99c720614086ef0982ead1ce382fc2" kindref="member">walkVal</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classCamera3_1afd2b25a9ffc10ab135792fab32927a80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Boundary&gt;<sp/><ref refid="classCamera3_1afd2b25a9ffc10ab135792fab32927a80" kindref="member">BoundVec</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75" refid="classCamera3_1ac3ba0d08ac946a18c230a8bc85b61de4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1ac3ba0d08ac946a18c230a8bc85b61de4" kindref="member">velocityY</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classCamera3_1a860915800b66f241df54687f4dfdb447" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a860915800b66f241df54687f4dfdb447" kindref="member">jumpForce</ref>;</highlight></codeline>
+<codeline lineno="78" refid="classCamera3_1ac4205181326d71745c659b061e0e8f63" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1ac4205181326d71745c659b061e0e8f63" kindref="member">groundlevel</ref>;</highlight></codeline>
+<codeline lineno="79" refid="classCamera3_1a8a0208f71be89d653cc621476bbab1d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a8a0208f71be89d653cc621476bbab1d0" kindref="member">jumpImpulse</ref>;</highlight></codeline>
+<codeline lineno="80" refid="classCamera3_1a35f3cc2ef97922d25f891794d8b5d82e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a35f3cc2ef97922d25f891794d8b5d82e" kindref="member">jumpSpeed</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classCamera3_1a0b48af5b2884a9dad7d593073043fcb2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a0b48af5b2884a9dad7d593073043fcb2" kindref="member">isGravityOn</ref>;</highlight></codeline>
+<codeline lineno="83" refid="classCamera3_1abc5b56e53d72f5d9d8e6f942f3e777c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1abc5b56e53d72f5d9d8e6f942f3e777c3" kindref="member">isMaxJump</ref>;</highlight></codeline>
+<codeline lineno="84" refid="classCamera3_1a356c1fa35b9c14f99d8ba76f1a0be62f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a356c1fa35b9c14f99d8ba76f1a0be62f" kindref="member">isJump</ref>;</highlight></codeline>
+<codeline lineno="85" refid="classCamera3_1a2d90be5bdac5e4029548619f79ac338b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a2d90be5bdac5e4029548619f79ac338b" kindref="member">maxJump</ref>;</highlight></codeline>
+<codeline lineno="86" refid="classCamera3_1a005e03a50a4eb4982276d9c3400b43c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a005e03a50a4eb4982276d9c3400b43c5" kindref="member">maxJump2</ref>;</highlight></codeline>
+<codeline lineno="87" refid="classCamera3_1a58a488e3d286b96969d0e40a8f3acc4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1a58a488e3d286b96969d0e40a8f3acc4d" kindref="member">level</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCamera3_1ac5d3985b326b8334208c9a12741c5dc3" kindref="member">jump</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>level);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Bounds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Refer<sp/>to<sp/>blueprints<sp/>for<sp/>bound<sp/>location</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93" refid="classCamera3_1a9bc386c725d9c11d46449a3fc55df969" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a9bc386c725d9c11d46449a3fc55df969" kindref="member">northwall1</ref>;</highlight></codeline>
+<codeline lineno="94" refid="classCamera3_1ac646127d270a43903f6893b0e3872f70" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1ac646127d270a43903f6893b0e3872f70" kindref="member">southwall1</ref>;</highlight></codeline>
+<codeline lineno="95" refid="classCamera3_1ad75e1dad363ff0a9ce5a6a3991914d7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1ad75e1dad363ff0a9ce5a6a3991914d7a" kindref="member">eastwall1</ref>;</highlight></codeline>
+<codeline lineno="96" refid="classCamera3_1a7f6dad771c6b7b236f766409d0a90b2b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a7f6dad771c6b7b236f766409d0a90b2b" kindref="member">westwall1</ref>;</highlight></codeline>
+<codeline lineno="97" refid="classCamera3_1a8a0e647c3076f2783b2d8121c4a624d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a8a0e647c3076f2783b2d8121c4a624d0" kindref="member">northwall2</ref>;</highlight></codeline>
+<codeline lineno="98" refid="classCamera3_1af62ccf803afa51b1dab268ee5e744a2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1af62ccf803afa51b1dab268ee5e744a2e" kindref="member">southwall2</ref>;</highlight></codeline>
+<codeline lineno="99" refid="classCamera3_1aad30a92153736736da10cc4bb16e24ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1aad30a92153736736da10cc4bb16e24ef" kindref="member">eastwall2</ref>;</highlight></codeline>
+<codeline lineno="100" refid="classCamera3_1a5e4e6761d50764d4fcaaa8328b0b8c27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a5e4e6761d50764d4fcaaa8328b0b8c27" kindref="member">westwall2</ref>;</highlight></codeline>
+<codeline lineno="101" refid="classCamera3_1af6716cac278c75ebf71f0fe823780546" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1af6716cac278c75ebf71f0fe823780546" kindref="member">corebase</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103" refid="classCamera3_1a874745a6e1b0485bf4c9655a4e943d88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a874745a6e1b0485bf4c9655a4e943d88" kindref="member">WorldBot</ref>;</highlight></codeline>
+<codeline lineno="104" refid="classCamera3_1a56518d2318988fd6055125a6a028b7c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a56518d2318988fd6055125a6a028b7c1" kindref="member">WorldTop</ref>;</highlight></codeline>
+<codeline lineno="105" refid="classCamera3_1a1319937d2bcedf390e498f863546d10c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a1319937d2bcedf390e498f863546d10c" kindref="member">WorldLeft</ref>;</highlight></codeline>
+<codeline lineno="106" refid="classCamera3_1a80e2327563adff38badbe450d16cdf48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a80e2327563adff38badbe450d16cdf48" kindref="member">WorldRight</ref>;</highlight></codeline>
+<codeline lineno="107" refid="classCamera3_1a685a09ee5133a7377a457dcf6b66a762" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a685a09ee5133a7377a457dcf6b66a762" kindref="member">WorldFront</ref>;</highlight></codeline>
+<codeline lineno="108" refid="classCamera3_1a5ac1b0001bd8c2c14391255e8183b5f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a5ac1b0001bd8c2c14391255e8183b5f1" kindref="member">WorldBack</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="classCamera3_1a869455076ade19acdb334251ded18c17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a869455076ade19acdb334251ded18c17" kindref="member">Floor2Bot</ref>;</highlight></codeline>
+<codeline lineno="111" refid="classCamera3_1ae19bef218e5bd6ce94c092daf3799b5a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1ae19bef218e5bd6ce94c092daf3799b5a" kindref="member">Floor2Top</ref>;</highlight></codeline>
+<codeline lineno="112" refid="classCamera3_1a632e8402535483b0f4641b0132248316" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a632e8402535483b0f4641b0132248316" kindref="member">Floor2WestLeft</ref>;</highlight></codeline>
+<codeline lineno="113" refid="classCamera3_1a85b11909591c38717cc4b223dfd8786f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a85b11909591c38717cc4b223dfd8786f" kindref="member">Floor2WestRight</ref>;</highlight></codeline>
+<codeline lineno="114" refid="classCamera3_1ac5b1a4a21c934796ffef359904260204" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1ac5b1a4a21c934796ffef359904260204" kindref="member">Floor2EastLeft</ref>;</highlight></codeline>
+<codeline lineno="115" refid="classCamera3_1a95f5e69f4a14e51e1862fe345894f4f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a95f5e69f4a14e51e1862fe345894f4f9" kindref="member">Floor2EastRight</ref>;</highlight></codeline>
+<codeline lineno="116" refid="classCamera3_1aef7b13cbc1df889db8ed2e8b4bf4f119" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1aef7b13cbc1df889db8ed2e8b4bf4f119" kindref="member">Floor2FrontLeft</ref>;</highlight></codeline>
+<codeline lineno="117" refid="classCamera3_1a8721445455923feb9c00fa258a866a88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a8721445455923feb9c00fa258a866a88" kindref="member">Floor2FrontRight</ref>;</highlight></codeline>
+<codeline lineno="118" refid="classCamera3_1a5df5c8129b71660246a06bec62c9ddcb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a5df5c8129b71660246a06bec62c9ddcb" kindref="member">Floor2BackLeft</ref>;</highlight></codeline>
+<codeline lineno="119" refid="classCamera3_1accbf0bf536d94ba4070d04b09384a0a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1accbf0bf536d94ba4070d04b09384a0a0" kindref="member">Floor2BackRight</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="classCamera3_1aaf121294b69331e42e14d430ea28df04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1aaf121294b69331e42e14d430ea28df04" kindref="member">Base</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="classCamera3_1a4c822ed9b9c1a0654c7eb6b9663c49e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a4c822ed9b9c1a0654c7eb6b9663c49e1" kindref="member">leftRock1</ref>;</highlight></codeline>
+<codeline lineno="124" refid="classCamera3_1ae049107cc1130cc52017b00497cc2768" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1ae049107cc1130cc52017b00497cc2768" kindref="member">leftRock2</ref>;</highlight></codeline>
+<codeline lineno="125" refid="classCamera3_1a1eed06c7eb1865a88229c8412737fc8a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a1eed06c7eb1865a88229c8412737fc8a" kindref="member">leftRock3</ref>;</highlight></codeline>
+<codeline lineno="126" refid="classCamera3_1a531a864ff30cebac055c89289c08717e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a531a864ff30cebac055c89289c08717e" kindref="member">frontRock1</ref>;</highlight></codeline>
+<codeline lineno="127" refid="classCamera3_1ab712b4728b8bb62f88136d6a4c7444ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1ab712b4728b8bb62f88136d6a4c7444ff" kindref="member">frontRock2</ref>;</highlight></codeline>
+<codeline lineno="128" refid="classCamera3_1a84233e91a0d79faac1be1c7ed4de9ae5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a84233e91a0d79faac1be1c7ed4de9ae5" kindref="member">rightRock1</ref>;</highlight></codeline>
+<codeline lineno="129" refid="classCamera3_1a791602f829ea1d317af5e083a065adfe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a791602f829ea1d317af5e083a065adfe" kindref="member">rightRock2</ref>;</highlight></codeline>
+<codeline lineno="130" refid="classCamera3_1af3b4e63f01414c8369ceb127a21e388f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1af3b4e63f01414c8369ceb127a21e388f" kindref="member">backRock1</ref>;</highlight></codeline>
+<codeline lineno="131" refid="classCamera3_1a234890cbd92f026d069e8615da08eff8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a234890cbd92f026d069e8615da08eff8" kindref="member">backRock2</ref>;</highlight></codeline>
+<codeline lineno="132" refid="classCamera3_1ad18b98138b5311fc34b754b14f49aaa1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1ad18b98138b5311fc34b754b14f49aaa1" kindref="member">backRock3</ref>;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Interactive</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="classCamera3_1afcdf9dc8513b2d10dc8b40f6374e1f24" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1afcdf9dc8513b2d10dc8b40f6374e1f24" kindref="member">TeleporterF1NW</ref>;</highlight></codeline>
+<codeline lineno="136" refid="classCamera3_1a5be994dfc25d087ca0b04e240f11d58a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a5be994dfc25d087ca0b04e240f11d58a" kindref="member">TeleporterF1NE</ref>;</highlight></codeline>
+<codeline lineno="137" refid="classCamera3_1ad096765d17faf6a5530622651617a01e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1ad096765d17faf6a5530622651617a01e" kindref="member">TeleporterF1SW</ref>;</highlight></codeline>
+<codeline lineno="138" refid="classCamera3_1a6a679713785d07667bed3d556d4ceccd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a6a679713785d07667bed3d556d4ceccd" kindref="member">TeleporterF1SE</ref>;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="classCamera3_1a481b0a936ce86dad43b1ef13269b9bc7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a481b0a936ce86dad43b1ef13269b9bc7" kindref="member">leftGate</ref>;</highlight></codeline>
+<codeline lineno="141" refid="classCamera3_1aedbf8e5e0811a398ebe1c007b5d62c23" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1aedbf8e5e0811a398ebe1c007b5d62c23" kindref="member">rightGate</ref>;</highlight></codeline>
+<codeline lineno="142" refid="classCamera3_1a65748b03cf174ca0f92f719323f7f1f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a65748b03cf174ca0f92f719323f7f1f0" kindref="member">frontGate</ref>;</highlight></codeline>
+<codeline lineno="143" refid="classCamera3_1aea8d0a553db2ff7e5c2d7bbfe4f4fb2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1aea8d0a553db2ff7e5c2d7bbfe4f4fb2a" kindref="member">backGate</ref>;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="145" refid="classCamera3_1a67c1d340fda62af248cf260ed09816da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a67c1d340fda62af248cf260ed09816da" kindref="member">PlayerShip</ref>;</highlight></codeline>
+<codeline lineno="146" refid="classCamera3_1aec997324c2a765f918bcf34234fc2b20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1aec997324c2a765f918bcf34234fc2b20" kindref="member">ShipCheck</ref>;</highlight></codeline>
+<codeline lineno="147" refid="classCamera3_1a1b8b200fb4ed4f1da8fe8eed0c14adcb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref><sp/><ref refid="classCamera3_1a1b8b200fb4ed4f1da8fe8eed0c14adcb" kindref="member">CoreCheck</ref>;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="ComGLab/Source/Camera3.h"/>
+  </compounddef>
+</doxygen>

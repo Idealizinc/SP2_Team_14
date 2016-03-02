@@ -1,0 +1,5 @@
+<map id="MS::Translate" name="MS::Translate">
+<area shape="rect" id="node2" href="$classMtx44.html#a0cc88cc5c648da14effba480c4d2ac70" title="Set this matrix to a translation matrix with translation of (x, y, z) " alt="" coords="156,5,319,32"/>
+<area shape="rect" id="node3" href="$classMtx44.html#a3ac8a0afd66412e15e4246474b893da2" title="Set the matrix to an identity matrix (1&#39;s along the diagonal) " alt="" coords="367,5,509,32"/>
+<area shape="rect" id="node4" href="$classMtx44.html#a3aea63c08759ac98b8a4f23fdc0d6a28" title="Set this matrix to zero. " alt="" coords="557,5,683,32"/>
+</map>

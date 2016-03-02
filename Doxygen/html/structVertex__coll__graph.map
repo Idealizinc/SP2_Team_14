@@ -1,0 +1,6 @@
+<map id="Vertex" name="Vertex">
+<area shape="rect" id="node2" href="$structTexCoord.html" title="TexCoord" alt="" coords="5,124,83,151"/>
+<area shape="rect" id="node4" href="$structVector3.html" title="Defines a 3D vector and its methods. " alt="" coords="107,124,173,151"/>
+<area shape="rect" id="node5" href="$structPosition.html" title="Position" alt="" coords="197,124,267,151"/>
+<area shape="rect" id="node6" href="$structColor.html" title="Color" alt="" coords="291,124,343,151"/>
+</map>

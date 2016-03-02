@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="RobotManager_8h" kind="file" language="C++">
+    <compoundname>RobotManager.h</compoundname>
+    <includes local="no">list</includes>
+    <includes refid="Robot_8h" local="yes">Robot.h</includes>
+    <includedby refid="SP2__Scene_8h" local="yes">ComGLab/Source/SP2_Scene.h</includedby>
+    <includedby refid="RobotManager_8cpp" local="yes">ComGLab/Source/RobotManager.cpp</includedby>
+    <incdepgraph>
+      <node id="2059">
+        <label>list</label>
+      </node>
+      <node id="2062">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="2063" relation="include">
+        </childnode>
+        <childnode refid="2064" relation="include">
+        </childnode>
+        <childnode refid="2065" relation="include">
+        </childnode>
+        <childnode refid="2066" relation="include">
+        </childnode>
+      </node>
+      <node id="2069">
+        <label>RayCast.h</label>
+        <link refid="Raycast_8h"/>
+        <childnode refid="2061" relation="include">
+        </childnode>
+        <childnode refid="2070" relation="include">
+        </childnode>
+      </node>
+      <node id="2068">
+        <label>WeaponSystem.h</label>
+        <link refid="WeaponSystem_8h"/>
+        <childnode refid="2059" relation="include">
+        </childnode>
+        <childnode refid="2069" relation="include">
+        </childnode>
+      </node>
+      <node id="2063">
+        <label>cmath</label>
+      </node>
+      <node id="2061">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="2062" relation="include">
+        </childnode>
+        <childnode refid="2067" relation="include">
+        </childnode>
+      </node>
+      <node id="2064">
+        <label>exception</label>
+      </node>
+      <node id="2070">
+        <label>Boundary.h</label>
+        <link refid="Boundary_8h"/>
+      </node>
+      <node id="2065">
+        <label>ctime</label>
+      </node>
+      <node id="2071">
+        <label>math.h</label>
+      </node>
+      <node id="2066">
+        <label>cstdlib</label>
+      </node>
+      <node id="2067">
+        <label>iostream</label>
+      </node>
+      <node id="2060">
+        <label>Robot.h</label>
+        <link refid="Robot_8h"/>
+        <childnode refid="2061" relation="include">
+        </childnode>
+        <childnode refid="2068" relation="include">
+        </childnode>
+        <childnode refid="2070" relation="include">
+        </childnode>
+        <childnode refid="2071" relation="include">
+        </childnode>
+        <childnode refid="2063" relation="include">
+        </childnode>
+      </node>
+      <node id="2058">
+        <label>ComGLab/Source/RobotManager.h</label>
+        <link refid="RobotManager.h"/>
+        <childnode refid="2059" relation="include">
+        </childnode>
+        <childnode refid="2060" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2075">
+        <label>ComGLab/Source/SP2_Scene.cpp</label>
+        <link refid="SP2__Scene_8cpp"/>
+      </node>
+      <node id="2074">
+        <label>ComGLab/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="2073">
+        <label>ComGLab/Source/SP2_Scene.h</label>
+        <link refid="SP2__Scene_8h"/>
+        <childnode refid="2074" relation="include">
+        </childnode>
+        <childnode refid="2075" relation="include">
+        </childnode>
+      </node>
+      <node id="2076">
+        <label>ComGLab/Source/RobotManager.cpp</label>
+        <link refid="RobotManager_8cpp"/>
+      </node>
+      <node id="2072">
+        <label>ComGLab/Source/RobotManager.h</label>
+        <link refid="RobotManager.h"/>
+        <childnode refid="2073" relation="include">
+        </childnode>
+        <childnode refid="2076" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classRobotManager" prot="public">RobotManager</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_ROBOTMANAGER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_ROBOTMANAGER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Robot_8h" kindref="compound">Robot.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="classRobotManager" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classRobotManager" kindref="compound">RobotManager</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10" refid="classRobotManager_1a49bfcd25a4c00c7788ea7fe9882156e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRobotManager_1a49bfcd25a4c00c7788ea7fe9882156e2" kindref="member">RobotManager</ref>(){};</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRobotManager_1ad0c62becf9a947a3679995039074c2bb" kindref="member">~RobotManager</ref>();</highlight></codeline>
+<codeline lineno="12" refid="classRobotManager_1a9c47f42fad00110c31689477d757e647" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::list&lt;Robot&gt;<sp/><ref refid="classRobotManager_1a9c47f42fad00110c31689477d757e647" kindref="member">RobotList</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRobotManager_1a621e32721f045db98dc13b288aaeb09f" kindref="member">IncrementPosition</ref>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classRobotManager_1a8a32a49f06bdbc8dc274ca02ae03706b" kindref="member">GetDist</ref>(<ref refid="classRobot" kindref="compound">Robot</ref><sp/>Bot);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRobotManager_1a836b4959e675f78e146bba9444ac1834" kindref="member">ClearList</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRobotManager_1affe43358be46aeb70d8cc616f09ecce2" kindref="member">CleanUp</ref>();</highlight></codeline>
+<codeline lineno="17" refid="classRobotManager_1a04fbfa8ef3b45ec3f12ad5ebdb581c4a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="classRobotManager_1a04fbfa8ef3b45ec3f12ad5ebdb581c4a" kindref="member">CurrentRobotCount</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20" refid="classRobotManager_1a7db81d08f5973976a4090ff2571e3d78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="classRobotManager_1a7db81d08f5973976a4090ff2571e3d78" kindref="member">MaxRobotCount</ref><sp/>=<sp/>50;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//unsigned<sp/>short<sp/>MaxDist<sp/>=<sp/>10000;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="ComGLab/Source/RobotManager.h"/>
+  </compounddef>
+</doxygen>

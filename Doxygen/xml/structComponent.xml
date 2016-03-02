@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structComponent" kind="struct" language="C++" prot="public">
+    <compoundname>Component</compoundname>
+    <includes refid="Material_8h" local="no">Material.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structComponent_1a490db57cde183ef5a233b6ff3386ef6f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Component::r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Material.h" line="6" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="6" bodyend="-1"/>
+        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">Particle::RenderMesh</referencedby>
+        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="629" endline="670">SP2_Scene::RenderMesh</referencedby>
+        <referencedby refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="8" endline="8">Set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structComponent_1a6cf7bfac62ac8aa4a8aa8c3f847428d8" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Component::g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Material.h" line="6" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="6" bodyend="-1"/>
+        <referencedby refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="8" endline="8">Set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structComponent_1abd55184abe2aaf269b38f5913721821c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Component::b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Material.h" line="6" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="6" bodyend="-1"/>
+        <referencedby refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="8" endline="8">Set</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structComponent_1ae110a300786be861f7ea647ef77d9d18" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Component::Component</definition>
+        <argsstring>(float r=0.1f, float g=0.1f, float b=0.1f)</argsstring>
+        <name>Component</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+          <defval>0.1f</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+          <defval>0.1f</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+          <defval>0.1f</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Material.h" line="7" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="7" bodyend="7"/>
+        <references refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="8" endline="8">Set</references>
+      </memberdef>
+      <memberdef kind="function" id="structComponent_1a85f599b839327709953f0115dc5dfd49" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Component::Set</definition>
+        <argsstring>(float r, float g, float b)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Material.h" line="8" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="8" bodyend="8"/>
+        <references refid="structComponent_1abd55184abe2aaf269b38f5913721821c" compoundref="Material_8h" startline="6">b</references>
+        <references refid="structComponent_1a6cf7bfac62ac8aa4a8aa8c3f847428d8" compoundref="Material_8h" startline="6">g</references>
+        <references refid="structComponent_1a490db57cde183ef5a233b6ff3386ef6f" compoundref="Material_8h" startline="6">r</references>
+        <referencedby refid="structComponent_1ae110a300786be861f7ea647ef77d9d18" compoundref="Material_8h" startline="7" endline="7">Component</referencedby>
+        <referencedby refid="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" compoundref="Material_8cpp" startline="3" endline="9">Material::Material</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="387">
+        <label>Component</label>
+        <link refid="structComponent"/>
+        <childnode refid="388" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="388">
+        <label>float</label>
+      </node>
+    </collaborationgraph>
+    <location file="ComGLab/Source/Material.h" line="5" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="4" bodyend="9"/>
+    <listofallmembers>
+      <member refid="structComponent_1abd55184abe2aaf269b38f5913721821c" prot="public" virt="non-virtual"><scope>Component</scope><name>b</name></member>
+      <member refid="structComponent_1ae110a300786be861f7ea647ef77d9d18" prot="public" virt="non-virtual"><scope>Component</scope><name>Component</name></member>
+      <member refid="structComponent_1a6cf7bfac62ac8aa4a8aa8c3f847428d8" prot="public" virt="non-virtual"><scope>Component</scope><name>g</name></member>
+      <member refid="structComponent_1a490db57cde183ef5a233b6ff3386ef6f" prot="public" virt="non-virtual"><scope>Component</scope><name>r</name></member>
+      <member refid="structComponent_1a85f599b839327709953f0115dc5dfd49" prot="public" virt="non-virtual"><scope>Component</scope><name>Set</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

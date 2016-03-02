@@ -1,0 +1,562 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>irrKlang 1.5.0 API documentation</title>
+    <detaileddescription>
+<para><image type="html" name="logobig.png"></image>
+</para><sect1 id="index_1contents">
+<title>Contents</title>
+<para>General:<linebreak/>
+ <ref refid="index_1intro" kindref="member">Introduction</ref> <linebreak/>
+ <ref refid="index_1features" kindref="member">Features of irrKlang</ref> <linebreak/>
+ <ref refid="index_1links" kindref="member">Links into the API documentation</ref> <linebreak/>
+ <ref refid="index_1tipsandtricks" kindref="member">Tips and Tricks</ref> <linebreak/>
+ <linebreak/>
+ Programming irrKlang:<linebreak/>
+ <ref refid="index_1concept" kindref="member">Starting up the Engine</ref> <linebreak/>
+ <ref refid="index_1playingSounds" kindref="member">Playing Sounds</ref> <linebreak/>
+ <ref refid="index_1changingSounds" kindref="member">Influencing Sounds during Playback</ref> <linebreak/>
+ <ref refid="index_1soundSources" kindref="member">Using Sound Sources</ref> <linebreak/>
+ <ref refid="index_1sound3d" kindref="member">3D Sound</ref> <linebreak/>
+ <ref refid="index_1removingSounds" kindref="member">Removing Sounds</ref> <linebreak/>
+ <ref refid="index_1events" kindref="member">Using Sound Events</ref> <linebreak/>
+ <ref refid="index_1memoryPlayback" kindref="member">Memory Playback</ref> <linebreak/>
+ <ref refid="index_1effects" kindref="member">Sound Effects</ref> <linebreak/>
+ <ref refid="index_1fileOverriding" kindref="member">Overriding File Access</ref> <linebreak/>
+ <ref refid="index_1audioDecoders" kindref="member">Adding Audio Decoders</ref> <linebreak/>
+ <ref refid="index_1plugins" kindref="member">Creating irrKlang Plugins</ref> <linebreak/>
+ <ref refid="index_1staticLib" kindref="member">Using irrKlang as static Lib</ref> <linebreak/>
+ <ref refid="index_1enumeratingDevices" kindref="member">Enumerating sound devices</ref> <linebreak/>
+ <ref refid="index_1recordingAudio" kindref="member">Recording Audio</ref> <linebreak/>
+ <ref refid="index_1unicode" kindref="member">Unicode support</ref> <linebreak/>
+ <linebreak/>
+ Short full examples:<linebreak/>
+ <ref refid="index_1quickstartexample" kindref="member">Quick Start Example</ref> <linebreak/>
+ <ref refid="index_1quickstartexample2" kindref="member">Quick Start Example 2</ref> <linebreak/>
+ <linebreak/>
+ <linebreak/>
+</para></sect1>
+<sect1 id="index_1intro">
+<title>Introduction</title>
+<para>Welcome to the irrKlang API documentation. This page should give you a short overview over irrKlang, the high level audio library. In this documentation files you&apos;ll find any information you&apos;ll need to develop applications with irrKlang using C++. If you are looking for a tutorial on how to start, you&apos;ll find some on the homepage of irrKlang at <ulink url="http://www.ambiera.com/irrklang">http://www.ambiera.com/irrklang</ulink> or inside the SDK in the directory .</para><para>The irrKlang library is intended to be an easy-to-use 3d and 2d sound engine, so this documentation is an important part of it. If you have any questions or suggestions, please take a look into the ambiera.com forum or just send a mail.</para><para><linebreak/>
+ <linebreak/>
+</para></sect1>
+<sect1 id="index_1features">
+<title>Features of irrKlang</title>
+<para>irrKlang is a high level 2D and 3D cross platform sound engine and audio library. It has a very simply object orientated interface and was designed to be used in games, scientific simulations, architectural visualizations and similar. irrKlang plays several file formats such as <itemizedlist>
+<listitem>
+<para>RIFF WAVE (*.wav) </para></listitem>
+<listitem>
+<para>Ogg Vorbis (*.ogg) </para></listitem>
+<listitem>
+<para>MPEG-1 Audio Layer 3 (*.mp3) </para></listitem>
+<listitem>
+<para>Free Lossless Audio Codec (*.flac) </para></listitem>
+<listitem>
+<para>Amiga Modules (*.mod) </para></listitem>
+<listitem>
+<para>Impulse Tracker (*.it) </para></listitem>
+<listitem>
+<para>Scream Tracker 3 (*.s3d) </para></listitem>
+<listitem>
+<para>Fast Tracker 2 (*.xm) </para></listitem>
+</itemizedlist>
+It is also able to run on different operating systems and use several output drivers: <itemizedlist>
+<listitem>
+<para>Windows 98, ME, NT 4, 2000, XP, Vista, Windows 7, Windows 8 <itemizedlist>
+<listitem>
+<para>DirectSound </para></listitem>
+<listitem>
+<para>DirectSound8 </para></listitem>
+<listitem>
+<para>WinMM </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Linux / *nix <itemizedlist>
+<listitem>
+<para>ALSA </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>MacOSX (x86 and PPC) <itemizedlist>
+<listitem>
+<para>CoreAudio </para></listitem>
+</itemizedlist>
+</para></listitem>
+</itemizedlist>
+<linebreak/>
+ <linebreak/>
+ <linebreak/>
+</para></sect1>
+<sect1 id="index_1links">
+<title>Links into the API documentation</title>
+<para><ref refid="classirrklang_1_1ISoundEngine" kindref="compound">irrklang::ISoundEngine</ref>: The main class of irrKlang.<linebreak/>
+ <ulink url="annotated.html">Class list</ulink>: List of all classes with descriptions.<linebreak/>
+ <ulink url="functions.html">Class members</ulink>: Good place to find forgotten features.<linebreak/>
+ <linebreak/>
+ <linebreak/>
+ <linebreak/>
+</para></sect1>
+<sect1 id="index_1tipsandtricks">
+<title>Tips and Tricks</title>
+<para>This section lists a few tips you might consider when implementing the sound part of your application using irrKlang:</para><para><itemizedlist>
+<listitem>
+<para>If you can choose which audio file format is the primary one for your application, use .OGG files, instead of for example .MP3 files. irrKlang uses a lot less memory and CPU power when playing .OGGs. </para></listitem>
+<listitem>
+<para>To keep your application simple, each time you play a sound, you can use for example play2D(&quot;filename.mp3&quot;) and let irrKlang handle the rest. There is no need to implement a preloading/caching/file management system for the audio playback. irrKlang will handle all this by itself and will never load a file twice.  </para></listitem>
+<listitem>
+<para>irrKlang is crashing in your application? This should not happen, irrKlang is pretty stable, and in most cases, this is a problem in your code: In a lot of cases the reason is simply a wrong call to <ref refid="classirrklang_1_1IRefCounted_1a869fe3adc6e49e8da105e95837a565b1" kindref="member">irrklang::IRefCounted::drop()</ref>. Be sure you are doing it correctly. (If you are unsure, tempoarily remove all calls to <ref refid="classirrklang_1_1IRefCounted_1a869fe3adc6e49e8da105e95837a565b1" kindref="member">irrklang::IRefCounted::drop()</ref> and see if this helps.) </para></listitem>
+</itemizedlist>
+</para><para><linebreak/>
+ <linebreak/>
+ <linebreak/>
+ <linebreak/>
+</para></sect1>
+<sect1 id="index_1concept">
+<title>Starting up the Engine</title>
+<para>irrKlang is designed so that it is very easy to achieve everything, its interface should be very simple to use. The <ref refid="index_1quickstartexample" kindref="member">Quick Start Example</ref> shows how to play and mp3 file, and there is another example, <ref refid="index_1quickstartexample2" kindref="member">Quick Start Example 2</ref>, showing some few more details.<linebreak/>
+ To start up the sound engine, you simply need to call <ref refid="namespaceirrklang_1ad9829f898bc0665fdd2554a6f5c7ca1c" kindref="member">createIrrKlangDevice()</ref>. To shut it down, call IRefCounted::drop():</para><para><programlisting><codeline><highlight class="normal">#include<sp/>&lt;irrKlang.h&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>start<sp/>up<sp/>the<sp/>engine</highlight></codeline>
+<codeline><highlight class="normal">irrklang::ISoundEngine*<sp/>engine<sp/>=<sp/>irrklang::createIrrKlangDevice();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">//<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>after<sp/>finished,</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>close<sp/>the<sp/>engine<sp/>again,<sp/>similar<sp/>as<sp/>calling<sp/>&apos;delete&apos;</highlight></codeline>
+<codeline><highlight class="normal">engine-&gt;drop();<sp/></highlight></codeline>
+</programlisting></para><para>The <ref refid="namespaceirrklang_1ad9829f898bc0665fdd2554a6f5c7ca1c" kindref="member">createIrrKlangDevice()</ref> function also accepts several parameters, so that you can specify which sound driver should be used, if plugins should be used, if irrKlang should run in multithreaded mode, and similar. <linebreak/>
+ <linebreak/>
+ <linebreak/>
+ <linebreak/>
+</para></sect1>
+<sect1 id="index_1playingSounds">
+<title>Playing Sounds</title>
+<para>Once you have irrKlang running (like in <ref refid="index_1concept" kindref="member">Starting up the Engine</ref>), you can start playing sounds:</para><para><programlisting><codeline><highlight class="normal">engine-&gt;play2D(&quot;someSoundFile.wav&quot;);<sp/></highlight></codeline>
+</programlisting></para><para>This works with all supported file types. You can replace &quot;someSoundFile.wav&quot; with &quot;someSoundFile.mp3&quot;, or &quot;someSoundFile.ogg&quot;, for example.<linebreak/>
+ To play a sound looped, set the second parameter to &apos;true&apos;:</para><para><programlisting><codeline><highlight class="normal">engine-&gt;play2D(&quot;myMusic.mp3&quot;,<sp/>true);<sp/></highlight></codeline>
+</programlisting></para><para>To stop this looping sound again, use engine-&gt;<ref refid="classirrklang_1_1ISoundEngine_1a38dbc2f1d49e3127fc4a81a9c1a2f82d" kindref="member">stopAllSounds()</ref> to stop all sounds, or <ref refid="classirrklang_1_1ISound_1a108485fe64658441cecd70917782961f" kindref="member">irrklang::ISound::stop()</ref> if you only want to stop that single sound. <ref refid="index_1changingSounds" kindref="member">Influencing Sounds during Playback</ref> shows how to get to that ISound interface. <linebreak/>
+ <linebreak/>
+ <linebreak/>
+ <linebreak/>
+</para></sect1>
+<sect1 id="index_1changingSounds">
+<title>Influencing Sounds during Playback</title>
+<para>To influence parameters of the sound such as pan, volume or playback speed during runtime, to get the play position or stop playback of single playing sounds, you can use the <ref refid="classirrklang_1_1ISound" kindref="compound">irrklang::ISound</ref> interface. <ref refid="classirrklang_1_1ISoundEngine_1a25f612fe6479d3b22dc5bab2a2eaa927" kindref="member">irrklang::ISoundEngine::play2D</ref> (but also play3D) returns a pointer to this interface when its third (&apos;startPaused&apos;) or fourth (&apos;track&apos;) parameter was set to true:</para><para><programlisting><codeline><highlight class="normal">irrklang::ISound*<sp/>snd<sp/>=<sp/>engine-&gt;play2D(&quot;myMusic.mp3&quot;,<sp/>true,<sp/>false,<sp/>true);<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">if<sp/>(snd)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>snd-&gt;setVolume(someNewValue);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">if<sp/>(snd)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>snd-&gt;drop();<sp/>//<sp/>don&apos;t<sp/>forget<sp/>to<sp/>release<sp/>the<sp/>pointer<sp/>once<sp/>it<sp/>is<sp/>no<sp/>longer<sp/>needed<sp/>by<sp/>you</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>snd<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para>The <ref refid="classirrklang_1_1ISound" kindref="compound">irrklang::ISound</ref> interface can also be used to test if the sound has been finished, set event receivers, pause and unpause sounds and similar. <linebreak/>
+ <linebreak/>
+ <linebreak/>
+ <linebreak/>
+</para></sect1>
+<sect1 id="index_1soundSources">
+<title>Using Sound Sources</title>
+<para>To be more flexible playing back sounds, irrKlang uses the concept of sound sources. A sound source can be simply the name of a sound file, such as &quot;sound.wav&quot;. It is possible to add &quot;sound.wav&quot; as sound source to irrKlang, and play it using the sound source pointer:</para><para><programlisting><codeline><highlight class="normal">irrklang::ISoundSource*<sp/>shootSound<sp/>=<sp/>engine-&gt;addSoundSourceFromFile(&quot;shoot.wav&quot;);<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">engine-&gt;play2D(shootSound);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>note:<sp/>you<sp/>don&apos;t<sp/>need<sp/>to<sp/>drop()<sp/>the<sp/>shootSound<sp/>if<sp/>you<sp/>don&apos;t<sp/>use<sp/>it<sp/>anymore</highlight></codeline>
+</programlisting></para><para>The advantage of using <ref refid="classirrklang_1_1ISoundSource" kindref="compound">irrklang::ISoundSource</ref> is that it is possible to set default values for this source, such as volume or distances if it should be used as 3D sound:</para><para><programlisting><codeline><highlight class="normal">irrklang::ISoundSource*<sp/>shootSound<sp/>=<sp/>engine-&gt;addSoundSourceFromFile(&quot;shoot.wav&quot;);<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">shootSound-&gt;setDefaultVolume(0.5f);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>shootSound<sp/>will<sp/>now<sp/>be<sp/>played<sp/>with<sp/>half<sp/>its<sp/>sound<sp/>volume<sp/>by<sp/>default:</highlight></codeline>
+<codeline><highlight class="normal">engine-&gt;play2D(shootSound);</highlight></codeline>
+</programlisting></para><para>It is also possible to have multiple settings for the same sound file:</para><para><programlisting><codeline><highlight class="normal">irrklang::ISoundSource*<sp/>shootSound<sp/>=<sp/>engine-&gt;addSoundSourceFromFile(&quot;shoot.wav&quot;);<sp/></highlight></codeline>
+<codeline><highlight class="normal">irrklang::ISoundSource*<sp/>shootSound2<sp/>=<sp/>engine-&gt;addSoundSourceAlias(shootSound,<sp/>&quot;silentShoot&quot;);<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">shootSound2-&gt;setDefaultVolume(0.1f);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>shootSound<sp/>will<sp/>now<sp/>be<sp/>played<sp/>with<sp/>100%<sp/>of<sp/>its<sp/>sound<sp/>volume<sp/>by<sp/>default,</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>shootSound2<sp/>will<sp/>now<sp/>be<sp/>played<sp/>10%<sp/>of<sp/>its<sp/>sound<sp/>volume<sp/>by<sp/>default.<sp/>It<sp/>is<sp/></highlight></codeline>
+<codeline><highlight class="normal">//<sp/><sp/>also<sp/>possible<sp/>to<sp/>play<sp/>it<sp/>using<sp/>engine-&gt;play(&quot;silentShoot&quot;),<sp/>now.</highlight></codeline>
+</programlisting></para><para>Using addSoundSourceFromMemory(), it is also possible to play sounds back directly from memory, without files. Of course, it is not necessary to use sound sources. Using <ref refid="classirrklang_1_1ISound" kindref="compound">irrklang::ISound</ref>, it is possible to change the settings of all sounds, too. But using sound sources, it is not necessary to do this every time a sound is played. <linebreak/>
+ <linebreak/>
+ <linebreak/>
+ <linebreak/>
+</para></sect1>
+<sect1 id="index_1sound3d">
+<title>3D Sound</title>
+<para>There is nothing difficult in playing sounds in 3D using irrKlang: Instead of using <ref refid="classirrklang_1_1ISoundEngine_1a25f612fe6479d3b22dc5bab2a2eaa927" kindref="member">irrklang::ISoundEngine::play2D()</ref>, just use <ref refid="classirrklang_1_1ISoundEngine_1adb09ecc8f61120ce14d26545ed43d8ec" kindref="member">irrklang::ISoundEngine::play3D()</ref>, which takes a 3D position as additional parameter:</para><para><programlisting><codeline><highlight class="normal">irrklang::vec3df<sp/>position(23,70,90);</highlight></codeline>
+<codeline><highlight class="normal">engine-&gt;play3D(&quot;yourSound.wav&quot;,<sp/>position);</highlight></codeline>
+</programlisting></para><para>But to make it sound realistic, you need to set a minimal sound distance: If your sound is caused by a bee, it will usually have a smaller sound radius than for example a jet engine. You can set default values using sound sources (see <ref refid="index_1soundSources" kindref="member">Using Sound Sources</ref>) or set these values after you have started the sound paused:</para><para><programlisting><codeline><highlight class="normal">irrklang::vec3df<sp/>position(23,70,90);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>start<sp/>the<sp/>sound<sp/>paused:</highlight></codeline>
+<codeline><highlight class="normal">irrklang::ISound*<sp/>snd<sp/>=<sp/>engine-&gt;play3D(&quot;yourSound.wav&quot;,<sp/>position,<sp/>false,<sp/>true);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">if<sp/>(snd)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>snd-&gt;setMinDistance(30.0f);<sp/>//<sp/>a<sp/>loud<sp/>sound</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>snd-&gt;setIsPaused(false);<sp/>//<sp/>unpause<sp/>the<sp/>sound</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para>There is also the possibility to change the maxDistance, but it is only necessary to change this in very rare cicumstances. If the sound moves, it is also a good idea to update its position from time to time:</para><para><programlisting><codeline><highlight class="normal">if<sp/>(snd)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>snd-&gt;setPosition(newPosition);</highlight></codeline>
+</programlisting></para><para>And don&apos;t forget to drop() the sound after you don&apos;t need it anymore. If you do, it&apos;s nothing severe because irrKlang will still clean up the sounds resources after it has finished, but you still would waste some few bytes of memory:</para><para><programlisting><codeline><highlight class="normal">if<sp/>(snd)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>snd-&gt;drop();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>snd<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para>To update the position of yourself, the listener of the 3D sounds, use this from time to time:</para><para><programlisting><codeline><highlight class="normal">irrklang::vec3df<sp/>position(0,0,0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>position<sp/>of<sp/>the<sp/>listener</highlight></codeline>
+<codeline><highlight class="normal">irrklang::vec3df<sp/>lookDirection(10,0,10);<sp/>//<sp/>the<sp/>direction<sp/>the<sp/>listener<sp/>looks<sp/>into</highlight></codeline>
+<codeline><highlight class="normal">irrklang::vec3df<sp/>velPerSecond(0,0,0);<sp/><sp/><sp/><sp/>//<sp/>only<sp/>relevant<sp/>for<sp/>doppler<sp/>effects</highlight></codeline>
+<codeline><highlight class="normal">irrklang::vec3df<sp/>upVector(0,1,0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>where<sp/>&apos;up&apos;<sp/>is<sp/>in<sp/>your<sp/>3D<sp/>scene</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">engine-&gt;setListenerPosition(position,<sp/>lookDirection,<sp/>velPerSecond,<sp/>upVector);</highlight></codeline>
+</programlisting></para><para><linebreak/>
+ <linebreak/>
+ <linebreak/>
+ <linebreak/>
+</para></sect1>
+<sect1 id="index_1removingSounds">
+<title>Removing Sounds</title>
+<para>irrKlang manages the memory usage of sounds by itself, so usually, you don&apos;t have to care about memory management. But if you know you need to reduce the amount of used memory at a certain point in your program, you can do this:</para><para><programlisting><codeline><highlight class="normal">engine-&gt;removeAllSoundSources();<sp/></highlight></codeline>
+</programlisting></para><para>This will remove all sounds and also cause all sounds to be stopped. To remove single sounds from the engine, use:</para><para><programlisting><codeline><highlight class="normal">engine-&gt;removeSoundSource(pointerToSomeSoundSource);<sp/></highlight></codeline>
+<codeline><highlight class="normal">//<sp/>or:</highlight></codeline>
+<codeline><highlight class="normal">engine-&gt;removeSoundSource(&quot;nameOfASoundFile.wav&quot;);<sp/></highlight></codeline>
+</programlisting></para><para>Note: Only removing buffered sounds will reduce the amount of memory used by irrKlang, streamed sounds don&apos;t occupy a lot of memory when they are not played. <linebreak/>
+ <linebreak/>
+ <linebreak/>
+ <linebreak/>
+</para></sect1>
+<sect1 id="index_1events">
+<title>Using Sound Events</title>
+<para>In order to wait for a sound to be finished, it is simply possible to poll <ref refid="classirrklang_1_1ISound_1a9d9e758f8500b194580de339c7f96768" kindref="member">irrklang::ISound::isFinished()</ref>. Another way would be to constantly use <ref refid="classirrklang_1_1ISoundEngine_1a1084577f9f43cb12e86cea43c323b12c" kindref="member">irrklang::ISoundEngine::isCurrentlyPlaying</ref> to test wether a sound with that name or source is currently playing. But of course, an event based approach is a lot nicer. That&apos;s why irrKlang supports sound events.<linebreak/>
+ The key to sound events is the method <ref refid="classirrklang_1_1ISound_1a50dc71426d0abec7af56fa68a5bb87b5" kindref="member">setSoundStopEventReceiver </ref> of the <ref refid="classirrklang_1_1ISound" kindref="compound">irrklang::ISound</ref> interface (See <ref refid="index_1changingSounds" kindref="member">Influencing Sounds during Playback</ref> on how to get the ISound interface):</para><para><programlisting><codeline><highlight class="normal">irrklang::ISound*<sp/>snd<sp/>=<sp/>engine-&gt;play2D(&quot;speech.mp3&quot;,<sp/>false,<sp/>false,<sp/>true);<sp/></highlight></codeline>
+<codeline><highlight class="normal">if<sp/>(snd)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>snd-&gt;setSoundStopEventReceiver(yourEventReceiver,<sp/>0);</highlight></codeline>
+</programlisting></para><para>The optional second parameter of setSoundStopEventReceiver is a user pointer, set it to whatever you like. &apos;yourEventReceiver&apos; must be an implementation of the <ref refid="classirrklang_1_1ISoundStopEventReceiver" kindref="compound">irrklang::ISoundStopEventReceiver</ref> interface.<linebreak/>
+ A whole implementation could look like this:</para><para><programlisting><codeline><highlight class="normal">class<sp/>MySoundEndReceiver<sp/>:<sp/>public<sp/>irrklang::ISoundStopEventReceiver</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>public:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/>void<sp/>OnSoundStopped<sp/>(irrklang::ISound*<sp/>sound,<sp/>irrklang::E_STOP_EVENT_CAUSE<sp/>reason,<sp/>void*<sp/>userData)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>called<sp/>when<sp/>the<sp/>sound<sp/>has<sp/>ended<sp/>playing</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;sound<sp/>has<sp/>ended&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">MySoundEndReceiver*<sp/>myReceiver<sp/>=<sp/>new<sp/>MySoundEndReceiver();</highlight></codeline>
+<codeline><highlight class="normal">irrklang::ISound*<sp/>snd<sp/>=<sp/>engine-&gt;play2D(&quot;speech.mp3&quot;,<sp/>false,<sp/>false,<sp/>true);<sp/></highlight></codeline>
+<codeline><highlight class="normal">if<sp/>(snd)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>snd-&gt;setSoundStopEventReceiver(myReceiver);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">myReceiver-&gt;drop();<sp/>//<sp/>similar<sp/>to<sp/>delete</highlight></codeline>
+</programlisting></para><para>The <ref refid="classirrklang_1_1ISoundStopEventReceiver_1a8e975104683b71cd45436ae5f8bfaf9f" kindref="member">irrklang::ISoundStopEventReceiver::OnSoundStopped()</ref> method is guaranteed to be called when a sound or sound stream has stopped, either because the sound reached its playback end, its sound source was removed, ISoundEngine::stopAllSounds() has been called or the whole engine was deleted. <linebreak/>
+ <linebreak/>
+ <linebreak/>
+ <linebreak/>
+</para></sect1>
+<sect1 id="index_1memoryPlayback">
+<title>Memory Playback</title>
+<para>Using irrKlang, it is easily possible to play sounds directly from memory instead out of files. There is an example project showing this: In the SDK, in /examples/03.MemoryPlayback. But in short, it simply works by adding the memory as sound source (See <ref refid="index_1soundSources" kindref="member">Using Sound Sources</ref> for details about sound sources):</para><para><programlisting><codeline><highlight class="normal">engine-&gt;addSoundSourceFromMemory(pointerToMemory,<sp/>memorySize,<sp/>&quot;nameforthesound.wav&quot;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>play<sp/>sound<sp/>now</highlight></codeline>
+<codeline><highlight class="normal">engine-&gt;play2D(&quot;nameforthesound.wav&quot;);</highlight></codeline>
+</programlisting></para><para>Or using a sound source pointer:</para><para><programlisting><codeline><highlight class="normal">irrklang::ISoundSource*<sp/>snd<sp/>=<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>engine-&gt;addSoundSourceFromMemory(pointerToMemory,<sp/>memorySize,<sp/>&quot;nameforthesound.wav&quot;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>play<sp/>sound<sp/>now</highlight></codeline>
+<codeline><highlight class="normal">engine-&gt;play2D(snd);</highlight></codeline>
+</programlisting></para><para>Note: It is also possible to overwrite the file access directly, don&apos;t use this Memory Playback feature for this. See <ref refid="index_1fileOverriding" kindref="member">Overriding File Access</ref> for details. <linebreak/>
+ <linebreak/>
+ <linebreak/>
+ <linebreak/>
+</para></sect1>
+<sect1 id="index_1effects">
+<title>Sound Effects</title>
+<para>irrKlang supports the effects Chorus, Compressor, Distortion, Echo, Flanger Gargle, 3DL2Reverb, ParamEq and WavesReverb, when using the sound driver <ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea6fcd5ec6152066313ef04d97ea5582ee" kindref="member">irrklang::ESOD_DIRECT_SOUND_8</ref>, which selected by default when using Windows.<linebreak/>
+</para><para>Using the <ref refid="classirrklang_1_1ISound" kindref="compound">irrklang::ISound</ref> interface, you can optain the <ref refid="classirrklang_1_1ISoundEffectControl" kindref="compound">irrklang::ISoundEffectControl</ref> interface if the sound device supports sound effects and the last parameter (&apos;enableSoundEffects&apos;) was set to true when calling play2D():</para><para><programlisting><codeline><highlight class="normal">irrklang::ISound*<sp/>snd<sp/>=<sp/>engine-&gt;play2D(&quot;sound.wav&quot;,<sp/>true,<sp/>false,<sp/>true,<sp/>ESM_AUTO_DETECT,<sp/>true);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">if<sp/>(snd)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>irrklang::ISoundEffectControl*<sp/>fx<sp/>=<sp/>snd-&gt;getSoundEffectControl();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>if<sp/>(fx)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>enable<sp/>the<sp/>echo<sp/>sound<sp/>effect<sp/>for<sp/>this<sp/>sound</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fx-&gt;enableEchoSoundEffect();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">snd-&gt;drop();</highlight></codeline>
+</programlisting></para><para>This enabled the echo sound effect for this sound. The method also supports a lot of parameters, and can be called multiple times to change those parameters over time if wished. There are a lot of other sound effects, see <ref refid="classirrklang_1_1ISoundEffectControl" kindref="compound">irrklang::ISoundEffectControl</ref> for details. <linebreak/>
+ <linebreak/>
+ <linebreak/>
+ <linebreak/>
+</para></sect1>
+<sect1 id="index_1fileOverriding">
+<title>Overriding File Access</title>
+<para>It is possible to let irrKlang use your own file access functions. This is useful if you want to read sounds from other sources than just files, for example from custom internet streams or an own encypted archive format. There is an example in the SDK in examples/04.OverrideFileAccess which shows this as well.<linebreak/>
+</para><para>The only thing to do for this is to implement your own <ref refid="classirrklang_1_1IFileFactory" kindref="compound">irrklang::IFileFactory</ref>, and set it in irrKlang using <ref refid="classirrklang_1_1ISoundEngine_1ad7c48f9d7ccc6f60adb1b3f024f9b189" kindref="member">irrklang::ISoundEngine::addFileFactory()</ref>:</para><para><programlisting><codeline><highlight class="normal">//<sp/>a<sp/>class<sp/>implementing<sp/>the<sp/>IFileFactory<sp/>interface<sp/>to<sp/>override<sp/>irrklang<sp/>file<sp/>access</highlight></codeline>
+<codeline><highlight class="normal">class<sp/>CMyFileFactory<sp/>:<sp/>public<sp/>irrklang::IFileFactory</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>public:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>Opens<sp/>a<sp/>file<sp/>for<sp/>read<sp/>access.<sp/>Simply<sp/>return<sp/>0<sp/>if<sp/>file<sp/>not<sp/>found.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>virtual<sp/>irrklang::IFileReader*<sp/>createFileReader(const<sp/>ik_c8*<sp/>filename)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>return<sp/>your<sp/>own<sp/>irrklang::IFileReader<sp/>implementation<sp/>here,<sp/>for<sp/>example<sp/>like<sp/>that:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>new<sp/>CMyReadFile(filename);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">CMyFileFactory*<sp/>myFactory<sp/>=<sp/>new<sp/>CMyFileFactory();</highlight></codeline>
+<codeline><highlight class="normal">engine-&gt;addFileFactory(myFactory);</highlight></codeline>
+<codeline><highlight class="normal">myFactory-&gt;drop();</highlight></codeline>
+</programlisting></para><para>For a full example implementation, just take a look into the SDK in examples/04.OverrideFileAccess. <linebreak/>
+ <linebreak/>
+ <linebreak/>
+ <linebreak/>
+</para></sect1>
+<sect1 id="index_1audioDecoders">
+<title>Adding Audio Decoders</title>
+<para>To add support for new file formats, it is possible to add new audio decoders to irrKlang. The only thing to do for this is to implement your own <ref refid="classirrklang_1_1IAudioStreamLoader" kindref="compound">irrklang::IAudioStreamLoader</ref>, and <ref refid="classirrklang_1_1IAudioStream" kindref="compound">irrklang::IAudioStream</ref>, and set it in irrKlang using <ref refid="classirrklang_1_1ISoundEngine_1a6cb64f878a5355454c7197276127a7c9" kindref="member">irrklang::ISoundEngine::registerAudioStreamLoader()</ref>:</para><para><programlisting><codeline><highlight class="normal">class<sp/>NewAudioStreamLoader<sp/>:<sp/>public<sp/>irrklang::IAudioStreamLoader</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>...<sp/>returns<sp/>NewAudioDecoder<sp/>and<sp/>the<sp/>used<sp/>file<sp/>name<sp/>suffices.</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">class<sp/>NewAudioDecoder<sp/>:<sp/>public<sp/>irrklang::IAudioStream</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>public:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>...<sp/>decodes<sp/>the<sp/>new<sp/>file<sp/>format</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">NewAudioDecoder*<sp/>loader<sp/>=<sp/>new<sp/>NewAudioDecoder();</highlight></codeline>
+<codeline><highlight class="normal">engine-&gt;registerAudioStreamLoader(loader);</highlight></codeline>
+<codeline><highlight class="normal">loader-&gt;drop();</highlight></codeline>
+</programlisting></para><para>There is an example audio decoder and loader with full source in plugins/ikpMP3, which adds MP3 audio decoding capabilities to irrKlang. <linebreak/>
+ <linebreak/>
+ <linebreak/>
+ <linebreak/>
+</para></sect1>
+<sect1 id="index_1plugins">
+<title>Creating irrKlang Plugins</title>
+<para>irrKlang plugins are ikp*.dll (Windows), ikp*.so (Unix) or ikp*.dylib (MacOS) files which are loaded by irrKlang at startup when the <ref refid="namespaceirrklang_1ac9155ff55b347df6e905462100762d7fafda608a17564b562a9a43b7934a387e8" kindref="member">irrklang::ESEO_LOAD_PLUGINS</ref> was set (which is default) or <ref refid="classirrklang_1_1ISoundEngine_1abcb159bed86265a22fe3435ce2541ea6" kindref="member">irrklang::ISoundEngine::loadPlugins()</ref> was called. <linebreak/>
+</para><para>The plugin only needs to contain the following function which will be called by irrKlang:</para><para><programlisting><codeline><highlight class="normal">#ifdef<sp/>WIN32</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>Windows<sp/>version</highlight></codeline>
+<codeline><highlight class="normal">__declspec(dllexport)<sp/>void<sp/>__stdcall<sp/>irrKlangPluginInit(ISoundEngine*<sp/>engine,<sp/>const<sp/>char*<sp/>version)</highlight></codeline>
+<codeline><highlight class="normal">#else</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>Linux<sp/>and<sp/>Mac<sp/>OS<sp/>version</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>irrKlangPluginInit(ISoundEngine*<sp/>engine,<sp/>const<sp/>char*<sp/>version)</highlight></codeline>
+<codeline><highlight class="normal">#endif</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>your<sp/>implementation<sp/>here</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para>In there, it is for example possible to extend irrKlang with new audio decoders, see <ref refid="index_1audioDecoders" kindref="member">Adding Audio Decoders</ref> for details. <linebreak/>
+</para><para>There is an example plugin with full source in plugins/ikpMP3, which adds MP3 audio decoding capabilities to irrKlang. <linebreak/>
+ <linebreak/>
+ <linebreak/>
+ <linebreak/>
+</para></sect1>
+<sect1 id="index_1staticLib">
+<title>Using irrKlang as static Lib</title>
+<para>If you don&apos;t want to use the irrKlang.DLL file and link irrKlang statically, you can do this by simply linking to the irrKlang.lib in the bin/win32-visualstudio_lib folder. This folder will only available in the pro versions of irrKlang, which you get when purchasing an irrKlang license.</para><para>To use irrKlang in this way, just define IRRKLANG_STATIC before including <ref refid="irrKlang_8h" kindref="compound">irrklang.h</ref>, like this:</para><para><programlisting><codeline><highlight class="normal">#define<sp/>IRRKLANG_STATIC</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;irrKlang.h&gt;</highlight></codeline>
+</programlisting></para><para>Of course, IRRKLANG_STATIC can also simply be defined in the project/compiler settings instead of in the source file. <linebreak/>
+ <linebreak/>
+ <linebreak/>
+ <linebreak/>
+</para></sect1>
+<sect1 id="index_1enumeratingDevices">
+<title>Enumerating sound devices</title>
+<para>irrKlang uses the default sound device when playing sound when started without parameters. But if you want irrKlang to playback sound on one specific sound device, you may want to enumerate the available sound devices on your system and select one of them. Use <ref refid="namespaceirrklang_1a38d9a69bf54fd60e76e80e199e44faee" kindref="member">irrklang::createSoundDeviceList()</ref> for this. This example code shows how to print a list of all available sound devices on the current system and lets the user choose one of them:</para><para><programlisting><codeline><highlight class="normal">int<sp/>main(int<sp/>argc,<sp/>const<sp/>char**<sp/>argv)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>enumerate<sp/>devices</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>irrklang::ISoundDeviceList*<sp/>deviceList<sp/>=<sp/>createSoundDeviceList();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>ask<sp/>user<sp/>for<sp/>a<sp/>sound<sp/>device</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Devices<sp/>available:\n\n&quot;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>i=0;<sp/>i&lt;deviceList-&gt;getDeviceCount();<sp/>++i)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;%d:<sp/>%s\n&quot;,<sp/>i,<sp/>deviceList-&gt;getDeviceDescription(i));</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;\nselect<sp/>a<sp/>device<sp/>using<sp/>the<sp/>number<sp/>(or<sp/>press<sp/>any<sp/>key<sp/>to<sp/>use<sp/>default):\n\n&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>deviceNumber<sp/>=<sp/>getch()<sp/>-<sp/>&apos;0&apos;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>create<sp/>device<sp/>with<sp/>the<sp/>selected<sp/>driver</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>char*<sp/>deviceID<sp/>=<sp/>deviceList-&gt;getDeviceID(deviceNumber);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ISoundEngine*<sp/>engine<sp/>=<sp/>createIrrKlangDevice(irrklang::ESOD_AUTO_DETECT,<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>irrklang::ESEO_DEFAULT_OPTIONS,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>deviceID);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>deviceList-&gt;drop();<sp/>//<sp/>delete<sp/>device<sp/>list</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>//<sp/>...<sp/>use<sp/>engine<sp/>now</highlight></codeline>
+<codeline><highlight class="normal">}<sp/></highlight></codeline>
+</programlisting></para><para>In this way, it is also possible to play back sound using two devices at the same time: Simply create two irrKlang devices with each a different deviceID.<linebreak/>
+ Note: <ref refid="namespaceirrklang_1a38d9a69bf54fd60e76e80e199e44faee" kindref="member">createSoundDeviceList()</ref> takes a driver type parameter (such as irrklang::ESOD_DIRECT_SOUND8), which you have to set to the same value as the first parameter you want to use with <ref refid="namespaceirrklang_1ad9829f898bc0665fdd2554a6f5c7ca1c" kindref="member">createIrrKlangDevice()</ref>, if it is other than <ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea8cc9863f3b410698313b8637721e51ec" kindref="member">irrklang::ESOD_AUTO_DETECT</ref>. <linebreak/>
+ <linebreak/>
+ <linebreak/>
+ <linebreak/>
+</para></sect1>
+<sect1 id="index_1recordingAudio">
+<title>Recording Audio</title>
+<para>irrKlang is able to record audio from sound capturing devices such as microphones (currently only supported in windows). Use the <ref refid="classirrklang_1_1IAudioRecorder" kindref="compound">irrklang::IAudioRecorder</ref> interface to do this. The following example shows how to record some audio and play it back again using the engine:</para><para><programlisting><codeline><highlight class="normal">int<sp/>main(int<sp/>argc,<sp/>const<sp/>char**<sp/>argv)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>irrklang::ISoundEngine*<sp/>engine<sp/>=<sp/>irrklang::createIrrKlangDevice();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>irrklang::IAudioRecorder*<sp/>recorder<sp/>=<sp/>irrklang::createIrrKlangAudioRecorder(engine);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(!engine<sp/>||<sp/>!recorder)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Could<sp/>not<sp/>create<sp/>audio<sp/>engine<sp/>or<sp/>audio<sp/>recoder\n&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>1;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;\nPress<sp/>any<sp/>key<sp/>to<sp/>start<sp/>recording<sp/>audio...\n&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>getch();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>record<sp/>some<sp/>audio</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>recorder-&gt;startRecordingBufferedAudio();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;\nRECORDING.<sp/>Press<sp/>any<sp/>key<sp/>to<sp/>stop...\n&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>getch();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>recorder-&gt;stopRecordingAudio();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;\nRecording<sp/>done,<sp/>recorded<sp/>%dms<sp/>of<sp/>audio.\n&quot;,<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>recorder-&gt;getAudioFormat().FrameCount<sp/>*<sp/>1000<sp/>/<sp/>recorder-&gt;getAudioFormat().SampleRate<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;Press<sp/>any<sp/>key<sp/>to<sp/>play<sp/>back<sp/>recorded<sp/>audio...\n&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>getch();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>play<sp/>the<sp/>recorded<sp/>audio</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>recorder-&gt;addSoundSourceFromRecordedAudio(&quot;myRecordedVoice&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>engine-&gt;play2D(&quot;myRecordedVoice&quot;,<sp/>true);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>wait<sp/>until<sp/>user<sp/>presses<sp/>a<sp/>key</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;\nPress<sp/>any<sp/>key<sp/>to<sp/>quit...&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>getch();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>recorder-&gt;drop();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>engine-&gt;drop();<sp/>//<sp/>delete<sp/>engine</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}<sp/></highlight></codeline>
+</programlisting></para><para>In order to select a specific audio capturing device for recording, it is necessary to enumerate the available devices. Simply replace the first to lines of code of the example above with code like this to list all devices and select one:</para><para><programlisting><codeline><highlight class="normal">//<sp/>enumerate<sp/>recording<sp/>devices<sp/>and<sp/>ask<sp/>user<sp/>to<sp/>select<sp/>one</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">irrklang::ISoundDeviceList*<sp/>deviceList<sp/>=<sp/>irrklang::createAudioRecorderDeviceList();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">printf(&quot;Devices<sp/>available:\n\n&quot;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">for<sp/>(int<sp/>i=0;<sp/>i&lt;deviceList-&gt;getDeviceCount();<sp/>++i)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;%d:<sp/>%s\n&quot;,<sp/>i,<sp/>deviceList-&gt;getDeviceDescription(i));</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">printf(&quot;\nselect<sp/>a<sp/>device<sp/>using<sp/>the<sp/>number<sp/>(or<sp/>press<sp/>any<sp/>key<sp/>to<sp/>use<sp/>default):\n\n&quot;);</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>deviceNumber<sp/>=<sp/>getch()<sp/>-<sp/>&apos;0&apos;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>create<sp/>recording<sp/>device<sp/>with<sp/>the<sp/>selected<sp/>driver</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">const<sp/>char*<sp/>deviceID<sp/>=<sp/>deviceList-&gt;getDeviceID(deviceNumber);</highlight></codeline>
+<codeline><highlight class="normal">irrklang::ISoundEngine*<sp/>engine<sp/>=<sp/>irrklang::createIrrKlangDevice();</highlight></codeline>
+<codeline><highlight class="normal">irrklang::IAudioRecorder*<sp/>recorder<sp/>=<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>irrklang::createIrrKlangAudioRecorder(engine,<sp/>irrklang::ESOD_AUTO_DETECT,<sp/>deviceID);</highlight></codeline>
+</programlisting></para><para><linebreak/>
+ <linebreak/>
+ <linebreak/>
+ <linebreak/>
+</para></sect1>
+<sect1 id="index_1unicode">
+<title>Unicode support</title>
+<para>irrKlang supports unicode on all operating systems. Internally, it uses UTF8, and all functions accepting strings and file names take UTF8 strings. If you are running irrKlang on Windows, and are using the UNICODE define or using wchar_t* strings directly, you can do this as well. Use the irrKlang provided function <ref refid="namespaceirrklang_1a2552f41aac247b77e0f1287c28744cd7" kindref="member">makeUTF8fromUTF16string()</ref> to convert your wchar_t* string to a char* string.</para><para>This example shows how:</para><para><programlisting><codeline><highlight class="normal">const<sp/>wchar_t*<sp/>yourFilename<sp/>=<sp/>L&quot;SomeUnicodeFilename.wav&quot;;<sp/>//<sp/>assuming<sp/>this<sp/>is<sp/>the<sp/>file<sp/>name<sp/>you<sp/>get<sp/>from<sp/>some<sp/>of<sp/>your<sp/>functions</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">const<sp/>int<sp/>nBufferSize<sp/>=<sp/>2048;<sp/>//<sp/>large<sp/>enough,<sp/>but<sp/>best<sp/>would<sp/>be<sp/>wcslen(yourFilename)*3.</highlight></codeline>
+<codeline><highlight class="normal">char<sp/>strBuffer[nBufferSize];<sp/></highlight></codeline>
+<codeline><highlight class="normal">irrklang::makeUTF8fromUTF16string(yourFilename,<sp/>strBuffer,<sp/>nBufferSize);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>now<sp/>the<sp/>converted<sp/>file<sp/>name<sp/>is<sp/>in<sp/>strBuffer.<sp/>We<sp/>can<sp/>play<sp/>it<sp/>for<sp/>example<sp/>now:</highlight></codeline>
+<codeline><highlight class="normal">engine-&gt;play2D(strBuffer);</highlight></codeline>
+</programlisting></para><para>Of course, you can use any other unicode converion function for this. <ref refid="namespaceirrklang_1a2552f41aac247b77e0f1287c28744cd7" kindref="member">makeUTF8fromUTF16string()</ref> is only provided for convenience. <linebreak/>
+ <linebreak/>
+ <linebreak/>
+ <linebreak/>
+</para></sect1>
+<sect1 id="index_1quickstartexample">
+<title>Quick Start Example</title>
+<para>To simply start the engine and play a mp3 file, use code like this:</para><para><programlisting><codeline><highlight class="normal">#include<sp/>&lt;iostream&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;irrKlang.h&gt;</highlight></codeline>
+<codeline><highlight class="normal">#pragma<sp/>comment(lib,<sp/>&quot;irrKlang.lib&quot;)<sp/>//<sp/>link<sp/>with<sp/>irrKlang.dll</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main(int<sp/>argc,<sp/>const<sp/>char**<sp/>argv)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>irrklang::ISoundEngine*<sp/>engine<sp/>=<sp/>irrklang::createIrrKlangDevice();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(!engine)<sp/>return<sp/>1;<sp/>//<sp/>could<sp/>not<sp/>start<sp/>engine</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>engine-&gt;play2D(&quot;someMusic.mp3&quot;,<sp/>true);<sp/>//<sp/>play<sp/>some<sp/>mp3<sp/>file,<sp/>looped</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cin.get();<sp/>//<sp/>wait<sp/>until<sp/>user<sp/>presses<sp/>a<sp/>key</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>engine-&gt;drop();<sp/>//<sp/>delete<sp/>engine</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}<sp/></highlight></codeline>
+</programlisting></para><para>A mp3 file is being played until the user presses enter in this example. As you can see, irrKlang uses <ulink url="namespaces.html">namespaces</ulink>, all of the classes are located in the namespace irrklang. If you don&apos;t want to write this in front of every class and function you are using, simply write</para><para><programlisting><codeline><highlight class="normal">using<sp/>namespace<sp/>irrklang;</highlight></codeline>
+</programlisting> in front of your code, as also shown in the next example. <linebreak/>
+ <linebreak/>
+ <linebreak/>
+ <linebreak/>
+</para></sect1>
+<sect1 id="index_1quickstartexample2">
+<title>Quick Start Example 2</title>
+<para>The following is a simple interactive application, starting up the sound engine and playing some streaming .ogg music file and a .wav sound effect every time the user presses a key.</para><para><programlisting><codeline><highlight class="normal">#include<sp/>&lt;iostream&gt;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;irrKlang.h&gt;</highlight></codeline>
+<codeline><highlight class="normal">using<sp/>namespace<sp/>irrklang;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#pragma<sp/>comment(lib,<sp/>&quot;irrKlang.lib&quot;)<sp/>//<sp/>link<sp/>with<sp/>irrKlang.dll</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main(int<sp/>argc,<sp/>const<sp/>char**<sp/>argv)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>start<sp/>the<sp/>sound<sp/>engine<sp/>with<sp/>default<sp/>parameters</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ISoundEngine*<sp/>engine<sp/>=<sp/>createIrrKlangDevice();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(!engine)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>0;<sp/>//<sp/>error<sp/>starting<sp/>up<sp/>the<sp/>engine</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>play<sp/>some<sp/>sound<sp/>stream,<sp/>looped</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>engine-&gt;play2D(&quot;../../media/helltroopers.ogg&quot;,<sp/>true);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>&quot;\nHello<sp/>World!\n&quot;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>char<sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>while(i<sp/>!=<sp/>&apos;q&apos;)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>&quot;Press<sp/>any<sp/>key<sp/>to<sp/>play<sp/>some<sp/>sound,<sp/>press<sp/>&apos;q&apos;<sp/>to<sp/>quit.\n&quot;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>play<sp/>a<sp/>single<sp/>sound</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>engine-&gt;play2D(&quot;../../media/bell.wav&quot;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cin<sp/>&gt;&gt;<sp/>i;<sp/>//<sp/>wait<sp/>for<sp/>user<sp/>to<sp/>press<sp/>some<sp/>key</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>engine-&gt;drop();<sp/>//<sp/>delete<sp/>engine</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

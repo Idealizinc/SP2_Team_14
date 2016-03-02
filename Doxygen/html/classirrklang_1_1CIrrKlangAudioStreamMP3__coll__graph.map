@@ -1,0 +1,8 @@
+<map id="irrklang::CIrrKlangAudioStreamMP3" name="irrklang::CIrrKlangAudioStreamMP3">
+<area shape="rect" id="node2" href="$classirrklang_1_1IAudioStream.html" title="Reads and decodes audio data into an usable audio stream for the ISoundEngine. " alt="" coords="657,565,807,592"/>
+<area shape="rect" id="node3" href="$classirrklang_1_1IRefCounted.html" title="Base class of most objects of the irrKlang. " alt="" coords="306,521,449,548"/>
+<area shape="rect" id="node14" href="$classirrklang_1_1IFileReader.html" title="Interface providing read acess to a file. " alt="" coords="663,464,801,491"/>
+<area shape="rect" id="node6" href="$structMPAuDecContext.html" title="MPAuDecContext" alt="" coords="314,471,441,497"/>
+<area shape="rect" id="node9" href="$structirrklang_1_1SAudioStreamFormat.html" title="structure describing an audio stream format with helper functions " alt="" coords="279,44,476,71"/>
+<area shape="rect" id="node12" href="$classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer.html" title="irrklang::CIrrKlangAudio\lStreamMP3::QueueBuffer" alt="" coords="647,106,817,147"/>
+</map>

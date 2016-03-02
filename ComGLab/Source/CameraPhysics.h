@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file CameraPhysics.h
+\author Ryan Lim Rui An
+\par email: 150577L@mymail.nyp.edu.sg
+\brief
+Class to define camera physics
+*/
+/****************************************************************************/
 #ifndef CAMERAPHYSICS_H_
 #define CAMERAPHYSICS_H_
 

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="dir_3e9a88fd3e1bb8927d13bc19ba8ee6f7" kind="dir">
+    <compoundname>irrKlang-1.5.0/include</compoundname>
+    <innerfile refid="ik__ESoundEngineOptions_8h">ik_ESoundEngineOptions.h</innerfile>
+    <innerfile refid="ik__ESoundOutputDrivers_8h">ik_ESoundOutputDrivers.h</innerfile>
+    <innerfile refid="ik__EStreamModes_8h">ik_EStreamModes.h</innerfile>
+    <innerfile refid="ik__IAudioRecorder_8h">ik_IAudioRecorder.h</innerfile>
+    <innerfile refid="ik__IAudioStream_8h">ik_IAudioStream.h</innerfile>
+    <innerfile refid="ik__IAudioStreamLoader_8h">ik_IAudioStreamLoader.h</innerfile>
+    <innerfile refid="ik__IFileFactory_8h">ik_IFileFactory.h</innerfile>
+    <innerfile refid="ik__IFileReader_8h">ik_IFileReader.h</innerfile>
+    <innerfile refid="ik__IRefCounted_8h">ik_IRefCounted.h</innerfile>
+    <innerfile refid="ik__irrKlangTypes_8h">ik_irrKlangTypes.h</innerfile>
+    <innerfile refid="ik__ISound_8h">ik_ISound.h</innerfile>
+    <innerfile refid="ik__ISoundDeviceList_8h">ik_ISoundDeviceList.h</innerfile>
+    <innerfile refid="ik__ISoundEffectControl_8h">ik_ISoundEffectControl.h</innerfile>
+    <innerfile refid="ik__ISoundEngine_8h">ik_ISoundEngine.h</innerfile>
+    <innerfile refid="ik__ISoundMixedOutputReceiver_8h">ik_ISoundMixedOutputReceiver.h</innerfile>
+    <innerfile refid="ik__ISoundSource_8h">ik_ISoundSource.h</innerfile>
+    <innerfile refid="ik__ISoundStopEventReceiver_8h">ik_ISoundStopEventReceiver.h</innerfile>
+    <innerfile refid="ik__IVirtualRefCounted_8h">ik_IVirtualRefCounted.h</innerfile>
+    <innerfile refid="ik__SAudioStreamFormat_8h">ik_SAudioStreamFormat.h</innerfile>
+    <innerfile refid="ik__vec3d_8h">ik_vec3d.h</innerfile>
+    <innerfile refid="irrKlang_8h">irrKlang.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="irrKlang-1.5.0/include/"/>
+  </compounddef>
+</doxygen>

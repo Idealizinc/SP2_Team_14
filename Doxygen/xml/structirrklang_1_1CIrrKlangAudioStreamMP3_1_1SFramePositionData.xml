@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structirrklang_1_1CIrrKlangAudioStreamMP3_1_1SFramePositionData" kind="struct" language="C++" prot="protected">
+    <compoundname>irrklang::CIrrKlangAudioStreamMP3::SFramePositionData</compoundname>
+    <includes refid="CIrrKlangAudioStreamMP3_8h" local="no">CIrrKlangAudioStreamMP3.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structirrklang_1_1CIrrKlangAudioStreamMP3_1_1SFramePositionData_1a423af13d56b0406153ad0c03eef0fdcd" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int irrklang::CIrrKlangAudioStreamMP3::SFramePositionData::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="95" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" bodystart="95" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="15" endline="84">irrklang::CIrrKlangAudioStreamMP3::CIrrKlangAudioStreamMP3</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structirrklang_1_1CIrrKlangAudioStreamMP3_1_1SFramePositionData_1a0c24559f19dfbf618508bf37f7b38e1d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int irrklang::CIrrKlangAudioStreamMP3::SFramePositionData::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="96" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" bodystart="96" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="15" endline="84">irrklang::CIrrKlangAudioStreamMP3::CIrrKlangAudioStreamMP3</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="585">
+        <label>int</label>
+      </node>
+      <node id="584">
+        <label>irrklang::CIrrKlangAudioStreamMP3::SFramePositionData</label>
+        <link refid="structirrklang_1_1CIrrKlangAudioStreamMP3_1_1SFramePositionData"/>
+        <childnode refid="585" relation="usage">
+          <edgelabel>offset</edgelabel>
+          <edgelabel>size</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="94" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" bodystart="93" bodyend="97"/>
+    <listofallmembers>
+      <member refid="structirrklang_1_1CIrrKlangAudioStreamMP3_1_1SFramePositionData_1a423af13d56b0406153ad0c03eef0fdcd" prot="public" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3::SFramePositionData</scope><name>offset</name></member>
+      <member refid="structirrklang_1_1CIrrKlangAudioStreamMP3_1_1SFramePositionData_1a0c24559f19dfbf618508bf37f7b38e1d" prot="public" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3::SFramePositionData</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

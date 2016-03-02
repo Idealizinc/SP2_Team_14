@@ -1,0 +1,22 @@
+<map id="Mtx44::SetToRotation" name="Mtx44::SetToRotation">
+<area shape="rect" id="node2" href="$classMS.html#a6ce592114042b920b648bca5519690cd" title="Multiply the top matrix with a rotation matrix based on the following parameters. ..." alt="" coords="219,251,307,278"/>
+<area shape="rect" id="node21" href="$classCamera2.html#a1a54eeb46692c8806b7abea38a6301f3" title="Camera2::Update" alt="" coords="201,302,324,328"/>
+<area shape="rect" id="node3" href="$classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="SP2_Scene::Render" alt="" coords="1185,327,1325,354"/>
+<area shape="rect" id="node4" href="$classSP2__Scene.html#af1c59e2fb386a9a8417e88f59cee95ba" title="SP2_Scene::RenderBase" alt="" coords="679,124,850,151"/>
+<area shape="rect" id="node6" href="$classSP2__Scene.html#a3e26f7a9aa903c8f659e341be2b65ccf" title="SP2_Scene::RenderGate" alt="" coords="403,74,571,100"/>
+<area shape="rect" id="node7" href="$classSP2__Scene.html#a5b8cc318fb5a712285abce0fad2a3dba" title="SP2_Scene::RenderImageInMap" alt="" coords="927,74,1137,100"/>
+<area shape="rect" id="node8" href="$classSP2__Scene.html#ae91e39146c4052e9e959cb1ff6a2890a" title="SP2_Scene::RenderImageOn\lScreen" alt="" coords="391,328,583,369"/>
+<area shape="rect" id="node9" href="$classSP2__Scene.html#a68b65e14328ef7b87a9e1c516499ee44" title="SP2_Scene::RenderShip" alt="" coords="681,226,848,252"/>
+<area shape="rect" id="node14" href="$classSP2__Scene.html#a523ce5a26d1efa53a575081ebb2a2919" title="SP2_Scene::RenderMeshOnScreen" alt="" coords="372,415,603,442"/>
+<area shape="rect" id="node15" href="$classSP2__Scene.html#a934794f65e93751b1e1106a85a08ae73" title="SP2_Scene::RenderRocks" alt="" coords="676,74,853,100"/>
+<area shape="rect" id="node16" href="$classParticle.html#abad5adaed21693c0bed86aca19f982df" title="Particle::RenderSkybox" alt="" coords="408,508,567,535"/>
+<area shape="rect" id="node18" href="$classSP2__Scene.html#a2de18ab05abb2a3ea98dbcadb4f518a7" title="SP2_Scene::RenderSkybox" alt="" coords="940,606,1124,632"/>
+<area shape="rect" id="node19" href="$classSP2__Scene.html#a37c188d23f49eb676fbf86144dd1ac94" title="SP2_Scene::RenderSpaceMap" alt="" coords="386,226,589,252"/>
+<area shape="rect" id="node20" href="$classSP2__Scene.html#a4105499f6a2e4cc7eeedac1af5248126" title="SP2_Scene::RenderWeaponInHand" alt="" coords="651,580,879,607"/>
+<area shape="rect" id="node5" href="$classSP2__Scene.html#a3cd10ebc989e3f3e2f84f59d74b76ef2" title="SP2_Scene::GameState" alt="" coords="949,175,1115,202"/>
+<area shape="rect" id="node10" href="$classSP2__Scene.html#a6448011a887d25ea57d981ca7753810b" title="SP2_Scene::RenderWepScreen" alt="" coords="661,479,869,506"/>
+<area shape="rect" id="node11" href="$classSP2__Scene.html#aeb5b6dadeb1ee8d943f2e52e69d6d9e0" title="SP2_Scene::RenderUI" alt="" coords="956,428,1108,455"/>
+<area shape="rect" id="node12" href="$classSP2__Scene.html#a6d8a3b4fea5fd0e17f86bc4f5a8ce315" title="SP2_Scene::RenderTeleporter" alt="" coords="666,428,863,455"/>
+<area shape="rect" id="node13" href="$classSP2__Scene.html#a84a5528561c5696e8f2161da2820a419" title="SP2_Scene::RenderGateText" alt="" coords="668,276,861,303"/>
+<area shape="rect" id="node17" href="$classParticle.html#aff7cd61e7a2b82cebc3e9494fa54aa5d" title="Particle::Render" alt="" coords="707,530,822,556"/>
+</map>

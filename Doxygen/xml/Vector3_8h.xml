@@ -1,0 +1,378 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="Vector3_8h" kind="file" language="C++">
+    <compoundname>Vector3.h</compoundname>
+    <includes refid="MyMath_8h" local="yes">MyMath.h</includes>
+    <includes local="no">iostream</includes>
+    <includedby refid="Vertex_8h" local="yes">ComGLab/Source/Vertex.h</includedby>
+    <includedby refid="Camera_8h" local="yes">ComGLab/Source/Camera.h</includedby>
+    <includedby refid="Raycast_8h" local="yes">ComGLab/Source/Raycast.h</includedby>
+    <includedby refid="Robot_8h" local="yes">ComGLab/Source/Robot.h</includedby>
+    <includedby refid="LoadOBJ_8h" local="yes">ComGLab/Source/LoadOBJ.h</includedby>
+    <includedby refid="Mtx44_8h" local="yes">Common/Source/Mtx44.h</includedby>
+    <includedby refid="Vector3_8cpp" local="yes">Common/Source/Vector3.cpp</includedby>
+    <incdepgraph>
+      <node id="2466">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="2467" relation="include">
+        </childnode>
+        <childnode refid="2468" relation="include">
+        </childnode>
+        <childnode refid="2469" relation="include">
+        </childnode>
+        <childnode refid="2470" relation="include">
+        </childnode>
+      </node>
+      <node id="2467">
+        <label>cmath</label>
+      </node>
+      <node id="2465">
+        <label>Common/Source/Vector3.h</label>
+        <link refid="Vector3.h"/>
+        <childnode refid="2466" relation="include">
+        </childnode>
+        <childnode refid="2471" relation="include">
+        </childnode>
+      </node>
+      <node id="2468">
+        <label>exception</label>
+      </node>
+      <node id="2469">
+        <label>ctime</label>
+      </node>
+      <node id="2470">
+        <label>cstdlib</label>
+      </node>
+      <node id="2471">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2492">
+        <label>ComGLab/Source/Camera2.h</label>
+        <link refid="Camera2_8h"/>
+        <childnode refid="2493" relation="include">
+        </childnode>
+      </node>
+      <node id="2481">
+        <label>ComGLab/Source/LoadOBJ.h</label>
+        <link refid="LoadOBJ_8h"/>
+        <childnode refid="2482" relation="include">
+        </childnode>
+        <childnode refid="2483" relation="include">
+        </childnode>
+      </node>
+      <node id="2485">
+        <label>ComGLab/Source/Mesh.cpp</label>
+        <link refid="Mesh_8cpp"/>
+      </node>
+      <node id="2494">
+        <label>ComGLab/Source/Raycast.h</label>
+        <link refid="Raycast_8h"/>
+        <childnode refid="2495" relation="include">
+        </childnode>
+        <childnode refid="2501" relation="include">
+        </childnode>
+      </node>
+      <node id="2502">
+        <label>Common/Source/Mtx44.h</label>
+        <link refid="Mtx44_8h"/>
+        <childnode refid="2491" relation="include">
+        </childnode>
+        <childnode refid="2493" relation="include">
+        </childnode>
+        <childnode refid="2490" relation="include">
+        </childnode>
+        <childnode refid="2479" relation="include">
+        </childnode>
+        <childnode refid="2486" relation="include">
+        </childnode>
+        <childnode refid="2477" relation="include">
+        </childnode>
+        <childnode refid="2503" relation="include">
+        </childnode>
+        <childnode refid="2505" relation="include">
+        </childnode>
+      </node>
+      <node id="2488">
+        <label>ComGLab/Source/Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="2489" relation="include">
+        </childnode>
+        <childnode refid="2491" relation="include">
+        </childnode>
+        <childnode refid="2492" relation="include">
+        </childnode>
+      </node>
+      <node id="2479">
+        <label>ComGLab/Source/Particle.cpp</label>
+        <link refid="Particle_8cpp"/>
+      </node>
+      <node id="2504">
+        <label>Common/Source/MatrixStack.cpp</label>
+        <link refid="MatrixStack_8cpp"/>
+      </node>
+      <node id="2495">
+        <label>ComGLab/Source/WeaponSystem.h</label>
+        <link refid="WeaponSystem_8h"/>
+        <childnode refid="2475" relation="include">
+        </childnode>
+        <childnode refid="2496" relation="include">
+        </childnode>
+        <childnode refid="2500" relation="include">
+        </childnode>
+      </node>
+      <node id="2472">
+        <label>Common/Source/Vector3.h</label>
+        <link refid="Vector3.h"/>
+        <childnode refid="2473" relation="include">
+        </childnode>
+        <childnode refid="2488" relation="include">
+        </childnode>
+        <childnode refid="2494" relation="include">
+        </childnode>
+        <childnode refid="2496" relation="include">
+        </childnode>
+        <childnode refid="2481" relation="include">
+        </childnode>
+        <childnode refid="2502" relation="include">
+        </childnode>
+        <childnode refid="2506" relation="include">
+        </childnode>
+      </node>
+      <node id="2474">
+        <label>ComGLab/Source/Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="2475" relation="include">
+        </childnode>
+        <childnode refid="2478" relation="include">
+        </childnode>
+        <childnode refid="2480" relation="include">
+        </childnode>
+      </node>
+      <node id="2505">
+        <label>Common/Source/Mtx44.cpp</label>
+        <link refid="Mtx44_8cpp"/>
+      </node>
+      <node id="2477">
+        <label>ComGLab/Source/SP2_Scene.cpp</label>
+        <link refid="SP2__Scene_8cpp"/>
+      </node>
+      <node id="2487">
+        <label>ComGLab/Source/Utility.cpp</label>
+        <link refid="Utility_8cpp"/>
+      </node>
+      <node id="2476">
+        <label>ComGLab/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="2501">
+        <label>ComGLab/Source/Raycast.cpp</label>
+        <link refid="Raycast_8cpp"/>
+      </node>
+      <node id="2484">
+        <label>ComGLab/Source/MeshBuilder.cpp</label>
+        <link refid="MeshBuilder_8cpp"/>
+      </node>
+      <node id="2482">
+        <label>ComGLab/Source/LoadOBJ.cpp</label>
+        <link refid="LoadOBJ_8cpp"/>
+      </node>
+      <node id="2473">
+        <label>ComGLab/Source/Vertex.h</label>
+        <link refid="Vertex_8h"/>
+        <childnode refid="2474" relation="include">
+        </childnode>
+        <childnode refid="2481" relation="include">
+        </childnode>
+        <childnode refid="2485" relation="include">
+        </childnode>
+        <childnode refid="2483" relation="include">
+        </childnode>
+        <childnode refid="2486" relation="include">
+        </childnode>
+      </node>
+      <node id="2486">
+        <label>ComGLab/Source/Utility.h</label>
+        <link refid="Utility_8h"/>
+        <childnode refid="2479" relation="include">
+        </childnode>
+        <childnode refid="2477" relation="include">
+        </childnode>
+        <childnode refid="2487" relation="include">
+        </childnode>
+      </node>
+      <node id="2475">
+        <label>ComGLab/Source/SP2_Scene.h</label>
+        <link refid="SP2__Scene_8h"/>
+        <childnode refid="2476" relation="include">
+        </childnode>
+        <childnode refid="2477" relation="include">
+        </childnode>
+      </node>
+      <node id="2500">
+        <label>ComGLab/Source/WeaponSystem.cpp</label>
+        <link refid="WeaponSystem_8cpp"/>
+      </node>
+      <node id="2493">
+        <label>ComGLab/Source/Camera2.cpp</label>
+        <link refid="Camera2_8cpp"/>
+      </node>
+      <node id="2498">
+        <label>ComGLab/Source/RobotManager.cpp</label>
+        <link refid="RobotManager_8cpp"/>
+      </node>
+      <node id="2490">
+        <label>ComGLab/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="2489">
+        <label>ComGLab/Source/Camera3.h</label>
+        <link refid="Camera3_8h"/>
+        <childnode refid="2475" relation="include">
+        </childnode>
+        <childnode refid="2478" relation="include">
+        </childnode>
+        <childnode refid="2490" relation="include">
+        </childnode>
+      </node>
+      <node id="2506">
+        <label>Common/Source/Vector3.cpp</label>
+        <link refid="Vector3_8cpp"/>
+      </node>
+      <node id="2496">
+        <label>ComGLab/Source/Robot.h</label>
+        <link refid="Robot_8h"/>
+        <childnode refid="2475" relation="include">
+        </childnode>
+        <childnode refid="2497" relation="include">
+        </childnode>
+        <childnode refid="2499" relation="include">
+        </childnode>
+        <childnode refid="2477" relation="include">
+        </childnode>
+      </node>
+      <node id="2503">
+        <label>Common/Source/MatrixStack.h</label>
+        <link refid="MatrixStack_8h"/>
+        <childnode refid="2475" relation="include">
+        </childnode>
+        <childnode refid="2478" relation="include">
+        </childnode>
+        <childnode refid="2504" relation="include">
+        </childnode>
+      </node>
+      <node id="2497">
+        <label>ComGLab/Source/RobotManager.h</label>
+        <link refid="RobotManager_8h"/>
+        <childnode refid="2475" relation="include">
+        </childnode>
+        <childnode refid="2498" relation="include">
+        </childnode>
+      </node>
+      <node id="2478">
+        <label>ComGLab/Source/Particle.h</label>
+        <link refid="Particle_8h"/>
+        <childnode refid="2476" relation="include">
+        </childnode>
+        <childnode refid="2479" relation="include">
+        </childnode>
+      </node>
+      <node id="2480">
+        <label>ComGLab/Source/Light.cpp</label>
+        <link refid="Light_8cpp"/>
+      </node>
+      <node id="2499">
+        <label>ComGLab/Source/Robot.cpp</label>
+        <link refid="Robot_8cpp"/>
+      </node>
+      <node id="2483">
+        <label>ComGLab/Source/MeshBuilder.h</label>
+        <link refid="MeshBuilder_8h"/>
+        <childnode refid="2484" relation="include">
+        </childnode>
+        <childnode refid="2479" relation="include">
+        </childnode>
+        <childnode refid="2477" relation="include">
+        </childnode>
+      </node>
+      <node id="2491">
+        <label>ComGLab/Source/Camera.cpp</label>
+        <link refid="Camera_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structVector3" prot="public">Vector3</innerclass>
+    <briefdescription>
+<para>Struct to define a 3D vector. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Wen Sheng Tang </para></simplesect>
+<simplesect kind="par"><title>email: tang_wen_sheng@nyp.edu.sg</title><para></para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VECTOR3_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VECTOR3_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MyMath_8h" kindref="compound">MyMath.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(<sp/>disable:<sp/>4290<sp/>)<sp/>//for<sp/>throw(DivideByZero)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="structVector3" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structVector3" kindref="compound">Vector3</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27" refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" kindref="member">x</ref>,<sp/><ref refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" kindref="member">y</ref>,<sp/><ref refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structVector3_1abdc9a7f223e3628ed1cbccd107d49c44" kindref="member">IsEqual</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>b)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3_1afa5e0c801fc2c8a820a54ea99302fe08" kindref="member">Vector3</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>0.0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>0.0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>0.0);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3_1afa5e0c801fc2c8a820a54ea99302fe08" kindref="member">Vector3</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/>&amp;rhs);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3_1a5545e13e2e2861ece8f14b12a6a8101f" kindref="member">~Vector3</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structVector3_1a9c25d604bd52b162cfcb56302ef032bb" kindref="member">Set</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>0<sp/>);<sp/></highlight><highlight class="comment">//Set<sp/>all<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structVector3_1ac6c9b941ccefd7744eace77ceab16b56" kindref="member">SetZero</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);<sp/></highlight><highlight class="comment">//Set<sp/>all<sp/>data<sp/>to<sp/>zero</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structVector3_1affeb6d657b146584b5cb0b42a0d6eaeb" kindref="member">IsZero</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//Check<sp/>if<sp/>data<sp/>is<sp/>zero</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="structVector3_1a90c345c2a67d220a474a6f209102634d" kindref="member">operator+</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/>rhs<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//Vector<sp/>addition</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/><ref refid="structVector3_1a339c80afd026abb2e35a4ae88301928b" kindref="member">operator+=</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/>rhs<sp/>);<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="structVector3_1a7b7b7aa32bab9c687c193ffe2b169252" kindref="member">operator-</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/>rhs<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//Vector<sp/>subtraction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/><ref refid="structVector3_1af0c657bdd493fcece630dc985a8e7378" kindref="member">operator-=</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/>rhs<sp/>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="structVector3_1a7b7b7aa32bab9c687c193ffe2b169252" kindref="member">operator-</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//Unary<sp/>negation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="structVector3_1ab8bb1a236776d951a2e43b3ca9448bb2" kindref="member">operator*</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scalar<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//Scalar<sp/>multiplication</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/><ref refid="structVector3_1ab337fe4b0c5fd44657f42427e265c982" kindref="member">operator*=</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scalar<sp/>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structVector3_1ae084cfb19c537457f52bfb3cb3a7054d" kindref="member">operator==</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/>rhs<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//Equality<sp/>check</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structVector3_1a27ba9abc0d1b5cd47a0365a4ebcfeb7c" kindref="member">operator!= </ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/>rhs<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//Inequality<sp/>check</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/><ref refid="structVector3_1afbfdb69cef54e84d72d05c3c141e315f" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/>rhs);<sp/></highlight><highlight class="comment">//Assignment<sp/>operator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structVector3_1a200024a8442329de9a625ed58ffe7075" kindref="member">Length</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//Get<sp/>magnitude</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structVector3_1a87c90f81b4044393fe18f7a1e90f26df" kindref="member">LengthSquared</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//Get<sp/>square<sp/>of<sp/>magnitude</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structVector3_1a71b1271deb064c65f9dc7dba638c5b57" kindref="member">Dot</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/>rhs<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//Dot<sp/>product</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="structVector3_1aa1cdc5357009b47fe585ddd61e263aad" kindref="member">Cross</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/>rhs<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//Cross<sp/>product</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Return<sp/>a<sp/>copy<sp/>of<sp/>this<sp/>vector,<sp/>normalized</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Throw<sp/>a<sp/>divide<sp/>by<sp/>zero<sp/>exception<sp/>if<sp/>normalizing<sp/>a<sp/>zero<sp/>vector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="structVector3_1a2da0f00c5529bced69763320dac9c414" kindref="member">Normalized</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>throw(<sp/><ref refid="classDivideByZero" kindref="compound">DivideByZero</ref><sp/>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Normalize<sp/>this<sp/>vector<sp/>and<sp/>return<sp/>a<sp/>reference<sp/>to<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Throw<sp/>a<sp/>divide<sp/>by<sp/>zero<sp/>exception<sp/>if<sp/>normalizing<sp/>a<sp/>zero<sp/>vector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/><ref refid="structVector3_1aaef4f25a38878a640ab4a48002a7eff8" kindref="member">Normalize</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/>throw(<sp/>DivideByZero<sp/>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>friend<sp/><ref refid="namespacestd" kindref="compound">std</ref>::ostream&amp;<sp/>operator&lt;&lt;(<sp/><ref refid="namespacestd" kindref="compound">std</ref>::ostream&amp;<sp/>os,<sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/>rhs);<sp/></highlight><highlight class="comment">//print<sp/>to<sp/>ostream</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>friend<sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/>operator*(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scalar,<sp/>const<sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/>rhs<sp/>);<sp/></highlight><highlight class="comment">//what<sp/>is<sp/>this<sp/>for?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//VECTOR3_H</highlight></codeline>
+    </programlisting>
+    <location file="Common/Source/Vector3.h"/>
+  </compounddef>
+</doxygen>

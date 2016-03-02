@@ -1,0 +1,648 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="namespaceMath" kind="namespace" language="C++">
+    <compoundname>Math</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceMath_1a5ee876d5cb049f0b3b71f3c54ed8efa0" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float Math::EPSILON</definition>
+        <argsstring></argsstring>
+        <name>EPSILON</name>
+        <initializer>=	0.00001f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/MyMath.h" line="27" column="1" bodyfile="Common/Source/MyMath.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classMtx44_1aac1ba21ddfc5f3c24baa4f58d9c5c256" compoundref="Mtx44_8cpp" startline="139" endline="195">Mtx44::GetInverse</referencedby>
+        <referencedby refid="structVector3_1abdc9a7f223e3628ed1cbccd107d49c44" compoundref="Vector3_8cpp" startline="13" endline="16">Vector3::IsEqual</referencedby>
+        <referencedby refid="structVector3_1aaef4f25a38878a640ab4a48002a7eff8" compoundref="Vector3_8cpp" startline="358" endline="367">Vector3::Normalize</referencedby>
+        <referencedby refid="structVector3_1a2da0f00c5529bced69763320dac9c414" compoundref="Vector3_8cpp" startline="337" endline="343">Vector3::Normalized</referencedby>
+        <referencedby refid="classMtx44_1ac0587ffb5ff9fd58ad5768d28fc06574" compoundref="Mtx44_8cpp" startline="319" endline="341">Mtx44::SetToRotation</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceMath_1af8c064b6b688407b9999ee677efd715d" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float Math::PI</definition>
+        <argsstring></argsstring>
+        <name>PI</name>
+        <initializer>= 3.1415926535897932384626433832795f</initializer>
+        <briefdescription>
+<para>Used for error checking. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/MyMath.h" line="28" column="1" bodyfile="Common/Source/MyMath.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="namespaceMath_1a1a1d364c850f9d66fda85cf71598bbe5" compoundref="MyMath_8h" startline="64" endline="67">RadianToDegree</referencedby>
+        <referencedby refid="classMtx44_1ac6e6521111d78ff36d539bf111a902c6" compoundref="Mtx44_8cpp" startline="466" endline="472">Mtx44::SetToPerspective</referencedby>
+        <referencedby refid="classMtx44_1ac0587ffb5ff9fd58ad5768d28fc06574" compoundref="Mtx44_8cpp" startline="319" endline="341">Mtx44::SetToRotation</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceMath_1a52cf11c3d21a83ced7f3e73d73b438bf" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float Math::TWO_PI</definition>
+        <argsstring></argsstring>
+        <name>TWO_PI</name>
+        <initializer>= <ref refid="namespaceMath_1af8c064b6b688407b9999ee677efd715d" kindref="member">PI</ref> * 2.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/MyMath.h" line="29" column="1" bodyfile="Common/Source/MyMath.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceMath_1a6475d0f7b5d131ca9bacd916606bf295" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float Math::HALF_PI</definition>
+        <argsstring></argsstring>
+        <name>HALF_PI</name>
+        <initializer>= <ref refid="namespaceMath_1af8c064b6b688407b9999ee677efd715d" kindref="member">PI</ref> / 2.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/MyMath.h" line="30" column="1" bodyfile="Common/Source/MyMath.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceMath_1aceaa8f6fecb9720eb0e13330bf45d710" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float Math::QUARTER_PI</definition>
+        <argsstring></argsstring>
+        <name>QUARTER_PI</name>
+        <initializer>= <ref refid="namespaceMath_1af8c064b6b688407b9999ee677efd715d" kindref="member">PI</ref> / 4.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/MyMath.h" line="31" column="1" bodyfile="Common/Source/MyMath.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceMath_1ac91173ab2efdf7313fe7aaeb6cb44cf6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float Math::FAbs</definition>
+        <argsstring>(float value)</argsstring>
+        <name>FAbs</name>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/MyMath.h" line="33" column="1" bodyfile="Common/Source/MyMath.h" bodystart="33" bodyend="36"/>
+        <referencedby refid="classMtx44_1aac1ba21ddfc5f3c24baa4f58d9c5c256" compoundref="Mtx44_8cpp" startline="139" endline="195">Mtx44::GetInverse</referencedby>
+        <referencedby refid="classMtx44_1ac0587ffb5ff9fd58ad5768d28fc06574" compoundref="Mtx44_8cpp" startline="319" endline="341">Mtx44::SetToRotation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceMath_1ac04b987cc6c574a059e68cb58f58c09a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float Math::DegreeToRadian</definition>
+        <argsstring>(float value)</argsstring>
+        <name>DegreeToRadian</name>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Converts from degrees to radians. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- an angle in degress</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the angle in radians </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/MyMath.h" line="49" column="1" bodyfile="Common/Source/MyMath.h" bodystart="49" bodyend="52"/>
+        <referencedby refid="classCamera3_1a72d040ce3726a7d6439efa15734105a5" compoundref="Camera3_8cpp" startline="217" endline="240">Camera3::cameraMovement</referencedby>
+        <referencedby refid="classCamera3_1a99440cc4eb40bfc3bbad15bfe08c8a55" compoundref="Camera3_8cpp" startline="257" endline="409">Camera3::cameraMovement2</referencedby>
+        <referencedby refid="MeshBuilder_8cpp_1a452206fa7621781c2b35fcd17b816239" compoundref="MeshBuilder_8cpp" startline="257" endline="260">CircleX</referencedby>
+        <referencedby refid="MeshBuilder_8cpp_1aede6465b0e45fc027ae0e8ec50d68ffb" compoundref="MeshBuilder_8cpp" startline="262" endline="265">CircleZ</referencedby>
+        <referencedby refid="classMeshBuilder_1a334f7cc0723906edca201cf80bc865ba" compoundref="MeshBuilder_8cpp" startline="572" endline="620">MeshBuilder::GenerateHalfTorus</referencedby>
+        <referencedby refid="classMeshBuilder_1ae78de92278560e1d9d33bad688f3ac7f" compoundref="MeshBuilder_8cpp" startline="524" endline="570">MeshBuilder::GenerateTorus</referencedby>
+        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">Particle::initLights</referencedby>
+        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="672" endline="757">SP2_Scene::initLights</referencedby>
+        <referencedby refid="classSP2__Scene_1a934794f65e93751b1e1106a85a08ae73" compoundref="SP2__Scene_8cpp" startline="2140" endline="2246">SP2_Scene::RenderRocks</referencedby>
+        <referencedby refid="classSP2__Scene_1a37c188d23f49eb676fbf86144dd1ac94" compoundref="SP2__Scene_8cpp" startline="1004" endline="1135">SP2_Scene::RenderSpaceMap</referencedby>
+        <referencedby refid="classCamera3_1a81897b566fc3a2142c40276eb7c6a57b" compoundref="Camera3_8cpp" startline="158" endline="179">Camera3::rotateCamera</referencedby>
+        <referencedby refid="MeshBuilder_8cpp_1aef75a362a1bdb0980ed4abcf8241da69" compoundref="MeshBuilder_8cpp" startline="370" endline="373">SphereX</referencedby>
+        <referencedby refid="MeshBuilder_8cpp_1af7655f1bbe33f114c8c2457bb80d8d56" compoundref="MeshBuilder_8cpp" startline="375" endline="378">SphereY</referencedby>
+        <referencedby refid="MeshBuilder_8cpp_1a635e807e82196e114ec59993fe28838a" compoundref="MeshBuilder_8cpp" startline="380" endline="383">SphereZ</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceMath_1a1a1d364c850f9d66fda85cf71598bbe5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float Math::RadianToDegree</definition>
+        <argsstring>(float value)</argsstring>
+        <name>RadianToDegree</name>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Converts from radians to degrees. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- an angle in radians</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the angle in degrees </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/MyMath.h" line="64" column="1" bodyfile="Common/Source/MyMath.h" bodystart="64" bodyend="67"/>
+        <references refid="namespaceMath_1af8c064b6b688407b9999ee677efd715d" compoundref="MyMath_8h" startline="28">PI</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceMath_1a6cc12fd546c2f3dbebade9e4234b5f7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Math::Wrap</definition>
+        <argsstring>(T val, T minVal, T maxVal)</argsstring>
+        <name>Wrap</name>
+        <param>
+          <type>T</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>minVal</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>maxVal</declname>
+        </param>
+        <briefdescription>
+<para>Keeps a value between a min and max point. If it goes to low, it will become the max. If the value gets too high, it will become the min. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the value to Wrap. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the minimum value allowed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the maximum value allowed.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The wrapped value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/MyMath.h" line="83" column="1" bodyfile="Common/Source/MyMath.h" bodystart="83" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceMath_1af8dc69787ee8df1ea409e97f53fce3cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Math::Clamp</definition>
+        <argsstring>(T val, T minVal, T maxVal)</argsstring>
+        <name>Clamp</name>
+        <param>
+          <type>T</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>minVal</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>maxVal</declname>
+        </param>
+        <briefdescription>
+<para>Keeps a value between a min and max point. If it goes to low, it will become the min. If the value gets too high, it will become the max. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the value to clamp. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the minimum value allowed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the maximum value allowed.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The clampped value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/MyMath.h" line="111" column="1" bodyfile="Common/Source/MyMath.h" bodystart="111" bodyend="123"/>
+        <referencedby refid="classCamera3_1a81897b566fc3a2142c40276eb7c6a57b" compoundref="Camera3_8cpp" startline="158" endline="179">Camera3::rotateCamera</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceMath_1af308aea473e7e8e6352e1bd452e11df9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Math::Min</definition>
+        <argsstring>(T x, T y)</argsstring>
+        <name>Min</name>
+        <param>
+          <type>T</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Returns the smaller of the two values. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the first value to check </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the second value to check</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The smaller of the two values </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/MyMath.h" line="137" column="1" bodyfile="Common/Source/MyMath.h" bodystart="137" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceMath_1af25f5d487204a1402974cb46444cfc74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Math::Max</definition>
+        <argsstring>(T x, T y)</argsstring>
+        <name>Max</name>
+        <param>
+          <type>T</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Returns the larger of the two values. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the first value to check </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the second value to check</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The larger of the two values </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/MyMath.h" line="154" column="1" bodyfile="Common/Source/MyMath.h" bodystart="154" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceMath_1ae3a0c56b76d652066a652f8285494761" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Math::Square</definition>
+        <argsstring>(T x)</argsstring>
+        <name>Square</name>
+        <param>
+          <type>T</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Returns the square of a value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the value</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The square of the value </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/MyMath.h" line="170" column="1" bodyfile="Common/Source/MyMath.h" bodystart="170" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceMath_1a33d6cf633b5ddf82fff77d1d40140b85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Math::InitRNG</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitRNG</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize Random Number Generator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/MyMath.h" line="184" column="1" bodyfile="Common/Source/MyMath.h" bodystart="184" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceMath_1a7ab621ad66eb2f61e2b9cff366fed0e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>unsigned Math::RandInt</definition>
+        <argsstring>(void)</argsstring>
+        <name>RandInt</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Return a random integer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Random integer </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/MyMath.h" line="199" column="1" bodyfile="Common/Source/MyMath.h" bodystart="199" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceMath_1a7609565ca241d0f70dfd677a7fdac281" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Math::RandIntMinMax</definition>
+        <argsstring>(int min, int max)</argsstring>
+        <name>RandIntMinMax</name>
+        <param>
+          <type>int</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+<para>Return a random integer between min and max. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- minimum range </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- maximum range</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Random integer </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/MyMath.h" line="215" column="1" bodyfile="Common/Source/MyMath.h" bodystart="215" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceMath_1a9b2e7be835afb6d9fe78f6c1efa26998" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float Math::RandFloat</definition>
+        <argsstring>(void)</argsstring>
+        <name>RandFloat</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Return a random float. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Random float </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/MyMath.h" line="231" column="1" bodyfile="Common/Source/MyMath.h" bodystart="231" bodyend="234"/>
+        <referencedby refid="namespaceMath_1aa21138cd1585c3dab1e901c4ead9204d" compoundref="MyMath_8h" startline="247" endline="251">RandFloatMinMax</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceMath_1aa21138cd1585c3dab1e901c4ead9204d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float Math::RandFloatMinMax</definition>
+        <argsstring>(float min, float max)</argsstring>
+        <name>RandFloatMinMax</name>
+        <param>
+          <type>float</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+<para>Return a random float between min and max. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- minimum range </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- maximum range</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Random float </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/MyMath.h" line="247" column="1" bodyfile="Common/Source/MyMath.h" bodystart="247" bodyend="251"/>
+        <references refid="namespaceMath_1a9b2e7be835afb6d9fe78f6c1efa26998" compoundref="MyMath_8h" startline="231" endline="234">RandFloat</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="namespaceMath" kindref="compound">Math</ref> namespace. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Common/Source/MyMath.h" line="25" column="1"/>
+  </compounddef>
+</doxygen>

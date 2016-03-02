@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="LoadTGA_8h" kind="file" language="C++">
+    <compoundname>LoadTGA.h</compoundname>
+    <includedby refid="SP2__Scene_8h" local="yes">ComGLab/Source/SP2_Scene.h</includedby>
+    <includedby refid="Particle_8h" local="yes">ComGLab/Source/Particle.h</includedby>
+    <includedby refid="LoadTGA_8cpp" local="yes">ComGLab/Source/LoadTGA.cpp</includedby>
+    <invincdepgraph>
+      <node id="1774">
+        <label>ComGLab/Source/LoadTGA.cpp</label>
+        <link refid="LoadTGA_8cpp"/>
+      </node>
+      <node id="1773">
+        <label>ComGLab/Source/Particle.cpp</label>
+        <link refid="Particle_8cpp"/>
+      </node>
+      <node id="1771">
+        <label>ComGLab/Source/SP2_Scene.cpp</label>
+        <link refid="SP2__Scene_8cpp"/>
+      </node>
+      <node id="1770">
+        <label>ComGLab/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="1768">
+        <label>ComGLab/Source/LoadTGA.h</label>
+        <link refid="LoadTGA.h"/>
+        <childnode refid="1769" relation="include">
+        </childnode>
+        <childnode refid="1772" relation="include">
+        </childnode>
+        <childnode refid="1774" relation="include">
+        </childnode>
+      </node>
+      <node id="1769">
+        <label>ComGLab/Source/SP2_Scene.h</label>
+        <link refid="SP2__Scene_8h"/>
+        <childnode refid="1770" relation="include">
+        </childnode>
+        <childnode refid="1771" relation="include">
+        </childnode>
+      </node>
+      <node id="1772">
+        <label>ComGLab/Source/Particle.h</label>
+        <link refid="Particle_8h"/>
+        <childnode refid="1770" relation="include">
+        </childnode>
+        <childnode refid="1773" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="LoadTGA_8h_1a459a80ca6de67a1e3493bfb66ae317e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GLuint</type>
+        <definition>GLuint LoadTGA</definition>
+        <argsstring>(const char *file_path)</argsstring>
+        <name>LoadTGA</name>
+        <param>
+          <type>const char *</type>
+          <declname>file_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/LoadTGA.h" line="4" column="1" bodyfile="ComGLab/Source/LoadTGA.cpp" bodystart="8" bodyend="69"/>
+        <referencedby refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" compoundref="Particle_8cpp" startline="18" endline="95">Particle::Init</referencedby>
+        <referencedby refid="classSP2__Scene_1aea95ab9454db62830823d42d053c191e" compoundref="SP2__Scene_8cpp" startline="272" endline="303">SP2_Scene::InitMapModels</referencedby>
+        <referencedby refid="classSP2__Scene_1aeef4e3096a06665be510e2b4bd6c2b79" compoundref="SP2__Scene_8cpp" startline="305" endline="373">SP2_Scene::InitRobots</referencedby>
+        <referencedby refid="classSP2__Scene_1a4867e767b8f3f993a01c5c271c90d82e" compoundref="SP2__Scene_8cpp" startline="132" endline="170">SP2_Scene::initUIElements</referencedby>
+        <referencedby refid="classSP2__Scene_1a6db32e7632b8b3d3a57d949d3029b4a7" compoundref="SP2__Scene_8cpp" startline="222" endline="270">SP2_Scene::InitWeaponModels</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>LOAD_TGA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOAD_TGA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">GLuint<sp/><ref refid="LoadTGA_8h_1a459a80ca6de67a1e3493bfb66ae317e4" kindref="member">LoadTGA</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file_path);</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="ComGLab/Source/LoadTGA.h"/>
+  </compounddef>
+</doxygen>

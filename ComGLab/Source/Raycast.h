@@ -1,8 +1,24 @@
+/****************************************************************************/
+/*!
+\file Raycast.h
+\author Ryan Lim Rui An
+\par email: 150577L@mymail.nyp.edu.sg
+\brief
+Class to define RayCast
+*/
+/****************************************************************************/
 #ifndef _RAYCAST_H
 #define _RAYCAST_H
 
 #include "Vector3.h"
 #include "Boundary.h"
+
+/****************************************************************************/
+/*!
+Class RayCast:
+\brief Defines the methods and variables for RayCasting
+*/
+/****************************************************************************/
 
 class RayCast
 {

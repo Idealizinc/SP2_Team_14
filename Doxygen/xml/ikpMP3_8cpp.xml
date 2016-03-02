@@ -1,0 +1,310 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ikpMP3_8cpp" kind="file" language="C++">
+    <compoundname>ikpMP3.cpp</compoundname>
+    <includes refid="irrKlang_8h" local="no">irrKlang.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">string.h</includes>
+    <includes refid="CIrrKlangAudioStreamLoaderMP3_8h" local="yes">CIrrKlangAudioStreamLoaderMP3.h</includes>
+    <incdepgraph>
+      <node id="2993">
+        <label>ik_IAudioRecorder.h</label>
+        <link refid="ik__IAudioRecorder_8h"/>
+        <childnode refid="2976" relation="include">
+        </childnode>
+        <childnode refid="2983" relation="include">
+        </childnode>
+      </node>
+      <node id="2979">
+        <label>ik_ESoundEngineOptions.h</label>
+        <link refid="ik__ESoundEngineOptions_8h"/>
+      </node>
+      <node id="2976">
+        <label>ik_IRefCounted.h</label>
+        <link refid="ik__IRefCounted_8h"/>
+        <childnode refid="2972" relation="include">
+        </childnode>
+      </node>
+      <node id="2970">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/ikpMP3.cpp</label>
+        <link refid="ikpMP3.cpp"/>
+        <childnode refid="2971" relation="include">
+        </childnode>
+        <childnode refid="2994" relation="include">
+        </childnode>
+        <childnode refid="2995" relation="include">
+        </childnode>
+        <childnode refid="2996" relation="include">
+        </childnode>
+      </node>
+      <node id="2971">
+        <label>irrKlang.h</label>
+        <link refid="irrKlang_8h"/>
+        <childnode refid="2972" relation="include">
+        </childnode>
+        <childnode refid="2974" relation="include">
+        </childnode>
+        <childnode refid="2976" relation="include">
+        </childnode>
+        <childnode refid="2977" relation="include">
+        </childnode>
+        <childnode refid="2978" relation="include">
+        </childnode>
+        <childnode refid="2979" relation="include">
+        </childnode>
+        <childnode refid="2980" relation="include">
+        </childnode>
+        <childnode refid="2981" relation="include">
+        </childnode>
+        <childnode refid="2982" relation="include">
+        </childnode>
+        <childnode refid="2983" relation="include">
+        </childnode>
+        <childnode refid="2984" relation="include">
+        </childnode>
+        <childnode refid="2988" relation="include">
+        </childnode>
+        <childnode refid="2989" relation="include">
+        </childnode>
+        <childnode refid="2985" relation="include">
+        </childnode>
+        <childnode refid="2991" relation="include">
+        </childnode>
+        <childnode refid="2986" relation="include">
+        </childnode>
+        <childnode refid="2990" relation="include">
+        </childnode>
+        <childnode refid="2992" relation="include">
+        </childnode>
+        <childnode refid="2993" relation="include">
+        </childnode>
+        <childnode refid="2987" relation="include">
+        </childnode>
+      </node>
+      <node id="2992">
+        <label>ik_ISoundDeviceList.h</label>
+        <link refid="ik__ISoundDeviceList_8h"/>
+        <childnode refid="2976" relation="include">
+        </childnode>
+      </node>
+      <node id="2990">
+        <label>ik_IFileReader.h</label>
+        <link refid="ik__IFileReader_8h"/>
+        <childnode refid="2976" relation="include">
+        </childnode>
+      </node>
+      <node id="2987">
+        <label>ik_ISoundMixedOutputReceiver.h</label>
+        <link refid="ik__ISoundMixedOutputReceiver_8h"/>
+        <childnode refid="2976" relation="include">
+        </childnode>
+        <childnode refid="2981" relation="include">
+        </childnode>
+      </node>
+      <node id="2981">
+        <label>ik_SAudioStreamFormat.h</label>
+        <link refid="ik__SAudioStreamFormat_8h"/>
+        <childnode refid="2976" relation="include">
+        </childnode>
+      </node>
+      <node id="2973">
+        <label>wchar.h</label>
+      </node>
+      <node id="2978">
+        <label>ik_ESoundOutputDrivers.h</label>
+        <link refid="ik__ESoundOutputDrivers_8h"/>
+      </node>
+      <node id="2996">
+        <label>CIrrKlangAudioStreamLoaderMP3.h</label>
+        <link refid="CIrrKlangAudioStreamLoaderMP3_8h"/>
+        <childnode refid="2989" relation="include">
+        </childnode>
+      </node>
+      <node id="2983">
+        <label>ik_ISoundSource.h</label>
+        <link refid="ik__ISoundSource_8h"/>
+        <childnode refid="2977" relation="include">
+        </childnode>
+        <childnode refid="2974" relation="include">
+        </childnode>
+        <childnode refid="2980" relation="include">
+        </childnode>
+        <childnode refid="2981" relation="include">
+        </childnode>
+      </node>
+      <node id="2995">
+        <label>string.h</label>
+      </node>
+      <node id="2972">
+        <label>ik_irrKlangTypes.h</label>
+        <link refid="ik__irrKlangTypes_8h"/>
+        <childnode refid="2973" relation="include">
+        </childnode>
+      </node>
+      <node id="2985">
+        <label>ik_ISoundEffectControl.h</label>
+        <link refid="ik__ISoundEffectControl_8h"/>
+        <childnode refid="2977" relation="include">
+        </childnode>
+        <childnode refid="2974" relation="include">
+        </childnode>
+      </node>
+      <node id="2975">
+        <label>math.h</label>
+      </node>
+      <node id="2977">
+        <label>ik_IVirtualRefCounted.h</label>
+        <link refid="ik__IVirtualRefCounted_8h"/>
+        <childnode refid="2972" relation="include">
+        </childnode>
+      </node>
+      <node id="2984">
+        <label>ik_ISound.h</label>
+        <link refid="ik__ISound_8h"/>
+        <childnode refid="2977" relation="include">
+        </childnode>
+        <childnode refid="2985" relation="include">
+        </childnode>
+        <childnode refid="2974" relation="include">
+        </childnode>
+      </node>
+      <node id="2974">
+        <label>ik_vec3d.h</label>
+        <link refid="ik__vec3d_8h"/>
+        <childnode refid="2975" relation="include">
+        </childnode>
+        <childnode refid="2972" relation="include">
+        </childnode>
+      </node>
+      <node id="2980">
+        <label>ik_EStreamModes.h</label>
+        <link refid="ik__EStreamModes_8h"/>
+      </node>
+      <node id="2982">
+        <label>ik_ISoundEngine.h</label>
+        <link refid="ik__ISoundEngine_8h"/>
+        <childnode refid="2976" relation="include">
+        </childnode>
+        <childnode refid="2974" relation="include">
+        </childnode>
+        <childnode refid="2983" relation="include">
+        </childnode>
+        <childnode refid="2984" relation="include">
+        </childnode>
+        <childnode refid="2980" relation="include">
+        </childnode>
+        <childnode refid="2986" relation="include">
+        </childnode>
+        <childnode refid="2987" relation="include">
+        </childnode>
+      </node>
+      <node id="2991">
+        <label>ik_ISoundStopEventReceiver.h</label>
+        <link refid="ik__ISoundStopEventReceiver_8h"/>
+        <childnode refid="2976" relation="include">
+        </childnode>
+        <childnode refid="2981" relation="include">
+        </childnode>
+      </node>
+      <node id="2988">
+        <label>ik_IAudioStream.h</label>
+        <link refid="ik__IAudioStream_8h"/>
+        <childnode refid="2976" relation="include">
+        </childnode>
+        <childnode refid="2981" relation="include">
+        </childnode>
+      </node>
+      <node id="2989">
+        <label>ik_IAudioStreamLoader.h</label>
+        <link refid="ik__IAudioStreamLoader_8h"/>
+        <childnode refid="2976" relation="include">
+        </childnode>
+        <childnode refid="2990" relation="include">
+        </childnode>
+      </node>
+      <node id="2986">
+        <label>ik_IFileFactory.h</label>
+        <link refid="ik__IFileFactory_8h"/>
+        <childnode refid="2976" relation="include">
+        </childnode>
+      </node>
+      <node id="2994">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ikpMP3_8cpp_1ac6ed931d442f71e992a96cdc08e58142" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void irrKlangPluginInit</definition>
+        <argsstring>(ISoundEngine *engine, const char *version)</argsstring>
+        <name>irrKlangPluginInit</name>
+        <param>
+          <type><ref refid="classirrklang_1_1ISoundEngine" kindref="compound">ISoundEngine</ref> *</type>
+          <declname>engine</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>version</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/ikpMP3.cpp" line="20" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/ikpMP3.cpp" bodystart="20" bodyend="40"/>
+        <references refid="classirrklang_1_1IRefCounted_1a869fe3adc6e49e8da105e95837a565b1" compoundref="ik__IRefCounted_8h" startline="98" endline="109">irrklang::IRefCounted::drop</references>
+        <references refid="irrKlang_8h_1a3c47e8f6a51361741ab48b1cee6c4ba2" compoundref="irrKlang_8h" startline="37">IRR_KLANG_VERSION</references>
+        <references refid="classirrklang_1_1ISoundEngine_1a6cb64f878a5355454c7197276127a7c9">irrklang::ISoundEngine::registerAudioStreamLoader</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="irrKlang_8h" kindref="compound">irrKlang.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="CIrrKlangAudioStreamLoaderMP3_8h" kindref="compound">CIrrKlangAudioStreamLoaderMP3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceirrklang" kindref="compound">irrklang</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>this<sp/>is<sp/>the<sp/>only<sp/>function<sp/>needed<sp/>to<sp/>be<sp/>implemented<sp/>for<sp/>the<sp/>plugin,<sp/>it<sp/>gets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>called<sp/>by<sp/>irrKlang<sp/>when<sp/>loaded.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>In<sp/>this<sp/>plugin,<sp/>we<sp/>create<sp/>an<sp/>audiostream<sp/>loader<sp/>class<sp/>and<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>it<sp/>at<sp/>the<sp/>engine,<sp/>but<sp/>a<sp/>plugin<sp/>can<sp/>do<sp/>anything.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Be<sp/>sure<sp/>to<sp/>name<sp/>the<sp/>function<sp/>&apos;irrKlangPluginInit&apos;<sp/>and<sp/>let<sp/>the<sp/>dll<sp/>start<sp/>with<sp/>&apos;ikp&apos;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Windows<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">__declspec(dllexport)<sp/>void<sp/>__stdcall<sp/><ref refid="ikpMP3_8cpp_1ac6ed931d442f71e992a96cdc08e58142" kindref="member">irrKlangPluginInit</ref>(<ref refid="classirrklang_1_1ISoundEngine" kindref="compound">ISoundEngine</ref>*<sp/><ref refid="SP2__Scene_8cpp_1ab56cdd798fa279dceae0e730285d5b5e" kindref="member">engine</ref>,<sp/>const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>version)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Linux<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="ikpMP3_8cpp_1ac6ed931d442f71e992a96cdc08e58142" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ikpMP3_8cpp_1ac6ed931d442f71e992a96cdc08e58142" kindref="member">irrKlangPluginInit</ref>(<ref refid="classirrklang_1_1ISoundEngine" kindref="compound">ISoundEngine</ref>*<sp/>engine,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>version)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>do<sp/>some<sp/>version<sp/>security<sp/>check<sp/>to<sp/>be<sp/>sure<sp/>that<sp/>this<sp/>plugin<sp/>isn&apos;t<sp/>begin<sp/>used</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>by<sp/>some<sp/>newer<sp/>irrKlang<sp/>version<sp/>with<sp/>changed<sp/>interfaces<sp/>which<sp/>could<sp/>possibily</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cause<sp/>crashes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strcmp(version,<sp/><ref refid="irrKlang_8h_1a3c47e8f6a51361741ab48b1cee6c4ba2" kindref="member">IRR_KLANG_VERSION</ref>))</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;This<sp/>MP3<sp/>plugin<sp/>only<sp/>supports<sp/>irrKlang<sp/>version<sp/>%s,<sp/>mp3<sp/>playback<sp/>disabled.\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="irrKlang_8h_1a3c47e8f6a51361741ab48b1cee6c4ba2" kindref="member">IRR_KLANG_VERSION</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>and<sp/>register<sp/>the<sp/>loader</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamLoaderMP3" kindref="compound">CIrrKlangAudioStreamLoaderMP3</ref>*<sp/>loader<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamLoaderMP3" kindref="compound">CIrrKlangAudioStreamLoaderMP3</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>engine-&gt;<ref refid="classirrklang_1_1ISoundEngine_1a6cb64f878a5355454c7197276127a7c9" kindref="member">registerAudioStreamLoader</ref>(loader);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loader-&gt;<ref refid="classirrklang_1_1IRefCounted_1a869fe3adc6e49e8da105e95837a565b1" kindref="member">drop</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>that&apos;s<sp/>it,<sp/>that&apos;s<sp/>all.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="irrKlang-1.5.0/plugins/ikpMP3/ikpMP3.cpp"/>
+  </compounddef>
+</doxygen>

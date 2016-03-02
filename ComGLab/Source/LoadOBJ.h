@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file LoadOBJ.h
+\author Wen Sheng Tang
+\par email: tang_wen_sheng\@nyp.edu.sg
+\brief
+Header file for code that loads OBJ files
+*/
+/****************************************************************************/
 #ifndef LOAD_OBJ_H
 #define LOAD_OBJ_H
 

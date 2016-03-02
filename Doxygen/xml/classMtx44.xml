@@ -1,0 +1,1021 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classMtx44" kind="class" language="C++" prot="public">
+    <compoundname>Mtx44</compoundname>
+    <includes refid="Mtx44_8h" local="no">Mtx44.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classMtx44_1a97018c3b3ef41a962e27340c144430ea" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Mtx44::a[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/Mtx44.h" line="50" column="1" bodyfile="Common/Source/Mtx44.h" bodystart="50" bodyend="-1"/>
+        <referencedby refid="classMtx44_1aac1ba21ddfc5f3c24baa4f58d9c5c256" compoundref="Mtx44_8cpp" startline="139" endline="195">GetInverse</referencedby>
+        <referencedby refid="classMtx44_1a1b985913080679da29ff94217935b3c7" compoundref="Mtx44_8cpp" startline="22" endline="39">Mtx44</referencedby>
+        <referencedby refid="Utility_8h_1adfba271c0b8f223d01dd4f35e62e27af" compoundref="Utility_8cpp" startline="3" endline="11">operator*</referencedby>
+        <referencedby refid="classMtx44_1a135dfd76460c4ad2678258807dd0c078" compoundref="Mtx44_8cpp" startline="208" endline="214">operator*</referencedby>
+        <referencedby refid="classMtx44_1abcdecb3276c18f29847eb8864b809fa5" compoundref="Mtx44_8cpp" startline="227" endline="246">operator+</referencedby>
+        <referencedby refid="classMtx44_1aca2d9f316d39c9baa4e439219c1a6447" compoundref="Mtx44_8cpp" startline="259" endline="263">operator=</referencedby>
+        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">Particle::RenderMesh</referencedby>
+        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="629" endline="670">SP2_Scene::RenderMesh</referencedby>
+        <referencedby refid="classParticle_1ae3b87275d545d2b4d6b266fa6777b8e8" compoundref="Particle_8cpp" startline="97" endline="123">Particle::RenderText</referencedby>
+        <referencedby refid="classSP2__Scene_1aba0bba98a66ffc88a253833486bc90e9" compoundref="SP2__Scene_8cpp" startline="375" endline="401">SP2_Scene::RenderText</referencedby>
+        <referencedby refid="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" compoundref="Particle_8cpp" startline="125" endline="167">Particle::RenderTextOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="403" endline="444">SP2_Scene::RenderTextOnScreen</referencedby>
+        <referencedby refid="classMtx44_1a3ac8a0afd66412e15e4246474b893da2" compoundref="Mtx44_8cpp" startline="74" endline="77">SetToIdentity</referencedby>
+        <referencedby refid="classMtx44_1a04c49a922f8e8ffcb57a90c6ce955600" compoundref="Mtx44_8cpp" startline="356" endline="361">SetToScale</referencedby>
+        <referencedby refid="classMtx44_1a0cc88cc5c648da14effba480c4d2ac70" compoundref="Mtx44_8cpp" startline="376" endline="381">SetToTranslation</referencedby>
+        <referencedby refid="classMtx44_1a3aea63c08759ac98b8a4f23fdc0d6a28" compoundref="Mtx44_8cpp" startline="109" endline="112">SetToZero</referencedby>
+        <referencedby refid="classMtx44_1a6c95e149e42cba381918782a93f8a68b" compoundref="Mtx44_8cpp" startline="97" endline="101">Transpose</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMtx44_1a1b985913080679da29ff94217935b3c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Mtx44::Mtx44</definition>
+        <argsstring>(float a00=0, float a10=0, float a20=0, float a30=0, float a01=0, float a11=0, float a21=0, float a31=0, float a02=0, float a12=0, float a22=0, float a32=0, float a03=0, float a13=0, float a23=0, float a33=0)</argsstring>
+        <name>Mtx44</name>
+        <param>
+          <type>float</type>
+          <declname>a00</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a10</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a20</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a30</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a01</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a11</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a21</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a31</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a02</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a12</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a22</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a32</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a03</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a13</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a23</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>a33</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Default Constructor. Default values are zero. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a00</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to a33 - Initial values for the matrix in (row, column) format</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/Mtx44.h" line="27" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="22" bodyend="39"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">a</references>
+        <referencedby refid="classMtx44_1abcdecb3276c18f29847eb8864b809fa5" compoundref="Mtx44_8cpp" startline="227" endline="246">operator+</referencedby>
+        <referencedby refid="classMtx44_1a465dcf811eb34049aab4266795d7bd62" compoundref="Mtx44_8cpp" startline="402" endline="407">SetToFrustum</referencedby>
+        <referencedby refid="classMtx44_1a0a4c7818be7c1aeb0601ad069c1a591d" compoundref="Mtx44_8cpp" startline="492" endline="497">SetToOrtho</referencedby>
+        <referencedby refid="classMtx44_1ac6e6521111d78ff36d539bf111a902c6" compoundref="Mtx44_8cpp" startline="466" endline="472">SetToPerspective</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMtx44_1a6ce8776a947d21cae29a9dcb8c0bd7d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Mtx44::Mtx44</definition>
+        <argsstring>(const float m[16])</argsstring>
+        <name>Mtx44</name>
+        <param>
+          <type>const float</type>
+          <declname>m</declname>
+          <array>[16]</array>
+        </param>
+        <briefdescription>
+<para>Constructor with array of 16 floats. Default values are zero. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>m[16]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Initial values for the matrix in column major format</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/Mtx44.h" line="28" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="52" bodyend="55"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">a</references>
+      </memberdef>
+      <memberdef kind="function" id="classMtx44_1a5c3bf05ad0999766665c5d1d7e4b674c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Mtx44::Mtx44</definition>
+        <argsstring>(const Mtx44 &amp;rhs)</argsstring>
+        <name>Mtx44</name>
+        <param>
+          <type>const <ref refid="classMtx44" kindref="compound">Mtx44</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/Mtx44.h" line="29" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="63" bodyend="66"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">a</references>
+      </memberdef>
+      <memberdef kind="function" id="classMtx44_1a3ac8a0afd66412e15e4246474b893da2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mtx44::SetToIdentity</definition>
+        <argsstring>(void)</argsstring>
+        <name>SetToIdentity</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set the matrix to an identity matrix (1&apos;s along the diagonal) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/Mtx44.h" line="30" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="74" bodyend="77"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">a</references>
+        <references refid="classMtx44_1a3aea63c08759ac98b8a4f23fdc0d6a28" compoundref="Mtx44_8cpp" startline="109" endline="112">SetToZero</references>
+        <referencedby refid="classMS_1a77c5f7e4a21ea48dcf902a7ff6824a11" compoundref="MatrixStack_8cpp" startline="83" endline="87">MS::LoadIdentity</referencedby>
+        <referencedby refid="classMS_1adddd1194f4978eab6618be6a22ed8e48" compoundref="MatrixStack_8cpp" startline="18" endline="22">MS::MS</referencedby>
+        <referencedby refid="classMtx44_1a04c49a922f8e8ffcb57a90c6ce955600" compoundref="Mtx44_8cpp" startline="356" endline="361">SetToScale</referencedby>
+        <referencedby refid="classMtx44_1a0cc88cc5c648da14effba480c4d2ac70" compoundref="Mtx44_8cpp" startline="376" endline="381">SetToTranslation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMtx44_1a6c95e149e42cba381918782a93f8a68b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mtx44::Transpose</definition>
+        <argsstring>(void)</argsstring>
+        <name>Transpose</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set this matrix to its Transpose. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/Mtx44.h" line="31" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="97" bodyend="101"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">a</references>
+        <references refid="Mtx44_8cpp_1a1ef521a2e5e5ae2ef55d1bc0c3b0c437" compoundref="Mtx44_8cpp" startline="85" endline="89">swap</references>
+        <referencedby refid="classMtx44_1aebb16a0329c5237e314af0d75d8081fd" compoundref="Mtx44_8cpp" startline="123" endline="127">GetTranspose</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMtx44_1a3aea63c08759ac98b8a4f23fdc0d6a28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mtx44::SetToZero</definition>
+        <argsstring>(void)</argsstring>
+        <name>SetToZero</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set this matrix to zero. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/Mtx44.h" line="32" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="109" bodyend="112"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">a</references>
+        <referencedby refid="classMtx44_1a3ac8a0afd66412e15e4246474b893da2" compoundref="Mtx44_8cpp" startline="74" endline="77">SetToIdentity</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMtx44_1aebb16a0329c5237e314af0d75d8081fd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classMtx44" kindref="compound">Mtx44</ref></type>
+        <definition>Mtx44 Mtx44::GetTranspose</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTranspose</name>
+        <briefdescription>
+<para>Return a new matrix that is a transpose of this matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A new matrix </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/Mtx44.h" line="33" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="123" bodyend="127"/>
+        <references refid="classMtx44_1a6c95e149e42cba381918782a93f8a68b" compoundref="Mtx44_8cpp" startline="97" endline="101">Transpose</references>
+        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">Particle::RenderMesh</referencedby>
+        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="629" endline="670">SP2_Scene::RenderMesh</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMtx44_1aac1ba21ddfc5f3c24baa4f58d9c5c256" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classMtx44" kindref="compound">Mtx44</ref></type>
+        <definition>Mtx44 Mtx44::GetInverse</definition>
+        <argsstring>() const </argsstring>
+        <name>GetInverse</name>
+        <exceptions> throw ( <ref refid="classDivideByZero" kindref="compound">DivideByZero</ref> )</exceptions>
+        <briefdescription>
+<para>Return a new matrix that is an inverse. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classDivideByZero" kindref="compound">DivideByZero</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>thrown if the determinant of the matrix is zero </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new matrix </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/Mtx44.h" line="34" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="139" bodyend="195"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">a</references>
+        <references refid="namespaceMath_1a5ee876d5cb049f0b3b71f3c54ed8efa0" compoundref="MyMath_8h" startline="27">Math::EPSILON</references>
+        <references refid="namespaceMath_1ac91173ab2efdf7313fe7aaeb6cb44cf6" compoundref="MyMath_8h" startline="33" endline="36">Math::FAbs</references>
+        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">Particle::RenderMesh</referencedby>
+        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="629" endline="670">SP2_Scene::RenderMesh</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMtx44_1a135dfd76460c4ad2678258807dd0c078" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classMtx44" kindref="compound">Mtx44</ref></type>
+        <definition>Mtx44 Mtx44::operator*</definition>
+        <argsstring>(const Mtx44 &amp;rhs) const </argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classMtx44" kindref="compound">Mtx44</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>operator* overload for matrix-matrix multiplication </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix to multiply with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting matrix </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/Mtx44.h" line="35" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="208" bodyend="214"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">a</references>
+      </memberdef>
+      <memberdef kind="function" id="classMtx44_1abcdecb3276c18f29847eb8864b809fa5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classMtx44" kindref="compound">Mtx44</ref></type>
+        <definition>Mtx44 Mtx44::operator+</definition>
+        <argsstring>(const Mtx44 &amp;rhs) const </argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classMtx44" kindref="compound">Mtx44</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>operator+ overload for matrix-matrix addition </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix to add with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting matrix </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/Mtx44.h" line="36" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="227" bodyend="246"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">a</references>
+        <references refid="classMtx44_1a1b985913080679da29ff94217935b3c7" compoundref="Mtx44_8cpp" startline="22" endline="39">Mtx44</references>
+      </memberdef>
+      <memberdef kind="function" id="classMtx44_1aca2d9f316d39c9baa4e439219c1a6447" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classMtx44" kindref="compound">Mtx44</ref> &amp;</type>
+        <definition>Mtx44 &amp; Mtx44::operator=</definition>
+        <argsstring>(const Mtx44 &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classMtx44" kindref="compound">Mtx44</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>operator= overload for assignment </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix to assign to </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to this matrix </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/Mtx44.h" line="37" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="259" bodyend="263"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">a</references>
+      </memberdef>
+      <memberdef kind="function" id="classMtx44_1a2dd2ee48dd50b1614346a10bd464c562" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classMtx44" kindref="compound">Mtx44</ref></type>
+        <definition>Mtx44 Mtx44::operator*</definition>
+        <argsstring>(float scalar) const </argsstring>
+        <name>operator*</name>
+        <param>
+          <type>float</type>
+          <declname>scalar</declname>
+        </param>
+        <briefdescription>
+<para>operator* overload for scalar multiplication </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scalar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>float to multiply with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting matrix </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/Mtx44.h" line="38" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="276" bodyend="281"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">a</references>
+      </memberdef>
+      <memberdef kind="function" id="classMtx44_1a20fe7d5d35374ea122848a8778de25e6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Mtx44::operator*</definition>
+        <argsstring>(const Vector3 &amp;rhs) const </argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>operator* overload for matrix-vector3 multiplication </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structVector3" kindref="compound">Vector3</ref> to multiply with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting vector </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/Mtx44.h" line="39" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="294" bodyend="300"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">a</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
+      </memberdef>
+      <memberdef kind="function" id="classMtx44_1ac0587ffb5ff9fd58ad5768d28fc06574" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mtx44::SetToRotation</definition>
+        <argsstring>(float degrees, float axisX, float axisY, float axisZ)</argsstring>
+        <name>SetToRotation</name>
+        <param>
+          <type>float</type>
+          <declname>degrees</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>axisX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>axisY</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>axisZ</declname>
+        </param>
+        <exceptions> throw ( <ref refid="classDivideByZero" kindref="compound">DivideByZero</ref> )</exceptions>
+        <briefdescription>
+<para>Set Matrix to a rotation matrix about arbitrary axis. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>degrees</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Angle of rotation, in degrees, clockwise </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>axisX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X-component of the rotation axis </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>axisY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y-component of the rotation axis </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>axisZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Z-component of the rotation axis </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classDivideByZero" kindref="compound">DivideByZero</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown if rotation axis is a zero vector </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/Mtx44.h" line="40" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="319" bodyend="341"/>
+        <references refid="namespaceMath_1a5ee876d5cb049f0b3b71f3c54ed8efa0" compoundref="MyMath_8h" startline="27">Math::EPSILON</references>
+        <references refid="namespaceMath_1ac91173ab2efdf7313fe7aaeb6cb44cf6" compoundref="MyMath_8h" startline="33" endline="36">Math::FAbs</references>
+        <references refid="namespaceMath_1af8c064b6b688407b9999ee677efd715d" compoundref="MyMath_8h" startline="28">Math::PI</references>
+        <referencedby refid="classMS_1a6ce592114042b920b648bca5519690cd" compoundref="MatrixStack_8cpp" startline="130" endline="134">MS::Rotate</referencedby>
+        <referencedby refid="classCamera2_1a1a54eeb46692c8806b7abea38a6301f3" compoundref="Camera2_8cpp" startline="24" endline="85">Camera2::Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMtx44_1a04c49a922f8e8ffcb57a90c6ce955600" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mtx44::SetToScale</definition>
+        <argsstring>(float sx, float sy, float sz)</argsstring>
+        <name>SetToScale</name>
+        <param>
+          <type>float</type>
+          <declname>sx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>sy</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>sz</declname>
+        </param>
+        <briefdescription>
+<para>Set this matrix to a scaling matrix with scale factors sx, sy and sz. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scale at x-axis </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scale at y-axis </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scale at z-axis </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/Mtx44.h" line="41" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="356" bodyend="361"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">a</references>
+        <references refid="classMtx44_1a3ac8a0afd66412e15e4246474b893da2" compoundref="Mtx44_8cpp" startline="74" endline="77">SetToIdentity</references>
+        <referencedby refid="classMS_1a52109795de960e24663b315e9128533f" compoundref="MatrixStack_8cpp" startline="149" endline="153">MS::Scale</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMtx44_1a0cc88cc5c648da14effba480c4d2ac70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mtx44::SetToTranslation</definition>
+        <argsstring>(float tx, float ty, float tz)</argsstring>
+        <name>SetToTranslation</name>
+        <param>
+          <type>float</type>
+          <declname>tx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ty</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>tz</declname>
+        </param>
+        <briefdescription>
+<para>Set this matrix to a translation matrix with translation of (x, y, z) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>translate at x-axis </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>translate at y-axis </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>translate at y-axis </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/Mtx44.h" line="42" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="376" bodyend="381"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">a</references>
+        <references refid="classMtx44_1a3ac8a0afd66412e15e4246474b893da2" compoundref="Mtx44_8cpp" startline="74" endline="77">SetToIdentity</references>
+        <referencedby refid="classParticle_1ae3b87275d545d2b4d6b266fa6777b8e8" compoundref="Particle_8cpp" startline="97" endline="123">Particle::RenderText</referencedby>
+        <referencedby refid="classSP2__Scene_1aba0bba98a66ffc88a253833486bc90e9" compoundref="SP2__Scene_8cpp" startline="375" endline="401">SP2_Scene::RenderText</referencedby>
+        <referencedby refid="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" compoundref="Particle_8cpp" startline="125" endline="167">Particle::RenderTextOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="403" endline="444">SP2_Scene::RenderTextOnScreen</referencedby>
+        <referencedby refid="classMtx44_1a7c3d2d30d9ed5bfca2ba97d0e570930f" compoundref="Mtx44_8cpp" startline="433" endline="450">SetToLookAt</referencedby>
+        <referencedby refid="classMS_1a7e94a35ce566fe3ec49c92b6c4bb663a" compoundref="MatrixStack_8cpp" startline="169" endline="173">MS::Translate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMtx44_1a465dcf811eb34049aab4266795d7bd62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mtx44::SetToFrustum</definition>
+        <argsstring>(double left, double right, double bottom, double top, double near, double far)</argsstring>
+        <name>SetToFrustum</name>
+        <param>
+          <type>double</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>right</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>bottom</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>top</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>near</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>far</declname>
+        </param>
+        <briefdescription>
+<para>Set this matrix to frustum matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frustum - left </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frustum - right </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bottom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frustum - bottom </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>top</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frustum - top </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nearVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frustum - front </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>farVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frustum - back </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/Mtx44.h" line="43" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="402" bodyend="407"/>
+        <references refid="classMtx44_1a1b985913080679da29ff94217935b3c7" compoundref="Mtx44_8cpp" startline="22" endline="39">Mtx44</references>
+        <referencedby refid="classMS_1a155508354e47f5aa755e181e69fc3cd4" compoundref="MatrixStack_8cpp" startline="194" endline="198">MS::Frustum</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMtx44_1a7c3d2d30d9ed5bfca2ba97d0e570930f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mtx44::SetToLookAt</definition>
+        <argsstring>(double eyeX, double eyeY, double eyeZ, double centerX, double centerY, double centerZ, double upX, double upY, double upZ)</argsstring>
+        <name>SetToLookAt</name>
+        <param>
+          <type>double</type>
+          <declname>eyeX</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>eyeY</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>eyeZ</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>centerX</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>centerY</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>centerZ</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>upX</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>upY</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>upZ</declname>
+        </param>
+        <briefdescription>
+<para>Set matrix to be a lookat matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>eyeX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>eye vector x value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eyeY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>eye vector y value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>eyeZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>eye vector z value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>centerX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>target position x value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>centerY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>target position y value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>centerZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>target position z value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>upX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>up vector x value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>upY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>up vector y value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>upZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>up vector z value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/Mtx44.h" line="44" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="433" bodyend="450"/>
+        <references refid="structVector3_1aa1cdc5357009b47fe585ddd61e263aad" compoundref="Vector3_8cpp" startline="319" endline="322">Vector3::Cross</references>
+        <references refid="structVector3_1aaef4f25a38878a640ab4a48002a7eff8" compoundref="Vector3_8cpp" startline="358" endline="367">Vector3::Normalize</references>
+        <references refid="classMtx44_1a0cc88cc5c648da14effba480c4d2ac70" compoundref="Mtx44_8cpp" startline="376" endline="381">SetToTranslation</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
+        <referencedby refid="classMS_1a2638cd3249260877cc31329978fb6b38" compoundref="MatrixStack_8cpp" startline="224" endline="231">MS::LookAt</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMtx44_1ac6e6521111d78ff36d539bf111a902c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mtx44::SetToPerspective</definition>
+        <argsstring>(double fovy, double aspect, double zNear, double zFar)</argsstring>
+        <name>SetToPerspective</name>
+        <param>
+          <type>double</type>
+          <declname>fovy</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>aspect</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>zNear</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>zFar</declname>
+        </param>
+        <briefdescription>
+<para>Set matrix to be a perspective matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fovy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Field of view </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aspect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Aspect ratio = width : height </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>zNear</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Near plane </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>zFar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Far plane </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/Mtx44.h" line="47" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="466" bodyend="472"/>
+        <references refid="classMtx44_1a1b985913080679da29ff94217935b3c7" compoundref="Mtx44_8cpp" startline="22" endline="39">Mtx44</references>
+        <references refid="namespaceMath_1af8c064b6b688407b9999ee677efd715d" compoundref="MyMath_8h" startline="28">Math::PI</references>
+        <referencedby refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" compoundref="Particle_8cpp" startline="18" endline="95">Particle::Init</referencedby>
+        <referencedby refid="classSP2__Scene_1ae7483c042e4a1861b71137f1a564ad7a" compoundref="SP2__Scene_8cpp" startline="60" endline="130">SP2_Scene::Init</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classMtx44_1a0a4c7818be7c1aeb0601ad069c1a591d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Mtx44::SetToOrtho</definition>
+        <argsstring>(double left, double right, double bottom, double top, double nearVal, double farVal)</argsstring>
+        <name>SetToOrtho</name>
+        <param>
+          <type>double</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>right</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>bottom</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>top</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>nearVal</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>farVal</declname>
+        </param>
+        <briefdescription>
+<para>Setup orthogonal matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>View box - left </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>View box - right </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bottom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>View box - bottom </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>top</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>View box - top </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nearVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>View box - front </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>farVal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>View box - back </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/Mtx44.h" line="48" column="1" bodyfile="Common/Source/Mtx44.cpp" bodystart="492" bodyend="497"/>
+        <references refid="classMtx44_1a1b985913080679da29ff94217935b3c7" compoundref="Mtx44_8cpp" startline="22" endline="39">Mtx44</references>
+        <referencedby refid="classSP2__Scene_1ae91e39146c4052e9e959cb1ff6a2890a" compoundref="SP2__Scene_8cpp" startline="460" endline="485">SP2_Scene::RenderImageOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a523ce5a26d1efa53a575081ebb2a2919" compoundref="SP2__Scene_8cpp" startline="608" endline="627">SP2_Scene::RenderMeshOnScreen</referencedby>
+        <referencedby refid="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" compoundref="Particle_8cpp" startline="125" endline="167">Particle::RenderTextOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="403" endline="444">SP2_Scene::RenderTextOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a4105499f6a2e4cc7eeedac1af5248126" compoundref="SP2__Scene_8cpp" startline="487" endline="606">SP2_Scene::RenderWeaponInHand</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A 4 by 4 matrix. </para>    </briefdescription>
+    <detaileddescription>
+<para>Class <ref refid="classMtx44" kindref="compound">Mtx44</ref>: </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="516">
+        <label>float</label>
+      </node>
+      <node id="515">
+        <label>Mtx44</label>
+        <link refid="classMtx44"/>
+        <childnode refid="516" relation="usage">
+          <edgelabel>a</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Common/Source/Mtx44.h" line="25" column="1" bodyfile="Common/Source/Mtx44.h" bodystart="24" bodyend="51"/>
+    <listofallmembers>
+      <member refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" prot="public" virt="non-virtual"><scope>Mtx44</scope><name>a</name></member>
+      <member refid="classMtx44_1aac1ba21ddfc5f3c24baa4f58d9c5c256" prot="public" virt="non-virtual"><scope>Mtx44</scope><name>GetInverse</name></member>
+      <member refid="classMtx44_1aebb16a0329c5237e314af0d75d8081fd" prot="public" virt="non-virtual"><scope>Mtx44</scope><name>GetTranspose</name></member>
+      <member refid="classMtx44_1a1b985913080679da29ff94217935b3c7" prot="public" virt="non-virtual"><scope>Mtx44</scope><name>Mtx44</name></member>
+      <member refid="classMtx44_1a6ce8776a947d21cae29a9dcb8c0bd7d1" prot="public" virt="non-virtual"><scope>Mtx44</scope><name>Mtx44</name></member>
+      <member refid="classMtx44_1a5c3bf05ad0999766665c5d1d7e4b674c" prot="public" virt="non-virtual"><scope>Mtx44</scope><name>Mtx44</name></member>
+      <member refid="classMtx44_1a135dfd76460c4ad2678258807dd0c078" prot="public" virt="non-virtual"><scope>Mtx44</scope><name>operator*</name></member>
+      <member refid="classMtx44_1a2dd2ee48dd50b1614346a10bd464c562" prot="public" virt="non-virtual"><scope>Mtx44</scope><name>operator*</name></member>
+      <member refid="classMtx44_1a20fe7d5d35374ea122848a8778de25e6" prot="public" virt="non-virtual"><scope>Mtx44</scope><name>operator*</name></member>
+      <member refid="classMtx44_1abcdecb3276c18f29847eb8864b809fa5" prot="public" virt="non-virtual"><scope>Mtx44</scope><name>operator+</name></member>
+      <member refid="classMtx44_1aca2d9f316d39c9baa4e439219c1a6447" prot="public" virt="non-virtual"><scope>Mtx44</scope><name>operator=</name></member>
+      <member refid="classMtx44_1a465dcf811eb34049aab4266795d7bd62" prot="public" virt="non-virtual"><scope>Mtx44</scope><name>SetToFrustum</name></member>
+      <member refid="classMtx44_1a3ac8a0afd66412e15e4246474b893da2" prot="public" virt="non-virtual"><scope>Mtx44</scope><name>SetToIdentity</name></member>
+      <member refid="classMtx44_1a7c3d2d30d9ed5bfca2ba97d0e570930f" prot="public" virt="non-virtual"><scope>Mtx44</scope><name>SetToLookAt</name></member>
+      <member refid="classMtx44_1a0a4c7818be7c1aeb0601ad069c1a591d" prot="public" virt="non-virtual"><scope>Mtx44</scope><name>SetToOrtho</name></member>
+      <member refid="classMtx44_1ac6e6521111d78ff36d539bf111a902c6" prot="public" virt="non-virtual"><scope>Mtx44</scope><name>SetToPerspective</name></member>
+      <member refid="classMtx44_1ac0587ffb5ff9fd58ad5768d28fc06574" prot="public" virt="non-virtual"><scope>Mtx44</scope><name>SetToRotation</name></member>
+      <member refid="classMtx44_1a04c49a922f8e8ffcb57a90c6ce955600" prot="public" virt="non-virtual"><scope>Mtx44</scope><name>SetToScale</name></member>
+      <member refid="classMtx44_1a0cc88cc5c648da14effba480c4d2ac70" prot="public" virt="non-virtual"><scope>Mtx44</scope><name>SetToTranslation</name></member>
+      <member refid="classMtx44_1a3aea63c08759ac98b8a4f23fdc0d6a28" prot="public" virt="non-virtual"><scope>Mtx44</scope><name>SetToZero</name></member>
+      <member refid="classMtx44_1a6c95e149e42cba381918782a93f8a68b" prot="public" virt="non-virtual"><scope>Mtx44</scope><name>Transpose</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

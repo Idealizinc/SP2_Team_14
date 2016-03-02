@@ -1,8 +1,24 @@
+/****************************************************************************/
+/*!
+\file WeaponSystem.h
+\author Ryan Lim Rui An
+\par email: 150577L@mymail.nyp.edu.sg
+\brief
+Header file for Weapon System
+*/
+/****************************************************************************/
 #ifndef _WEAPONSYSTEM_H
 #define _WEAPONSYSTEM_H
 
 #include <list>
 #include "RayCast.h"
+
+/****************************************************************************/
+/*!
+Class WeaponSystem:
+\brief Defines the methods and variables for Weapon System
+*/
+/****************************************************************************/
 
 class WeaponSystem
 {

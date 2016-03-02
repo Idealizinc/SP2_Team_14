@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file MeshBuilder.h
+\author Wen Sheng Tang
+\par email: tang_wen_sheng\@nyp.edu.sg
+\brief
+Class to build meshess
+*/
+/****************************************************************************/
 #ifndef MESH_BUILDER_H
 #define MESH_BUILDER_H
 #include "Vertex.h"

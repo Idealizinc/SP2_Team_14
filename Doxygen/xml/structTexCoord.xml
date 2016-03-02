@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structTexCoord" kind="struct" language="C++" prot="public">
+    <compoundname>TexCoord</compoundname>
+    <includes refid="Vertex_8h" local="no">Vertex.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structTexCoord_1a3be8371ac57f9ddc6ff5853e4bb58190" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float TexCoord::u</definition>
+        <argsstring></argsstring>
+        <name>u</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Vertex.h" line="28" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="7" endline="115">LoadOBJ</referencedby>
+        <referencedby refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" compoundref="Vertex_8h" startline="30" endline="30">Set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structTexCoord_1ad525bc2c53d6402267c51022db33f85e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float TexCoord::v</definition>
+        <argsstring></argsstring>
+        <name>v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Vertex.h" line="28" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="7" endline="115">LoadOBJ</referencedby>
+        <referencedby refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" compoundref="Vertex_8h" startline="30" endline="30">Set</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structTexCoord_1adec9b45bb816162fe2f22a677ebfc11c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TexCoord::TexCoord</definition>
+        <argsstring>(float u=0, float v=0)</argsstring>
+        <name>TexCoord</name>
+        <param>
+          <type>float</type>
+          <declname>u</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>v</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Vertex.h" line="29" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="29" bodyend="29"/>
+        <references refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" compoundref="Vertex_8h" startline="30" endline="30">Set</references>
+      </memberdef>
+      <memberdef kind="function" id="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TexCoord::Set</definition>
+        <argsstring>(float u, float v)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>float</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Vertex.h" line="30" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="30" bodyend="30"/>
+        <references refid="structTexCoord_1a3be8371ac57f9ddc6ff5853e4bb58190" compoundref="Vertex_8h" startline="28">u</references>
+        <references refid="structTexCoord_1ad525bc2c53d6402267c51022db33f85e" compoundref="Vertex_8h" startline="28">v</references>
+        <referencedby refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="80" endline="122">MeshBuilder::GenerateQuad</referencedby>
+        <referencedby refid="classMeshBuilder_1aac7c87881dbc08f8d41f2068e0f40c76" compoundref="MeshBuilder_8cpp" startline="839" endline="887">MeshBuilder::GenerateText</referencedby>
+        <referencedby refid="LoadOBJ_8h_1aa99ef9426a57205ed8acb8f7d41f3bae" compoundref="LoadOBJ_8cpp" startline="143" endline="183">IndexVBO</referencedby>
+        <referencedby refid="structTexCoord_1adec9b45bb816162fe2f22a677ebfc11c" compoundref="Vertex_8h" startline="29" endline="29">TexCoord</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="626">
+        <label>TexCoord</label>
+        <link refid="structTexCoord"/>
+        <childnode refid="627" relation="usage">
+          <edgelabel>u</edgelabel>
+          <edgelabel>v</edgelabel>
+        </childnode>
+      </node>
+      <node id="627">
+        <label>float</label>
+      </node>
+    </collaborationgraph>
+    <location file="ComGLab/Source/Vertex.h" line="27" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="26" bodyend="31"/>
+    <listofallmembers>
+      <member refid="structTexCoord_1a64b4ceeb1733c478cb4b5b1216146c32" prot="public" virt="non-virtual"><scope>TexCoord</scope><name>Set</name></member>
+      <member refid="structTexCoord_1adec9b45bb816162fe2f22a677ebfc11c" prot="public" virt="non-virtual"><scope>TexCoord</scope><name>TexCoord</name></member>
+      <member refid="structTexCoord_1a3be8371ac57f9ddc6ff5853e4bb58190" prot="public" virt="non-virtual"><scope>TexCoord</scope><name>u</name></member>
+      <member refid="structTexCoord_1ad525bc2c53d6402267c51022db33f85e" prot="public" virt="non-virtual"><scope>TexCoord</scope><name>v</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

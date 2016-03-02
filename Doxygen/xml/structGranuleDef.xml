@@ -1,0 +1,334 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structGranuleDef" kind="struct" language="C++" prot="public">
+    <compoundname>GranuleDef</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structGranuleDef_1addc5049971aaae5983cc28a3d6a730bf" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t GranuleDef::scfsi</definition>
+        <argsstring></argsstring>
+        <name>scfsi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="99" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="99" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structGranuleDef_1ab00cb930095ddb1bab8c6e030add28d6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GranuleDef::part2_3_length</definition>
+        <argsstring></argsstring>
+        <name>part2_3_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="100" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="100" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structGranuleDef_1a98900bb32f17566b7baf3991c9bf7345" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GranuleDef::big_values</definition>
+        <argsstring></argsstring>
+        <name>big_values</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="101" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="101" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structGranuleDef_1a2329193981d19c1ecfbc3a6e0e52dbfb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GranuleDef::global_gain</definition>
+        <argsstring></argsstring>
+        <name>global_gain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="102" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="102" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1a19901913c3051acd8692540101edd707" compoundref="mpaudec_8c" startline="1512" endline="1548">exponents_from_scale_factors</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structGranuleDef_1abece083cd9bed288abb4520a8d52d4e8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GranuleDef::scalefac_compress</definition>
+        <argsstring></argsstring>
+        <name>scalefac_compress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="103" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="103" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1a34bde35be4bc67de1fd03285c3729de4" compoundref="mpaudec_8c" startline="1701" endline="1826">compute_stereo</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structGranuleDef_1aa075917838d8b278afbd8a5fbda8b27e" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t GranuleDef::block_type</definition>
+        <argsstring></argsstring>
+        <name>block_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="104" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="104" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1aeb64a1031552d0031c4b3e32e5260ff3" compoundref="mpaudec_8c" startline="1828" endline="1860">compute_antialias</referencedby>
+        <referencedby refid="mpaudec_8c_1acf918d4b847c8a23d9cb38db467c7483" compoundref="mpaudec_8c" startline="1862" endline="1960">compute_imdct</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+        <referencedby refid="mpaudec_8c_1ac3d939325754cbedaaf6bd1300da0f81" compoundref="mpaudec_8c" startline="1666" endline="1697">reorder_block</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structGranuleDef_1ae532b7e94f932f9c0c4184b341a36366" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t GranuleDef::switch_point</definition>
+        <argsstring></argsstring>
+        <name>switch_point</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="105" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="105" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1aeb64a1031552d0031c4b3e32e5260ff3" compoundref="mpaudec_8c" startline="1828" endline="1860">compute_antialias</referencedby>
+        <referencedby refid="mpaudec_8c_1acf918d4b847c8a23d9cb38db467c7483" compoundref="mpaudec_8c" startline="1862" endline="1960">compute_imdct</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+        <referencedby refid="mpaudec_8c_1ac3d939325754cbedaaf6bd1300da0f81" compoundref="mpaudec_8c" startline="1666" endline="1697">reorder_block</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structGranuleDef_1a40d396d71b3a28bc1c9487dbecbdf558" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GranuleDef::table_select[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>table_select</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="106" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="106" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1aa123e4d670f1d03b262749f6d2134630" compoundref="mpaudec_8c" startline="1559" endline="1661">huffman_decode</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structGranuleDef_1ad09a9bdbe41426be60026686415e211e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GranuleDef::subblock_gain[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>subblock_gain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="107" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="107" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1a19901913c3051acd8692540101edd707" compoundref="mpaudec_8c" startline="1512" endline="1548">exponents_from_scale_factors</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structGranuleDef_1a3dcccee2507568460f6e4cccd97e9f29" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t GranuleDef::scalefac_scale</definition>
+        <argsstring></argsstring>
+        <name>scalefac_scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="108" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="108" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1a19901913c3051acd8692540101edd707" compoundref="mpaudec_8c" startline="1512" endline="1548">exponents_from_scale_factors</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structGranuleDef_1ae0ef76bf6acfe8dbb72c1a93acc4fa41" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t GranuleDef::count1table_select</definition>
+        <argsstring></argsstring>
+        <name>count1table_select</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="109" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="109" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1aa123e4d670f1d03b262749f6d2134630" compoundref="mpaudec_8c" startline="1559" endline="1661">huffman_decode</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structGranuleDef_1a0d469d79cd8296ed88ad157fda7cf67c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GranuleDef::region_size[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>region_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="110" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="110" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1aa123e4d670f1d03b262749f6d2134630" compoundref="mpaudec_8c" startline="1559" endline="1661">huffman_decode</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structGranuleDef_1ad7443fbb2e96174d032f9d6e6d1fe94e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GranuleDef::preflag</definition>
+        <argsstring></argsstring>
+        <name>preflag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="111" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="111" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1a19901913c3051acd8692540101edd707" compoundref="mpaudec_8c" startline="1512" endline="1548">exponents_from_scale_factors</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structGranuleDef_1a857300b95700cf0a6601fb3f3269dc2f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GranuleDef::short_start</definition>
+        <argsstring></argsstring>
+        <name>short_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="112" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="112" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1a34bde35be4bc67de1fd03285c3729de4" compoundref="mpaudec_8c" startline="1701" endline="1826">compute_stereo</referencedby>
+        <referencedby refid="mpaudec_8c_1a19901913c3051acd8692540101edd707" compoundref="mpaudec_8c" startline="1512" endline="1548">exponents_from_scale_factors</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+        <referencedby refid="mpaudec_8c_1ac3d939325754cbedaaf6bd1300da0f81" compoundref="mpaudec_8c" startline="1666" endline="1697">reorder_block</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structGranuleDef_1a9db928ec8bbf4562addeb1b9d7ade17e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GranuleDef::long_end</definition>
+        <argsstring></argsstring>
+        <name>long_end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="112" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="112" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1a34bde35be4bc67de1fd03285c3729de4" compoundref="mpaudec_8c" startline="1701" endline="1826">compute_stereo</referencedby>
+        <referencedby refid="mpaudec_8c_1a19901913c3051acd8692540101edd707" compoundref="mpaudec_8c" startline="1512" endline="1548">exponents_from_scale_factors</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structGranuleDef_1a4a9dad38a4188a7764c7593b58a4bcf8" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t GranuleDef::scale_factors[40]</definition>
+        <argsstring>[40]</argsstring>
+        <name>scale_factors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="113" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="113" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1a34bde35be4bc67de1fd03285c3729de4" compoundref="mpaudec_8c" startline="1701" endline="1826">compute_stereo</referencedby>
+        <referencedby refid="mpaudec_8c_1a19901913c3051acd8692540101edd707" compoundref="mpaudec_8c" startline="1512" endline="1548">exponents_from_scale_factors</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structGranuleDef_1a8657257f63f8b3dcbd9a4b0667c626bf" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t GranuleDef::sb_hybrid[SBLIMIT *18]</definition>
+        <argsstring>[SBLIMIT *18]</argsstring>
+        <name>sb_hybrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="114" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="114" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1aeb64a1031552d0031c4b3e32e5260ff3" compoundref="mpaudec_8c" startline="1828" endline="1860">compute_antialias</referencedby>
+        <referencedby refid="mpaudec_8c_1acf918d4b847c8a23d9cb38db467c7483" compoundref="mpaudec_8c" startline="1862" endline="1960">compute_imdct</referencedby>
+        <referencedby refid="mpaudec_8c_1a34bde35be4bc67de1fd03285c3729de4" compoundref="mpaudec_8c" startline="1701" endline="1826">compute_stereo</referencedby>
+        <referencedby refid="mpaudec_8c_1aa123e4d670f1d03b262749f6d2134630" compoundref="mpaudec_8c" startline="1559" endline="1661">huffman_decode</referencedby>
+        <referencedby refid="mpaudec_8c_1ac3d939325754cbedaaf6bd1300da0f81" compoundref="mpaudec_8c" startline="1666" endline="1697">reorder_block</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="399">
+        <label>int32_t</label>
+      </node>
+      <node id="398">
+        <label>GranuleDef</label>
+        <link refid="structGranuleDef"/>
+        <childnode refid="399" relation="usage">
+          <edgelabel>sb_hybrid</edgelabel>
+        </childnode>
+        <childnode refid="400" relation="usage">
+          <edgelabel>part2_3_length</edgelabel>
+          <edgelabel>long_end</edgelabel>
+          <edgelabel>preflag</edgelabel>
+          <edgelabel>subblock_gain</edgelabel>
+          <edgelabel>global_gain</edgelabel>
+          <edgelabel>short_start</edgelabel>
+          <edgelabel>big_values</edgelabel>
+          <edgelabel>table_select</edgelabel>
+          <edgelabel>scalefac_compress</edgelabel>
+          <edgelabel>region_size</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="401" relation="usage">
+          <edgelabel>switch_point</edgelabel>
+          <edgelabel>scalefac_scale</edgelabel>
+          <edgelabel>scale_factors</edgelabel>
+          <edgelabel>scfsi</edgelabel>
+          <edgelabel>block_type</edgelabel>
+          <edgelabel>count1table_select</edgelabel>
+        </childnode>
+      </node>
+      <node id="400">
+        <label>int</label>
+      </node>
+      <node id="401">
+        <label>uint8_t</label>
+      </node>
+    </collaborationgraph>
+    <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="98" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="98" bodyend="115"/>
+    <listofallmembers>
+      <member refid="structGranuleDef_1a98900bb32f17566b7baf3991c9bf7345" prot="public" virt="non-virtual"><scope>GranuleDef</scope><name>big_values</name></member>
+      <member refid="structGranuleDef_1aa075917838d8b278afbd8a5fbda8b27e" prot="public" virt="non-virtual"><scope>GranuleDef</scope><name>block_type</name></member>
+      <member refid="structGranuleDef_1ae0ef76bf6acfe8dbb72c1a93acc4fa41" prot="public" virt="non-virtual"><scope>GranuleDef</scope><name>count1table_select</name></member>
+      <member refid="structGranuleDef_1a2329193981d19c1ecfbc3a6e0e52dbfb" prot="public" virt="non-virtual"><scope>GranuleDef</scope><name>global_gain</name></member>
+      <member refid="structGranuleDef_1a9db928ec8bbf4562addeb1b9d7ade17e" prot="public" virt="non-virtual"><scope>GranuleDef</scope><name>long_end</name></member>
+      <member refid="structGranuleDef_1ab00cb930095ddb1bab8c6e030add28d6" prot="public" virt="non-virtual"><scope>GranuleDef</scope><name>part2_3_length</name></member>
+      <member refid="structGranuleDef_1ad7443fbb2e96174d032f9d6e6d1fe94e" prot="public" virt="non-virtual"><scope>GranuleDef</scope><name>preflag</name></member>
+      <member refid="structGranuleDef_1a0d469d79cd8296ed88ad157fda7cf67c" prot="public" virt="non-virtual"><scope>GranuleDef</scope><name>region_size</name></member>
+      <member refid="structGranuleDef_1a8657257f63f8b3dcbd9a4b0667c626bf" prot="public" virt="non-virtual"><scope>GranuleDef</scope><name>sb_hybrid</name></member>
+      <member refid="structGranuleDef_1a4a9dad38a4188a7764c7593b58a4bcf8" prot="public" virt="non-virtual"><scope>GranuleDef</scope><name>scale_factors</name></member>
+      <member refid="structGranuleDef_1abece083cd9bed288abb4520a8d52d4e8" prot="public" virt="non-virtual"><scope>GranuleDef</scope><name>scalefac_compress</name></member>
+      <member refid="structGranuleDef_1a3dcccee2507568460f6e4cccd97e9f29" prot="public" virt="non-virtual"><scope>GranuleDef</scope><name>scalefac_scale</name></member>
+      <member refid="structGranuleDef_1addc5049971aaae5983cc28a3d6a730bf" prot="public" virt="non-virtual"><scope>GranuleDef</scope><name>scfsi</name></member>
+      <member refid="structGranuleDef_1a857300b95700cf0a6601fb3f3269dc2f" prot="public" virt="non-virtual"><scope>GranuleDef</scope><name>short_start</name></member>
+      <member refid="structGranuleDef_1ad09a9bdbe41426be60026686415e211e" prot="public" virt="non-virtual"><scope>GranuleDef</scope><name>subblock_gain</name></member>
+      <member refid="structGranuleDef_1ae532b7e94f932f9c0c4184b341a36366" prot="public" virt="non-virtual"><scope>GranuleDef</scope><name>switch_point</name></member>
+      <member refid="structGranuleDef_1a40d396d71b3a28bc1c9487dbecbdf558" prot="public" virt="non-virtual"><scope>GranuleDef</scope><name>table_select</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

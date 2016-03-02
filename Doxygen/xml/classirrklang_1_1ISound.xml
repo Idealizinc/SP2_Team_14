@@ -1,0 +1,499 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classirrklang_1_1ISound" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>irrklang::ISound</compoundname>
+    <basecompoundref refid="classirrklang_1_1IVirtualRefCounted" prot="public" virt="non-virtual">irrklang::IVirtualRefCounted</basecompoundref>
+    <includes refid="ik__ISound_8h" local="no">ik_ISound.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classirrklang_1_1ISound_1ab48eb941e32834c0d77cfa252bd66e08" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classirrklang_1_1ISoundSource" kindref="compound">ISoundSource</ref> *</type>
+        <definition>virtual ISoundSource* irrklang::ISound::getSoundSource</definition>
+        <argsstring>()=0</argsstring>
+        <name>getSoundSource</name>
+        <briefdescription>
+<para>returns source of the sound which stores the filename and other informations about that sound </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Returns the sound source poitner of this sound. May return 0 if the sound source has been removed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1a399fef60d1c48e2dffdf76d83173a15a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::ISound::setIsPaused</definition>
+        <argsstring>(bool paused=true)=0</argsstring>
+        <name>setIsPaused</name>
+        <param>
+          <type>bool</type>
+          <declname>paused</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>returns if the sound is paused </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1ade9a05d059ab8fd73973a1f2adc2af81" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISound::getIsPaused</definition>
+        <argsstring>()=0</argsstring>
+        <name>getIsPaused</name>
+        <briefdescription>
+<para>returns if the sound is paused </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1a108485fe64658441cecd70917782961f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::ISound::stop</definition>
+        <argsstring>()=0</argsstring>
+        <name>stop</name>
+        <briefdescription>
+<para>Will stop the sound and free its resources. </para>        </briefdescription>
+        <detaileddescription>
+<para>If you just want to pause the sound, use <ref refid="classirrklang_1_1ISound_1a399fef60d1c48e2dffdf76d83173a15a" kindref="member">setIsPaused()</ref>. After calling <ref refid="classirrklang_1_1ISound_1a108485fe64658441cecd70917782961f" kindref="member">stop()</ref>, <ref refid="classirrklang_1_1ISound_1a9d9e758f8500b194580de339c7f96768" kindref="member">isFinished()</ref> will usually return true. Be sure to also call -&gt;<ref refid="classirrklang_1_1IVirtualRefCounted_1a6602c3d110f23410c5bca8a08b709aa4" kindref="member">drop()</ref> once you are done. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="43" column="1"/>
+        <referencedby refid="classSP2__Scene_1a3cd10ebc989e3f3e2f84f59d74b76ef2" compoundref="SP2__Scene_8cpp" startline="828" endline="953">SP2_Scene::GameState</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1a3c80c6f11978cccd2cee3883ed4a587a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+        <definition>virtual ik_f32 irrklang::ISound::getVolume</definition>
+        <argsstring>()=0</argsstring>
+        <name>getVolume</name>
+        <briefdescription>
+<para>returns volume of the sound, a value between 0 (mute) and 1 (full volume). </para>        </briefdescription>
+        <detaileddescription>
+<para>(this volume gets multiplied with the master volume of the sound engine and other parameters like distance to listener when played as 3d sound) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1a4c91357775f1d15e2c276ced09a40599" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::ISound::setVolume</definition>
+        <argsstring>(ik_f32 volume)=0</argsstring>
+        <name>setVolume</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>volume</declname>
+        </param>
+        <briefdescription>
+<para>sets the volume of the sound, a value between 0 (mute) and 1 (full volume). </para>        </briefdescription>
+        <detaileddescription>
+<para>This volume gets multiplied with the master volume of the sound engine and other parameters like distance to listener when played as 3d sound. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="53" column="1"/>
+        <referencedby refid="classSP2__Scene_1a3cd10ebc989e3f3e2f84f59d74b76ef2" compoundref="SP2__Scene_8cpp" startline="828" endline="953">SP2_Scene::GameState</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1acce37a680cccecbaa3173b78df5e8531" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::ISound::setPan</definition>
+        <argsstring>(ik_f32 pan)=0</argsstring>
+        <name>setPan</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>pan</declname>
+        </param>
+        <briefdescription>
+<para>sets the pan of the sound. Takes a value between -1 and 1, 0 is center. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1a344972a8120b9c562cba5ebf5039210d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+        <definition>virtual ik_f32 irrklang::ISound::getPan</definition>
+        <argsstring>()=0</argsstring>
+        <name>getPan</name>
+        <briefdescription>
+<para>returns the pan of the sound. Takes a value between -1 and 1, 0 is center. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1ac012ae8299106d3e82d66f63d2378b9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISound::isLooped</definition>
+        <argsstring>()=0</argsstring>
+        <name>isLooped</name>
+        <briefdescription>
+<para>returns if the sound has been started to play looped </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1af564040ebfced7fcbe4e415ee47713c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::ISound::setIsLooped</definition>
+        <argsstring>(bool looped)=0</argsstring>
+        <name>setIsLooped</name>
+        <param>
+          <type>bool</type>
+          <declname>looped</declname>
+        </param>
+        <briefdescription>
+<para>changes the loop mode of the sound. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the sound is playing looped and it is changed to not-looped, then it will stop playing after the loop has finished. If it is not looped and changed to looped, the sound will start repeating to be played when it reaches its end. Invoking this method will not have an effect when the sound already has stopped. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1a9d9e758f8500b194580de339c7f96768" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISound::isFinished</definition>
+        <argsstring>()=0</argsstring>
+        <name>isFinished</name>
+        <briefdescription>
+<para>returns if the sound has finished playing. </para>        </briefdescription>
+        <detaileddescription>
+<para>Don&apos;t mix this up with isPaused(). <ref refid="classirrklang_1_1ISound_1a9d9e758f8500b194580de339c7f96768" kindref="member">isFinished()</ref> returns if the sound has been finished playing. If it has, is maybe already have been removed from the playing list of the sound engine and calls to any other of the methods of <ref refid="classirrklang_1_1ISound" kindref="compound">ISound</ref> will not have any result. If you call <ref refid="classirrklang_1_1ISound_1a108485fe64658441cecd70917782961f" kindref="member">stop()</ref> to a playing sound will result that this function will return true when invoked. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1a318bcb0ec6c44078cdee3c9b080b6f41" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::ISound::setMinDistance</definition>
+        <argsstring>(ik_f32 min)=0</argsstring>
+        <name>setMinDistance</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>min</declname>
+        </param>
+        <briefdescription>
+<para>Sets the minimal distance if this is a 3D sound. </para>        </briefdescription>
+        <detaileddescription>
+<para>Changes the distance at which the 3D sound stops getting louder. This works like this: As a listener approaches a 3D sound source, the sound gets louder. Past a certain point, it is not reasonable for the volume to continue to increase. Either the maximum (zero) has been reached, or the nature of the sound source imposes a logical limit. This is the minimum distance for the sound source. Similarly, the maximum distance for a sound source is the distance beyond which the sound does not get any quieter. The default minimum distance is 1, the default max distance is a huge number like 1000000000.0f. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1a2da9631d826b0f662a3c635a8b9df6b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+        <definition>virtual ik_f32 irrklang::ISound::getMinDistance</definition>
+        <argsstring>()=0</argsstring>
+        <name>getMinDistance</name>
+        <briefdescription>
+<para>Returns the minimal distance if this is a 3D sound. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classirrklang_1_1ISound_1a318bcb0ec6c44078cdee3c9b080b6f41" kindref="member">setMinDistance()</ref> for details. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="93" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1a571f0117ef904ddf994a8638bd2b72ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::ISound::setMaxDistance</definition>
+        <argsstring>(ik_f32 max)=0</argsstring>
+        <name>setMaxDistance</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+<para>Sets the maximal distance if this is a 3D sound. </para>        </briefdescription>
+        <detaileddescription>
+<para>Changing this value is usually not necessary. Use <ref refid="classirrklang_1_1ISound_1a318bcb0ec6c44078cdee3c9b080b6f41" kindref="member">setMinDistance()</ref> instead. Don&apos;t change this value if you don&apos;t know what you are doing: This value causes the sound to stop attenuating after it reaches the max distance. Most people think that this sets the volume of the sound to 0 after this distance, but this is not true. Only change the minimal distance (using for example <ref refid="classirrklang_1_1ISound_1a318bcb0ec6c44078cdee3c9b080b6f41" kindref="member">setMinDistance()</ref>) to influence this. The maximum distance for a sound source is the distance beyond which the sound does not get any quieter. The default minimum distance is 1, the default max distance is a huge number like 1000000000.0f. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="103" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1a1ff40d382fc28c16fa36a88beb11b2fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+        <definition>virtual ik_f32 irrklang::ISound::getMaxDistance</definition>
+        <argsstring>()=0</argsstring>
+        <name>getMaxDistance</name>
+        <briefdescription>
+<para>Returns the maximal distance if this is a 3D sound. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classirrklang_1_1ISound_1a571f0117ef904ddf994a8638bd2b72ce" kindref="member">setMaxDistance()</ref> for details. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="107" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1a994b98c059e8aee6adb82bb12d866338" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::ISound::setPosition</definition>
+        <argsstring>(vec3df position)=0</argsstring>
+        <name>setPosition</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1a592332840fd1799b7c73bcc4c0c4a5af" kindref="member">vec3df</ref></type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>sets the position of the sound in 3d space </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="110" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1af00d25ee00a4f83c5344421fd989762c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespaceirrklang_1a592332840fd1799b7c73bcc4c0c4a5af" kindref="member">vec3df</ref></type>
+        <definition>virtual vec3df irrklang::ISound::getPosition</definition>
+        <argsstring>()=0</argsstring>
+        <name>getPosition</name>
+        <briefdescription>
+<para>returns the position of the sound in 3d space </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="113" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1aafa952978b4118141cb65304b5bdd1e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::ISound::setVelocity</definition>
+        <argsstring>(vec3df vel)=0</argsstring>
+        <name>setVelocity</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1a592332840fd1799b7c73bcc4c0c4a5af" kindref="member">vec3df</ref></type>
+          <declname>vel</declname>
+        </param>
+        <briefdescription>
+<para>sets the position of the sound in 3d space, needed for Doppler effects. </para>        </briefdescription>
+        <detaileddescription>
+<para>To use doppler effects use <ref refid="classirrklang_1_1ISound_1aafa952978b4118141cb65304b5bdd1e2" kindref="member">ISound::setVelocity</ref> to set a sounds velocity, <ref refid="classirrklang_1_1ISoundEngine_1af3e6223435969159ef3b22d0c83d2b84" kindref="member">ISoundEngine::setListenerPosition()</ref> to set the listeners velocity and <ref refid="classirrklang_1_1ISoundEngine_1a088de9bd74ae6bd58d865a38ae2411f3" kindref="member">ISoundEngine::setDopplerEffectParameters()</ref> to adjust two parameters influencing the doppler effects intensity. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="120" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1a685a2dddb5f5b08cd35546b1df6fad4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespaceirrklang_1a592332840fd1799b7c73bcc4c0c4a5af" kindref="member">vec3df</ref></type>
+        <definition>virtual vec3df irrklang::ISound::getVelocity</definition>
+        <argsstring>()=0</argsstring>
+        <name>getVelocity</name>
+        <briefdescription>
+<para>returns the velocity of the sound in 3d space, needed for Doppler effects. </para>        </briefdescription>
+        <detaileddescription>
+<para>To use doppler effects use <ref refid="classirrklang_1_1ISound_1aafa952978b4118141cb65304b5bdd1e2" kindref="member">ISound::setVelocity</ref> to set a sounds velocity, <ref refid="classirrklang_1_1ISoundEngine_1af3e6223435969159ef3b22d0c83d2b84" kindref="member">ISoundEngine::setListenerPosition()</ref> to set the listeners velocity and <ref refid="classirrklang_1_1ISoundEngine_1a088de9bd74ae6bd58d865a38ae2411f3" kindref="member">ISoundEngine::setDopplerEffectParameters()</ref> to adjust two parameters influencing the doppler effects intensity. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="127" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1ad8edf019757e44c683b14424abc2275c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespaceirrklang_1adf9f75b6ca98aff6843fb294125571e0" kindref="member">ik_u32</ref></type>
+        <definition>virtual ik_u32 irrklang::ISound::getPlayPosition</definition>
+        <argsstring>()=0</argsstring>
+        <name>getPlayPosition</name>
+        <briefdescription>
+<para>returns the current play position of the sound in milliseconds. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Returns -1 if not implemented or possible for this sound for example because it already has been stopped and freed internally or similar. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="132" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1a60a6170484331189daadb541f62c5dc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISound::setPlayPosition</definition>
+        <argsstring>(ik_u32 pos)=0</argsstring>
+        <name>setPlayPosition</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1adf9f75b6ca98aff6843fb294125571e0" kindref="member">ik_u32</ref></type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>sets the current play position of the sound in milliseconds. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structPosition" kindref="compound">Position</ref> in milliseconds. Must be between 0 and the value returned by <ref refid="classirrklang_1_1ISound_1ad8edf019757e44c683b14424abc2275c" kindref="member">getPlayPosition()</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true successful. False is returned for example if the sound already finished playing and is stopped or the audio source is not seekable, for example if it is an internet stream or a a file format not supporting seeking (a .MOD file for example). A file can be tested if it can bee seeking using <ref refid="classirrklang_1_1ISoundSource_1a6a608ded51f5920d0cb5d28ac6ee5455" kindref="member">ISoundSource::getIsSeekingSupported()</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="141" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1afdcf560325c0eefb6436d82fbc6cdb40" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISound::setPlaybackSpeed</definition>
+        <argsstring>(ik_f32 speed=1.0f)=0</argsstring>
+        <name>setPlaybackSpeed</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>speed</declname>
+          <defval>1.0f</defval>
+        </param>
+        <briefdescription>
+<para>Sets the playback speed (frequency) of the sound. </para>        </briefdescription>
+        <detaileddescription>
+<para>Plays the sound at a higher or lower speed, increasing or decreasing its frequency which makes it sound lower or higher. Note that this feature is not available on all sound output drivers (it is on the DirectSound drivers at least), and it does not work together with the &apos;enableSoundEffects&apos; parameter of <ref refid="classirrklang_1_1ISoundEngine_1a25f612fe6479d3b22dc5bab2a2eaa927" kindref="member">ISoundEngine::play2D</ref> and <ref refid="classirrklang_1_1ISoundEngine_1adb09ecc8f61120ce14d26545ed43d8ec" kindref="member">ISoundEngine::play3D</ref> when using DirectSound. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Factor of the speed increase or decrease. 2 is twice as fast, 0.5 is only half as fast. The default is 1.0. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if sucessful, false if not. The current sound driver might not support changing the playBack speed, or the sound was started with the &apos;enableSoundEffects&apos; parameter. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="155" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1a7b8e88197b5d9daffb1af9a8b0116608" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+        <definition>virtual ik_f32 irrklang::ISound::getPlaybackSpeed</definition>
+        <argsstring>()=0</argsstring>
+        <name>getPlaybackSpeed</name>
+        <briefdescription>
+<para>Returns the playback speed set by <ref refid="classirrklang_1_1ISound_1afdcf560325c0eefb6436d82fbc6cdb40" kindref="member">setPlaybackSpeed()</ref>. Default: 1.0f. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classirrklang_1_1ISound_1afdcf560325c0eefb6436d82fbc6cdb40" kindref="member">setPlaybackSpeed()</ref> for details </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="159" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1a722403c1a7acff78a0278e7128a15ef0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespaceirrklang_1adf9f75b6ca98aff6843fb294125571e0" kindref="member">ik_u32</ref></type>
+        <definition>virtual ik_u32 irrklang::ISound::getPlayLength</definition>
+        <argsstring>()=0</argsstring>
+        <name>getPlayLength</name>
+        <briefdescription>
+<para>returns the play length of the sound in milliseconds. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns -1 if not known for this sound for example because its decoder does not support length reporting or it is a file stream of unknown size. Note: You can also use <ref refid="classirrklang_1_1ISoundSource_1a23ff097b74d284529e4e1c75d0611884" kindref="member">ISoundSource::getPlayLength()</ref> to get the length of a sound without actually needing to play it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="166" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1a988bb2ccda459ad6aa3264e9a58aa99a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classirrklang_1_1ISoundEffectControl" kindref="compound">ISoundEffectControl</ref> *</type>
+        <definition>virtual ISoundEffectControl* irrklang::ISound::getSoundEffectControl</definition>
+        <argsstring>()=0</argsstring>
+        <name>getSoundEffectControl</name>
+        <briefdescription>
+<para>Returns the sound effect control interface for this sound. </para>        </briefdescription>
+        <detaileddescription>
+<para>Sound effects such as Chorus, Distorsions, Echo, Reverb and similar can be controlled using this. The interface pointer is only valid as long as the <ref refid="classirrklang_1_1ISound" kindref="compound">ISound</ref> pointer is valid. If the <ref refid="classirrklang_1_1ISound" kindref="compound">ISound</ref> pointer gets dropped (<ref refid="classirrklang_1_1IVirtualRefCounted_1a6602c3d110f23410c5bca8a08b709aa4" kindref="member">IVirtualRefCounted::drop()</ref>), the ISoundEffects may not be used any more. <simplesect kind="return"><para>Returns a pointer to the sound effects interface if available. The sound has to be started via <ref refid="classirrklang_1_1ISoundEngine_1a25f612fe6479d3b22dc5bab2a2eaa927" kindref="member">ISoundEngine::play2D()</ref> or <ref refid="classirrklang_1_1ISoundEngine_1adb09ecc8f61120ce14d26545ed43d8ec" kindref="member">ISoundEngine::play3D()</ref>, with the flag enableSoundEffects=true, otherwise 0 will be returned. Note that if the output driver does not support sound effects, 0 will be returned as well. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="177" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISound_1a50dc71426d0abec7af56fa68a5bb87b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::ISound::setSoundStopEventReceiver</definition>
+        <argsstring>(ISoundStopEventReceiver *reciever, void *userData=0)=0</argsstring>
+        <name>setSoundStopEventReceiver</name>
+        <param>
+          <type><ref refid="classirrklang_1_1ISoundStopEventReceiver" kindref="compound">ISoundStopEventReceiver</ref> *</type>
+          <declname>reciever</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userData</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Sets the sound stop event receiver, an interface which gets called if a sound has finished playing. </para>        </briefdescription>
+        <detaileddescription>
+<para>This event is guaranteed to be called when the sound or sound stream is finished, either because the sound reached its playback end, its sound source was removed, <ref refid="classirrklang_1_1ISoundEngine_1a38dbc2f1d49e3127fc4a81a9c1a2f82d" kindref="member">ISoundEngine::stopAllSounds()</ref> has been called or the whole engine was deleted. There is an example on how to use events in irrklang at <ref refid="index_1events" kindref="member">Using Sound Events</ref> . <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>receiver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Interface to a user implementation of the sound receiver. This interface should be as long valid as the sound exists or another stop event receiver is set. Set this to null to set no sound stop event receiver. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A iser data pointer, can be null. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISound.h" line="188" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a sound which is currently played. </para>    </briefdescription>
+    <detaileddescription>
+<para>The sound can be stopped, its volume or pan changed, effects added/removed and similar using this interface. Creating sounds is done using <ref refid="classirrklang_1_1ISoundEngine_1a25f612fe6479d3b22dc5bab2a2eaa927" kindref="member">ISoundEngine::play2D()</ref> or <ref refid="classirrklang_1_1ISoundEngine_1adb09ecc8f61120ce14d26545ed43d8ec" kindref="member">ISoundEngine::play3D()</ref>. More informations about the source of a sound can be obtained from the <ref refid="classirrklang_1_1ISoundSource" kindref="compound">ISoundSource</ref> interface. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="453">
+        <label>irrklang::IVirtualRefCounted</label>
+        <link refid="classirrklang_1_1IVirtualRefCounted"/>
+      </node>
+      <node id="452">
+        <label>irrklang::ISound</label>
+        <link refid="classirrklang_1_1ISound"/>
+        <childnode refid="453" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="455">
+        <label>irrklang::IVirtualRefCounted</label>
+        <link refid="classirrklang_1_1IVirtualRefCounted"/>
+      </node>
+      <node id="454">
+        <label>irrklang::ISound</label>
+        <link refid="classirrklang_1_1ISound"/>
+        <childnode refid="455" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="irrKlang-1.5.0/include/ik_ISound.h" line="25" column="1" bodyfile="irrKlang-1.5.0/include/ik_ISound.h" bodystart="24" bodyend="189"/>
+    <listofallmembers>
+      <member refid="classirrklang_1_1IVirtualRefCounted_1a6602c3d110f23410c5bca8a08b709aa4" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>drop</name></member>
+      <member refid="classirrklang_1_1ISound_1ade9a05d059ab8fd73973a1f2adc2af81" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>getIsPaused</name></member>
+      <member refid="classirrklang_1_1ISound_1a1ff40d382fc28c16fa36a88beb11b2fe" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>getMaxDistance</name></member>
+      <member refid="classirrklang_1_1ISound_1a2da9631d826b0f662a3c635a8b9df6b4" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>getMinDistance</name></member>
+      <member refid="classirrklang_1_1ISound_1a344972a8120b9c562cba5ebf5039210d" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>getPan</name></member>
+      <member refid="classirrklang_1_1ISound_1a7b8e88197b5d9daffb1af9a8b0116608" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>getPlaybackSpeed</name></member>
+      <member refid="classirrklang_1_1ISound_1a722403c1a7acff78a0278e7128a15ef0" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>getPlayLength</name></member>
+      <member refid="classirrklang_1_1ISound_1ad8edf019757e44c683b14424abc2275c" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>getPlayPosition</name></member>
+      <member refid="classirrklang_1_1ISound_1af00d25ee00a4f83c5344421fd989762c" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>getPosition</name></member>
+      <member refid="classirrklang_1_1ISound_1a988bb2ccda459ad6aa3264e9a58aa99a" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>getSoundEffectControl</name></member>
+      <member refid="classirrklang_1_1ISound_1ab48eb941e32834c0d77cfa252bd66e08" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>getSoundSource</name></member>
+      <member refid="classirrklang_1_1ISound_1a685a2dddb5f5b08cd35546b1df6fad4b" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>getVelocity</name></member>
+      <member refid="classirrklang_1_1ISound_1a3c80c6f11978cccd2cee3883ed4a587a" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>getVolume</name></member>
+      <member refid="classirrklang_1_1IVirtualRefCounted_1a1720491c5a3a511985903bfa3c829018" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>grab</name></member>
+      <member refid="classirrklang_1_1ISound_1a9d9e758f8500b194580de339c7f96768" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>isFinished</name></member>
+      <member refid="classirrklang_1_1ISound_1ac012ae8299106d3e82d66f63d2378b9d" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>isLooped</name></member>
+      <member refid="classirrklang_1_1ISound_1af564040ebfced7fcbe4e415ee47713c2" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>setIsLooped</name></member>
+      <member refid="classirrklang_1_1ISound_1a399fef60d1c48e2dffdf76d83173a15a" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>setIsPaused</name></member>
+      <member refid="classirrklang_1_1ISound_1a571f0117ef904ddf994a8638bd2b72ce" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>setMaxDistance</name></member>
+      <member refid="classirrklang_1_1ISound_1a318bcb0ec6c44078cdee3c9b080b6f41" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>setMinDistance</name></member>
+      <member refid="classirrklang_1_1ISound_1acce37a680cccecbaa3173b78df5e8531" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>setPan</name></member>
+      <member refid="classirrklang_1_1ISound_1afdcf560325c0eefb6436d82fbc6cdb40" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>setPlaybackSpeed</name></member>
+      <member refid="classirrklang_1_1ISound_1a60a6170484331189daadb541f62c5dc5" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>setPlayPosition</name></member>
+      <member refid="classirrklang_1_1ISound_1a994b98c059e8aee6adb82bb12d866338" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>setPosition</name></member>
+      <member refid="classirrklang_1_1ISound_1a50dc71426d0abec7af56fa68a5bb87b5" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>setSoundStopEventReceiver</name></member>
+      <member refid="classirrklang_1_1ISound_1aafa952978b4118141cb65304b5bdd1e2" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>setVelocity</name></member>
+      <member refid="classirrklang_1_1ISound_1a4c91357775f1d15e2c276ced09a40599" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>setVolume</name></member>
+      <member refid="classirrklang_1_1ISound_1a108485fe64658441cecd70917782961f" prot="public" virt="pure-virtual"><scope>irrklang::ISound</scope><name>stop</name></member>
+      <member refid="classirrklang_1_1IVirtualRefCounted_1a54ed4b2c2bf1fd7666f7d78a9e768612" prot="public" virt="virtual"><scope>irrklang::ISound</scope><name>~IVirtualRefCounted</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

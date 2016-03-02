@@ -1,0 +1,426 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structMPADecodeContext" kind="struct" language="C++" prot="public">
+    <compoundname>MPADecodeContext</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structMPADecodeContext_1a50261340d0c177c2c8f98e2929293118" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t MPADecodeContext::inbuf1[2][MPA_MAX_CODED_FRAME_SIZE+BACKSTEP_SIZE]</definition>
+        <argsstring>[2][MPA_MAX_CODED_FRAME_SIZE+BACKSTEP_SIZE]</argsstring>
+        <name>inbuf1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="70" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="70" bodyend="-1"/>
+        <referencedby refid="mpaudec_8h_1a0f2f19b46f286b7a9315b40e46f34227" compoundref="mpaudec_8c" startline="306" endline="496">mpaudec_init</referencedby>
+        <referencedby refid="mpaudec_8c_1ab3d38c0057af45f5edb7f6dc158ede46" compoundref="mpaudec_8c" startline="1472" endline="1490">seek_to_maindata</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPADecodeContext_1ac80055478f6a1d0e6de8f8577dd682ad" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPADecodeContext::inbuf_index</definition>
+        <argsstring></argsstring>
+        <name>inbuf_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="71" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="71" bodyend="-1"/>
+        <referencedby refid="mpaudec_8h_1a0f2f19b46f286b7a9315b40e46f34227" compoundref="mpaudec_8c" startline="306" endline="496">mpaudec_init</referencedby>
+        <referencedby refid="mpaudec_8c_1ab3d38c0057af45f5edb7f6dc158ede46" compoundref="mpaudec_8c" startline="1472" endline="1490">seek_to_maindata</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPADecodeContext_1a5aa3bf38d36e9a98410273712be1df30" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* MPADecodeContext::inbuf_ptr</definition>
+        <argsstring></argsstring>
+        <name>inbuf_ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="72" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="72" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1a2dff7b15a5f55a97729fb3f2d7194e64" compoundref="mpaudec_8c" startline="2258" endline="2310">mp_decode_frame</referencedby>
+        <referencedby refid="mpaudec_8c_1ad804754f6cb3863f2489fcddc56f9ae4" compoundref="mpaudec_8c" startline="2312" endline="2470">mpaudec_decode_frame</referencedby>
+        <referencedby refid="mpaudec_8h_1a0f2f19b46f286b7a9315b40e46f34227" compoundref="mpaudec_8c" startline="306" endline="496">mpaudec_init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPADecodeContext_1adac9267053c81ebdcfb474a9006b0def" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t * MPADecodeContext::inbuf</definition>
+        <argsstring></argsstring>
+        <name>inbuf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="72" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="72" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1a2dff7b15a5f55a97729fb3f2d7194e64" compoundref="mpaudec_8c" startline="2258" endline="2310">mp_decode_frame</referencedby>
+        <referencedby refid="mpaudec_8c_1ad804754f6cb3863f2489fcddc56f9ae4" compoundref="mpaudec_8c" startline="2312" endline="2470">mpaudec_decode_frame</referencedby>
+        <referencedby refid="mpaudec_8h_1a0f2f19b46f286b7a9315b40e46f34227" compoundref="mpaudec_8c" startline="306" endline="496">mpaudec_init</referencedby>
+        <referencedby refid="mpaudec_8c_1ab3d38c0057af45f5edb7f6dc158ede46" compoundref="mpaudec_8c" startline="1472" endline="1490">seek_to_maindata</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPADecodeContext_1a9a5206930223aef64a3bac189dd039aa" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPADecodeContext::frame_size</definition>
+        <argsstring></argsstring>
+        <name>frame_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="73" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="73" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1adc65cd68ae1134afaf2b4d0aa8270b26" compoundref="mpaudec_8c" startline="1079" endline="1170">decode_header</referencedby>
+        <referencedby refid="mpaudec_8c_1ad804754f6cb3863f2489fcddc56f9ae4" compoundref="mpaudec_8c" startline="2312" endline="2470">mpaudec_decode_frame</referencedby>
+        <referencedby refid="mpaudec_8c_1ab3d38c0057af45f5edb7f6dc158ede46" compoundref="mpaudec_8c" startline="1472" endline="1490">seek_to_maindata</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPADecodeContext_1a9b728908a61941cfd1ec8f9c66f4f305" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPADecodeContext::free_format_frame_size</definition>
+        <argsstring></argsstring>
+        <name>free_format_frame_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="74" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="74" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1adc65cd68ae1134afaf2b4d0aa8270b26" compoundref="mpaudec_8c" startline="1079" endline="1170">decode_header</referencedby>
+        <referencedby refid="mpaudec_8c_1ad804754f6cb3863f2489fcddc56f9ae4" compoundref="mpaudec_8c" startline="2312" endline="2470">mpaudec_decode_frame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPADecodeContext_1aaaaad5dfc4720e69591ec81301cce46f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPADecodeContext::error_protection</definition>
+        <argsstring></argsstring>
+        <name>error_protection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="77" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="77" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1adc65cd68ae1134afaf2b4d0aa8270b26" compoundref="mpaudec_8c" startline="1079" endline="1170">decode_header</referencedby>
+        <referencedby refid="mpaudec_8c_1a2dff7b15a5f55a97729fb3f2d7194e64" compoundref="mpaudec_8c" startline="2258" endline="2310">mp_decode_frame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPADecodeContext_1ac96462bc103c100a51e8ad4115af0101" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPADecodeContext::layer</definition>
+        <argsstring></argsstring>
+        <name>layer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="78" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="78" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1adc65cd68ae1134afaf2b4d0aa8270b26" compoundref="mpaudec_8c" startline="1079" endline="1170">decode_header</referencedby>
+        <referencedby refid="mpaudec_8c_1a2dff7b15a5f55a97729fb3f2d7194e64" compoundref="mpaudec_8c" startline="2258" endline="2310">mp_decode_frame</referencedby>
+        <referencedby refid="mpaudec_8c_1ad804754f6cb3863f2489fcddc56f9ae4" compoundref="mpaudec_8c" startline="2312" endline="2470">mpaudec_decode_frame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPADecodeContext_1a433005252c35cff955577e14971a5dba" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPADecodeContext::sample_rate</definition>
+        <argsstring></argsstring>
+        <name>sample_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="79" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="79" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1adc65cd68ae1134afaf2b4d0aa8270b26" compoundref="mpaudec_8c" startline="1079" endline="1170">decode_header</referencedby>
+        <referencedby refid="mpaudec_8c_1a72ee70f98e9873f63c88b69b80e15825" compoundref="mpaudec_8c" startline="1261" endline="1467">mp_decode_layer2</referencedby>
+        <referencedby refid="mpaudec_8c_1ad804754f6cb3863f2489fcddc56f9ae4" compoundref="mpaudec_8c" startline="2312" endline="2470">mpaudec_decode_frame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPADecodeContext_1a56cc0293ed289193b660ca154a6fc804" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPADecodeContext::sample_rate_index</definition>
+        <argsstring></argsstring>
+        <name>sample_rate_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="80" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="80" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1a34bde35be4bc67de1fd03285c3729de4" compoundref="mpaudec_8c" startline="1701" endline="1826">compute_stereo</referencedby>
+        <referencedby refid="mpaudec_8c_1adc65cd68ae1134afaf2b4d0aa8270b26" compoundref="mpaudec_8c" startline="1079" endline="1170">decode_header</referencedby>
+        <referencedby refid="mpaudec_8c_1a19901913c3051acd8692540101edd707" compoundref="mpaudec_8c" startline="1512" endline="1548">exponents_from_scale_factors</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+        <referencedby refid="mpaudec_8c_1ac3d939325754cbedaaf6bd1300da0f81" compoundref="mpaudec_8c" startline="1666" endline="1697">reorder_block</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPADecodeContext_1a0a10f8346af2c5d6605b76b885da11b5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPADecodeContext::bit_rate</definition>
+        <argsstring></argsstring>
+        <name>bit_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="81" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="81" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1adc65cd68ae1134afaf2b4d0aa8270b26" compoundref="mpaudec_8c" startline="1079" endline="1170">decode_header</referencedby>
+        <referencedby refid="mpaudec_8c_1a72ee70f98e9873f63c88b69b80e15825" compoundref="mpaudec_8c" startline="1261" endline="1467">mp_decode_layer2</referencedby>
+        <referencedby refid="mpaudec_8c_1ad804754f6cb3863f2489fcddc56f9ae4" compoundref="mpaudec_8c" startline="2312" endline="2470">mpaudec_decode_frame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPADecodeContext_1a67b57c009b64391e56072de209e74f6c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPADecodeContext::old_frame_size</definition>
+        <argsstring></argsstring>
+        <name>old_frame_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="82" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="82" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1ab3d38c0057af45f5edb7f6dc158ede46" compoundref="mpaudec_8c" startline="1472" endline="1490">seek_to_maindata</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPADecodeContext_1aa5f9521d91978fea2cc54fac02a392f3" prot="public" static="no" mutable="no">
+        <type><ref refid="structGetBitContext" kindref="compound">GetBitContext</ref></type>
+        <definition>GetBitContext MPADecodeContext::gb</definition>
+        <argsstring></argsstring>
+        <name>gb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="83" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="83" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1aa123e4d670f1d03b262749f6d2134630" compoundref="mpaudec_8c" startline="1559" endline="1661">huffman_decode</referencedby>
+        <referencedby refid="mpaudec_8c_1a2dff7b15a5f55a97729fb3f2d7194e64" compoundref="mpaudec_8c" startline="2258" endline="2310">mp_decode_frame</referencedby>
+        <referencedby refid="mpaudec_8c_1aa8d8ca6a6ace0fa4945bbf9de65c0364" compoundref="mpaudec_8c" startline="1173" endline="1237">mp_decode_layer1</referencedby>
+        <referencedby refid="mpaudec_8c_1a72ee70f98e9873f63c88b69b80e15825" compoundref="mpaudec_8c" startline="1261" endline="1467">mp_decode_layer2</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+        <referencedby refid="mpaudec_8c_1ab3d38c0057af45f5edb7f6dc158ede46" compoundref="mpaudec_8c" startline="1472" endline="1490">seek_to_maindata</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPADecodeContext_1a7bda29d3b0d640027bc4ce9e0df9a1ca" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPADecodeContext::nb_channels</definition>
+        <argsstring></argsstring>
+        <name>nb_channels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="84" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="84" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1adc65cd68ae1134afaf2b4d0aa8270b26" compoundref="mpaudec_8c" startline="1079" endline="1170">decode_header</referencedby>
+        <referencedby refid="mpaudec_8c_1a2dff7b15a5f55a97729fb3f2d7194e64" compoundref="mpaudec_8c" startline="2258" endline="2310">mp_decode_frame</referencedby>
+        <referencedby refid="mpaudec_8c_1aa8d8ca6a6ace0fa4945bbf9de65c0364" compoundref="mpaudec_8c" startline="1173" endline="1237">mp_decode_layer1</referencedby>
+        <referencedby refid="mpaudec_8c_1a72ee70f98e9873f63c88b69b80e15825" compoundref="mpaudec_8c" startline="1261" endline="1467">mp_decode_layer2</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+        <referencedby refid="mpaudec_8c_1ad804754f6cb3863f2489fcddc56f9ae4" compoundref="mpaudec_8c" startline="2312" endline="2470">mpaudec_decode_frame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPADecodeContext_1aef725befb5ce2f4624cfbfded4a8bf53" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPADecodeContext::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="85" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="85" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1adc65cd68ae1134afaf2b4d0aa8270b26" compoundref="mpaudec_8c" startline="1079" endline="1170">decode_header</referencedby>
+        <referencedby refid="mpaudec_8c_1aa8d8ca6a6ace0fa4945bbf9de65c0364" compoundref="mpaudec_8c" startline="1173" endline="1237">mp_decode_layer1</referencedby>
+        <referencedby refid="mpaudec_8c_1a72ee70f98e9873f63c88b69b80e15825" compoundref="mpaudec_8c" startline="1261" endline="1467">mp_decode_layer2</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPADecodeContext_1a60944277285655b3ee32aa355585dc5b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPADecodeContext::mode_ext</definition>
+        <argsstring></argsstring>
+        <name>mode_ext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="86" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="86" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1a34bde35be4bc67de1fd03285c3729de4" compoundref="mpaudec_8c" startline="1701" endline="1826">compute_stereo</referencedby>
+        <referencedby refid="mpaudec_8c_1adc65cd68ae1134afaf2b4d0aa8270b26" compoundref="mpaudec_8c" startline="1079" endline="1170">decode_header</referencedby>
+        <referencedby refid="mpaudec_8c_1aa8d8ca6a6ace0fa4945bbf9de65c0364" compoundref="mpaudec_8c" startline="1173" endline="1237">mp_decode_layer1</referencedby>
+        <referencedby refid="mpaudec_8c_1a72ee70f98e9873f63c88b69b80e15825" compoundref="mpaudec_8c" startline="1261" endline="1467">mp_decode_layer2</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPADecodeContext_1a80af6fe0fc8f06219d22b80884a739b2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPADecodeContext::lsf</definition>
+        <argsstring></argsstring>
+        <name>lsf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="87" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="87" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1a34bde35be4bc67de1fd03285c3729de4" compoundref="mpaudec_8c" startline="1701" endline="1826">compute_stereo</referencedby>
+        <referencedby refid="mpaudec_8c_1adc65cd68ae1134afaf2b4d0aa8270b26" compoundref="mpaudec_8c" startline="1079" endline="1170">decode_header</referencedby>
+        <referencedby refid="mpaudec_8c_1a72ee70f98e9873f63c88b69b80e15825" compoundref="mpaudec_8c" startline="1261" endline="1467">mp_decode_layer2</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+        <referencedby refid="mpaudec_8c_1ad804754f6cb3863f2489fcddc56f9ae4" compoundref="mpaudec_8c" startline="2312" endline="2470">mpaudec_decode_frame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPADecodeContext_1ac771177c1d16c2bdf1fb436bc2a600ba" prot="public" static="no" mutable="no">
+        <type><ref refid="mpaudec_8c_1afd4da67a7573a544f9e65a978fa7d4f0" kindref="member">MPA_INT</ref></type>
+        <definition>MPA_INT MPADecodeContext::synth_buf[MPA_MAX_CHANNELS][512 *2]</definition>
+        <argsstring>[MPA_MAX_CHANNELS][512 *2]</argsstring>
+        <name>synth_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="88" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="88" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1a68661d84372543e26e2d315f5e7b35e7" compoundref="mpaudec_8c" startline="800" endline="873">synth_filter</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPADecodeContext_1abed71206798ca65d4eea7782a20b141f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPADecodeContext::synth_buf_offset[MPA_MAX_CHANNELS]</definition>
+        <argsstring>[MPA_MAX_CHANNELS]</argsstring>
+        <name>synth_buf_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="89" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="89" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1a68661d84372543e26e2d315f5e7b35e7" compoundref="mpaudec_8c" startline="800" endline="873">synth_filter</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPADecodeContext_1ad569b1b6bebb3cd6a261ec5d5211ec8c" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t MPADecodeContext::sb_samples[MPA_MAX_CHANNELS][36][SBLIMIT]</definition>
+        <argsstring>[MPA_MAX_CHANNELS][36][SBLIMIT]</argsstring>
+        <name>sb_samples</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="90" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="90" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1a2dff7b15a5f55a97729fb3f2d7194e64" compoundref="mpaudec_8c" startline="2258" endline="2310">mp_decode_frame</referencedby>
+        <referencedby refid="mpaudec_8c_1aa8d8ca6a6ace0fa4945bbf9de65c0364" compoundref="mpaudec_8c" startline="1173" endline="1237">mp_decode_layer1</referencedby>
+        <referencedby refid="mpaudec_8c_1a72ee70f98e9873f63c88b69b80e15825" compoundref="mpaudec_8c" startline="1261" endline="1467">mp_decode_layer2</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPADecodeContext_1aefa78c13626ac754088af8c6569eb15a" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t MPADecodeContext::mdct_buf[MPA_MAX_CHANNELS][SBLIMIT *18]</definition>
+        <argsstring>[MPA_MAX_CHANNELS][SBLIMIT *18]</argsstring>
+        <name>mdct_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="91" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="91" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="506">
+        <label>int32_t</label>
+      </node>
+      <node id="504">
+        <label>int</label>
+      </node>
+      <node id="505">
+        <label>uint8_t</label>
+      </node>
+      <node id="502">
+        <label>MPADecodeContext</label>
+        <link refid="structMPADecodeContext"/>
+        <childnode refid="503" relation="usage">
+          <edgelabel>gb</edgelabel>
+        </childnode>
+        <childnode refid="506" relation="usage">
+          <edgelabel>mdct_buf</edgelabel>
+          <edgelabel>synth_buf</edgelabel>
+          <edgelabel>sb_samples</edgelabel>
+        </childnode>
+        <childnode refid="504" relation="usage">
+          <edgelabel>old_frame_size</edgelabel>
+          <edgelabel>free_format_frame_size</edgelabel>
+          <edgelabel>synth_buf_offset</edgelabel>
+          <edgelabel>error_protection</edgelabel>
+          <edgelabel>mode</edgelabel>
+          <edgelabel>bit_rate</edgelabel>
+          <edgelabel>mode_ext</edgelabel>
+          <edgelabel>sample_rate</edgelabel>
+          <edgelabel>sample_rate_index</edgelabel>
+          <edgelabel>layer</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="505" relation="usage">
+          <edgelabel>inbuf_ptr</edgelabel>
+          <edgelabel>inbuf1</edgelabel>
+          <edgelabel>inbuf</edgelabel>
+        </childnode>
+      </node>
+      <node id="503">
+        <label>GetBitContext</label>
+        <link refid="structGetBitContext"/>
+        <childnode refid="504" relation="usage">
+          <edgelabel>size_in_bits</edgelabel>
+          <edgelabel>index</edgelabel>
+        </childnode>
+        <childnode refid="505" relation="usage">
+          <edgelabel>buffer</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="69" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="69" bodyend="95"/>
+    <listofallmembers>
+      <member refid="structMPADecodeContext_1a0a10f8346af2c5d6605b76b885da11b5" prot="public" virt="non-virtual"><scope>MPADecodeContext</scope><name>bit_rate</name></member>
+      <member refid="structMPADecodeContext_1aaaaad5dfc4720e69591ec81301cce46f" prot="public" virt="non-virtual"><scope>MPADecodeContext</scope><name>error_protection</name></member>
+      <member refid="structMPADecodeContext_1a9a5206930223aef64a3bac189dd039aa" prot="public" virt="non-virtual"><scope>MPADecodeContext</scope><name>frame_size</name></member>
+      <member refid="structMPADecodeContext_1a9b728908a61941cfd1ec8f9c66f4f305" prot="public" virt="non-virtual"><scope>MPADecodeContext</scope><name>free_format_frame_size</name></member>
+      <member refid="structMPADecodeContext_1aa5f9521d91978fea2cc54fac02a392f3" prot="public" virt="non-virtual"><scope>MPADecodeContext</scope><name>gb</name></member>
+      <member refid="structMPADecodeContext_1adac9267053c81ebdcfb474a9006b0def" prot="public" virt="non-virtual"><scope>MPADecodeContext</scope><name>inbuf</name></member>
+      <member refid="structMPADecodeContext_1a50261340d0c177c2c8f98e2929293118" prot="public" virt="non-virtual"><scope>MPADecodeContext</scope><name>inbuf1</name></member>
+      <member refid="structMPADecodeContext_1ac80055478f6a1d0e6de8f8577dd682ad" prot="public" virt="non-virtual"><scope>MPADecodeContext</scope><name>inbuf_index</name></member>
+      <member refid="structMPADecodeContext_1a5aa3bf38d36e9a98410273712be1df30" prot="public" virt="non-virtual"><scope>MPADecodeContext</scope><name>inbuf_ptr</name></member>
+      <member refid="structMPADecodeContext_1ac96462bc103c100a51e8ad4115af0101" prot="public" virt="non-virtual"><scope>MPADecodeContext</scope><name>layer</name></member>
+      <member refid="structMPADecodeContext_1a80af6fe0fc8f06219d22b80884a739b2" prot="public" virt="non-virtual"><scope>MPADecodeContext</scope><name>lsf</name></member>
+      <member refid="structMPADecodeContext_1aefa78c13626ac754088af8c6569eb15a" prot="public" virt="non-virtual"><scope>MPADecodeContext</scope><name>mdct_buf</name></member>
+      <member refid="structMPADecodeContext_1aef725befb5ce2f4624cfbfded4a8bf53" prot="public" virt="non-virtual"><scope>MPADecodeContext</scope><name>mode</name></member>
+      <member refid="structMPADecodeContext_1a60944277285655b3ee32aa355585dc5b" prot="public" virt="non-virtual"><scope>MPADecodeContext</scope><name>mode_ext</name></member>
+      <member refid="structMPADecodeContext_1a7bda29d3b0d640027bc4ce9e0df9a1ca" prot="public" virt="non-virtual"><scope>MPADecodeContext</scope><name>nb_channels</name></member>
+      <member refid="structMPADecodeContext_1a67b57c009b64391e56072de209e74f6c" prot="public" virt="non-virtual"><scope>MPADecodeContext</scope><name>old_frame_size</name></member>
+      <member refid="structMPADecodeContext_1a433005252c35cff955577e14971a5dba" prot="public" virt="non-virtual"><scope>MPADecodeContext</scope><name>sample_rate</name></member>
+      <member refid="structMPADecodeContext_1a56cc0293ed289193b660ca154a6fc804" prot="public" virt="non-virtual"><scope>MPADecodeContext</scope><name>sample_rate_index</name></member>
+      <member refid="structMPADecodeContext_1ad569b1b6bebb3cd6a261ec5d5211ec8c" prot="public" virt="non-virtual"><scope>MPADecodeContext</scope><name>sb_samples</name></member>
+      <member refid="structMPADecodeContext_1ac771177c1d16c2bdf1fb436bc2a600ba" prot="public" virt="non-virtual"><scope>MPADecodeContext</scope><name>synth_buf</name></member>
+      <member refid="structMPADecodeContext_1abed71206798ca65d4eea7782a20b141f" prot="public" virt="non-virtual"><scope>MPADecodeContext</scope><name>synth_buf_offset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

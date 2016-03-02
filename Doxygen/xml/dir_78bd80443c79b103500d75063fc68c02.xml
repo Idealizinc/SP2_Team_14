@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="dir_78bd80443c79b103500d75063fc68c02" kind="dir">
+    <compoundname>irrKlang-1.5.0/plugins/ikpMP3</compoundname>
+    <innerdir refid="dir_d1409ab5769302597d92f4634141ad4e">irrKlang-1.5.0/plugins/ikpMP3/decoder</innerdir>
+    <innerfile refid="CIrrKlangAudioStreamLoaderMP3_8cpp">CIrrKlangAudioStreamLoaderMP3.cpp</innerfile>
+    <innerfile refid="CIrrKlangAudioStreamLoaderMP3_8h">CIrrKlangAudioStreamLoaderMP3.h</innerfile>
+    <innerfile refid="CIrrKlangAudioStreamMP3_8cpp">CIrrKlangAudioStreamMP3.cpp</innerfile>
+    <innerfile refid="CIrrKlangAudioStreamMP3_8h">CIrrKlangAudioStreamMP3.h</innerfile>
+    <innerfile refid="ikpMP3_8cpp">ikpMP3.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="irrKlang-1.5.0/plugins/ikpMP3/"/>
+  </compounddef>
+</doxygen>

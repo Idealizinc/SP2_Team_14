@@ -1,0 +1,820 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="Application_8cpp" kind="file" language="C++">
+    <compoundname>Application.cpp</compoundname>
+    <includes refid="Application_8h" local="yes">Application.h</includes>
+    <includes local="no">GL/glew.h</includes>
+    <includes local="no">GLFW/glfw3.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="SP2__Scene_8h" local="yes">SP2_Scene.h</includes>
+    <includes refid="Particle_8h" local="yes">Particle.h</includes>
+    <incdepgraph>
+      <node id="1533">
+        <label>list</label>
+      </node>
+      <node id="1531">
+        <label>iomanip</label>
+      </node>
+      <node id="1513">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="1514" relation="include">
+        </childnode>
+        <childnode refid="1515" relation="include">
+        </childnode>
+        <childnode refid="1516" relation="include">
+        </childnode>
+        <childnode refid="1517" relation="include">
+        </childnode>
+      </node>
+      <node id="1534">
+        <label>RayCast.h</label>
+        <link refid="Raycast_8h"/>
+        <childnode refid="1512" relation="include">
+        </childnode>
+        <childnode refid="1526" relation="include">
+        </childnode>
+      </node>
+      <node id="1529">
+        <label>Mtx44.h</label>
+        <link refid="Mtx44_8h"/>
+        <childnode refid="1513" relation="include">
+        </childnode>
+        <childnode refid="1512" relation="include">
+        </childnode>
+      </node>
+      <node id="1509">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+      </node>
+      <node id="1502">
+        <label>windows.h</label>
+      </node>
+      <node id="1503">
+        <label>SharedData.h</label>
+        <link refid="SharedData_8h"/>
+      </node>
+      <node id="1560">
+        <label>ik_IAudioRecorder.h</label>
+        <link refid="ik__IAudioRecorder_8h"/>
+        <childnode refid="1543" relation="include">
+        </childnode>
+        <childnode refid="1550" relation="include">
+        </childnode>
+      </node>
+      <node id="1525">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="1512" relation="include">
+        </childnode>
+      </node>
+      <node id="1546">
+        <label>ik_ESoundEngineOptions.h</label>
+        <link refid="ik__ESoundEngineOptions_8h"/>
+      </node>
+      <node id="1543">
+        <label>ik_IRefCounted.h</label>
+        <link refid="ik__IRefCounted_8h"/>
+        <childnode refid="1540" relation="include">
+        </childnode>
+      </node>
+      <node id="1507">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1532">
+        <label>WeaponSystem.h</label>
+        <link refid="WeaponSystem_8h"/>
+        <childnode refid="1533" relation="include">
+        </childnode>
+        <childnode refid="1534" relation="include">
+        </childnode>
+      </node>
+      <node id="1501">
+        <label>timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="1502" relation="include">
+        </childnode>
+      </node>
+      <node id="1514">
+        <label>cmath</label>
+      </node>
+      <node id="1512">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="1513" relation="include">
+        </childnode>
+        <childnode refid="1518" relation="include">
+        </childnode>
+      </node>
+      <node id="1539">
+        <label>irrklang.h</label>
+        <link refid="irrKlang_8h"/>
+        <childnode refid="1540" relation="include">
+        </childnode>
+        <childnode refid="1542" relation="include">
+        </childnode>
+        <childnode refid="1543" relation="include">
+        </childnode>
+        <childnode refid="1544" relation="include">
+        </childnode>
+        <childnode refid="1545" relation="include">
+        </childnode>
+        <childnode refid="1546" relation="include">
+        </childnode>
+        <childnode refid="1547" relation="include">
+        </childnode>
+        <childnode refid="1548" relation="include">
+        </childnode>
+        <childnode refid="1549" relation="include">
+        </childnode>
+        <childnode refid="1550" relation="include">
+        </childnode>
+        <childnode refid="1551" relation="include">
+        </childnode>
+        <childnode refid="1555" relation="include">
+        </childnode>
+        <childnode refid="1556" relation="include">
+        </childnode>
+        <childnode refid="1552" relation="include">
+        </childnode>
+        <childnode refid="1558" relation="include">
+        </childnode>
+        <childnode refid="1553" relation="include">
+        </childnode>
+        <childnode refid="1557" relation="include">
+        </childnode>
+        <childnode refid="1559" relation="include">
+        </childnode>
+        <childnode refid="1560" relation="include">
+        </childnode>
+        <childnode refid="1554" relation="include">
+        </childnode>
+      </node>
+      <node id="1510">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="1511" relation="include">
+        </childnode>
+      </node>
+      <node id="1500">
+        <label>Application.h</label>
+        <link refid="Application_8h"/>
+        <childnode refid="1501" relation="include">
+        </childnode>
+        <childnode refid="1503" relation="include">
+        </childnode>
+      </node>
+      <node id="1520">
+        <label>GL\glew.h</label>
+      </node>
+      <node id="1519">
+        <label>Mesh.h</label>
+        <link refid="Mesh_8h"/>
+        <childnode refid="1520" relation="include">
+        </childnode>
+        <childnode refid="1521" relation="include">
+        </childnode>
+        <childnode refid="1513" relation="include">
+        </childnode>
+        <childnode refid="1522" relation="include">
+        </childnode>
+        <childnode refid="1523" relation="include">
+        </childnode>
+      </node>
+      <node id="1559">
+        <label>ik_ISoundDeviceList.h</label>
+        <link refid="ik__ISoundDeviceList_8h"/>
+        <childnode refid="1543" relation="include">
+        </childnode>
+      </node>
+      <node id="1523">
+        <label>string</label>
+      </node>
+      <node id="1504">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="1557">
+        <label>ik_IFileReader.h</label>
+        <link refid="ik__IFileReader_8h"/>
+        <childnode refid="1543" relation="include">
+        </childnode>
+      </node>
+      <node id="1505">
+        <label>GLFW/glfw3.h</label>
+      </node>
+      <node id="1554">
+        <label>ik_ISoundMixedOutputReceiver.h</label>
+        <link refid="ik__ISoundMixedOutputReceiver_8h"/>
+        <childnode refid="1543" relation="include">
+        </childnode>
+        <childnode refid="1548" relation="include">
+        </childnode>
+      </node>
+      <node id="1515">
+        <label>exception</label>
+      </node>
+      <node id="1499">
+        <label>ComGLab/Source/Application.cpp</label>
+        <link refid="Application.cpp"/>
+        <childnode refid="1500" relation="include">
+        </childnode>
+        <childnode refid="1504" relation="include">
+        </childnode>
+        <childnode refid="1505" relation="include">
+        </childnode>
+        <childnode refid="1506" relation="include">
+        </childnode>
+        <childnode refid="1507" relation="include">
+        </childnode>
+        <childnode refid="1508" relation="include">
+        </childnode>
+        <childnode refid="1561" relation="include">
+        </childnode>
+      </node>
+      <node id="1530">
+        <label>LoadTGA.h</label>
+        <link refid="LoadTGA_8h"/>
+      </node>
+      <node id="1548">
+        <label>ik_SAudioStreamFormat.h</label>
+        <link refid="ik__SAudioStreamFormat_8h"/>
+        <childnode refid="1543" relation="include">
+        </childnode>
+      </node>
+      <node id="1541">
+        <label>wchar.h</label>
+      </node>
+      <node id="1526">
+        <label>Boundary.h</label>
+        <link refid="Boundary_8h"/>
+      </node>
+      <node id="1545">
+        <label>ik_ESoundOutputDrivers.h</label>
+        <link refid="ik__ESoundOutputDrivers_8h"/>
+      </node>
+      <node id="1550">
+        <label>ik_ISoundSource.h</label>
+        <link refid="ik__ISoundSource_8h"/>
+        <childnode refid="1544" relation="include">
+        </childnode>
+        <childnode refid="1542" relation="include">
+        </childnode>
+        <childnode refid="1547" relation="include">
+        </childnode>
+        <childnode refid="1548" relation="include">
+        </childnode>
+      </node>
+      <node id="1511">
+        <label>Vertex.h</label>
+        <link refid="Vertex_8h"/>
+        <childnode refid="1512" relation="include">
+        </childnode>
+      </node>
+      <node id="1516">
+        <label>ctime</label>
+      </node>
+      <node id="1528">
+        <label>stack</label>
+      </node>
+      <node id="1521">
+        <label>vector</label>
+      </node>
+      <node id="1508">
+        <label>SP2_Scene.h</label>
+        <link refid="SP2__Scene_8h"/>
+        <childnode refid="1509" relation="include">
+        </childnode>
+        <childnode refid="1510" relation="include">
+        </childnode>
+        <childnode refid="1519" relation="include">
+        </childnode>
+        <childnode refid="1524" relation="include">
+        </childnode>
+        <childnode refid="1527" relation="include">
+        </childnode>
+        <childnode refid="1522" relation="include">
+        </childnode>
+        <childnode refid="1530" relation="include">
+        </childnode>
+        <childnode refid="1531" relation="include">
+        </childnode>
+        <childnode refid="1523" relation="include">
+        </childnode>
+        <childnode refid="1521" relation="include">
+        </childnode>
+        <childnode refid="1532" relation="include">
+        </childnode>
+        <childnode refid="1535" relation="include">
+        </childnode>
+        <childnode refid="1537" relation="include">
+        </childnode>
+        <childnode refid="1538" relation="include">
+        </childnode>
+        <childnode refid="1539" relation="include">
+        </childnode>
+      </node>
+      <node id="1538">
+        <label>sstream</label>
+      </node>
+      <node id="1540">
+        <label>ik_irrKlangTypes.h</label>
+        <link refid="ik__irrKlangTypes_8h"/>
+        <childnode refid="1541" relation="include">
+        </childnode>
+      </node>
+      <node id="1552">
+        <label>ik_ISoundEffectControl.h</label>
+        <link refid="ik__ISoundEffectControl_8h"/>
+        <childnode refid="1544" relation="include">
+        </childnode>
+        <childnode refid="1542" relation="include">
+        </childnode>
+      </node>
+      <node id="1536">
+        <label>math.h</label>
+      </node>
+      <node id="1517">
+        <label>cstdlib</label>
+      </node>
+      <node id="1518">
+        <label>iostream</label>
+      </node>
+      <node id="1524">
+        <label>Camera3.h</label>
+        <link refid="Camera3_8h"/>
+        <childnode refid="1525" relation="include">
+        </childnode>
+        <childnode refid="1526" relation="include">
+        </childnode>
+        <childnode refid="1503" relation="include">
+        </childnode>
+        <childnode refid="1521" relation="include">
+        </childnode>
+      </node>
+      <node id="1535">
+        <label>Robot.h</label>
+        <link refid="Robot_8h"/>
+        <childnode refid="1512" relation="include">
+        </childnode>
+        <childnode refid="1532" relation="include">
+        </childnode>
+        <childnode refid="1526" relation="include">
+        </childnode>
+        <childnode refid="1536" relation="include">
+        </childnode>
+        <childnode refid="1514" relation="include">
+        </childnode>
+      </node>
+      <node id="1544">
+        <label>ik_IVirtualRefCounted.h</label>
+        <link refid="ik__IVirtualRefCounted_8h"/>
+        <childnode refid="1540" relation="include">
+        </childnode>
+      </node>
+      <node id="1551">
+        <label>ik_ISound.h</label>
+        <link refid="ik__ISound_8h"/>
+        <childnode refid="1544" relation="include">
+        </childnode>
+        <childnode refid="1552" relation="include">
+        </childnode>
+        <childnode refid="1542" relation="include">
+        </childnode>
+      </node>
+      <node id="1542">
+        <label>ik_vec3d.h</label>
+        <link refid="ik__vec3d_8h"/>
+        <childnode refid="1536" relation="include">
+        </childnode>
+        <childnode refid="1540" relation="include">
+        </childnode>
+      </node>
+      <node id="1527">
+        <label>MatrixStack.h</label>
+        <link refid="MatrixStack_8h"/>
+        <childnode refid="1528" relation="include">
+        </childnode>
+        <childnode refid="1529" relation="include">
+        </childnode>
+      </node>
+      <node id="1561">
+        <label>Particle.h</label>
+        <link refid="Particle_8h"/>
+        <childnode refid="1509" relation="include">
+        </childnode>
+        <childnode refid="1510" relation="include">
+        </childnode>
+        <childnode refid="1519" relation="include">
+        </childnode>
+        <childnode refid="1524" relation="include">
+        </childnode>
+        <childnode refid="1527" relation="include">
+        </childnode>
+        <childnode refid="1522" relation="include">
+        </childnode>
+        <childnode refid="1530" relation="include">
+        </childnode>
+        <childnode refid="1531" relation="include">
+        </childnode>
+        <childnode refid="1523" relation="include">
+        </childnode>
+        <childnode refid="1521" relation="include">
+        </childnode>
+        <childnode refid="1538" relation="include">
+        </childnode>
+        <childnode refid="1539" relation="include">
+        </childnode>
+      </node>
+      <node id="1537">
+        <label>RobotManager.h</label>
+        <link refid="RobotManager_8h"/>
+        <childnode refid="1533" relation="include">
+        </childnode>
+        <childnode refid="1535" relation="include">
+        </childnode>
+      </node>
+      <node id="1547">
+        <label>ik_EStreamModes.h</label>
+        <link refid="ik__EStreamModes_8h"/>
+      </node>
+      <node id="1549">
+        <label>ik_ISoundEngine.h</label>
+        <link refid="ik__ISoundEngine_8h"/>
+        <childnode refid="1543" relation="include">
+        </childnode>
+        <childnode refid="1542" relation="include">
+        </childnode>
+        <childnode refid="1550" relation="include">
+        </childnode>
+        <childnode refid="1551" relation="include">
+        </childnode>
+        <childnode refid="1547" relation="include">
+        </childnode>
+        <childnode refid="1553" relation="include">
+        </childnode>
+        <childnode refid="1554" relation="include">
+        </childnode>
+      </node>
+      <node id="1558">
+        <label>ik_ISoundStopEventReceiver.h</label>
+        <link refid="ik__ISoundStopEventReceiver_8h"/>
+        <childnode refid="1543" relation="include">
+        </childnode>
+        <childnode refid="1548" relation="include">
+        </childnode>
+      </node>
+      <node id="1555">
+        <label>ik_IAudioStream.h</label>
+        <link refid="ik__IAudioStream_8h"/>
+        <childnode refid="1543" relation="include">
+        </childnode>
+        <childnode refid="1548" relation="include">
+        </childnode>
+      </node>
+      <node id="1556">
+        <label>ik_IAudioStreamLoader.h</label>
+        <link refid="ik__IAudioStreamLoader_8h"/>
+        <childnode refid="1543" relation="include">
+        </childnode>
+        <childnode refid="1557" relation="include">
+        </childnode>
+      </node>
+      <node id="1553">
+        <label>ik_IFileFactory.h</label>
+        <link refid="ik__IFileFactory_8h"/>
+        <childnode refid="1543" relation="include">
+        </childnode>
+      </node>
+      <node id="1506">
+        <label>stdio.h</label>
+      </node>
+      <node id="1522">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="Application_8cpp_1a2cbda9a4727e1cdbcae5c646d7fb0911" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int S_Width</definition>
+        <argsstring></argsstring>
+        <name>S_Width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Application.cpp" line="16" column="1" bodyfile="ComGLab/Source/Application.cpp" bodystart="16" bodyend="-1"/>
+        <referencedby refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" compoundref="Application_8cpp" startline="56" endline="119">Application::Init</referencedby>
+        <referencedby refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" compoundref="Particle_8cpp" startline="18" endline="95">Particle::Init</referencedby>
+        <referencedby refid="classSP2__Scene_1ae7483c042e4a1861b71137f1a564ad7a" compoundref="SP2__Scene_8cpp" startline="60" endline="130">SP2_Scene::Init</referencedby>
+        <referencedby refid="classCamera3_1a81897b566fc3a2142c40276eb7c6a57b" compoundref="Camera3_8cpp" startline="158" endline="179">Camera3::rotateCamera</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="Application_8cpp_1a9cd21b84bf993de559113a32edfc8e93" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int S_Height</definition>
+        <argsstring></argsstring>
+        <name>S_Height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Application.cpp" line="16" column="1" bodyfile="ComGLab/Source/Application.cpp" bodystart="16" bodyend="-1"/>
+        <referencedby refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" compoundref="Application_8cpp" startline="56" endline="119">Application::Init</referencedby>
+        <referencedby refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" compoundref="Particle_8cpp" startline="18" endline="95">Particle::Init</referencedby>
+        <referencedby refid="classSP2__Scene_1ae7483c042e4a1861b71137f1a564ad7a" compoundref="SP2__Scene_8cpp" startline="60" endline="130">SP2_Scene::Init</referencedby>
+        <referencedby refid="classCamera3_1a81897b566fc3a2142c40276eb7c6a57b" compoundref="Camera3_8cpp" startline="158" endline="179">Camera3::rotateCamera</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" prot="public" static="no" mutable="no">
+        <type>GLFWwindow *</type>
+        <definition>GLFWwindow* m_window</definition>
+        <argsstring></argsstring>
+        <name>m_window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Application.cpp" line="18" column="1" bodyfile="ComGLab/Source/Application.cpp" bodystart="18" bodyend="-1"/>
+        <referencedby refid="classApplication_1a9d410604b39b8374a884b1f2a1f2a5ba" compoundref="Application_8cpp" startline="143" endline="149">Application::Exit</referencedby>
+        <referencedby refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" compoundref="Application_8cpp" startline="56" endline="119">Application::Init</referencedby>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="121" endline="141">Application::Run</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="Application_8cpp_1a677c5ab1ba0f5747ef76b40a17b6f803" prot="public" static="no" mutable="no">
+        <type>const unsigned char</type>
+        <definition>const unsigned char FPS</definition>
+        <argsstring></argsstring>
+        <name>FPS</name>
+        <initializer>= 100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Application.cpp" line="19" column="1" bodyfile="ComGLab/Source/Application.cpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="Application_8cpp_1ae228418b33873657fa31313fb4189a8f" prot="public" static="no" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int frameTime</definition>
+        <argsstring></argsstring>
+        <name>frameTime</name>
+        <initializer>= 1000 / <ref refid="Application_8cpp_1a677c5ab1ba0f5747ef76b40a17b6f803" kindref="member">FPS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Application.cpp" line="20" column="1" bodyfile="ComGLab/Source/Application.cpp" bodystart="20" bodyend="-1"/>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="121" endline="141">Application::Run</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="Application_8cpp_1a6e6d1771a9242858811be0a3569838fa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void error_callback</definition>
+        <argsstring>(int error, const char *description)</argsstring>
+        <name>error_callback</name>
+        <param>
+          <type>int</type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Application.cpp" line="23" column="1" bodyfile="ComGLab/Source/Application.cpp" bodystart="23" bodyend="27"/>
+        <referencedby refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" compoundref="Application_8cpp" startline="56" endline="119">Application::Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="Application_8cpp_1a6d1a8981b70f74fc60c1428f080da820" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void key_callback</definition>
+        <argsstring>(GLFWwindow *window, int key, int scancode, int action, int mods)</argsstring>
+        <name>key_callback</name>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>scancode</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mods</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Application.cpp" line="30" column="1" bodyfile="ComGLab/Source/Application.cpp" bodystart="30" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="Application_8cpp_1aadcee9765075e232ca0720f80a76ad37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void resize_callback</definition>
+        <argsstring>(GLFWwindow *window, int w, int h)</argsstring>
+        <name>resize_callback</name>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Application.cpp" line="51" column="1" bodyfile="ComGLab/Source/Application.cpp" bodystart="51" bodyend="54"/>
+        <referencedby refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" compoundref="Application_8cpp" startline="56" endline="119">Application::Init</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Application_8h" kindref="compound">Application.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//Include<sp/>GLEW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GL/glew.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//Include<sp/>GLFW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GLFW/glfw3.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//Include<sp/>the<sp/>standard<sp/>C++<sp/>headers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SP2__Scene_8h" kindref="compound">SP2_Scene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Particle_8h" kindref="compound">Particle.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="SP2__Scene_8h_1a2cbda9a4727e1cdbcae5c646d7fb0911" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="Application_8cpp_1a2cbda9a4727e1cdbcae5c646d7fb0911" kindref="member">S_Width</ref>,<sp/><ref refid="Application_8cpp_1a9cd21b84bf993de559113a32edfc8e93" kindref="member">S_Height</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" refkind="member"><highlight class="normal">GLFWwindow*<sp/><ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>;</highlight></codeline>
+<codeline lineno="19" refid="Application_8cpp_1a677c5ab1ba0f5747ef76b40a17b6f803" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="Application_8cpp_1a677c5ab1ba0f5747ef76b40a17b6f803" kindref="member">FPS</ref><sp/>=<sp/>100;<sp/></highlight><highlight class="comment">//<sp/>FPS<sp/>of<sp/>this<sp/>game</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="Application_8cpp_1ae228418b33873657fa31313fb4189a8f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="Application_8cpp_1ae228418b33873657fa31313fb4189a8f" kindref="member">frameTime</ref><sp/>=<sp/>1000<sp/>/<sp/><ref refid="Application_8cpp_1a677c5ab1ba0f5747ef76b40a17b6f803" kindref="member">FPS</ref>;<sp/></highlight><highlight class="comment">//<sp/>time<sp/>for<sp/>each<sp/>frame</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//Define<sp/>an<sp/>error<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="Application_8cpp_1a6e6d1771a9242858811be0a3569838fa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Application_8cpp_1a6e6d1771a9242858811be0a3569838fa" kindref="member">error_callback</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>error,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>description)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fputs(description,<sp/>stderr);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_fgetchar();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//Define<sp/>the<sp/>key<sp/>input<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="Application_8cpp_1a6d1a8981b70f74fc60c1428f080da820" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Application_8cpp_1a6d1a8981b70f74fc60c1428f080da820" kindref="member">key_callback</ref>(GLFWwindow*<sp/><ref refid="mpaudec_8c_1a988bf6974f37c7585b0cd2f299605004" kindref="member">window</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scancode,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>action,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mods)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(key<sp/>==<sp/>GLFW_KEY_ESCAPE<sp/>&amp;&amp;<sp/>action<sp/>==<sp/>GLFW_PRESS)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwSetWindowShouldClose(window,<sp/>GL_TRUE);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classApplication_1ae02b37c3fd9151bc11e379db0fc51f22" kindref="member">Application::CloseGame</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" kindref="member">Application::IsKeyPressed</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>key)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((GetAsyncKeyState(key)<sp/>&amp;<sp/>0x8001)<sp/>!=<sp/>0);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classApplication_1afa8cc05ce6b6092be5ecdfdae44e05f8" refkind="member"><highlight class="normal"><ref refid="classApplication_1afa8cc05ce6b6092be5ecdfdae44e05f8" kindref="member">Application::Application</ref>()</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classApplication_1a748bca84fefb9c12661cfaa2f623748d" refkind="member"><highlight class="normal"><ref refid="classApplication_1a748bca84fefb9c12661cfaa2f623748d" kindref="member">Application::~Application</ref>()</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="Application_8cpp_1aadcee9765075e232ca0720f80a76ad37" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Application_8cpp_1aadcee9765075e232ca0720f80a76ad37" kindref="member">resize_callback</ref>(GLFWwindow*<sp/><ref refid="mpaudec_8c_1a988bf6974f37c7585b0cd2f299605004" kindref="member">window</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>w,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>h)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glViewport(0,<sp/>0,<sp/>w,<sp/>h);<sp/></highlight><highlight class="comment">//<sp/>Update<sp/>opengl<sp/>the<sp/>new<sp/>window<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" kindref="member">Application::Init</ref>()</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Set<sp/>the<sp/>error<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwSetErrorCallback(<ref refid="Application_8cpp_1a6e6d1771a9242858811be0a3569838fa" kindref="member">error_callback</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Initialize<sp/>GLFW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!glfwInit())</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Set<sp/>the<sp/>GLFW<sp/>window<sp/>creation<sp/>hints<sp/>-<sp/>these<sp/>are<sp/>optional</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//glfwWindowHint(GLFW_SAMPLES,<sp/>4);<sp/>//Request<sp/>4x<sp/>antialiasing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwWindowHint(GLFW_SAMPLES,<sp/>8);<sp/></highlight><highlight class="comment">//Request<sp/>8x<sp/>antialiasing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR,<sp/>3);<sp/></highlight><highlight class="comment">//Request<sp/>a<sp/>specific<sp/>OpenGL<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR,<sp/>3);<sp/></highlight><highlight class="comment">//Request<sp/>a<sp/>specific<sp/>OpenGL<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT,<sp/>GL_TRUE);<sp/>//<sp/>To<sp/>make<sp/>MacOS<sp/>happy;<sp/>should<sp/>not<sp/>be<sp/>needed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwWindowHint(GLFW_OPENGL_PROFILE,<sp/>GLFW_OPENGL_CORE_PROFILE);<sp/></highlight><highlight class="comment">//We<sp/>don&apos;t<sp/>want<sp/>the<sp/>old<sp/>OpenGL<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Create<sp/>a<sp/>window<sp/>and<sp/>create<sp/>its<sp/>OpenGL<sp/>context</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//m_window<sp/>=<sp/>glfwCreateWindow(1300,<sp/>975,<sp/>&quot;Computer<sp/>Graphics&quot;,<sp/>NULL,<sp/>NULL);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>SIDE<sp/>NOTE:<sp/>DO<sp/>NOT<sp/>BUG<sp/>TEST<sp/>IN<sp/>FULL<sp/>SCREEN.<sp/>IF<sp/>IT<sp/>LAGS<sp/>OUT,<sp/>YOU<sp/>CANNOT<sp/>CLOSE<sp/>THE<sp/>WINDOW!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GLFWvidmode<sp/>*<sp/>mode<sp/>=<sp/>glfwGetVideoMode(glfwGetPrimaryMonitor());</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Obtain<sp/>Width<sp/>and<sp/>Height<sp/>values<sp/>from<sp/>the<sp/>monitor;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Application_8cpp_1a2cbda9a4727e1cdbcae5c646d7fb0911" kindref="member">S_Width</ref><sp/>=<sp/>mode-&gt;width;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Application_8cpp_1a9cd21b84bf993de559113a32edfc8e93" kindref="member">S_Height</ref><sp/>=<sp/>mode-&gt;height;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Choose<sp/>ONE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Set<sp/>to<sp/>be<sp/>windowed<sp/>at<sp/>primary<sp/>monitor&apos;s<sp/>resolution;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//m_window<sp/>=<sp/>glfwCreateWindow(S_Width,<sp/>S_Height,<sp/>&quot;Computer<sp/>Graphics&quot;,<sp/>NULL,<sp/>NULL);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Set<sp/>to<sp/>fullscreen<sp/>at<sp/>primary<sp/>monitor&apos;s<sp/>resolution;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref><sp/>=<sp/>glfwCreateWindow(<ref refid="Application_8cpp_1a2cbda9a4727e1cdbcae5c646d7fb0911" kindref="member">S_Width</ref>,<sp/><ref refid="Application_8cpp_1a9cd21b84bf993de559113a32edfc8e93" kindref="member">S_Height</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Computer<sp/>Graphics&quot;</highlight><highlight class="normal">,<sp/>glfwGetPrimaryMonitor(),<sp/>NULL);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Hide<sp/>The<sp/>Cursor<sp/>Within<sp/>the<sp/>Application;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwSetInputMode(<ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>,<sp/>GLFW_CURSOR,<sp/>GLFW_CURSOR_HIDDEN);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwSetWindowSizeCallback(<ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>,<sp/><ref refid="Application_8cpp_1aadcee9765075e232ca0720f80a76ad37" kindref="member">resize_callback</ref>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//If<sp/>the<sp/>window<sp/>couldn&apos;t<sp/>be<sp/>created</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(<sp/>stderr,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>open<sp/>GLFW<sp/>window.\n&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwTerminate();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//This<sp/>function<sp/>makes<sp/>the<sp/>context<sp/>of<sp/>the<sp/>specified<sp/>window<sp/>current<sp/>on<sp/>the<sp/>calling<sp/>thread.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwMakeContextCurrent(<ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Sets<sp/>the<sp/>key<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//glfwSetKeyCallback(m_window,<sp/>key_callback);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glewExperimental<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Needed<sp/>for<sp/>core<sp/>profile</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Initialize<sp/>GLEW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLenum<sp/>err<sp/>=<sp/>glewInit();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//If<sp/>GLEW<sp/>hasn&apos;t<sp/>initialized</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err<sp/>!=<sp/>GLEW_OK)<sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>glewGetErrorString(err));</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//return<sp/>-1;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" kindref="member">Application::Run</ref>()</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Main<sp/>Loop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene" kindref="compound">Scene</ref><sp/>*scene<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classSP2__Scene" kindref="compound">SP2_Scene</ref>();</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene-&gt;<ref refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1ac81ea1396dc69c6d48b9a701954f53fe" kindref="member">m_timer</ref>.<ref refid="classStopWatch_1a23301f735a2e3190435e39c9fd70cdf2" kindref="member">startTimer</ref>();<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>timer<sp/>to<sp/>calculate<sp/>how<sp/>long<sp/>it<sp/>takes<sp/>to<sp/>render<sp/>this<sp/>frame</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!glfwWindowShouldClose(<ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>)<sp/>&amp;&amp;<sp/>!<ref refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" kindref="member">IsKeyPressed</ref>(VK_ESCAPE)<sp/>&amp;&amp;<sp/>!<ref refid="classApplication_1ae02b37c3fd9151bc11e379db0fc51f22" kindref="member">CloseGame</ref>)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene-&gt;<ref refid="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91" kindref="member">Update</ref>(<ref refid="classApplication_1ac81ea1396dc69c6d48b9a701954f53fe" kindref="member">m_timer</ref>.<ref refid="classStopWatch_1ac8be1626396d1a5ca414f74349d59eb2" kindref="member">getElapsedTime</ref>());</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene-&gt;<ref refid="classScene_1a9319090be5d18e87f1e83dbbf191204f" kindref="member">Render</ref>(<ref refid="classApplication_1ac81ea1396dc69c6d48b9a701954f53fe" kindref="member">m_timer</ref>.<ref refid="classStopWatch_1ac8be1626396d1a5ca414f74349d59eb2" kindref="member">getElapsedTime</ref>());</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Swap<sp/>buffers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwSwapBuffers(<ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Get<sp/>and<sp/>organize<sp/>events,<sp/>like<sp/>keyboard<sp/>and<sp/>mouse<sp/>input,<sp/>window<sp/>resizing,<sp/>etc...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwPollEvents();</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1ac81ea1396dc69c6d48b9a701954f53fe" kindref="member">m_timer</ref>.<ref refid="classStopWatch_1a2cd0856fc87a40038edfd66d784be8b4" kindref="member">waitUntil</ref>(<ref refid="Application_8cpp_1ae228418b33873657fa31313fb4189a8f" kindref="member">frameTime</ref>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Frame<sp/>rate<sp/>limiter.<sp/>Limits<sp/>each<sp/>frame<sp/>to<sp/>a<sp/>specified<sp/>time<sp/>in<sp/>ms.<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//Check<sp/>if<sp/>the<sp/>ESC<sp/>key<sp/>had<sp/>been<sp/>pressed<sp/>or<sp/>if<sp/>the<sp/>window<sp/>had<sp/>been<sp/>closed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene-&gt;<ref refid="classScene_1aae8e24654ef98c79961c2b804b12852c" kindref="member">Exit</ref>();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>scene;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="classApplication_1a9d410604b39b8374a884b1f2a1f2a5ba" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1a9d410604b39b8374a884b1f2a1f2a5ba" kindref="member">Application::Exit</ref>()</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Close<sp/>OpenGL<sp/>window<sp/>and<sp/>terminate<sp/>GLFW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwDestroyWindow(<ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Finalize<sp/>and<sp/>clean<sp/>up<sp/>GLFW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwTerminate();</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="ComGLab/Source/Application.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structPackedVertex" kind="struct" language="C++" prot="public">
+    <compoundname>PackedVertex</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structPackedVertex_1adbd5c98e027ccce79a27381686efdb62" prot="public" static="no" mutable="no">
+        <type><ref refid="structPosition" kindref="compound">Position</ref></type>
+        <definition>Position PackedVertex::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/LoadOBJ.cpp" line="118" column="1" bodyfile="ComGLab/Source/LoadOBJ.cpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structPackedVertex_1a86428554cc4e4c177eb1161bc3be0230" prot="public" static="no" mutable="no">
+        <type><ref refid="structTexCoord" kindref="compound">TexCoord</ref></type>
+        <definition>TexCoord PackedVertex::uv</definition>
+        <argsstring></argsstring>
+        <name>uv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/LoadOBJ.cpp" line="119" column="1" bodyfile="ComGLab/Source/LoadOBJ.cpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structPackedVertex_1ad7f8bd922bf90fb53ac5a27935179698" prot="public" static="no" mutable="no">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 PackedVertex::normal</definition>
+        <argsstring></argsstring>
+        <name>normal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/LoadOBJ.cpp" line="120" column="1" bodyfile="ComGLab/Source/LoadOBJ.cpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structPackedVertex_1a86a90d456e948b1105c7e8905f4fa385" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PackedVertex::operator&lt;</definition>
+        <argsstring>(const PackedVertex that) const </argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="structPackedVertex" kindref="compound">PackedVertex</ref></type>
+          <declname>that</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/LoadOBJ.cpp" line="121" column="1" bodyfile="ComGLab/Source/LoadOBJ.cpp" bodystart="121" bodyend="123"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="522">
+        <label>Position</label>
+        <link refid="structPosition"/>
+        <childnode refid="520" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+      <node id="521">
+        <label>TexCoord</label>
+        <link refid="structTexCoord"/>
+        <childnode refid="520" relation="usage">
+          <edgelabel>u</edgelabel>
+          <edgelabel>v</edgelabel>
+        </childnode>
+      </node>
+      <node id="520">
+        <label>float</label>
+      </node>
+      <node id="518">
+        <label>PackedVertex</label>
+        <link refid="structPackedVertex"/>
+        <childnode refid="519" relation="usage">
+          <edgelabel>normal</edgelabel>
+        </childnode>
+        <childnode refid="521" relation="usage">
+          <edgelabel>uv</edgelabel>
+        </childnode>
+        <childnode refid="522" relation="usage">
+          <edgelabel>position</edgelabel>
+        </childnode>
+      </node>
+      <node id="519">
+        <label>Vector3</label>
+        <link refid="structVector3"/>
+        <childnode refid="520" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ComGLab/Source/LoadOBJ.cpp" line="117" column="1" bodyfile="ComGLab/Source/LoadOBJ.cpp" bodystart="117" bodyend="124"/>
+    <listofallmembers>
+      <member refid="structPackedVertex_1ad7f8bd922bf90fb53ac5a27935179698" prot="public" virt="non-virtual"><scope>PackedVertex</scope><name>normal</name></member>
+      <member refid="structPackedVertex_1a86a90d456e948b1105c7e8905f4fa385" prot="public" virt="non-virtual"><scope>PackedVertex</scope><name>operator&lt;</name></member>
+      <member refid="structPackedVertex_1adbd5c98e027ccce79a27381686efdb62" prot="public" virt="non-virtual"><scope>PackedVertex</scope><name>position</name></member>
+      <member refid="structPackedVertex_1a86428554cc4e4c177eb1161bc3be0230" prot="public" virt="non-virtual"><scope>PackedVertex</scope><name>uv</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

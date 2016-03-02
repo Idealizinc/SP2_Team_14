@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file SP2_Scene.cpp
+\author Ryan Lim Rui An, Teh Kai Hong Bryan, Andy Ong Jian Yao
+\par email: 150577L@mymail.nyp.edu.sg, 150587A@mymail.nyp.edu.sg, 152581X@mymail.nyp.edu.sg
+\brief
+.cpp file that defines scenes
+*/
+/****************************************************************************/
 #include "SP2_Scene.h"
 #include "GL\glew.h"
 

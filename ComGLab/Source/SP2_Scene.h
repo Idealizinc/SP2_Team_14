@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file SP2_Scene.h
+\author Ryan Lim Rui An, Teh Kai Hong Bryan, Andy Ong Jian Yao
+\par email: 150577L@mymail.nyp.edu.sg, 150587A@mymail.nyp.edu.sg, 152581X@mymail.nyp.edu.sg
+\brief
+Header file for scene
+*/
+/****************************************************************************/
 #ifndef SP2_SCENE_H
 #define SP2_SCENE_H
 
@@ -25,6 +34,12 @@ using namespace irrklang;
 
 extern int S_Width, S_Height;
 
+/****************************************************************************/
+/*!
+Class SP2_Scene:
+\brief Defines the methods, enums and variables for scene
+*/
+/****************************************************************************/
 
 class SP2_Scene : public Scene
 {

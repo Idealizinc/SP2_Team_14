@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classirrklang_1_1IAudioRecorder" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>irrklang::IAudioRecorder</compoundname>
+    <basecompoundref refid="classirrklang_1_1IRefCounted" prot="public" virt="virtual">irrklang::IRefCounted</basecompoundref>
+    <includes refid="ik__IAudioRecorder_8h" local="no">ik_IAudioRecorder.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classirrklang_1_1IAudioRecorder_1ad02c63bf445c6f916e43271c428a05f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::IAudioRecorder::startRecordingBufferedAudio</definition>
+        <argsstring>(ik_s32 sampleRate=22000, ESampleFormat sampleFormat=ESF_S16, ik_s32 channelCount=1)=0</argsstring>
+        <name>startRecordingBufferedAudio</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+          <declname>sampleRate</declname>
+          <defval>22000</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a2b85d1e9288cb552fceef8e8a726a80e" kindref="member">ESampleFormat</ref></type>
+          <declname>sampleFormat</declname>
+          <defval><ref refid="namespaceirrklang_1a2b85d1e9288cb552fceef8e8a726a80eaa3dc63221ae7c396d6b32431da872104" kindref="member">ESF_S16</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+          <declname>channelCount</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Starts recording audio. </para>        </briefdescription>
+        <detaileddescription>
+<para>Clears all possibly previously recorded buffered audio data and starts to record. When finished recording audio data, call <ref refid="classirrklang_1_1IAudioRecorder_1aa00ecf279dfad147e313acac7a04024b" kindref="member">stopRecordingAudio()</ref>. All recorded audio data gets stored into an internal audio buffer, which can then be accessed for example using <ref refid="classirrklang_1_1IAudioRecorder_1ab70d79f62eadea7bd54e3730105b14d6" kindref="member">addSoundSourceFromRecordedAudio()</ref> or <ref refid="classirrklang_1_1IAudioRecorder_1a92394171c311a2f066cf4d0cf94bf8a0" kindref="member">getRecordedAudioData()</ref>. For recording audio data not into an internal audio buffer, use <ref refid="classirrklang_1_1IAudioRecorder_1ae1d39c90335b96f95c050fc98c1bfac1" kindref="member">startRecordingCustomHandledAudio()</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sampleRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sample rate of the recorded audio. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sampleFormat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sample format of the recorded audio. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channelCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount of audio channels. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if successfully started recording and false if not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_IAudioRecorder.h" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1IAudioRecorder_1ae1d39c90335b96f95c050fc98c1bfac1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::IAudioRecorder::startRecordingCustomHandledAudio</definition>
+        <argsstring>(ICapturedAudioDataReceiver *receiver, ik_s32 sampleRate=22000, ESampleFormat sampleFormat=ESF_S16, ik_s32 channelCount=1)=0</argsstring>
+        <name>startRecordingCustomHandledAudio</name>
+        <param>
+          <type><ref refid="classirrklang_1_1ICapturedAudioDataReceiver" kindref="compound">ICapturedAudioDataReceiver</ref> *</type>
+          <declname>receiver</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+          <declname>sampleRate</declname>
+          <defval>22000</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a2b85d1e9288cb552fceef8e8a726a80e" kindref="member">ESampleFormat</ref></type>
+          <declname>sampleFormat</declname>
+          <defval><ref refid="namespaceirrklang_1a2b85d1e9288cb552fceef8e8a726a80eaa3dc63221ae7c396d6b32431da872104" kindref="member">ESF_S16</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+          <declname>channelCount</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Starts recording audio. </para>        </briefdescription>
+        <detaileddescription>
+<para>Clears all possibly previously recorded buffered audio data and starts to record audio data, which is delivered to a custom user callback interface. When finished recording audio data, call <ref refid="classirrklang_1_1IAudioRecorder_1aa00ecf279dfad147e313acac7a04024b" kindref="member">stopRecordingAudio()</ref>. If instead of recording the data to the receiver interface recording into a managed buffer is wished, use <ref refid="classirrklang_1_1IAudioRecorder_1ad02c63bf445c6f916e43271c428a05f4" kindref="member">startRecordingBufferedAudio()</ref> instead. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>receiver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Interface to be implemented by the user, gets called once for each captured audio data chunk. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sampleRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sample rate of the recorded audio. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sampleFormat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sample format of the recorded audio. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>channelCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount of audio channels. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if successfully started recording and false if not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_IAudioRecorder.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1IAudioRecorder_1aa00ecf279dfad147e313acac7a04024b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::IAudioRecorder::stopRecordingAudio</definition>
+        <argsstring>()=0</argsstring>
+        <name>stopRecordingAudio</name>
+        <briefdescription>
+<para>Stops recording audio. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_IAudioRecorder.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1IAudioRecorder_1ab70d79f62eadea7bd54e3730105b14d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classirrklang_1_1ISoundSource" kindref="compound">ISoundSource</ref> *</type>
+        <definition>virtual ISoundSource* irrklang::IAudioRecorder::addSoundSourceFromRecordedAudio</definition>
+        <argsstring>(const char *soundName)=0</argsstring>
+        <name>addSoundSourceFromRecordedAudio</name>
+        <param>
+          <type>const char *</type>
+          <declname>soundName</declname>
+        </param>
+        <briefdescription>
+<para>Creates a sound source for the recorded audio data. </para>        </briefdescription>
+        <detaileddescription>
+<para>The returned sound source pointer then can be used to play back the recorded audio data using <ref refid="classirrklang_1_1ISoundEngine_1a25f612fe6479d3b22dc5bab2a2eaa927" kindref="member">ISoundEngine::play2D()</ref>. This method only will succeed if the audio was recorded using <ref refid="classirrklang_1_1IAudioRecorder_1ad02c63bf445c6f916e43271c428a05f4" kindref="member">startRecordingBufferedAudio()</ref> and audio recording is currently stopped. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>soundName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the virtual sound file (e.g. &quot;someRecordedAudio&quot;). You can also use this name when calling play3D() or play2D(). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_IAudioRecorder.h" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1IAudioRecorder_1a3c45b902520c4bf5610da78476183fb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::IAudioRecorder::clearRecordedAudioDataBuffer</definition>
+        <argsstring>()=0</argsstring>
+        <name>clearRecordedAudioDataBuffer</name>
+        <briefdescription>
+<para>Clears recorded audio data buffer, freeing memory. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method will only succeed if audio recording is currently stopped. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_IAudioRecorder.h" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1IAudioRecorder_1a6b98611df2d840191002479455e73f3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::IAudioRecorder::isRecording</definition>
+        <argsstring>()=0</argsstring>
+        <name>isRecording</name>
+        <briefdescription>
+<para>Returns if the recorder is currently recording audio. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_IAudioRecorder.h" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1IAudioRecorder_1ac6f664694d15960dff90d9288850c472" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="structirrklang_1_1SAudioStreamFormat" kindref="compound">SAudioStreamFormat</ref></type>
+        <definition>virtual SAudioStreamFormat irrklang::IAudioRecorder::getAudioFormat</definition>
+        <argsstring>()=0</argsstring>
+        <name>getAudioFormat</name>
+        <briefdescription>
+<para>Returns the audio format of the recorded audio data. </para>        </briefdescription>
+        <detaileddescription>
+<para>Also contains informations about the length of the recorded audio stream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_IAudioRecorder.h" line="75" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1IAudioRecorder_1a92394171c311a2f066cf4d0cf94bf8a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void *</type>
+        <definition>virtual void* irrklang::IAudioRecorder::getRecordedAudioData</definition>
+        <argsstring>()=0</argsstring>
+        <name>getRecordedAudioData</name>
+        <briefdescription>
+<para>Returns a pointer to the recorded audio data. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method will only succeed if audio recording is currently stopped and something was recorded previously using <ref refid="classirrklang_1_1IAudioRecorder_1ad02c63bf445c6f916e43271c428a05f4" kindref="member">startRecordingBufferedAudio()</ref>. The lenght of the buffer can be retrieved using <ref refid="classirrklang_1_1IAudioRecorder_1ac6f664694d15960dff90d9288850c472" kindref="member">getAudioFormat()</ref>.getSampleDataSize(). Note that the pointer is only valid as long as not <ref refid="classirrklang_1_1IAudioRecorder_1a3c45b902520c4bf5610da78476183fb2" kindref="member">clearRecordedAudioDataBuffer()</ref> is called or another sample is recorded. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_IAudioRecorder.h" line="84" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1IAudioRecorder_1a5a93972625896b0259d77226e8484565" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>const char *</type>
+        <definition>virtual const char* irrklang::IAudioRecorder::getDriverName</definition>
+        <argsstring>()=0</argsstring>
+        <name>getDriverName</name>
+        <briefdescription>
+<para>returns the name of the sound driver, like &apos;ALSA&apos; for the alsa device. </para>        </briefdescription>
+        <detaileddescription>
+<para>Possible returned strings are &quot;NULL&quot;, &quot;ALSA&quot;, &quot;CoreAudio&quot;, &quot;winMM&quot;, &quot;DirectSound&quot; and &quot;DirectSound8&quot;. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_IAudioRecorder.h" line="89" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface to an audio recorder. Create it using the <ref refid="namespaceirrklang_1aaa4535359bd66857aaadb746cf7d8cec" kindref="member">createIrrKlangAudioRecorder()</ref> function. </para>    </briefdescription>
+    <detaileddescription>
+<para>It creates sound sources into an <ref refid="classirrklang_1_1ISoundEngine" kindref="compound">ISoundEngine</ref> which then can be played there. See <ref refid="index_1recordingAudio" kindref="member">Recording Audio</ref> for an example on how to use this. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="408">
+        <label>irrklang::IRefCounted</label>
+        <link refid="classirrklang_1_1IRefCounted"/>
+      </node>
+      <node id="407">
+        <label>irrklang::IAudioRecorder</label>
+        <link refid="classirrklang_1_1IAudioRecorder"/>
+        <childnode refid="408" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="411">
+        <label>int</label>
+      </node>
+      <node id="410">
+        <label>irrklang::IRefCounted</label>
+        <link refid="classirrklang_1_1IRefCounted"/>
+        <childnode refid="411" relation="usage">
+          <edgelabel>ReferenceCounter</edgelabel>
+        </childnode>
+      </node>
+      <node id="409">
+        <label>irrklang::IAudioRecorder</label>
+        <link refid="classirrklang_1_1IAudioRecorder"/>
+        <childnode refid="410" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="irrKlang-1.5.0/include/ik_IAudioRecorder.h" line="20" column="1" bodyfile="irrKlang-1.5.0/include/ik_IAudioRecorder.h" bodystart="19" bodyend="90"/>
+    <listofallmembers>
+      <member refid="classirrklang_1_1IAudioRecorder_1ab70d79f62eadea7bd54e3730105b14d6" prot="public" virt="pure-virtual"><scope>irrklang::IAudioRecorder</scope><name>addSoundSourceFromRecordedAudio</name></member>
+      <member refid="classirrklang_1_1IAudioRecorder_1a3c45b902520c4bf5610da78476183fb2" prot="public" virt="pure-virtual"><scope>irrklang::IAudioRecorder</scope><name>clearRecordedAudioDataBuffer</name></member>
+      <member refid="classirrklang_1_1IRefCounted_1a869fe3adc6e49e8da105e95837a565b1" prot="public" virt="non-virtual"><scope>irrklang::IAudioRecorder</scope><name>drop</name></member>
+      <member refid="classirrklang_1_1IAudioRecorder_1ac6f664694d15960dff90d9288850c472" prot="public" virt="pure-virtual"><scope>irrklang::IAudioRecorder</scope><name>getAudioFormat</name></member>
+      <member refid="classirrklang_1_1IAudioRecorder_1a5a93972625896b0259d77226e8484565" prot="public" virt="pure-virtual"><scope>irrklang::IAudioRecorder</scope><name>getDriverName</name></member>
+      <member refid="classirrklang_1_1IAudioRecorder_1a92394171c311a2f066cf4d0cf94bf8a0" prot="public" virt="pure-virtual"><scope>irrklang::IAudioRecorder</scope><name>getRecordedAudioData</name></member>
+      <member refid="classirrklang_1_1IRefCounted_1a737b09ee717069b964a3bd0451690388" prot="public" virt="non-virtual"><scope>irrklang::IAudioRecorder</scope><name>grab</name></member>
+      <member refid="classirrklang_1_1IRefCounted_1ad9d20b84a525d7bc07e44b556fbf7da6" prot="public" virt="non-virtual"><scope>irrklang::IAudioRecorder</scope><name>IRefCounted</name></member>
+      <member refid="classirrklang_1_1IAudioRecorder_1a6b98611df2d840191002479455e73f3e" prot="public" virt="pure-virtual"><scope>irrklang::IAudioRecorder</scope><name>isRecording</name></member>
+      <member refid="classirrklang_1_1IAudioRecorder_1ad02c63bf445c6f916e43271c428a05f4" prot="public" virt="pure-virtual"><scope>irrklang::IAudioRecorder</scope><name>startRecordingBufferedAudio</name></member>
+      <member refid="classirrklang_1_1IAudioRecorder_1ae1d39c90335b96f95c050fc98c1bfac1" prot="public" virt="pure-virtual"><scope>irrklang::IAudioRecorder</scope><name>startRecordingCustomHandledAudio</name></member>
+      <member refid="classirrklang_1_1IAudioRecorder_1aa00ecf279dfad147e313acac7a04024b" prot="public" virt="pure-virtual"><scope>irrklang::IAudioRecorder</scope><name>stopRecordingAudio</name></member>
+      <member refid="classirrklang_1_1IRefCounted_1a7fe8953e57adac9bcd28a94d3b251886" prot="public" virt="virtual"><scope>irrklang::IAudioRecorder</scope><name>~IRefCounted</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

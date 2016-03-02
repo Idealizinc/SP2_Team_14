@@ -1,0 +1,5 @@
+<map id="Camera3::cameraMovement" name="Camera3::cameraMovement">
+<area shape="rect" id="node2" href="$classCamera3.html#a650f17baf11f73010354cc6c75803d88" title="Camera3::boundsCheck2D" alt="" coords="237,5,415,32"/>
+<area shape="rect" id="node3" href="$namespaceMath.html#ac04b987cc6c574a059e68cb58f58c09a" title="Converts from degrees to radians. " alt="" coords="249,56,403,83"/>
+<area shape="rect" id="node4" href="$classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe" title="Application::IsKeyPressed" alt="" coords="239,107,413,133"/>
+</map>

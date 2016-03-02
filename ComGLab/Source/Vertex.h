@@ -1,7 +1,23 @@
+/****************************************************************************/
+/*!
+\file Vertex.h
+\author Wen Sheng Tang
+\par email: tang_wen_sheng\@nyp.edu.sg
+\brief
+Header file for vertex
+*/
+/****************************************************************************/
 #ifndef VERTEX_H
 #define VERTEX_H
 
 #include "Vector3.h"
+
+/****************************************************************************/
+/*!
+Struct Position:
+\brief Defines the methods and variables for setting position
+*/
+/****************************************************************************/
 
 struct Position
 {
@@ -13,6 +29,13 @@ struct Position
 	void Set(float x, float y, float z) { this->x = x; this->y = y; this->z = z; }
 };
 
+/****************************************************************************/
+/*!
+Struct Color:
+\brief Defines the methods and variables for setting color
+*/
+/****************************************************************************/
+
 struct Color
 {
 	float r, g, b;
@@ -23,6 +46,13 @@ struct Color
 	void Set(float r, float g, float b) { this->r = r; this->g = g; this->b = b; }
 };
 
+/****************************************************************************/
+/*!
+Struct TexCoord:
+\brief Defines the methods and variables for setting TexCoord
+*/
+/****************************************************************************/
+
 struct TexCoord
 {
 	float u, v;
@@ -30,6 +60,12 @@ struct TexCoord
 	void Set(float u, float v) { this->u = u; this->v = v; }
 };
 
+/****************************************************************************/
+/*!
+Struct Vertex:
+\brief Defines the methods for Vertex
+*/
+/****************************************************************************/
 
 struct Vertex
 {

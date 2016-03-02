@@ -1,0 +1,13 @@
+<map id="get_bits" name="get_bits">
+<area shape="rect" id="node2" href="$mpaudec_8c.html#a3bb107475a04ad73ab8f45dd8f1dbc44" title="get_bitsz" alt="" coords="121,56,196,83"/>
+<area shape="rect" id="node3" href="$mpaudec_8c.html#aa123e4d670f1d03b262749f6d2134630" title="huffman_decode" alt="" coords="251,5,367,32"/>
+<area shape="rect" id="node4" href="$mpaudec_8c.html#aa6bde9d54d008252eb8b748f805c7c1e" title="mp_decode_layer3" alt="" coords="423,81,553,108"/>
+<area shape="rect" id="node5" href="$mpaudec_8c.html#a2dff7b15a5f55a97729fb3f2d7194e64" title="mp_decode_frame" alt="" coords="601,183,729,209"/>
+<area shape="rect" id="node11" href="$mpaudec_8c.html#aa8d8ca6a6ace0fa4945bbf9de65c0364" title="mp_decode_layer1" alt="" coords="244,208,375,235"/>
+<area shape="rect" id="node12" href="$mpaudec_8c.html#a72ee70f98e9873f63c88b69b80e15825" title="mp_decode_layer2" alt="" coords="423,259,553,285"/>
+<area shape="rect" id="node6" href="$mpaudec_8c.html#ad804754f6cb3863f2489fcddc56f9ae4" title="mpaudec_decode_frame" alt="" coords="777,183,940,209"/>
+<area shape="rect" id="node7" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#a0694b0e9c0ca306701236b660a11633d" title="irrklang::CIrrKlangAudio\lStreamMP3::decodeFrame" alt="" coords="988,175,1167,217"/>
+<area shape="rect" id="node8" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#aa0525477376ae287275da88a17f4825d" title="irrklang::CIrrKlangAudio\lStreamMP3::CIrrKlangAudioStreamMP3" alt="" coords="1643,146,1897,187"/>
+<area shape="rect" id="node9" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#a85374ba5ed9178fa74dd256d59018ca0" title="tells the audio stream to read n audio frames into the specified buffer " alt="" coords="1215,175,1383,217"/>
+<area shape="rect" id="node10" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#ae615c171d074153463af08a11118ceaf" title="sets the position of the audio stream. " alt="" coords="1431,175,1595,217"/>
+</map>

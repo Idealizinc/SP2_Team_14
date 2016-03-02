@@ -1,3 +1,13 @@
+/****************************************************************************/
+/*!
+\file Application.cpp
+\author Wen Sheng Tang
+\par email: tang_wen_sheng\@nyp.edu.sg
+\brief
+Runs the application
+*/
+/****************************************************************************/
+
 #include "Application.h"
 
 //Include GLEW
@@ -11,7 +21,6 @@
 #include <stdlib.h>
 
 #include "SP2_Scene.h"
-#include "Particle.h"
 
 int S_Width, S_Height;
 

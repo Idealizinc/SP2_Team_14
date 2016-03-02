@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="Mesh_8h" kind="file" language="C++">
+    <compoundname>Mesh.h</compoundname>
+    <includes local="no">GL\glew.h</includes>
+    <includes local="no">vector</includes>
+    <includes refid="MyMath_8h" local="no">MyMath.h</includes>
+    <includes refid="Material_8h" local="yes">Material.h</includes>
+    <includes local="no">string</includes>
+    <includedby refid="SP2__Scene_8h" local="yes">ComGLab/Source/SP2_Scene.h</includedby>
+    <includedby refid="Particle_8h" local="yes">ComGLab/Source/Particle.h</includedby>
+    <includedby refid="Mesh_8cpp" local="yes">ComGLab/Source/Mesh.cpp</includedby>
+    <includedby refid="MeshBuilder_8h" local="yes">ComGLab/Source/MeshBuilder.h</includedby>
+    <incdepgraph>
+      <node id="1814">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="1815" relation="include">
+        </childnode>
+        <childnode refid="1816" relation="include">
+        </childnode>
+        <childnode refid="1817" relation="include">
+        </childnode>
+        <childnode refid="1818" relation="include">
+        </childnode>
+      </node>
+      <node id="1815">
+        <label>cmath</label>
+      </node>
+      <node id="1812">
+        <label>GL\glew.h</label>
+      </node>
+      <node id="1811">
+        <label>ComGLab/Source/Mesh.h</label>
+        <link refid="Mesh.h"/>
+        <childnode refid="1812" relation="include">
+        </childnode>
+        <childnode refid="1813" relation="include">
+        </childnode>
+        <childnode refid="1814" relation="include">
+        </childnode>
+        <childnode refid="1819" relation="include">
+        </childnode>
+        <childnode refid="1820" relation="include">
+        </childnode>
+      </node>
+      <node id="1820">
+        <label>string</label>
+      </node>
+      <node id="1816">
+        <label>exception</label>
+      </node>
+      <node id="1817">
+        <label>ctime</label>
+      </node>
+      <node id="1813">
+        <label>vector</label>
+      </node>
+      <node id="1818">
+        <label>cstdlib</label>
+      </node>
+      <node id="1819">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1827">
+        <label>ComGLab/Source/Mesh.cpp</label>
+        <link refid="Mesh_8cpp"/>
+      </node>
+      <node id="1826">
+        <label>ComGLab/Source/Particle.cpp</label>
+        <link refid="Particle_8cpp"/>
+      </node>
+      <node id="1821">
+        <label>ComGLab/Source/Mesh.h</label>
+        <link refid="Mesh.h"/>
+        <childnode refid="1822" relation="include">
+        </childnode>
+        <childnode refid="1825" relation="include">
+        </childnode>
+        <childnode refid="1827" relation="include">
+        </childnode>
+        <childnode refid="1828" relation="include">
+        </childnode>
+      </node>
+      <node id="1824">
+        <label>ComGLab/Source/SP2_Scene.cpp</label>
+        <link refid="SP2__Scene_8cpp"/>
+      </node>
+      <node id="1823">
+        <label>ComGLab/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="1829">
+        <label>ComGLab/Source/MeshBuilder.cpp</label>
+        <link refid="MeshBuilder_8cpp"/>
+      </node>
+      <node id="1822">
+        <label>ComGLab/Source/SP2_Scene.h</label>
+        <link refid="SP2__Scene_8h"/>
+        <childnode refid="1823" relation="include">
+        </childnode>
+        <childnode refid="1824" relation="include">
+        </childnode>
+      </node>
+      <node id="1825">
+        <label>ComGLab/Source/Particle.h</label>
+        <link refid="Particle_8h"/>
+        <childnode refid="1823" relation="include">
+        </childnode>
+        <childnode refid="1826" relation="include">
+        </childnode>
+      </node>
+      <node id="1828">
+        <label>ComGLab/Source/MeshBuilder.h</label>
+        <link refid="MeshBuilder_8h"/>
+        <childnode refid="1829" relation="include">
+        </childnode>
+        <childnode refid="1826" relation="include">
+        </childnode>
+        <childnode refid="1824" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classMesh" prot="public">Mesh</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MESH_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MESH_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GL\glew.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="MyMath_8h" kindref="compound">MyMath.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Material_8h" kindref="compound">Material.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="classMesh" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classMesh" kindref="compound">Mesh</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19" refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307" kindref="member">DRAW_MODE</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21" refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a0f1cef52a562b3047017043dd427e2a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a0f1cef52a562b3047017043dd427e2a9" kindref="member">DRAW_TRIANGLES</ref><sp/>=<sp/>0,<sp/></highlight><highlight class="comment">//default<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a76fb83917a3507580897f6e86656927d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a76fb83917a3507580897f6e86656927d" kindref="member">DRAW_TRIANGLE_STRIP</ref>,</highlight></codeline>
+<codeline lineno="23" refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a2eacb69a1ffbcde68e12fb36f8c88639" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307a2eacb69a1ffbcde68e12fb36f8c88639" kindref="member">DRAW_LINES</ref>,</highlight></codeline>
+<codeline lineno="24" refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307afd8968f2a4b30487c794fbd15024c34e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307afd8968f2a4b30487c794fbd15024c34e" kindref="member">DRAW_MODE_LAST</ref>,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMesh_1a8618160123ac2c27985d7ae34ad58cae" kindref="member">Mesh</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;meshName);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMesh_1a5efe4da1a4c0971cfb037bd70304c303" kindref="member">~Mesh</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" kindref="member">Render</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>offset,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classMesh_1aa956ea809178c5713ca3e9220cee7980" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classMesh_1aa956ea809178c5713ca3e9220cee7980" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="33" refid="classMesh_1ae12937ea9bdacb3b7b786f60fe42448e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMesh_1a3d73fcae9980b9a36297a8481cf1a307" kindref="member">DRAW_MODE</ref><sp/><ref refid="classMesh_1ae12937ea9bdacb3b7b786f60fe42448e" kindref="member">mode</ref>;</highlight></codeline>
+<codeline lineno="34" refid="classMesh_1a1e99394b36ad335804acd2461a736cfb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classMesh_1a1e99394b36ad335804acd2461a736cfb" kindref="member">vertexBuffer</ref>;</highlight></codeline>
+<codeline lineno="35" refid="classMesh_1ad5efa4d45e469674dfa3765e479e4a73" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classMesh_1ad5efa4d45e469674dfa3765e479e4a73" kindref="member">indexBuffer</ref>;</highlight></codeline>
+<codeline lineno="36" refid="classMesh_1ac6d6f70d161b9dd66c5ca79a187d86df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classMesh_1ac6d6f70d161b9dd66c5ca79a187d86df" kindref="member">indexSize</ref>;</highlight></codeline>
+<codeline lineno="37" refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" kindref="member">textureID</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classMesh_1a3368c3bc60dd176e522df1542b764847" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structMaterial" kindref="compound">Material</ref><sp/><ref refid="classMesh_1a3368c3bc60dd176e522df1542b764847" kindref="member">material</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="ComGLab/Source/Mesh.h"/>
+  </compounddef>
+</doxygen>

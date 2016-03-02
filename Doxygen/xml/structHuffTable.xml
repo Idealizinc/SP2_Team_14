@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structHuffTable" kind="struct" language="C++" prot="public">
+    <compoundname>HuffTable</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structHuffTable_1a6e1599b5da1a99639f9394e553aa5c89" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HuffTable::xsize</definition>
+        <argsstring></argsstring>
+        <name>xsize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="122" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="122" bodyend="-1"/>
+        <referencedby refid="mpaudec_8h_1a0f2f19b46f286b7a9315b40e46f34227" compoundref="mpaudec_8c" startline="306" endline="496">mpaudec_init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structHuffTable_1a3971691ed3ef40ac4ab71aa72a7cd2f0" prot="public" static="no" mutable="no">
+        <type>const uint8_t *</type>
+        <definition>const uint8_t* HuffTable::bits</definition>
+        <argsstring></argsstring>
+        <name>bits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="123" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="123" bodyend="-1"/>
+        <referencedby refid="mpaudec_8h_1a0f2f19b46f286b7a9315b40e46f34227" compoundref="mpaudec_8c" startline="306" endline="496">mpaudec_init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structHuffTable_1a6693a947aa07344e5a5a378c0e8a1157" prot="public" static="no" mutable="no">
+        <type>const uint16_t *</type>
+        <definition>const uint16_t* HuffTable::codes</definition>
+        <argsstring></argsstring>
+        <name>codes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="124" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="124" bodyend="-1"/>
+        <referencedby refid="mpaudec_8h_1a0f2f19b46f286b7a9315b40e46f34227" compoundref="mpaudec_8c" startline="306" endline="496">mpaudec_init</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="403">
+        <label>HuffTable</label>
+        <link refid="structHuffTable"/>
+        <childnode refid="404" relation="usage">
+          <edgelabel>codes</edgelabel>
+        </childnode>
+        <childnode refid="405" relation="usage">
+          <edgelabel>bits</edgelabel>
+        </childnode>
+        <childnode refid="406" relation="usage">
+          <edgelabel>xsize</edgelabel>
+        </childnode>
+      </node>
+      <node id="406">
+        <label>int</label>
+      </node>
+      <node id="405">
+        <label>const uint8_t *</label>
+      </node>
+      <node id="404">
+        <label>const uint16_t *</label>
+      </node>
+    </collaborationgraph>
+    <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" line="121" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="121" bodyend="125"/>
+    <listofallmembers>
+      <member refid="structHuffTable_1a3971691ed3ef40ac4ab71aa72a7cd2f0" prot="public" virt="non-virtual"><scope>HuffTable</scope><name>bits</name></member>
+      <member refid="structHuffTable_1a6693a947aa07344e5a5a378c0e8a1157" prot="public" virt="non-virtual"><scope>HuffTable</scope><name>codes</name></member>
+      <member refid="structHuffTable_1a6e1599b5da1a99639f9394e553aa5c89" prot="public" virt="non-virtual"><scope>HuffTable</scope><name>xsize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

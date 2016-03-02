@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structGetBitContext" kind="struct" language="C++" prot="public">
+    <compoundname>GetBitContext</compoundname>
+    <includes refid="internal_8h" local="no">internal.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structGetBitContext_1ad3bbe8f5d0b9e28a1070396fac5725d8" prot="public" static="no" mutable="no">
+        <type>const uint8_t *</type>
+        <definition>const uint8_t* GetBitContext::buffer</definition>
+        <argsstring></argsstring>
+        <name>buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" line="59" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1aa123e4d670f1d03b262749f6d2134630" compoundref="mpaudec_8c" startline="1559" endline="1661">huffman_decode</referencedby>
+        <referencedby refid="internal_8h_1a12c6ecf32fbbd78af680f9cf38d55ef1" compoundref="bits_8c" startline="30" endline="36">init_get_bits</referencedby>
+        <referencedby refid="mpaudec_8c_1ab3d38c0057af45f5edb7f6dc158ede46" compoundref="mpaudec_8c" startline="1472" endline="1490">seek_to_maindata</referencedby>
+        <referencedby refid="internal_8h_1a1ab74f16c44ad8762a384924368175e7" compoundref="bits_8c" startline="38" endline="56">show_bits</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structGetBitContext_1a033a4d63cfa56348981356df95092af7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GetBitContext::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" line="60" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" bodystart="60" bodyend="-1"/>
+        <referencedby refid="internal_8h_1aa3797eab0bbe953c41e8a070aa3a4dbc" compoundref="bits_8c" startline="70" endline="73">get_bits_count</referencedby>
+        <referencedby refid="internal_8h_1a12c6ecf32fbbd78af680f9cf38d55ef1" compoundref="bits_8c" startline="30" endline="36">init_get_bits</referencedby>
+        <referencedby refid="internal_8h_1a1ab74f16c44ad8762a384924368175e7" compoundref="bits_8c" startline="38" endline="56">show_bits</referencedby>
+        <referencedby refid="internal_8h_1aea74eea48a18a3731b052ac530f6afce" compoundref="bits_8c" startline="58" endline="61">skip_bits</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structGetBitContext_1adacaccb7e1e29f7d0e669659f17a9bfd" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GetBitContext::size_in_bits</definition>
+        <argsstring></argsstring>
+        <name>size_in_bits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" line="61" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" bodystart="61" bodyend="-1"/>
+        <referencedby refid="internal_8h_1a12c6ecf32fbbd78af680f9cf38d55ef1" compoundref="bits_8c" startline="30" endline="36">init_get_bits</referencedby>
+        <referencedby refid="internal_8h_1a1ab74f16c44ad8762a384924368175e7" compoundref="bits_8c" startline="38" endline="56">show_bits</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="395">
+        <label>int</label>
+      </node>
+      <node id="396">
+        <label>uint8_t</label>
+      </node>
+      <node id="394">
+        <label>GetBitContext</label>
+        <link refid="structGetBitContext"/>
+        <childnode refid="395" relation="usage">
+          <edgelabel>size_in_bits</edgelabel>
+          <edgelabel>index</edgelabel>
+        </childnode>
+        <childnode refid="396" relation="usage">
+          <edgelabel>buffer</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" line="58" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" bodystart="58" bodyend="62"/>
+    <listofallmembers>
+      <member refid="structGetBitContext_1ad3bbe8f5d0b9e28a1070396fac5725d8" prot="public" virt="non-virtual"><scope>GetBitContext</scope><name>buffer</name></member>
+      <member refid="structGetBitContext_1a033a4d63cfa56348981356df95092af7" prot="public" virt="non-virtual"><scope>GetBitContext</scope><name>index</name></member>
+      <member refid="structGetBitContext_1adacaccb7e1e29f7d0e669659f17a9bfd" prot="public" virt="non-virtual"><scope>GetBitContext</scope><name>size_in_bits</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

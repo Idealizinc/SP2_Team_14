@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file Camera2.cpp
+\author Wen Sheng Tang
+\par email: tang_wen_sheng\@nyp.edu.sg
+\brief
+.cpp file that defines camera
+*/
+/****************************************************************************/
 #include "Camera2.h"
 #include "Application.h"
 #include "Mtx44.h"

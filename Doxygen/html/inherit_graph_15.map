@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classirrklang_1_1IVirtualRefCounted.html" title="Reference counting base class for objects in the Irrlicht Engine similar to IRefCounted. " alt="" coords="5,31,184,57"/>
+<area shape="rect" id="node2" href="$classirrklang_1_1ISound.html" title="Represents a sound which is currently played. " alt="" coords="253,5,365,32"/>
+<area shape="rect" id="node3" href="$classirrklang_1_1ISoundSource.html" title="A sound source describes an input file (.ogg, .mp3, .wav or similar) and its default settings..." alt="" coords="232,56,385,83"/>
+</map>

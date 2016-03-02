@@ -1,0 +1,5 @@
+<map id="init_vlc" name="init_vlc">
+<area shape="rect" id="node2" href="$mpaudec_8h.html#a0f2f19b46f286b7a9315b40e46f34227" title="mpaudec_init" alt="" coords="115,13,213,39"/>
+<area shape="rect" id="node3" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#aa0525477376ae287275da88a17f4825d" title="irrklang::CIrrKlangAudio\lStreamMP3::CIrrKlangAudioStreamMP3" alt="" coords="473,5,728,47"/>
+<area shape="rect" id="node4" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#ae615c171d074153463af08a11118ceaf" title="sets the position of the audio stream. " alt="" coords="261,35,425,76"/>
+</map>

@@ -1,5 +1,22 @@
+/****************************************************************************/
+/*!
+\file Boundary.h
+\author Ryan Lim Rui An
+\par email: 150577L@mymail.nyp.edu.sg
+\brief
+Struct to define a Boundary in the scene
+*/
+/****************************************************************************/
+
 #ifndef _BOUNDARY_H
 #define _BOUNDARY_H
+
+/****************************************************************************/
+/*!
+Struct Boundary:
+\brief Defines 3D vectors and its methods
+*/
+/****************************************************************************/
 
 struct Boundary
 {

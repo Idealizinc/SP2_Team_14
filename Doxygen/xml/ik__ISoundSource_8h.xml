@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ik__ISoundSource_8h" kind="file" language="C++">
+    <compoundname>ik_ISoundSource.h</compoundname>
+    <includes refid="ik__IVirtualRefCounted_8h" local="yes">ik_IVirtualRefCounted.h</includes>
+    <includes refid="ik__vec3d_8h" local="yes">ik_vec3d.h</includes>
+    <includes refid="ik__EStreamModes_8h" local="yes">ik_EStreamModes.h</includes>
+    <includes refid="ik__SAudioStreamFormat_8h" local="yes">ik_SAudioStreamFormat.h</includes>
+    <includedby refid="ik__IAudioRecorder_8h" local="yes">irrKlang-1.5.0/include/ik_IAudioRecorder.h</includedby>
+    <includedby refid="ik__ISoundEngine_8h" local="yes">irrKlang-1.5.0/include/ik_ISoundEngine.h</includedby>
+    <includedby refid="irrKlang_8h" local="yes">irrKlang-1.5.0/include/irrKlang.h</includedby>
+    <incdepgraph>
+      <node id="2760">
+        <label>ik_IRefCounted.h</label>
+        <link refid="ik__IRefCounted_8h"/>
+        <childnode refid="2754" relation="include">
+        </childnode>
+      </node>
+      <node id="2759">
+        <label>ik_SAudioStreamFormat.h</label>
+        <link refid="ik__SAudioStreamFormat_8h"/>
+        <childnode refid="2760" relation="include">
+        </childnode>
+      </node>
+      <node id="2755">
+        <label>wchar.h</label>
+      </node>
+      <node id="2752">
+        <label>irrKlang-1.5.0/include/ik_ISoundSource.h</label>
+        <link refid="ik_ISoundSource.h"/>
+        <childnode refid="2753" relation="include">
+        </childnode>
+        <childnode refid="2756" relation="include">
+        </childnode>
+        <childnode refid="2758" relation="include">
+        </childnode>
+        <childnode refid="2759" relation="include">
+        </childnode>
+      </node>
+      <node id="2754">
+        <label>ik_irrKlangTypes.h</label>
+        <link refid="ik__irrKlangTypes_8h"/>
+        <childnode refid="2755" relation="include">
+        </childnode>
+      </node>
+      <node id="2757">
+        <label>math.h</label>
+      </node>
+      <node id="2753">
+        <label>ik_IVirtualRefCounted.h</label>
+        <link refid="ik__IVirtualRefCounted_8h"/>
+        <childnode refid="2754" relation="include">
+        </childnode>
+      </node>
+      <node id="2756">
+        <label>ik_vec3d.h</label>
+        <link refid="ik__vec3d_8h"/>
+        <childnode refid="2757" relation="include">
+        </childnode>
+        <childnode refid="2754" relation="include">
+        </childnode>
+      </node>
+      <node id="2758">
+        <label>ik_EStreamModes.h</label>
+        <link refid="ik__EStreamModes_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2762">
+        <label>irrKlang-1.5.0/include/ik_IAudioRecorder.h</label>
+        <link refid="ik__IAudioRecorder_8h"/>
+        <childnode refid="2763" relation="include">
+        </childnode>
+      </node>
+      <node id="2768">
+        <label>ComGLab/Source/Particle.cpp</label>
+        <link refid="Particle_8cpp"/>
+      </node>
+      <node id="2769">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/ikpMP3.cpp</label>
+        <link refid="ikpMP3_8cpp"/>
+      </node>
+      <node id="2763">
+        <label>irrKlang-1.5.0/include/irrKlang.h</label>
+        <link refid="irrKlang_8h"/>
+        <childnode refid="2764" relation="include">
+        </childnode>
+        <childnode refid="2767" relation="include">
+        </childnode>
+        <childnode refid="2769" relation="include">
+        </childnode>
+      </node>
+      <node id="2766">
+        <label>ComGLab/Source/SP2_Scene.cpp</label>
+        <link refid="SP2__Scene_8cpp"/>
+      </node>
+      <node id="2765">
+        <label>ComGLab/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="2761">
+        <label>irrKlang-1.5.0/include/ik_ISoundSource.h</label>
+        <link refid="ik_ISoundSource.h"/>
+        <childnode refid="2762" relation="include">
+        </childnode>
+        <childnode refid="2770" relation="include">
+        </childnode>
+        <childnode refid="2763" relation="include">
+        </childnode>
+      </node>
+      <node id="2764">
+        <label>ComGLab/Source/SP2_Scene.h</label>
+        <link refid="SP2__Scene_8h"/>
+        <childnode refid="2765" relation="include">
+        </childnode>
+        <childnode refid="2766" relation="include">
+        </childnode>
+      </node>
+      <node id="2767">
+        <label>ComGLab/Source/Particle.h</label>
+        <link refid="Particle_8h"/>
+        <childnode refid="2765" relation="include">
+        </childnode>
+        <childnode refid="2768" relation="include">
+        </childnode>
+      </node>
+      <node id="2770">
+        <label>irrKlang-1.5.0/include/ik_ISoundEngine.h</label>
+        <link refid="ik__ISoundEngine_8h"/>
+        <childnode refid="2763" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classirrklang_1_1ISoundSource" prot="public">irrklang::ISoundSource</innerclass>
+    <innernamespace refid="namespaceirrklang">irrklang</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2002-2014<sp/>Nikolaus<sp/>Gebhardt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>&quot;irrKlang&quot;<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>For<sp/>conditions<sp/>of<sp/>distribution<sp/>and<sp/>use,<sp/>see<sp/>copyright<sp/>notice<sp/>in<sp/>irrKlang.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__I_IRRKLANG_IRR_SOUND_SOURCE_H_INCLUDED__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__I_IRRKLANG_IRR_SOUND_SOURCE_H_INCLUDED__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ik__IVirtualRefCounted_8h" kindref="compound">ik_IVirtualRefCounted.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ik__vec3d_8h" kindref="compound">ik_vec3d.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ik__EStreamModes_8h" kindref="compound">ik_EStreamModes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ik__SAudioStreamFormat_8h" kindref="compound">ik_SAudioStreamFormat.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceirrklang" kindref="compound">irrklang</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"></codeline>
+<codeline lineno="21" refid="classirrklang_1_1ISoundSource" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classirrklang_1_1ISoundSource" kindref="compound">ISoundSource</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1IVirtualRefCounted" kindref="compound">IVirtualRefCounted</ref></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespaceirrklang_1af179ad966eb79d01f6d1cf8927087449" kindref="member">ik_c8</ref>*<sp/><ref refid="classirrklang_1_1ISoundSource_1afbd2d8ef903b106a8e9a332c0dd06693" kindref="member">getName</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1ISoundSource_1aed0e4abae00be20497ccb905d2db7588" kindref="member">setStreamMode</ref>(<ref refid="namespaceirrklang_1a6eab873ba387c6a4e05839e6a434d06e" kindref="member">E_STREAM_MODE</ref><sp/>mode)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="namespaceirrklang_1a6eab873ba387c6a4e05839e6a434d06e" kindref="member">E_STREAM_MODE</ref><sp/><ref refid="classirrklang_1_1ISoundSource_1a5b1158611ec58ab372ef05de541fed56" kindref="member">getStreamMode</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="namespaceirrklang_1adf9f75b6ca98aff6843fb294125571e0" kindref="member">ik_u32</ref><sp/><ref refid="classirrklang_1_1ISoundSource_1a23ff097b74d284529e4e1c75d0611884" kindref="member">getPlayLength</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="structirrklang_1_1SAudioStreamFormat" kindref="compound">SAudioStreamFormat</ref><sp/><ref refid="classirrklang_1_1ISoundSource_1a4c24dd695accd2d2f0f6e00124af1cf4" kindref="member">getAudioFormat</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>a<sp/>sound<sp/>is<sp/>seekable<sp/>depends<sp/>on<sp/>the<sp/>file<sp/>type<sp/>and<sp/>the<sp/>audio<sp/>format.<sp/>For<sp/>example<sp/>MOD<sp/>files</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cannot<sp/>be<sp/>seeked<sp/>currently.</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\return<sp/>Returns<sp/>true<sp/>of<sp/>the<sp/>sound<sp/>source<sp/>supports<sp/>setPlayPosition()<sp/>and<sp/>false<sp/>if<sp/>not.<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Note:<sp/>If<sp/>the<sp/>sound<sp/>never<sp/>has<sp/>been<sp/>played<sp/>before,<sp/>the<sp/>sound<sp/>engine<sp/>will<sp/>have<sp/>to<sp/>open</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>the<sp/>file<sp/>and<sp/>try<sp/>to<sp/>get<sp/>the<sp/>information<sp/>from<sp/>there,<sp/>so<sp/>this<sp/>call<sp/>could<sp/>take<sp/>a<sp/>bit<sp/>depending</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>on<sp/>the<sp/>type<sp/>of<sp/>file.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1ISoundSource_1a6a608ded51f5920d0cb5d28ac6ee5455" kindref="member">getIsSeekingSupported</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"></codeline>
+<codeline lineno="69"></codeline>
+<codeline lineno="72"></codeline>
+<codeline lineno="76"></codeline>
+<codeline lineno="79"></codeline>
+<codeline lineno="87"></codeline>
+<codeline lineno="90"></codeline>
+<codeline lineno="96"></codeline>
+<codeline lineno="99"></codeline>
+<codeline lineno="112"></codeline>
+<codeline lineno="115"></codeline>
+<codeline lineno="126"></codeline>
+<codeline lineno="129"></codeline>
+<codeline lineno="134"></codeline>
+<codeline lineno="137"></codeline>
+<codeline lineno="144"></codeline>
+<codeline lineno="147"></codeline>
+<codeline lineno="149"></codeline>
+<codeline lineno="152"></codeline>
+<codeline lineno="161"></codeline>
+    </programlisting>
+    <location file="irrKlang-1.5.0/include/ik_ISoundSource.h"/>
+  </compounddef>
+</doxygen>

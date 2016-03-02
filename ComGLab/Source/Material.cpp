@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file Camera.cpp
+\author Wen Sheng Tang
+\par email: tang_wen_sheng\@nyp.edu.sg
+\brief
+.cpp file that defines default light properties
+*/
+/****************************************************************************/
 #include "Material.h"
 
 Material::Material()

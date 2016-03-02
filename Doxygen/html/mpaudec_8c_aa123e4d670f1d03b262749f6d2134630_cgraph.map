@@ -1,0 +1,9 @@
+<map id="huffman_decode" name="huffman_decode">
+<area shape="rect" id="node2" href="$bits_8c.html#a4c9accf71fe52dba23187e83252f2459" title="get_bits" alt="" coords="324,56,392,83"/>
+<area shape="rect" id="node5" href="$bits_8c.html#aa3797eab0bbe953c41e8a070aa3a4dbc" title="get_bits_count" alt="" coords="169,157,276,184"/>
+<area shape="rect" id="node6" href="$mpaudec_8c.html#a3bb107475a04ad73ab8f45dd8f1dbc44" title="get_bitsz" alt="" coords="185,5,260,32"/>
+<area shape="rect" id="node7" href="$bits_8c.html#ad9d1cef202cce95b0fd843505647ae2c" title="get_vlc" alt="" coords="327,107,389,133"/>
+<area shape="rect" id="node8" href="$mpaudec_8c.html#aa551ba45abc3f6547465227e7c0f084d" title="l3_unscale" alt="" coords="181,208,265,235"/>
+<area shape="rect" id="node3" href="$bits_8c.html#a1ab74f16c44ad8762a384924368175e7" title="show_bits" alt="" coords="440,56,520,83"/>
+<area shape="rect" id="node4" href="$bits_8c.html#aea74eea48a18a3731b052ac530f6afce" title="skip_bits" alt="" coords="443,107,517,133"/>
+</map>

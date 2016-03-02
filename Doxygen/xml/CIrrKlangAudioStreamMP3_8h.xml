@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="CIrrKlangAudioStreamMP3_8h" kind="file" language="C++">
+    <compoundname>CIrrKlangAudioStreamMP3.h</compoundname>
+    <includes refid="ik__IAudioStream_8h" local="no">ik_IAudioStream.h</includes>
+    <includes refid="ik__IFileReader_8h" local="no">ik_IFileReader.h</includes>
+    <includes local="no">vector</includes>
+    <includes refid="mpaudec_8h" local="yes">decoder/mpaudec.h</includes>
+    <includedby refid="CIrrKlangAudioStreamLoaderMP3_8cpp" local="yes">irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamLoaderMP3.cpp</includedby>
+    <includedby refid="CIrrKlangAudioStreamMP3_8cpp" local="yes">irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.cpp</includedby>
+    <incdepgraph>
+      <node id="2905">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h</label>
+        <link refid="CIrrKlangAudioStreamMP3.h"/>
+        <childnode refid="2906" relation="include">
+        </childnode>
+        <childnode refid="2911" relation="include">
+        </childnode>
+        <childnode refid="2912" relation="include">
+        </childnode>
+        <childnode refid="2913" relation="include">
+        </childnode>
+      </node>
+      <node id="2907">
+        <label>ik_IRefCounted.h</label>
+        <link refid="ik__IRefCounted_8h"/>
+        <childnode refid="2908" relation="include">
+        </childnode>
+      </node>
+      <node id="2911">
+        <label>ik_IFileReader.h</label>
+        <link refid="ik__IFileReader_8h"/>
+        <childnode refid="2907" relation="include">
+        </childnode>
+      </node>
+      <node id="2910">
+        <label>ik_SAudioStreamFormat.h</label>
+        <link refid="ik__SAudioStreamFormat_8h"/>
+        <childnode refid="2907" relation="include">
+        </childnode>
+      </node>
+      <node id="2913">
+        <label>decoder/mpaudec.h</label>
+        <link refid="mpaudec_8h"/>
+      </node>
+      <node id="2909">
+        <label>wchar.h</label>
+      </node>
+      <node id="2912">
+        <label>vector</label>
+      </node>
+      <node id="2908">
+        <label>ik_irrKlangTypes.h</label>
+        <link refid="ik__irrKlangTypes_8h"/>
+        <childnode refid="2909" relation="include">
+        </childnode>
+      </node>
+      <node id="2906">
+        <label>ik_IAudioStream.h</label>
+        <link refid="ik__IAudioStream_8h"/>
+        <childnode refid="2907" relation="include">
+        </childnode>
+        <childnode refid="2910" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2914">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h</label>
+        <link refid="CIrrKlangAudioStreamMP3.h"/>
+        <childnode refid="2915" relation="include">
+        </childnode>
+        <childnode refid="2916" relation="include">
+        </childnode>
+      </node>
+      <node id="2915">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamLoaderMP3.cpp</label>
+        <link refid="CIrrKlangAudioStreamLoaderMP3_8cpp"/>
+      </node>
+      <node id="2916">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.cpp</label>
+        <link refid="CIrrKlangAudioStreamMP3_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classirrklang_1_1CIrrKlangAudioStreamMP3" prot="public">irrklang::CIrrKlangAudioStreamMP3</innerclass>
+    <innerclass refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer" prot="protected">irrklang::CIrrKlangAudioStreamMP3::QueueBuffer</innerclass>
+    <innerclass refid="structirrklang_1_1CIrrKlangAudioStreamMP3_1_1SFramePositionData" prot="protected">irrklang::CIrrKlangAudioStreamMP3::SFramePositionData</innerclass>
+    <innernamespace refid="namespaceirrklang">irrklang</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2002-2007<sp/>Nikolaus<sp/>Gebhardt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Part<sp/>of<sp/>the<sp/>code<sp/>for<sp/>this<sp/>plugin<sp/>for<sp/>irrKlang<sp/>is<sp/>based<sp/>on:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>MP3<sp/>input<sp/>for<sp/>Audiere<sp/>by<sp/>Matt<sp/>Campbell<sp/>&lt;mattcampbell@pobox.com&gt;,<sp/>based<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>libavcodec<sp/>from<sp/>ffmpeg<sp/>(http://ffmpeg.sourceforge.net/).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>license.txt<sp/>for<sp/>license<sp/>details<sp/>of<sp/>this<sp/>plugin.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__C_IRRKLANG_AUDIO_STREAM_MP3_H_INCLUDED__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__C_IRRKLANG_AUDIO_STREAM_MP3_H_INCLUDED__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="ik__IAudioStream_8h" kindref="compound">ik_IAudioStream.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="ik__IFileReader_8h" kindref="compound">ik_IFileReader.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mpaudec_8h" kindref="compound">decoder/mpaudec.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceirrklang" kindref="compound">irrklang</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17" refid="namespaceirrklang_1a6e877f4a7838386812719e6ba0a5d4f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceirrklang_1a6e877f4a7838386812719e6ba0a5d4f0" kindref="member">IKP_MP3_INPUT_BUFFER_SIZE</ref><sp/>=<sp/>4096;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"></codeline>
+<codeline lineno="23" refid="classirrklang_1_1CIrrKlangAudioStreamMP3" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3" kindref="compound">CIrrKlangAudioStreamMP3</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1IAudioStream" kindref="compound">IAudioStream</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" kindref="member">CIrrKlangAudioStreamMP3</ref>(<ref refid="classirrklang_1_1IFileReader" kindref="compound">IFileReader</ref>*<sp/>file);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae223aa810305f5a13e3aba97b525e048" kindref="member">~CIrrKlangAudioStreamMP3</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="structirrklang_1_1SAudioStreamFormat" kindref="compound">SAudioStreamFormat</ref><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a2df652ff2b95dba4ac92b5eef46a9e36" kindref="member">getFormat</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a85374ba5ed9178fa74dd256d59018ca0" kindref="member">readFrames</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>target,<sp/><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref><sp/>frameCountToRead);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" kindref="member">setPosition</ref>(<ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref><sp/>pos);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>just<sp/>for<sp/>the<sp/>CIrrKlangAudioStreamLoaderMP3<sp/>to<sp/>let<sp/>him<sp/>know<sp/>if<sp/>loading<sp/>worked</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1abfc07cdaf0ca8c9b65f72c2befaef78f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1abfc07cdaf0ca8c9b65f72c2befaef78f" kindref="member">isOK</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a263b10757d62918dd0dbfc909f10dfe9" kindref="member">File</ref><sp/>!=<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1afc059786d4e8bb14cbd4c9b380223117" kindref="member">readFrameForMP3</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>target,<sp/><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref><sp/>frameCountToRead,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>parseOnly=</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" kindref="member">decodeFrame</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a37a20bc8ccf0bfce2a6e8516c0b0e1aa" kindref="member">skipID3IfNecessary</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a263b10757d62918dd0dbfc909f10dfe9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classirrklang_1_1IFileReader" kindref="compound">irrklang::IFileReader</ref>*<sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a263b10757d62918dd0dbfc909f10dfe9" kindref="member">File</ref>;</highlight></codeline>
+<codeline lineno="56" refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a30f3deb75be8466800177ca32c7d6166" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structirrklang_1_1SAudioStreamFormat" kindref="compound">SAudioStreamFormat</ref><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a30f3deb75be8466800177ca32c7d6166" kindref="member">Format</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>mpaudec<sp/>specific</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a815212f85c48f95fabd059de18980b62" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structMPAuDecContext" kindref="compound">MPAuDecContext</ref>*<sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a815212f85c48f95fabd059de18980b62" kindref="member">TheMPAuDecContext</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a798e8e34d287addd458d9a56b5f9704a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1af1928ef855711d24f793f841013f000e" kindref="member">ik_u8</ref><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a798e8e34d287addd458d9a56b5f9704a" kindref="member">InputBuffer</ref>[<ref refid="namespaceirrklang_1a6e877f4a7838386812719e6ba0a5d4f0" kindref="member">IKP_MP3_INPUT_BUFFER_SIZE</ref>];</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a6403d0e3c7628d5ef21d43f6d58a2552" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a6403d0e3c7628d5ef21d43f6d58a2552" kindref="member">InputPosition</ref>;</highlight></codeline>
+<codeline lineno="64" refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ab4cf58fb6ee76c0a157c137dc300dceb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ab4cf58fb6ee76c0a157c137dc300dceb" kindref="member">InputLength</ref>;</highlight></codeline>
+<codeline lineno="65" refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a1e6ae08aaf6958f4119f695ebd1ae8ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a1e6ae08aaf6958f4119f695ebd1ae8ed" kindref="member">Position</ref>;</highlight></codeline>
+<codeline lineno="66" refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a15040d3de05ada8aba771b6b6072e042" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1af1928ef855711d24f793f841013f000e" kindref="member">ik_u8</ref>*<sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a15040d3de05ada8aba771b6b6072e042" kindref="member">DecodeBuffer</ref>;</highlight></codeline>
+<codeline lineno="67" refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1abf2b493be81b7263624da1d85a9ced91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1abf2b493be81b7263624da1d85a9ced91" kindref="member">FileBegin</ref>;</highlight></codeline>
+<codeline lineno="68" refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a52a2e07c2f629af781dc595c2f497ed4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1adf9f75b6ca98aff6843fb294125571e0" kindref="member">ik_u32</ref><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a52a2e07c2f629af781dc595c2f497ed4" kindref="member">CurrentFramePosition</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a07478535dabffe3c34ce4106a6d9915b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a07478535dabffe3c34ce4106a6d9915b" kindref="member">FirstFrameRead</ref>;</highlight></codeline>
+<codeline lineno="71" refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ac628f3913da904aa5ac0f42ddf4cf996" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ac628f3913da904aa5ac0f42ddf4cf996" kindref="member">EndOfFileReached</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>helper<sp/>class<sp/>for<sp/>managing<sp/>the<sp/>streaming<sp/>decoded<sp/>audio<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer" kindref="compound">QueueBuffer</ref></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer_1adcb894094977503bac612f1e40577816" kindref="member">QueueBuffer</ref>();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer_1a63ba2f106f31e385959f9236dbe667f0" kindref="member">~QueueBuffer</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer_1aafc3dcda6238a052b154795ed3332c81" kindref="member">getSize</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer_1a001b3786ec714fa1ef1182e1539d3c50" kindref="member">write</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buffer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer_1a53c29a763d2ed10cf4b2211e362d76d6" kindref="member">read</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buffer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer_1ad25f32a5a4200bbfb762d4bd74d67c94" kindref="member">clear</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer_1a951da4c460dc11c4e11ff34ba157a9b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1af1928ef855711d24f793f841013f000e" kindref="member">ik_u8</ref>*<sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer_1a951da4c460dc11c4e11ff34ba157a9b1" kindref="member">Buffer</ref>;</highlight></codeline>
+<codeline lineno="89" refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer_1ac83ad56a3c9e5890bdbd2b623fafce7d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer_1ac83ad56a3c9e5890bdbd2b623fafce7d" kindref="member">Capacity</ref>;</highlight></codeline>
+<codeline lineno="90" refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer_1a37ea22bc1692b2a0d2ebea968d9d8bc1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer_1a37ea22bc1692b2a0d2ebea968d9d8bc1" kindref="member">Size</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="structirrklang_1_1CIrrKlangAudioStreamMP3_1_1SFramePositionData" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structirrklang_1_1CIrrKlangAudioStreamMP3_1_1SFramePositionData" kindref="compound">SFramePositionData</ref></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="95" refid="structirrklang_1_1CIrrKlangAudioStreamMP3_1_1SFramePositionData_1a423af13d56b0406153ad0c03eef0fdcd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structirrklang_1_1CIrrKlangAudioStreamMP3_1_1SFramePositionData_1a423af13d56b0406153ad0c03eef0fdcd" kindref="member">offset</ref>;</highlight></codeline>
+<codeline lineno="96" refid="structirrklang_1_1CIrrKlangAudioStreamMP3_1_1SFramePositionData_1a0c24559f19dfbf618508bf37f7b38e1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structirrklang_1_1CIrrKlangAudioStreamMP3_1_1SFramePositionData_1a0c24559f19dfbf618508bf37f7b38e1d" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1acd19d708a19f5fbfb13a0978a9bd0d6b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;SFramePositionData&gt;<sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1acd19d708a19f5fbfb13a0978a9bd0d6b" kindref="member">FramePositionData</ref>;</highlight></codeline>
+<codeline lineno="100" refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a9d366c4523a7840754428add5f813998" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer" kindref="compound">QueueBuffer</ref><sp/><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a9d366c4523a7840754428add5f813998" kindref="member">DecodedQueue</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>irrklang</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h"/>
+  </compounddef>
+</doxygen>

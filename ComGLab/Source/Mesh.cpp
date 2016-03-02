@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file Mesh.cpp
+\author Wen Sheng Tang
+\par email: tang_wen_sheng\@nyp.edu.sg
+\brief
+.cpp file that draws meshes
+*/
+/****************************************************************************/
 #include "Vertex.h"
 #include "Mesh.h"
 #include "GL\glew.h"

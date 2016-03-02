@@ -1,0 +1,4 @@
+<map id="irrklang::CIrrKlangAudioStreamMP3::~CIrrKlangAudioStreamMP3" name="irrklang::CIrrKlangAudioStreamMP3::~CIrrKlangAudioStreamMP3">
+<area shape="rect" id="node2" href="$classirrklang_1_1IRefCounted.html#a869fe3adc6e49e8da105e95837a565b1" title="When you receive an object in irrKlang (for example an ISound using play2D() or play3D()), and you no longer need the object, you have to call drop(). " alt="" coords="316,5,459,47"/>
+<area shape="rect" id="node3" href="$mpaudec_8c.html#ab0a860386211b1374764b470cc56129b" title="mpaudec_clear" alt="" coords="332,71,443,98"/>
+</map>

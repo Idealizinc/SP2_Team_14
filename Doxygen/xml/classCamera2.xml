@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classCamera2" kind="class" language="C++" prot="public">
+    <compoundname>Camera2</compoundname>
+    <basecompoundref refid="classCamera" prot="public" virt="non-virtual">Camera</basecompoundref>
+    <includes refid="Camera2_8h" local="no">Camera2.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classCamera2_1a248471e0c272cd78f83dcf18ff907c4f" prot="public" static="no" mutable="no">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Camera2::defaultPosition</definition>
+        <argsstring></argsstring>
+        <name>defaultPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Camera2.h" line="13" column="1" bodyfile="ComGLab/Source/Camera2.h" bodystart="13" bodyend="-1"/>
+        <referencedby refid="classCamera2_1af3d4e37be651bac9c0a94ac0af021c35" compoundref="Camera2_8cpp" startline="13" endline="22">Init</referencedby>
+        <referencedby refid="classCamera2_1aeea4a4fb229742098c0f79cddbc19280" compoundref="Camera2_8cpp" startline="87" endline="92">Reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCamera2_1ab353b257dd3bee73e305205f5fe9b0c5" prot="public" static="no" mutable="no">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Camera2::defaultTarget</definition>
+        <argsstring></argsstring>
+        <name>defaultTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Camera2.h" line="14" column="1" bodyfile="ComGLab/Source/Camera2.h" bodystart="14" bodyend="-1"/>
+        <referencedby refid="classCamera2_1af3d4e37be651bac9c0a94ac0af021c35" compoundref="Camera2_8cpp" startline="13" endline="22">Init</referencedby>
+        <referencedby refid="classCamera2_1aeea4a4fb229742098c0f79cddbc19280" compoundref="Camera2_8cpp" startline="87" endline="92">Reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCamera2_1a2f700dc0fb49589a7f394be6f2152a7b" prot="public" static="no" mutable="no">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Camera2::defaultUp</definition>
+        <argsstring></argsstring>
+        <name>defaultUp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Camera2.h" line="15" column="1" bodyfile="ComGLab/Source/Camera2.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="classCamera2_1af3d4e37be651bac9c0a94ac0af021c35" compoundref="Camera2_8cpp" startline="13" endline="22">Init</referencedby>
+        <referencedby refid="classCamera2_1aeea4a4fb229742098c0f79cddbc19280" compoundref="Camera2_8cpp" startline="87" endline="92">Reset</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCamera2_1afc2b2a6761ef19c681e24b096c596e1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Camera2::Camera2</definition>
+        <argsstring>()</argsstring>
+        <name>Camera2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Camera2.h" line="17" column="1" bodyfile="ComGLab/Source/Camera2.cpp" bodystart="5" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classCamera2_1ae8f11c9b1989263596875a77f08c893e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Camera2::~Camera2</definition>
+        <argsstring>()</argsstring>
+        <name>~Camera2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Camera2.h" line="18" column="1" bodyfile="ComGLab/Source/Camera2.cpp" bodystart="9" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classCamera2_1af3d4e37be651bac9c0a94ac0af021c35" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Camera2::Init</definition>
+        <argsstring>(const Vector3 &amp;pos, const Vector3 &amp;target, const Vector3 &amp;up)</argsstring>
+        <name>Init</name>
+        <reimplements refid="classCamera_1a609775f7ec4cd936ad7add808cd7354c">Init</reimplements>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>up</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Camera2.h" line="19" column="1" bodyfile="ComGLab/Source/Camera2.cpp" bodystart="13" bodyend="22"/>
+        <references refid="structVector3_1aa1cdc5357009b47fe585ddd61e263aad" compoundref="Vector3_8cpp" startline="319" endline="322">Vector3::Cross</references>
+        <references refid="classCamera2_1a248471e0c272cd78f83dcf18ff907c4f" compoundref="Camera2_8h" startline="13">defaultPosition</references>
+        <references refid="classCamera2_1ab353b257dd3bee73e305205f5fe9b0c5" compoundref="Camera2_8h" startline="14">defaultTarget</references>
+        <references refid="classCamera2_1a2f700dc0fb49589a7f394be6f2152a7b" compoundref="Camera2_8h" startline="15">defaultUp</references>
+        <references refid="structVector3_1aaef4f25a38878a640ab4a48002a7eff8" compoundref="Vector3_8cpp" startline="358" endline="367">Vector3::Normalize</references>
+        <references refid="structVector3_1a2da0f00c5529bced69763320dac9c414" compoundref="Vector3_8cpp" startline="337" endline="343">Vector3::Normalized</references>
+        <references refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" compoundref="Camera_8h" startline="9">Camera::position</references>
+        <references refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" compoundref="Camera_8h" startline="10">Camera::target</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+      </memberdef>
+      <memberdef kind="function" id="classCamera2_1a1a54eeb46692c8806b7abea38a6301f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Camera2::Update</definition>
+        <argsstring>(double dt)</argsstring>
+        <name>Update</name>
+        <reimplements refid="classCamera_1acc1741feb6d9da849ea4b6c12e0711e6">Update</reimplements>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Camera2.h" line="20" column="1" bodyfile="ComGLab/Source/Camera2.cpp" bodystart="24" bodyend="85"/>
+        <references refid="structVector3_1aa1cdc5357009b47fe585ddd61e263aad" compoundref="Vector3_8cpp" startline="319" endline="322">Vector3::Cross</references>
+        <references refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" compoundref="Application_8cpp" startline="38" endline="41">Application::IsKeyPressed</references>
+        <references refid="structVector3_1a200024a8442329de9a625ed58ffe7075" compoundref="Vector3_8cpp" startline="273" endline="276">Vector3::Length</references>
+        <references refid="structVector3_1aaef4f25a38878a640ab4a48002a7eff8" compoundref="Vector3_8cpp" startline="358" endline="367">Vector3::Normalize</references>
+        <references refid="structVector3_1a2da0f00c5529bced69763320dac9c414" compoundref="Vector3_8cpp" startline="337" endline="343">Vector3::Normalized</references>
+        <references refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" compoundref="Camera_8h" startline="9">Camera::position</references>
+        <references refid="classCamera2_1aeea4a4fb229742098c0f79cddbc19280" compoundref="Camera2_8cpp" startline="87" endline="92">Reset</references>
+        <references refid="classMtx44_1ac0587ffb5ff9fd58ad5768d28fc06574" compoundref="Mtx44_8cpp" startline="319" endline="341">Mtx44::SetToRotation</references>
+        <references refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" compoundref="Camera_8h" startline="10">Camera::target</references>
+        <references refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" compoundref="Camera_8h" startline="11">Camera::up</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
+      </memberdef>
+      <memberdef kind="function" id="classCamera2_1aeea4a4fb229742098c0f79cddbc19280" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Camera2::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <reimplements refid="classCamera_1aa46f58b32270a571ab56dde4caca46db">Reset</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Camera2.h" line="21" column="1" bodyfile="ComGLab/Source/Camera2.cpp" bodystart="87" bodyend="92"/>
+        <references refid="classCamera2_1a248471e0c272cd78f83dcf18ff907c4f" compoundref="Camera2_8h" startline="13">defaultPosition</references>
+        <references refid="classCamera2_1ab353b257dd3bee73e305205f5fe9b0c5" compoundref="Camera2_8h" startline="14">defaultTarget</references>
+        <references refid="classCamera2_1a2f700dc0fb49589a7f394be6f2152a7b" compoundref="Camera2_8h" startline="15">defaultUp</references>
+        <references refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" compoundref="Camera_8h" startline="9">Camera::position</references>
+        <references refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" compoundref="Camera_8h" startline="10">Camera::target</references>
+        <references refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" compoundref="Camera_8h" startline="11">Camera::up</references>
+        <referencedby refid="classCamera2_1a1a54eeb46692c8806b7abea38a6301f3" compoundref="Camera2_8cpp" startline="24" endline="85">Update</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="343">
+        <label>Camera</label>
+        <link refid="classCamera"/>
+      </node>
+      <node id="342">
+        <label>Camera2</label>
+        <link refid="classCamera2"/>
+        <childnode refid="343" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="345">
+        <label>Camera</label>
+        <link refid="classCamera"/>
+        <childnode refid="346" relation="usage">
+          <edgelabel>target</edgelabel>
+          <edgelabel>position</edgelabel>
+          <edgelabel>up</edgelabel>
+        </childnode>
+      </node>
+      <node id="347">
+        <label>float</label>
+      </node>
+      <node id="344">
+        <label>Camera2</label>
+        <link refid="classCamera2"/>
+        <childnode refid="345" relation="public-inheritance">
+        </childnode>
+        <childnode refid="346" relation="usage">
+          <edgelabel>defaultTarget</edgelabel>
+          <edgelabel>defaultPosition</edgelabel>
+          <edgelabel>defaultUp</edgelabel>
+        </childnode>
+      </node>
+      <node id="346">
+        <label>Vector3</label>
+        <link refid="structVector3"/>
+        <childnode refid="347" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ComGLab/Source/Camera2.h" line="7" column="1" bodyfile="ComGLab/Source/Camera2.h" bodystart="6" bodyend="22"/>
+    <listofallmembers>
+      <member refid="classCamera_1a01f94c3543f56ede7af49dc778f19331" prot="public" virt="non-virtual"><scope>Camera2</scope><name>Camera</name></member>
+      <member refid="classCamera2_1afc2b2a6761ef19c681e24b096c596e1a" prot="public" virt="non-virtual"><scope>Camera2</scope><name>Camera2</name></member>
+      <member refid="classCamera2_1a248471e0c272cd78f83dcf18ff907c4f" prot="public" virt="non-virtual"><scope>Camera2</scope><name>defaultPosition</name></member>
+      <member refid="classCamera2_1ab353b257dd3bee73e305205f5fe9b0c5" prot="public" virt="non-virtual"><scope>Camera2</scope><name>defaultTarget</name></member>
+      <member refid="classCamera2_1a2f700dc0fb49589a7f394be6f2152a7b" prot="public" virt="non-virtual"><scope>Camera2</scope><name>defaultUp</name></member>
+      <member refid="classCamera2_1af3d4e37be651bac9c0a94ac0af021c35" prot="public" virt="virtual"><scope>Camera2</scope><name>Init</name></member>
+      <member refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" prot="public" virt="non-virtual"><scope>Camera2</scope><name>position</name></member>
+      <member refid="classCamera2_1aeea4a4fb229742098c0f79cddbc19280" prot="public" virt="virtual"><scope>Camera2</scope><name>Reset</name></member>
+      <member refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" prot="public" virt="non-virtual"><scope>Camera2</scope><name>target</name></member>
+      <member refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" prot="public" virt="non-virtual"><scope>Camera2</scope><name>up</name></member>
+      <member refid="classCamera2_1a1a54eeb46692c8806b7abea38a6301f3" prot="public" virt="virtual"><scope>Camera2</scope><name>Update</name></member>
+      <member refid="classCamera_1ad1897942d0ccf91052386388a497349f" prot="public" virt="non-virtual"><scope>Camera2</scope><name>~Camera</name></member>
+      <member refid="classCamera2_1ae8f11c9b1989263596875a77f08c893e" prot="public" virt="non-virtual"><scope>Camera2</scope><name>~Camera2</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

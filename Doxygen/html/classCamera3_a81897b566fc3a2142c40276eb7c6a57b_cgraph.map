@@ -1,0 +1,6 @@
+<map id="Camera3::rotateCamera" name="Camera3::rotateCamera">
+<area shape="rect" id="node2" href="$namespaceMath.html#af8dc69787ee8df1ea409e97f53fce3cb" title="Keeps a value between a min and max point. If it goes to low, it will become the min. If the value gets too high, it will become the max. " alt="" coords="243,5,339,32"/>
+<area shape="rect" id="node3" href="$structVector3.html#aa1cdc5357009b47fe585ddd61e263aad" title="Cross product of 2 vectors. " alt="" coords="236,56,345,83"/>
+<area shape="rect" id="node5" href="$namespaceMath.html#ac04b987cc6c574a059e68cb58f58c09a" title="Converts from degrees to radians. " alt="" coords="213,107,368,133"/>
+<area shape="rect" id="node4" href="$structVector3.html#afa5e0c801fc2c8a820a54ea99302fe08" title="Vector3 default constructor. " alt="" coords="416,56,536,83"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Robot::GetDirVec" name="Robot::GetDirVec">
+<area shape="rect" id="node2" href="$structVector3.html#a200024a8442329de9a625ed58ffe7075" title="Return length of vector. " alt="" coords="359,5,473,32"/>
+<area shape="rect" id="node3" href="$structVector3.html#aaef4f25a38878a640ab4a48002a7eff8" title="Normalize this vector and return a reference to it. " alt="" coords="177,31,311,57"/>
+</map>

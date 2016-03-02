@@ -1,0 +1,8 @@
+<map id="Robot::Robot" name="Robot::Robot">
+<area shape="rect" id="node2" href="$classRobot.html#a4e7360385dab7b3974d6ca7c6464b747" title="Robot::CalcBounds" alt="" coords="152,5,287,32"/>
+<area shape="rect" id="node4" href="$classRobot.html#a1b94e72fd005902fa335e3f6d827190b" title="Robot::GetDirVec" alt="" coords="157,56,281,83"/>
+<area shape="rect" id="node7" href="$classRobot.html#a8b6afcea9f407806b66328ee37fea7bc" title="Robot::SetStats" alt="" coords="162,107,277,133"/>
+<area shape="rect" id="node3" href="$structBoundary.html#a3cf640001c6bbc842d129f453fb3441b" title="Boundary::set" alt="" coords="350,5,453,32"/>
+<area shape="rect" id="node5" href="$structVector3.html#a200024a8442329de9a625ed58ffe7075" title="Return length of vector. " alt="" coords="516,81,631,108"/>
+<area shape="rect" id="node6" href="$structVector3.html#aaef4f25a38878a640ab4a48002a7eff8" title="Normalize this vector and return a reference to it. " alt="" coords="335,107,468,133"/>
+</map>

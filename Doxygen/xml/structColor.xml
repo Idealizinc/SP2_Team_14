@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structColor" kind="struct" language="C++" prot="public">
+    <compoundname>Color</compoundname>
+    <includes refid="Vertex_8h" local="no">Vertex.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structColor_1a3958a556b47d2de3dd45c75aac833c20" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Color::r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Vertex.h" line="18" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="classParticle_1ae3b87275d545d2b4d6b266fa6777b8e8" compoundref="Particle_8cpp" startline="97" endline="123">Particle::RenderText</referencedby>
+        <referencedby refid="classSP2__Scene_1aba0bba98a66ffc88a253833486bc90e9" compoundref="SP2__Scene_8cpp" startline="375" endline="401">SP2_Scene::RenderText</referencedby>
+        <referencedby refid="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" compoundref="Particle_8cpp" startline="125" endline="167">Particle::RenderTextOnScreen</referencedby>
+        <referencedby refid="classSP2__Scene_1a40721f5409a15245989ab79baf848996" compoundref="SP2__Scene_8cpp" startline="403" endline="444">SP2_Scene::RenderTextOnScreen</referencedby>
+        <referencedby refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" compoundref="Vertex_8h" startline="23" endline="23">Set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structColor_1a5defbb21620e480e556181772d665f34" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Color::g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Vertex.h" line="18" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" compoundref="Vertex_8h" startline="23" endline="23">Set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structColor_1a33e482be18d6ea31d2b403bee13683b7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Color::b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Vertex.h" line="18" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" compoundref="Vertex_8h" startline="23" endline="23">Set</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structColor_1a5890bddbeb135abcd997efdb65b9d5f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Color::Color</definition>
+        <argsstring>(float r=1, float g=0, float b=1)</argsstring>
+        <name>Color</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Vertex.h" line="19" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="19" bodyend="22"/>
+        <references refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" compoundref="Vertex_8h" startline="23" endline="23">Set</references>
+      </memberdef>
+      <memberdef kind="function" id="structColor_1acc77e4e3583d3eca7e476952e51bfb80" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Color::Set</definition>
+        <argsstring>(float r, float g, float b)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Vertex.h" line="23" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="23" bodyend="23"/>
+        <references refid="structColor_1a33e482be18d6ea31d2b403bee13683b7" compoundref="Vertex_8h" startline="18">b</references>
+        <references refid="structColor_1a5defbb21620e480e556181772d665f34" compoundref="Vertex_8h" startline="18">g</references>
+        <references refid="structColor_1a3958a556b47d2de3dd45c75aac833c20" compoundref="Vertex_8h" startline="18">r</references>
+        <referencedby refid="structColor_1a5890bddbeb135abcd997efdb65b9d5f9" compoundref="Vertex_8h" startline="19" endline="22">Color</referencedby>
+        <referencedby refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="17" endline="65">MeshBuilder::GenerateAxes</referencedby>
+        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">Particle::initLights</referencedby>
+        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="672" endline="757">SP2_Scene::initLights</referencedby>
+        <referencedby refid="structLight_1aeb5df09a25a32f19fdffa761268ba24f" compoundref="Light_8cpp" startline="3" endline="9">Light::Light</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="385">
+        <label>float</label>
+      </node>
+      <node id="384">
+        <label>Color</label>
+        <link refid="structColor"/>
+        <childnode refid="385" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ComGLab/Source/Vertex.h" line="17" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="16" bodyend="24"/>
+    <listofallmembers>
+      <member refid="structColor_1a33e482be18d6ea31d2b403bee13683b7" prot="public" virt="non-virtual"><scope>Color</scope><name>b</name></member>
+      <member refid="structColor_1a5890bddbeb135abcd997efdb65b9d5f9" prot="public" virt="non-virtual"><scope>Color</scope><name>Color</name></member>
+      <member refid="structColor_1a5defbb21620e480e556181772d665f34" prot="public" virt="non-virtual"><scope>Color</scope><name>g</name></member>
+      <member refid="structColor_1a3958a556b47d2de3dd45c75aac833c20" prot="public" virt="non-virtual"><scope>Color</scope><name>r</name></member>
+      <member refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" prot="public" virt="non-virtual"><scope>Color</scope><name>Set</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

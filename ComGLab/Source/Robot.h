@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file Robot.h
+\author Ryan Lim Rui An, Teh Kai Hong Bryan
+\par email: 150577L@mymail.nyp.edu.sg, 150587A@mymail.nyp.edu.sg
+\brief
+Class to define Robot
+*/
+/****************************************************************************/
 #ifndef _ROBOT_H
 #define _ROBOT_H
 
@@ -6,6 +15,13 @@
 #include "Boundary.h"
 #include <math.h>
 #include <cmath>
+
+/****************************************************************************/
+/*!
+Class Robot:
+\brief Defines the methods, enums and variables for Robot
+*/
+/****************************************************************************/
 
 class Robot
 {

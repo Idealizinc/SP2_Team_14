@@ -1,0 +1,7 @@
+<map id="Math::Clamp" name="Math::Clamp">
+<area shape="rect" id="node2" href="$classCamera3.html#a81897b566fc3a2142c40276eb7c6a57b" title="Camera3::rotateCamera" alt="" coords="149,31,309,57"/>
+<area shape="rect" id="node3" href="$classCamera3.html#a99440cc4eb40bfc3bbad15bfe08c8a55" title="Camera3::cameraMovement2" alt="" coords="357,5,548,32"/>
+<area shape="rect" id="node4" href="$classCamera3.html#acc5d4103826cda6d20b80a0d35eacdbe" title="Camera3::Update" alt="" coords="596,31,719,57"/>
+<area shape="rect" id="node5" href="$classParticle.html#a8a5412af8bbf924a183d373a64480b00" title="Particle::Update" alt="" coords="779,5,894,32"/>
+<area shape="rect" id="node6" href="$classSP2__Scene.html#a2d81e16b1353a71274ac59b796969cf0" title="SP2_Scene::Update" alt="" coords="767,56,907,83"/>
+</map>

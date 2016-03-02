@@ -1,0 +1,6 @@
+<map id="build_table" name="build_table">
+<area shape="rect" id="node2" href="$internal_8h.html#a17ce557803d3a49257e6fb289d43dfee" title="init_vlc" alt="" coords="137,13,199,39"/>
+<area shape="rect" id="node3" href="$mpaudec_8h.html#a0f2f19b46f286b7a9315b40e46f34227" title="mpaudec_init" alt="" coords="247,13,345,39"/>
+<area shape="rect" id="node4" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#aa0525477376ae287275da88a17f4825d" title="irrklang::CIrrKlangAudio\lStreamMP3::CIrrKlangAudioStreamMP3" alt="" coords="605,5,860,47"/>
+<area shape="rect" id="node5" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#ae615c171d074153463af08a11118ceaf" title="sets the position of the audio stream. " alt="" coords="393,35,557,76"/>
+</map>

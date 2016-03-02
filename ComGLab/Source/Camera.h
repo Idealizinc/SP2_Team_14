@@ -1,7 +1,23 @@
+/****************************************************************************/
+/*!
+\file Camera.h
+\author Wen Sheng Tang
+\par email: tang_wen_sheng\@nyp.edu.sg
+\brief
+Class to define camera
+*/
+/****************************************************************************/
 #ifndef CAMERA_H
 #define CAMERA_H
 
 #include "Vector3.h"
+
+/****************************************************************************/
+/*!
+Class Camera:
+\brief Defines the methods for camera control
+*/
+/****************************************************************************/
 
 class Camera
 {

@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classStopWatch" kind="class" language="C++" prot="public">
+    <compoundname>StopWatch</compoundname>
+    <includes refid="timer_8h" local="no">timer.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classStopWatch_1a102c4e3275d87798eca31673192c97ed" prot="private" static="no" mutable="no">
+        <type>LARGE_INTEGER</type>
+        <definition>LARGE_INTEGER StopWatch::frequency</definition>
+        <argsstring></argsstring>
+        <name>frequency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/timer.h" line="11" column="1" bodyfile="Common/Source/timer.h" bodystart="11" bodyend="-1"/>
+        <referencedby refid="classStopWatch_1a2e61acbf46638eb3275cc8a7c1ea768d" compoundref="timer_8cpp" startline="25" endline="27">LIToSecs</referencedby>
+        <referencedby refid="classStopWatch_1ad715945060eeb23baa3c036ad19b1edb" compoundref="timer_8cpp" startline="3" endline="18">StopWatch</referencedby>
+        <referencedby refid="classStopWatch_1a2cd0856fc87a40038edfd66d784be8b4" compoundref="timer_8cpp" startline="43" endline="56">waitUntil</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classStopWatch_1a1bf2210ebf10821c4b2eb849e5e98502" prot="private" static="no" mutable="no">
+        <type>LARGE_INTEGER</type>
+        <definition>LARGE_INTEGER StopWatch::prevTime</definition>
+        <argsstring></argsstring>
+        <name>prevTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/timer.h" line="12" column="1" bodyfile="Common/Source/timer.h" bodystart="12" bodyend="-1"/>
+        <referencedby refid="classStopWatch_1ac8be1626396d1a5ca414f74349d59eb2" compoundref="timer_8cpp" startline="34" endline="41">getElapsedTime</referencedby>
+        <referencedby refid="classStopWatch_1a23301f735a2e3190435e39c9fd70cdf2" compoundref="timer_8cpp" startline="29" endline="32">startTimer</referencedby>
+        <referencedby refid="classStopWatch_1a2cd0856fc87a40038edfd66d784be8b4" compoundref="timer_8cpp" startline="43" endline="56">waitUntil</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classStopWatch_1a9ff6d4ddf698ba9cb82bdb0d27af72e8" prot="private" static="no" mutable="no">
+        <type>LARGE_INTEGER</type>
+        <definition>LARGE_INTEGER StopWatch::currTime</definition>
+        <argsstring></argsstring>
+        <name>currTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/timer.h" line="12" column="1" bodyfile="Common/Source/timer.h" bodystart="12" bodyend="-1"/>
+        <referencedby refid="classStopWatch_1ac8be1626396d1a5ca414f74349d59eb2" compoundref="timer_8cpp" startline="34" endline="41">getElapsedTime</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classStopWatch_1afe4830ee290e9d152d6ce07b9ffc2642" prot="private" static="no" mutable="no">
+        <type>UINT</type>
+        <definition>UINT StopWatch::wTimerRes</definition>
+        <argsstring></argsstring>
+        <name>wTimerRes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/timer.h" line="14" column="1" bodyfile="Common/Source/timer.h" bodystart="14" bodyend="-1"/>
+        <referencedby refid="classStopWatch_1ad715945060eeb23baa3c036ad19b1edb" compoundref="timer_8cpp" startline="3" endline="18">StopWatch</referencedby>
+        <referencedby refid="classStopWatch_1a223ec0da71dd0bc4f2b14d1af44bf20a" compoundref="timer_8cpp" startline="20" endline="23">~StopWatch</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classStopWatch_1a2e61acbf46638eb3275cc8a7c1ea768d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double StopWatch::LIToSecs</definition>
+        <argsstring>(LARGE_INTEGER &amp;L)</argsstring>
+        <name>LIToSecs</name>
+        <param>
+          <type>LARGE_INTEGER &amp;</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/timer.h" line="13" column="1" bodyfile="Common/Source/timer.cpp" bodystart="25" bodyend="27"/>
+        <references refid="classStopWatch_1a102c4e3275d87798eca31673192c97ed" compoundref="timer_8h" startline="11">frequency</references>
+        <referencedby refid="classStopWatch_1ac8be1626396d1a5ca414f74349d59eb2" compoundref="timer_8cpp" startline="34" endline="41">getElapsedTime</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classStopWatch_1ad715945060eeb23baa3c036ad19b1edb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>StopWatch::StopWatch</definition>
+        <argsstring>()</argsstring>
+        <name>StopWatch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/timer.h" line="17" column="1" bodyfile="Common/Source/timer.cpp" bodystart="3" bodyend="18"/>
+        <references refid="classStopWatch_1a102c4e3275d87798eca31673192c97ed" compoundref="timer_8h" startline="11">frequency</references>
+        <references refid="timer_8cpp_1afdbe41ed890660c61ad3504e222d28be">TARGET_RESOLUTION</references>
+        <references refid="classStopWatch_1afe4830ee290e9d152d6ce07b9ffc2642" compoundref="timer_8h" startline="14">wTimerRes</references>
+      </memberdef>
+      <memberdef kind="function" id="classStopWatch_1a223ec0da71dd0bc4f2b14d1af44bf20a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>StopWatch::~StopWatch</definition>
+        <argsstring>()</argsstring>
+        <name>~StopWatch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/timer.h" line="18" column="1" bodyfile="Common/Source/timer.cpp" bodystart="20" bodyend="23"/>
+        <references refid="classStopWatch_1afe4830ee290e9d152d6ce07b9ffc2642" compoundref="timer_8h" startline="14">wTimerRes</references>
+      </memberdef>
+      <memberdef kind="function" id="classStopWatch_1a23301f735a2e3190435e39c9fd70cdf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StopWatch::startTimer</definition>
+        <argsstring>()</argsstring>
+        <name>startTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/timer.h" line="19" column="1" bodyfile="Common/Source/timer.cpp" bodystart="29" bodyend="32"/>
+        <references refid="classStopWatch_1a1bf2210ebf10821c4b2eb849e5e98502" compoundref="timer_8h" startline="12">prevTime</references>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="121" endline="141">Application::Run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classStopWatch_1ac8be1626396d1a5ca414f74349d59eb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double StopWatch::getElapsedTime</definition>
+        <argsstring>()</argsstring>
+        <name>getElapsedTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/timer.h" line="20" column="1" bodyfile="Common/Source/timer.cpp" bodystart="34" bodyend="41"/>
+        <references refid="classStopWatch_1a9ff6d4ddf698ba9cb82bdb0d27af72e8" compoundref="timer_8h" startline="12">currTime</references>
+        <references refid="classStopWatch_1a2e61acbf46638eb3275cc8a7c1ea768d" compoundref="timer_8cpp" startline="25" endline="27">LIToSecs</references>
+        <references refid="classStopWatch_1a1bf2210ebf10821c4b2eb849e5e98502" compoundref="timer_8h" startline="12">prevTime</references>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="121" endline="141">Application::Run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classStopWatch_1a2cd0856fc87a40038edfd66d784be8b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StopWatch::waitUntil</definition>
+        <argsstring>(long long time)</argsstring>
+        <name>waitUntil</name>
+        <param>
+          <type>long long</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Common/Source/timer.h" line="21" column="1" bodyfile="Common/Source/timer.cpp" bodystart="43" bodyend="56"/>
+        <references refid="classStopWatch_1a102c4e3275d87798eca31673192c97ed" compoundref="timer_8h" startline="11">frequency</references>
+        <references refid="classStopWatch_1a1bf2210ebf10821c4b2eb849e5e98502" compoundref="timer_8h" startline="12">prevTime</references>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="121" endline="141">Application::Run</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="624">
+        <label>LARGE_INTEGER</label>
+      </node>
+      <node id="622">
+        <label>StopWatch</label>
+        <link refid="classStopWatch"/>
+        <childnode refid="623" relation="usage">
+          <edgelabel>wTimerRes</edgelabel>
+        </childnode>
+        <childnode refid="624" relation="usage">
+          <edgelabel>frequency</edgelabel>
+          <edgelabel>currTime</edgelabel>
+          <edgelabel>prevTime</edgelabel>
+        </childnode>
+      </node>
+      <node id="623">
+        <label>UINT</label>
+      </node>
+    </collaborationgraph>
+    <location file="Common/Source/timer.h" line="7" column="1" bodyfile="Common/Source/timer.h" bodystart="6" bodyend="22"/>
+    <listofallmembers>
+      <member refid="classStopWatch_1a9ff6d4ddf698ba9cb82bdb0d27af72e8" prot="private" virt="non-virtual"><scope>StopWatch</scope><name>currTime</name></member>
+      <member refid="classStopWatch_1a102c4e3275d87798eca31673192c97ed" prot="private" virt="non-virtual"><scope>StopWatch</scope><name>frequency</name></member>
+      <member refid="classStopWatch_1ac8be1626396d1a5ca414f74349d59eb2" prot="public" virt="non-virtual"><scope>StopWatch</scope><name>getElapsedTime</name></member>
+      <member refid="classStopWatch_1a2e61acbf46638eb3275cc8a7c1ea768d" prot="private" virt="non-virtual"><scope>StopWatch</scope><name>LIToSecs</name></member>
+      <member refid="classStopWatch_1a1bf2210ebf10821c4b2eb849e5e98502" prot="private" virt="non-virtual"><scope>StopWatch</scope><name>prevTime</name></member>
+      <member refid="classStopWatch_1a23301f735a2e3190435e39c9fd70cdf2" prot="public" virt="non-virtual"><scope>StopWatch</scope><name>startTimer</name></member>
+      <member refid="classStopWatch_1ad715945060eeb23baa3c036ad19b1edb" prot="public" virt="non-virtual"><scope>StopWatch</scope><name>StopWatch</name></member>
+      <member refid="classStopWatch_1a2cd0856fc87a40038edfd66d784be8b4" prot="public" virt="non-virtual"><scope>StopWatch</scope><name>waitUntil</name></member>
+      <member refid="classStopWatch_1afe4830ee290e9d152d6ce07b9ffc2642" prot="private" virt="non-virtual"><scope>StopWatch</scope><name>wTimerRes</name></member>
+      <member refid="classStopWatch_1a223ec0da71dd0bc4f2b14d1af44bf20a" prot="public" virt="non-virtual"><scope>StopWatch</scope><name>~StopWatch</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

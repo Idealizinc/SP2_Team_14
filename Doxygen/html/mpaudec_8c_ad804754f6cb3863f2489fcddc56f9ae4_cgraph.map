@@ -1,0 +1,33 @@
+<map id="mpaudec_decode_frame" name="mpaudec_decode_frame">
+<area shape="rect" id="node2" href="$mpaudec_8c.html#a7c31d00e6546442f4894d24f15c61dd6" title="check_header" alt="" coords="229,173,331,200"/>
+<area shape="rect" id="node3" href="$mpaudec_8c.html#adc65cd68ae1134afaf2b4d0aa8270b26" title="decode_header" alt="" coords="225,224,335,251"/>
+<area shape="rect" id="node4" href="$mpaudec_8c.html#a2dff7b15a5f55a97729fb3f2d7194e64" title="mp_decode_frame" alt="" coords="216,275,344,301"/>
+<area shape="rect" id="node5" href="$bits_8c.html#a4c9accf71fe52dba23187e83252f2459" title="get_bits" alt="" coords="925,581,993,608"/>
+<area shape="rect" id="node8" href="$bits_8c.html#a82a721f07b4c8c18282532ceeb0b76d3" title="init GetBitContext. " alt="" coords="778,396,870,423"/>
+<area shape="rect" id="node9" href="$mpaudec_8c.html#aa8d8ca6a6ace0fa4945bbf9de65c0364" title="mp_decode_layer1" alt="" coords="392,84,523,111"/>
+<area shape="rect" id="node11" href="$mpaudec_8c.html#a72ee70f98e9873f63c88b69b80e15825" title="mp_decode_layer2" alt="" coords="392,211,523,237"/>
+<area shape="rect" id="node15" href="$mpaudec_8c.html#aa6bde9d54d008252eb8b748f805c7c1e" title="mp_decode_layer3" alt="" coords="392,657,523,684"/>
+<area shape="rect" id="node30" href="$mpaudec_8c.html#a68661d84372543e26e2d315f5e7b35e7" title="synth_filter" alt="" coords="415,1012,500,1039"/>
+<area shape="rect" id="node6" href="$bits_8c.html#a1ab74f16c44ad8762a384924368175e7" title="show_bits" alt="" coords="1041,601,1121,628"/>
+<area shape="rect" id="node7" href="$bits_8c.html#aea74eea48a18a3731b052ac530f6afce" title="skip_bits" alt="" coords="1044,689,1119,716"/>
+<area shape="rect" id="node10" href="$mpaudec_8c.html#ace09b3a4500ca2aea564ee747aaa804a" title="l1_unscale" alt="" coords="605,84,689,111"/>
+<area shape="rect" id="node12" href="$bits_8c.html#a3d11308e2c23c39139ae637124c8dd9d" title="alloc_table" alt="" coords="605,236,689,263"/>
+<area shape="rect" id="node13" href="$mpaudec_8c.html#a60ca1fa363b8401e9a27bacf3f679d21" title="l2_select_table" alt="" coords="592,287,701,313"/>
+<area shape="rect" id="node14" href="$mpaudec_8c.html#a4d72303722fb4254bd6015f0d3be24bc" title="l2_unscale_group" alt="" coords="585,185,708,212"/>
+<area shape="rect" id="node16" href="$mpaudec_8c.html#aeb64a1031552d0031c4b3e32e5260ff3" title="compute_antialias" alt="" coords="583,860,710,887"/>
+<area shape="rect" id="node17" href="$mpaudec_8c.html#acf918d4b847c8a23d9cb38db467c7483" title="compute_imdct" alt="" coords="591,809,702,836"/>
+<area shape="rect" id="node20" href="$mpaudec_8c.html#a34bde35be4bc67de1fd03285c3729de4" title="compute_stereo" alt="" coords="589,961,704,988"/>
+<area shape="rect" id="node21" href="$mpaudec_8c.html#a19901913c3051acd8692540101edd707" title="exponents_from_scale\l_factors" alt="" coords="571,389,723,430"/>
+<area shape="rect" id="node22" href="$bits_8c.html#aa3797eab0bbe953c41e8a070aa3a4dbc" title="get_bits_count" alt="" coords="771,505,877,532"/>
+<area shape="rect" id="node23" href="$mpaudec_8c.html#a3bb107475a04ad73ab8f45dd8f1dbc44" title="get_bitsz" alt="" coords="787,759,861,785"/>
+<area shape="rect" id="node24" href="$mpaudec_8c.html#aa123e4d670f1d03b262749f6d2134630" title="huffman_decode" alt="" coords="589,708,705,735"/>
+<area shape="rect" id="node27" href="$mpaudec_8c.html#acafc5e389fb92f6955d3449abd7187b2" title="lsf_sf_expand" alt="" coords="596,556,697,583"/>
+<area shape="rect" id="node28" href="$mpaudec_8c.html#ac3d939325754cbedaaf6bd1300da0f81" title="reorder_block" alt="" coords="597,607,697,633"/>
+<area shape="rect" id="node29" href="$mpaudec_8c.html#ab3d38c0057af45f5edb7f6dc158ede46" title="seek_to_maindata" alt="" coords="583,455,711,481"/>
+<area shape="rect" id="node18" href="$mpaudec_8c.html#a537c21d3e9b6a3435fd1dd884145b853" title="imdct12" alt="" coords="790,860,858,887"/>
+<area shape="rect" id="node19" href="$mpaudec_8c.html#a8e0f45791456c07ffa41f0dacd94f152" title="imdct36" alt="" coords="790,809,858,836"/>
+<area shape="rect" id="node25" href="$bits_8c.html#ad9d1cef202cce95b0fd843505647ae2c" title="get_vlc" alt="" coords="928,689,991,716"/>
+<area shape="rect" id="node26" href="$mpaudec_8c.html#aa551ba45abc3f6547465227e7c0f084d" title="l3_unscale" alt="" coords="782,657,866,684"/>
+<area shape="rect" id="node31" href="$mpaudec_8c.html#a94a1b9f66732d2e8a51be90eb17f08a6" title="dct32" alt="" coords="619,1012,674,1039"/>
+<area shape="rect" id="node32" href="$mpaudec_8c.html#aad56ed253bfb25eb1cc06cc68fab053a" title="round_sample" alt="" coords="595,1063,698,1089"/>
+</map>

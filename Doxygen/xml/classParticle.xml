@@ -1,0 +1,2223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classParticle" kind="class" language="C++" prot="public">
+    <compoundname>Particle</compoundname>
+    <basecompoundref refid="classScene" prot="public" virt="non-virtual">Scene</basecompoundref>
+    <includes refid="Particle_8h" local="no">Particle.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classParticle_1ad65fe0183ff1504648a1a1c9294382c0" prot="private" static="no">
+        <name>GEOMETRY_TYPE</name>
+        <enumvalue id="classParticle_1ad65fe0183ff1504648a1a1c9294382c0ab29835e0701cfb1890067c283e95d82b" prot="private">
+          <name>GEO_AXES</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a9f12f633e592171c1c5af950d793ec28" prot="private">
+          <name>GEO_QUAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1ad65fe0183ff1504648a1a1c9294382c0add8ba99b355447b97ca6cd81b3351509" prot="private">
+          <name>GEO_CUBE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a482d88afb6eb6e8b3308f906cafa6756" prot="private">
+          <name>GEO_CIRCLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a43da3b25055ff0d117ea96b149978cb5" prot="private">
+          <name>GEO_RING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1ad65fe0183ff1504648a1a1c9294382c0acf56980a55cd11e4d0e3695e2383cd6a" prot="private">
+          <name>GEO_SPHERE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a907dff3acd3272320433cad5435ae283" prot="private">
+          <name>GEO_HEMISPHERE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1ad65fe0183ff1504648a1a1c9294382c0aca00a2479bdda9a38c7d4e98853bab13" prot="private">
+          <name>GEO_TORUS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a77c421a904d194dff65fdeacfd149b09" prot="private">
+          <name>GEO_CYLINDER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a7c63c9b9e259f8e56532c72d897c983c" prot="private">
+          <name>GEO_CONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a91e639cd3ab6c12f76b4f4e24caec261" prot="private">
+          <name>GEO_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1ad65fe0183ff1504648a1a1c9294382c0af5f856d135ba2c7ad3ad20a3b9e5222e" prot="private">
+          <name>GEO_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a04cbf13693ed04962a66831ea3a0f27d" prot="private">
+          <name>GEO_TOP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a28537133a0836606643ed4f4ff798033" prot="private">
+          <name>GEO_BOTTOM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a2d89786c69676f283422b6825a1e92dc" prot="private">
+          <name>GEO_FRONT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a4f8a6d15d161c4e6e518734641d05221" prot="private">
+          <name>GEO_BACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a5881320750034f4430ccc7ec94da9f02" prot="private">
+          <name>GEO_SNIPER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a1faea113794e0d84f4c1cb763b04d25c" prot="private">
+          <name>GEO_TEXT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a86427b54ab93f4405581ba2c66914230" prot="private">
+          <name>GEO_LIGHTBALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1ad65fe0183ff1504648a1a1c9294382c0afdaf86f16345bb98e7ba31729e419672" prot="private">
+          <name>GEO_FLOOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a1cff3891a4393c309243090ae449bce4" prot="private">
+          <name>NUM_GEOMETRY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="29" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="28" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="enum" id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417" prot="private" static="no">
+        <name>UNIFORM_TYPE</name>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a483b257c654d34cf08830834d9365a95" prot="private">
+          <name>U_MVP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417acb36de0cbd0c3e035d9bf9947e0cc8f9" prot="private">
+          <name>U_MODELVIEW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a271c05a8408fff7e8d3011b0820611b6" prot="private">
+          <name>U_MODELVIEW_INVERSE_TRANSPOSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a72c24e3e27dce82a24c47654aa74ffd3" prot="private">
+          <name>U_MATERIAL_AMBIENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ae11cec2e3cf37aa04ac246b6b49f99ce" prot="private">
+          <name>U_MATERIAL_DIFFUSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a28824e8ba89cfc913ac9fed33ef4f201" prot="private">
+          <name>U_MATERIAL_SPECULAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ac9039befbc88e477dbe7dd79ce2bbf44" prot="private">
+          <name>U_MATERIAL_SHININESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ab48ee4b51a63eee9e01443da85cdaae3" prot="private">
+          <name>U_COLOR_TEXTURE_ENABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aef305fb434760ccc86c389ad8d396b7b" prot="private">
+          <name>U_COLOR_TEXTURE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aefe0eff0f685ca166df05eb4a818ff35" prot="private">
+          <name>U_TEXT_ENABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a6050b4857d01990963b06e4afd02e9b8" prot="private">
+          <name>U_TEXT_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ab9ae705497cf3130de6aaed2835a0373" prot="private">
+          <name>U_LIGHT0_POSITION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a155547c689861ee0c9ee3e06bef31b61" prot="private">
+          <name>U_LIGHT0_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417acb437c0f90953f792a06e4f3d299a81a" prot="private">
+          <name>U_LIGHT0_POWER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a2f3a49d695fc3f4bb2f756ee1275087c" prot="private">
+          <name>U_LIGHT0_KC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ac45c8972a1b30ab3f4e4e0ea534aa924" prot="private">
+          <name>U_LIGHT0_KL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a6d7d913ed9cba1d8b7db44deab5d0a86" prot="private">
+          <name>U_LIGHT0_KQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aedf455f825848b370fa0bfb28b496397" prot="private">
+          <name>U_LIGHTENABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aee19487bee235d44e2d0349adf58fe51" prot="private">
+          <name>U_LIGHT0_TYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417af77a2078cb2a23bbe97e144c61e82c24" prot="private">
+          <name>U_LIGHT0_SPOTDIRECTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aa5bcf921a8cd5c5b603efeb496caf536" prot="private">
+          <name>U_LIGHT0_COSCUTOFF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ad67b9a8ef38bc5244e390ca5e5631e35" prot="private">
+          <name>U_LIGHT0_COSINNER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aa5e4729f3e7bedc0eaa04af1ee16c7bc" prot="private">
+          <name>U_LIGHT0_EXPONENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a6f9ac6762a9da86bad59b87ee2734bb9" prot="private">
+          <name>U_LIGHT1_POSITION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a71639ab80db3af62b838629fc2cb4b2c" prot="private">
+          <name>U_LIGHT1_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aea00aaa9b5f59e4f138a2c5b6791ab89" prot="private">
+          <name>U_LIGHT1_POWER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ae82787532dcda277c7396d2cf49c3e0c" prot="private">
+          <name>U_LIGHT1_KC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a44c002472b0b6c27c7aa8d8f8474ed9e" prot="private">
+          <name>U_LIGHT1_KL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a3eb75d9923157cda161b559266880739" prot="private">
+          <name>U_LIGHT1_KQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a5571e7d1e472560d68848151ffb1e40f" prot="private">
+          <name>U_LIGHT1_TYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417af6211c4e2fdbf9b1225833b1e6d8ef6c" prot="private">
+          <name>U_LIGHT1_SPOTDIRECTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a1b8fc5b59df0554bc30334acdcbf1e1e" prot="private">
+          <name>U_LIGHT1_COSCUTOFF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a69e73fc59868f5bb0bccbd14d5f719a2" prot="private">
+          <name>U_LIGHT1_COSINNER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a40658644c85df31ef5d4b12672deab7a" prot="private">
+          <name>U_LIGHT1_EXPONENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aac51ec3ff3d7c5808059912f3e6397eb" prot="private">
+          <name>U_LIGHT2_POSITION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417accb000e48c5538fb78b713837860b04e" prot="private">
+          <name>U_LIGHT2_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417acb90e8ff19a17195faea30ad86a77641" prot="private">
+          <name>U_LIGHT2_POWER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a0cdf8f0e59e37313efc48199f3730211" prot="private">
+          <name>U_LIGHT2_KC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417adfe6c343b9911a0ef69f1b98e8c6c8eb" prot="private">
+          <name>U_LIGHT2_KL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a350d06e4486eb041d4cdf60086da49e4" prot="private">
+          <name>U_LIGHT2_KQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a7837d6062382ea96442cec838f28eadd" prot="private">
+          <name>U_LIGHT2_TYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a88d63291f9a9048164d676a4a7234d1a" prot="private">
+          <name>U_LIGHT2_SPOTDIRECTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a2c5faccdc6ca9d4a922ac3d58d0c122e" prot="private">
+          <name>U_LIGHT2_COSCUTOFF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a17b345d6ea1f111ddc0eeb9f748b320b" prot="private">
+          <name>U_LIGHT2_COSINNER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a72b09294aad7d4e15f28ada918088423" prot="private">
+          <name>U_LIGHT2_EXPONENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a29ceb351622077bed947060fe5c04fe3" prot="private">
+          <name>U_NUMLIGHTS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a6171adfc4ce9a813eba8e8abffbd5c73" prot="private">
+          <name>U_TOTAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="62" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="61" bodyend="120"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classParticle_1a8e358cee41581b9dee000b1d749ca7ec" prot="public" static="no" mutable="no">
+        <type><ref refid="structLight" kindref="compound">Light</ref></type>
+        <definition>Light Particle::light[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>light</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="126" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="126" bodyend="-1"/>
+        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">initLights</referencedby>
+        <referencedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" compoundref="Particle_8cpp" startline="358" endline="422">Render</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a0360bfe54cc55914a1f4e99faa722e17" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Particle::tweenVal</definition>
+        <argsstring></argsstring>
+        <name>tweenVal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="133" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a120fa6f4ba1067307873df1640e38f55" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Particle::constRotation</definition>
+        <argsstring></argsstring>
+        <name>constRotation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="134" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1aada4fad854b343c1db754961ca34dfcd" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Particle::translateX</definition>
+        <argsstring></argsstring>
+        <name>translateX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="135" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a2bf08f3834b6595dc5b1b2e06ab96c12" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Particle::scaleAll</definition>
+        <argsstring></argsstring>
+        <name>scaleAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="136" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a5e8a3a9a152a961be2ecfedc39f60ce7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Particle::rotationalLimit</definition>
+        <argsstring></argsstring>
+        <name>rotationalLimit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="137" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a2de1395cb81d91f23f6ffd73cad297fc" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Particle::translationLimit</definition>
+        <argsstring></argsstring>
+        <name>translationLimit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="138" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1ae9aa2058b571562cae7a2afdbf127c5d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Particle::scalingLimit</definition>
+        <argsstring></argsstring>
+        <name>scalingLimit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="139" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1af4359f4eb3db00b34f147568164ad56a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Particle::rLimiter</definition>
+        <argsstring></argsstring>
+        <name>rLimiter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="140" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1acdf62bdda4bfd91179becc8c55c8bdbb" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Particle::toggleLimiters</definition>
+        <argsstring></argsstring>
+        <name>toggleLimiters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="141" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1ad72cd0780427b364fc344b4b09bbce66" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Particle::limitersON</definition>
+        <argsstring></argsstring>
+        <name>limitersON</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="142" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1ad2c996eefcc1e8d458a97b150a08fafe" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Particle::constTranslation</definition>
+        <argsstring></argsstring>
+        <name>constTranslation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="143" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1ac60e7be71c67ff0d0f9150c1a1c330f1" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Particle::DoorRot</definition>
+        <argsstring></argsstring>
+        <name>DoorRot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="144" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a63db2f6485dd7f0fa8ca2f3568f8f500" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Particle::canUseDoor</definition>
+        <argsstring></argsstring>
+        <name>canUseDoor</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="145" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a698f8227bdbe26d735175a0878b7e11f" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short Particle::skyboxID</definition>
+        <argsstring></argsstring>
+        <name>skyboxID</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="147" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="147" bodyend="-1"/>
+        <referencedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" compoundref="Particle_8cpp" startline="358" endline="422">Render</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a623ea74cbe37ea0e3698bf4d0a4564bd" prot="public" static="no" mutable="no">
+        <type><ref refid="structPosition" kindref="compound">Position</ref></type>
+        <definition>Position Particle::lightDefaultPos</definition>
+        <argsstring></argsstring>
+        <name>lightDefaultPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="149" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="149" bodyend="-1"/>
+        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">initLights</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a9820b40648931d22daac0f77ad06d6ca" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Particle::lightOff</definition>
+        <argsstring></argsstring>
+        <name>lightOff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="151" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a0c6babca11daa9d9b58541c8cee3a00f" prot="public" static="no" mutable="no">
+        <type><ref refid="classCamera3" kindref="compound">Camera3</ref></type>
+        <definition>Camera3 Particle::camera</definition>
+        <argsstring></argsstring>
+        <name>camera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="153" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="153" bodyend="-1"/>
+        <referencedby refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" compoundref="Particle_8cpp" startline="18" endline="95">Init</referencedby>
+        <referencedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" compoundref="Particle_8cpp" startline="358" endline="422">Render</referencedby>
+        <referencedby refid="classParticle_1a8a5412af8bbf924a183d373a64480b00" compoundref="Particle_8cpp" startline="263" endline="284">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a0848585c81a6e75b8868fcdd92c7b153" prot="public" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS Particle::modelStack</definition>
+        <argsstring></argsstring>
+        <name>modelStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="155" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="155" bodyend="-1"/>
+        <referencedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" compoundref="Particle_8cpp" startline="358" endline="422">Render</referencedby>
+        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">RenderMesh</referencedby>
+        <referencedby refid="classParticle_1a37afd6d47fda746f93062ed4e1a00551" compoundref="Particle_8cpp" startline="342" endline="356">renderParticleEmitter</referencedby>
+        <referencedby refid="classParticle_1abad5adaed21693c0bed86aca19f982df" compoundref="Particle_8cpp" startline="286" endline="340">RenderSkybox</referencedby>
+        <referencedby refid="classParticle_1ae3b87275d545d2b4d6b266fa6777b8e8" compoundref="Particle_8cpp" startline="97" endline="123">RenderText</referencedby>
+        <referencedby refid="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" compoundref="Particle_8cpp" startline="125" endline="167">RenderTextOnScreen</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1ac3c30cc225dfbbeb7660511816f87cb6" prot="public" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS Particle::viewStack</definition>
+        <argsstring></argsstring>
+        <name>viewStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="155" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="155" bodyend="-1"/>
+        <referencedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" compoundref="Particle_8cpp" startline="358" endline="422">Render</referencedby>
+        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">RenderMesh</referencedby>
+        <referencedby refid="classParticle_1ae3b87275d545d2b4d6b266fa6777b8e8" compoundref="Particle_8cpp" startline="97" endline="123">RenderText</referencedby>
+        <referencedby refid="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" compoundref="Particle_8cpp" startline="125" endline="167">RenderTextOnScreen</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a5ef1529d4d734dae4369c173b9595428" prot="public" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS Particle::projectionStack</definition>
+        <argsstring></argsstring>
+        <name>projectionStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="155" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="155" bodyend="-1"/>
+        <referencedby refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" compoundref="Particle_8cpp" startline="18" endline="95">Init</referencedby>
+        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">RenderMesh</referencedby>
+        <referencedby refid="classParticle_1ae3b87275d545d2b4d6b266fa6777b8e8" compoundref="Particle_8cpp" startline="97" endline="123">RenderText</referencedby>
+        <referencedby refid="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" compoundref="Particle_8cpp" startline="125" endline="167">RenderTextOnScreen</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classParticle_1a6c676341203a1ac7aa76acd2d2475fa0" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Particle::SB_Day_front</definition>
+        <argsstring></argsstring>
+        <name>SB_Day_front</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="158" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="158" bodyend="-1"/>
+        <referencedby refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" compoundref="Particle_8cpp" startline="18" endline="95">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1ac5c552c1bb8b6cd2caf4f0e2dc9c60c5" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Particle::SB_Day_back</definition>
+        <argsstring></argsstring>
+        <name>SB_Day_back</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="158" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="158" bodyend="-1"/>
+        <referencedby refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" compoundref="Particle_8cpp" startline="18" endline="95">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1aaac046b12bc4d72c51810450820ce1c4" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Particle::SB_Day_top</definition>
+        <argsstring></argsstring>
+        <name>SB_Day_top</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="158" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="158" bodyend="-1"/>
+        <referencedby refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" compoundref="Particle_8cpp" startline="18" endline="95">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a7bbe2b5efe2326013d75f191a8af1e0e" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Particle::SB_Day_bottom</definition>
+        <argsstring></argsstring>
+        <name>SB_Day_bottom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="158" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="158" bodyend="-1"/>
+        <referencedby refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" compoundref="Particle_8cpp" startline="18" endline="95">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a92a3e937baeb3537ed75646e5fa0fcac" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Particle::SB_Day_left</definition>
+        <argsstring></argsstring>
+        <name>SB_Day_left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="158" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="158" bodyend="-1"/>
+        <referencedby refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" compoundref="Particle_8cpp" startline="18" endline="95">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a090dcd3140c086731171a7c1ceb62618" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Particle::SB_Day_right</definition>
+        <argsstring></argsstring>
+        <name>SB_Day_right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="158" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="158" bodyend="-1"/>
+        <referencedby refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" compoundref="Particle_8cpp" startline="18" endline="95">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a19b272abb533b4b6ea302155dc84504c" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Particle::SB_Nite_front</definition>
+        <argsstring></argsstring>
+        <name>SB_Nite_front</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="159" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1abbdf167e5dd2a108de0448913b2fa5a6" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Particle::SB_Nite_back</definition>
+        <argsstring></argsstring>
+        <name>SB_Nite_back</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="159" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1ac07543bbb047b68bdc77aac5e14d9440" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Particle::SB_Nite_top</definition>
+        <argsstring></argsstring>
+        <name>SB_Nite_top</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="159" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a6939a00fd1e38654e0281cfc76d4e85d" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Particle::SB_Nite_bottom</definition>
+        <argsstring></argsstring>
+        <name>SB_Nite_bottom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="159" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a04a1deae9ffa6a8beed512b250d7ebc6" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Particle::SB_Nite_left</definition>
+        <argsstring></argsstring>
+        <name>SB_Nite_left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="159" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1af0a34b49ec15adff390ec00aa71ee49f" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Particle::SB_Nite_right</definition>
+        <argsstring></argsstring>
+        <name>SB_Nite_right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="159" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a5b22b7c8ad5789d92744736ca7aa52ef" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Particle::m_vertexArrayID</definition>
+        <argsstring></argsstring>
+        <name>m_vertexArrayID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="161" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="161" bodyend="-1"/>
+        <referencedby refid="classParticle_1a693c2891a7cfbad23956879515d60418" compoundref="Particle_8cpp" startline="424" endline="429">Exit</referencedby>
+        <referencedby refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" compoundref="Particle_8cpp" startline="18" endline="95">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1abfa04048158fb809222748cec9e2e64b" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Particle::m_programID</definition>
+        <argsstring></argsstring>
+        <name>m_programID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="162" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="162" bodyend="-1"/>
+        <referencedby refid="classParticle_1a693c2891a7cfbad23956879515d60418" compoundref="Particle_8cpp" startline="424" endline="429">Exit</referencedby>
+        <referencedby refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" compoundref="Particle_8cpp" startline="18" endline="95">Init</referencedby>
+        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">initLights</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1ae607e7961763caa29d4dc94fe7a56092" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned Particle::m_parameters[U_TOTAL]</definition>
+        <argsstring>[U_TOTAL]</argsstring>
+        <name>m_parameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="163" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="163" bodyend="-1"/>
+        <referencedby refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" compoundref="Particle_8cpp" startline="18" endline="95">Init</referencedby>
+        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">initLights</referencedby>
+        <referencedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" compoundref="Particle_8cpp" startline="358" endline="422">Render</referencedby>
+        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">RenderMesh</referencedby>
+        <referencedby refid="classParticle_1ae3b87275d545d2b4d6b266fa6777b8e8" compoundref="Particle_8cpp" startline="97" endline="123">RenderText</referencedby>
+        <referencedby refid="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" compoundref="Particle_8cpp" startline="125" endline="167">RenderTextOnScreen</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a87f3491345b1abb1d0c1eba83369cce6" prot="private" static="no" mutable="no">
+        <type><ref refid="classMesh" kindref="compound">Mesh</ref> *</type>
+        <definition>Mesh* Particle::meshList[NUM_GEOMETRY]</definition>
+        <argsstring>[NUM_GEOMETRY]</argsstring>
+        <name>meshList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="164" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="164" bodyend="-1"/>
+        <referencedby refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" compoundref="Particle_8cpp" startline="18" endline="95">Init</referencedby>
+        <referencedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" compoundref="Particle_8cpp" startline="358" endline="422">Render</referencedby>
+        <referencedby refid="classParticle_1a37afd6d47fda746f93062ed4e1a00551" compoundref="Particle_8cpp" startline="342" endline="356">renderParticleEmitter</referencedby>
+        <referencedby refid="classParticle_1abad5adaed21693c0bed86aca19f982df" compoundref="Particle_8cpp" startline="286" endline="340">RenderSkybox</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a5097d786e4c0d76a7bc5ffca19a5807e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Particle::canPlacePlank</definition>
+        <argsstring></argsstring>
+        <name>canPlacePlank</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="174" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1aa1bf7f93c71c7ce4d1fff50aa8bc2b26" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Particle::plankPlaced</definition>
+        <argsstring></argsstring>
+        <name>plankPlaced</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="175" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a43fec557b199575ab9c3799e597d583a" prot="private" static="no" mutable="no">
+        <type><ref refid="structBoundary" kindref="compound">Boundary</ref></type>
+        <definition>Boundary Particle::PlankIxB</definition>
+        <argsstring></argsstring>
+        <name>PlankIxB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="176" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1acf8c6f2052b31b0dd587234a56f512f1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Particle::canInteractWithKyogre</definition>
+        <argsstring></argsstring>
+        <name>canInteractWithKyogre</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="177" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1ab547125999f16c7bfab8a17900dfb251" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Particle::interactedWithKyogre</definition>
+        <argsstring></argsstring>
+        <name>interactedWithKyogre</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="178" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a73af0688b53702039ef0c08429cfefd6" prot="private" static="no" mutable="no">
+        <type><ref refid="structBoundary" kindref="compound">Boundary</ref></type>
+        <definition>Boundary Particle::KyogreIxB</definition>
+        <argsstring></argsstring>
+        <name>KyogreIxB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="179" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1acc9e91bc749f87410329259f6c1e2497" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Particle::framesPerSecond</definition>
+        <argsstring></argsstring>
+        <name>framesPerSecond</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="181" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="181" bodyend="-1"/>
+        <referencedby refid="classParticle_1a8a5412af8bbf924a183d373a64480b00" compoundref="Particle_8cpp" startline="263" endline="284">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a4290b9668a1d7d42207f6202984ddb34" prot="private" static="no" mutable="no">
+        <type><ref refid="structBoundary" kindref="compound">Boundary</ref></type>
+        <definition>Boundary Particle::DoorIxB</definition>
+        <argsstring></argsstring>
+        <name>DoorIxB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="182" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a4dfccffb918f8069982c3c8bea70ac45" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Particle::canOpenDoor</definition>
+        <argsstring></argsstring>
+        <name>canOpenDoor</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="183" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1afc464eb42b773e9d5fedc1951ca6f03d" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Particle::DoorOpened</definition>
+        <argsstring></argsstring>
+        <name>DoorOpened</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="184" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a6fdedcbfb56a33bacb45df5c4de665e3" prot="private" static="no" mutable="no">
+        <type><ref refid="structBoundary" kindref="compound">Boundary</ref></type>
+        <definition>Boundary Particle::LampIxB</definition>
+        <argsstring></argsstring>
+        <name>LampIxB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="186" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1ac8b01ae6a59d5f3f41b4c9db0e7bc310" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Particle::canUseLamp</definition>
+        <argsstring></argsstring>
+        <name>canUseLamp</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="187" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1ab66f147ff4e5c51e6463798221678e8b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Particle::IsNight</definition>
+        <argsstring></argsstring>
+        <name>IsNight</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="188" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a08ea1dd223f0725d8602b2647f277a9b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Particle::LampActive</definition>
+        <argsstring></argsstring>
+        <name>LampActive</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="189" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a75555520dfa9209db949db7b93047ef4" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Particle::timeCheck</definition>
+        <argsstring></argsstring>
+        <name>timeCheck</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="190" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1aa6fbda28ede4ff37b70cd107e793dade" prot="private" static="no" mutable="no">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Particle::TownLightPosition</definition>
+        <argsstring></argsstring>
+        <name>TownLightPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="193" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classParticle_1a25af740f7fdc338cd15d0ef0030067c4" prot="private" static="no" mutable="no">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Particle::RoomLightPosition</definition>
+        <argsstring></argsstring>
+        <name>RoomLightPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="194" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classParticle_1a40f4c7e248029d72e7714b7802d5e5e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Particle::Particle</definition>
+        <argsstring>()</argsstring>
+        <name>Particle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="123" column="1" bodyfile="ComGLab/Source/Particle.cpp" bodystart="10" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classParticle_1ad030d0fe7b88cf81744b127c99244ff4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Particle::~Particle</definition>
+        <argsstring>()</argsstring>
+        <name>~Particle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="124" column="1" bodyfile="ComGLab/Source/Particle.cpp" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Particle::RenderMesh</definition>
+        <argsstring>(Mesh *mesh, bool enableLight)</argsstring>
+        <name>RenderMesh</name>
+        <param>
+          <type><ref refid="classMesh" kindref="compound">Mesh</ref> *</type>
+          <declname>mesh</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enableLight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="127" column="1" bodyfile="ComGLab/Source/Particle.cpp" bodystart="169" bodyend="210"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">Mtx44::a</references>
+        <references refid="classMtx44_1aac1ba21ddfc5f3c24baa4f58d9c5c256" compoundref="Mtx44_8cpp" startline="139" endline="195">Mtx44::GetInverse</references>
+        <references refid="classMtx44_1aebb16a0329c5237e314af0d75d8081fd" compoundref="Mtx44_8cpp" startline="123" endline="127">Mtx44::GetTranspose</references>
+        <references refid="structMaterial_1ab3819b3151cbf3ac1892195ab091e3b8" compoundref="Material_8h" startline="14">Material::kAmbient</references>
+        <references refid="structMaterial_1aa88dd619cacf46e2f26ddd23fe032898" compoundref="Material_8h" startline="15">Material::kDiffuse</references>
+        <references refid="structMaterial_1a07cec8956c43f81adeb6ba7aea104915" compoundref="Material_8h" startline="17">Material::kShininess</references>
+        <references refid="structMaterial_1a97cc0bf34b02c758b198d12dd24e96e2" compoundref="Material_8h" startline="16">Material::kSpecular</references>
+        <references refid="classParticle_1ae607e7961763caa29d4dc94fe7a56092" compoundref="Particle_8h" startline="163">m_parameters</references>
+        <references refid="classMesh_1a3368c3bc60dd176e522df1542b764847" compoundref="Mesh_8h" startline="39">Mesh::material</references>
+        <references refid="classParticle_1a0848585c81a6e75b8868fcdd92c7b153" compoundref="Particle_8h" startline="155">modelStack</references>
+        <references refid="classParticle_1a5ef1529d4d734dae4369c173b9595428" compoundref="Particle_8h" startline="155">projectionStack</references>
+        <references refid="structComponent_1a490db57cde183ef5a233b6ff3386ef6f" compoundref="Material_8h" startline="6">Component::r</references>
+        <references refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" compoundref="Mesh_8cpp" startline="47" endline="86">Mesh::Render</references>
+        <references refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" compoundref="Mesh_8h" startline="37">Mesh::textureID</references>
+        <references refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" compoundref="MatrixStack_8cpp" startline="42" endline="44">MS::Top</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aef305fb434760ccc86c389ad8d396b7b" compoundref="Particle_8h" startline="73">U_COLOR_TEXTURE</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ab48ee4b51a63eee9e01443da85cdaae3" compoundref="Particle_8h" startline="72">U_COLOR_TEXTURE_ENABLED</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aedf455f825848b370fa0bfb28b496397" compoundref="Particle_8h" startline="85">U_LIGHTENABLED</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a72c24e3e27dce82a24c47654aa74ffd3" compoundref="Particle_8h" startline="66">U_MATERIAL_AMBIENT</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ae11cec2e3cf37aa04ac246b6b49f99ce" compoundref="Particle_8h" startline="67">U_MATERIAL_DIFFUSE</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ac9039befbc88e477dbe7dd79ce2bbf44" compoundref="Particle_8h" startline="69">U_MATERIAL_SHININESS</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a28824e8ba89cfc913ac9fed33ef4f201" compoundref="Particle_8h" startline="68">U_MATERIAL_SPECULAR</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417acb36de0cbd0c3e035d9bf9947e0cc8f9" compoundref="Particle_8h" startline="64">U_MODELVIEW</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a271c05a8408fff7e8d3011b0820611b6" compoundref="Particle_8h" startline="65">U_MODELVIEW_INVERSE_TRANSPOSE</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a483b257c654d34cf08830834d9365a95" compoundref="Particle_8h" startline="63">U_MVP</references>
+        <references refid="classParticle_1ac3c30cc225dfbbeb7660511816f87cb6" compoundref="Particle_8h" startline="155">viewStack</references>
+        <referencedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" compoundref="Particle_8cpp" startline="358" endline="422">Render</referencedby>
+        <referencedby refid="classParticle_1a37afd6d47fda746f93062ed4e1a00551" compoundref="Particle_8cpp" startline="342" endline="356">renderParticleEmitter</referencedby>
+        <referencedby refid="classParticle_1abad5adaed21693c0bed86aca19f982df" compoundref="Particle_8cpp" startline="286" endline="340">RenderSkybox</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Particle::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <reimplements refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478">Init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="129" column="1" bodyfile="ComGLab/Source/Particle.cpp" bodystart="18" bodyend="95"/>
+        <references refid="classParticle_1a0c6babca11daa9d9b58541c8cee3a00f" compoundref="Particle_8h" startline="153">camera</references>
+        <references refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="17" endline="65">MeshBuilder::GenerateAxes</references>
+        <references refid="classMeshBuilder_1a5e777328dc946f483beb5645d8f24c4a" compoundref="MeshBuilder_8cpp" startline="138" endline="202">MeshBuilder::GenerateCube</references>
+        <references refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="80" endline="122">MeshBuilder::GenerateQuad</references>
+        <references refid="classMeshBuilder_1aac7c87881dbc08f8d41f2068e0f40c76" compoundref="MeshBuilder_8cpp" startline="839" endline="887">MeshBuilder::GenerateText</references>
+        <references refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0ab29835e0701cfb1890067c283e95d82b" compoundref="Particle_8h" startline="30">GEO_AXES</references>
+        <references refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a4f8a6d15d161c4e6e518734641d05221" compoundref="Particle_8h" startline="47">GEO_BACK</references>
+        <references refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a28537133a0836606643ed4f4ff798033" compoundref="Particle_8h" startline="45">GEO_BOTTOM</references>
+        <references refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0add8ba99b355447b97ca6cd81b3351509" compoundref="Particle_8h" startline="32">GEO_CUBE</references>
+        <references refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a2d89786c69676f283422b6825a1e92dc" compoundref="Particle_8h" startline="46">GEO_FRONT</references>
+        <references refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a91e639cd3ab6c12f76b4f4e24caec261" compoundref="Particle_8h" startline="42">GEO_LEFT</references>
+        <references refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a9f12f633e592171c1c5af950d793ec28" compoundref="Particle_8h" startline="31">GEO_QUAD</references>
+        <references refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0af5f856d135ba2c7ad3ad20a3b9e5222e" compoundref="Particle_8h" startline="43">GEO_RIGHT</references>
+        <references refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a1faea113794e0d84f4c1cb763b04d25c" compoundref="Particle_8h" startline="53">GEO_TEXT</references>
+        <references refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a04cbf13693ed04962a66831ea3a0f27d" compoundref="Particle_8h" startline="44">GEO_TOP</references>
+        <references refid="classCamera3_1a1029fbe574de09b19ff8908748031289" compoundref="Camera3_8cpp" startline="15" endline="68">Camera3::Init</references>
+        <references refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">initLights</references>
+        <references refid="classMS_1a86606fe9f575ccb747d77195c8aefdaf" compoundref="MatrixStack_8cpp" startline="98" endline="100">MS::LoadMatrix</references>
+        <references refid="shader_8cpp_1a833f10cca6a76fe34ae9efa23ac5e73c" compoundref="shader_8cpp" startline="16" endline="107">LoadShaders</references>
+        <references refid="LoadTGA_8cpp_1a459a80ca6de67a1e3493bfb66ae317e4" compoundref="LoadTGA_8cpp" startline="8" endline="69">LoadTGA</references>
+        <references refid="classParticle_1ae607e7961763caa29d4dc94fe7a56092" compoundref="Particle_8h" startline="163">m_parameters</references>
+        <references refid="classParticle_1abfa04048158fb809222748cec9e2e64b" compoundref="Particle_8h" startline="162">m_programID</references>
+        <references refid="classParticle_1a5b22b7c8ad5789d92744736ca7aa52ef" compoundref="Particle_8h" startline="161">m_vertexArrayID</references>
+        <references refid="classParticle_1a87f3491345b1abb1d0c1eba83369cce6" compoundref="Particle_8h" startline="164">meshList</references>
+        <references refid="classParticle_1a5ef1529d4d734dae4369c173b9595428" compoundref="Particle_8h" startline="155">projectionStack</references>
+        <references refid="Application_8cpp_1a9cd21b84bf993de559113a32edfc8e93" compoundref="Application_8cpp" startline="16">S_Height</references>
+        <references refid="Application_8cpp_1a2cbda9a4727e1cdbcae5c646d7fb0911" compoundref="Application_8cpp" startline="16">S_Width</references>
+        <references refid="classParticle_1ac5c552c1bb8b6cd2caf4f0e2dc9c60c5" compoundref="Particle_8h" startline="158">SB_Day_back</references>
+        <references refid="classParticle_1a7bbe2b5efe2326013d75f191a8af1e0e" compoundref="Particle_8h" startline="158">SB_Day_bottom</references>
+        <references refid="classParticle_1a6c676341203a1ac7aa76acd2d2475fa0" compoundref="Particle_8h" startline="158">SB_Day_front</references>
+        <references refid="classParticle_1a92a3e937baeb3537ed75646e5fa0fcac" compoundref="Particle_8h" startline="158">SB_Day_left</references>
+        <references refid="classParticle_1a090dcd3140c086731171a7c1ceb62618" compoundref="Particle_8h" startline="158">SB_Day_right</references>
+        <references refid="classParticle_1aaac046b12bc4d72c51810450820ce1c4" compoundref="Particle_8h" startline="158">SB_Day_top</references>
+        <references refid="classMtx44_1ac6e6521111d78ff36d539bf111a902c6" compoundref="Mtx44_8cpp" startline="466" endline="472">Mtx44::SetToPerspective</references>
+        <references refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" compoundref="Mesh_8h" startline="37">Mesh::textureID</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aef305fb434760ccc86c389ad8d396b7b" compoundref="Particle_8h" startline="73">U_COLOR_TEXTURE</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ab48ee4b51a63eee9e01443da85cdaae3" compoundref="Particle_8h" startline="72">U_COLOR_TEXTURE_ENABLED</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a72c24e3e27dce82a24c47654aa74ffd3" compoundref="Particle_8h" startline="66">U_MATERIAL_AMBIENT</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ae11cec2e3cf37aa04ac246b6b49f99ce" compoundref="Particle_8h" startline="67">U_MATERIAL_DIFFUSE</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ac9039befbc88e477dbe7dd79ce2bbf44" compoundref="Particle_8h" startline="69">U_MATERIAL_SHININESS</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a28824e8ba89cfc913ac9fed33ef4f201" compoundref="Particle_8h" startline="68">U_MATERIAL_SPECULAR</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417acb36de0cbd0c3e035d9bf9947e0cc8f9" compoundref="Particle_8h" startline="64">U_MODELVIEW</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a271c05a8408fff7e8d3011b0820611b6" compoundref="Particle_8h" startline="65">U_MODELVIEW_INVERSE_TRANSPOSE</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a483b257c654d34cf08830834d9365a95" compoundref="Particle_8h" startline="63">U_MVP</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a6050b4857d01990963b06e4afd02e9b8" compoundref="Particle_8h" startline="76">U_TEXT_COLOR</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aefe0eff0f685ca166df05eb4a818ff35" compoundref="Particle_8h" startline="75">U_TEXT_ENABLED</references>
+      </memberdef>
+      <memberdef kind="function" id="classParticle_1a8a5412af8bbf924a183d373a64480b00" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Particle::Update</definition>
+        <argsstring>(double dt)</argsstring>
+        <name>Update</name>
+        <reimplements refid="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91">Update</reimplements>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="130" column="1" bodyfile="ComGLab/Source/Particle.cpp" bodystart="263" bodyend="284"/>
+        <references refid="classParticle_1a0c6babca11daa9d9b58541c8cee3a00f" compoundref="Particle_8h" startline="153">camera</references>
+        <references refid="classParticle_1acc9e91bc749f87410329259f6c1e2497" compoundref="Particle_8h" startline="181">framesPerSecond</references>
+        <references refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" compoundref="Application_8cpp" startline="38" endline="41">Application::IsKeyPressed</references>
+        <references refid="classCamera3_1acc5d4103826cda6d20b80a0d35eacdbe" compoundref="Camera3_8cpp" startline="70" endline="149">Camera3::Update</references>
+      </memberdef>
+      <memberdef kind="function" id="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Particle::Render</definition>
+        <argsstring>(double dt)</argsstring>
+        <name>Render</name>
+        <reimplements refid="classScene_1a9319090be5d18e87f1e83dbbf191204f">Render</reimplements>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="131" column="1" bodyfile="ComGLab/Source/Particle.cpp" bodystart="358" bodyend="422"/>
+        <references refid="classParticle_1a0c6babca11daa9d9b58541c8cee3a00f" compoundref="Particle_8h" startline="153">camera</references>
+        <references refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0ab29835e0701cfb1890067c283e95d82b" compoundref="Particle_8h" startline="30">GEO_AXES</references>
+        <references refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a9f12f633e592171c1c5af950d793ec28" compoundref="Particle_8h" startline="31">GEO_QUAD</references>
+        <references refid="classCamera3_1adba0ccda28b9537ec3c3f8ee23048abd" compoundref="Camera3_8cpp" startline="247" endline="250">Camera3::getCameraPosition</references>
+        <references refid="classParticle_1a8e358cee41581b9dee000b1d749ca7ec" compoundref="Particle_8h" startline="126">light</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba9bf1f515ab954cb3379615aab42f30b6" compoundref="Light_8h" startline="17">Light::LIGHT_DIRECTIONAL</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba69dd6d65ad12b410709ae74c8d9b1e16" compoundref="Light_8h" startline="18">Light::LIGHT_SPOT</references>
+        <references refid="classMS_1a77c5f7e4a21ea48dcf902a7ff6824a11" compoundref="MatrixStack_8cpp" startline="83" endline="87">MS::LoadIdentity</references>
+        <references refid="classMS_1a2638cd3249260877cc31329978fb6b38" compoundref="MatrixStack_8cpp" startline="224" endline="231">MS::LookAt</references>
+        <references refid="classParticle_1ae607e7961763caa29d4dc94fe7a56092" compoundref="Particle_8h" startline="163">m_parameters</references>
+        <references refid="classParticle_1a87f3491345b1abb1d0c1eba83369cce6" compoundref="Particle_8h" startline="164">meshList</references>
+        <references refid="classParticle_1a0848585c81a6e75b8868fcdd92c7b153" compoundref="Particle_8h" startline="155">modelStack</references>
+        <references refid="classMS_1aac22e39d0ac437fcb85403a9f0a7a25f" compoundref="MatrixStack_8cpp" startline="52" endline="54">MS::PopMatrix</references>
+        <references refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" compoundref="Camera_8h" startline="9">Camera::position</references>
+        <references refid="structLight_1afeb738db41e987719e359166ef93314f" compoundref="Light_8h" startline="9">Light::position</references>
+        <references refid="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" compoundref="MatrixStack_8cpp" startline="62" endline="64">MS::PushMatrix</references>
+        <references refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">RenderMesh</references>
+        <references refid="classParticle_1abad5adaed21693c0bed86aca19f982df" compoundref="Particle_8cpp" startline="286" endline="340">RenderSkybox</references>
+        <references refid="classParticle_1a698f8227bdbe26d735175a0878b7e11f" compoundref="Particle_8h" startline="147">skyboxID</references>
+        <references refid="structLight_1a6bd73eb0b27ef881f8442e20912d9258" compoundref="Light_8h" startline="23">Light::spotDirection</references>
+        <references refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" compoundref="Camera_8h" startline="10">Camera::target</references>
+        <references refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" compoundref="MatrixStack_8cpp" startline="42" endline="44">MS::Top</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ab9ae705497cf3130de6aaed2835a0373" compoundref="Particle_8h" startline="79">U_LIGHT0_POSITION</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417af77a2078cb2a23bbe97e144c61e82c24" compoundref="Particle_8h" startline="87">U_LIGHT0_SPOTDIRECTION</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a6f9ac6762a9da86bad59b87ee2734bb9" compoundref="Particle_8h" startline="93">U_LIGHT1_POSITION</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417af6211c4e2fdbf9b1225833b1e6d8ef6c" compoundref="Particle_8h" startline="100">U_LIGHT1_SPOTDIRECTION</references>
+        <references refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" compoundref="Camera_8h" startline="11">Camera::up</references>
+        <references refid="classParticle_1ac3c30cc225dfbbeb7660511816f87cb6" compoundref="Particle_8h" startline="155">viewStack</references>
+        <references refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" compoundref="Vertex_8h" startline="8">Position::x</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structPosition_1a54a6182b5f7539295b32255808897d3f" compoundref="Vertex_8h" startline="8">Position::y</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+        <references refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" compoundref="Vertex_8h" startline="8">Position::z</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
+      </memberdef>
+      <memberdef kind="function" id="classParticle_1a693c2891a7cfbad23956879515d60418" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Particle::Exit</definition>
+        <argsstring>()</argsstring>
+        <name>Exit</name>
+        <reimplements refid="classScene_1aae8e24654ef98c79961c2b804b12852c">Exit</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="132" column="1" bodyfile="ComGLab/Source/Particle.cpp" bodystart="424" bodyend="429"/>
+        <references refid="classParticle_1abfa04048158fb809222748cec9e2e64b" compoundref="Particle_8h" startline="162">m_programID</references>
+        <references refid="classParticle_1a5b22b7c8ad5789d92744736ca7aa52ef" compoundref="Particle_8h" startline="161">m_vertexArrayID</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classParticle_1abad5adaed21693c0bed86aca19f982df" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Particle::RenderSkybox</definition>
+        <argsstring>(Vector3 Position)</argsstring>
+        <name>RenderSkybox</name>
+        <param>
+          <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+          <declname>Position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="160" column="1" bodyfile="ComGLab/Source/Particle.cpp" bodystart="286" bodyend="340"/>
+        <references refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a4f8a6d15d161c4e6e518734641d05221" compoundref="Particle_8h" startline="47">GEO_BACK</references>
+        <references refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a28537133a0836606643ed4f4ff798033" compoundref="Particle_8h" startline="45">GEO_BOTTOM</references>
+        <references refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a2d89786c69676f283422b6825a1e92dc" compoundref="Particle_8h" startline="46">GEO_FRONT</references>
+        <references refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a91e639cd3ab6c12f76b4f4e24caec261" compoundref="Particle_8h" startline="42">GEO_LEFT</references>
+        <references refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0af5f856d135ba2c7ad3ad20a3b9e5222e" compoundref="Particle_8h" startline="43">GEO_RIGHT</references>
+        <references refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a04cbf13693ed04962a66831ea3a0f27d" compoundref="Particle_8h" startline="44">GEO_TOP</references>
+        <references refid="classParticle_1a87f3491345b1abb1d0c1eba83369cce6" compoundref="Particle_8h" startline="164">meshList</references>
+        <references refid="classParticle_1a0848585c81a6e75b8868fcdd92c7b153" compoundref="Particle_8h" startline="155">modelStack</references>
+        <references refid="classMS_1aac22e39d0ac437fcb85403a9f0a7a25f" compoundref="MatrixStack_8cpp" startline="52" endline="54">MS::PopMatrix</references>
+        <references refid="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" compoundref="MatrixStack_8cpp" startline="62" endline="64">MS::PushMatrix</references>
+        <references refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">RenderMesh</references>
+        <references refid="classMS_1a6ce592114042b920b648bca5519690cd" compoundref="MatrixStack_8cpp" startline="130" endline="134">MS::Rotate</references>
+        <references refid="classMS_1a52109795de960e24663b315e9128533f" compoundref="MatrixStack_8cpp" startline="149" endline="153">MS::Scale</references>
+        <references refid="classMS_1a7e94a35ce566fe3ec49c92b6c4bb663a" compoundref="MatrixStack_8cpp" startline="169" endline="173">MS::Translate</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
+        <referencedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" compoundref="Particle_8cpp" startline="358" endline="422">Render</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Particle::initLights</definition>
+        <argsstring>()</argsstring>
+        <name>initLights</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="166" column="1" bodyfile="ComGLab/Source/Particle.cpp" bodystart="212" bodyend="256"/>
+        <references refid="structLight_1ad7a168d26aed1bf7cca1a8d8e6f8ada4" compoundref="Light_8h" startline="10">Light::color</references>
+        <references refid="structLight_1af4ce5bbfbf33af96db9b8a222d073298" compoundref="Light_8h" startline="24">Light::cosCutoff</references>
+        <references refid="structLight_1a8c843f5d1af5c6f4f4928e9906f5d0db" compoundref="Light_8h" startline="25">Light::cosInner</references>
+        <references refid="namespaceMath_1ac04b987cc6c574a059e68cb58f58c09a" compoundref="MyMath_8h" startline="49" endline="52">Math::DegreeToRadian</references>
+        <references refid="structLight_1a4eb4fd0f025fb66d1934675ffff0e661" compoundref="Light_8h" startline="26">Light::exponent</references>
+        <references refid="structLight_1a888f11000d2baf1228d9e5c8d8c90fcb" compoundref="Light_8h" startline="12">Light::kC</references>
+        <references refid="structLight_1ab3918c449fb40fa5c6cc5283f2c9687d" compoundref="Light_8h" startline="12">Light::kL</references>
+        <references refid="structLight_1a79c8e47de58f131ff5403fc2d823cc21" compoundref="Light_8h" startline="12">Light::kQ</references>
+        <references refid="classParticle_1a8e358cee41581b9dee000b1d749ca7ec" compoundref="Particle_8h" startline="126">light</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba9bf1f515ab954cb3379615aab42f30b6" compoundref="Light_8h" startline="17">Light::LIGHT_DIRECTIONAL</references>
+        <references refid="classParticle_1a623ea74cbe37ea0e3698bf4d0a4564bd" compoundref="Particle_8h" startline="149">lightDefaultPos</references>
+        <references refid="classParticle_1ae607e7961763caa29d4dc94fe7a56092" compoundref="Particle_8h" startline="163">m_parameters</references>
+        <references refid="classParticle_1abfa04048158fb809222748cec9e2e64b" compoundref="Particle_8h" startline="162">m_programID</references>
+        <references refid="structLight_1afeb738db41e987719e359166ef93314f" compoundref="Light_8h" startline="9">Light::position</references>
+        <references refid="structLight_1a6c4c401141c4cdb3b9b9b3bab7dd6fbb" compoundref="Light_8h" startline="11">Light::power</references>
+        <references refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" compoundref="Vertex_8h" startline="13" endline="13">Position::Set</references>
+        <references refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" compoundref="Vertex_8h" startline="23" endline="23">Color::Set</references>
+        <references refid="structVector3_1a9c25d604bd52b162cfcb56302ef032bb" compoundref="Vector3_8cpp" startline="67" endline="72">Vector3::Set</references>
+        <references refid="structLight_1a6bd73eb0b27ef881f8442e20912d9258" compoundref="Light_8h" startline="23">Light::spotDirection</references>
+        <references refid="structLight_1a5dcdb101afc28979b5aaff0a2ec79ba5" compoundref="Light_8h" startline="22">Light::type</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a155547c689861ee0c9ee3e06bef31b61" compoundref="Particle_8h" startline="80">U_LIGHT0_COLOR</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aa5bcf921a8cd5c5b603efeb496caf536" compoundref="Particle_8h" startline="88">U_LIGHT0_COSCUTOFF</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ad67b9a8ef38bc5244e390ca5e5631e35" compoundref="Particle_8h" startline="89">U_LIGHT0_COSINNER</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aa5e4729f3e7bedc0eaa04af1ee16c7bc" compoundref="Particle_8h" startline="90">U_LIGHT0_EXPONENT</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a2f3a49d695fc3f4bb2f756ee1275087c" compoundref="Particle_8h" startline="82">U_LIGHT0_KC</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ac45c8972a1b30ab3f4e4e0ea534aa924" compoundref="Particle_8h" startline="83">U_LIGHT0_KL</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a6d7d913ed9cba1d8b7db44deab5d0a86" compoundref="Particle_8h" startline="84">U_LIGHT0_KQ</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ab9ae705497cf3130de6aaed2835a0373" compoundref="Particle_8h" startline="79">U_LIGHT0_POSITION</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417acb437c0f90953f792a06e4f3d299a81a" compoundref="Particle_8h" startline="81">U_LIGHT0_POWER</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417af77a2078cb2a23bbe97e144c61e82c24" compoundref="Particle_8h" startline="87">U_LIGHT0_SPOTDIRECTION</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aee19487bee235d44e2d0349adf58fe51" compoundref="Particle_8h" startline="86">U_LIGHT0_TYPE</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aedf455f825848b370fa0bfb28b496397" compoundref="Particle_8h" startline="85">U_LIGHTENABLED</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a29ceb351622077bed947060fe5c04fe3" compoundref="Particle_8h" startline="118">U_NUMLIGHTS</references>
+        <references refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" compoundref="Vertex_8h" startline="8">Position::x</references>
+        <references refid="structPosition_1a54a6182b5f7539295b32255808897d3f" compoundref="Vertex_8h" startline="8">Position::y</references>
+        <references refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" compoundref="Vertex_8h" startline="8">Position::z</references>
+        <referencedby refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" compoundref="Particle_8cpp" startline="18" endline="95">Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classParticle_1ae3b87275d545d2b4d6b266fa6777b8e8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Particle::RenderText</definition>
+        <argsstring>(Mesh *mesh, std::string text, Color color)</argsstring>
+        <name>RenderText</name>
+        <param>
+          <type><ref refid="classMesh" kindref="compound">Mesh</ref> *</type>
+          <declname>mesh</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type><ref refid="structColor" kindref="compound">Color</ref></type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="169" column="1" bodyfile="ComGLab/Source/Particle.cpp" bodystart="97" bodyend="123"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">Mtx44::a</references>
+        <references refid="classParticle_1ae607e7961763caa29d4dc94fe7a56092" compoundref="Particle_8h" startline="163">m_parameters</references>
+        <references refid="classParticle_1a0848585c81a6e75b8868fcdd92c7b153" compoundref="Particle_8h" startline="155">modelStack</references>
+        <references refid="classParticle_1a5ef1529d4d734dae4369c173b9595428" compoundref="Particle_8h" startline="155">projectionStack</references>
+        <references refid="structColor_1a3958a556b47d2de3dd45c75aac833c20" compoundref="Vertex_8h" startline="18">Color::r</references>
+        <references refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" compoundref="Mesh_8cpp" startline="47" endline="86">Mesh::Render</references>
+        <references refid="classMtx44_1a0cc88cc5c648da14effba480c4d2ac70" compoundref="Mtx44_8cpp" startline="376" endline="381">Mtx44::SetToTranslation</references>
+        <references refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" compoundref="Mesh_8h" startline="37">Mesh::textureID</references>
+        <references refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" compoundref="MatrixStack_8cpp" startline="42" endline="44">MS::Top</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aef305fb434760ccc86c389ad8d396b7b" compoundref="Particle_8h" startline="73">U_COLOR_TEXTURE</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ab48ee4b51a63eee9e01443da85cdaae3" compoundref="Particle_8h" startline="72">U_COLOR_TEXTURE_ENABLED</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aedf455f825848b370fa0bfb28b496397" compoundref="Particle_8h" startline="85">U_LIGHTENABLED</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a483b257c654d34cf08830834d9365a95" compoundref="Particle_8h" startline="63">U_MVP</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a6050b4857d01990963b06e4afd02e9b8" compoundref="Particle_8h" startline="76">U_TEXT_COLOR</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aefe0eff0f685ca166df05eb4a818ff35" compoundref="Particle_8h" startline="75">U_TEXT_ENABLED</references>
+        <references refid="classParticle_1ac3c30cc225dfbbeb7660511816f87cb6" compoundref="Particle_8h" startline="155">viewStack</references>
+      </memberdef>
+      <memberdef kind="function" id="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Particle::RenderTextOnScreen</definition>
+        <argsstring>(Mesh *mesh, std::string text, Color color, float size, float x, float y)</argsstring>
+        <name>RenderTextOnScreen</name>
+        <param>
+          <type><ref refid="classMesh" kindref="compound">Mesh</ref> *</type>
+          <declname>mesh</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type><ref refid="structColor" kindref="compound">Color</ref></type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="170" column="1" bodyfile="ComGLab/Source/Particle.cpp" bodystart="125" bodyend="167"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">Mtx44::a</references>
+        <references refid="classMS_1a77c5f7e4a21ea48dcf902a7ff6824a11" compoundref="MatrixStack_8cpp" startline="83" endline="87">MS::LoadIdentity</references>
+        <references refid="classMS_1a86606fe9f575ccb747d77195c8aefdaf" compoundref="MatrixStack_8cpp" startline="98" endline="100">MS::LoadMatrix</references>
+        <references refid="classParticle_1ae607e7961763caa29d4dc94fe7a56092" compoundref="Particle_8h" startline="163">m_parameters</references>
+        <references refid="classParticle_1a0848585c81a6e75b8868fcdd92c7b153" compoundref="Particle_8h" startline="155">modelStack</references>
+        <references refid="classMS_1aac22e39d0ac437fcb85403a9f0a7a25f" compoundref="MatrixStack_8cpp" startline="52" endline="54">MS::PopMatrix</references>
+        <references refid="classParticle_1a5ef1529d4d734dae4369c173b9595428" compoundref="Particle_8h" startline="155">projectionStack</references>
+        <references refid="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" compoundref="MatrixStack_8cpp" startline="62" endline="64">MS::PushMatrix</references>
+        <references refid="structColor_1a3958a556b47d2de3dd45c75aac833c20" compoundref="Vertex_8h" startline="18">Color::r</references>
+        <references refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" compoundref="Mesh_8cpp" startline="47" endline="86">Mesh::Render</references>
+        <references refid="classMS_1a52109795de960e24663b315e9128533f" compoundref="MatrixStack_8cpp" startline="149" endline="153">MS::Scale</references>
+        <references refid="classMtx44_1a0a4c7818be7c1aeb0601ad069c1a591d" compoundref="Mtx44_8cpp" startline="492" endline="497">Mtx44::SetToOrtho</references>
+        <references refid="classMtx44_1a0cc88cc5c648da14effba480c4d2ac70" compoundref="Mtx44_8cpp" startline="376" endline="381">Mtx44::SetToTranslation</references>
+        <references refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" compoundref="Mesh_8h" startline="37">Mesh::textureID</references>
+        <references refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" compoundref="MatrixStack_8cpp" startline="42" endline="44">MS::Top</references>
+        <references refid="classMS_1a7e94a35ce566fe3ec49c92b6c4bb663a" compoundref="MatrixStack_8cpp" startline="169" endline="173">MS::Translate</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aef305fb434760ccc86c389ad8d396b7b" compoundref="Particle_8h" startline="73">U_COLOR_TEXTURE</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ab48ee4b51a63eee9e01443da85cdaae3" compoundref="Particle_8h" startline="72">U_COLOR_TEXTURE_ENABLED</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aedf455f825848b370fa0bfb28b496397" compoundref="Particle_8h" startline="85">U_LIGHTENABLED</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a483b257c654d34cf08830834d9365a95" compoundref="Particle_8h" startline="63">U_MVP</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a6050b4857d01990963b06e4afd02e9b8" compoundref="Particle_8h" startline="76">U_TEXT_COLOR</references>
+        <references refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aefe0eff0f685ca166df05eb4a818ff35" compoundref="Particle_8h" startline="75">U_TEXT_ENABLED</references>
+        <references refid="classParticle_1ac3c30cc225dfbbeb7660511816f87cb6" compoundref="Particle_8h" startline="155">viewStack</references>
+      </memberdef>
+      <memberdef kind="function" id="classParticle_1a15baf3973896879caf118fb005973fb7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Particle::InteractionBoundsCheck</definition>
+        <argsstring>(Vector3 CameraPosition, int value)</argsstring>
+        <name>InteractionBoundsCheck</name>
+        <param>
+          <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+          <declname>CameraPosition</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="173" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classParticle_1a29c087fae860a25b0d488f2c57903f82" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Particle::initBounds</definition>
+        <argsstring>()</argsstring>
+        <name>initBounds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="180" column="1" bodyfile="ComGLab/Source/Particle.cpp" bodystart="258" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="classParticle_1a37afd6d47fda746f93062ed4e1a00551" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Particle::renderParticleEmitter</definition>
+        <argsstring>(GLuint Texture, Vector3 Direction, Vector3 Velocity, int ParticleCount, int Spread)</argsstring>
+        <name>renderParticleEmitter</name>
+        <param>
+          <type>GLuint</type>
+          <declname>Texture</declname>
+        </param>
+        <param>
+          <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+          <declname>Direction</declname>
+        </param>
+        <param>
+          <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+          <declname>Velocity</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ParticleCount</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Spread</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Particle.h" line="196" column="1" bodyfile="ComGLab/Source/Particle.cpp" bodystart="342" bodyend="356"/>
+        <references refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0add8ba99b355447b97ca6cd81b3351509" compoundref="Particle_8h" startline="32">GEO_CUBE</references>
+        <references refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a9f12f633e592171c1c5af950d793ec28" compoundref="Particle_8h" startline="31">GEO_QUAD</references>
+        <references refid="classParticle_1a87f3491345b1abb1d0c1eba83369cce6" compoundref="Particle_8h" startline="164">meshList</references>
+        <references refid="classParticle_1a0848585c81a6e75b8868fcdd92c7b153" compoundref="Particle_8h" startline="155">modelStack</references>
+        <references refid="classMS_1aac22e39d0ac437fcb85403a9f0a7a25f" compoundref="MatrixStack_8cpp" startline="52" endline="54">MS::PopMatrix</references>
+        <references refid="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" compoundref="MatrixStack_8cpp" startline="62" endline="64">MS::PushMatrix</references>
+        <references refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">RenderMesh</references>
+        <references refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" compoundref="Mesh_8h" startline="37">Mesh::textureID</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="523">
+        <label>Particle</label>
+        <link refid="classParticle"/>
+        <childnode refid="524" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="524">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="531">
+        <label>Position</label>
+        <link refid="structPosition"/>
+        <childnode refid="529" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+      <node id="541">
+        <label>stack&lt; Mtx44 &gt;</label>
+      </node>
+      <node id="544">
+        <label>Component</label>
+        <link refid="structComponent"/>
+        <childnode refid="529" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="528">
+        <label>LIGHT_TYPE</label>
+      </node>
+      <node id="542">
+        <label>Mesh</label>
+        <link refid="classMesh"/>
+        <childnode refid="543" relation="usage">
+          <edgelabel>material</edgelabel>
+        </childnode>
+        <childnode refid="545" relation="usage">
+          <edgelabel>mode</edgelabel>
+        </childnode>
+        <childnode refid="546" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="538" relation="usage">
+          <edgelabel>textureID</edgelabel>
+          <edgelabel>indexBuffer</edgelabel>
+          <edgelabel>indexSize</edgelabel>
+          <edgelabel>vertexBuffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="535">
+        <label>vector&lt; Boundary &gt;</label>
+      </node>
+      <node id="545">
+        <label>DRAW_MODE</label>
+      </node>
+      <node id="534">
+        <label>Camera</label>
+        <link refid="classCamera"/>
+        <childnode refid="530" relation="usage">
+          <edgelabel>target</edgelabel>
+          <edgelabel>position</edgelabel>
+          <edgelabel>up</edgelabel>
+        </childnode>
+      </node>
+      <node id="546">
+        <label>string</label>
+      </node>
+      <node id="543">
+        <label>Material</label>
+        <link refid="structMaterial"/>
+        <childnode refid="529" relation="usage">
+          <edgelabel>kShininess</edgelabel>
+        </childnode>
+        <childnode refid="544" relation="usage">
+          <edgelabel>kDiffuse</edgelabel>
+          <edgelabel>kAmbient</edgelabel>
+          <edgelabel>kSpecular</edgelabel>
+        </childnode>
+      </node>
+      <node id="529">
+        <label>float</label>
+      </node>
+      <node id="540">
+        <label>MS</label>
+        <link refid="classMS"/>
+        <childnode refid="541" relation="usage">
+          <edgelabel>ms</edgelabel>
+        </childnode>
+      </node>
+      <node id="525">
+        <label>Particle</label>
+        <link refid="classParticle"/>
+        <childnode refid="526" relation="public-inheritance">
+        </childnode>
+        <childnode refid="527" relation="usage">
+          <edgelabel>light</edgelabel>
+        </childnode>
+        <childnode refid="533" relation="usage">
+          <edgelabel>camera</edgelabel>
+        </childnode>
+        <childnode refid="529" relation="usage">
+          <edgelabel>translationLimit</edgelabel>
+          <edgelabel>translateX</edgelabel>
+          <edgelabel>tweenVal</edgelabel>
+          <edgelabel>framesPerSecond</edgelabel>
+          <edgelabel>rotationalLimit</edgelabel>
+          <edgelabel>constRotation</edgelabel>
+          <edgelabel>scalingLimit</edgelabel>
+          <edgelabel>timeCheck</edgelabel>
+          <edgelabel>constTranslation</edgelabel>
+          <edgelabel>scaleAll</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="540" relation="usage">
+          <edgelabel>projectionStack</edgelabel>
+          <edgelabel>modelStack</edgelabel>
+          <edgelabel>viewStack</edgelabel>
+        </childnode>
+        <childnode refid="530" relation="usage">
+          <edgelabel>TownLightPosition</edgelabel>
+          <edgelabel>RoomLightPosition</edgelabel>
+        </childnode>
+        <childnode refid="536" relation="usage">
+          <edgelabel>LampIxB</edgelabel>
+          <edgelabel>PlankIxB</edgelabel>
+          <edgelabel>KyogreIxB</edgelabel>
+          <edgelabel>DoorIxB</edgelabel>
+        </childnode>
+        <childnode refid="531" relation="usage">
+          <edgelabel>lightDefaultPos</edgelabel>
+        </childnode>
+        <childnode refid="537" relation="usage">
+          <edgelabel>canUseLamp</edgelabel>
+          <edgelabel>lightOff</edgelabel>
+          <edgelabel>interactedWithKyogre</edgelabel>
+          <edgelabel>IsNight</edgelabel>
+          <edgelabel>plankPlaced</edgelabel>
+          <edgelabel>limitersON</edgelabel>
+          <edgelabel>LampActive</edgelabel>
+          <edgelabel>canUseDoor</edgelabel>
+          <edgelabel>toggleLimiters</edgelabel>
+          <edgelabel>canOpenDoor</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="542" relation="usage">
+          <edgelabel>meshList</edgelabel>
+        </childnode>
+        <childnode refid="538" relation="usage">
+          <edgelabel>m_parameters</edgelabel>
+          <edgelabel>m_programID</edgelabel>
+          <edgelabel>m_vertexArrayID</edgelabel>
+          <edgelabel>skyboxID</edgelabel>
+        </childnode>
+        <childnode refid="547" relation="usage">
+          <edgelabel>SB_Nite_bottom</edgelabel>
+          <edgelabel>SB_Nite_right</edgelabel>
+          <edgelabel>SB_Day_right</edgelabel>
+          <edgelabel>SB_Nite_back</edgelabel>
+          <edgelabel>SB_Day_back</edgelabel>
+          <edgelabel>SB_Day_front</edgelabel>
+          <edgelabel>SB_Day_left</edgelabel>
+          <edgelabel>SB_Day_top</edgelabel>
+          <edgelabel>SB_Day_bottom</edgelabel>
+          <edgelabel>SB_Nite_front</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="526">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+      <node id="527">
+        <label>Light</label>
+        <link refid="structLight"/>
+        <childnode refid="528" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="529" relation="usage">
+          <edgelabel>exponent</edgelabel>
+          <edgelabel>kL</edgelabel>
+          <edgelabel>cosCutoff</edgelabel>
+          <edgelabel>cosInner</edgelabel>
+          <edgelabel>kQ</edgelabel>
+          <edgelabel>kC</edgelabel>
+          <edgelabel>power</edgelabel>
+        </childnode>
+        <childnode refid="530" relation="usage">
+          <edgelabel>spotDirection</edgelabel>
+        </childnode>
+        <childnode refid="531" relation="usage">
+          <edgelabel>position</edgelabel>
+        </childnode>
+        <childnode refid="532" relation="usage">
+          <edgelabel>color</edgelabel>
+        </childnode>
+      </node>
+      <node id="533">
+        <label>Camera3</label>
+        <link refid="classCamera3"/>
+        <childnode refid="534" relation="public-inheritance">
+        </childnode>
+        <childnode refid="529" relation="usage">
+          <edgelabel>backGateB</edgelabel>
+          <edgelabel>walkingSpeed</edgelabel>
+          <edgelabel>minCameraYrotation</edgelabel>
+          <edgelabel>rightGateA</edgelabel>
+          <edgelabel>rightGateB</edgelabel>
+          <edgelabel>maxCameraYrotation</edgelabel>
+          <edgelabel>maxJump2</edgelabel>
+          <edgelabel>minCameraXrotation</edgelabel>
+          <edgelabel>CameraYrotation</edgelabel>
+          <edgelabel>maxCameraXrotation</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="535" relation="usage">
+          <edgelabel>BoundVec</edgelabel>
+        </childnode>
+        <childnode refid="536" relation="usage">
+          <edgelabel>backGate</edgelabel>
+          <edgelabel>Base</edgelabel>
+          <edgelabel>corebase</edgelabel>
+          <edgelabel>ShipCheck</edgelabel>
+          <edgelabel>leftRock1</edgelabel>
+          <edgelabel>WorldBot</edgelabel>
+          <edgelabel>northwall1</edgelabel>
+          <edgelabel>TeleporterF1NW</edgelabel>
+          <edgelabel>leftRock2</edgelabel>
+          <edgelabel>northwall2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="539" relation="usage">
+          <edgelabel>boxZ</edgelabel>
+          <edgelabel>jumpForce</edgelabel>
+          <edgelabel>cameraMass</edgelabel>
+          <edgelabel>jumpImpulse</edgelabel>
+          <edgelabel>level</edgelabel>
+          <edgelabel>groundlevel</edgelabel>
+          <edgelabel>jumpSpeed</edgelabel>
+          <edgelabel>boxX</edgelabel>
+        </childnode>
+        <childnode refid="530" relation="usage">
+          <edgelabel>defaultTarget</edgelabel>
+          <edgelabel>defaultPosition</edgelabel>
+          <edgelabel>view</edgelabel>
+          <edgelabel>defaultUp</edgelabel>
+        </childnode>
+        <childnode refid="537" relation="usage">
+          <edgelabel>teleCheck</edgelabel>
+          <edgelabel>isMaxJump</edgelabel>
+          <edgelabel>shipCheck</edgelabel>
+          <edgelabel>checkRightGate</edgelabel>
+          <edgelabel>isJump</edgelabel>
+          <edgelabel>outOfBounds</edgelabel>
+          <edgelabel>openLeftGate</edgelabel>
+          <edgelabel>isGravityOn</edgelabel>
+          <edgelabel>openBackGate</edgelabel>
+          <edgelabel>CanMoveCamera</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="539">
+        <label>int</label>
+      </node>
+      <node id="536">
+        <label>Boundary</label>
+        <link refid="structBoundary"/>
+        <childnode refid="529" relation="usage">
+          <edgelabel>zMin</edgelabel>
+          <edgelabel>yMin</edgelabel>
+          <edgelabel>zMax</edgelabel>
+          <edgelabel>yMax</edgelabel>
+          <edgelabel>xMin</edgelabel>
+          <edgelabel>xMax</edgelabel>
+        </childnode>
+        <childnode refid="537" relation="usage">
+          <edgelabel>active</edgelabel>
+          <edgelabel>isWithin</edgelabel>
+        </childnode>
+        <childnode refid="538" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+      </node>
+      <node id="547">
+        <label>GLuint</label>
+      </node>
+      <node id="532">
+        <label>Color</label>
+        <link refid="structColor"/>
+        <childnode refid="529" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="538">
+        <label>unsigned</label>
+      </node>
+      <node id="537">
+        <label>bool</label>
+      </node>
+      <node id="530">
+        <label>Vector3</label>
+        <link refid="structVector3"/>
+        <childnode refid="529" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ComGLab/Source/Particle.h" line="27" column="1" bodyfile="ComGLab/Source/Particle.h" bodystart="26" bodyend="197"/>
+    <listofallmembers>
+      <member refid="classParticle_1a0c6babca11daa9d9b58541c8cee3a00f" prot="public" virt="non-virtual"><scope>Particle</scope><name>camera</name></member>
+      <member refid="classParticle_1acf8c6f2052b31b0dd587234a56f512f1" prot="private" virt="non-virtual"><scope>Particle</scope><name>canInteractWithKyogre</name></member>
+      <member refid="classParticle_1a4dfccffb918f8069982c3c8bea70ac45" prot="private" virt="non-virtual"><scope>Particle</scope><name>canOpenDoor</name></member>
+      <member refid="classParticle_1a5097d786e4c0d76a7bc5ffca19a5807e" prot="private" virt="non-virtual"><scope>Particle</scope><name>canPlacePlank</name></member>
+      <member refid="classParticle_1a63db2f6485dd7f0fa8ca2f3568f8f500" prot="public" virt="non-virtual"><scope>Particle</scope><name>canUseDoor</name></member>
+      <member refid="classParticle_1ac8b01ae6a59d5f3f41b4c9db0e7bc310" prot="private" virt="non-virtual"><scope>Particle</scope><name>canUseLamp</name></member>
+      <member refid="classParticle_1a120fa6f4ba1067307873df1640e38f55" prot="public" virt="non-virtual"><scope>Particle</scope><name>constRotation</name></member>
+      <member refid="classParticle_1ad2c996eefcc1e8d458a97b150a08fafe" prot="public" virt="non-virtual"><scope>Particle</scope><name>constTranslation</name></member>
+      <member refid="classParticle_1a4290b9668a1d7d42207f6202984ddb34" prot="private" virt="non-virtual"><scope>Particle</scope><name>DoorIxB</name></member>
+      <member refid="classParticle_1afc464eb42b773e9d5fedc1951ca6f03d" prot="private" virt="non-virtual"><scope>Particle</scope><name>DoorOpened</name></member>
+      <member refid="classParticle_1ac60e7be71c67ff0d0f9150c1a1c330f1" prot="public" virt="non-virtual"><scope>Particle</scope><name>DoorRot</name></member>
+      <member refid="classParticle_1a693c2891a7cfbad23956879515d60418" prot="public" virt="virtual"><scope>Particle</scope><name>Exit</name></member>
+      <member refid="classParticle_1acc9e91bc749f87410329259f6c1e2497" prot="private" virt="non-virtual"><scope>Particle</scope><name>framesPerSecond</name></member>
+      <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0ab29835e0701cfb1890067c283e95d82b" prot="private" virt="non-virtual"><scope>Particle</scope><name>GEO_AXES</name></member>
+      <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a4f8a6d15d161c4e6e518734641d05221" prot="private" virt="non-virtual"><scope>Particle</scope><name>GEO_BACK</name></member>
+      <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a28537133a0836606643ed4f4ff798033" prot="private" virt="non-virtual"><scope>Particle</scope><name>GEO_BOTTOM</name></member>
+      <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a482d88afb6eb6e8b3308f906cafa6756" prot="private" virt="non-virtual"><scope>Particle</scope><name>GEO_CIRCLE</name></member>
+      <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a7c63c9b9e259f8e56532c72d897c983c" prot="private" virt="non-virtual"><scope>Particle</scope><name>GEO_CONE</name></member>
+      <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0add8ba99b355447b97ca6cd81b3351509" prot="private" virt="non-virtual"><scope>Particle</scope><name>GEO_CUBE</name></member>
+      <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a77c421a904d194dff65fdeacfd149b09" prot="private" virt="non-virtual"><scope>Particle</scope><name>GEO_CYLINDER</name></member>
+      <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0afdaf86f16345bb98e7ba31729e419672" prot="private" virt="non-virtual"><scope>Particle</scope><name>GEO_FLOOR</name></member>
+      <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a2d89786c69676f283422b6825a1e92dc" prot="private" virt="non-virtual"><scope>Particle</scope><name>GEO_FRONT</name></member>
+      <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a907dff3acd3272320433cad5435ae283" prot="private" virt="non-virtual"><scope>Particle</scope><name>GEO_HEMISPHERE</name></member>
+      <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a91e639cd3ab6c12f76b4f4e24caec261" prot="private" virt="non-virtual"><scope>Particle</scope><name>GEO_LEFT</name></member>
+      <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a86427b54ab93f4405581ba2c66914230" prot="private" virt="non-virtual"><scope>Particle</scope><name>GEO_LIGHTBALL</name></member>
+      <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a9f12f633e592171c1c5af950d793ec28" prot="private" virt="non-virtual"><scope>Particle</scope><name>GEO_QUAD</name></member>
+      <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0af5f856d135ba2c7ad3ad20a3b9e5222e" prot="private" virt="non-virtual"><scope>Particle</scope><name>GEO_RIGHT</name></member>
+      <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a43da3b25055ff0d117ea96b149978cb5" prot="private" virt="non-virtual"><scope>Particle</scope><name>GEO_RING</name></member>
+      <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a5881320750034f4430ccc7ec94da9f02" prot="private" virt="non-virtual"><scope>Particle</scope><name>GEO_SNIPER</name></member>
+      <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0acf56980a55cd11e4d0e3695e2383cd6a" prot="private" virt="non-virtual"><scope>Particle</scope><name>GEO_SPHERE</name></member>
+      <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a1faea113794e0d84f4c1cb763b04d25c" prot="private" virt="non-virtual"><scope>Particle</scope><name>GEO_TEXT</name></member>
+      <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a04cbf13693ed04962a66831ea3a0f27d" prot="private" virt="non-virtual"><scope>Particle</scope><name>GEO_TOP</name></member>
+      <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0aca00a2479bdda9a38c7d4e98853bab13" prot="private" virt="non-virtual"><scope>Particle</scope><name>GEO_TORUS</name></member>
+      <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0" prot="private" virt="non-virtual"><scope>Particle</scope><name>GEOMETRY_TYPE</name></member>
+      <member refid="classParticle_1ad4131133df499c87e0a4e75ffdaae4a3" prot="public" virt="virtual"><scope>Particle</scope><name>Init</name></member>
+      <member refid="classParticle_1a29c087fae860a25b0d488f2c57903f82" prot="private" virt="non-virtual"><scope>Particle</scope><name>initBounds</name></member>
+      <member refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" prot="private" virt="non-virtual"><scope>Particle</scope><name>initLights</name></member>
+      <member refid="classParticle_1ab547125999f16c7bfab8a17900dfb251" prot="private" virt="non-virtual"><scope>Particle</scope><name>interactedWithKyogre</name></member>
+      <member refid="classParticle_1a15baf3973896879caf118fb005973fb7" prot="private" virt="non-virtual"><scope>Particle</scope><name>InteractionBoundsCheck</name></member>
+      <member refid="classParticle_1ab66f147ff4e5c51e6463798221678e8b" prot="private" virt="non-virtual"><scope>Particle</scope><name>IsNight</name></member>
+      <member refid="classParticle_1a73af0688b53702039ef0c08429cfefd6" prot="private" virt="non-virtual"><scope>Particle</scope><name>KyogreIxB</name></member>
+      <member refid="classParticle_1a08ea1dd223f0725d8602b2647f277a9b" prot="private" virt="non-virtual"><scope>Particle</scope><name>LampActive</name></member>
+      <member refid="classParticle_1a6fdedcbfb56a33bacb45df5c4de665e3" prot="private" virt="non-virtual"><scope>Particle</scope><name>LampIxB</name></member>
+      <member refid="classParticle_1a8e358cee41581b9dee000b1d749ca7ec" prot="public" virt="non-virtual"><scope>Particle</scope><name>light</name></member>
+      <member refid="classParticle_1a623ea74cbe37ea0e3698bf4d0a4564bd" prot="public" virt="non-virtual"><scope>Particle</scope><name>lightDefaultPos</name></member>
+      <member refid="classParticle_1a9820b40648931d22daac0f77ad06d6ca" prot="public" virt="non-virtual"><scope>Particle</scope><name>lightOff</name></member>
+      <member refid="classParticle_1ad72cd0780427b364fc344b4b09bbce66" prot="public" virt="non-virtual"><scope>Particle</scope><name>limitersON</name></member>
+      <member refid="classParticle_1ae607e7961763caa29d4dc94fe7a56092" prot="private" virt="non-virtual"><scope>Particle</scope><name>m_parameters</name></member>
+      <member refid="classParticle_1abfa04048158fb809222748cec9e2e64b" prot="private" virt="non-virtual"><scope>Particle</scope><name>m_programID</name></member>
+      <member refid="classParticle_1a5b22b7c8ad5789d92744736ca7aa52ef" prot="private" virt="non-virtual"><scope>Particle</scope><name>m_vertexArrayID</name></member>
+      <member refid="classParticle_1a87f3491345b1abb1d0c1eba83369cce6" prot="private" virt="non-virtual"><scope>Particle</scope><name>meshList</name></member>
+      <member refid="classParticle_1a0848585c81a6e75b8868fcdd92c7b153" prot="public" virt="non-virtual"><scope>Particle</scope><name>modelStack</name></member>
+      <member refid="classParticle_1ad65fe0183ff1504648a1a1c9294382c0a1cff3891a4393c309243090ae449bce4" prot="private" virt="non-virtual"><scope>Particle</scope><name>NUM_GEOMETRY</name></member>
+      <member refid="classParticle_1a40f4c7e248029d72e7714b7802d5e5e1" prot="public" virt="non-virtual"><scope>Particle</scope><name>Particle</name></member>
+      <member refid="classParticle_1a43fec557b199575ab9c3799e597d583a" prot="private" virt="non-virtual"><scope>Particle</scope><name>PlankIxB</name></member>
+      <member refid="classParticle_1aa1bf7f93c71c7ce4d1fff50aa8bc2b26" prot="private" virt="non-virtual"><scope>Particle</scope><name>plankPlaced</name></member>
+      <member refid="classParticle_1a5ef1529d4d734dae4369c173b9595428" prot="public" virt="non-virtual"><scope>Particle</scope><name>projectionStack</name></member>
+      <member refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" prot="public" virt="virtual"><scope>Particle</scope><name>Render</name></member>
+      <member refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" prot="public" virt="non-virtual"><scope>Particle</scope><name>RenderMesh</name></member>
+      <member refid="classParticle_1a37afd6d47fda746f93062ed4e1a00551" prot="private" virt="non-virtual"><scope>Particle</scope><name>renderParticleEmitter</name></member>
+      <member refid="classParticle_1abad5adaed21693c0bed86aca19f982df" prot="private" virt="non-virtual"><scope>Particle</scope><name>RenderSkybox</name></member>
+      <member refid="classParticle_1ae3b87275d545d2b4d6b266fa6777b8e8" prot="private" virt="non-virtual"><scope>Particle</scope><name>RenderText</name></member>
+      <member refid="classParticle_1ae8737c510c4080f5bcf7dd8cd61564a5" prot="private" virt="non-virtual"><scope>Particle</scope><name>RenderTextOnScreen</name></member>
+      <member refid="classParticle_1af4359f4eb3db00b34f147568164ad56a" prot="public" virt="non-virtual"><scope>Particle</scope><name>rLimiter</name></member>
+      <member refid="classParticle_1a25af740f7fdc338cd15d0ef0030067c4" prot="private" virt="non-virtual"><scope>Particle</scope><name>RoomLightPosition</name></member>
+      <member refid="classParticle_1a5e8a3a9a152a961be2ecfedc39f60ce7" prot="public" virt="non-virtual"><scope>Particle</scope><name>rotationalLimit</name></member>
+      <member refid="classParticle_1ac5c552c1bb8b6cd2caf4f0e2dc9c60c5" prot="private" virt="non-virtual"><scope>Particle</scope><name>SB_Day_back</name></member>
+      <member refid="classParticle_1a7bbe2b5efe2326013d75f191a8af1e0e" prot="private" virt="non-virtual"><scope>Particle</scope><name>SB_Day_bottom</name></member>
+      <member refid="classParticle_1a6c676341203a1ac7aa76acd2d2475fa0" prot="private" virt="non-virtual"><scope>Particle</scope><name>SB_Day_front</name></member>
+      <member refid="classParticle_1a92a3e937baeb3537ed75646e5fa0fcac" prot="private" virt="non-virtual"><scope>Particle</scope><name>SB_Day_left</name></member>
+      <member refid="classParticle_1a090dcd3140c086731171a7c1ceb62618" prot="private" virt="non-virtual"><scope>Particle</scope><name>SB_Day_right</name></member>
+      <member refid="classParticle_1aaac046b12bc4d72c51810450820ce1c4" prot="private" virt="non-virtual"><scope>Particle</scope><name>SB_Day_top</name></member>
+      <member refid="classParticle_1abbdf167e5dd2a108de0448913b2fa5a6" prot="private" virt="non-virtual"><scope>Particle</scope><name>SB_Nite_back</name></member>
+      <member refid="classParticle_1a6939a00fd1e38654e0281cfc76d4e85d" prot="private" virt="non-virtual"><scope>Particle</scope><name>SB_Nite_bottom</name></member>
+      <member refid="classParticle_1a19b272abb533b4b6ea302155dc84504c" prot="private" virt="non-virtual"><scope>Particle</scope><name>SB_Nite_front</name></member>
+      <member refid="classParticle_1a04a1deae9ffa6a8beed512b250d7ebc6" prot="private" virt="non-virtual"><scope>Particle</scope><name>SB_Nite_left</name></member>
+      <member refid="classParticle_1af0a34b49ec15adff390ec00aa71ee49f" prot="private" virt="non-virtual"><scope>Particle</scope><name>SB_Nite_right</name></member>
+      <member refid="classParticle_1ac07543bbb047b68bdc77aac5e14d9440" prot="private" virt="non-virtual"><scope>Particle</scope><name>SB_Nite_top</name></member>
+      <member refid="classParticle_1a2bf08f3834b6595dc5b1b2e06ab96c12" prot="public" virt="non-virtual"><scope>Particle</scope><name>scaleAll</name></member>
+      <member refid="classParticle_1ae9aa2058b571562cae7a2afdbf127c5d" prot="public" virt="non-virtual"><scope>Particle</scope><name>scalingLimit</name></member>
+      <member refid="classScene_1ad10176d75a9cc0da56626f682d083507" prot="public" virt="non-virtual"><scope>Particle</scope><name>Scene</name></member>
+      <member refid="classParticle_1a698f8227bdbe26d735175a0878b7e11f" prot="public" virt="non-virtual"><scope>Particle</scope><name>skyboxID</name></member>
+      <member refid="classParticle_1a75555520dfa9209db949db7b93047ef4" prot="private" virt="non-virtual"><scope>Particle</scope><name>timeCheck</name></member>
+      <member refid="classParticle_1acdf62bdda4bfd91179becc8c55c8bdbb" prot="public" virt="non-virtual"><scope>Particle</scope><name>toggleLimiters</name></member>
+      <member refid="classParticle_1aa6fbda28ede4ff37b70cd107e793dade" prot="private" virt="non-virtual"><scope>Particle</scope><name>TownLightPosition</name></member>
+      <member refid="classParticle_1aada4fad854b343c1db754961ca34dfcd" prot="public" virt="non-virtual"><scope>Particle</scope><name>translateX</name></member>
+      <member refid="classParticle_1a2de1395cb81d91f23f6ffd73cad297fc" prot="public" virt="non-virtual"><scope>Particle</scope><name>translationLimit</name></member>
+      <member refid="classParticle_1a0360bfe54cc55914a1f4e99faa722e17" prot="public" virt="non-virtual"><scope>Particle</scope><name>tweenVal</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aef305fb434760ccc86c389ad8d396b7b" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_COLOR_TEXTURE</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ab48ee4b51a63eee9e01443da85cdaae3" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_COLOR_TEXTURE_ENABLED</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a155547c689861ee0c9ee3e06bef31b61" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT0_COLOR</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aa5bcf921a8cd5c5b603efeb496caf536" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT0_COSCUTOFF</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ad67b9a8ef38bc5244e390ca5e5631e35" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT0_COSINNER</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aa5e4729f3e7bedc0eaa04af1ee16c7bc" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT0_EXPONENT</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a2f3a49d695fc3f4bb2f756ee1275087c" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT0_KC</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ac45c8972a1b30ab3f4e4e0ea534aa924" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT0_KL</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a6d7d913ed9cba1d8b7db44deab5d0a86" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT0_KQ</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ab9ae705497cf3130de6aaed2835a0373" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT0_POSITION</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417acb437c0f90953f792a06e4f3d299a81a" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT0_POWER</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417af77a2078cb2a23bbe97e144c61e82c24" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT0_SPOTDIRECTION</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aee19487bee235d44e2d0349adf58fe51" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT0_TYPE</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a71639ab80db3af62b838629fc2cb4b2c" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT1_COLOR</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a1b8fc5b59df0554bc30334acdcbf1e1e" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT1_COSCUTOFF</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a69e73fc59868f5bb0bccbd14d5f719a2" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT1_COSINNER</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a40658644c85df31ef5d4b12672deab7a" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT1_EXPONENT</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ae82787532dcda277c7396d2cf49c3e0c" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT1_KC</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a44c002472b0b6c27c7aa8d8f8474ed9e" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT1_KL</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a3eb75d9923157cda161b559266880739" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT1_KQ</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a6f9ac6762a9da86bad59b87ee2734bb9" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT1_POSITION</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aea00aaa9b5f59e4f138a2c5b6791ab89" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT1_POWER</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417af6211c4e2fdbf9b1225833b1e6d8ef6c" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT1_SPOTDIRECTION</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a5571e7d1e472560d68848151ffb1e40f" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT1_TYPE</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417accb000e48c5538fb78b713837860b04e" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT2_COLOR</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a2c5faccdc6ca9d4a922ac3d58d0c122e" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT2_COSCUTOFF</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a17b345d6ea1f111ddc0eeb9f748b320b" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT2_COSINNER</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a72b09294aad7d4e15f28ada918088423" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT2_EXPONENT</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a0cdf8f0e59e37313efc48199f3730211" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT2_KC</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417adfe6c343b9911a0ef69f1b98e8c6c8eb" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT2_KL</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a350d06e4486eb041d4cdf60086da49e4" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT2_KQ</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aac51ec3ff3d7c5808059912f3e6397eb" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT2_POSITION</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417acb90e8ff19a17195faea30ad86a77641" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT2_POWER</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a88d63291f9a9048164d676a4a7234d1a" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT2_SPOTDIRECTION</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a7837d6062382ea96442cec838f28eadd" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHT2_TYPE</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aedf455f825848b370fa0bfb28b496397" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_LIGHTENABLED</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a72c24e3e27dce82a24c47654aa74ffd3" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_MATERIAL_AMBIENT</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ae11cec2e3cf37aa04ac246b6b49f99ce" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_MATERIAL_DIFFUSE</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417ac9039befbc88e477dbe7dd79ce2bbf44" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_MATERIAL_SHININESS</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a28824e8ba89cfc913ac9fed33ef4f201" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_MATERIAL_SPECULAR</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417acb36de0cbd0c3e035d9bf9947e0cc8f9" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_MODELVIEW</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a271c05a8408fff7e8d3011b0820611b6" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_MODELVIEW_INVERSE_TRANSPOSE</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a483b257c654d34cf08830834d9365a95" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_MVP</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a29ceb351622077bed947060fe5c04fe3" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_NUMLIGHTS</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a6050b4857d01990963b06e4afd02e9b8" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_TEXT_COLOR</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417aefe0eff0f685ca166df05eb4a818ff35" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_TEXT_ENABLED</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417a6171adfc4ce9a813eba8e8abffbd5c73" prot="private" virt="non-virtual"><scope>Particle</scope><name>U_TOTAL</name></member>
+      <member refid="classParticle_1a377a370ead1dcc6eb7159f784ea1c417" prot="private" virt="non-virtual"><scope>Particle</scope><name>UNIFORM_TYPE</name></member>
+      <member refid="classParticle_1a8a5412af8bbf924a183d373a64480b00" prot="public" virt="virtual"><scope>Particle</scope><name>Update</name></member>
+      <member refid="classParticle_1ac3c30cc225dfbbeb7660511816f87cb6" prot="public" virt="non-virtual"><scope>Particle</scope><name>viewStack</name></member>
+      <member refid="classParticle_1ad030d0fe7b88cf81744b127c99244ff4" prot="public" virt="non-virtual"><scope>Particle</scope><name>~Particle</name></member>
+      <member refid="classScene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" virt="non-virtual"><scope>Particle</scope><name>~Scene</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

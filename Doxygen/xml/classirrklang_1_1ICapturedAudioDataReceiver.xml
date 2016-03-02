@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classirrklang_1_1ICapturedAudioDataReceiver" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>irrklang::ICapturedAudioDataReceiver</compoundname>
+    <basecompoundref refid="classirrklang_1_1IRefCounted" prot="public" virt="non-virtual">irrklang::IRefCounted</basecompoundref>
+    <includes refid="ik__IAudioRecorder_8h" local="no">ik_IAudioRecorder.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classirrklang_1_1ICapturedAudioDataReceiver_1a1271d74901e6ce1a19f234fc0838c2b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::ICapturedAudioDataReceiver::OnReceiveAudioDataStreamChunk</definition>
+        <argsstring>(unsigned char *audioData, unsigned long lengthInBytes)=0</argsstring>
+        <name>OnReceiveAudioDataStreamChunk</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>audioData</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>lengthInBytes</declname>
+        </param>
+        <briefdescription>
+<para>Gets called once for each captured audio data chunk. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classirrklang_1_1IAudioRecorder_1ae1d39c90335b96f95c050fc98c1bfac1" kindref="member">IAudioRecorder::startRecordingCustomHandledAudio</ref> for details. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>audioData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a part of the recorded audio data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lengthInBytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount of bytes in the audioData buffer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_IAudioRecorder.h" line="103" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface to be implemented by the user if access to the recorded audio data is needed. </para>    </briefdescription>
+    <detaileddescription>
+<para>Is used as parameter in <ref refid="classirrklang_1_1IAudioRecorder_1ae1d39c90335b96f95c050fc98c1bfac1" kindref="member">IAudioRecorder::startRecordingCustomHandledAudio</ref>. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="424">
+        <label>irrklang::ICapturedAudioDataReceiver</label>
+        <link refid="classirrklang_1_1ICapturedAudioDataReceiver"/>
+        <childnode refid="425" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="425">
+        <label>irrklang::IRefCounted</label>
+        <link refid="classirrklang_1_1IRefCounted"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="426">
+        <label>irrklang::ICapturedAudioDataReceiver</label>
+        <link refid="classirrklang_1_1ICapturedAudioDataReceiver"/>
+        <childnode refid="427" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="428">
+        <label>int</label>
+      </node>
+      <node id="427">
+        <label>irrklang::IRefCounted</label>
+        <link refid="classirrklang_1_1IRefCounted"/>
+        <childnode refid="428" relation="usage">
+          <edgelabel>ReferenceCounter</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="irrKlang-1.5.0/include/ik_IAudioRecorder.h" line="96" column="1" bodyfile="irrKlang-1.5.0/include/ik_IAudioRecorder.h" bodystart="95" bodyend="104"/>
+    <listofallmembers>
+      <member refid="classirrklang_1_1IRefCounted_1a869fe3adc6e49e8da105e95837a565b1" prot="public" virt="non-virtual"><scope>irrklang::ICapturedAudioDataReceiver</scope><name>drop</name></member>
+      <member refid="classirrklang_1_1IRefCounted_1a737b09ee717069b964a3bd0451690388" prot="public" virt="non-virtual"><scope>irrklang::ICapturedAudioDataReceiver</scope><name>grab</name></member>
+      <member refid="classirrklang_1_1IRefCounted_1ad9d20b84a525d7bc07e44b556fbf7da6" prot="public" virt="non-virtual"><scope>irrklang::ICapturedAudioDataReceiver</scope><name>IRefCounted</name></member>
+      <member refid="classirrklang_1_1ICapturedAudioDataReceiver_1a1271d74901e6ce1a19f234fc0838c2b1" prot="public" virt="pure-virtual"><scope>irrklang::ICapturedAudioDataReceiver</scope><name>OnReceiveAudioDataStreamChunk</name></member>
+      <member refid="classirrklang_1_1IRefCounted_1a7fe8953e57adac9bcd28a94d3b251886" prot="public" virt="virtual"><scope>irrklang::ICapturedAudioDataReceiver</scope><name>~IRefCounted</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

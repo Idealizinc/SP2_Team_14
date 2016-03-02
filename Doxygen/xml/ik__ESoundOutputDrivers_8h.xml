@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ik__ESoundOutputDrivers_8h" kind="file" language="C++">
+    <compoundname>ik_ESoundOutputDrivers.h</compoundname>
+    <includedby refid="irrKlang_8h" local="yes">irrKlang-1.5.0/include/irrKlang.h</includedby>
+    <invincdepgraph>
+      <node id="2523">
+        <label>ComGLab/Source/Particle.cpp</label>
+        <link refid="Particle_8cpp"/>
+      </node>
+      <node id="2524">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/ikpMP3.cpp</label>
+        <link refid="ikpMP3_8cpp"/>
+      </node>
+      <node id="2518">
+        <label>irrKlang-1.5.0/include/irrKlang.h</label>
+        <link refid="irrKlang_8h"/>
+        <childnode refid="2519" relation="include">
+        </childnode>
+        <childnode refid="2522" relation="include">
+        </childnode>
+        <childnode refid="2524" relation="include">
+        </childnode>
+      </node>
+      <node id="2521">
+        <label>ComGLab/Source/SP2_Scene.cpp</label>
+        <link refid="SP2__Scene_8cpp"/>
+      </node>
+      <node id="2520">
+        <label>ComGLab/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="2517">
+        <label>irrKlang-1.5.0/include/ik_ESoundOutputDrivers.h</label>
+        <link refid="ik_ESoundOutputDrivers.h"/>
+        <childnode refid="2518" relation="include">
+        </childnode>
+      </node>
+      <node id="2519">
+        <label>ComGLab/Source/SP2_Scene.h</label>
+        <link refid="SP2__Scene_8h"/>
+        <childnode refid="2520" relation="include">
+        </childnode>
+        <childnode refid="2521" relation="include">
+        </childnode>
+      </node>
+      <node id="2522">
+        <label>ComGLab/Source/Particle.h</label>
+        <link refid="Particle_8h"/>
+        <childnode refid="2520" relation="include">
+        </childnode>
+        <childnode refid="2523" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceirrklang">irrklang</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2002-2014<sp/>Nikolaus<sp/>Gebhardt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>&quot;irrKlang&quot;<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>For<sp/>conditions<sp/>of<sp/>distribution<sp/>and<sp/>use,<sp/>see<sp/>copyright<sp/>notice<sp/>in<sp/>irrKlang.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__E_IRRKLANG_SOUND_OUTPUT_DRIVERS_H_INCLUDED__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__E_IRRKLANG_SOUND_OUTPUT_DRIVERS_H_INCLUDED__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceirrklang" kindref="compound">irrklang</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"></codeline>
+<codeline lineno="12" refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afe" kindref="member">E_SOUND_OUTPUT_DRIVER</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15" refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea8cc9863f3b410698313b8637721e51ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea8cc9863f3b410698313b8637721e51ec" kindref="member">ESOD_AUTO_DETECT</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"></codeline>
+<codeline lineno="21" refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea6fcd5ec6152066313ef04d97ea5582ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea6fcd5ec6152066313ef04d97ea5582ee" kindref="member">ESOD_DIRECT_SOUND_8</ref>,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"></codeline>
+<codeline lineno="28" refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea41cdbf2b330293f9c8be2c5a53197258" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea41cdbf2b330293f9c8be2c5a53197258" kindref="member">ESOD_DIRECT_SOUND</ref>,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"></codeline>
+<codeline lineno="32" refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea618f53c155e92cca2b3b69865b48335a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea618f53c155e92cca2b3b69865b48335a" kindref="member">ESOD_WIN_MM</ref>,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"></codeline>
+<codeline lineno="39" refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea776337cd0b6eeb6cbf171889ca4100c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea776337cd0b6eeb6cbf171889ca4100c1" kindref="member">ESOD_ALSA</ref>,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"></codeline>
+<codeline lineno="43" refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea0b3dfa7418df1cf47c77ad2370533332" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea0b3dfa7418df1cf47c77ad2370533332" kindref="member">ESOD_CORE_AUDIO</ref>,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea942ffa317debc447cae5bfab10b67c9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea942ffa317debc447cae5bfab10b67c9c" kindref="member">ESOD_NULL</ref>,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afeaf4138be4b36d3e0c5a7a09bc1422c9bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afeaf4138be4b36d3e0c5a7a09bc1422c9bf" kindref="member">ESOD_COUNT</ref>,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea6dc399ba0785f1435c2e2c9cd5478c3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea6dc399ba0785f1435c2e2c9cd5478c3f" kindref="member">ESOD_FORCE_32_BIT</ref><sp/>=<sp/>0x7fffffff</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>irrklang</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="irrKlang-1.5.0/include/ik_ESoundOutputDrivers.h"/>
+  </compounddef>
+</doxygen>

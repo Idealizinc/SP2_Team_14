@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classirrklang_1_1CIrrKlangAudioStreamLoaderMP3" kind="class" language="C++" prot="public">
+    <compoundname>irrklang::CIrrKlangAudioStreamLoaderMP3</compoundname>
+    <basecompoundref refid="classirrklang_1_1IAudioStreamLoader" prot="public" virt="non-virtual">irrklang::IAudioStreamLoader</basecompoundref>
+    <includes refid="CIrrKlangAudioStreamLoaderMP3_8h" local="no">CIrrKlangAudioStreamLoaderMP3.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classirrklang_1_1CIrrKlangAudioStreamLoaderMP3_1a1301d1a2032654d84ba2571623e4d892" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>irrklang::CIrrKlangAudioStreamLoaderMP3::CIrrKlangAudioStreamLoaderMP3</definition>
+        <argsstring>()</argsstring>
+        <name>CIrrKlangAudioStreamLoaderMP3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamLoaderMP3.h" line="17" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamLoaderMP3.cpp" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1CIrrKlangAudioStreamLoaderMP3_1a59e1e80a0df8fe554cb1db179c19b6f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool irrklang::CIrrKlangAudioStreamLoaderMP3::isALoadableFileExtension</definition>
+        <argsstring>(const ik_c8 *fileName)</argsstring>
+        <name>isALoadableFileExtension</name>
+        <reimplements refid="classirrklang_1_1IAudioStreamLoader_1a3194c3ba81ebb4929d6cedc6f36ab165">isALoadableFileExtension</reimplements>
+        <param>
+          <type>const <ref refid="namespaceirrklang_1af179ad966eb79d01f6d1cf8927087449" kindref="member">ik_c8</ref> *</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the file maybe is able to be loaded by this class. </para>        </briefdescription>
+        <detaileddescription>
+<para>This decision should be based only on the file extension (e.g. &quot;.wav&quot;) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamLoaderMP3.h" line="21" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamLoaderMP3.cpp" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1CIrrKlangAudioStreamLoaderMP3_1aa2abcfd3b38eb8bb49e782678aac3ab2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classirrklang_1_1IAudioStream" kindref="compound">IAudioStream</ref> *</type>
+        <definition>IAudioStream * irrklang::CIrrKlangAudioStreamLoaderMP3::createAudioStream</definition>
+        <argsstring>(irrklang::IFileReader *file)</argsstring>
+        <name>createAudioStream</name>
+        <reimplements refid="classirrklang_1_1IAudioStreamLoader_1ab47c905866c381295f4e42663e35cd8e">createAudioStream</reimplements>
+        <param>
+          <type><ref refid="classirrklang_1_1IFileReader" kindref="compound">irrklang::IFileReader</ref> *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Creates an audio file input stream from a file. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to the created audio stream. Returns 0 if loading failed. If you no longer need the stream, you should call IAudioFileStream::drop(). See <ref refid="classirrklang_1_1IRefCounted_1a869fe3adc6e49e8da105e95837a565b1" kindref="member">IRefCounted::drop()</ref> for more information. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamLoaderMP3.h" line="27" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamLoaderMP3.cpp" bodystart="27" bodyend="38"/>
+        <references refid="classirrklang_1_1IRefCounted_1a869fe3adc6e49e8da105e95837a565b1" compoundref="ik__IRefCounted_8h" startline="98" endline="109">irrklang::IRefCounted::drop</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1abfc07cdaf0ca8c9b65f72c2befaef78f" compoundref="CIrrKlangAudioStreamMP3_8h" startline="47" endline="47">irrklang::CIrrKlangAudioStreamMP3::isOK</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class which is able to create an audio file stream from a file. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="360">
+        <label>irrklang::IAudioStreamLoader</label>
+        <link refid="classirrklang_1_1IAudioStreamLoader"/>
+        <childnode refid="361" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="359">
+        <label>irrklang::CIrrKlangAudioStreamLoaderMP3</label>
+        <link refid="classirrklang_1_1CIrrKlangAudioStreamLoaderMP3"/>
+        <childnode refid="360" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="361">
+        <label>irrklang::IRefCounted</label>
+        <link refid="classirrklang_1_1IRefCounted"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="363">
+        <label>irrklang::IAudioStreamLoader</label>
+        <link refid="classirrklang_1_1IAudioStreamLoader"/>
+        <childnode refid="364" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="365">
+        <label>int</label>
+      </node>
+      <node id="362">
+        <label>irrklang::CIrrKlangAudioStreamLoaderMP3</label>
+        <link refid="classirrklang_1_1CIrrKlangAudioStreamLoaderMP3"/>
+        <childnode refid="363" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="364">
+        <label>irrklang::IRefCounted</label>
+        <link refid="classirrklang_1_1IRefCounted"/>
+        <childnode refid="365" relation="usage">
+          <edgelabel>ReferenceCounter</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamLoaderMP3.h" line="14" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamLoaderMP3.h" bodystart="13" bodyend="28"/>
+    <listofallmembers>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamLoaderMP3_1a1301d1a2032654d84ba2571623e4d892" prot="public" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamLoaderMP3</scope><name>CIrrKlangAudioStreamLoaderMP3</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamLoaderMP3_1aa2abcfd3b38eb8bb49e782678aac3ab2" prot="public" virt="virtual"><scope>irrklang::CIrrKlangAudioStreamLoaderMP3</scope><name>createAudioStream</name></member>
+      <member refid="classirrklang_1_1IRefCounted_1a869fe3adc6e49e8da105e95837a565b1" prot="public" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamLoaderMP3</scope><name>drop</name></member>
+      <member refid="classirrklang_1_1IRefCounted_1a737b09ee717069b964a3bd0451690388" prot="public" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamLoaderMP3</scope><name>grab</name></member>
+      <member refid="classirrklang_1_1IRefCounted_1ad9d20b84a525d7bc07e44b556fbf7da6" prot="public" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamLoaderMP3</scope><name>IRefCounted</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamLoaderMP3_1a59e1e80a0df8fe554cb1db179c19b6f7" prot="public" virt="virtual"><scope>irrklang::CIrrKlangAudioStreamLoaderMP3</scope><name>isALoadableFileExtension</name></member>
+      <member refid="classirrklang_1_1IAudioStreamLoader_1a54aeae62ffd27931a8ddd2e23fcc6624" prot="public" virt="virtual"><scope>irrklang::CIrrKlangAudioStreamLoaderMP3</scope><name>~IAudioStreamLoader</name></member>
+      <member refid="classirrklang_1_1IRefCounted_1a7fe8953e57adac9bcd28a94d3b251886" prot="public" virt="virtual"><scope>irrklang::CIrrKlangAudioStreamLoaderMP3</scope><name>~IRefCounted</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,7 +1,24 @@
+/****************************************************************************/
+/*!
+\file Camera2.h
+\author Wen Sheng Tang
+\par email: tang_wen_sheng\@nyp.edu.sg
+\brief
+Class to define camera
+*/
+/****************************************************************************/
+
 #ifndef CAMERA_2_H
 #define CAMERA_2_H
 
 #include "Camera.h"
+
+/****************************************************************************/
+/*!
+Class Camera2:
+\brief Defines the methods for camera control
+*/
+/****************************************************************************/
 
 class Camera2 : public Camera
 {

@@ -1,0 +1,334 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structLight" kind="struct" language="C++" prot="public">
+    <compoundname>Light</compoundname>
+    <includes refid="Light_8h" local="no">Light.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="structLight_1aa7ed22cab99d811d72896efaee6d07cb" prot="public" static="no">
+        <name>LIGHT_TYPE</name>
+        <enumvalue id="structLight_1aa7ed22cab99d811d72896efaee6d07cbab02ff4ee1e2a9673edac03cf11b66338" prot="public">
+          <name>LIGHT_POINT</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structLight_1aa7ed22cab99d811d72896efaee6d07cba9bf1f515ab954cb3379615aab42f30b6" prot="public">
+          <name>LIGHT_DIRECTIONAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structLight_1aa7ed22cab99d811d72896efaee6d07cba69dd6d65ad12b410709ae74c8d9b1e16" prot="public">
+          <name>LIGHT_SPOT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structLight_1aa7ed22cab99d811d72896efaee6d07cba06805620376dc5b7539857c81c53cb0d" prot="public">
+          <name>LIGHT_TOTAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Light.h" line="15" column="1" bodyfile="ComGLab/Source/Light.h" bodystart="14" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structLight_1afeb738db41e987719e359166ef93314f" prot="public" static="no" mutable="no">
+        <type><ref refid="structPosition" kindref="compound">Position</ref></type>
+        <definition>Position Light::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Light.h" line="9" column="1" bodyfile="ComGLab/Source/Light.h" bodystart="9" bodyend="-1"/>
+        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">Particle::initLights</referencedby>
+        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="672" endline="757">SP2_Scene::initLights</referencedby>
+        <referencedby refid="structLight_1aeb5df09a25a32f19fdffa761268ba24f" compoundref="Light_8cpp" startline="3" endline="9">Light</referencedby>
+        <referencedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" compoundref="Particle_8cpp" startline="358" endline="422">Particle::Render</referencedby>
+        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2248" endline="2508">SP2_Scene::Render</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structLight_1ad7a168d26aed1bf7cca1a8d8e6f8ada4" prot="public" static="no" mutable="no">
+        <type><ref refid="structColor" kindref="compound">Color</ref></type>
+        <definition>Color Light::color</definition>
+        <argsstring></argsstring>
+        <name>color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Light.h" line="10" column="1" bodyfile="ComGLab/Source/Light.h" bodystart="10" bodyend="-1"/>
+        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">Particle::initLights</referencedby>
+        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="672" endline="757">SP2_Scene::initLights</referencedby>
+        <referencedby refid="structLight_1aeb5df09a25a32f19fdffa761268ba24f" compoundref="Light_8cpp" startline="3" endline="9">Light</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structLight_1a6c4c401141c4cdb3b9b9b3bab7dd6fbb" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Light::power</definition>
+        <argsstring></argsstring>
+        <name>power</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Light.h" line="11" column="1" bodyfile="ComGLab/Source/Light.h" bodystart="11" bodyend="-1"/>
+        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">Particle::initLights</referencedby>
+        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="672" endline="757">SP2_Scene::initLights</referencedby>
+        <referencedby refid="structLight_1aeb5df09a25a32f19fdffa761268ba24f" compoundref="Light_8cpp" startline="3" endline="9">Light</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structLight_1a888f11000d2baf1228d9e5c8d8c90fcb" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Light::kC</definition>
+        <argsstring></argsstring>
+        <name>kC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Light.h" line="12" column="1" bodyfile="ComGLab/Source/Light.h" bodystart="12" bodyend="-1"/>
+        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">Particle::initLights</referencedby>
+        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="672" endline="757">SP2_Scene::initLights</referencedby>
+        <referencedby refid="structLight_1aeb5df09a25a32f19fdffa761268ba24f" compoundref="Light_8cpp" startline="3" endline="9">Light</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structLight_1ab3918c449fb40fa5c6cc5283f2c9687d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Light::kL</definition>
+        <argsstring></argsstring>
+        <name>kL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Light.h" line="12" column="1" bodyfile="ComGLab/Source/Light.h" bodystart="12" bodyend="-1"/>
+        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">Particle::initLights</referencedby>
+        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="672" endline="757">SP2_Scene::initLights</referencedby>
+        <referencedby refid="structLight_1aeb5df09a25a32f19fdffa761268ba24f" compoundref="Light_8cpp" startline="3" endline="9">Light</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structLight_1a79c8e47de58f131ff5403fc2d823cc21" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Light::kQ</definition>
+        <argsstring></argsstring>
+        <name>kQ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Light.h" line="12" column="1" bodyfile="ComGLab/Source/Light.h" bodystart="12" bodyend="-1"/>
+        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">Particle::initLights</referencedby>
+        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="672" endline="757">SP2_Scene::initLights</referencedby>
+        <referencedby refid="structLight_1aeb5df09a25a32f19fdffa761268ba24f" compoundref="Light_8cpp" startline="3" endline="9">Light</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structLight_1a5dcdb101afc28979b5aaff0a2ec79ba5" prot="public" static="no" mutable="no">
+        <type><ref refid="structLight_1aa7ed22cab99d811d72896efaee6d07cb" kindref="member">LIGHT_TYPE</ref></type>
+        <definition>LIGHT_TYPE Light::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Light.h" line="22" column="1" bodyfile="ComGLab/Source/Light.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">Particle::initLights</referencedby>
+        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="672" endline="757">SP2_Scene::initLights</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structLight_1a6bd73eb0b27ef881f8442e20912d9258" prot="public" static="no" mutable="no">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Light::spotDirection</definition>
+        <argsstring></argsstring>
+        <name>spotDirection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Light.h" line="23" column="1" bodyfile="ComGLab/Source/Light.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">Particle::initLights</referencedby>
+        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="672" endline="757">SP2_Scene::initLights</referencedby>
+        <referencedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" compoundref="Particle_8cpp" startline="358" endline="422">Particle::Render</referencedby>
+        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2248" endline="2508">SP2_Scene::Render</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structLight_1af4ce5bbfbf33af96db9b8a222d073298" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Light::cosCutoff</definition>
+        <argsstring></argsstring>
+        <name>cosCutoff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Light.h" line="24" column="1" bodyfile="ComGLab/Source/Light.h" bodystart="24" bodyend="-1"/>
+        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">Particle::initLights</referencedby>
+        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="672" endline="757">SP2_Scene::initLights</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structLight_1a8c843f5d1af5c6f4f4928e9906f5d0db" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Light::cosInner</definition>
+        <argsstring></argsstring>
+        <name>cosInner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Light.h" line="25" column="1" bodyfile="ComGLab/Source/Light.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">Particle::initLights</referencedby>
+        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="672" endline="757">SP2_Scene::initLights</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structLight_1a4eb4fd0f025fb66d1934675ffff0e661" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Light::exponent</definition>
+        <argsstring></argsstring>
+        <name>exponent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Light.h" line="26" column="1" bodyfile="ComGLab/Source/Light.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">Particle::initLights</referencedby>
+        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="672" endline="757">SP2_Scene::initLights</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structLight_1aeb5df09a25a32f19fdffa761268ba24f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Light::Light</definition>
+        <argsstring>()</argsstring>
+        <name>Light</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Light.h" line="8" column="1" bodyfile="ComGLab/Source/Light.cpp" bodystart="3" bodyend="9"/>
+        <references refid="structLight_1ad7a168d26aed1bf7cca1a8d8e6f8ada4" compoundref="Light_8h" startline="10">color</references>
+        <references refid="structLight_1a888f11000d2baf1228d9e5c8d8c90fcb" compoundref="Light_8h" startline="12">kC</references>
+        <references refid="structLight_1ab3918c449fb40fa5c6cc5283f2c9687d" compoundref="Light_8h" startline="12">kL</references>
+        <references refid="structLight_1a79c8e47de58f131ff5403fc2d823cc21" compoundref="Light_8h" startline="12">kQ</references>
+        <references refid="structLight_1afeb738db41e987719e359166ef93314f" compoundref="Light_8h" startline="9">position</references>
+        <references refid="structLight_1a6c4c401141c4cdb3b9b9b3bab7dd6fbb" compoundref="Light_8h" startline="11">power</references>
+        <references refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" compoundref="Vertex_8h" startline="13" endline="13">Position::Set</references>
+        <references refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" compoundref="Vertex_8h" startline="23" endline="23">Color::Set</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="485">
+        <label>Position</label>
+        <link refid="structPosition"/>
+        <childnode refid="483" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+      <node id="482">
+        <label>LIGHT_TYPE</label>
+      </node>
+      <node id="483">
+        <label>float</label>
+      </node>
+      <node id="481">
+        <label>Light</label>
+        <link refid="structLight"/>
+        <childnode refid="482" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="483" relation="usage">
+          <edgelabel>exponent</edgelabel>
+          <edgelabel>kL</edgelabel>
+          <edgelabel>cosCutoff</edgelabel>
+          <edgelabel>cosInner</edgelabel>
+          <edgelabel>kQ</edgelabel>
+          <edgelabel>kC</edgelabel>
+          <edgelabel>power</edgelabel>
+        </childnode>
+        <childnode refid="484" relation="usage">
+          <edgelabel>spotDirection</edgelabel>
+        </childnode>
+        <childnode refid="485" relation="usage">
+          <edgelabel>position</edgelabel>
+        </childnode>
+        <childnode refid="486" relation="usage">
+          <edgelabel>color</edgelabel>
+        </childnode>
+      </node>
+      <node id="486">
+        <label>Color</label>
+        <link refid="structColor"/>
+        <childnode refid="483" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="484">
+        <label>Vector3</label>
+        <link refid="structVector3"/>
+        <childnode refid="483" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ComGLab/Source/Light.h" line="7" column="1" bodyfile="ComGLab/Source/Light.h" bodystart="6" bodyend="28"/>
+    <listofallmembers>
+      <member refid="structLight_1ad7a168d26aed1bf7cca1a8d8e6f8ada4" prot="public" virt="non-virtual"><scope>Light</scope><name>color</name></member>
+      <member refid="structLight_1af4ce5bbfbf33af96db9b8a222d073298" prot="public" virt="non-virtual"><scope>Light</scope><name>cosCutoff</name></member>
+      <member refid="structLight_1a8c843f5d1af5c6f4f4928e9906f5d0db" prot="public" virt="non-virtual"><scope>Light</scope><name>cosInner</name></member>
+      <member refid="structLight_1a4eb4fd0f025fb66d1934675ffff0e661" prot="public" virt="non-virtual"><scope>Light</scope><name>exponent</name></member>
+      <member refid="structLight_1a888f11000d2baf1228d9e5c8d8c90fcb" prot="public" virt="non-virtual"><scope>Light</scope><name>kC</name></member>
+      <member refid="structLight_1ab3918c449fb40fa5c6cc5283f2c9687d" prot="public" virt="non-virtual"><scope>Light</scope><name>kL</name></member>
+      <member refid="structLight_1a79c8e47de58f131ff5403fc2d823cc21" prot="public" virt="non-virtual"><scope>Light</scope><name>kQ</name></member>
+      <member refid="structLight_1aeb5df09a25a32f19fdffa761268ba24f" prot="public" virt="non-virtual"><scope>Light</scope><name>Light</name></member>
+      <member refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba9bf1f515ab954cb3379615aab42f30b6" prot="public" virt="non-virtual"><scope>Light</scope><name>LIGHT_DIRECTIONAL</name></member>
+      <member refid="structLight_1aa7ed22cab99d811d72896efaee6d07cbab02ff4ee1e2a9673edac03cf11b66338" prot="public" virt="non-virtual"><scope>Light</scope><name>LIGHT_POINT</name></member>
+      <member refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba69dd6d65ad12b410709ae74c8d9b1e16" prot="public" virt="non-virtual"><scope>Light</scope><name>LIGHT_SPOT</name></member>
+      <member refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba06805620376dc5b7539857c81c53cb0d" prot="public" virt="non-virtual"><scope>Light</scope><name>LIGHT_TOTAL</name></member>
+      <member refid="structLight_1aa7ed22cab99d811d72896efaee6d07cb" prot="public" virt="non-virtual"><scope>Light</scope><name>LIGHT_TYPE</name></member>
+      <member refid="structLight_1afeb738db41e987719e359166ef93314f" prot="public" virt="non-virtual"><scope>Light</scope><name>position</name></member>
+      <member refid="structLight_1a6c4c401141c4cdb3b9b9b3bab7dd6fbb" prot="public" virt="non-virtual"><scope>Light</scope><name>power</name></member>
+      <member refid="structLight_1a6bd73eb0b27ef881f8442e20912d9258" prot="public" virt="non-virtual"><scope>Light</scope><name>spotDirection</name></member>
+      <member refid="structLight_1a5dcdb101afc28979b5aaff0a2ec79ba5" prot="public" virt="non-virtual"><scope>Light</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

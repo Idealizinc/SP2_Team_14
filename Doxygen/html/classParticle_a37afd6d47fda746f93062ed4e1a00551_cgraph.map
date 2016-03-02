@@ -1,0 +1,12 @@
+<map id="Particle::renderParticleEmitter" name="Particle::renderParticleEmitter">
+<area shape="rect" id="node2" href="$classMS.html#aac22e39d0ac437fcb85403a9f0a7a25f" title="Pop the top matrix on the matrix stack. " alt="" coords="227,5,336,32"/>
+<area shape="rect" id="node3" href="$classMS.html#a9fb4fff5036f3f197b893f9a579c97b2" title="Make a copy of the top matrix on the matrix stack and push it on top. " alt="" coords="223,56,339,83"/>
+<area shape="rect" id="node4" href="$classParticle.html#a8aea59081fe6e9a7bf00f1b9c5679821" title="Particle::RenderMesh" alt="" coords="208,107,355,133"/>
+<area shape="rect" id="node5" href="$classMtx44.html#aac1ba21ddfc5f3c24baa4f58d9c5c256" title="Return a new matrix that is an inverse. " alt="" coords="413,31,539,57"/>
+<area shape="rect" id="node7" href="$classMtx44.html#aebb16a0329c5237e314af0d75d8081fd" title="Return a new matrix that is a transpose of this matrix. " alt="" coords="403,81,549,108"/>
+<area shape="rect" id="node10" href="$classMesh.html#a75e66bcd90c09492676a4cfe5b23c3af" title="OpenGL render code. " alt="" coords="425,132,527,159"/>
+<area shape="rect" id="node11" href="$classMS.html#a21291d7fb488f63c589bdc9bd620ba58" title="Return the top matrix on the matrix stack. " alt="" coords="441,183,511,209"/>
+<area shape="rect" id="node6" href="$namespaceMath.html#ac91173ab2efdf7313fe7aaeb6cb44cf6" title="Math::FAbs" alt="" coords="615,31,706,57"/>
+<area shape="rect" id="node8" href="$classMtx44.html#a6c95e149e42cba381918782a93f8a68b" title="Set this matrix to its Transpose. " alt="" coords="597,81,724,108"/>
+<area shape="rect" id="node9" href="$Mtx44_8cpp.html#a1ef521a2e5e5ae2ef55d1bc0c3b0c437" title="Helper function swap. " alt="" coords="772,81,824,108"/>
+</map>

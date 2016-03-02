@@ -1,0 +1,7 @@
+<map id="Camera2::Init" name="Camera2::Init">
+<area shape="rect" id="node2" href="$structVector3.html#aa1cdc5357009b47fe585ddd61e263aad" title="Cross product of 2 vectors. " alt="" coords="167,5,277,32"/>
+<area shape="rect" id="node4" href="$structVector3.html#aaef4f25a38878a640ab4a48002a7eff8" title="Normalize this vector and return a reference to it. " alt="" coords="155,107,289,133"/>
+<area shape="rect" id="node6" href="$structVector3.html#a2da0f00c5529bced69763320dac9c414" title="Return a copy of this vector, normalized. " alt="" coords="152,56,292,83"/>
+<area shape="rect" id="node3" href="$structVector3.html#afa5e0c801fc2c8a820a54ea99302fe08" title="Vector3 default constructor. " alt="" coords="340,31,460,57"/>
+<area shape="rect" id="node5" href="$structVector3.html#a200024a8442329de9a625ed58ffe7075" title="Return length of vector. " alt="" coords="343,93,457,120"/>
+</map>

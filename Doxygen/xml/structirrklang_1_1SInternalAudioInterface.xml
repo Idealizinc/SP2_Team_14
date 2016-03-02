@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structirrklang_1_1SInternalAudioInterface" kind="struct" language="C++" prot="public">
+    <compoundname>irrklang::SInternalAudioInterface</compoundname>
+    <includes refid="ik__ISoundEngine_8h" local="no">ik_ISoundEngine.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structirrklang_1_1SInternalAudioInterface_1aea07f28b935b7b4585c8fb716dbad31f" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* irrklang::SInternalAudioInterface::pIDirectSound</definition>
+        <argsstring></argsstring>
+        <name>pIDirectSound</name>
+        <briefdescription>
+<para>IDirectSound interface, this is not null when using the ESOD_DIRECT_SOUND audio driver. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEngine.h" line="413" column="1" bodyfile="irrKlang-1.5.0/include/ik_ISoundEngine.h" bodystart="413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structirrklang_1_1SInternalAudioInterface_1a68f312b19c805d4775fe989b9ce27bf1" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* irrklang::SInternalAudioInterface::pIDirectSound8</definition>
+        <argsstring></argsstring>
+        <name>pIDirectSound8</name>
+        <briefdescription>
+<para>IDirectSound8 interface, this is not null when using the ESOD_DIRECT_SOUND8 audio driver. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEngine.h" line="416" column="1" bodyfile="irrKlang-1.5.0/include/ik_ISoundEngine.h" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structirrklang_1_1SInternalAudioInterface_1a34d810f7ef1c0fdc7663e4f3a6fdb22c" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* irrklang::SInternalAudioInterface::pWinMM_HWaveOut</definition>
+        <argsstring></argsstring>
+        <name>pWinMM_HWaveOut</name>
+        <briefdescription>
+<para>HWaveout interface, this is not null when using the ESOD_WIN_MM audio driver. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEngine.h" line="419" column="1" bodyfile="irrKlang-1.5.0/include/ik_ISoundEngine.h" bodystart="419" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structirrklang_1_1SInternalAudioInterface_1ad3eb4102916f4e37d6a84670ce9e8fcd" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* irrklang::SInternalAudioInterface::pALSA_SND_PCM</definition>
+        <argsstring></argsstring>
+        <name>pALSA_SND_PCM</name>
+        <briefdescription>
+<para>ALSA PCM Handle interface, this is not null when using the ESOD_ALSA audio driver. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEngine.h" line="422" column="1" bodyfile="irrKlang-1.5.0/include/ik_ISoundEngine.h" bodystart="422" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structirrklang_1_1SInternalAudioInterface_1a2de1dc5ec1ba0add29c1c82f7fa7f07d" prot="public" static="no" mutable="no">
+        <type><ref refid="namespaceirrklang_1adf9f75b6ca98aff6843fb294125571e0" kindref="member">ik_u32</ref></type>
+        <definition>ik_u32 irrklang::SInternalAudioInterface::pCoreAudioDeciceID</definition>
+        <argsstring></argsstring>
+        <name>pCoreAudioDeciceID</name>
+        <briefdescription>
+<para>AudioDeviceID handle, this is not null when using the ESOD_CORE_AUDIO audio driver. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEngine.h" line="425" column="1" bodyfile="irrKlang-1.5.0/include/ik_ISoundEngine.h" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>structure for returning pointers to the internal audio interface. </para>    </briefdescription>
+    <detaileddescription>
+<para>Use <ref refid="classirrklang_1_1ISoundEngine_1a31cb74d06d3312cafb243498d97cb0ca" kindref="member">ISoundEngine::getInternalAudioInterface()</ref> to get this. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="589">
+        <label>void *</label>
+      </node>
+      <node id="587">
+        <label>irrklang::SInternalAudioInterface</label>
+        <link refid="structirrklang_1_1SInternalAudioInterface"/>
+        <childnode refid="588" relation="usage">
+          <edgelabel>pCoreAudioDeciceID</edgelabel>
+        </childnode>
+        <childnode refid="589" relation="usage">
+          <edgelabel>pALSA_SND_PCM</edgelabel>
+          <edgelabel>pWinMM_HWaveOut</edgelabel>
+          <edgelabel>pIDirectSound</edgelabel>
+          <edgelabel>pIDirectSound8</edgelabel>
+        </childnode>
+      </node>
+      <node id="588">
+        <label>unsigned</label>
+      </node>
+    </collaborationgraph>
+    <location file="irrKlang-1.5.0/include/ik_ISoundEngine.h" line="411" column="1" bodyfile="irrKlang-1.5.0/include/ik_ISoundEngine.h" bodystart="410" bodyend="426"/>
+    <listofallmembers>
+      <member refid="structirrklang_1_1SInternalAudioInterface_1ad3eb4102916f4e37d6a84670ce9e8fcd" prot="public" virt="non-virtual"><scope>irrklang::SInternalAudioInterface</scope><name>pALSA_SND_PCM</name></member>
+      <member refid="structirrklang_1_1SInternalAudioInterface_1a2de1dc5ec1ba0add29c1c82f7fa7f07d" prot="public" virt="non-virtual"><scope>irrklang::SInternalAudioInterface</scope><name>pCoreAudioDeciceID</name></member>
+      <member refid="structirrklang_1_1SInternalAudioInterface_1aea07f28b935b7b4585c8fb716dbad31f" prot="public" virt="non-virtual"><scope>irrklang::SInternalAudioInterface</scope><name>pIDirectSound</name></member>
+      <member refid="structirrklang_1_1SInternalAudioInterface_1a68f312b19c805d4775fe989b9ce27bf1" prot="public" virt="non-virtual"><scope>irrklang::SInternalAudioInterface</scope><name>pIDirectSound8</name></member>
+      <member refid="structirrklang_1_1SInternalAudioInterface_1a34d810f7ef1c0fdc7663e4f3a6fdb22c" prot="public" virt="non-virtual"><scope>irrklang::SInternalAudioInterface</scope><name>pWinMM_HWaveOut</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

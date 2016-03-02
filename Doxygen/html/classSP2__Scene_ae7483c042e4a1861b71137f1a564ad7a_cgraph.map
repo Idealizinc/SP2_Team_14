@@ -1,0 +1,40 @@
+<map id="SP2_Scene::Init" name="SP2_Scene::Init">
+<area shape="rect" id="node2" href="$classirrklang_1_1ISoundEngine.html#a4eed0fa6712872e55003b26462e21005" title="Adds sound source into the sound engine as file. " alt="" coords="171,5,351,47"/>
+<area shape="rect" id="node3" href="$namespaceirrklang.html#ad9829f898bc0665fdd2554a6f5c7ca1c" title="Creates an irrKlang device. The irrKlang device is the root object for using the sound engine..." alt="" coords="185,71,337,112"/>
+<area shape="rect" id="node4" href="$classMeshBuilder.html#a78d37e2b0cc068eec801f17c367100e7" title="Generate the vertices of a reference Axes; Use red for x&#45;axis, green for y&#45;axis, blue for z&#45;axis Then..." alt="" coords="419,137,605,163"/>
+<area shape="rect" id="node7" href="$classMeshBuilder.html#a68d491a27ed57b66b7a8161a2b230951" title="MeshBuilder::GenerateCircle" alt="" coords="418,289,606,315"/>
+<area shape="rect" id="node12" href="$classMeshBuilder.html#a3123aa273acbacf182adc536433c4911" title="MeshBuilder::GenerateCone" alt="" coords="419,390,605,417"/>
+<area shape="rect" id="node15" href="$classMeshBuilder.html#a5e777328dc946f483beb5645d8f24c4a" title="Generate the vertices of a cube; Use random color for each vertex Then generate the VBO/IBO and store..." alt="" coords="419,441,605,467"/>
+<area shape="rect" id="node16" href="$classMeshBuilder.html#a06796a82056f0a291f6cda3d8318531c" title="MeshBuilder::GenerateCylinder" alt="" coords="411,187,613,214"/>
+<area shape="rect" id="node17" href="$classMeshBuilder.html#a36320c69da431e763f864e3247c58a9b" title="MeshBuilder::GenerateHemisphere" alt="" coords="400,694,624,721"/>
+<area shape="rect" id="node21" href="$classMeshBuilder.html#aa3751076aa9f74324d49a999a3c3fa55" title="Generate the vertices of a quad; Use random color for each vertex Then generate the VBO/IBO and store..." alt="" coords="419,491,605,518"/>
+<area shape="rect" id="node23" href="$classMeshBuilder.html#a53f9fa5f58c23dfce5327d27e6fa1783" title="MeshBuilder::GenerateRing" alt="" coords="421,238,603,265"/>
+<area shape="rect" id="node24" href="$classMeshBuilder.html#a569c4966c1422841fc79118803f5ca7e" title="MeshBuilder::GenerateSphere" alt="" coords="414,745,610,771"/>
+<area shape="rect" id="node25" href="$classMeshBuilder.html#ae78de92278560e1d9d33bad688f3ac7f" title="MeshBuilder::GenerateTorus" alt="" coords="419,643,605,670"/>
+<area shape="rect" id="node26" href="$classCamera3.html#a1029fbe574de09b19ff8908748031289" title="Camera3::Init" alt="" coords="463,834,561,861"/>
+<area shape="rect" id="node32" href="$classSP2__Scene.html#ad5ca8ed703d21efb44c09ecc4af6d454" title="SP2_Scene::initLights" alt="" coords="437,339,587,366"/>
+<area shape="rect" id="node33" href="$classSP2__Scene.html#a4867e767b8f3f993a01c5c271c90d82e" title="SP2_Scene::initUIElements" alt="" coords="169,542,352,569"/>
+<area shape="rect" id="node36" href="$classMS.html#a86606fe9f575ccb747d77195c8aefdaf" title="Return the top matrix with a new matrix. " alt="" coords="203,795,318,822"/>
+<area shape="rect" id="node37" href="$shader_8cpp.html#a833f10cca6a76fe34ae9efa23ac5e73c" title="LoadShaders" alt="" coords="211,846,310,873"/>
+<area shape="rect" id="node38" href="$classMtx44.html#ac6e6521111d78ff36d539bf111a902c6" title="Set matrix to be a perspective matrix. " alt="" coords="177,897,344,923"/>
+<area shape="rect" id="node5" href="$structPosition.html#a2919b2441baf7a2f799791d65a1cfc15" title="Position::Set" alt="" coords="703,390,800,417"/>
+<area shape="rect" id="node6" href="$structColor.html#acc77e4e3583d3eca7e476952e51bfb80" title="Color::Set" alt="" coords="711,162,791,189"/>
+<area shape="rect" id="node8" href="$MeshBuilder_8cpp.html#a452206fa7621781c2b35fcd17b816239" title="CircleX" alt="" coords="720,238,783,265"/>
+<area shape="rect" id="node10" href="$MeshBuilder_8cpp.html#aede6465b0e45fc027ae0e8ec50d68ffb" title="CircleZ" alt="" coords="720,289,783,315"/>
+<area shape="rect" id="node11" href="$structVector3.html#a9c25d604bd52b162cfcb56302ef032bb" title="Set the elements of this vector. " alt="" coords="704,441,799,467"/>
+<area shape="rect" id="node9" href="$namespaceMath.html#ac04b987cc6c574a059e68cb58f58c09a" title="Converts from degrees to radians. " alt="" coords="879,581,1033,607"/>
+<area shape="rect" id="node13" href="$structVector3.html#aaef4f25a38878a640ab4a48002a7eff8" title="Normalize this vector and return a reference to it. " alt="" coords="685,783,818,810"/>
+<area shape="rect" id="node14" href="$structVector3.html#a200024a8442329de9a625ed58ffe7075" title="Return length of vector. " alt="" coords="899,809,1013,835"/>
+<area shape="rect" id="node18" href="$MeshBuilder_8cpp.html#aef75a362a1bdb0980ed4abcf8241da69" title="SphereX" alt="" coords="716,631,787,658"/>
+<area shape="rect" id="node19" href="$MeshBuilder_8cpp.html#af7655f1bbe33f114c8c2457bb80d8d56" title="SphereY" alt="" coords="715,682,787,709"/>
+<area shape="rect" id="node20" href="$MeshBuilder_8cpp.html#a635e807e82196e114ec59993fe28838a" title="SphereZ" alt="" coords="716,733,787,759"/>
+<area shape="rect" id="node22" href="$structTexCoord.html#a64b4ceeb1733c478cb4b5b1216146c32" title="TexCoord::Set" alt="" coords="699,505,804,531"/>
+<area shape="rect" id="node27" href="$structVector3.html#aa1cdc5357009b47fe585ddd61e263aad" title="Cross product of 2 vectors. " alt="" coords="697,885,806,911"/>
+<area shape="rect" id="node29" href="$classCamera3.html#ae8bf411b15978eaeb425b6fe169a0f05" title="Camera3::initBoundVec" alt="" coords="672,935,831,962"/>
+<area shape="rect" id="node31" href="$structVector3.html#a2da0f00c5529bced69763320dac9c414" title="Return a copy of this vector, normalized. " alt="" coords="681,834,821,861"/>
+<area shape="rect" id="node28" href="$structVector3.html#afa5e0c801fc2c8a820a54ea99302fe08" title="Vector3 default constructor. " alt="" coords="896,873,1016,899"/>
+<area shape="rect" id="node30" href="$structBoundary.html#a3cf640001c6bbc842d129f453fb3441b" title="Boundary::set" alt="" coords="905,935,1007,962"/>
+<area shape="rect" id="node34" href="$LoadTGA_8cpp.html#a459a80ca6de67a1e3493bfb66ae317e4" title="LoadTGA" alt="" coords="474,542,550,569"/>
+<area shape="rect" id="node35" href="$classMeshBuilder.html#aac7c87881dbc08f8d41f2068e0f40c76" title="MeshBuilder::GenerateText" alt="" coords="422,593,602,619"/>
+<area shape="rect" id="node39" href="$classMtx44.html#a1b985913080679da29ff94217935b3c7" title="Default Constructor. Default values are zero. " alt="" coords="461,897,563,923"/>
+</map>

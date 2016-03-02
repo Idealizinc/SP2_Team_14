@@ -1,0 +1,10 @@
+<map id="get_vlc" name="get_vlc">
+<area shape="rect" id="node2" href="$mpaudec_8c.html#aa123e4d670f1d03b262749f6d2134630" title="huffman_decode" alt="" coords="116,42,232,69"/>
+<area shape="rect" id="node3" href="$mpaudec_8c.html#aa6bde9d54d008252eb8b748f805c7c1e" title="mp_decode_layer3" alt="" coords="280,42,411,69"/>
+<area shape="rect" id="node4" href="$mpaudec_8c.html#a2dff7b15a5f55a97729fb3f2d7194e64" title="mp_decode_frame" alt="" coords="459,42,587,69"/>
+<area shape="rect" id="node5" href="$mpaudec_8c.html#ad804754f6cb3863f2489fcddc56f9ae4" title="mpaudec_decode_frame" alt="" coords="635,42,797,69"/>
+<area shape="rect" id="node6" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#a0694b0e9c0ca306701236b660a11633d" title="irrklang::CIrrKlangAudio\lStreamMP3::decodeFrame" alt="" coords="845,35,1024,76"/>
+<area shape="rect" id="node7" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#aa0525477376ae287275da88a17f4825d" title="irrklang::CIrrKlangAudio\lStreamMP3::CIrrKlangAudioStreamMP3" alt="" coords="1500,5,1755,47"/>
+<area shape="rect" id="node8" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#a85374ba5ed9178fa74dd256d59018ca0" title="tells the audio stream to read n audio frames into the specified buffer " alt="" coords="1072,35,1240,76"/>
+<area shape="rect" id="node9" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#ae615c171d074153463af08a11118ceaf" title="sets the position of the audio stream. " alt="" coords="1288,35,1452,76"/>
+</map>

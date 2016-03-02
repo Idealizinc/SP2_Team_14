@@ -1,0 +1,495 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="internal_8h" kind="file" language="C++">
+    <compoundname>internal.h</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">ctype.h</includes>
+    <includes local="no">math.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includes refid="mpaudec_8h" local="yes">mpaudec.h</includes>
+    <includes local="no">inttypes.h</includes>
+    <includes local="no">assert.h</includes>
+    <includedby refid="bits_8c" local="yes">irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c</includedby>
+    <includedby refid="mpaudec_8c" local="yes">irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c</includedby>
+    <incdepgraph>
+      <node id="2929">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h</label>
+        <link refid="internal.h"/>
+        <childnode refid="2930" relation="include">
+        </childnode>
+        <childnode refid="2931" relation="include">
+        </childnode>
+        <childnode refid="2932" relation="include">
+        </childnode>
+        <childnode refid="2933" relation="include">
+        </childnode>
+        <childnode refid="2934" relation="include">
+        </childnode>
+        <childnode refid="2935" relation="include">
+        </childnode>
+        <childnode refid="2936" relation="include">
+        </childnode>
+        <childnode refid="2937" relation="include">
+        </childnode>
+        <childnode refid="2938" relation="include">
+        </childnode>
+      </node>
+      <node id="2938">
+        <label>assert.h</label>
+      </node>
+      <node id="2930">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2935">
+        <label>stddef.h</label>
+      </node>
+      <node id="2936">
+        <label>mpaudec.h</label>
+        <link refid="mpaudec_8h"/>
+      </node>
+      <node id="2932">
+        <label>string.h</label>
+      </node>
+      <node id="2934">
+        <label>math.h</label>
+      </node>
+      <node id="2933">
+        <label>ctype.h</label>
+      </node>
+      <node id="2931">
+        <label>stdio.h</label>
+      </node>
+      <node id="2937">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2939">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h</label>
+        <link refid="internal.h"/>
+        <childnode refid="2940" relation="include">
+        </childnode>
+        <childnode refid="2941" relation="include">
+        </childnode>
+      </node>
+      <node id="2941">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c</label>
+        <link refid="mpaudec_8c"/>
+      </node>
+      <node id="2940">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c</label>
+        <link refid="bits_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structGetBitContext" prot="public">GetBitContext</innerclass>
+    <innerclass refid="structVLC" prot="public">VLC</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="internal_8h_1ae71449b1cc6e6250b91f539153a7a0d3" prot="public" static="no">
+        <name>M_PI</name>
+        <initializer>3.14159265358979323846</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" line="20" column="9" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="mpaudec_8h_1a0f2f19b46f286b7a9315b40e46f34227" compoundref="mpaudec_8c" startline="306" endline="496">mpaudec_init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="internal_8h_1a8de3ed741dadc9c979a4ff17c0a9116e" prot="public" static="no">
+        <name>NDEBUG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" line="52" column="13" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="internal_8h_1a7e70876676d0b52ff7cf93cadf7e24fa" prot="public" static="no">
+        <name>VLC_TYPE</name>
+        <initializer>int16_t</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" line="66" column="9" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" bodystart="66" bodyend="-1"/>
+        <referencedby refid="bits_8c_1a3d11308e2c23c39139ae637124c8dd9d" compoundref="bits_8c" startline="96" endline="109">alloc_table</referencedby>
+        <referencedby refid="bits_8c_1a452b9ed664f9e1b5ca6e12292e184e32" compoundref="bits_8c" startline="111" endline="201">build_table</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="internal_8h_1a6e0cb01ec6fd75b13fcc6bca845ee081" prot="public" static="no">
+        <type>struct <ref refid="structGetBitContext" kindref="compound">GetBitContext</ref></type>
+        <definition>typedef struct GetBitContext  GetBitContext</definition>
+        <argsstring></argsstring>
+        <name>GetBitContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="internal_8h_1a4ae0fe3cb496ae74860f9ba9d588b08d" prot="public" static="no">
+        <type>struct <ref refid="structVLC" kindref="compound">VLC</ref></type>
+        <definition>typedef struct VLC  VLC</definition>
+        <argsstring></argsstring>
+        <name>VLC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" line="72" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="internal_8h_1aa3797eab0bbe953c41e8a070aa3a4dbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int get_bits_count</definition>
+        <argsstring>(const GetBitContext *s)</argsstring>
+        <name>get_bits_count</name>
+        <param>
+          <type>const <ref refid="structGetBitContext" kindref="compound">GetBitContext</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" line="64" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" bodystart="70" bodyend="73"/>
+        <references refid="structGetBitContext_1a033a4d63cfa56348981356df95092af7" compoundref="internal_8h" startline="60">GetBitContext::index</references>
+        <referencedby refid="mpaudec_8c_1aa123e4d670f1d03b262749f6d2134630" compoundref="mpaudec_8c" startline="1559" endline="1661">huffman_decode</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+        <referencedby refid="mpaudec_8c_1ab3d38c0057af45f5edb7f6dc158ede46" compoundref="mpaudec_8c" startline="1472" endline="1490">seek_to_maindata</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="internal_8h_1a4c9accf71fe52dba23187e83252f2459" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int get_bits</definition>
+        <argsstring>(GetBitContext *s, int n)</argsstring>
+        <name>get_bits</name>
+        <param>
+          <type><ref refid="structGetBitContext" kindref="compound">GetBitContext</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" line="74" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" bodystart="63" bodyend="68"/>
+        <references refid="bits_8c_1a1ab74f16c44ad8762a384924368175e7" compoundref="bits_8c" startline="38" endline="56">show_bits</references>
+        <references refid="bits_8c_1aea74eea48a18a3731b052ac530f6afce" compoundref="bits_8c" startline="58" endline="61">skip_bits</references>
+        <referencedby refid="mpaudec_8c_1a3bb107475a04ad73ab8f45dd8f1dbc44" compoundref="mpaudec_8c" startline="1551" endline="1557">get_bitsz</referencedby>
+        <referencedby refid="mpaudec_8c_1aa123e4d670f1d03b262749f6d2134630" compoundref="mpaudec_8c" startline="1559" endline="1661">huffman_decode</referencedby>
+        <referencedby refid="mpaudec_8c_1a2dff7b15a5f55a97729fb3f2d7194e64" compoundref="mpaudec_8c" startline="2258" endline="2310">mp_decode_frame</referencedby>
+        <referencedby refid="mpaudec_8c_1aa8d8ca6a6ace0fa4945bbf9de65c0364" compoundref="mpaudec_8c" startline="1173" endline="1237">mp_decode_layer1</referencedby>
+        <referencedby refid="mpaudec_8c_1a72ee70f98e9873f63c88b69b80e15825" compoundref="mpaudec_8c" startline="1261" endline="1467">mp_decode_layer2</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="internal_8h_1a1ab74f16c44ad8762a384924368175e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int show_bits</definition>
+        <argsstring>(const GetBitContext *s, int n)</argsstring>
+        <name>show_bits</name>
+        <param>
+          <type>const <ref refid="structGetBitContext" kindref="compound">GetBitContext</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" line="75" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" bodystart="38" bodyend="56"/>
+        <references refid="structGetBitContext_1ad3bbe8f5d0b9e28a1070396fac5725d8" compoundref="internal_8h" startline="59">GetBitContext::buffer</references>
+        <references refid="structGetBitContext_1a033a4d63cfa56348981356df95092af7" compoundref="internal_8h" startline="60">GetBitContext::index</references>
+        <references refid="structGetBitContext_1adacaccb7e1e29f7d0e669659f17a9bfd" compoundref="internal_8h" startline="61">GetBitContext::size_in_bits</references>
+        <referencedby refid="internal_8h_1a4c9accf71fe52dba23187e83252f2459" compoundref="bits_8c" startline="63" endline="68">get_bits</referencedby>
+        <referencedby refid="internal_8h_1ad9d1cef202cce95b0fd843505647ae2c" compoundref="bits_8c" startline="253" endline="273">get_vlc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="internal_8h_1aea74eea48a18a3731b052ac530f6afce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void skip_bits</definition>
+        <argsstring>(GetBitContext *s, int n)</argsstring>
+        <name>skip_bits</name>
+        <param>
+          <type><ref refid="structGetBitContext" kindref="compound">GetBitContext</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" line="76" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" bodystart="58" bodyend="61"/>
+        <references refid="structGetBitContext_1a033a4d63cfa56348981356df95092af7" compoundref="internal_8h" startline="60">GetBitContext::index</references>
+        <referencedby refid="internal_8h_1a4c9accf71fe52dba23187e83252f2459" compoundref="bits_8c" startline="63" endline="68">get_bits</referencedby>
+        <referencedby refid="internal_8h_1ad9d1cef202cce95b0fd843505647ae2c" compoundref="bits_8c" startline="253" endline="273">get_vlc</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="internal_8h_1a12c6ecf32fbbd78af680f9cf38d55ef1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_get_bits</definition>
+        <argsstring>(GetBitContext *s, const uint8_t *buffer, int buffer_size)</argsstring>
+        <name>init_get_bits</name>
+        <param>
+          <type><ref refid="structGetBitContext" kindref="compound">GetBitContext</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>buffer_size</declname>
+          <defname>bit_size</defname>
+        </param>
+        <briefdescription>
+<para>init <ref refid="structGetBitContext" kindref="compound">GetBitContext</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bitstream buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bit_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of the buffer in bits </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" line="77" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" bodystart="30" bodyend="36"/>
+        <references refid="structGetBitContext_1ad3bbe8f5d0b9e28a1070396fac5725d8" compoundref="internal_8h" startline="59">GetBitContext::buffer</references>
+        <references refid="structGetBitContext_1a033a4d63cfa56348981356df95092af7" compoundref="internal_8h" startline="60">GetBitContext::index</references>
+        <references refid="structGetBitContext_1adacaccb7e1e29f7d0e669659f17a9bfd" compoundref="internal_8h" startline="61">GetBitContext::size_in_bits</references>
+        <referencedby refid="mpaudec_8c_1a2dff7b15a5f55a97729fb3f2d7194e64" compoundref="mpaudec_8c" startline="2258" endline="2310">mp_decode_frame</referencedby>
+        <referencedby refid="mpaudec_8c_1ab3d38c0057af45f5edb7f6dc158ede46" compoundref="mpaudec_8c" startline="1472" endline="1490">seek_to_maindata</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="internal_8h_1a17ce557803d3a49257e6fb289d43dfee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int init_vlc</definition>
+        <argsstring>(VLC *vlc, int nb_bits, int nb_codes, const void *bits, int bits_wrap, int bits_size, const void *codes, int codes_wrap, int codes_size)</argsstring>
+        <name>init_vlc</name>
+        <param>
+          <type><ref refid="structVLC" kindref="compound">VLC</ref> *</type>
+          <declname>vlc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nb_bits</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nb_codes</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bits_wrap</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bits_size</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>codes</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>codes_wrap</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>codes_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" line="80" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" bodystart="225" bodyend="245"/>
+        <references refid="structVLC_1ac36d06bc414af86fbe35c9efb6170fc5" compoundref="internal_8h" startline="69">VLC::bits</references>
+        <references refid="bits_8c_1a452b9ed664f9e1b5ca6e12292e184e32" compoundref="bits_8c" startline="111" endline="201">build_table</references>
+        <references refid="structVLC_1acaf94f3386396a95d3e7042c444a41f7" compoundref="internal_8h" startline="70">VLC::table</references>
+        <references refid="structVLC_1aa13e8ff6ffe730398c69e9fc2d42266f" compoundref="internal_8h" startline="71">VLC::table_allocated</references>
+        <references refid="structVLC_1a5d373c883f68f747b3245733f2884d74" compoundref="internal_8h" startline="71">VLC::table_size</references>
+        <referencedby refid="mpaudec_8h_1a0f2f19b46f286b7a9315b40e46f34227" compoundref="mpaudec_8c" startline="306" endline="496">mpaudec_init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="internal_8h_1af5bade5c2576e97e3ce7bdb8b4bf1572" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void free_vlc</definition>
+        <argsstring>(VLC *vlc)</argsstring>
+        <name>free_vlc</name>
+        <param>
+          <type><ref refid="structVLC" kindref="compound">VLC</ref> *</type>
+          <declname>vlc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" line="83" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" bodystart="248" bodyend="251"/>
+        <references refid="structVLC_1acaf94f3386396a95d3e7042c444a41f7" compoundref="internal_8h" startline="70">VLC::table</references>
+      </memberdef>
+      <memberdef kind="function" id="internal_8h_1ad9d1cef202cce95b0fd843505647ae2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int get_vlc</definition>
+        <argsstring>(GetBitContext *s, const VLC *vlc)</argsstring>
+        <name>get_vlc</name>
+        <param>
+          <type><ref refid="structGetBitContext" kindref="compound">GetBitContext</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structVLC" kindref="compound">VLC</ref> *</type>
+          <declname>vlc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h" line="84" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" bodystart="253" bodyend="273"/>
+        <references refid="structVLC_1ac36d06bc414af86fbe35c9efb6170fc5" compoundref="internal_8h" startline="69">VLC::bits</references>
+        <references refid="bits_8c_1a1ab74f16c44ad8762a384924368175e7" compoundref="bits_8c" startline="38" endline="56">show_bits</references>
+        <references refid="bits_8c_1aea74eea48a18a3731b052ac530f6afce" compoundref="bits_8c" startline="58" endline="61">skip_bits</references>
+        <references refid="structVLC_1acaf94f3386396a95d3e7042c444a41f7" compoundref="internal_8h" startline="70">VLC::table</references>
+        <referencedby refid="mpaudec_8c_1aa123e4d670f1d03b262749f6d2134630" compoundref="mpaudec_8c" startline="1559" endline="1661">huffman_decode</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Based<sp/>on<sp/>common.h<sp/>from<sp/>libavcodec.<sp/><sp/>Modified<sp/>extensively<sp/>by<sp/>Matt<sp/>Campbell</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/>&lt;mattcampbell@pobox.com&gt;<sp/>for<sp/>the<sp/>stand-alone<sp/>mpaudec<sp/>library.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INTERNAL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERNAL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_WIN32)<sp/>&amp;&amp;<sp/>!defined(__MINGW32__)<sp/>&amp;&amp;<sp/>!defined(__CYGWIN__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/>define<sp/>CONFIG_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ctype.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mpaudec_8h" kindref="compound">mpaudec.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>M_PI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="internal_8h_1ae71449b1cc6e6250b91f539153a7a0d3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M_PI<sp/><sp/><sp/><sp/>3.14159265358979323846</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CONFIG_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>windows<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>uint16_t;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>int16_t;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>uint8_t;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>uint32_t;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>__int64<sp/>uint64_t;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>int8_t;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>int32_t;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/>__int64<sp/>int64_t;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/>ifdef<sp/>_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>define<sp/>DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/>endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>CONFIG_WIN32<sp/>end<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>unix<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!CONFIG_WIN32<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>debug<sp/>stuff<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(DEBUG)<sp/>&amp;&amp;<sp/>!defined(NDEBUG)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="internal_8h_1a8de3ed741dadc9c979a4ff17c0a9116e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/>define<sp/>NDEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>bit<sp/>input<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="structGetBitContext" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structGetBitContext" kindref="compound">GetBitContext</ref><sp/>{</highlight></codeline>
+<codeline lineno="59" refid="structGetBitContext_1ad3bbe8f5d0b9e28a1070396fac5725d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*<ref refid="structGetBitContext_1ad3bbe8f5d0b9e28a1070396fac5725d8" kindref="member">buffer</ref>;</highlight></codeline>
+<codeline lineno="60" refid="structGetBitContext_1a033a4d63cfa56348981356df95092af7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGetBitContext_1a033a4d63cfa56348981356df95092af7" kindref="member">index</ref>;</highlight></codeline>
+<codeline lineno="61" refid="structGetBitContext_1adacaccb7e1e29f7d0e669659f17a9bfd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structGetBitContext_1adacaccb7e1e29f7d0e669659f17a9bfd" kindref="member">size_in_bits</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}<sp/><ref refid="internal_8h_1a6e0cb01ec6fd75b13fcc6bca845ee081" kindref="member">GetBitContext</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="internal_8h_1aa3797eab0bbe953c41e8a070aa3a4dbc" kindref="member">get_bits_count</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structGetBitContext" kindref="compound">GetBitContext</ref><sp/>*s);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="internal_8h_1a7e70876676d0b52ff7cf93cadf7e24fa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VLC_TYPE<sp/>int16_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="structVLC" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structVLC" kindref="compound">VLC</ref><sp/>{</highlight></codeline>
+<codeline lineno="69" refid="structVLC_1ac36d06bc414af86fbe35c9efb6170fc5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structVLC_1ac36d06bc414af86fbe35c9efb6170fc5" kindref="member">bits</ref>;</highlight></codeline>
+<codeline lineno="70" refid="structVLC_1acaf94f3386396a95d3e7042c444a41f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="internal_8h_1a7e70876676d0b52ff7cf93cadf7e24fa" kindref="member">VLC_TYPE</ref><sp/>(*<ref refid="structVLC_1acaf94f3386396a95d3e7042c444a41f7" kindref="member">table</ref>)[2];</highlight></codeline>
+<codeline lineno="71" refid="structVLC_1a5d373c883f68f747b3245733f2884d74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structVLC_1a5d373c883f68f747b3245733f2884d74" kindref="member">table_size</ref>,<sp/><ref refid="structVLC_1aa13e8ff6ffe730398c69e9fc2d42266f" kindref="member">table_allocated</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}<sp/><ref refid="internal_8h_1a4ae0fe3cb496ae74860f9ba9d588b08d" kindref="member">VLC</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="internal_8h_1a4c9accf71fe52dba23187e83252f2459" kindref="member">get_bits</ref>(<ref refid="structGetBitContext" kindref="compound">GetBitContext</ref><sp/>*s,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="internal_8h_1a1ab74f16c44ad8762a384924368175e7" kindref="member">show_bits</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structGetBitContext" kindref="compound">GetBitContext</ref><sp/>*s,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="internal_8h_1aea74eea48a18a3731b052ac530f6afce" kindref="member">skip_bits</ref>(<ref refid="structGetBitContext" kindref="compound">GetBitContext</ref><sp/>*s,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="internal_8h_1a12c6ecf32fbbd78af680f9cf38d55ef1" kindref="member">init_get_bits</ref>(<ref refid="structGetBitContext" kindref="compound">GetBitContext</ref><sp/>*s,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*buffer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>buffer_size);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="internal_8h_1a17ce557803d3a49257e6fb289d43dfee" kindref="member">init_vlc</ref>(<ref refid="structVLC" kindref="compound">VLC</ref><sp/>*vlc,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nb_bits,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nb_codes,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*bits,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bits_wrap,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bits_size,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*codes,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>codes_wrap,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>codes_size);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="internal_8h_1af5bade5c2576e97e3ce7bdb8b4bf1572" kindref="member">free_vlc</ref>(<ref refid="structVLC" kindref="compound">VLC</ref><sp/>*vlc);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="internal_8h_1ad9d1cef202cce95b0fd843505647ae2c" kindref="member">get_vlc</ref>(<ref refid="structGetBitContext" kindref="compound">GetBitContext</ref><sp/>*s,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVLC" kindref="compound">VLC</ref><sp/>*vlc);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>INTERNAL_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h"/>
+  </compounddef>
+</doxygen>

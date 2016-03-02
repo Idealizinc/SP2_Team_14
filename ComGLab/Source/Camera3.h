@@ -1,12 +1,28 @@
+/****************************************************************************/
+/*!
+\file Camera3.h
+\author Ryan Lim Rui An, Teh Kai Hong Bryan
+\par email: 150577@.mymail.nyp.edu.sg, 150587A@mymail.nyp.edu.sg
+\brief
+Class to define camera
+*/
+/****************************************************************************/
+
 #ifndef CAMERA_3_H
 #define CAMERA_3_H
 
 #include "Camera.h"
 #include "Boundary.h"
-#include "SharedData.h"
 #include <vector>
 
 extern int S_Width, S_Height;
+
+/****************************************************************************/
+/*!
+Class Camera3:
+\brief Defines the methods for camera control
+*/
+/****************************************************************************/
 
 class Camera3 : public Camera
 {

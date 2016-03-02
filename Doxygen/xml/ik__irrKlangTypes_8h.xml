@@ -1,0 +1,346 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ik__irrKlangTypes_8h" kind="file" language="C++">
+    <compoundname>ik_irrKlangTypes.h</compoundname>
+    <includes local="no">wchar.h</includes>
+    <includedby refid="ik__IRefCounted_8h" local="yes">irrKlang-1.5.0/include/ik_IRefCounted.h</includedby>
+    <includedby refid="ik__IVirtualRefCounted_8h" local="yes">irrKlang-1.5.0/include/ik_IVirtualRefCounted.h</includedby>
+    <includedby refid="ik__vec3d_8h" local="yes">irrKlang-1.5.0/include/ik_vec3d.h</includedby>
+    <includedby refid="irrKlang_8h" local="yes">irrKlang-1.5.0/include/irrKlang.h</includedby>
+    <incdepgraph>
+      <node id="2643">
+        <label>wchar.h</label>
+      </node>
+      <node id="2642">
+        <label>irrKlang-1.5.0/include/ik_irrKlangTypes.h</label>
+        <link refid="ik_irrKlangTypes.h"/>
+        <childnode refid="2643" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2658">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h</label>
+        <link refid="CIrrKlangAudioStreamMP3_8h"/>
+        <childnode refid="2659" relation="include">
+        </childnode>
+        <childnode refid="2660" relation="include">
+        </childnode>
+      </node>
+      <node id="2646">
+        <label>irrKlang-1.5.0/include/ik_IAudioRecorder.h</label>
+        <link refid="ik__IAudioRecorder_8h"/>
+        <childnode refid="2647" relation="include">
+        </childnode>
+      </node>
+      <node id="2645">
+        <label>irrKlang-1.5.0/include/ik_IRefCounted.h</label>
+        <link refid="ik__IRefCounted_8h"/>
+        <childnode refid="2646" relation="include">
+        </childnode>
+        <childnode refid="2654" relation="include">
+        </childnode>
+        <childnode refid="2657" relation="include">
+        </childnode>
+        <childnode refid="2663" relation="include">
+        </childnode>
+        <childnode refid="2665" relation="include">
+        </childnode>
+        <childnode refid="2666" relation="include">
+        </childnode>
+        <childnode refid="2667" relation="include">
+        </childnode>
+        <childnode refid="2656" relation="include">
+        </childnode>
+        <childnode refid="2661" relation="include">
+        </childnode>
+        <childnode refid="2662" relation="include">
+        </childnode>
+        <childnode refid="2647" relation="include">
+        </childnode>
+      </node>
+      <node id="2652">
+        <label>ComGLab/Source/Particle.cpp</label>
+        <link refid="Particle_8cpp"/>
+      </node>
+      <node id="2653">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/ikpMP3.cpp</label>
+        <link refid="ikpMP3_8cpp"/>
+      </node>
+      <node id="2647">
+        <label>irrKlang-1.5.0/include/irrKlang.h</label>
+        <link refid="irrKlang_8h"/>
+        <childnode refid="2648" relation="include">
+        </childnode>
+        <childnode refid="2651" relation="include">
+        </childnode>
+        <childnode refid="2653" relation="include">
+        </childnode>
+      </node>
+      <node id="2667">
+        <label>irrKlang-1.5.0/include/ik_ISoundDeviceList.h</label>
+        <link refid="ik__ISoundDeviceList_8h"/>
+        <childnode refid="2647" relation="include">
+        </childnode>
+      </node>
+      <node id="2665">
+        <label>irrKlang-1.5.0/include/ik_IFileReader.h</label>
+        <link refid="ik__IFileReader_8h"/>
+        <childnode refid="2663" relation="include">
+        </childnode>
+        <childnode refid="2647" relation="include">
+        </childnode>
+        <childnode refid="2658" relation="include">
+        </childnode>
+      </node>
+      <node id="2659">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamLoaderMP3.cpp</label>
+        <link refid="CIrrKlangAudioStreamLoaderMP3_8cpp"/>
+      </node>
+      <node id="2661">
+        <label>irrKlang-1.5.0/include/ik_ISoundMixedOutputReceiver.h</label>
+        <link refid="ik__ISoundMixedOutputReceiver_8h"/>
+        <childnode refid="2656" relation="include">
+        </childnode>
+        <childnode refid="2647" relation="include">
+        </childnode>
+      </node>
+      <node id="2650">
+        <label>ComGLab/Source/SP2_Scene.cpp</label>
+        <link refid="SP2__Scene_8cpp"/>
+      </node>
+      <node id="2649">
+        <label>ComGLab/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="2654">
+        <label>irrKlang-1.5.0/include/ik_SAudioStreamFormat.h</label>
+        <link refid="ik__SAudioStreamFormat_8h"/>
+        <childnode refid="2655" relation="include">
+        </childnode>
+        <childnode refid="2657" relation="include">
+        </childnode>
+        <childnode refid="2661" relation="include">
+        </childnode>
+        <childnode refid="2662" relation="include">
+        </childnode>
+        <childnode refid="2647" relation="include">
+        </childnode>
+      </node>
+      <node id="2660">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.cpp</label>
+        <link refid="CIrrKlangAudioStreamMP3_8cpp"/>
+      </node>
+      <node id="2664">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamLoaderMP3.h</label>
+        <link refid="CIrrKlangAudioStreamLoaderMP3_8h"/>
+        <childnode refid="2659" relation="include">
+        </childnode>
+        <childnode refid="2653" relation="include">
+        </childnode>
+      </node>
+      <node id="2655">
+        <label>irrKlang-1.5.0/include/ik_ISoundSource.h</label>
+        <link refid="ik__ISoundSource_8h"/>
+        <childnode refid="2646" relation="include">
+        </childnode>
+        <childnode refid="2656" relation="include">
+        </childnode>
+        <childnode refid="2647" relation="include">
+        </childnode>
+      </node>
+      <node id="2648">
+        <label>ComGLab/Source/SP2_Scene.h</label>
+        <link refid="SP2__Scene_8h"/>
+        <childnode refid="2649" relation="include">
+        </childnode>
+        <childnode refid="2650" relation="include">
+        </childnode>
+      </node>
+      <node id="2644">
+        <label>irrKlang-1.5.0/include/ik_irrKlangTypes.h</label>
+        <link refid="ik_irrKlangTypes.h"/>
+        <childnode refid="2645" relation="include">
+        </childnode>
+        <childnode refid="2668" relation="include">
+        </childnode>
+        <childnode refid="2671" relation="include">
+        </childnode>
+        <childnode refid="2647" relation="include">
+        </childnode>
+      </node>
+      <node id="2670">
+        <label>irrKlang-1.5.0/include/ik_ISoundEffectControl.h</label>
+        <link refid="ik__ISoundEffectControl_8h"/>
+        <childnode refid="2669" relation="include">
+        </childnode>
+        <childnode refid="2647" relation="include">
+        </childnode>
+      </node>
+      <node id="2668">
+        <label>irrKlang-1.5.0/include/ik_IVirtualRefCounted.h</label>
+        <link refid="ik__IVirtualRefCounted_8h"/>
+        <childnode refid="2655" relation="include">
+        </childnode>
+        <childnode refid="2669" relation="include">
+        </childnode>
+        <childnode refid="2670" relation="include">
+        </childnode>
+        <childnode refid="2647" relation="include">
+        </childnode>
+      </node>
+      <node id="2669">
+        <label>irrKlang-1.5.0/include/ik_ISound.h</label>
+        <link refid="ik__ISound_8h"/>
+        <childnode refid="2656" relation="include">
+        </childnode>
+        <childnode refid="2647" relation="include">
+        </childnode>
+      </node>
+      <node id="2671">
+        <label>irrKlang-1.5.0/include/ik_vec3d.h</label>
+        <link refid="ik__vec3d_8h"/>
+        <childnode refid="2655" relation="include">
+        </childnode>
+        <childnode refid="2670" relation="include">
+        </childnode>
+        <childnode refid="2669" relation="include">
+        </childnode>
+        <childnode refid="2656" relation="include">
+        </childnode>
+        <childnode refid="2647" relation="include">
+        </childnode>
+      </node>
+      <node id="2651">
+        <label>ComGLab/Source/Particle.h</label>
+        <link refid="Particle_8h"/>
+        <childnode refid="2649" relation="include">
+        </childnode>
+        <childnode refid="2652" relation="include">
+        </childnode>
+      </node>
+      <node id="2656">
+        <label>irrKlang-1.5.0/include/ik_ISoundEngine.h</label>
+        <link refid="ik__ISoundEngine_8h"/>
+        <childnode refid="2647" relation="include">
+        </childnode>
+      </node>
+      <node id="2662">
+        <label>irrKlang-1.5.0/include/ik_ISoundStopEventReceiver.h</label>
+        <link refid="ik__ISoundStopEventReceiver_8h"/>
+        <childnode refid="2647" relation="include">
+        </childnode>
+      </node>
+      <node id="2657">
+        <label>irrKlang-1.5.0/include/ik_IAudioStream.h</label>
+        <link refid="ik__IAudioStream_8h"/>
+        <childnode refid="2647" relation="include">
+        </childnode>
+        <childnode refid="2658" relation="include">
+        </childnode>
+      </node>
+      <node id="2663">
+        <label>irrKlang-1.5.0/include/ik_IAudioStreamLoader.h</label>
+        <link refid="ik__IAudioStreamLoader_8h"/>
+        <childnode refid="2647" relation="include">
+        </childnode>
+        <childnode refid="2664" relation="include">
+        </childnode>
+      </node>
+      <node id="2666">
+        <label>irrKlang-1.5.0/include/ik_IFileFactory.h</label>
+        <link refid="ik__IFileFactory_8h"/>
+        <childnode refid="2656" relation="include">
+        </childnode>
+        <childnode refid="2647" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceirrklang">irrklang</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2002-2014<sp/>Nikolaus<sp/>Gebhardt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>&quot;irrKlang&quot;<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>For<sp/>conditions<sp/>of<sp/>distribution<sp/>and<sp/>use,<sp/>see<sp/>copyright<sp/>notice<sp/>in<sp/>irrKlang.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__IRRKLANG_TYPES_H_INCLUDED__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__IRRKLANG_TYPES_H_INCLUDED__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceirrklang" kindref="compound">irrklang</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"></codeline>
+<codeline lineno="14" refid="namespaceirrklang_1af1928ef855711d24f793f841013f000e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="namespaceirrklang_1af1928ef855711d24f793f841013f000e" kindref="member">ik_u8</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"></codeline>
+<codeline lineno="18" refid="namespaceirrklang_1a703d5c51092cc0731dd302f9c8d83613" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1a703d5c51092cc0731dd302f9c8d83613" kindref="member">ik_s8</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"></codeline>
+<codeline lineno="22" refid="namespaceirrklang_1af179ad966eb79d01f6d1cf8927087449" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="namespaceirrklang_1af179ad966eb79d01f6d1cf8927087449" kindref="member">ik_c8</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"></codeline>
+<codeline lineno="28" refid="namespaceirrklang_1a16e9eaf54fbe344a86cb9b93290d59d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="namespaceirrklang_1a16e9eaf54fbe344a86cb9b93290d59d9" kindref="member">ik_u16</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"></codeline>
+<codeline lineno="32" refid="namespaceirrklang_1ab884b7693f13e37d94fcbbff6b93adcf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="namespaceirrklang_1ab884b7693f13e37d94fcbbff6b93adcf" kindref="member">ik_s16</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"></codeline>
+<codeline lineno="38" refid="namespaceirrklang_1adf9f75b6ca98aff6843fb294125571e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceirrklang_1adf9f75b6ca98aff6843fb294125571e0" kindref="member">ik_u32</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"></codeline>
+<codeline lineno="42" refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"></codeline>
+<codeline lineno="48" refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"></codeline>
+<codeline lineno="52" refid="namespaceirrklang_1a1c98510aa3989b1780723e2fb15f7c3d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespaceirrklang_1a1c98510aa3989b1780723e2fb15f7c3d" kindref="member">ik_f64</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>some<sp/>constants</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="namespaceirrklang_1a37e23177810db5355a4fb31038e71634" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ik_f32<sp/><ref refid="namespaceirrklang_1a37e23177810db5355a4fb31038e71634" kindref="member">IK_ROUNDING_ERROR_32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0.000001f;</highlight></codeline>
+<codeline lineno="59" refid="namespaceirrklang_1a94bfcb20851dee7c360142f3db288538" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ik_f64<sp/><ref refid="namespaceirrklang_1a94bfcb20851dee7c360142f3db288538" kindref="member">IK_PI64</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3.1415926535897932384626433832795028841971693993751;</highlight></codeline>
+<codeline lineno="60" refid="namespaceirrklang_1a5e56a9f6a51767cc5a1bf32919a2b801" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ik_f32<sp/><ref refid="namespaceirrklang_1a5e56a9f6a51767cc5a1bf32919a2b801" kindref="member">IK_PI32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3.14159265359f;</highlight></codeline>
+<codeline lineno="61" refid="namespaceirrklang_1a899ce8a298f44c2a5413c6dc0e87f640" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ik_f32<sp/><ref refid="namespaceirrklang_1a899ce8a298f44c2a5413c6dc0e87f640" kindref="member">IK_RADTODEG</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>180.0f<sp/>/<sp/><ref refid="namespaceirrklang_1a5e56a9f6a51767cc5a1bf32919a2b801" kindref="member">IK_PI32</ref>;</highlight></codeline>
+<codeline lineno="62" refid="namespaceirrklang_1ad74595519e5497bb71a0e4b98312866f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ik_f32<sp/><ref refid="namespaceirrklang_1ad74595519e5497bb71a0e4b98312866f" kindref="member">IK_DEGTORAD</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>IK_PI32<sp/>/<sp/>180.0f;</highlight></codeline>
+<codeline lineno="63" refid="namespaceirrklang_1a3f83fd863cffaac9ddde5ff73e72f116" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ik_f64<sp/><ref refid="namespaceirrklang_1a3f83fd863cffaac9ddde5ff73e72f116" kindref="member">IK_RADTODEG64</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>180.0<sp/>/<sp/><ref refid="namespaceirrklang_1a94bfcb20851dee7c360142f3db288538" kindref="member">IK_PI64</ref>;</highlight></codeline>
+<codeline lineno="64" refid="namespaceirrklang_1a738ade686859c0d98ce9edbd34c4fc1b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ik_f64<sp/><ref refid="namespaceirrklang_1a738ade686859c0d98ce9edbd34c4fc1b" kindref="member">IK_DEGTORAD64</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>IK_PI64<sp/>/<sp/>180.0;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="namespaceirrklang_1a6ce1a12052cdee7b6d81a053a73a4f86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespaceirrklang_1a6ce1a12052cdee7b6d81a053a73a4f86" kindref="member">equalsfloat</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ik_f32<sp/>a,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ik_f32<sp/>b,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ik_f32<sp/>tolerance<sp/>=<sp/>IK_ROUNDING_ERROR_32)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(a<sp/>+<sp/>tolerance<sp/>&gt;<sp/>b)<sp/>&amp;&amp;<sp/>(a<sp/>-<sp/>tolerance<sp/>&lt;<sp/>b);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>irrklang<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ensure<sp/>wchar_t<sp/>type<sp/>is<sp/>existing<sp/>for<sp/>unicode<sp/>support</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wchar.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//<sp/>define<sp/>the<sp/>wchar_t<sp/>type<sp/>if<sp/>not<sp/>already<sp/>built<sp/>in.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER<sp/><sp/>//<sp/>microsoft<sp/>compiler</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifndef<sp/>_WCHAR_T_DEFINED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>wchar_t;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>_WCHAR_T_DEFINED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif<sp/>//<sp/>wchar<sp/>is<sp/>not<sp/>defined</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>microsoft<sp/>compiler</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__IRR_TYPES_H_INCLUDED__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="irrKlang-1.5.0/include/ik_irrKlangTypes.h"/>
+  </compounddef>
+</doxygen>

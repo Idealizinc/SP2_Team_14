@@ -1,0 +1,1038 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classirrklang_1_1ISoundEffectControl" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>irrklang::ISoundEffectControl</compoundname>
+    <includes refid="ik__ISoundEffectControl_8h" local="no">ik_ISoundEffectControl.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1ae171bcc96042c9961589749431dc3cb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::ISoundEffectControl::disableAllEffects</definition>
+        <argsstring>()=0</argsstring>
+        <name>disableAllEffects</name>
+        <briefdescription>
+<para>Disables all active sound effects. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1a82d0417ae9a3745ccd6c2a11d7dfd066" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISoundEffectControl::enableChorusSoundEffect</definition>
+        <argsstring>(ik_f32 fWetDryMix=50, ik_f32 fDepth=10, ik_f32 fFeedback=25, ik_f32 fFrequency=1.1, bool sinusWaveForm=true, ik_f32 fDelay=16, ik_s32 lPhase=90)=0</argsstring>
+        <name>enableChorusSoundEffect</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fWetDryMix</declname>
+          <defval>50</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fDepth</declname>
+          <defval>10</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fFeedback</declname>
+          <defval>25</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fFrequency</declname>
+          <defval>1.1</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>sinusWaveForm</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fDelay</declname>
+          <defval>16</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+          <declname>lPhase</declname>
+          <defval>90</defval>
+        </param>
+        <briefdescription>
+<para>Enables the chorus sound effect or adjusts its values. </para>        </briefdescription>
+        <detaileddescription>
+<para>Chorus is a voice-doubling effect created by echoing the original sound with a slight delay and slightly modulating the delay of the echo. If this sound effect is already enabled, calling this only modifies the parameters of the active effect. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fWetDryMix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ratio of wet (processed) signal to dry (unprocessed) signal. Minimal Value:0, Maximal Value:100.0f; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fDepth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Percentage by which the delay time is modulated by the low-frequency oscillator, in hundredths of a percentage point. Minimal Value:0, Maximal Value:100.0f; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fFeedback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Percentage of output signal to feed back into the effect&apos;s input. Minimal Value:-99, Maximal Value:99.0f; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fFrequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frequency of the LFO. Minimal Value:0, Maximal Value:10.0f; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sinusWaveForm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True for sinus wave form, false for triangle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fDelay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of milliseconds the input is delayed before it is played back. Minimal Value:0, Maximal Value:20.0f; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lPhase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Phase differential between left and right LFOs. Possible values: -180, -90, 0, 90, 180 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1a8c549f59a5d9526446e382d0fb162f2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::ISoundEffectControl::disableChorusSoundEffect</definition>
+        <argsstring>()=0</argsstring>
+        <name>disableChorusSoundEffect</name>
+        <briefdescription>
+<para>removes the sound effect from the sound </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1a36022cc414a7a36adc37f6323e9de305" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISoundEffectControl::isChorusSoundEffectEnabled</definition>
+        <argsstring>()=0</argsstring>
+        <name>isChorusSoundEffectEnabled</name>
+        <briefdescription>
+<para>returns if the sound effect is active on the sound </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="58" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1a95a88bf69d25ae53043b16a2d4c38c30" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISoundEffectControl::enableCompressorSoundEffect</definition>
+        <argsstring>(ik_f32 fGain=0, ik_f32 fAttack=10, ik_f32 fRelease=200, ik_f32 fThreshold=-20, ik_f32 fRatio=3, ik_f32 fPredelay=4)=0</argsstring>
+        <name>enableCompressorSoundEffect</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fGain</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fAttack</declname>
+          <defval>10</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fRelease</declname>
+          <defval>200</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fThreshold</declname>
+          <defval>-20</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fRatio</declname>
+          <defval>3</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fPredelay</declname>
+          <defval>4</defval>
+        </param>
+        <briefdescription>
+<para>Enables the Compressor sound effect or adjusts its values. </para>        </briefdescription>
+        <detaileddescription>
+<para>Compressor is a reduction in the fluctuation of a signal above a certain amplitude. If this sound effect is already enabled, calling this only modifies the parameters of the active effect. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fGain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output gain of signal after Compressor. Minimal Value:-60, Maximal Value:60.0f; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fAttack</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time before Compressor reaches its full value. Minimal Value:0.01, Maximal Value:500.0f; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fRelease</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Speed at which Compressor is stopped after input drops below fThreshold. Minimal Value:50, Maximal Value:3000.0f; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fThreshold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point at which Compressor begins, in decibels. Minimal Value:-60, Maximal Value:0.0f; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fRatio</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Compressor ratio. Minimal Value:1, Maximal Value:100.0f; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fPredelay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time after lThreshold is reached before attack phase is started, in milliseconds. Minimal Value:0, Maximal Value:4.0f; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1aa643e57e4c7ff3f2dcd7a5af96bcdaa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::ISoundEffectControl::disableCompressorSoundEffect</definition>
+        <argsstring>()=0</argsstring>
+        <name>disableCompressorSoundEffect</name>
+        <briefdescription>
+<para>removes the sound effect from the sound </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1a04b24a94590d619447ff25f9d7c9a7fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISoundEffectControl::isCompressorSoundEffectEnabled</definition>
+        <argsstring>()=0</argsstring>
+        <name>isCompressorSoundEffectEnabled</name>
+        <briefdescription>
+<para>returns if the sound effect is active on the sound </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="81" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1a0954c960d9cd03eceeb13c410bd5cecc" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISoundEffectControl::enableDistortionSoundEffect</definition>
+        <argsstring>(ik_f32 fGain=-18, ik_f32 fEdge=15, ik_f32 fPostEQCenterFrequency=2400, ik_f32 fPostEQBandwidth=2400, ik_f32 fPreLowpassCutoff=8000)=0</argsstring>
+        <name>enableDistortionSoundEffect</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fGain</declname>
+          <defval>-18</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fEdge</declname>
+          <defval>15</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fPostEQCenterFrequency</declname>
+          <defval>2400</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fPostEQBandwidth</declname>
+          <defval>2400</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fPreLowpassCutoff</declname>
+          <defval>8000</defval>
+        </param>
+        <briefdescription>
+<para>Enables the Distortion sound effect or adjusts its values. </para>        </briefdescription>
+        <detaileddescription>
+<para>Distortion is achieved by adding harmonics to the signal in such a way that, If this sound effect is already enabled, calling this only modifies the parameters of the active effect. as the level increases, the top of the waveform becomes squared off or clipped. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fGain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount of signal change after distortion. Minimal Value:-60, Maximal Value:0; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fEdge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Percentage of distortion intensity. Minimal Value:0, Maximal Value:100; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fPostEQCenterFrequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Center frequency of harmonic content addition. Minimal Value:100, Maximal Value:8000; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fPostEQBandwidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Width of frequency band that determines range of harmonic content addition. Minimal Value:100, Maximal Value:8000; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fPreLowpassCutoff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Filter cutoff for high-frequency harmonics attenuation. Minimal Value:100, Maximal Value:8000; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="93" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1a1f36ef034931cca1aa4b148d531f6f60" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::ISoundEffectControl::disableDistortionSoundEffect</definition>
+        <argsstring>()=0</argsstring>
+        <name>disableDistortionSoundEffect</name>
+        <briefdescription>
+<para>removes the sound effect from the sound </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="100" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1abe13dc6ff5cea4cc91539669de279cca" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISoundEffectControl::isDistortionSoundEffectEnabled</definition>
+        <argsstring>()=0</argsstring>
+        <name>isDistortionSoundEffectEnabled</name>
+        <briefdescription>
+<para>returns if the sound effect is active on the sound </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="103" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1a5f2e867d41eb16b6e5418c1c2c92e501" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISoundEffectControl::enableEchoSoundEffect</definition>
+        <argsstring>(ik_f32 fWetDryMix=50, ik_f32 fFeedback=50, ik_f32 fLeftDelay=500, ik_f32 fRightDelay=500, ik_s32 lPanDelay=0)=0</argsstring>
+        <name>enableEchoSoundEffect</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fWetDryMix</declname>
+          <defval>50</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fFeedback</declname>
+          <defval>50</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fLeftDelay</declname>
+          <defval>500</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fRightDelay</declname>
+          <defval>500</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+          <declname>lPanDelay</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Enables the Echo sound effect or adjusts its values. </para>        </briefdescription>
+        <detaileddescription>
+<para>An echo effect causes an entire sound to be repeated after a fixed delay. If this sound effect is already enabled, calling this only modifies the parameters of the active effect. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fWetDryMix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ratio of wet (processed) signal to dry (unprocessed) signal. Minimal Value:0, Maximal Value:100.0f; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fFeedback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Percentage of output fed back into input. Minimal Value:0, Maximal Value:100.0f; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fLeftDelay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Delay for left channel, in milliseconds. Minimal Value:1, Maximal Value:2000.0f; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fRightDelay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Delay for right channel, in milliseconds. Minimal Value:1, Maximal Value:2000.0f; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lPanDelay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value that specifies whether to swap left and right delays with each successive echo. Minimal Value:0, Maximal Value:1; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="114" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1a59016932b4de4144dce7a5634a95990d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::ISoundEffectControl::disableEchoSoundEffect</definition>
+        <argsstring>()=0</argsstring>
+        <name>disableEchoSoundEffect</name>
+        <briefdescription>
+<para>removes the sound effect from the sound </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="121" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1a00e1f5fac2053f892e2c69513045a4fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISoundEffectControl::isEchoSoundEffectEnabled</definition>
+        <argsstring>()=0</argsstring>
+        <name>isEchoSoundEffectEnabled</name>
+        <briefdescription>
+<para>returns if the sound effect is active on the sound </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="124" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1a680441843d106cc1c881a657a58e71b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISoundEffectControl::enableFlangerSoundEffect</definition>
+        <argsstring>(ik_f32 fWetDryMix=50, ik_f32 fDepth=100, ik_f32 fFeedback=-50, ik_f32 fFrequency=0.25f, bool triangleWaveForm=true, ik_f32 fDelay=2, ik_s32 lPhase=0)=0</argsstring>
+        <name>enableFlangerSoundEffect</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fWetDryMix</declname>
+          <defval>50</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fDepth</declname>
+          <defval>100</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fFeedback</declname>
+          <defval>-50</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fFrequency</declname>
+          <defval>0.25f</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>triangleWaveForm</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fDelay</declname>
+          <defval>2</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+          <declname>lPhase</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Enables the Flanger sound effect or adjusts its values. </para>        </briefdescription>
+        <detaileddescription>
+<para>Flange is an echo effect in which the delay between the original signal and its echo is very short and varies over time. The result is sometimes referred to as a sweeping sound. The term flange originated with the practice of grabbing the flanges of a tape reel to change the speed. If this sound effect is already enabled, calling this only modifies the parameters of the active effect. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fWetDryMix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ratio of wet (processed) signal to dry (unprocessed) signal. Minimal Value:0, Maximal Value:100.0f; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fDepth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Percentage by which the delay time is modulated by the low-frequency oscillator, in hundredths of a percentage point. Minimal Value:0, Maximal Value:100.0f; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fFeedback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Percentage of output signal to feed back into the effect&apos;s input. Minimal Value:-99, Maximal Value:99.0f; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fFrequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frequency of the LFO. Minimal Value:0, Maximal Value:10.0f; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>triangleWaveForm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True for triangle wave form, false for square. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fDelay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of milliseconds the input is delayed before it is played back. Minimal Value:0, Maximal Value:20.0f; </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lPhase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Phase differential between left and right LFOs. Possible values: -180, -90, 0, 90, 180 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="141" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1a5d7f2594017bf1eba46de9b47caca7a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::ISoundEffectControl::disableFlangerSoundEffect</definition>
+        <argsstring>()=0</argsstring>
+        <name>disableFlangerSoundEffect</name>
+        <briefdescription>
+<para>removes the sound effect from the sound </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="150" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1aaf128c7d06d83d4c531ff37099e8e231" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISoundEffectControl::isFlangerSoundEffectEnabled</definition>
+        <argsstring>()=0</argsstring>
+        <name>isFlangerSoundEffectEnabled</name>
+        <briefdescription>
+<para>returns if the sound effect is active on the sound </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="153" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1a33491b08b95c26135dddbad53c112551" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISoundEffectControl::enableGargleSoundEffect</definition>
+        <argsstring>(ik_s32 rateHz=20, bool sinusWaveForm=true)=0</argsstring>
+        <name>enableGargleSoundEffect</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+          <declname>rateHz</declname>
+          <defval>20</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>sinusWaveForm</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Enables the Gargle sound effect or adjusts its values. </para>        </briefdescription>
+        <detaileddescription>
+<para>The gargle effect modulates the amplitude of the signal. If this sound effect is already enabled, calling this only modifies the parameters of the active effect. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rateHz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rate of modulation, in Hertz. Minimal Value:1, Maximal Value:1000 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sinusWaveForm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True for sinus wave form, false for triangle. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="161" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1a98bdab3ee2208318ae9a9e26aa30a8df" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::ISoundEffectControl::disableGargleSoundEffect</definition>
+        <argsstring>()=0</argsstring>
+        <name>disableGargleSoundEffect</name>
+        <briefdescription>
+<para>removes the sound effect from the sound </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="164" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1a048d6c4540d0cfc016de12f33ab9954c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISoundEffectControl::isGargleSoundEffectEnabled</definition>
+        <argsstring>()=0</argsstring>
+        <name>isGargleSoundEffectEnabled</name>
+        <briefdescription>
+<para>returns if the sound effect is active on the sound </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="167" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1a330e139241402dae1bbb03b271b34048" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISoundEffectControl::enableI3DL2ReverbSoundEffect</definition>
+        <argsstring>(ik_s32 lRoom=-1000, ik_s32 lRoomHF=-100, ik_f32 flRoomRolloffFactor=0, ik_f32 flDecayTime=1.49f, ik_f32 flDecayHFRatio=0.83f, ik_s32 lReflections=-2602, ik_f32 flReflectionsDelay=0.007f, ik_s32 lReverb=200, ik_f32 flReverbDelay=0.011f, ik_f32 flDiffusion=100.0f, ik_f32 flDensity=100.0f, ik_f32 flHFReference=5000.0f)=0</argsstring>
+        <name>enableI3DL2ReverbSoundEffect</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+          <declname>lRoom</declname>
+          <defval>-1000</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+          <declname>lRoomHF</declname>
+          <defval>-100</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>flRoomRolloffFactor</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>flDecayTime</declname>
+          <defval>1.49f</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>flDecayHFRatio</declname>
+          <defval>0.83f</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+          <declname>lReflections</declname>
+          <defval>-2602</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>flReflectionsDelay</declname>
+          <defval>0.007f</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+          <declname>lReverb</declname>
+          <defval>200</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>flReverbDelay</declname>
+          <defval>0.011f</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>flDiffusion</declname>
+          <defval>100.0f</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>flDensity</declname>
+          <defval>100.0f</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>flHFReference</declname>
+          <defval>5000.0f</defval>
+        </param>
+        <briefdescription>
+<para>Enables the Interactive 3D Level 2 reverb sound effect or adjusts its values. </para>        </briefdescription>
+        <detaileddescription>
+<para>An implementation of the listener properties in the I3DL2 specification. Source properties are not supported. If this sound effect is already enabled, calling this only modifies the parameters of the active effect. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lRoom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attenuation of the room effect, in millibels (mB). Interval: [-10000, 0] Default: -1000 mB </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lRoomHF</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attenuation of the room high-frequency effect. Interval: [-10000, 0] default: 0 mB </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flRoomRolloffFactor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rolloff factor for the reflected signals. Interval: [0.0, 10.0] default: 0.0 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flDecayTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Decay time, in seconds. Interval: [0.1, 20.0] default: 1.49s </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flDecayHFRatio</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ratio of the decay time at high frequencies to the decay time at low frequencies. Interval: [0.1, 2.0] default: 0.83 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lReflections</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attenuation of early reflections relative to lRoom. Interval: [-10000, 1000] default: -2602 mB </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flReflectionsDelay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Delay time of the first reflection relative to the direct path in seconds. Interval: [0.0, 0.3] default: 0.007 s </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lReverb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Attenuation of late reverberation relative to lRoom, in mB. Interval: [-10000, 2000] default: 200 mB </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flReverbDelay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time limit between the early reflections and the late reverberation relative to the time of the first reflection. Interval: [0.0, 0.1] default: 0.011 s </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flDiffusion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Echo density in the late reverberation decay in percent. Interval: [0.0, 100.0] default: 100.0 % </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flDensity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Modal density in the late reverberation decay, in percent. Interval: [0.0, 100.0] default: 100.0 % </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flHFReference</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference high frequency, in hertz. Interval: [20.0, 20000.0] default: 5000.0 Hz </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="185" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1af74e0b8ec9bef236cea457d30d607f3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::ISoundEffectControl::disableI3DL2ReverbSoundEffect</definition>
+        <argsstring>()=0</argsstring>
+        <name>disableI3DL2ReverbSoundEffect</name>
+        <briefdescription>
+<para>removes the sound effect from the sound </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="199" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1a866f8851e312ac6b5f25ecf83aec0018" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISoundEffectControl::isI3DL2ReverbSoundEffectEnabled</definition>
+        <argsstring>()=0</argsstring>
+        <name>isI3DL2ReverbSoundEffectEnabled</name>
+        <briefdescription>
+<para>returns if the sound effect is active on the sound </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="202" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1a32494b1eb24d50febb687cbc9d64d834" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISoundEffectControl::enableParamEqSoundEffect</definition>
+        <argsstring>(ik_f32 fCenter=8000, ik_f32 fBandwidth=12, ik_f32 fGain=0)=0</argsstring>
+        <name>enableParamEqSoundEffect</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fCenter</declname>
+          <defval>8000</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fBandwidth</declname>
+          <defval>12</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fGain</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Enables the ParamEq sound effect or adjusts its values. </para>        </briefdescription>
+        <detaileddescription>
+<para>Parametric equalizer amplifies or attenuates signals of a given frequency. If this sound effect is already enabled, calling this only modifies the parameters of the active effect. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fCenter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Center frequency, in hertz, The default value is 8000. Minimal Value:80, Maximal Value:16000.0f </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fBandwidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bandwidth, in semitones, The default value is 12. Minimal Value:1.0f, Maximal Value:36.0f </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fGain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gain, default value is 0. Minimal Value:-15.0f, Maximal Value:15.0f </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="211" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1a943febbaec941ff8dfab3fb299633bc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::ISoundEffectControl::disableParamEqSoundEffect</definition>
+        <argsstring>()=0</argsstring>
+        <name>disableParamEqSoundEffect</name>
+        <briefdescription>
+<para>removes the sound effect from the sound </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="216" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1ac45754347d5792fe52471ee0c8f8759a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISoundEffectControl::isParamEqSoundEffectEnabled</definition>
+        <argsstring>()=0</argsstring>
+        <name>isParamEqSoundEffectEnabled</name>
+        <briefdescription>
+<para>returns if the sound effect is active on the sound </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="219" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1a8c6d89699eb98dcf297968fcc8de2a52" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISoundEffectControl::enableWavesReverbSoundEffect</definition>
+        <argsstring>(ik_f32 fInGain=0, ik_f32 fReverbMix=0, ik_f32 fReverbTime=1000, ik_f32 fHighFreqRTRatio=0.001f)=0</argsstring>
+        <name>enableWavesReverbSoundEffect</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fInGain</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fReverbMix</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fReverbTime</declname>
+          <defval>1000</defval>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>fHighFreqRTRatio</declname>
+          <defval>0.001f</defval>
+        </param>
+        <briefdescription>
+<para>Enables the Waves Reverb sound effect or adjusts its values. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fInGain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input gain of signal, in decibels (dB). Min/Max: [-96.0,0.0] Default: 0.0 dB. If this sound effect is already enabled, calling this only modifies the parameters of the active effect. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fReverbMix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reverb mix, in dB. Min/Max: [-96.0,0.0] Default: 0.0 dB </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fReverbTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reverb time, in milliseconds. Min/Max: [0.001,3000.0] Default: 1000.0 ms </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fHighFreqRTRatio</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>High-frequency reverb time ratio. Min/Max: [0.001,0.999] Default: 0.001 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if successful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="228" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1a673be7b0a8b670895ad22c3a2a9ef67f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::ISoundEffectControl::disableWavesReverbSoundEffect</definition>
+        <argsstring>()=0</argsstring>
+        <name>disableWavesReverbSoundEffect</name>
+        <briefdescription>
+<para>removes the sound effect from the sound </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="234" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundEffectControl_1af921742c6cf804a18554d812d87dc198" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::ISoundEffectControl::isWavesReverbSoundEffectEnabled</definition>
+        <argsstring>()=0</argsstring>
+        <name>isWavesReverbSoundEffectEnabled</name>
+        <briefdescription>
+<para>returns if the sound effect is active on the sound </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="237" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface to control the active sound effects (echo, reverb,...) of an <ref refid="classirrklang_1_1ISound" kindref="compound">ISound</ref> object, a playing sound. </para>    </briefdescription>
+    <detaileddescription>
+<para>Sound effects such as chorus, distorsions, echo, reverb and similar can be controlled using this. An instance of this interface can be obtained via <ref refid="classirrklang_1_1ISound_1a988bb2ccda459ad6aa3264e9a58aa99a" kindref="member">ISound::getSoundEffectControl()</ref>. The sound containing this interface has to be started via <ref refid="classirrklang_1_1ISoundEngine_1a25f612fe6479d3b22dc5bab2a2eaa927" kindref="member">ISoundEngine::play2D()</ref> or <ref refid="classirrklang_1_1ISoundEngine_1adb09ecc8f61120ce14d26545ed43d8ec" kindref="member">ISoundEngine::play3D()</ref> with the flag enableSoundEffects=true, otherwise no acccess to this interface will be available. For the DirectSound driver, these are effects available since DirectSound8. For most effects, sounds should have a sample rate of 44 khz and should be at least 150 milli seconds long for optimal quality when using the DirectSound driver. Note that the interface pointer is only valid as long as the <ref refid="classirrklang_1_1ISound" kindref="compound">ISound</ref> pointer is valid. If the <ref refid="classirrklang_1_1ISound" kindref="compound">ISound</ref> pointer gets dropped (<ref refid="classirrklang_1_1IVirtualRefCounted_1a6602c3d110f23410c5bca8a08b709aa4" kindref="member">IVirtualRefCounted::drop()</ref>), the ISoundEffects may not be used any more. </para>    </detaileddescription>
+    <location file="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" line="27" column="1" bodyfile="irrKlang-1.5.0/include/ik_ISoundEffectControl.h" bodystart="26" bodyend="238"/>
+    <listofallmembers>
+      <member refid="classirrklang_1_1ISoundEffectControl_1ae171bcc96042c9961589749431dc3cb7" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>disableAllEffects</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1a8c549f59a5d9526446e382d0fb162f2a" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>disableChorusSoundEffect</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1aa643e57e4c7ff3f2dcd7a5af96bcdaa6" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>disableCompressorSoundEffect</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1a1f36ef034931cca1aa4b148d531f6f60" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>disableDistortionSoundEffect</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1a59016932b4de4144dce7a5634a95990d" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>disableEchoSoundEffect</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1a5d7f2594017bf1eba46de9b47caca7a1" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>disableFlangerSoundEffect</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1a98bdab3ee2208318ae9a9e26aa30a8df" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>disableGargleSoundEffect</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1af74e0b8ec9bef236cea457d30d607f3b" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>disableI3DL2ReverbSoundEffect</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1a943febbaec941ff8dfab3fb299633bc6" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>disableParamEqSoundEffect</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1a673be7b0a8b670895ad22c3a2a9ef67f" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>disableWavesReverbSoundEffect</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1a82d0417ae9a3745ccd6c2a11d7dfd066" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>enableChorusSoundEffect</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1a95a88bf69d25ae53043b16a2d4c38c30" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>enableCompressorSoundEffect</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1a0954c960d9cd03eceeb13c410bd5cecc" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>enableDistortionSoundEffect</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1a5f2e867d41eb16b6e5418c1c2c92e501" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>enableEchoSoundEffect</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1a680441843d106cc1c881a657a58e71b6" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>enableFlangerSoundEffect</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1a33491b08b95c26135dddbad53c112551" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>enableGargleSoundEffect</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1a330e139241402dae1bbb03b271b34048" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>enableI3DL2ReverbSoundEffect</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1a32494b1eb24d50febb687cbc9d64d834" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>enableParamEqSoundEffect</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1a8c6d89699eb98dcf297968fcc8de2a52" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>enableWavesReverbSoundEffect</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1a36022cc414a7a36adc37f6323e9de305" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>isChorusSoundEffectEnabled</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1a04b24a94590d619447ff25f9d7c9a7fc" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>isCompressorSoundEffectEnabled</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1abe13dc6ff5cea4cc91539669de279cca" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>isDistortionSoundEffectEnabled</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1a00e1f5fac2053f892e2c69513045a4fa" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>isEchoSoundEffectEnabled</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1aaf128c7d06d83d4c531ff37099e8e231" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>isFlangerSoundEffectEnabled</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1a048d6c4540d0cfc016de12f33ab9954c" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>isGargleSoundEffectEnabled</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1a866f8851e312ac6b5f25ecf83aec0018" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>isI3DL2ReverbSoundEffectEnabled</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1ac45754347d5792fe52471ee0c8f8759a" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>isParamEqSoundEffectEnabled</name></member>
+      <member refid="classirrklang_1_1ISoundEffectControl_1af921742c6cf804a18554d812d87dc198" prot="public" virt="pure-virtual"><scope>irrklang::ISoundEffectControl</scope><name>isWavesReverbSoundEffectEnabled</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

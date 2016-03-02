@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file Utility.cpp
+\author Wen Sheng Tang
+\par email: tang_wen_sheng\@nyp.edu.sg
+\brief
+.cpp file that defines Utility
+*/
+/****************************************************************************/
 #include "Utility.h"
 
 Position operator*(const Mtx44& lhs, const Position& rhs)

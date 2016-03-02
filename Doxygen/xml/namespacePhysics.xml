@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="namespacePhysics" kind="namespace" language="C++">
+    <compoundname>Physics</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacePhysics_1a16c938c92e9a8978d224fd283c874076" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Physics::force_Grav</definition>
+        <argsstring></argsstring>
+        <name>force_Grav</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/CameraPhysics.h" line="6" column="1" bodyfile="ComGLab/Source/CameraPhysics.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacePhysics_1a6080e0da1fbbd25d47ee970da74c38b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Physics::gravitational_pulled</definition>
+        <argsstring>(T f_down, T mass, double dt, int gravity=force_Grav)</argsstring>
+        <name>gravitational_pulled</name>
+        <param>
+          <type>T</type>
+          <declname>f_down</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>mass</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>gravity</declname>
+          <defval><ref refid="namespacePhysics_1a16c938c92e9a8978d224fd283c874076" kindref="member">force_Grav</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/CameraPhysics.h" line="8" column="1" bodyfile="ComGLab/Source/CameraPhysics.h" bodystart="8" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacePhysics_1ac965dc7f0546d97f6516629efae34f39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void Physics::speed</definition>
+        <argsstring>(T &amp;speed, T force, T mass, double dt)</argsstring>
+        <name>speed</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>speed</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>force</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>mass</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/CameraPhysics.h" line="15" column="1" bodyfile="ComGLab/Source/CameraPhysics.h" bodystart="15" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacePhysics_1a7786dbf0eb40d778b6e33315d85e5631" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T Physics::getAcceleration</definition>
+        <argsstring>(T force, T mass)</argsstring>
+        <name>getAcceleration</name>
+        <param>
+          <type>T</type>
+          <declname>force</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>mass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/CameraPhysics.h" line="22" column="1" bodyfile="ComGLab/Source/CameraPhysics.h" bodystart="22" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ComGLab/Source/CameraPhysics.h" line="5" column="1"/>
+  </compounddef>
+</doxygen>

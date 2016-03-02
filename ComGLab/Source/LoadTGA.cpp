@@ -1,4 +1,12 @@
-
+/****************************************************************************/
+/*!
+\file LoadTGA.cpp
+\author Wen Sheng Tang
+\par email: tang_wen_sheng\@nyp.edu.sg
+\brief
+.cpp file that reads TGA files
+*/
+/****************************************************************************/
 #include <iostream>
 #include <fstream>
 #include <GL\glew.h>

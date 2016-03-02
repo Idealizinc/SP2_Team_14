@@ -1,0 +1,4 @@
+<map id="irrklang::CIrrKlangAudioStreamMP3::skipID3IfNecessary" name="irrklang::CIrrKlangAudioStreamMP3::skipID3IfNecessary">
+<area shape="rect" id="node2" href="$classirrklang_1_1IFileReader.html#a0ba36fc0023d3ad430bbe34770364559" title="Reads an amount of bytes from the file. " alt="" coords="264,5,401,47"/>
+<area shape="rect" id="node3" href="$classirrklang_1_1IFileReader.html#a1c98718116049833e2de77a67a07faaa" title="Changes position in file, returns true if successful. " alt="" coords="264,71,401,112"/>
+</map>

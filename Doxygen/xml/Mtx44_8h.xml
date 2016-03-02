@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="Mtx44_8h" kind="file" language="C++">
+    <compoundname>Mtx44.h</compoundname>
+    <includes refid="MyMath_8h" local="yes">MyMath.h</includes>
+    <includes refid="Vector3_8h" local="yes">Vector3.h</includes>
+    <includedby refid="Camera_8cpp" local="yes">ComGLab/Source/Camera.cpp</includedby>
+    <includedby refid="Camera2_8cpp" local="yes">ComGLab/Source/Camera2.cpp</includedby>
+    <includedby refid="Camera3_8cpp" local="yes">ComGLab/Source/Camera3.cpp</includedby>
+    <includedby refid="Particle_8cpp" local="yes">ComGLab/Source/Particle.cpp</includedby>
+    <includedby refid="Utility_8h" local="yes">ComGLab/Source/Utility.h</includedby>
+    <includedby refid="SP2__Scene_8cpp" local="yes">ComGLab/Source/SP2_Scene.cpp</includedby>
+    <includedby refid="MatrixStack_8h" local="yes">Common/Source/MatrixStack.h</includedby>
+    <includedby refid="Mtx44_8cpp" local="yes">Common/Source/Mtx44.cpp</includedby>
+    <incdepgraph>
+      <node id="2375">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="2376" relation="include">
+        </childnode>
+        <childnode refid="2377" relation="include">
+        </childnode>
+        <childnode refid="2378" relation="include">
+        </childnode>
+        <childnode refid="2379" relation="include">
+        </childnode>
+      </node>
+      <node id="2374">
+        <label>Common/Source/Mtx44.h</label>
+        <link refid="Mtx44.h"/>
+        <childnode refid="2375" relation="include">
+        </childnode>
+        <childnode refid="2380" relation="include">
+        </childnode>
+      </node>
+      <node id="2380">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="2375" relation="include">
+        </childnode>
+        <childnode refid="2381" relation="include">
+        </childnode>
+      </node>
+      <node id="2376">
+        <label>cmath</label>
+      </node>
+      <node id="2377">
+        <label>exception</label>
+      </node>
+      <node id="2378">
+        <label>ctime</label>
+      </node>
+      <node id="2379">
+        <label>cstdlib</label>
+      </node>
+      <node id="2381">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2382">
+        <label>Common/Source/Mtx44.h</label>
+        <link refid="Mtx44.h"/>
+        <childnode refid="2383" relation="include">
+        </childnode>
+        <childnode refid="2384" relation="include">
+        </childnode>
+        <childnode refid="2385" relation="include">
+        </childnode>
+        <childnode refid="2386" relation="include">
+        </childnode>
+        <childnode refid="2387" relation="include">
+        </childnode>
+        <childnode refid="2388" relation="include">
+        </childnode>
+        <childnode refid="2390" relation="include">
+        </childnode>
+        <childnode refid="2395" relation="include">
+        </childnode>
+      </node>
+      <node id="2386">
+        <label>ComGLab/Source/Particle.cpp</label>
+        <link refid="Particle_8cpp"/>
+      </node>
+      <node id="2394">
+        <label>Common/Source/MatrixStack.cpp</label>
+        <link refid="MatrixStack_8cpp"/>
+      </node>
+      <node id="2395">
+        <label>Common/Source/Mtx44.cpp</label>
+        <link refid="Mtx44_8cpp"/>
+      </node>
+      <node id="2388">
+        <label>ComGLab/Source/SP2_Scene.cpp</label>
+        <link refid="SP2__Scene_8cpp"/>
+      </node>
+      <node id="2389">
+        <label>ComGLab/Source/Utility.cpp</label>
+        <link refid="Utility_8cpp"/>
+      </node>
+      <node id="2392">
+        <label>ComGLab/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="2387">
+        <label>ComGLab/Source/Utility.h</label>
+        <link refid="Utility_8h"/>
+        <childnode refid="2386" relation="include">
+        </childnode>
+        <childnode refid="2388" relation="include">
+        </childnode>
+        <childnode refid="2389" relation="include">
+        </childnode>
+      </node>
+      <node id="2391">
+        <label>ComGLab/Source/SP2_Scene.h</label>
+        <link refid="SP2__Scene_8h"/>
+        <childnode refid="2392" relation="include">
+        </childnode>
+        <childnode refid="2388" relation="include">
+        </childnode>
+      </node>
+      <node id="2384">
+        <label>ComGLab/Source/Camera2.cpp</label>
+        <link refid="Camera2_8cpp"/>
+      </node>
+      <node id="2385">
+        <label>ComGLab/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="2390">
+        <label>Common/Source/MatrixStack.h</label>
+        <link refid="MatrixStack_8h"/>
+        <childnode refid="2391" relation="include">
+        </childnode>
+        <childnode refid="2393" relation="include">
+        </childnode>
+        <childnode refid="2394" relation="include">
+        </childnode>
+      </node>
+      <node id="2393">
+        <label>ComGLab/Source/Particle.h</label>
+        <link refid="Particle_8h"/>
+        <childnode refid="2392" relation="include">
+        </childnode>
+        <childnode refid="2386" relation="include">
+        </childnode>
+      </node>
+      <node id="2383">
+        <label>ComGLab/Source/Camera.cpp</label>
+        <link refid="Camera_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classMtx44" prot="public">Mtx44</innerclass>
+    <briefdescription>
+<para>Matrix 4 by 4 use for affine transformation. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Wen Sheng Tang </para></simplesect>
+<simplesect kind="par"><title>email: tang_wen_sheng@nyp.edu.sg</title><para></para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MTX_44_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MTX_44_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MyMath_8h" kindref="compound">MyMath.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Vector3_8h" kindref="compound">Vector3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(<sp/>disable:<sp/>4290<sp/>)<sp/>//for<sp/>throw(DivideByZero)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classMtx44" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classMtx44" kindref="compound">Mtx44</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMtx44_1a1b985913080679da29ff94217935b3c7" kindref="member">Mtx44</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a00<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a10<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a20<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a30<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a01<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a11<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a21<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a31<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a02<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a12<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a22<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a32<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a03<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a13<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a23<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>a33<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMtx44_1a1b985913080679da29ff94217935b3c7" kindref="member">Mtx44</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>m[16]);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMtx44_1a1b985913080679da29ff94217935b3c7" kindref="member">Mtx44</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classMtx44" kindref="compound">Mtx44</ref><sp/>&amp;rhs);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMtx44_1a3ac8a0afd66412e15e4246474b893da2" kindref="member">SetToIdentity</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMtx44_1a6c95e149e42cba381918782a93f8a68b" kindref="member">Transpose</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMtx44_1a3aea63c08759ac98b8a4f23fdc0d6a28" kindref="member">SetToZero</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMtx44" kindref="compound">Mtx44</ref><sp/><ref refid="classMtx44_1aebb16a0329c5237e314af0d75d8081fd" kindref="member">GetTranspose</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMtx44" kindref="compound">Mtx44</ref><sp/><ref refid="classMtx44_1aac1ba21ddfc5f3c24baa4f58d9c5c256" kindref="member">GetInverse</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal">(<sp/><ref refid="classDivideByZero" kindref="compound">DivideByZero</ref><sp/>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMtx44" kindref="compound">Mtx44</ref><sp/><ref refid="classMtx44_1a135dfd76460c4ad2678258807dd0c078" kindref="member">operator*</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classMtx44" kindref="compound">Mtx44</ref>&amp;<sp/>rhs)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMtx44" kindref="compound">Mtx44</ref><sp/><ref refid="classMtx44_1abcdecb3276c18f29847eb8864b809fa5" kindref="member">operator+</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classMtx44" kindref="compound">Mtx44</ref>&amp;<sp/>rhs)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMtx44" kindref="compound">Mtx44</ref>&amp;<sp/><ref refid="classMtx44_1aca2d9f316d39c9baa4e439219c1a6447" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classMtx44" kindref="compound">Mtx44</ref>&amp;<sp/>rhs);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMtx44" kindref="compound">Mtx44</ref><sp/><ref refid="classMtx44_1a135dfd76460c4ad2678258807dd0c078" kindref="member">operator*</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scalar)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structVector3" kindref="compound">Vector3</ref><sp/><ref refid="classMtx44_1a135dfd76460c4ad2678258807dd0c078" kindref="member">operator*</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVector3" kindref="compound">Vector3</ref>&amp;<sp/>rhs)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMtx44_1ac0587ffb5ff9fd58ad5768d28fc06574" kindref="member">SetToRotation</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>degrees,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>axisX,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>axisY,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>axisZ)<sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal">(<sp/><ref refid="classDivideByZero" kindref="compound">DivideByZero</ref><sp/>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMtx44_1a04c49a922f8e8ffcb57a90c6ce955600" kindref="member">SetToScale</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sx,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sy,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sz);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMtx44_1a0cc88cc5c648da14effba480c4d2ac70" kindref="member">SetToTranslation</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>tx,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ty,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>tz);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMtx44_1a465dcf811eb34049aab4266795d7bd62" kindref="member">SetToFrustum</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>left,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>right,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>bottom,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>top,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>near,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>far);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMtx44_1a7c3d2d30d9ed5bfca2ba97d0e570930f" kindref="member">SetToLookAt</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>eyeX,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>eyeY,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>eyeZ,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>centerX,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>centerY,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>centerZ,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>upX,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>upY,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>upZ);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMtx44_1ac6e6521111d78ff36d539bf111a902c6" kindref="member">SetToPerspective</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fovy,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>aspect,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zNear,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>zFar);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMtx44_1a0a4c7818be7c1aeb0601ad069c1a591d" kindref="member">SetToOrtho</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>left,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>right,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>bottom,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>top,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>nearVal,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>farVal);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" kindref="member">a</ref>[16];</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//MTX_44_H</highlight></codeline>
+    </programlisting>
+    <location file="Common/Source/Mtx44.h"/>
+  </compounddef>
+</doxygen>

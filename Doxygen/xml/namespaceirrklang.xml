@@ -1,0 +1,868 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="namespaceirrklang" kind="namespace" language="C++">
+    <compoundname>irrklang</compoundname>
+    <innerclass refid="classirrklang_1_1CIrrKlangAudioStreamLoaderMP3" prot="public">irrklang::CIrrKlangAudioStreamLoaderMP3</innerclass>
+    <innerclass refid="classirrklang_1_1CIrrKlangAudioStreamMP3" prot="public">irrklang::CIrrKlangAudioStreamMP3</innerclass>
+    <innerclass refid="classirrklang_1_1IAudioRecorder" prot="public">irrklang::IAudioRecorder</innerclass>
+    <innerclass refid="classirrklang_1_1IAudioStream" prot="public">irrklang::IAudioStream</innerclass>
+    <innerclass refid="classirrklang_1_1IAudioStreamLoader" prot="public">irrklang::IAudioStreamLoader</innerclass>
+    <innerclass refid="classirrklang_1_1ICapturedAudioDataReceiver" prot="public">irrklang::ICapturedAudioDataReceiver</innerclass>
+    <innerclass refid="classirrklang_1_1IFileFactory" prot="public">irrklang::IFileFactory</innerclass>
+    <innerclass refid="classirrklang_1_1IFileReader" prot="public">irrklang::IFileReader</innerclass>
+    <innerclass refid="classirrklang_1_1IRefCounted" prot="public">irrklang::IRefCounted</innerclass>
+    <innerclass refid="classirrklang_1_1ISound" prot="public">irrklang::ISound</innerclass>
+    <innerclass refid="classirrklang_1_1ISoundDeviceList" prot="public">irrklang::ISoundDeviceList</innerclass>
+    <innerclass refid="classirrklang_1_1ISoundEffectControl" prot="public">irrklang::ISoundEffectControl</innerclass>
+    <innerclass refid="classirrklang_1_1ISoundEngine" prot="public">irrklang::ISoundEngine</innerclass>
+    <innerclass refid="classirrklang_1_1ISoundMixedOutputReceiver" prot="public">irrklang::ISoundMixedOutputReceiver</innerclass>
+    <innerclass refid="classirrklang_1_1ISoundSource" prot="public">irrklang::ISoundSource</innerclass>
+    <innerclass refid="classirrklang_1_1ISoundStopEventReceiver" prot="public">irrklang::ISoundStopEventReceiver</innerclass>
+    <innerclass refid="classirrklang_1_1IVirtualRefCounted" prot="public">irrklang::IVirtualRefCounted</innerclass>
+    <innerclass refid="structirrklang_1_1SAudioStreamFormat" prot="public">irrklang::SAudioStreamFormat</innerclass>
+    <innerclass refid="structirrklang_1_1SInternalAudioInterface" prot="public">irrklang::SInternalAudioInterface</innerclass>
+    <innerclass refid="classirrklang_1_1vec3d" prot="public">irrklang::vec3d</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespaceirrklang_1ac9155ff55b347df6e905462100762d7f" prot="public" static="no">
+        <name>E_SOUND_ENGINE_OPTIONS</name>
+        <enumvalue id="namespaceirrklang_1ac9155ff55b347df6e905462100762d7fa83d61c032b77336f4a4a2b506e1c9e24" prot="public">
+          <name>ESEO_MULTI_THREADED</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+<para>If specified (default), it will make irrKlang run in a separate thread. </para>          </briefdescription>
+          <detaileddescription>
+<para>Using this flag, irrKlang will update all streams, sounds, 3d positions and whatever automaticly. You also don&apos;t need to call <ref refid="classirrklang_1_1ISoundEngine_1a7b4f4913148d42ffe80b69979ad25906" kindref="member">ISoundEngine::update()</ref> if irrKlang is running multithreaded. However, if you want to run irrKlang in the same thread as your application (for easier debugging for example), don&apos;t set this. But you need to call <ref refid="classirrklang_1_1ISoundEngine_1a7b4f4913148d42ffe80b69979ad25906" kindref="member">ISoundEngine::update()</ref> as often as you can (at least about 2-3 times per second) to make irrKlang update everything correctly then. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1ac9155ff55b347df6e905462100762d7faf7a3169d7e1fa394035639eaf1bd5b1e" prot="public">
+          <name>ESEO_MUTE_IF_NOT_FOCUSED</name>
+          <initializer>= 0x02</initializer>
+          <briefdescription>
+<para>If the window of the application doesn&apos;t have the focus, irrKlang will be silent if this has been set. </para>          </briefdescription>
+          <detaileddescription>
+<para>This will only work when irrKlang is using the DirectSound output driver. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1ac9155ff55b347df6e905462100762d7fafda608a17564b562a9a43b7934a387e8" prot="public">
+          <name>ESEO_LOAD_PLUGINS</name>
+          <initializer>= 0x04</initializer>
+          <briefdescription>
+<para>Automaticly loads external plugins when starting up. </para>          </briefdescription>
+          <detaileddescription>
+<para>Plugins usually are .dll, .so or .dylib files named for example ikpMP3.dll (= short for irrKlangPluginMP3) which are executed after the startup of the sound engine and modify it for example to make it possible to play back mp3 files. Plugins are being loaded from the current working directory as well as from the position where the .exe using the irrKlang library resides. It is also possible to load the plugins after the engine has started up using <ref refid="classirrklang_1_1ISoundEngine_1abcb159bed86265a22fe3435ce2541ea6" kindref="member">ISoundEngine::loadPlugins()</ref>. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1ac9155ff55b347df6e905462100762d7fa76f687a07c0fe42e0af47098a6c58286" prot="public">
+          <name>ESEO_USE_3D_BUFFERS</name>
+          <initializer>= 0x08</initializer>
+          <briefdescription>
+<para>Uses 3D sound buffers instead of emulating them when playing 3d sounds (default). </para>          </briefdescription>
+          <detaileddescription>
+<para>If this flag is not specified, all buffers will by created in 2D only and 3D positioning will be emulated in software, making the engine run faster if hardware 3d audio is slow on the system. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1ac9155ff55b347df6e905462100762d7faa5b12b3061e7ba5898e9a502de47bb8e" prot="public">
+          <name>ESEO_PRINT_DEBUG_INFO_TO_DEBUGGER</name>
+          <initializer>= 0x10</initializer>
+          <briefdescription>
+<para>Prints debug messages to the debugger window. </para>          </briefdescription>
+          <detaileddescription>
+<para>irrKlang will print debug info and status messages to any windows debugger supporting OutputDebugString() (like VisualStudio). This is useful if your application does not capture any console output (see ESEO_PRINT_DEBUG_INFO_TO_STDOUT). </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1ac9155ff55b347df6e905462100762d7fa6a103ac05a294aea210fd0bb14dd8241" prot="public">
+          <name>ESEO_PRINT_DEBUG_INFO_TO_STDOUT</name>
+          <initializer>= 0x20</initializer>
+          <briefdescription>
+<para>Prints debug messages to stdout (the ConsoleWindow). </para>          </briefdescription>
+          <detaileddescription>
+<para>irrKlang will print debug info and status messages stdout, the console window in Windows. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1ac9155ff55b347df6e905462100762d7fa4600bc37a0bf0b999562d59bec094c05" prot="public">
+          <name>ESEO_LINEAR_ROLLOFF</name>
+          <initializer>= 0x40</initializer>
+          <briefdescription>
+<para>Uses linear rolloff for 3D sound. </para>          </briefdescription>
+          <detaileddescription>
+<para>If specified, instead of the default logarithmic one, irrKlang will use a linear rolloff model which influences the attenuation of the sounds over distance. The volume is interpolated linearly between the MinDistance and MaxDistance, making it possible to adjust sounds more easily although this is not physically correct. Note that this option may not work when used together with the ESEO_USE_3D_BUFFERS option when using Direct3D for example, irrKlang will then turn off ESEO_USE_3D_BUFFERS automaticly to be able to use this option and write out a warning. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1ac9155ff55b347df6e905462100762d7facca58ad3ee7e3c2e874bc4015f36f2a9" prot="public">
+          <name>ESEO_DEFAULT_OPTIONS</name>
+          <initializer>= ESEO_MULTI_THREADED | ESEO_LOAD_PLUGINS | ESEO_USE_3D_BUFFERS | ESEO_PRINT_DEBUG_INFO_TO_DEBUGGER | ESEO_PRINT_DEBUG_INFO_TO_STDOUT</initializer>
+          <briefdescription>
+<para>Default parameters when starting up the engine. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1ac9155ff55b347df6e905462100762d7fada32d5c6ec9eb5cfa818184faf87eb6a" prot="public">
+          <name>ESEO_FORCE_32_BIT</name>
+          <initializer>= 0x7fffffff</initializer>
+          <briefdescription>
+<para>Never used, it only forces the compiler to compile these enumeration values to 32 bit. </para>          </briefdescription>
+          <detaileddescription>
+<para>Don&apos;t use this. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>An enumeration for all options for starting up the sound engine. </para>        </briefdescription>
+        <detaileddescription>
+<para>When using createIrrKlangDevice, use a combination of this these as &apos;options&apos; parameter to start up the engine. By default, irrKlang uses ESEO_DEFAULT_OPTIONS, which is set to the combination ESEO_MULTI_THREADED | ESEO_LOAD_PLUGINS | ESEO_USE_3D_BUFFERS | ESEO_PRINT_DEBUG_INFO_TO_DEBUGGER | ESEO_PRINT_DEBUG_INFO_TO_STDOUT. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ESoundEngineOptions.h" line="16" column="1" bodyfile="irrKlang-1.5.0/include/ik_ESoundEngineOptions.h" bodystart="15" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afe" prot="public" static="no">
+        <name>E_SOUND_OUTPUT_DRIVER</name>
+        <enumvalue id="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea8cc9863f3b410698313b8637721e51ec" prot="public">
+          <name>ESOD_AUTO_DETECT</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Autodetects the best sound driver for the system. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea6fcd5ec6152066313ef04d97ea5582ee" prot="public">
+          <name>ESOD_DIRECT_SOUND_8</name>
+          <briefdescription>
+<para>DirectSound8 sound output driver, windows only. </para>          </briefdescription>
+          <detaileddescription>
+<para>In contrast to ESOD_DIRECT_SOUND, this supports sophisticated sound effects but may not be available on old windows versions. It behaves very similar to ESOD_DIRECT_SOUND but also supports DX8 sound effects. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea41cdbf2b330293f9c8be2c5a53197258" prot="public">
+          <name>ESOD_DIRECT_SOUND</name>
+          <briefdescription>
+<para>DirectSound sound output driver, windows only. </para>          </briefdescription>
+          <detaileddescription>
+<para>This uses DirectSound 3 or above, if available. If DX8 sound effects are needed, use ESOD_DIRECT_SOUND_8 instead. The ESOD_DIRECT_SOUND driver may be available on more and older windows versions than ESOD_DIRECT_SOUND_8. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea618f53c155e92cca2b3b69865b48335a" prot="public">
+          <name>ESOD_WIN_MM</name>
+          <briefdescription>
+<para>WinMM sound output driver, windows only. </para>          </briefdescription>
+          <detaileddescription>
+<para>Supports the <ref refid="classirrklang_1_1ISoundMixedOutputReceiver" kindref="compound">ISoundMixedOutputReceiver</ref> interface using setMixedDataOutputReceiver. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea776337cd0b6eeb6cbf171889ca4100c1" prot="public">
+          <name>ESOD_ALSA</name>
+          <briefdescription>
+<para>ALSA sound output driver, linux only. </para>          </briefdescription>
+          <detaileddescription>
+<para>When using ESOD_ALSA in <ref refid="namespaceirrklang_1ad9829f898bc0665fdd2554a6f5c7ca1c" kindref="member">createIrrKlangDevice()</ref>, it is possible to set the third parameter, &apos;deviceID&apos; to the name of specific ALSA pcm device, to the irrKlang force to use this one. Set it to &apos;default&apos;, or &apos;plug:hw&apos; or whatever you need it to be. Supports the <ref refid="classirrklang_1_1ISoundMixedOutputReceiver" kindref="compound">ISoundMixedOutputReceiver</ref> interface using setMixedDataOutputReceiver. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea0b3dfa7418df1cf47c77ad2370533332" prot="public">
+          <name>ESOD_CORE_AUDIO</name>
+          <briefdescription>
+<para>Core Audio sound output driver, mac os only. </para>          </briefdescription>
+          <detaileddescription>
+<para>Supports the <ref refid="classirrklang_1_1ISoundMixedOutputReceiver" kindref="compound">ISoundMixedOutputReceiver</ref> interface using setMixedDataOutputReceiver. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea942ffa317debc447cae5bfab10b67c9c" prot="public">
+          <name>ESOD_NULL</name>
+          <briefdescription>
+<para>Null driver, creating no sound output. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afeaf4138be4b36d3e0c5a7a09bc1422c9bf" prot="public">
+          <name>ESOD_COUNT</name>
+          <briefdescription>
+<para>Amount of built-in sound output drivers. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea6dc399ba0785f1435c2e2c9cd5478c3f" prot="public">
+          <name>ESOD_FORCE_32_BIT</name>
+          <initializer>= 0x7fffffff</initializer>
+          <briefdescription>
+<para>This enumeration literal is never used, it only forces the compiler to compile these enumeration values to 32 bit. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>An enumeration for all types of supported sound drivers. </para>        </briefdescription>
+        <detaileddescription>
+<para>Values of this enumeration can be used as parameter when calling <ref refid="namespaceirrklang_1ad9829f898bc0665fdd2554a6f5c7ca1c" kindref="member">createIrrKlangDevice()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ESoundOutputDrivers.h" line="13" column="1" bodyfile="irrKlang-1.5.0/include/ik_ESoundOutputDrivers.h" bodystart="12" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceirrklang_1a6eab873ba387c6a4e05839e6a434d06e" prot="public" static="no">
+        <name>E_STREAM_MODE</name>
+        <enumvalue id="namespaceirrklang_1a6eab873ba387c6a4e05839e6a434d06ea9ccdf79afdb2961edf97edf4575d1717" prot="public">
+          <name>ESM_AUTO_DETECT</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Autodetects the best stream mode for a specified audio data. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1a6eab873ba387c6a4e05839e6a434d06ea2d72368b13fbbb1ce9708d829198a24b" prot="public">
+          <name>ESM_STREAMING</name>
+          <briefdescription>
+<para>Streams the audio data when needed. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1a6eab873ba387c6a4e05839e6a434d06ea415ca3d09a13b086c078de0096430a07" prot="public">
+          <name>ESM_NO_STREAMING</name>
+          <briefdescription>
+<para>Loads the whole audio data into the memory. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1a6eab873ba387c6a4e05839e6a434d06eabbfef2fbcff24a58a55051d9a7ff7b19" prot="public">
+          <name>ESM_FORCE_32_BIT</name>
+          <initializer>= 0x7fffffff</initializer>
+          <briefdescription>
+<para>This enumeration literal is never used, it only forces the compiler to compile these enumeration values to 32 bit. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>An enumeration for all types of supported stream modes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_EStreamModes.h" line="12" column="1" bodyfile="irrKlang-1.5.0/include/ik_EStreamModes.h" bodystart="11" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceirrklang_1a17ebb006afe78ab6502a1e3d18083522" prot="public" static="no">
+        <name>E_STOP_EVENT_CAUSE</name>
+        <enumvalue id="namespaceirrklang_1a17ebb006afe78ab6502a1e3d18083522ac77937ae9e225a3a42775bc086e93158" prot="public">
+          <name>ESEC_SOUND_FINISHED_PLAYING</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>The sound stop event was fired because the sound finished playing. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1a17ebb006afe78ab6502a1e3d18083522a5d688aec69b83583382e370a332cdb45" prot="public">
+          <name>ESEC_SOUND_STOPPED_BY_USER</name>
+          <briefdescription>
+<para>The sound stop event was fired because the sound was stopped by the user, calling <ref refid="classirrklang_1_1ISound_1a108485fe64658441cecd70917782961f" kindref="member">ISound::stop()</ref>. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1a17ebb006afe78ab6502a1e3d18083522a1d582aee4156ea2b5952a314f03a78ca" prot="public">
+          <name>ESEC_SOUND_STOPPED_BY_SOURCE_REMOVAL</name>
+          <briefdescription>
+<para>The sound stop event was fired because the source of the sound was removed, for example because irrKlang was shut down or the user called <ref refid="classirrklang_1_1ISoundEngine_1a82e712f7816f933145690983dbd8be9e" kindref="member">ISoundEngine::removeSoundSource()</ref>. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1a17ebb006afe78ab6502a1e3d18083522a3ebc8c5fc80207284388d61d2644bd31" prot="public">
+          <name>ESEC_FORCE_32_BIT</name>
+          <initializer>= 0x7fffffff</initializer>
+          <briefdescription>
+<para>This enumeration literal is never used, it only forces the compiler to compile these enumeration values to 32 bit. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>An enumeration listing all reasons for a fired sound stop event. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundStopEventReceiver.h" line="18" column="1" bodyfile="irrKlang-1.5.0/include/ik_ISoundStopEventReceiver.h" bodystart="17" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespaceirrklang_1a2b85d1e9288cb552fceef8e8a726a80e" prot="public" static="no">
+        <name>ESampleFormat</name>
+        <enumvalue id="namespaceirrklang_1a2b85d1e9288cb552fceef8e8a726a80ea0de880c8a4d615e152bde20ec8444c44" prot="public">
+          <name>ESF_U8</name>
+          <briefdescription>
+<para>one unsigned byte (0;255) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceirrklang_1a2b85d1e9288cb552fceef8e8a726a80eaa3dc63221ae7c396d6b32431da872104" prot="public">
+          <name>ESF_S16</name>
+          <briefdescription>
+<para>16 bit, signed (-32k;32k) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>audio sample data format enumeration for supported formats </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_SAudioStreamFormat.h" line="16" column="1" bodyfile="irrKlang-1.5.0/include/ik_SAudioStreamFormat.h" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceirrklang_1af1928ef855711d24f793f841013f000e" prot="public" static="no">
+        <type>unsigned char</type>
+        <definition>typedef unsigned char irrklang::ik_u8</definition>
+        <argsstring></argsstring>
+        <name>ik_u8</name>
+        <briefdescription>
+<para>8 bit unsigned variable. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a typedef for unsigned char, it ensures portability of the engine. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_irrKlangTypes.h" line="14" column="1" bodyfile="irrKlang-1.5.0/include/ik_irrKlangTypes.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceirrklang_1a703d5c51092cc0731dd302f9c8d83613" prot="public" static="no">
+        <type>signed char</type>
+        <definition>typedef signed char irrklang::ik_s8</definition>
+        <argsstring></argsstring>
+        <name>ik_s8</name>
+        <briefdescription>
+<para>8 bit signed variable. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a typedef for signed char, it ensures portability of the engine. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_irrKlangTypes.h" line="18" column="1" bodyfile="irrKlang-1.5.0/include/ik_irrKlangTypes.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceirrklang_1af179ad966eb79d01f6d1cf8927087449" prot="public" static="no">
+        <type>char</type>
+        <definition>typedef char irrklang::ik_c8</definition>
+        <argsstring></argsstring>
+        <name>ik_c8</name>
+        <briefdescription>
+<para>8 bit character variable. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a typedef for char, it ensures portability of the engine. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_irrKlangTypes.h" line="22" column="1" bodyfile="irrKlang-1.5.0/include/ik_irrKlangTypes.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceirrklang_1a16e9eaf54fbe344a86cb9b93290d59d9" prot="public" static="no">
+        <type>unsigned short</type>
+        <definition>typedef unsigned short irrklang::ik_u16</definition>
+        <argsstring></argsstring>
+        <name>ik_u16</name>
+        <briefdescription>
+<para>16 bit unsigned variable. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a typedef for unsigned short, it ensures portability of the engine. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_irrKlangTypes.h" line="28" column="1" bodyfile="irrKlang-1.5.0/include/ik_irrKlangTypes.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceirrklang_1ab884b7693f13e37d94fcbbff6b93adcf" prot="public" static="no">
+        <type>signed short</type>
+        <definition>typedef signed short irrklang::ik_s16</definition>
+        <argsstring></argsstring>
+        <name>ik_s16</name>
+        <briefdescription>
+<para>16 bit signed variable. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a typedef for signed short, it ensures portability of the engine. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_irrKlangTypes.h" line="32" column="1" bodyfile="irrKlang-1.5.0/include/ik_irrKlangTypes.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceirrklang_1adf9f75b6ca98aff6843fb294125571e0" prot="public" static="no">
+        <type>unsigned int</type>
+        <definition>typedef unsigned int irrklang::ik_u32</definition>
+        <argsstring></argsstring>
+        <name>ik_u32</name>
+        <briefdescription>
+<para>32 bit unsigned variable. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a typedef for unsigned int, it ensures portability of the engine. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_irrKlangTypes.h" line="38" column="1" bodyfile="irrKlang-1.5.0/include/ik_irrKlangTypes.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" prot="public" static="no">
+        <type>signed int</type>
+        <definition>typedef signed int irrklang::ik_s32</definition>
+        <argsstring></argsstring>
+        <name>ik_s32</name>
+        <briefdescription>
+<para>32 bit signed variable. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a typedef for signed int, it ensures portability of the engine. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_irrKlangTypes.h" line="42" column="1" bodyfile="irrKlang-1.5.0/include/ik_irrKlangTypes.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" prot="public" static="no">
+        <type>float</type>
+        <definition>typedef float irrklang::ik_f32</definition>
+        <argsstring></argsstring>
+        <name>ik_f32</name>
+        <briefdescription>
+<para>32 bit floating point variable. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a typedef for float, it ensures portability of the engine. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_irrKlangTypes.h" line="48" column="1" bodyfile="irrKlang-1.5.0/include/ik_irrKlangTypes.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceirrklang_1a1c98510aa3989b1780723e2fb15f7c3d" prot="public" static="no">
+        <type>double</type>
+        <definition>typedef double irrklang::ik_f64</definition>
+        <argsstring></argsstring>
+        <name>ik_f64</name>
+        <briefdescription>
+<para>64 bit floating point variable. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a typedef for double, it ensures portability of the engine. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_irrKlangTypes.h" line="52" column="1" bodyfile="irrKlang-1.5.0/include/ik_irrKlangTypes.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceirrklang_1a592332840fd1799b7c73bcc4c0c4a5af" prot="public" static="no">
+        <type><ref refid="classirrklang_1_1vec3d" kindref="compound">vec3d</ref>&lt; <ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref> &gt;</type>
+        <definition>typedef vec3d&lt;ik_f32&gt; irrklang::vec3df</definition>
+        <argsstring></argsstring>
+        <name>vec3df</name>
+        <briefdescription>
+<para>Typedef for a ik_f32 3d vector, a vector using floats for X, Y and Z. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_vec3d.h" line="250" column="1" bodyfile="irrKlang-1.5.0/include/ik_vec3d.h" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceirrklang_1a96ca718557ff7197905483b21f781d26" prot="public" static="no">
+        <type><ref refid="classirrklang_1_1vec3d" kindref="compound">vec3d</ref>&lt; <ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref> &gt;</type>
+        <definition>typedef vec3d&lt;ik_s32&gt; irrklang::vec3di</definition>
+        <argsstring></argsstring>
+        <name>vec3di</name>
+        <briefdescription>
+<para>Typedef for an integer 3d vector, a vector using ints for X, Y and Z. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_vec3d.h" line="253" column="1" bodyfile="irrKlang-1.5.0/include/ik_vec3d.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceirrklang_1a37e23177810db5355a4fb31038e71634" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+        <definition>const ik_f32 irrklang::IK_ROUNDING_ERROR_32</definition>
+        <argsstring></argsstring>
+        <name>IK_ROUNDING_ERROR_32</name>
+        <initializer>= 0.000001f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_irrKlangTypes.h" line="58" column="1" bodyfile="irrKlang-1.5.0/include/ik_irrKlangTypes.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceirrklang_1a94bfcb20851dee7c360142f3db288538" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespaceirrklang_1a1c98510aa3989b1780723e2fb15f7c3d" kindref="member">ik_f64</ref></type>
+        <definition>const ik_f64 irrklang::IK_PI64</definition>
+        <argsstring></argsstring>
+        <name>IK_PI64</name>
+        <initializer>= 3.1415926535897932384626433832795028841971693993751</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_irrKlangTypes.h" line="59" column="1" bodyfile="irrKlang-1.5.0/include/ik_irrKlangTypes.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceirrklang_1a5e56a9f6a51767cc5a1bf32919a2b801" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+        <definition>const ik_f32 irrklang::IK_PI32</definition>
+        <argsstring></argsstring>
+        <name>IK_PI32</name>
+        <initializer>= 3.14159265359f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_irrKlangTypes.h" line="60" column="1" bodyfile="irrKlang-1.5.0/include/ik_irrKlangTypes.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceirrklang_1a899ce8a298f44c2a5413c6dc0e87f640" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+        <definition>const ik_f32 irrklang::IK_RADTODEG</definition>
+        <argsstring></argsstring>
+        <name>IK_RADTODEG</name>
+        <initializer>= 180.0f / IK_PI32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_irrKlangTypes.h" line="61" column="1" bodyfile="irrKlang-1.5.0/include/ik_irrKlangTypes.h" bodystart="61" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1vec3d_1a13294fd4e67bee8d8ffee2fcaa42e912" compoundref="ik__vec3d_8h" startline="209" endline="229">irrklang::vec3d&lt; T &gt;::getHorizontalAngle</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceirrklang_1ad74595519e5497bb71a0e4b98312866f" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+        <definition>const ik_f32 irrklang::IK_DEGTORAD</definition>
+        <argsstring></argsstring>
+        <name>IK_DEGTORAD</name>
+        <initializer>= <ref refid="namespaceirrklang_1a5e56a9f6a51767cc5a1bf32919a2b801" kindref="member">IK_PI32</ref> / 180.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_irrKlangTypes.h" line="62" column="1" bodyfile="irrKlang-1.5.0/include/ik_irrKlangTypes.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceirrklang_1a3f83fd863cffaac9ddde5ff73e72f116" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespaceirrklang_1a1c98510aa3989b1780723e2fb15f7c3d" kindref="member">ik_f64</ref></type>
+        <definition>const ik_f64 irrklang::IK_RADTODEG64</definition>
+        <argsstring></argsstring>
+        <name>IK_RADTODEG64</name>
+        <initializer>= 180.0 / <ref refid="namespaceirrklang_1a94bfcb20851dee7c360142f3db288538" kindref="member">IK_PI64</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_irrKlangTypes.h" line="63" column="1" bodyfile="irrKlang-1.5.0/include/ik_irrKlangTypes.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceirrklang_1a738ade686859c0d98ce9edbd34c4fc1b" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespaceirrklang_1a1c98510aa3989b1780723e2fb15f7c3d" kindref="member">ik_f64</ref></type>
+        <definition>const ik_f64 irrklang::IK_DEGTORAD64</definition>
+        <argsstring></argsstring>
+        <name>IK_DEGTORAD64</name>
+        <initializer>= <ref refid="namespaceirrklang_1a94bfcb20851dee7c360142f3db288538" kindref="member">IK_PI64</ref> / 180.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_irrKlangTypes.h" line="64" column="1" bodyfile="irrKlang-1.5.0/include/ik_irrKlangTypes.h" bodystart="64" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1vec3d_1a73e958aac6482aea6d4947d2737b3681" compoundref="ik__vec3d_8h" startline="166" endline="176">irrklang::vec3d&lt; T &gt;::rotateXYBy</referencedby>
+        <referencedby refid="classirrklang_1_1vec3d_1a3c0df42f68cbbec6506091756d518c18" compoundref="ik__vec3d_8h" startline="150" endline="160">irrklang::vec3d&lt; T &gt;::rotateXZBy</referencedby>
+        <referencedby refid="classirrklang_1_1vec3d_1aa619d2ed5f8e992f5ec60d7b262a0108" compoundref="ik__vec3d_8h" startline="182" endline="192">irrklang::vec3d&lt; T &gt;::rotateYZBy</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceirrklang_1a6e877f4a7838386812719e6ba0a5d4f0" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int irrklang::IKP_MP3_INPUT_BUFFER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>IKP_MP3_INPUT_BUFFER_SIZE</name>
+        <initializer>= 4096</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="17" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" bodystart="17" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">irrklang::CIrrKlangAudioStreamMP3::decodeFrame</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceirrklang_1a6ce1a12052cdee7b6d81a053a73a4f86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool irrklang::equalsfloat</definition>
+        <argsstring>(const ik_f32 a, const ik_f32 b, const ik_f32 tolerance=IK_ROUNDING_ERROR_32)</argsstring>
+        <name>equalsfloat</name>
+        <param>
+          <type>const <ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespaceirrklang_1a6fa5a4dd85b476308461136072ef4e0f" kindref="member">ik_f32</ref></type>
+          <declname>tolerance</declname>
+          <defval><ref refid="namespaceirrklang_1a37e23177810db5355a4fb31038e71634" kindref="member">IK_ROUNDING_ERROR_32</ref></defval>
+        </param>
+        <briefdescription>
+<para>returns if a float equals the other one, taking floating point rounding errors into account </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_irrKlangTypes.h" line="68" column="1" bodyfile="irrKlang-1.5.0/include/ik_irrKlangTypes.h" bodystart="68" bodyend="71"/>
+        <referencedby refid="classirrklang_1_1vec3d_1a9f5c9411ad637d980a1cf320d0a1cf2e" compoundref="ik__vec3d_8h" startline="62" endline="67">irrklang::vec3d&lt; T &gt;::equals</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceirrklang_1ac176fe17bc9317f36075a1b8ecc85a37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class S</type>
+          </param>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classirrklang_1_1vec3d" kindref="compound">vec3d</ref>&lt; T &gt;</type>
+        <definition>vec3d&lt;T&gt; irrklang::operator*</definition>
+        <argsstring>(const S scalar, const vec3d&lt; T &gt; &amp;vector)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const S</type>
+          <declname>scalar</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classirrklang_1_1vec3d" kindref="compound">vec3d</ref>&lt; T &gt; &amp;</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_vec3d.h" line="255" column="1" bodyfile="irrKlang-1.5.0/include/ik_vec3d.h" bodystart="255" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceirrklang_1ad9829f898bc0665fdd2554a6f5c7ca1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="irrKlang_8h_1a46984c40d70515d79d72043bfbd554d5" kindref="member">IRRKLANG_API</ref> <ref refid="classirrklang_1_1ISoundEngine" kindref="compound">ISoundEngine</ref> *<ref refid="irrKlang_8h_1abd61a1fa49408e803e5aa3049fdf43f8" kindref="member">IRRKLANGCALLCONV</ref></type>
+        <definition>IRRKLANG_API ISoundEngine* IRRKLANGCALLCONV irrklang::createIrrKlangDevice</definition>
+        <argsstring>(E_SOUND_OUTPUT_DRIVER driver=ESOD_AUTO_DETECT, int options=ESEO_DEFAULT_OPTIONS, const char *deviceID=0, const char *sdk_version_do_not_use=IRR_KLANG_VERSION)</argsstring>
+        <name>createIrrKlangDevice</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afe" kindref="member">E_SOUND_OUTPUT_DRIVER</ref></type>
+          <declname>driver</declname>
+          <defval><ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea8cc9863f3b410698313b8637721e51ec" kindref="member">ESOD_AUTO_DETECT</ref></defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>options</declname>
+          <defval><ref refid="namespaceirrklang_1ac9155ff55b347df6e905462100762d7facca58ad3ee7e3c2e874bc4015f36f2a9" kindref="member">ESEO_DEFAULT_OPTIONS</ref></defval>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>deviceID</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>sdk_version_do_not_use</declname>
+          <defval><ref refid="irrKlang_8h_1a3c47e8f6a51361741ab48b1cee6c4ba2" kindref="member">IRR_KLANG_VERSION</ref></defval>
+        </param>
+        <briefdescription>
+<para>Creates an irrKlang device. The irrKlang device is the root object for using the sound engine. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>driver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sound output driver to be used for sound output. Use <ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea8cc9863f3b410698313b8637721e51ec" kindref="member">irrklang::ESOD_AUTO_DETECT</ref> to let irrKlang decide which driver will be best. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A combination of <ref refid="namespaceirrklang_1ac9155ff55b347df6e905462100762d7f" kindref="member">irrklang::E_SOUND_ENGINE_OPTIONS</ref> literals. Default value is <ref refid="namespaceirrklang_1ac9155ff55b347df6e905462100762d7facca58ad3ee7e3c2e874bc4015f36f2a9" kindref="member">irrklang::ESEO_DEFAULT_OPTIONS</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>deviceID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Some additional optional deviceID for the audio driver. If not needed, simple set this to 0. This can be used for example to set a specific ALSA output pcm device for output (&quot;default&quot; or &quot;hw&quot;, for example). For most driver types, available deviceIDs can be enumerated using <ref refid="namespaceirrklang_1a38d9a69bf54fd60e76e80e199e44faee" kindref="member">createSoundDeviceList()</ref>. See <ref refid="index_1enumeratingDevices" kindref="member">Enumerating sound devices</ref> for an example or <ref refid="classirrklang_1_1ISoundDeviceList" kindref="compound">ISoundDeviceList</ref> or details. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sdk_version_do_not_use</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Don&apos;t use or change this parameter. Always set it to IRRKLANG_SDK_VERSION, which is done by default. This is needed for sdk version checks. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns pointer to the created irrKlang device or null if the device could not be created. If you don&apos;t need the device, use <ref refid="classirrklang_1_1IRefCounted_1a869fe3adc6e49e8da105e95837a565b1" kindref="member">ISoundEngine::drop()</ref> to delete it. See <ref refid="classirrklang_1_1IRefCounted_1a869fe3adc6e49e8da105e95837a565b1" kindref="member">IRefCounted::drop()</ref> for details. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/irrKlang.h" line="952" column="1"/>
+        <referencedby refid="classSP2__Scene_1ae7483c042e4a1861b71137f1a564ad7a" compoundref="SP2__Scene_8cpp" startline="60" endline="130">SP2_Scene::Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceirrklang_1a38d9a69bf54fd60e76e80e199e44faee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="irrKlang_8h_1a46984c40d70515d79d72043bfbd554d5" kindref="member">IRRKLANG_API</ref> <ref refid="classirrklang_1_1ISoundDeviceList" kindref="compound">ISoundDeviceList</ref> *<ref refid="irrKlang_8h_1abd61a1fa49408e803e5aa3049fdf43f8" kindref="member">IRRKLANGCALLCONV</ref></type>
+        <definition>IRRKLANG_API ISoundDeviceList* IRRKLANGCALLCONV irrklang::createSoundDeviceList</definition>
+        <argsstring>(E_SOUND_OUTPUT_DRIVER driver=ESOD_AUTO_DETECT, const char *sdk_version_do_not_use=IRR_KLANG_VERSION)</argsstring>
+        <name>createSoundDeviceList</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afe" kindref="member">E_SOUND_OUTPUT_DRIVER</ref></type>
+          <declname>driver</declname>
+          <defval><ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea8cc9863f3b410698313b8637721e51ec" kindref="member">ESOD_AUTO_DETECT</ref></defval>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>sdk_version_do_not_use</declname>
+          <defval><ref refid="irrKlang_8h_1a3c47e8f6a51361741ab48b1cee6c4ba2" kindref="member">IRR_KLANG_VERSION</ref></defval>
+        </param>
+        <briefdescription>
+<para>Creates a list of available sound devices for the driver type. </para>        </briefdescription>
+        <detaileddescription>
+<para>The device IDs in this list can be used as parameter to <ref refid="namespaceirrklang_1ad9829f898bc0665fdd2554a6f5c7ca1c" kindref="member">createIrrKlangDevice()</ref> to make irrKlang use a special sound device. See <ref refid="index_1enumeratingDevices" kindref="member">Enumerating sound devices</ref> for an example on how to use this. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>driver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sound output driver of which the list is generated. Set it <ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea8cc9863f3b410698313b8637721e51ec" kindref="member">irrklang::ESOD_AUTO_DETECT</ref> to let this function use the same device as <ref refid="namespaceirrklang_1ad9829f898bc0665fdd2554a6f5c7ca1c" kindref="member">createIrrKlangDevice()</ref> would choose. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sdk_version_do_not_use</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Don&apos;t use or change this parameter. Always set it to IRRKLANG_SDK_VERSION, which is done by default. This is needed for sdk version checks. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a pointer to the list of enumerated sound devices for the selected sound driver. The device IDs in this list can be used as parameter to <ref refid="namespaceirrklang_1ad9829f898bc0665fdd2554a6f5c7ca1c" kindref="member">createIrrKlangDevice()</ref> to make irrKlang use a special sound device. After you don&apos;t need the list anymore, call <ref refid="classirrklang_1_1IRefCounted_1a869fe3adc6e49e8da105e95837a565b1" kindref="member">ISoundDeviceList::drop()</ref> in order to free its memory. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/irrKlang.h" line="971" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceirrklang_1aaa4535359bd66857aaadb746cf7d8cec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="irrKlang_8h_1a46984c40d70515d79d72043bfbd554d5" kindref="member">IRRKLANG_API</ref> <ref refid="classirrklang_1_1IAudioRecorder" kindref="compound">IAudioRecorder</ref> *<ref refid="irrKlang_8h_1abd61a1fa49408e803e5aa3049fdf43f8" kindref="member">IRRKLANGCALLCONV</ref></type>
+        <definition>IRRKLANG_API IAudioRecorder* IRRKLANGCALLCONV irrklang::createIrrKlangAudioRecorder</definition>
+        <argsstring>(ISoundEngine *irrKlangDeviceForPlayback, E_SOUND_OUTPUT_DRIVER driver=ESOD_AUTO_DETECT, const char *deviceID=0, const char *sdk_version_do_not_use=IRR_KLANG_VERSION)</argsstring>
+        <name>createIrrKlangAudioRecorder</name>
+        <param>
+          <type><ref refid="classirrklang_1_1ISoundEngine" kindref="compound">ISoundEngine</ref> *</type>
+          <declname>irrKlangDeviceForPlayback</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afe" kindref="member">E_SOUND_OUTPUT_DRIVER</ref></type>
+          <declname>driver</declname>
+          <defval><ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea8cc9863f3b410698313b8637721e51ec" kindref="member">ESOD_AUTO_DETECT</ref></defval>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>deviceID</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>sdk_version_do_not_use</declname>
+          <defval><ref refid="irrKlang_8h_1a3c47e8f6a51361741ab48b1cee6c4ba2" kindref="member">IRR_KLANG_VERSION</ref></defval>
+        </param>
+        <briefdescription>
+<para>Creates an irrKlang audio recording device. The <ref refid="classirrklang_1_1IAudioRecorder" kindref="compound">IAudioRecorder</ref> is the root object for recording audio. </para>        </briefdescription>
+        <detaileddescription>
+<para>If you want to play back recorded audio as well, create the <ref refid="classirrklang_1_1ISoundEngine" kindref="compound">ISoundEngine</ref> first using <ref refid="namespaceirrklang_1ad9829f898bc0665fdd2554a6f5c7ca1c" kindref="member">createIrrKlangDevice()</ref> and then the <ref refid="classirrklang_1_1IAudioRecorder" kindref="compound">IAudioRecorder</ref> using <ref refid="namespaceirrklang_1aaa4535359bd66857aaadb746cf7d8cec" kindref="member">createIrrKlangAudioRecorder()</ref>, where you set the <ref refid="classirrklang_1_1ISoundEngine" kindref="compound">ISoundEngine</ref> as first parameter. See <ref refid="index_1recordingAudio" kindref="member">Recording Audio</ref> for an example on how to use this. Note: audio recording is a very new feature a still beta in irrKlang. It currently only works in Windows and with DirectSound (subject to change). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>irrKlangDeviceForPlayback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the already existing sound device used for playback of audio. Sound sources recorded with the <ref refid="classirrklang_1_1IAudioRecorder" kindref="compound">IAudioRecorder</ref> will be added into that device so that they can be played back there. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>driver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sound output driver to be used for recording audio. Use <ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea8cc9863f3b410698313b8637721e51ec" kindref="member">irrklang::ESOD_AUTO_DETECT</ref> to let irrKlang decide which driver will be best. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>deviceID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Some additional optional deviceID for the audio driver. If not needed, simple set this to 0. Use <ref refid="namespaceirrklang_1a0e8013b9e8f11231e69ce1da9457a339" kindref="member">createAudioRecorderDeviceList()</ref> to get a list of all deviceIDs. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sdk_version_do_not_use</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Don&apos;t use or change this parameter. Always set it to IRRKLANG_SDK_VERSION, which is done by default. This is needed for sdk version checks. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns pointer to the created irrKlang device or null if the device could not be created. If you don&apos;t need the device, use <ref refid="classirrklang_1_1IRefCounted_1a869fe3adc6e49e8da105e95837a565b1" kindref="member">ISoundEngine::drop()</ref> to delete it. See <ref refid="classirrklang_1_1IRefCounted_1a869fe3adc6e49e8da105e95837a565b1" kindref="member">IRefCounted::drop()</ref> for details. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/irrKlang.h" line="995" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceirrklang_1a0e8013b9e8f11231e69ce1da9457a339" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="irrKlang_8h_1a46984c40d70515d79d72043bfbd554d5" kindref="member">IRRKLANG_API</ref> <ref refid="classirrklang_1_1ISoundDeviceList" kindref="compound">ISoundDeviceList</ref> *<ref refid="irrKlang_8h_1abd61a1fa49408e803e5aa3049fdf43f8" kindref="member">IRRKLANGCALLCONV</ref></type>
+        <definition>IRRKLANG_API ISoundDeviceList* IRRKLANGCALLCONV irrklang::createAudioRecorderDeviceList</definition>
+        <argsstring>(E_SOUND_OUTPUT_DRIVER driver=ESOD_AUTO_DETECT, const char *sdk_version_do_not_use=IRR_KLANG_VERSION)</argsstring>
+        <name>createAudioRecorderDeviceList</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afe" kindref="member">E_SOUND_OUTPUT_DRIVER</ref></type>
+          <declname>driver</declname>
+          <defval><ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea8cc9863f3b410698313b8637721e51ec" kindref="member">ESOD_AUTO_DETECT</ref></defval>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>sdk_version_do_not_use</declname>
+          <defval><ref refid="irrKlang_8h_1a3c47e8f6a51361741ab48b1cee6c4ba2" kindref="member">IRR_KLANG_VERSION</ref></defval>
+        </param>
+        <briefdescription>
+<para>Creates a list of available recording devices for the driver type. </para>        </briefdescription>
+        <detaileddescription>
+<para>The device IDs in this list can be used as parameter to <ref refid="namespaceirrklang_1aaa4535359bd66857aaadb746cf7d8cec" kindref="member">createIrrKlangAudioRecorder()</ref> to make irrKlang use a special recording device. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>driver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sound output driver of which the list is generated. Set it <ref refid="namespaceirrklang_1a77f31ac02a7d33fe94807be709f72afea8cc9863f3b410698313b8637721e51ec" kindref="member">irrklang::ESOD_AUTO_DETECT</ref> to let this function use the same device as <ref refid="namespaceirrklang_1ad9829f898bc0665fdd2554a6f5c7ca1c" kindref="member">createIrrKlangDevice()</ref> would choose. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sdk_version_do_not_use</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Don&apos;t use or change this parameter. Always set it to IRRKLANG_SDK_VERSION, which is done by default. This is needed for sdk version checks. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a pointer to the list of enumerated recording devices for the selected sound driver. The device IDs in this list can be used as parameter to <ref refid="namespaceirrklang_1aaa4535359bd66857aaadb746cf7d8cec" kindref="member">createIrrKlangAudioRecorder()</ref> to make irrKlang use a special sound device. After you don&apos;t need the list anymore, call <ref refid="classirrklang_1_1IRefCounted_1a869fe3adc6e49e8da105e95837a565b1" kindref="member">ISoundDeviceList::drop()</ref> in order to free its memory. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/irrKlang.h" line="1012" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceirrklang_1a2552f41aac247b77e0f1287c28744cd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="irrKlang_8h_1a46984c40d70515d79d72043bfbd554d5" kindref="member">IRRKLANG_API</ref> bool <ref refid="irrKlang_8h_1abd61a1fa49408e803e5aa3049fdf43f8" kindref="member">IRRKLANGCALLCONV</ref></type>
+        <definition>IRRKLANG_API bool IRRKLANGCALLCONV irrklang::makeUTF8fromUTF16string</definition>
+        <argsstring>(const wchar_t *pInputString, char *pOutputBuffer, int outputBufferSize)</argsstring>
+        <name>makeUTF8fromUTF16string</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>pInputString</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>pOutputBuffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>outputBufferSize</declname>
+        </param>
+        <briefdescription>
+<para>Converts a wchar_t string to an utf8 string, useful when using Windows in unicode mode. </para>        </briefdescription>
+        <detaileddescription>
+<para>irrKlang works with unicode file names, and accepts char* strings as parameters for names and filenames. If you are running irrKlang in Windows, and working with wchar_t* pointers instead of char* ones, you can use this function to create a char* (UTF8) representation of your wchar_t* (UTF16) string. Works for filenames and other strings. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pInputString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>zero terminated input string. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pOutputBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the buffer where the converted string is written to. Be sure that this buffer has a big enough size. A good size would be three times the string length of your input buffer, like wcslen(yourInputBuffer)*3. Because each wchar_t can be represented by up to 3 chars. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outputBufferSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of your output buffer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if successful, and false if not. If &apos;false&apos; is returned, maybe your buffer was too small. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/irrKlang.h" line="1028" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Everything in the irrKlang Sound Engine can be found in this namespace. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="irrKlang-1.5.0/include/ik_ESoundEngineOptions.h" line="9" column="1"/>
+  </compounddef>
+</doxygen>

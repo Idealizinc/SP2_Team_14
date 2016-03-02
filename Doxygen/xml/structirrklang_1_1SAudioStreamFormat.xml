@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structirrklang_1_1SAudioStreamFormat" kind="struct" language="C++" prot="public">
+    <compoundname>irrklang::SAudioStreamFormat</compoundname>
+    <includes refid="ik__SAudioStreamFormat_8h" local="no">ik_SAudioStreamFormat.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structirrklang_1_1SAudioStreamFormat_1a4ff43d45603ce7e65c27a07a860b96f5" prot="public" static="no" mutable="no">
+        <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+        <definition>ik_s32 irrklang::SAudioStreamFormat::ChannelCount</definition>
+        <argsstring></argsstring>
+        <name>ChannelCount</name>
+        <briefdescription>
+<para>channels, 1 for mono, 2 for stereo </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_SAudioStreamFormat.h" line="29" column="1" bodyfile="irrKlang-1.5.0/include/ik_SAudioStreamFormat.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">irrklang::CIrrKlangAudioStreamMP3::decodeFrame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structirrklang_1_1SAudioStreamFormat_1ab4f3d1b9df4e1adf53b128c0f14af313" prot="public" static="no" mutable="no">
+        <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+        <definition>ik_s32 irrklang::SAudioStreamFormat::FrameCount</definition>
+        <argsstring></argsstring>
+        <name>FrameCount</name>
+        <briefdescription>
+<para>amount of frames in the sample data or stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the stream has an unknown lenght, this is -1 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_SAudioStreamFormat.h" line="33" column="1" bodyfile="irrKlang-1.5.0/include/ik_SAudioStreamFormat.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="15" endline="84">irrklang::CIrrKlangAudioStreamMP3::CIrrKlangAudioStreamMP3</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">irrklang::CIrrKlangAudioStreamMP3::decodeFrame</referencedby>
+        <referencedby refid="structirrklang_1_1SAudioStreamFormat_1aa673b99a0023bf949830b26fe79952cf" compoundref="ik__SAudioStreamFormat_8h" startline="55" endline="58">getSampleDataSize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structirrklang_1_1SAudioStreamFormat_1adffd0aaf1d5e09b2832f6ad9b2589756" prot="public" static="no" mutable="no">
+        <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+        <definition>ik_s32 irrklang::SAudioStreamFormat::SampleRate</definition>
+        <argsstring></argsstring>
+        <name>SampleRate</name>
+        <briefdescription>
+<para>samples per second </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_SAudioStreamFormat.h" line="36" column="1" bodyfile="irrKlang-1.5.0/include/ik_SAudioStreamFormat.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">irrklang::CIrrKlangAudioStreamMP3::decodeFrame</referencedby>
+        <referencedby refid="structirrklang_1_1SAudioStreamFormat_1a9c6e9369bb5e519600915fd13b00e116" compoundref="ik__SAudioStreamFormat_8h" startline="61" endline="64">getBytesPerSecond</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structirrklang_1_1SAudioStreamFormat_1a6a3c4b7a3ac829555b0bcc7312e12c8f" prot="public" static="no" mutable="no">
+        <type><ref refid="namespaceirrklang_1a2b85d1e9288cb552fceef8e8a726a80e" kindref="member">ESampleFormat</ref></type>
+        <definition>ESampleFormat irrklang::SAudioStreamFormat::SampleFormat</definition>
+        <argsstring></argsstring>
+        <name>SampleFormat</name>
+        <briefdescription>
+<para>format of the sample data </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_SAudioStreamFormat.h" line="39" column="1" bodyfile="irrKlang-1.5.0/include/ik_SAudioStreamFormat.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">irrklang::CIrrKlangAudioStreamMP3::decodeFrame</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structirrklang_1_1SAudioStreamFormat_1a0285204b54e3c969ae01d7bbec2f39b8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+        <definition>ik_s32 irrklang::SAudioStreamFormat::getSampleSize</definition>
+        <argsstring>() const </argsstring>
+        <name>getSampleSize</name>
+        <briefdescription>
+<para>returns the size of a sample of the data described by the stream data in bytes </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_SAudioStreamFormat.h" line="42" column="1" bodyfile="irrKlang-1.5.0/include/ik_SAudioStreamFormat.h" bodystart="42" bodyend="45"/>
+        <references refid="namespaceirrklang_1a2b85d1e9288cb552fceef8e8a726a80ea0de880c8a4d615e152bde20ec8444c44" compoundref="ik__SAudioStreamFormat_8h" startline="18">irrklang::ESF_U8</references>
+        <referencedby refid="structirrklang_1_1SAudioStreamFormat_1adbd8ce7f570a0c252d8aa74a3c444adb" compoundref="ik__SAudioStreamFormat_8h" startline="48" endline="51">getFrameSize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structirrklang_1_1SAudioStreamFormat_1adbd8ce7f570a0c252d8aa74a3c444adb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+        <definition>ik_s32 irrklang::SAudioStreamFormat::getFrameSize</definition>
+        <argsstring>() const </argsstring>
+        <name>getFrameSize</name>
+        <briefdescription>
+<para>returns the frame size of the stream data in bytes </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_SAudioStreamFormat.h" line="48" column="1" bodyfile="irrKlang-1.5.0/include/ik_SAudioStreamFormat.h" bodystart="48" bodyend="51"/>
+        <references refid="structirrklang_1_1SAudioStreamFormat_1a0285204b54e3c969ae01d7bbec2f39b8" compoundref="ik__SAudioStreamFormat_8h" startline="42" endline="45">getSampleSize</references>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">irrklang::CIrrKlangAudioStreamMP3::decodeFrame</referencedby>
+        <referencedby refid="structirrklang_1_1SAudioStreamFormat_1a9c6e9369bb5e519600915fd13b00e116" compoundref="ik__SAudioStreamFormat_8h" startline="61" endline="64">getBytesPerSecond</referencedby>
+        <referencedby refid="structirrklang_1_1SAudioStreamFormat_1aa673b99a0023bf949830b26fe79952cf" compoundref="ik__SAudioStreamFormat_8h" startline="55" endline="58">getSampleDataSize</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a85374ba5ed9178fa74dd256d59018ca0" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="110" endline="142">irrklang::CIrrKlangAudioStreamMP3::readFrames</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="215" endline="306">irrklang::CIrrKlangAudioStreamMP3::setPosition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structirrklang_1_1SAudioStreamFormat_1aa673b99a0023bf949830b26fe79952cf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+        <definition>ik_s32 irrklang::SAudioStreamFormat::getSampleDataSize</definition>
+        <argsstring>() const </argsstring>
+        <name>getSampleDataSize</name>
+        <briefdescription>
+<para>returns the size of the sample data in bytes </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_SAudioStreamFormat.h" line="55" column="1" bodyfile="irrKlang-1.5.0/include/ik_SAudioStreamFormat.h" bodystart="55" bodyend="58"/>
+        <references refid="structirrklang_1_1SAudioStreamFormat_1ab4f3d1b9df4e1adf53b128c0f14af313" compoundref="ik__SAudioStreamFormat_8h" startline="33">FrameCount</references>
+        <references refid="structirrklang_1_1SAudioStreamFormat_1adbd8ce7f570a0c252d8aa74a3c444adb" compoundref="ik__SAudioStreamFormat_8h" startline="48" endline="51">getFrameSize</references>
+      </memberdef>
+      <memberdef kind="function" id="structirrklang_1_1SAudioStreamFormat_1a9c6e9369bb5e519600915fd13b00e116" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+        <definition>ik_s32 irrklang::SAudioStreamFormat::getBytesPerSecond</definition>
+        <argsstring>() const </argsstring>
+        <name>getBytesPerSecond</name>
+        <briefdescription>
+<para>returns amount of bytes per second </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_SAudioStreamFormat.h" line="61" column="1" bodyfile="irrKlang-1.5.0/include/ik_SAudioStreamFormat.h" bodystart="61" bodyend="64"/>
+        <references refid="structirrklang_1_1SAudioStreamFormat_1adbd8ce7f570a0c252d8aa74a3c444adb" compoundref="ik__SAudioStreamFormat_8h" startline="48" endline="51">getFrameSize</references>
+        <references refid="structirrklang_1_1SAudioStreamFormat_1adffd0aaf1d5e09b2832f6ad9b2589756" compoundref="ik__SAudioStreamFormat_8h" startline="36">SampleRate</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>structure describing an audio stream format with helper functions </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="577">
+        <label>ESampleFormat</label>
+      </node>
+      <node id="578">
+        <label>int</label>
+      </node>
+      <node id="576">
+        <label>irrklang::SAudioStreamFormat</label>
+        <link refid="structirrklang_1_1SAudioStreamFormat"/>
+        <childnode refid="577" relation="usage">
+          <edgelabel>SampleFormat</edgelabel>
+        </childnode>
+        <childnode refid="578" relation="usage">
+          <edgelabel>ChannelCount</edgelabel>
+          <edgelabel>FrameCount</edgelabel>
+          <edgelabel>SampleRate</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="irrKlang-1.5.0/include/ik_SAudioStreamFormat.h" line="27" column="1" bodyfile="irrKlang-1.5.0/include/ik_SAudioStreamFormat.h" bodystart="26" bodyend="65"/>
+    <listofallmembers>
+      <member refid="structirrklang_1_1SAudioStreamFormat_1a4ff43d45603ce7e65c27a07a860b96f5" prot="public" virt="non-virtual"><scope>irrklang::SAudioStreamFormat</scope><name>ChannelCount</name></member>
+      <member refid="structirrklang_1_1SAudioStreamFormat_1ab4f3d1b9df4e1adf53b128c0f14af313" prot="public" virt="non-virtual"><scope>irrklang::SAudioStreamFormat</scope><name>FrameCount</name></member>
+      <member refid="structirrklang_1_1SAudioStreamFormat_1a9c6e9369bb5e519600915fd13b00e116" prot="public" virt="non-virtual"><scope>irrklang::SAudioStreamFormat</scope><name>getBytesPerSecond</name></member>
+      <member refid="structirrklang_1_1SAudioStreamFormat_1adbd8ce7f570a0c252d8aa74a3c444adb" prot="public" virt="non-virtual"><scope>irrklang::SAudioStreamFormat</scope><name>getFrameSize</name></member>
+      <member refid="structirrklang_1_1SAudioStreamFormat_1aa673b99a0023bf949830b26fe79952cf" prot="public" virt="non-virtual"><scope>irrklang::SAudioStreamFormat</scope><name>getSampleDataSize</name></member>
+      <member refid="structirrklang_1_1SAudioStreamFormat_1a0285204b54e3c969ae01d7bbec2f39b8" prot="public" virt="non-virtual"><scope>irrklang::SAudioStreamFormat</scope><name>getSampleSize</name></member>
+      <member refid="structirrklang_1_1SAudioStreamFormat_1a6a3c4b7a3ac829555b0bcc7312e12c8f" prot="public" virt="non-virtual"><scope>irrklang::SAudioStreamFormat</scope><name>SampleFormat</name></member>
+      <member refid="structirrklang_1_1SAudioStreamFormat_1adffd0aaf1d5e09b2832f6ad9b2589756" prot="public" virt="non-virtual"><scope>irrklang::SAudioStreamFormat</scope><name>SampleRate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

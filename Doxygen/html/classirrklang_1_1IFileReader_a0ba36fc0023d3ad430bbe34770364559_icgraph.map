@@ -1,0 +1,7 @@
+<map id="irrklang::IFileReader::read" name="irrklang::IFileReader::read">
+<area shape="rect" id="node2" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#a0694b0e9c0ca306701236b660a11633d" title="irrklang::CIrrKlangAudio\lStreamMP3::decodeFrame" alt="" coords="191,44,369,85"/>
+<area shape="rect" id="node6" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#a37a20bc8ccf0bfce2a6e8516c0b0e1aa" title="irrklang::CIrrKlangAudio\lStreamMP3::skipID3IfNecessary" alt="" coords="417,146,628,188"/>
+<area shape="rect" id="node3" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#aa0525477376ae287275da88a17f4825d" title="irrklang::CIrrKlangAudio\lStreamMP3::CIrrKlangAudioStreamMP3" alt="" coords="888,58,1143,100"/>
+<area shape="rect" id="node4" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#a85374ba5ed9178fa74dd256d59018ca0" title="tells the audio stream to read n audio frames into the specified buffer " alt="" coords="439,29,607,70"/>
+<area shape="rect" id="node5" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#ae615c171d074153463af08a11118ceaf" title="sets the position of the audio stream. " alt="" coords="676,58,840,100"/>
+</map>

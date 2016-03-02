@@ -1,0 +1,346 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structBoundary" kind="struct" language="C++" prot="public">
+    <compoundname>Boundary</compoundname>
+    <includes refid="Boundary_8h" local="no">Boundary.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structBoundary_1a52861c6957c6cc6081f7d19113ea5bd2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Boundary::xMin</definition>
+        <argsstring></argsstring>
+        <name>xMin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Boundary.h" line="8" column="1" bodyfile="ComGLab/Source/Boundary.h" bodystart="7" bodyend="-1"/>
+        <referencedby refid="structBoundary_1ac8729f6b5ec80c5af1151892c0a3e9b8" compoundref="Boundary_8cpp" startline="13" endline="24">BoundaryCheck</referencedby>
+        <referencedby refid="structBoundary_1a3cf640001c6bbc842d129f453fb3441b" compoundref="Boundary_8cpp" startline="3" endline="11">set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structBoundary_1a85c5f834019116be139c56e37c0e45de" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Boundary::xMax</definition>
+        <argsstring></argsstring>
+        <name>xMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Boundary.h" line="8" column="1" bodyfile="ComGLab/Source/Boundary.h" bodystart="7" bodyend="-1"/>
+        <referencedby refid="structBoundary_1ac8729f6b5ec80c5af1151892c0a3e9b8" compoundref="Boundary_8cpp" startline="13" endline="24">BoundaryCheck</referencedby>
+        <referencedby refid="structBoundary_1a3cf640001c6bbc842d129f453fb3441b" compoundref="Boundary_8cpp" startline="3" endline="11">set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structBoundary_1a19b72bc2972778edd5cad9b601fe2e5d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Boundary::zMin</definition>
+        <argsstring></argsstring>
+        <name>zMin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Boundary.h" line="8" column="1" bodyfile="ComGLab/Source/Boundary.h" bodystart="7" bodyend="-1"/>
+        <referencedby refid="structBoundary_1ac8729f6b5ec80c5af1151892c0a3e9b8" compoundref="Boundary_8cpp" startline="13" endline="24">BoundaryCheck</referencedby>
+        <referencedby refid="structBoundary_1a3cf640001c6bbc842d129f453fb3441b" compoundref="Boundary_8cpp" startline="3" endline="11">set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structBoundary_1a1238d3324e1a66fea65acd5dbe881e84" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Boundary::zMax</definition>
+        <argsstring></argsstring>
+        <name>zMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Boundary.h" line="8" column="1" bodyfile="ComGLab/Source/Boundary.h" bodystart="7" bodyend="-1"/>
+        <referencedby refid="structBoundary_1ac8729f6b5ec80c5af1151892c0a3e9b8" compoundref="Boundary_8cpp" startline="13" endline="24">BoundaryCheck</referencedby>
+        <referencedby refid="structBoundary_1a3cf640001c6bbc842d129f453fb3441b" compoundref="Boundary_8cpp" startline="3" endline="11">set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structBoundary_1ad97b083262315dabde223a7df01a8233" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Boundary::yMin</definition>
+        <argsstring></argsstring>
+        <name>yMin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Boundary.h" line="8" column="1" bodyfile="ComGLab/Source/Boundary.h" bodystart="7" bodyend="-1"/>
+        <referencedby refid="structBoundary_1ac8729f6b5ec80c5af1151892c0a3e9b8" compoundref="Boundary_8cpp" startline="13" endline="24">BoundaryCheck</referencedby>
+        <referencedby refid="structBoundary_1a3cf640001c6bbc842d129f453fb3441b" compoundref="Boundary_8cpp" startline="3" endline="11">set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structBoundary_1adb22e67fd9b5bcc52788383c15b2b419" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Boundary::yMax</definition>
+        <argsstring></argsstring>
+        <name>yMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Boundary.h" line="8" column="1" bodyfile="ComGLab/Source/Boundary.h" bodystart="7" bodyend="-1"/>
+        <referencedby refid="structBoundary_1ac8729f6b5ec80c5af1151892c0a3e9b8" compoundref="Boundary_8cpp" startline="13" endline="24">BoundaryCheck</referencedby>
+        <referencedby refid="structBoundary_1a3cf640001c6bbc842d129f453fb3441b" compoundref="Boundary_8cpp" startline="3" endline="11">set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structBoundary_1a30e4384c799da245bd2a47084cd6e4d3" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short Boundary::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Boundary.h" line="10" column="1" bodyfile="ComGLab/Source/Boundary.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBoundary_1a02778ac00885bcd5f71a72b583e42d28" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Boundary::active</definition>
+        <argsstring></argsstring>
+        <name>active</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Boundary.h" line="11" column="1" bodyfile="ComGLab/Source/Boundary.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBoundary_1a911fb29af5fe9212d5f5ed309f87d84e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Boundary::isWithin</definition>
+        <argsstring></argsstring>
+        <name>isWithin</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Boundary.h" line="12" column="1" bodyfile="ComGLab/Source/Boundary.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structBoundary_1a44bd457691e03ec3db93e88cbe36d87a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Boundary::Boundary</definition>
+        <argsstring>(float xMin=0, float xMax=0, float zMin=0, float zMax=0, float yMin=0, float yMax=0, unsigned short type=0)</argsstring>
+        <name>Boundary</name>
+        <param>
+          <type>float</type>
+          <declname>xMin</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>xMax</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>zMin</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>zMax</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>yMin</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>yMax</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>type</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Boundary.h" line="6" column="1" bodyfile="ComGLab/Source/Boundary.h" bodystart="6" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="function" id="structBoundary_1a5d6202953f7f98198330da4ff7aeb676" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Boundary::Boundary</definition>
+        <argsstring>(const Boundary &amp;bound)</argsstring>
+        <name>Boundary</name>
+        <param>
+          <type>const <ref refid="structBoundary" kindref="compound">Boundary</ref> &amp;</type>
+          <declname>bound</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Boundary.h" line="7" column="1" bodyfile="ComGLab/Source/Boundary.h" bodystart="7" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="structBoundary_1a3cf640001c6bbc842d129f453fb3441b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Boundary::set</definition>
+        <argsstring>(float xMin=0, float xMax=0, float zMin=0, float zMax=0, float yMin=0, float yMax=0)</argsstring>
+        <name>set</name>
+        <param>
+          <type>float</type>
+          <declname>xMin</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>xMax</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>zMin</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>zMax</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>yMin</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>yMax</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Boundary.h" line="13" column="1" bodyfile="ComGLab/Source/Boundary.cpp" bodystart="3" bodyend="11"/>
+        <references refid="structBoundary_1a85c5f834019116be139c56e37c0e45de" compoundref="Boundary_8h" startline="7">xMax</references>
+        <references refid="structBoundary_1a52861c6957c6cc6081f7d19113ea5bd2" compoundref="Boundary_8h" startline="7">xMin</references>
+        <references refid="structBoundary_1adb22e67fd9b5bcc52788383c15b2b419" compoundref="Boundary_8h" startline="7">yMax</references>
+        <references refid="structBoundary_1ad97b083262315dabde223a7df01a8233" compoundref="Boundary_8h" startline="7">yMin</references>
+        <references refid="structBoundary_1a1238d3324e1a66fea65acd5dbe881e84" compoundref="Boundary_8h" startline="7">zMax</references>
+        <references refid="structBoundary_1a19b72bc2972778edd5cad9b601fe2e5d" compoundref="Boundary_8h" startline="7">zMin</references>
+        <referencedby refid="classRayCast_1a6338e869ae22fb9e40241135b9c52941" compoundref="Raycast_8cpp" startline="18" endline="21">RayCast::CalcBounds</referencedby>
+        <referencedby refid="classRobot_1a4e7360385dab7b3974d6ca7c6464b747" compoundref="Robot_8cpp" startline="206" endline="213">Robot::CalcBounds</referencedby>
+        <referencedby refid="classCamera3_1ae8bf411b15978eaeb425b6fe169a0f05" compoundref="Camera3_8cpp" startline="411" endline="464">Camera3::initBoundVec</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structBoundary_1ac8729f6b5ec80c5af1151892c0a3e9b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Boundary::BoundaryCheck</definition>
+        <argsstring>(const float &amp;playerCoordX, const float &amp;playerCoordZ, const float &amp;playerCoordY)</argsstring>
+        <name>BoundaryCheck</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>playerCoordX</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>playerCoordZ</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>playerCoordY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Boundary.h" line="14" column="1" bodyfile="ComGLab/Source/Boundary.cpp" bodystart="13" bodyend="24"/>
+        <references refid="structBoundary_1a85c5f834019116be139c56e37c0e45de" compoundref="Boundary_8h" startline="7">xMax</references>
+        <references refid="structBoundary_1a52861c6957c6cc6081f7d19113ea5bd2" compoundref="Boundary_8h" startline="7">xMin</references>
+        <references refid="structBoundary_1adb22e67fd9b5bcc52788383c15b2b419" compoundref="Boundary_8h" startline="7">yMax</references>
+        <references refid="structBoundary_1ad97b083262315dabde223a7df01a8233" compoundref="Boundary_8h" startline="7">yMin</references>
+        <references refid="structBoundary_1a1238d3324e1a66fea65acd5dbe881e84" compoundref="Boundary_8h" startline="7">zMax</references>
+        <references refid="structBoundary_1a19b72bc2972778edd5cad9b601fe2e5d" compoundref="Boundary_8h" startline="7">zMin</references>
+        <referencedby refid="classRobot_1ad545d19adff26cb99fda1c4408f51e69" compoundref="Robot_8cpp" startline="83" endline="94">Robot::BoundsCheck</referencedby>
+        <referencedby refid="classCamera3_1a99440cc4eb40bfc3bbad15bfe08c8a55" compoundref="Camera3_8cpp" startline="257" endline="409">Camera3::cameraMovement2</referencedby>
+        <referencedby refid="classRobot_1a984fba314296d7a4016afb093f775c0d" compoundref="Robot_8cpp" startline="41" endline="71">Robot::FindNewTarget</referencedby>
+        <referencedby refid="classCamera3_1acc5d4103826cda6d20b80a0d35eacdbe" compoundref="Camera3_8cpp" startline="70" endline="149">Camera3::Update</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="333">
+        <label>float</label>
+      </node>
+      <node id="332">
+        <label>Boundary</label>
+        <link refid="structBoundary"/>
+        <childnode refid="333" relation="usage">
+          <edgelabel>zMin</edgelabel>
+          <edgelabel>yMin</edgelabel>
+          <edgelabel>zMax</edgelabel>
+          <edgelabel>yMax</edgelabel>
+          <edgelabel>xMin</edgelabel>
+          <edgelabel>xMax</edgelabel>
+        </childnode>
+        <childnode refid="334" relation="usage">
+          <edgelabel>active</edgelabel>
+          <edgelabel>isWithin</edgelabel>
+        </childnode>
+        <childnode refid="335" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+      </node>
+      <node id="335">
+        <label>unsigned</label>
+      </node>
+      <node id="334">
+        <label>bool</label>
+      </node>
+    </collaborationgraph>
+    <location file="ComGLab/Source/Boundary.h" line="5" column="1" bodyfile="ComGLab/Source/Boundary.h" bodystart="4" bodyend="15"/>
+    <listofallmembers>
+      <member refid="structBoundary_1a02778ac00885bcd5f71a72b583e42d28" prot="public" virt="non-virtual"><scope>Boundary</scope><name>active</name></member>
+      <member refid="structBoundary_1a44bd457691e03ec3db93e88cbe36d87a" prot="public" virt="non-virtual"><scope>Boundary</scope><name>Boundary</name></member>
+      <member refid="structBoundary_1a5d6202953f7f98198330da4ff7aeb676" prot="public" virt="non-virtual"><scope>Boundary</scope><name>Boundary</name></member>
+      <member refid="structBoundary_1ac8729f6b5ec80c5af1151892c0a3e9b8" prot="public" virt="non-virtual"><scope>Boundary</scope><name>BoundaryCheck</name></member>
+      <member refid="structBoundary_1a911fb29af5fe9212d5f5ed309f87d84e" prot="public" virt="non-virtual"><scope>Boundary</scope><name>isWithin</name></member>
+      <member refid="structBoundary_1a3cf640001c6bbc842d129f453fb3441b" prot="public" virt="non-virtual"><scope>Boundary</scope><name>set</name></member>
+      <member refid="structBoundary_1a30e4384c799da245bd2a47084cd6e4d3" prot="public" virt="non-virtual"><scope>Boundary</scope><name>type</name></member>
+      <member refid="structBoundary_1a85c5f834019116be139c56e37c0e45de" prot="public" virt="non-virtual"><scope>Boundary</scope><name>xMax</name></member>
+      <member refid="structBoundary_1a52861c6957c6cc6081f7d19113ea5bd2" prot="public" virt="non-virtual"><scope>Boundary</scope><name>xMin</name></member>
+      <member refid="structBoundary_1adb22e67fd9b5bcc52788383c15b2b419" prot="public" virt="non-virtual"><scope>Boundary</scope><name>yMax</name></member>
+      <member refid="structBoundary_1ad97b083262315dabde223a7df01a8233" prot="public" virt="non-virtual"><scope>Boundary</scope><name>yMin</name></member>
+      <member refid="structBoundary_1a1238d3324e1a66fea65acd5dbe881e84" prot="public" virt="non-virtual"><scope>Boundary</scope><name>zMax</name></member>
+      <member refid="structBoundary_1a19b72bc2972778edd5cad9b601fe2e5d" prot="public" virt="non-virtual"><scope>Boundary</scope><name>zMin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

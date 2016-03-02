@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="mpegaudio_8h" kind="file" language="C++">
+    <compoundname>mpegaudio.h</compoundname>
+    <includedby refid="mpaudec_8c" local="yes">irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c</includedby>
+    <invincdepgraph>
+      <node id="2968">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/mpegaudio.h</label>
+        <link refid="mpegaudio.h"/>
+        <childnode refid="2969" relation="include">
+        </childnode>
+      </node>
+      <node id="2969">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c</label>
+        <link refid="mpaudec_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="mpegaudio_8h_1a1bf5ddc0eefac5e06a435929edd28baf" prot="public" static="no">
+        <name>MPA_FRAME_SIZE</name>
+        <initializer>1152</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpegaudio.h" line="5" column="9" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpegaudio.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpegaudio_8h_1afe766840654774677e78f6baf94c88dc" prot="public" static="no">
+        <name>MPA_MAX_CODED_FRAME_SIZE</name>
+        <initializer>1792</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpegaudio.h" line="8" column="9" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpegaudio.h" bodystart="8" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1ad804754f6cb3863f2489fcddc56f9ae4" compoundref="mpaudec_8c" startline="2312" endline="2470">mpaudec_decode_frame</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpegaudio_8h_1a90c106dcc84bd769bb0fbbe073fb2277" prot="public" static="no">
+        <name>MPA_MAX_CHANNELS</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpegaudio.h" line="10" column="9" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpegaudio.h" bodystart="10" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1aa8d8ca6a6ace0fa4945bbf9de65c0364" compoundref="mpaudec_8c" startline="1173" endline="1237">mp_decode_layer1</referencedby>
+        <referencedby refid="mpaudec_8c_1a72ee70f98e9873f63c88b69b80e15825" compoundref="mpaudec_8c" startline="1261" endline="1467">mp_decode_layer2</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpegaudio_8h_1aae2d5a401c55c6b2b834c99340911fdb" prot="public" static="no">
+        <name>SBLIMIT</name>
+        <initializer>32 /* number of subbands */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpegaudio.h" line="12" column="9" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpegaudio.h" bodystart="12" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1aeb64a1031552d0031c4b3e32e5260ff3" compoundref="mpaudec_8c" startline="1828" endline="1860">compute_antialias</referencedby>
+        <referencedby refid="mpaudec_8c_1acf918d4b847c8a23d9cb38db467c7483" compoundref="mpaudec_8c" startline="1862" endline="1960">compute_imdct</referencedby>
+        <referencedby refid="mpaudec_8c_1a2dff7b15a5f55a97729fb3f2d7194e64" compoundref="mpaudec_8c" startline="2258" endline="2310">mp_decode_frame</referencedby>
+        <referencedby refid="mpaudec_8c_1aa8d8ca6a6ace0fa4945bbf9de65c0364" compoundref="mpaudec_8c" startline="1173" endline="1237">mp_decode_layer1</referencedby>
+        <referencedby refid="mpaudec_8c_1a72ee70f98e9873f63c88b69b80e15825" compoundref="mpaudec_8c" startline="1261" endline="1467">mp_decode_layer2</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpegaudio_8h_1a9d87298deb91941ebed0a00b214b1739" prot="public" static="no">
+        <name>MPA_STEREO</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpegaudio.h" line="14" column="9" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpegaudio.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpegaudio_8h_1a9d38dac54746227a90eefeda2012ea65" prot="public" static="no">
+        <name>MPA_JSTEREO</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpegaudio.h" line="15" column="9" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpegaudio.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1aa8d8ca6a6ace0fa4945bbf9de65c0364" compoundref="mpaudec_8c" startline="1173" endline="1237">mp_decode_layer1</referencedby>
+        <referencedby refid="mpaudec_8c_1a72ee70f98e9873f63c88b69b80e15825" compoundref="mpaudec_8c" startline="1261" endline="1467">mp_decode_layer2</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpegaudio_8h_1aa831850fc3a9e0d6c12566fcb7383738" prot="public" static="no">
+        <name>MPA_DUAL</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpegaudio.h" line="16" column="9" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpegaudio.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpegaudio_8h_1a2cc2b5220d869bc6b1715543a4e5077c" prot="public" static="no">
+        <name>MPA_MONO</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpegaudio.h" line="17" column="9" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpegaudio.h" bodystart="17" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1adc65cd68ae1134afaf2b4d0aa8270b26" compoundref="mpaudec_8c" startline="1079" endline="1170">decode_header</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Modified<sp/>slightly<sp/>by<sp/>Matt<sp/>Campbell<sp/>&lt;mattcampbell@pobox.com&gt;<sp/>for<sp/>the</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/>stand-alone<sp/>mpaudec<sp/>library.<sp/><sp/>Based<sp/>on<sp/>mpegaudio.h<sp/>from<sp/>libavcodec.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>max<sp/>frame<sp/>size,<sp/>in<sp/>samples<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="mpegaudio_8h_1a1bf5ddc0eefac5e06a435929edd28baf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPA_FRAME_SIZE<sp/>1152<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>max<sp/>compressed<sp/>frame<sp/>size<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="mpegaudio_8h_1afe766840654774677e78f6baf94c88dc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPA_MAX_CODED_FRAME_SIZE<sp/>1792</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="mpegaudio_8h_1a90c106dcc84bd769bb0fbbe073fb2277" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPA_MAX_CHANNELS<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="mpegaudio_8h_1aae2d5a401c55c6b2b834c99340911fdb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SBLIMIT<sp/>32<sp/></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>subbands<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="mpegaudio_8h_1a9d87298deb91941ebed0a00b214b1739" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPA_STEREO<sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="mpegaudio_8h_1a9d38dac54746227a90eefeda2012ea65" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPA_JSTEREO<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="mpegaudio_8h_1aa831850fc3a9e0d6c12566fcb7383738" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPA_DUAL<sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="mpegaudio_8h_1a2cc2b5220d869bc6b1715543a4e5077c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPA_MONO<sp/><sp/><sp/><sp/>3</highlight></codeline>
+    </programlisting>
+    <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpegaudio.h"/>
+  </compounddef>
+</doxygen>

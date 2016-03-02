@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classirrklang_1_1ISoundStopEventReceiver" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>irrklang::ISoundStopEventReceiver</compoundname>
+    <includes refid="ik__ISoundStopEventReceiver_8h" local="no">ik_ISoundStopEventReceiver.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classirrklang_1_1ISoundStopEventReceiver_1a26adc3eec345f11286e576e449e6647d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual irrklang::ISoundStopEventReceiver::~ISoundStopEventReceiver</definition>
+        <argsstring>()</argsstring>
+        <name>~ISoundStopEventReceiver</name>
+        <briefdescription>
+<para>destructor </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundStopEventReceiver.h" line="46" column="1" bodyfile="irrKlang-1.5.0/include/ik_ISoundStopEventReceiver.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundStopEventReceiver_1a8e975104683b71cd45436ae5f8bfaf9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::ISoundStopEventReceiver::OnSoundStopped</definition>
+        <argsstring>(ISound *sound, E_STOP_EVENT_CAUSE reason, void *userData)=0</argsstring>
+        <name>OnSoundStopped</name>
+        <param>
+          <type><ref refid="classirrklang_1_1ISound" kindref="compound">ISound</ref> *</type>
+          <declname>sound</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1a17ebb006afe78ab6502a1e3d18083522" kindref="member">E_STOP_EVENT_CAUSE</ref></type>
+          <declname>reason</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userData</declname>
+        </param>
+        <briefdescription>
+<para>Called when a sound has stopped playing. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is the only method to be implemented by the user. The sound stop event is guaranteed to be called when a sound or sound stream is finished, either because the sound reached its playback end, its sound source was removed, <ref refid="classirrklang_1_1ISoundEngine_1a38dbc2f1d49e3127fc4a81a9c1a2f82d" kindref="member">ISoundEngine::stopAllSounds()</ref> has been called or the whole engine was deleted. Please note: Sound events will occur in a different thread when the engine runs in multi threaded mode (default). In single threaded mode, the event will happen while the user thread is calling <ref refid="classirrklang_1_1ISoundEngine_1a7b4f4913148d42ffe80b69979ad25906" kindref="member">ISoundEngine::update()</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sound</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sound which has been stopped. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reason</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reason why the sound stop event was fired. Usually, this will be ESEC_SOUND_FINISHED_PLAYING. When the sound was aborded by calling <ref refid="classirrklang_1_1ISound_1a108485fe64658441cecd70917782961f" kindref="member">ISound::stop()</ref> or <ref refid="classirrklang_1_1ISoundEngine_1a38dbc2f1d49e3127fc4a81a9c1a2f82d" kindref="member">ISoundEngine::stopAllSounds()</ref>;, this would be ESEC_SOUND_STOPPED_BY_USER. If irrKlang was deleted or the sound source was removed, the value is ESEC_SOUND_STOPPED_BY_SOURCE_REMOVAL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>userData pointer set by the user when registering the interface via <ref refid="classirrklang_1_1ISound_1a50dc71426d0abec7af56fa68a5bb87b5" kindref="member">ISound::setSoundStopEventReceiver()</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundStopEventReceiver.h" line="63" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface to be implemented by the user, which recieves sound stop events. </para>    </briefdescription>
+    <detaileddescription>
+<para>The interface has only one method to be implemented by the user: <ref refid="classirrklang_1_1ISoundStopEventReceiver_1a8e975104683b71cd45436ae5f8bfaf9f" kindref="member">OnSoundStopped()</ref>. Implement this interface and set it via <ref refid="classirrklang_1_1ISound_1a50dc71426d0abec7af56fa68a5bb87b5" kindref="member">ISound::setSoundStopEventReceiver()</ref>. The sound stop event is guaranteed to be called when a sound or sound stream is finished, either because the sound reached its playback end, its sound source was removed, <ref refid="classirrklang_1_1ISoundEngine_1a38dbc2f1d49e3127fc4a81a9c1a2f82d" kindref="member">ISoundEngine::stopAllSounds()</ref> has been called or the whole engine was deleted. </para>    </detaileddescription>
+    <location file="irrKlang-1.5.0/include/ik_ISoundStopEventReceiver.h" line="42" column="1" bodyfile="irrKlang-1.5.0/include/ik_ISoundStopEventReceiver.h" bodystart="41" bodyend="65"/>
+    <listofallmembers>
+      <member refid="classirrklang_1_1ISoundStopEventReceiver_1a8e975104683b71cd45436ae5f8bfaf9f" prot="public" virt="pure-virtual"><scope>irrklang::ISoundStopEventReceiver</scope><name>OnSoundStopped</name></member>
+      <member refid="classirrklang_1_1ISoundStopEventReceiver_1a26adc3eec345f11286e576e449e6647d" prot="public" virt="virtual"><scope>irrklang::ISoundStopEventReceiver</scope><name>~ISoundStopEventReceiver</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

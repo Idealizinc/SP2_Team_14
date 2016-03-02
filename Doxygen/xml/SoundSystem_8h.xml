@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="SoundSystem_8h" kind="file" language="C++">
+    <compoundname>SoundSystem.h</compoundname>
+    <includes refid="Application_8h" local="yes">Application.h</includes>
+    <includes local="no">string</includes>
+    <includedby refid="SoundSystem_8cpp" local="yes">ComGLab/Source/SoundSystem.cpp</includedby>
+    <incdepgraph>
+      <node id="2127">
+        <label>windows.h</label>
+      </node>
+      <node id="2128">
+        <label>SharedData.h</label>
+        <link refid="SharedData_8h"/>
+      </node>
+      <node id="2126">
+        <label>timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="2127" relation="include">
+        </childnode>
+      </node>
+      <node id="2125">
+        <label>Application.h</label>
+        <link refid="Application_8h"/>
+        <childnode refid="2126" relation="include">
+        </childnode>
+        <childnode refid="2128" relation="include">
+        </childnode>
+      </node>
+      <node id="2129">
+        <label>string</label>
+      </node>
+      <node id="2124">
+        <label>ComGLab/Source/SoundSystem.h</label>
+        <link refid="SoundSystem.h"/>
+        <childnode refid="2125" relation="include">
+        </childnode>
+        <childnode refid="2129" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2131">
+        <label>ComGLab/Source/SoundSystem.cpp</label>
+        <link refid="SoundSystem_8cpp"/>
+      </node>
+      <node id="2130">
+        <label>ComGLab/Source/SoundSystem.h</label>
+        <link refid="SoundSystem.h"/>
+        <childnode refid="2131" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_SOUND_SYSTEM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SOUND_SYSTEM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Application_8h" kindref="compound">Application.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::string;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>_SOUND_SYSTEM_H</highlight></codeline>
+    </programlisting>
+    <location file="ComGLab/Source/SoundSystem.h"/>
+  </compounddef>
+</doxygen>

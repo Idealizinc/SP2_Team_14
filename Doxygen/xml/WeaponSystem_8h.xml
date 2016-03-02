@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="WeaponSystem_8h" kind="file" language="C++">
+    <compoundname>WeaponSystem.h</compoundname>
+    <includes local="no">list</includes>
+    <includes refid="Raycast_8h" local="yes">RayCast.h</includes>
+    <includedby refid="SP2__Scene_8h" local="yes">ComGLab/Source/SP2_Scene.h</includedby>
+    <includedby refid="Robot_8h" local="yes">ComGLab/Source/Robot.h</includedby>
+    <includedby refid="WeaponSystem_8cpp" local="yes">ComGLab/Source/WeaponSystem.cpp</includedby>
+    <incdepgraph>
+      <node id="2316">
+        <label>list</label>
+      </node>
+      <node id="2319">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="2320" relation="include">
+        </childnode>
+        <childnode refid="2321" relation="include">
+        </childnode>
+        <childnode refid="2322" relation="include">
+        </childnode>
+        <childnode refid="2323" relation="include">
+        </childnode>
+      </node>
+      <node id="2317">
+        <label>RayCast.h</label>
+        <link refid="Raycast_8h"/>
+        <childnode refid="2318" relation="include">
+        </childnode>
+        <childnode refid="2325" relation="include">
+        </childnode>
+      </node>
+      <node id="2315">
+        <label>ComGLab/Source/WeaponSystem.h</label>
+        <link refid="WeaponSystem.h"/>
+        <childnode refid="2316" relation="include">
+        </childnode>
+        <childnode refid="2317" relation="include">
+        </childnode>
+      </node>
+      <node id="2320">
+        <label>cmath</label>
+      </node>
+      <node id="2318">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="2319" relation="include">
+        </childnode>
+        <childnode refid="2324" relation="include">
+        </childnode>
+      </node>
+      <node id="2321">
+        <label>exception</label>
+      </node>
+      <node id="2325">
+        <label>Boundary.h</label>
+        <link refid="Boundary_8h"/>
+      </node>
+      <node id="2322">
+        <label>ctime</label>
+      </node>
+      <node id="2323">
+        <label>cstdlib</label>
+      </node>
+      <node id="2324">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2326">
+        <label>ComGLab/Source/WeaponSystem.h</label>
+        <link refid="WeaponSystem.h"/>
+        <childnode refid="2327" relation="include">
+        </childnode>
+        <childnode refid="2330" relation="include">
+        </childnode>
+        <childnode refid="2334" relation="include">
+        </childnode>
+      </node>
+      <node id="2329">
+        <label>ComGLab/Source/SP2_Scene.cpp</label>
+        <link refid="SP2__Scene_8cpp"/>
+      </node>
+      <node id="2328">
+        <label>ComGLab/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="2327">
+        <label>ComGLab/Source/SP2_Scene.h</label>
+        <link refid="SP2__Scene_8h"/>
+        <childnode refid="2328" relation="include">
+        </childnode>
+        <childnode refid="2329" relation="include">
+        </childnode>
+      </node>
+      <node id="2334">
+        <label>ComGLab/Source/WeaponSystem.cpp</label>
+        <link refid="WeaponSystem_8cpp"/>
+      </node>
+      <node id="2332">
+        <label>ComGLab/Source/RobotManager.cpp</label>
+        <link refid="RobotManager_8cpp"/>
+      </node>
+      <node id="2330">
+        <label>ComGLab/Source/Robot.h</label>
+        <link refid="Robot_8h"/>
+        <childnode refid="2327" relation="include">
+        </childnode>
+        <childnode refid="2331" relation="include">
+        </childnode>
+        <childnode refid="2333" relation="include">
+        </childnode>
+        <childnode refid="2329" relation="include">
+        </childnode>
+      </node>
+      <node id="2331">
+        <label>ComGLab/Source/RobotManager.h</label>
+        <link refid="RobotManager_8h"/>
+        <childnode refid="2327" relation="include">
+        </childnode>
+        <childnode refid="2332" relation="include">
+        </childnode>
+      </node>
+      <node id="2333">
+        <label>ComGLab/Source/Robot.cpp</label>
+        <link refid="Robot_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classWeaponSystem" prot="public">WeaponSystem</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_WEAPONSYSTEM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_WEAPONSYSTEM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Raycast_8h" kindref="compound">RayCast.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="classWeaponSystem" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classWeaponSystem" kindref="compound">WeaponSystem</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10" refid="classWeaponSystem_1a332405bf43da81a3be0f7ec967b57230" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classWeaponSystem_1a332405bf43da81a3be0f7ec967b57230" kindref="member">WeaponSystem</ref>(){};</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classWeaponSystem_1a8d172b8401719296f5fcce169f15f891" kindref="member">~WeaponSystem</ref>();</highlight></codeline>
+<codeline lineno="12" refid="classWeaponSystem_1abf033a8b540f147675c1f4620d67554a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::list&lt;RayCast&gt;<sp/><ref refid="classWeaponSystem_1abf033a8b540f147675c1f4620d67554a" kindref="member">BulletList</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classWeaponSystem_1a66aa47e78dd93edc708236ba4bc0c288" kindref="member">IncrementPosition</ref>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classWeaponSystem_1a4c149823fee5be2cc5ee8f19cf8760d8" kindref="member">CleanUp</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classWeaponSystem_1a92124c3a05ebf38514c7455cc3f2fcb0" kindref="member">GetLength</ref>(<ref refid="classRayCast" kindref="compound">RayCast</ref><sp/>Ray);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classWeaponSystem_1a233da9c15e711ac1f5ce5fcf2945d91f" kindref="member">ClearList</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classWeaponSystem_1ae014e0236d0f8a401a0ec848b25a2896" kindref="member">SetStats</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wepVal);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classWeaponSystem_1a85863154bde71142bbe5baa144cd729f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classWeaponSystem_1a85863154bde71142bbe5baa144cd729f" kindref="member">ReloadTime</ref>;</highlight></codeline>
+<codeline lineno="20" refid="classWeaponSystem_1a82a183194516fbcddfb7a2fd70139e1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classWeaponSystem_1a82a183194516fbcddfb7a2fd70139e1f" kindref="member">RateOfFire</ref>;</highlight></codeline>
+<codeline lineno="21" refid="classWeaponSystem_1a1b10c3a982b00f3eb8141d495d35de37" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classWeaponSystem_1a1b10c3a982b00f3eb8141d495d35de37" kindref="member">Damage</ref>;</highlight></codeline>
+<codeline lineno="22" refid="classWeaponSystem_1a9d8d2b48191e7acbfdb92e4869bec755" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classWeaponSystem_1a9d8d2b48191e7acbfdb92e4869bec755" kindref="member">Speed</ref>;</highlight></codeline>
+<codeline lineno="23" refid="classWeaponSystem_1a408c7014b033103d043f4ddc18becf69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classWeaponSystem_1a408c7014b033103d043f4ddc18becf69" kindref="member">MaxAmmo</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26" refid="classWeaponSystem_1ac11d8d279548ca11c6783695d7af2b4a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="classWeaponSystem_1ac11d8d279548ca11c6783695d7af2b4a" kindref="member">MaxBulletCount</ref><sp/>=<sp/>100;</highlight></codeline>
+<codeline lineno="27" refid="classWeaponSystem_1a44426b0d147133364ed27d0592bfa919" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="classWeaponSystem_1a44426b0d147133364ed27d0592bfa919" kindref="member">MaxDist</ref><sp/>=<sp/>10000;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="ComGLab/Source/WeaponSystem.h"/>
+  </compounddef>
+</doxygen>

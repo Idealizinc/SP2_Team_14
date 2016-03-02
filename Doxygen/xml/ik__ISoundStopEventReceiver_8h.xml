@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ik__ISoundStopEventReceiver_8h" kind="file" language="C++">
+    <compoundname>ik_ISoundStopEventReceiver.h</compoundname>
+    <includes refid="ik__IRefCounted_8h" local="yes">ik_IRefCounted.h</includes>
+    <includes refid="ik__SAudioStreamFormat_8h" local="yes">ik_SAudioStreamFormat.h</includes>
+    <includedby refid="irrKlang_8h" local="yes">irrKlang-1.5.0/include/irrKlang.h</includedby>
+    <incdepgraph>
+      <node id="2772">
+        <label>ik_IRefCounted.h</label>
+        <link refid="ik__IRefCounted_8h"/>
+        <childnode refid="2773" relation="include">
+        </childnode>
+      </node>
+      <node id="2775">
+        <label>ik_SAudioStreamFormat.h</label>
+        <link refid="ik__SAudioStreamFormat_8h"/>
+        <childnode refid="2772" relation="include">
+        </childnode>
+      </node>
+      <node id="2774">
+        <label>wchar.h</label>
+      </node>
+      <node id="2773">
+        <label>ik_irrKlangTypes.h</label>
+        <link refid="ik__irrKlangTypes_8h"/>
+        <childnode refid="2774" relation="include">
+        </childnode>
+      </node>
+      <node id="2771">
+        <label>irrKlang-1.5.0/include/ik_ISoundStopEventReceiver.h</label>
+        <link refid="ik_ISoundStopEventReceiver.h"/>
+        <childnode refid="2772" relation="include">
+        </childnode>
+        <childnode refid="2775" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2782">
+        <label>ComGLab/Source/Particle.cpp</label>
+        <link refid="Particle_8cpp"/>
+      </node>
+      <node id="2783">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/ikpMP3.cpp</label>
+        <link refid="ikpMP3_8cpp"/>
+      </node>
+      <node id="2777">
+        <label>irrKlang-1.5.0/include/irrKlang.h</label>
+        <link refid="irrKlang_8h"/>
+        <childnode refid="2778" relation="include">
+        </childnode>
+        <childnode refid="2781" relation="include">
+        </childnode>
+        <childnode refid="2783" relation="include">
+        </childnode>
+      </node>
+      <node id="2780">
+        <label>ComGLab/Source/SP2_Scene.cpp</label>
+        <link refid="SP2__Scene_8cpp"/>
+      </node>
+      <node id="2779">
+        <label>ComGLab/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="2778">
+        <label>ComGLab/Source/SP2_Scene.h</label>
+        <link refid="SP2__Scene_8h"/>
+        <childnode refid="2779" relation="include">
+        </childnode>
+        <childnode refid="2780" relation="include">
+        </childnode>
+      </node>
+      <node id="2781">
+        <label>ComGLab/Source/Particle.h</label>
+        <link refid="Particle_8h"/>
+        <childnode refid="2779" relation="include">
+        </childnode>
+        <childnode refid="2782" relation="include">
+        </childnode>
+      </node>
+      <node id="2776">
+        <label>irrKlang-1.5.0/include/ik_ISoundStopEventReceiver.h</label>
+        <link refid="ik_ISoundStopEventReceiver.h"/>
+        <childnode refid="2777" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classirrklang_1_1ISoundStopEventReceiver" prot="public">irrklang::ISoundStopEventReceiver</innerclass>
+    <innernamespace refid="namespaceirrklang">irrklang</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2002-2014<sp/>Nikolaus<sp/>Gebhardt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>&quot;irrKlang&quot;<sp/>library.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>For<sp/>conditions<sp/>of<sp/>distribution<sp/>and<sp/>use,<sp/>see<sp/>copyright<sp/>notice<sp/>in<sp/>irrKlang.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__I_IRRKLANG_SOUND_STOP_EVENT_RECEIVER_H_INCLUDED__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__I_IRRKLANG_SOUND_STOP_EVENT_RECEIVER_H_INCLUDED__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ik__IRefCounted_8h" kindref="compound">ik_IRefCounted.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ik__SAudioStreamFormat_8h" kindref="compound">ik_SAudioStreamFormat.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceirrklang" kindref="compound">irrklang</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="namespaceirrklang_1a17ebb006afe78ab6502a1e3d18083522" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespaceirrklang_1a17ebb006afe78ab6502a1e3d18083522" kindref="member">E_STOP_EVENT_CAUSE</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20" refid="namespaceirrklang_1a17ebb006afe78ab6502a1e3d18083522ac77937ae9e225a3a42775bc086e93158" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1a17ebb006afe78ab6502a1e3d18083522ac77937ae9e225a3a42775bc086e93158" kindref="member">ESEC_SOUND_FINISHED_PLAYING</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="namespaceirrklang_1a17ebb006afe78ab6502a1e3d18083522a5d688aec69b83583382e370a332cdb45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1a17ebb006afe78ab6502a1e3d18083522a5d688aec69b83583382e370a332cdb45" kindref="member">ESEC_SOUND_STOPPED_BY_USER</ref>,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="namespaceirrklang_1a17ebb006afe78ab6502a1e3d18083522a1d582aee4156ea2b5952a314f03a78ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1a17ebb006afe78ab6502a1e3d18083522a1d582aee4156ea2b5952a314f03a78ca" kindref="member">ESEC_SOUND_STOPPED_BY_SOURCE_REMOVAL</ref>,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="namespaceirrklang_1a17ebb006afe78ab6502a1e3d18083522a3ebc8c5fc80207284388d61d2644bd31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceirrklang_1a17ebb006afe78ab6502a1e3d18083522a3ebc8c5fc80207284388d61d2644bd31" kindref="member">ESEC_FORCE_32_BIT</ref><sp/>=<sp/>0x7fffffff</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"></codeline>
+<codeline lineno="41" refid="classirrklang_1_1ISoundStopEventReceiver" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classirrklang_1_1ISoundStopEventReceiver" kindref="compound">ISoundStopEventReceiver</ref></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="classirrklang_1_1ISoundStopEventReceiver_1a26adc3eec345f11286e576e449e6647d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1ISoundStopEventReceiver_1a26adc3eec345f11286e576e449e6647d" kindref="member">~ISoundStopEventReceiver</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classirrklang_1_1ISoundStopEventReceiver_1a8e975104683b71cd45436ae5f8bfaf9f" kindref="member">OnSoundStopped</ref>(<ref refid="classirrklang_1_1ISound" kindref="compound">ISound</ref>*<sp/>sound,<sp/><ref refid="namespaceirrklang_1a17ebb006afe78ab6502a1e3d18083522" kindref="member">E_STOP_EVENT_CAUSE</ref><sp/>reason,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>userData)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>irrklang</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="irrKlang-1.5.0/include/ik_ISoundStopEventReceiver.h"/>
+  </compounddef>
+</doxygen>

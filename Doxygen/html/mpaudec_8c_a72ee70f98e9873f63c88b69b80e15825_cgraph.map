@@ -1,0 +1,9 @@
+<map id="mp_decode_layer2" name="mp_decode_layer2">
+<area shape="rect" id="node2" href="$bits_8c.html#a3d11308e2c23c39139ae637124c8dd9d" title="alloc_table" alt="" coords="203,5,287,32"/>
+<area shape="rect" id="node3" href="$bits_8c.html#a4c9accf71fe52dba23187e83252f2459" title="get_bits" alt="" coords="211,56,279,83"/>
+<area shape="rect" id="node6" href="$mpaudec_8c.html#ace09b3a4500ca2aea564ee747aaa804a" title="l1_unscale" alt="" coords="203,107,287,133"/>
+<area shape="rect" id="node7" href="$mpaudec_8c.html#a60ca1fa363b8401e9a27bacf3f679d21" title="l2_select_table" alt="" coords="191,157,300,184"/>
+<area shape="rect" id="node8" href="$mpaudec_8c.html#a4d72303722fb4254bd6015f0d3be24bc" title="l2_unscale_group" alt="" coords="184,208,307,235"/>
+<area shape="rect" id="node4" href="$bits_8c.html#a1ab74f16c44ad8762a384924368175e7" title="show_bits" alt="" coords="355,31,435,57"/>
+<area shape="rect" id="node5" href="$bits_8c.html#aea74eea48a18a3731b052ac530f6afce" title="skip_bits" alt="" coords="357,81,432,108"/>
+</map>

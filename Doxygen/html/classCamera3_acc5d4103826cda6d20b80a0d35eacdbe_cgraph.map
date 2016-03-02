@@ -1,0 +1,11 @@
+<map id="Camera3::Update" name="Camera3::Update">
+<area shape="rect" id="node2" href="$structBoundary.html#ac8729f6b5ec80c5af1151892c0a3e9b8" title="Boundary::BoundaryCheck" alt="" coords="415,5,592,32"/>
+<area shape="rect" id="node3" href="$classCamera3.html#a99440cc4eb40bfc3bbad15bfe08c8a55" title="Camera3::cameraMovement2" alt="" coords="176,107,367,133"/>
+<area shape="rect" id="node7" href="$classCamera3.html#a81897b566fc3a2142c40276eb7c6a57b" title="Camera3::rotateCamera" alt="" coords="423,208,583,235"/>
+<area shape="rect" id="node4" href="$namespaceMath.html#ac04b987cc6c574a059e68cb58f58c09a" title="Converts from degrees to radians. " alt="" coords="640,95,795,121"/>
+<area shape="rect" id="node5" href="$classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe" title="Application::IsKeyPressed" alt="" coords="416,107,591,133"/>
+<area shape="rect" id="node6" href="$classCamera3.html#ac5d3985b326b8334208c9a12741c5dc3" title="Camera3::jump" alt="" coords="448,157,559,184"/>
+<area shape="rect" id="node8" href="$namespaceMath.html#af8dc69787ee8df1ea409e97f53fce3cb" title="Keeps a value between a min and max point. If it goes to low, it will become the min. If the value gets too high, it will become the max. " alt="" coords="669,183,765,209"/>
+<area shape="rect" id="node9" href="$structVector3.html#aa1cdc5357009b47fe585ddd61e263aad" title="Cross product of 2 vectors. " alt="" coords="663,233,772,260"/>
+<area shape="rect" id="node10" href="$structVector3.html#afa5e0c801fc2c8a820a54ea99302fe08" title="Vector3 default constructor. " alt="" coords="843,233,963,260"/>
+</map>

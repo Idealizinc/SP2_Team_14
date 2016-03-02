@@ -1,8 +1,24 @@
+/****************************************************************************/
+/*!
+\file Application.h
+\author Wen Sheng Tang
+\par email: tang_wen_sheng\@nyp.edu.sg
+\brief
+Header file that contains the class to run the application
+*/
+/****************************************************************************/
+
 #ifndef APPLICATION_H
 #define APPLICATION_H
 
 #include "timer.h"
-#include "SharedData.h"
+
+/****************************************************************************/
+/*!
+Class Application:
+\brief Defines the methods used to run the Application and define key pressed
+*/
+/****************************************************************************/
 
 class Application
 {

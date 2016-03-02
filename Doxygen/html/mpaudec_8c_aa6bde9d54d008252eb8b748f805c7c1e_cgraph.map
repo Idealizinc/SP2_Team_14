@@ -1,0 +1,20 @@
+<map id="mp_decode_layer3" name="mp_decode_layer3">
+<area shape="rect" id="node2" href="$mpaudec_8c.html#aeb64a1031552d0031c4b3e32e5260ff3" title="compute_antialias" alt="" coords="197,5,323,32"/>
+<area shape="rect" id="node3" href="$mpaudec_8c.html#acf918d4b847c8a23d9cb38db467c7483" title="compute_imdct" alt="" coords="205,56,315,83"/>
+<area shape="rect" id="node6" href="$mpaudec_8c.html#a34bde35be4bc67de1fd03285c3729de4" title="compute_stereo" alt="" coords="203,107,317,133"/>
+<area shape="rect" id="node7" href="$mpaudec_8c.html#a19901913c3051acd8692540101edd707" title="exponents_from_scale\l_factors" alt="" coords="184,158,336,199"/>
+<area shape="rect" id="node8" href="$bits_8c.html#a4c9accf71fe52dba23187e83252f2459" title="get_bits" alt="" coords="539,275,607,301"/>
+<area shape="rect" id="node10" href="$bits_8c.html#aea74eea48a18a3731b052ac530f6afce" title="skip_bits" alt="" coords="657,364,732,391"/>
+<area shape="rect" id="node11" href="$bits_8c.html#aa3797eab0bbe953c41e8a070aa3a4dbc" title="get_bits_count" alt="" coords="384,477,491,504"/>
+<area shape="rect" id="node12" href="$mpaudec_8c.html#a3bb107475a04ad73ab8f45dd8f1dbc44" title="get_bitsz" alt="" coords="400,224,475,251"/>
+<area shape="rect" id="node13" href="$mpaudec_8c.html#aa123e4d670f1d03b262749f6d2134630" title="huffman_decode" alt="" coords="202,325,318,352"/>
+<area shape="rect" id="node16" href="$mpaudec_8c.html#acafc5e389fb92f6955d3449abd7187b2" title="lsf_sf_expand" alt="" coords="209,553,311,580"/>
+<area shape="rect" id="node17" href="$mpaudec_8c.html#ac3d939325754cbedaaf6bd1300da0f81" title="reorder_block" alt="" coords="210,604,310,631"/>
+<area shape="rect" id="node18" href="$mpaudec_8c.html#ab3d38c0057af45f5edb7f6dc158ede46" title="seek_to_maindata" alt="" coords="196,503,324,529"/>
+<area shape="rect" id="node4" href="$mpaudec_8c.html#a537c21d3e9b6a3435fd1dd884145b853" title="imdct12" alt="" coords="403,31,471,57"/>
+<area shape="rect" id="node5" href="$mpaudec_8c.html#a8e0f45791456c07ffa41f0dacd94f152" title="imdct36" alt="" coords="403,81,471,108"/>
+<area shape="rect" id="node9" href="$bits_8c.html#a1ab74f16c44ad8762a384924368175e7" title="show_bits" alt="" coords="655,288,735,315"/>
+<area shape="rect" id="node14" href="$bits_8c.html#ad9d1cef202cce95b0fd843505647ae2c" title="get_vlc" alt="" coords="541,364,604,391"/>
+<area shape="rect" id="node15" href="$mpaudec_8c.html#aa551ba45abc3f6547465227e7c0f084d" title="l3_unscale" alt="" coords="395,325,479,352"/>
+<area shape="rect" id="node19" href="$bits_8c.html#a82a721f07b4c8c18282532ceeb0b76d3" title="init GetBitContext. " alt="" coords="391,528,483,555"/>
+</map>

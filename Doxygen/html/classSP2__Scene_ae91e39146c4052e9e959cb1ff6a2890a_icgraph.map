@@ -1,0 +1,9 @@
+<map id="SP2_Scene::RenderImageOnScreen" name="SP2_Scene::RenderImageOnScreen">
+<area shape="rect" id="node2" href="$classSP2__Scene.html#a3fcef22a72e71bd29f02567c4a92ce61" title="SP2_Scene::Render" alt="" coords="715,88,855,115"/>
+<area shape="rect" id="node3" href="$classSP2__Scene.html#a84a5528561c5696e8f2161da2820a419" title="SP2_Scene::RenderGateText" alt="" coords="253,38,446,64"/>
+<area shape="rect" id="node4" href="$classSP2__Scene.html#a68b65e14328ef7b87a9e1c516499ee44" title="SP2_Scene::RenderShip" alt="" coords="266,88,433,115"/>
+<area shape="rect" id="node6" href="$classSP2__Scene.html#a6d8a3b4fea5fd0e17f86bc4f5a8ce315" title="SP2_Scene::RenderTeleporter" alt="" coords="251,139,448,166"/>
+<area shape="rect" id="node7" href="$classSP2__Scene.html#aeb5b6dadeb1ee8d943f2e52e69d6d9e0" title="SP2_Scene::RenderUI" alt="" coords="508,164,660,191"/>
+<area shape="rect" id="node8" href="$classSP2__Scene.html#a6448011a887d25ea57d981ca7753810b" title="SP2_Scene::RenderWepScreen" alt="" coords="245,240,453,267"/>
+<area shape="rect" id="node5" href="$classSP2__Scene.html#a3cd10ebc989e3f3e2f84f59d74b76ef2" title="SP2_Scene::GameState" alt="" coords="501,88,667,115"/>
+</map>

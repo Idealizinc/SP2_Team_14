@@ -1,0 +1,7 @@
+<map id="mpaudec_init" name="mpaudec_init">
+<area shape="rect" id="node2" href="$bits_8c.html#a17ce557803d3a49257e6fb289d43dfee" title="init_vlc" alt="" coords="167,5,228,32"/>
+<area shape="rect" id="node5" href="$mpaudec_8c.html#ad19555572a4583ac8af52fcaf58a2c87" title="int_pow" alt="" coords="164,56,231,83"/>
+<area shape="rect" id="node6" href="$mpaudec_8c.html#a23a825ca0fd958323342fced3275c436" title="int_pow_init" alt="" coords="152,107,243,133"/>
+<area shape="rect" id="node3" href="$bits_8c.html#a452b9ed664f9e1b5ca6e12292e184e32" title="build_table" alt="" coords="291,5,375,32"/>
+<area shape="rect" id="node4" href="$bits_8c.html#a3d11308e2c23c39139ae637124c8dd9d" title="alloc_table" alt="" coords="423,5,507,32"/>
+</map>

@@ -1,0 +1,3 @@
+<map id="SP2_Scene::Exit" name="SP2_Scene::Exit">
+<area shape="rect" id="node2" href="$classirrklang_1_1IRefCounted.html#a869fe3adc6e49e8da105e95837a565b1" title="When you receive an object in irrKlang (for example an ISound using play2D() or play3D()), and you no longer need the object, you have to call drop(). " alt="" coords="176,5,319,47"/>
+</map>

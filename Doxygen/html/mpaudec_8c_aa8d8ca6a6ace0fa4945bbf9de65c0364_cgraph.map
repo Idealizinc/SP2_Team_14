@@ -1,0 +1,6 @@
+<map id="mp_decode_layer1" name="mp_decode_layer1">
+<area shape="rect" id="node2" href="$bits_8c.html#a4c9accf71fe52dba23187e83252f2459" title="get_bits" alt="" coords="192,31,260,57"/>
+<area shape="rect" id="node5" href="$mpaudec_8c.html#ace09b3a4500ca2aea564ee747aaa804a" title="l1_unscale" alt="" coords="184,81,268,108"/>
+<area shape="rect" id="node3" href="$bits_8c.html#a1ab74f16c44ad8762a384924368175e7" title="show_bits" alt="" coords="316,5,396,32"/>
+<area shape="rect" id="node4" href="$bits_8c.html#aea74eea48a18a3731b052ac530f6afce" title="skip_bits" alt="" coords="319,56,393,83"/>
+</map>

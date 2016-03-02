@@ -1,8 +1,24 @@
+/****************************************************************************/
+/*!
+\file RobotManager.h
+\author Ryan Lim Rui An
+\par email: 150577@mymail.nyp.edu.sg
+\brief
+Class that defines the system that manages the robots
+*/
+/****************************************************************************/
 #ifndef _ROBOTMANAGER_H
 #define _ROBOTMANAGER_H
 
 #include <list>
 #include "Robot.h"
+
+/****************************************************************************/
+/*!
+Class RobotManager:
+\brief Defines the methods and variables for managing robots in the scene
+*/
+/****************************************************************************/
 
 class RobotManager
 {

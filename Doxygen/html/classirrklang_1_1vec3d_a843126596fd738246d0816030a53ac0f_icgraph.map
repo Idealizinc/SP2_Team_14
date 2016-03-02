@@ -1,0 +1,5 @@
+<map id="irrklang::vec3d::set" name="irrklang::vec3d::set">
+<area shape="rect" id="node2" href="$classirrklang_1_1vec3d.html#a73e958aac6482aea6d4947d2737b3681" title="Rotates the vector by a specified number of degrees around the Z axis and the specified center..." alt="" coords="184,5,363,32"/>
+<area shape="rect" id="node3" href="$classirrklang_1_1vec3d.html#a3c0df42f68cbbec6506091756d518c18" title="Rotates the vector by a specified number of degrees around the Y axis and the specified center..." alt="" coords="185,56,361,83"/>
+<area shape="rect" id="node4" href="$classirrklang_1_1vec3d.html#aa619d2ed5f8e992f5ec60d7b262a0108" title="Rotates the vector by a specified number of degrees around the X axis and the specified center..." alt="" coords="184,107,363,133"/>
+</map>

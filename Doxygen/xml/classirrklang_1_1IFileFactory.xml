@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classirrklang_1_1IFileFactory" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>irrklang::IFileFactory</compoundname>
+    <basecompoundref refid="classirrklang_1_1IRefCounted" prot="public" virt="virtual">irrklang::IRefCounted</basecompoundref>
+    <includes refid="ik__IFileFactory_8h" local="no">ik_IFileFactory.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classirrklang_1_1IFileFactory_1ae9595d4a1c5142cbf710ee99ccd7148e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual irrklang::IFileFactory::~IFileFactory</definition>
+        <argsstring>()</argsstring>
+        <name>~IFileFactory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_IFileFactory.h" line="24" column="1" bodyfile="irrKlang-1.5.0/include/ik_IFileFactory.h" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1IFileFactory_1abe09d8c9dadf1cfd45a63c733a2f910c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classirrklang_1_1IFileReader" kindref="compound">IFileReader</ref> *</type>
+        <definition>virtual IFileReader* irrklang::IFileFactory::createFileReader</definition>
+        <argsstring>(const ik_c8 *filename)=0</argsstring>
+        <name>createFileReader</name>
+        <param>
+          <type>const <ref refid="namespaceirrklang_1af179ad966eb79d01f6d1cf8927087449" kindref="member">ik_c8</ref> *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Opens a file for read access. </para>        </briefdescription>
+        <detaileddescription>
+<para>Derive your own class from <ref refid="classirrklang_1_1IFileFactory" kindref="compound">IFileFactory</ref>, overwrite this method and return your own implemented <ref refid="classirrklang_1_1IFileReader" kindref="compound">IFileReader</ref> to overwrite file access of irrKlang. Use <ref refid="classirrklang_1_1ISoundEngine_1ad7c48f9d7ccc6f60adb1b3f024f9b189" kindref="member">ISoundEngine::addFileFactory()</ref> to let irrKlang know about your class. Example code can be found in the tutorial 04.OverrideFileAccess. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of file to open. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a pointer to the created file interface. The returned pointer should be dropped when no longer needed. See <ref refid="classirrklang_1_1IRefCounted_1a869fe3adc6e49e8da105e95837a565b1" kindref="member">IRefCounted::drop()</ref> for more information. Returns 0 if file cannot be opened. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_IFileFactory.h" line="35" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface to overwrite file access in irrKlang. </para>    </briefdescription>
+    <detaileddescription>
+<para>Derive your own class from <ref refid="classirrklang_1_1IFileFactory" kindref="compound">IFileFactory</ref>, overwrite the <ref refid="classirrklang_1_1IFileFactory_1abe09d8c9dadf1cfd45a63c733a2f910c" kindref="member">createFileReader()</ref> method and return your own implemented <ref refid="classirrklang_1_1IFileReader" kindref="compound">IFileReader</ref> to overwrite file access of irrKlang. Use <ref refid="classirrklang_1_1ISoundEngine_1ad7c48f9d7ccc6f60adb1b3f024f9b189" kindref="member">ISoundEngine::addFileFactory()</ref> to let irrKlang know about your class. Example code can be found in the tutorial 04.OverrideFileAccess. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="429">
+        <label>irrklang::IFileFactory</label>
+        <link refid="classirrklang_1_1IFileFactory"/>
+        <childnode refid="430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="430">
+        <label>irrklang::IRefCounted</label>
+        <link refid="classirrklang_1_1IRefCounted"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="433">
+        <label>int</label>
+      </node>
+      <node id="431">
+        <label>irrklang::IFileFactory</label>
+        <link refid="classirrklang_1_1IFileFactory"/>
+        <childnode refid="432" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="432">
+        <label>irrklang::IRefCounted</label>
+        <link refid="classirrklang_1_1IRefCounted"/>
+        <childnode refid="433" relation="usage">
+          <edgelabel>ReferenceCounter</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="irrKlang-1.5.0/include/ik_IFileFactory.h" line="21" column="1" bodyfile="irrKlang-1.5.0/include/ik_IFileFactory.h" bodystart="20" bodyend="36"/>
+    <listofallmembers>
+      <member refid="classirrklang_1_1IFileFactory_1abe09d8c9dadf1cfd45a63c733a2f910c" prot="public" virt="pure-virtual"><scope>irrklang::IFileFactory</scope><name>createFileReader</name></member>
+      <member refid="classirrklang_1_1IRefCounted_1a869fe3adc6e49e8da105e95837a565b1" prot="public" virt="non-virtual"><scope>irrklang::IFileFactory</scope><name>drop</name></member>
+      <member refid="classirrklang_1_1IRefCounted_1a737b09ee717069b964a3bd0451690388" prot="public" virt="non-virtual"><scope>irrklang::IFileFactory</scope><name>grab</name></member>
+      <member refid="classirrklang_1_1IRefCounted_1ad9d20b84a525d7bc07e44b556fbf7da6" prot="public" virt="non-virtual"><scope>irrklang::IFileFactory</scope><name>IRefCounted</name></member>
+      <member refid="classirrklang_1_1IFileFactory_1ae9595d4a1c5142cbf710ee99ccd7148e" prot="public" virt="virtual"><scope>irrklang::IFileFactory</scope><name>~IFileFactory</name></member>
+      <member refid="classirrklang_1_1IRefCounted_1a7fe8953e57adac9bcd28a94d3b251886" prot="public" virt="virtual"><scope>irrklang::IFileFactory</scope><name>~IRefCounted</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

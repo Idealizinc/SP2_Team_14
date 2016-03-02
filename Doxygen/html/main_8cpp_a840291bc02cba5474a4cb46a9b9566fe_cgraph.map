@@ -1,0 +1,16 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$classApplication.html#a9d410604b39b8374a884b1f2a1f2a5ba" title="Application::Exit" alt="" coords="104,5,221,32"/>
+<area shape="rect" id="node3" href="$classApplication.html#a276388f7090c0a2b1c8b16cf033b969d" title="Application::Init" alt="" coords="107,56,218,83"/>
+<area shape="rect" id="node6" href="$classApplication.html#aaf09cd6cb412086dc039e28cdb059f0d" title="Application::Run" alt="" coords="104,259,221,285"/>
+<area shape="rect" id="node4" href="$Application_8cpp.html#a6e6d1771a9242858811be0a3569838fa" title="error_callback" alt="" coords="312,5,415,32"/>
+<area shape="rect" id="node5" href="$Application_8cpp.html#aadcee9765075e232ca0720f80a76ad37" title="resize_callback" alt="" coords="307,56,419,83"/>
+<area shape="rect" id="node7" href="$classScene.html#ac3c4677dfd702a3ffd5ffadd3f1ac478" title="Scene::Init" alt="" coords="321,107,405,133"/>
+<area shape="rect" id="node8" href="$classStopWatch.html#a23301f735a2e3190435e39c9fd70cdf2" title="StopWatch::startTimer" alt="" coords="287,157,440,184"/>
+<area shape="rect" id="node9" href="$classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe" title="Application::IsKeyPressed" alt="" coords="276,208,451,235"/>
+<area shape="rect" id="node10" href="$classScene.html#af5c6bcf2185087fb32c27fb8f6a18d91" title="Scene::Update" alt="" coords="309,259,417,285"/>
+<area shape="rect" id="node11" href="$classStopWatch.html#ac8be1626396d1a5ca414f74349d59eb2" title="StopWatch::getElapsedTime" alt="" coords="269,309,457,336"/>
+<area shape="rect" id="node13" href="$classScene.html#a9319090be5d18e87f1e83dbbf191204f" title="Scene::Render" alt="" coords="309,360,417,387"/>
+<area shape="rect" id="node14" href="$classStopWatch.html#a2cd0856fc87a40038edfd66d784be8b4" title="StopWatch::waitUntil" alt="" coords="291,411,435,437"/>
+<area shape="rect" id="node15" href="$classScene.html#aae8e24654ef98c79961c2b804b12852c" title="Scene::Exit" alt="" coords="318,461,409,488"/>
+<area shape="rect" id="node12" href="$classStopWatch.html#a2e61acbf46638eb3275cc8a7c1ea768d" title="StopWatch::LIToSecs" alt="" coords="505,309,655,336"/>
+</map>

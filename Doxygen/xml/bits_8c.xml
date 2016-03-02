@@ -1,0 +1,709 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="bits_8c" kind="file" language="C++">
+    <compoundname>bits.c</compoundname>
+    <includes refid="internal_8h" local="yes">internal.h</includes>
+    <incdepgraph>
+      <node id="2918">
+        <label>internal.h</label>
+        <link refid="internal_8h"/>
+        <childnode refid="2919" relation="include">
+        </childnode>
+        <childnode refid="2920" relation="include">
+        </childnode>
+        <childnode refid="2921" relation="include">
+        </childnode>
+        <childnode refid="2922" relation="include">
+        </childnode>
+        <childnode refid="2923" relation="include">
+        </childnode>
+        <childnode refid="2924" relation="include">
+        </childnode>
+        <childnode refid="2925" relation="include">
+        </childnode>
+        <childnode refid="2926" relation="include">
+        </childnode>
+        <childnode refid="2927" relation="include">
+        </childnode>
+      </node>
+      <node id="2927">
+        <label>assert.h</label>
+      </node>
+      <node id="2919">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2924">
+        <label>stddef.h</label>
+      </node>
+      <node id="2925">
+        <label>mpaudec.h</label>
+        <link refid="mpaudec_8h"/>
+      </node>
+      <node id="2921">
+        <label>string.h</label>
+      </node>
+      <node id="2917">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c</label>
+        <link refid="bits.c"/>
+        <childnode refid="2918" relation="include">
+        </childnode>
+      </node>
+      <node id="2923">
+        <label>math.h</label>
+      </node>
+      <node id="2922">
+        <label>ctype.h</label>
+      </node>
+      <node id="2920">
+        <label>stdio.h</label>
+      </node>
+      <node id="2926">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="bits_8c_1a17f72ce482f978afd0ebd4167b2764bb" prot="public" static="no">
+        <name>GET_DATA</name>
+        <param><defname>v</defname></param>
+        <param><defname>table</defname></param>
+        <param><defname>i</defname></param>
+        <param><defname>wrap</defname></param>
+        <param><defname>size</defname></param>
+        <initializer>{\
+    const uint8_t *ptr = (const uint8_t *)table + i * wrap;\
+    switch(size) {\
+    case 1:\
+        v = *(const uint8_t *)ptr;\
+        break;\
+    case 2:\
+        v = *(const uint16_t *)ptr;\
+        break;\
+    default:\
+        v = *(const uint32_t *)ptr;\
+        break;\
+    }\
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" line="79" column="9" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" bodystart="79" bodyend="-1"/>
+        <referencedby refid="bits_8c_1a452b9ed664f9e1b5ca6e12292e184e32" compoundref="bits_8c" startline="111" endline="201">build_table</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="bits_8c_1a82a721f07b4c8c18282532ceeb0b76d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_get_bits</definition>
+        <argsstring>(GetBitContext *s, const uint8_t *buffer, int bit_size)</argsstring>
+        <name>init_get_bits</name>
+        <param>
+          <type><ref refid="structGetBitContext" kindref="compound">GetBitContext</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bit_size</declname>
+        </param>
+        <briefdescription>
+<para>init <ref refid="structGetBitContext" kindref="compound">GetBitContext</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bitstream buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bit_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of the buffer in bits </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" line="30" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" bodystart="30" bodyend="36"/>
+        <references refid="structGetBitContext_1ad3bbe8f5d0b9e28a1070396fac5725d8" compoundref="internal_8h" startline="59">GetBitContext::buffer</references>
+        <references refid="structGetBitContext_1a033a4d63cfa56348981356df95092af7" compoundref="internal_8h" startline="60">GetBitContext::index</references>
+        <references refid="structGetBitContext_1adacaccb7e1e29f7d0e669659f17a9bfd" compoundref="internal_8h" startline="61">GetBitContext::size_in_bits</references>
+        <referencedby refid="mpaudec_8c_1a2dff7b15a5f55a97729fb3f2d7194e64" compoundref="mpaudec_8c" startline="2258" endline="2310">mp_decode_frame</referencedby>
+        <referencedby refid="mpaudec_8c_1ab3d38c0057af45f5edb7f6dc158ede46" compoundref="mpaudec_8c" startline="1472" endline="1490">seek_to_maindata</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bits_8c_1a1ab74f16c44ad8762a384924368175e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int show_bits</definition>
+        <argsstring>(const GetBitContext *s, int n)</argsstring>
+        <name>show_bits</name>
+        <param>
+          <type>const <ref refid="structGetBitContext" kindref="compound">GetBitContext</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" line="38" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" bodystart="38" bodyend="56"/>
+        <references refid="structGetBitContext_1ad3bbe8f5d0b9e28a1070396fac5725d8" compoundref="internal_8h" startline="59">GetBitContext::buffer</references>
+        <references refid="structGetBitContext_1a033a4d63cfa56348981356df95092af7" compoundref="internal_8h" startline="60">GetBitContext::index</references>
+        <references refid="structGetBitContext_1adacaccb7e1e29f7d0e669659f17a9bfd" compoundref="internal_8h" startline="61">GetBitContext::size_in_bits</references>
+        <referencedby refid="internal_8h_1a4c9accf71fe52dba23187e83252f2459" compoundref="bits_8c" startline="63" endline="68">get_bits</referencedby>
+        <referencedby refid="internal_8h_1ad9d1cef202cce95b0fd843505647ae2c" compoundref="bits_8c" startline="253" endline="273">get_vlc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bits_8c_1aea74eea48a18a3731b052ac530f6afce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void skip_bits</definition>
+        <argsstring>(GetBitContext *s, int n)</argsstring>
+        <name>skip_bits</name>
+        <param>
+          <type><ref refid="structGetBitContext" kindref="compound">GetBitContext</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" line="58" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" bodystart="58" bodyend="61"/>
+        <references refid="structGetBitContext_1a033a4d63cfa56348981356df95092af7" compoundref="internal_8h" startline="60">GetBitContext::index</references>
+        <referencedby refid="internal_8h_1a4c9accf71fe52dba23187e83252f2459" compoundref="bits_8c" startline="63" endline="68">get_bits</referencedby>
+        <referencedby refid="internal_8h_1ad9d1cef202cce95b0fd843505647ae2c" compoundref="bits_8c" startline="253" endline="273">get_vlc</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bits_8c_1a4c9accf71fe52dba23187e83252f2459" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int get_bits</definition>
+        <argsstring>(GetBitContext *s, int n)</argsstring>
+        <name>get_bits</name>
+        <param>
+          <type><ref refid="structGetBitContext" kindref="compound">GetBitContext</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" line="63" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" bodystart="63" bodyend="68"/>
+        <references refid="bits_8c_1a1ab74f16c44ad8762a384924368175e7" compoundref="bits_8c" startline="38" endline="56">show_bits</references>
+        <references refid="bits_8c_1aea74eea48a18a3731b052ac530f6afce" compoundref="bits_8c" startline="58" endline="61">skip_bits</references>
+        <referencedby refid="mpaudec_8c_1a3bb107475a04ad73ab8f45dd8f1dbc44" compoundref="mpaudec_8c" startline="1551" endline="1557">get_bitsz</referencedby>
+        <referencedby refid="mpaudec_8c_1aa123e4d670f1d03b262749f6d2134630" compoundref="mpaudec_8c" startline="1559" endline="1661">huffman_decode</referencedby>
+        <referencedby refid="mpaudec_8c_1a2dff7b15a5f55a97729fb3f2d7194e64" compoundref="mpaudec_8c" startline="2258" endline="2310">mp_decode_frame</referencedby>
+        <referencedby refid="mpaudec_8c_1aa8d8ca6a6ace0fa4945bbf9de65c0364" compoundref="mpaudec_8c" startline="1173" endline="1237">mp_decode_layer1</referencedby>
+        <referencedby refid="mpaudec_8c_1a72ee70f98e9873f63c88b69b80e15825" compoundref="mpaudec_8c" startline="1261" endline="1467">mp_decode_layer2</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bits_8c_1aa3797eab0bbe953c41e8a070aa3a4dbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int get_bits_count</definition>
+        <argsstring>(const GetBitContext *s)</argsstring>
+        <name>get_bits_count</name>
+        <param>
+          <type>const <ref refid="structGetBitContext" kindref="compound">GetBitContext</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" line="70" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" bodystart="70" bodyend="73"/>
+        <references refid="structGetBitContext_1a033a4d63cfa56348981356df95092af7" compoundref="internal_8h" startline="60">GetBitContext::index</references>
+        <referencedby refid="mpaudec_8c_1aa123e4d670f1d03b262749f6d2134630" compoundref="mpaudec_8c" startline="1559" endline="1661">huffman_decode</referencedby>
+        <referencedby refid="mpaudec_8c_1aa6bde9d54d008252eb8b748f805c7c1e" compoundref="mpaudec_8c" startline="1963" endline="2256">mp_decode_layer3</referencedby>
+        <referencedby refid="mpaudec_8c_1ab3d38c0057af45f5edb7f6dc158ede46" compoundref="mpaudec_8c" startline="1472" endline="1490">seek_to_maindata</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bits_8c_1a3d11308e2c23c39139ae637124c8dd9d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int alloc_table</definition>
+        <argsstring>(VLC *vlc, int size)</argsstring>
+        <name>alloc_table</name>
+        <param>
+          <type><ref refid="structVLC" kindref="compound">VLC</ref> *</type>
+          <declname>vlc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" line="96" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" bodystart="96" bodyend="109"/>
+        <references refid="structVLC_1ac36d06bc414af86fbe35c9efb6170fc5" compoundref="internal_8h" startline="69">VLC::bits</references>
+        <references refid="structVLC_1acaf94f3386396a95d3e7042c444a41f7" compoundref="internal_8h" startline="70">VLC::table</references>
+        <references refid="structVLC_1aa13e8ff6ffe730398c69e9fc2d42266f" compoundref="internal_8h" startline="71">VLC::table_allocated</references>
+        <references refid="structVLC_1a5d373c883f68f747b3245733f2884d74" compoundref="internal_8h" startline="71">VLC::table_size</references>
+        <references refid="internal_8h_1a7e70876676d0b52ff7cf93cadf7e24fa" compoundref="internal_8h" startline="66">VLC_TYPE</references>
+        <referencedby refid="bits_8c_1a452b9ed664f9e1b5ca6e12292e184e32" compoundref="bits_8c" startline="111" endline="201">build_table</referencedby>
+        <referencedby refid="mpaudec_8c_1a72ee70f98e9873f63c88b69b80e15825" compoundref="mpaudec_8c" startline="1261" endline="1467">mp_decode_layer2</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bits_8c_1a452b9ed664f9e1b5ca6e12292e184e32" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int build_table</definition>
+        <argsstring>(VLC *vlc, int table_nb_bits, int nb_codes, const void *bits, int bits_wrap, int bits_size, const void *codes, int codes_wrap, int codes_size, uint32_t code_prefix, int n_prefix)</argsstring>
+        <name>build_table</name>
+        <param>
+          <type><ref refid="structVLC" kindref="compound">VLC</ref> *</type>
+          <declname>vlc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>table_nb_bits</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nb_codes</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bits_wrap</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bits_size</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>codes</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>codes_wrap</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>codes_size</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>code_prefix</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n_prefix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" line="111" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" bodystart="111" bodyend="201"/>
+        <references refid="bits_8c_1a3d11308e2c23c39139ae637124c8dd9d" compoundref="bits_8c" startline="96" endline="109">alloc_table</references>
+        <references refid="bits_8c_1a17f72ce482f978afd0ebd4167b2764bb" compoundref="bits_8c" startline="79">GET_DATA</references>
+        <references refid="structVLC_1acaf94f3386396a95d3e7042c444a41f7" compoundref="internal_8h" startline="70">VLC::table</references>
+        <references refid="internal_8h_1a7e70876676d0b52ff7cf93cadf7e24fa" compoundref="internal_8h" startline="66">VLC_TYPE</references>
+        <referencedby refid="internal_8h_1a17ce557803d3a49257e6fb289d43dfee" compoundref="bits_8c" startline="225" endline="245">init_vlc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bits_8c_1a17ce557803d3a49257e6fb289d43dfee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int init_vlc</definition>
+        <argsstring>(VLC *vlc, int nb_bits, int nb_codes, const void *bits, int bits_wrap, int bits_size, const void *codes, int codes_wrap, int codes_size)</argsstring>
+        <name>init_vlc</name>
+        <param>
+          <type><ref refid="structVLC" kindref="compound">VLC</ref> *</type>
+          <declname>vlc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nb_bits</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nb_codes</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bits_wrap</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bits_size</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>codes</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>codes_wrap</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>codes_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" line="225" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" bodystart="225" bodyend="245"/>
+        <references refid="structVLC_1ac36d06bc414af86fbe35c9efb6170fc5" compoundref="internal_8h" startline="69">VLC::bits</references>
+        <references refid="bits_8c_1a452b9ed664f9e1b5ca6e12292e184e32" compoundref="bits_8c" startline="111" endline="201">build_table</references>
+        <references refid="structVLC_1acaf94f3386396a95d3e7042c444a41f7" compoundref="internal_8h" startline="70">VLC::table</references>
+        <references refid="structVLC_1aa13e8ff6ffe730398c69e9fc2d42266f" compoundref="internal_8h" startline="71">VLC::table_allocated</references>
+        <references refid="structVLC_1a5d373c883f68f747b3245733f2884d74" compoundref="internal_8h" startline="71">VLC::table_size</references>
+        <referencedby refid="mpaudec_8h_1a0f2f19b46f286b7a9315b40e46f34227" compoundref="mpaudec_8c" startline="306" endline="496">mpaudec_init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bits_8c_1af5bade5c2576e97e3ce7bdb8b4bf1572" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void free_vlc</definition>
+        <argsstring>(VLC *vlc)</argsstring>
+        <name>free_vlc</name>
+        <param>
+          <type><ref refid="structVLC" kindref="compound">VLC</ref> *</type>
+          <declname>vlc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" line="248" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" bodystart="248" bodyend="251"/>
+        <references refid="structVLC_1acaf94f3386396a95d3e7042c444a41f7" compoundref="internal_8h" startline="70">VLC::table</references>
+      </memberdef>
+      <memberdef kind="function" id="bits_8c_1ad9d1cef202cce95b0fd843505647ae2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int get_vlc</definition>
+        <argsstring>(GetBitContext *s, const VLC *vlc)</argsstring>
+        <name>get_vlc</name>
+        <param>
+          <type><ref refid="structGetBitContext" kindref="compound">GetBitContext</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structVLC" kindref="compound">VLC</ref> *</type>
+          <declname>vlc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" line="253" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c" bodystart="253" bodyend="273"/>
+        <references refid="structVLC_1ac36d06bc414af86fbe35c9efb6170fc5" compoundref="internal_8h" startline="69">VLC::bits</references>
+        <references refid="bits_8c_1a1ab74f16c44ad8762a384924368175e7" compoundref="bits_8c" startline="38" endline="56">show_bits</references>
+        <references refid="bits_8c_1aea74eea48a18a3731b052ac530f6afce" compoundref="bits_8c" startline="58" endline="61">skip_bits</references>
+        <references refid="structVLC_1acaf94f3386396a95d3e7042c444a41f7" compoundref="internal_8h" startline="70">VLC::table</references>
+        <referencedby refid="mpaudec_8c_1aa123e4d670f1d03b262749f6d2134630" compoundref="mpaudec_8c" startline="1559" endline="1661">huffman_decode</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Common<sp/>bit<sp/>i/o<sp/>utils</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(c)<sp/>2000,<sp/>2001<sp/>Fabrice<sp/>Bellard.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>version<sp/>2<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place,<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/><sp/>02111-1307<sp/><sp/>USA</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>Modified<sp/>by<sp/>Matt<sp/>Campbell<sp/>&lt;mattcampbell@pobox.com&gt;<sp/>for<sp/>the<sp/>stand-alone</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>mpaudec<sp/>library.<sp/><sp/>Based<sp/>on<sp/>common.c<sp/>from<sp/>libavcodec.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="internal_8h" kindref="compound">internal.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="internal_8h_1a12c6ecf32fbbd78af680f9cf38d55ef1" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bits_8c_1a82a721f07b4c8c18282532ceeb0b76d3" kindref="member">init_get_bits</ref>(<ref refid="structGetBitContext" kindref="compound">GetBitContext</ref><sp/>*s,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*buffer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bit_size)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>s-&gt;<ref refid="structGetBitContext_1ad3bbe8f5d0b9e28a1070396fac5725d8" kindref="member">buffer</ref>=<sp/>buffer;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>s-&gt;<ref refid="structGetBitContext_1adacaccb7e1e29f7d0e669659f17a9bfd" kindref="member">size_in_bits</ref>=<sp/>bit_size;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>s-&gt;<ref refid="structGetBitContext_1a033a4d63cfa56348981356df95092af7" kindref="member">index</ref>=0;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="internal_8h_1a1ab74f16c44ad8762a384924368175e7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bits_8c_1a1ab74f16c44ad8762a384924368175e7" kindref="member">show_bits</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structGetBitContext" kindref="compound">GetBitContext</ref><sp/>*s,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(s-&gt;<ref refid="structGetBitContext_1adacaccb7e1e29f7d0e669659f17a9bfd" kindref="member">size_in_bits</ref><sp/>-<sp/>s-&gt;<ref refid="structGetBitContext_1a033a4d63cfa56348981356df95092af7" kindref="member">index</ref><sp/>&gt;=<sp/>n);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>s-&gt;<ref refid="structGetBitContext_1a033a4d63cfa56348981356df95092af7" kindref="member">index</ref>;<sp/>i<sp/>&lt;<sp/>s-&gt;index<sp/>+<sp/>n;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>byte_index<sp/>=<sp/>i<sp/>/<sp/>8;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>right_shift<sp/>=<sp/>7<sp/>-<sp/>(i<sp/>%<sp/>8);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>byte<sp/>=<sp/>s-&gt;<ref refid="structGetBitContext_1ad3bbe8f5d0b9e28a1070396fac5725d8" kindref="member">buffer</ref>[byte_index];</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>bit;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>&lt;&lt;=<sp/>1;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(right_shift<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit<sp/>=<sp/>byte<sp/>&amp;<sp/>0x1;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit<sp/>=<sp/>(byte<sp/>&gt;&gt;<sp/>right_shift)<sp/>&amp;<sp/>0x1;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>|=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)bit;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="internal_8h_1aea74eea48a18a3731b052ac530f6afce" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bits_8c_1aea74eea48a18a3731b052ac530f6afce" kindref="member">skip_bits</ref>(<ref refid="structGetBitContext" kindref="compound">GetBitContext</ref><sp/>*s,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>s-&gt;<ref refid="structGetBitContext_1a033a4d63cfa56348981356df95092af7" kindref="member">index</ref><sp/>+=<sp/>n;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="internal_8h_1a4c9accf71fe52dba23187e83252f2459" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bits_8c_1a4c9accf71fe52dba23187e83252f2459" kindref="member">get_bits</ref>(<ref refid="structGetBitContext" kindref="compound">GetBitContext</ref><sp/>*s,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/><ref refid="bits_8c_1a1ab74f16c44ad8762a384924368175e7" kindref="member">show_bits</ref>(s,<sp/>n);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bits_8c_1aea74eea48a18a3731b052ac530f6afce" kindref="member">skip_bits</ref>(s,<sp/>n);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="internal_8h_1aa3797eab0bbe953c41e8a070aa3a4dbc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bits_8c_1aa3797eab0bbe953c41e8a070aa3a4dbc" kindref="member">get_bits_count</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structGetBitContext" kindref="compound">GetBitContext</ref><sp/>*s)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s-&gt;<ref refid="structGetBitContext_1a033a4d63cfa56348981356df95092af7" kindref="member">index</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>VLC<sp/>decoding<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">/*#define<sp/>DEBUG_VLC*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="bits_8c_1a17f72ce482f978afd0ebd4167b2764bb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GET_DATA(v,<sp/>table,<sp/>i,<sp/>wrap,<sp/>size)<sp/>\</highlight></codeline>
+<codeline lineno="80"><highlight class="preprocessor">{\</highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>const<sp/>uint8_t<sp/>*ptr<sp/>=<sp/>(const<sp/>uint8_t<sp/>*)table<sp/>+<sp/>i<sp/>*<sp/>wrap;\</highlight></codeline>
+<codeline lineno="82"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>switch(size)<sp/>{\</highlight></codeline>
+<codeline lineno="83"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>case<sp/>1:\</highlight></codeline>
+<codeline lineno="84"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v<sp/>=<sp/>*(const<sp/>uint8_t<sp/>*)ptr;\</highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;\</highlight></codeline>
+<codeline lineno="86"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>case<sp/>2:\</highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v<sp/>=<sp/>*(const<sp/>uint16_t<sp/>*)ptr;\</highlight></codeline>
+<codeline lineno="88"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;\</highlight></codeline>
+<codeline lineno="89"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>default:\</highlight></codeline>
+<codeline lineno="90"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v<sp/>=<sp/>*(const<sp/>uint32_t<sp/>*)ptr;\</highlight></codeline>
+<codeline lineno="91"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;\</highlight></codeline>
+<codeline lineno="92"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}\</highlight></codeline>
+<codeline lineno="93"><highlight class="preprocessor">}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="bits_8c_1a3d11308e2c23c39139ae637124c8dd9d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bits_8c_1a3d11308e2c23c39139ae637124c8dd9d" kindref="member">alloc_table</ref>(<ref refid="structVLC" kindref="compound">VLC</ref><sp/>*vlc,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>index<sp/>=<sp/>vlc-&gt;<ref refid="structVLC_1a5d373c883f68f747b3245733f2884d74" kindref="member">table_size</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>vlc-&gt;<ref refid="structVLC_1a5d373c883f68f747b3245733f2884d74" kindref="member">table_size</ref><sp/>+=<sp/>size;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vlc-&gt;<ref refid="structVLC_1a5d373c883f68f747b3245733f2884d74" kindref="member">table_size</ref><sp/>&gt;<sp/>vlc-&gt;<ref refid="structVLC_1aa13e8ff6ffe730398c69e9fc2d42266f" kindref="member">table_allocated</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vlc-&gt;<ref refid="structVLC_1aa13e8ff6ffe730398c69e9fc2d42266f" kindref="member">table_allocated</ref><sp/>+=<sp/>(1<sp/>&lt;&lt;<sp/>vlc-&gt;<ref refid="structVLC_1ac36d06bc414af86fbe35c9efb6170fc5" kindref="member">bits</ref>);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vlc-&gt;<ref refid="structVLC_1acaf94f3386396a95d3e7042c444a41f7" kindref="member">table</ref><sp/>=<sp/>realloc(vlc-&gt;<ref refid="structVLC_1acaf94f3386396a95d3e7042c444a41f7" kindref="member">table</ref>,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="internal_8h_1a7e70876676d0b52ff7cf93cadf7e24fa" kindref="member">VLC_TYPE</ref>)<sp/>*<sp/>2<sp/>*<sp/>vlc-&gt;<ref refid="structVLC_1aa13e8ff6ffe730398c69e9fc2d42266f" kindref="member">table_allocated</ref>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!vlc-&gt;<ref refid="structVLC_1acaf94f3386396a95d3e7042c444a41f7" kindref="member">table</ref>)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>index;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="bits_8c_1a452b9ed664f9e1b5ca6e12292e184e32" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bits_8c_1a452b9ed664f9e1b5ca6e12292e184e32" kindref="member">build_table</ref>(<ref refid="structVLC" kindref="compound">VLC</ref><sp/>*vlc,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>table_nb_bits,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nb_codes,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*bits,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bits_wrap,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bits_size,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*codes,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>codes_wrap,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>codes_size,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>code_prefix,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_prefix)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>j,<sp/>k,<sp/>n,<sp/>table_size,<sp/>table_index,<sp/>nb,<sp/>n1,<sp/>index;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>code;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="internal_8h_1a7e70876676d0b52ff7cf93cadf7e24fa" kindref="member">VLC_TYPE</ref><sp/>(*table)[2];</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>table_size<sp/>=<sp/>1<sp/>&lt;&lt;<sp/>table_nb_bits;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>table_index<sp/>=<sp/><ref refid="bits_8c_1a3d11308e2c23c39139ae637124c8dd9d" kindref="member">alloc_table</ref>(vlc,<sp/>table_size);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUG_VLC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;new<sp/>table<sp/>index=%d<sp/>size=%d<sp/>code_prefix=%x<sp/>n=%d\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>table_index,<sp/>table_size,<sp/>code_prefix,<sp/>n_prefix);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(table_index<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>table<sp/>=<sp/>&amp;vlc-&gt;<ref refid="structVLC_1acaf94f3386396a95d3e7042c444a41f7" kindref="member">table</ref>[table_index];</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0;i&lt;table_size;i++)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>table[i][1]<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">/*bits*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>table[i][0]<sp/>=<sp/>-1;<sp/></highlight><highlight class="comment">/*codes*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>first<sp/>pass:<sp/>map<sp/>codes<sp/>and<sp/>compute<sp/>auxillary<sp/>table<sp/>sizes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0;i&lt;nb_codes;i++)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bits_8c_1a17f72ce482f978afd0ebd4167b2764bb" kindref="member">GET_DATA</ref>(n,<sp/>bits,<sp/>i,<sp/>bits_wrap,<sp/>bits_size);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bits_8c_1a17f72ce482f978afd0ebd4167b2764bb" kindref="member">GET_DATA</ref>(code,<sp/>codes,<sp/>i,<sp/>codes_wrap,<sp/>codes_size);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>we<sp/>accept<sp/>tables<sp/>with<sp/>holes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>&lt;=<sp/>0)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(DEBUG_VLC)<sp/>&amp;&amp;<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;i=%d<sp/>n=%d<sp/>code=0x%x\n&quot;</highlight><highlight class="normal">,<sp/>i,<sp/>n,<sp/>code);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>if<sp/>code<sp/>matches<sp/>the<sp/>prefix,<sp/>it<sp/>is<sp/>in<sp/>the<sp/>table<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/>-=<sp/>n_prefix;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>(code<sp/>&gt;&gt;<sp/>n)<sp/>==<sp/>code_prefix)<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>&lt;=<sp/>table_nb_bits)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>no<sp/>need<sp/>to<sp/>add<sp/>another<sp/>table<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j<sp/>=<sp/>(code<sp/>&lt;&lt;<sp/>(table_nb_bits<sp/>-<sp/>n))<sp/>&amp;<sp/>(table_size<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nb<sp/>=<sp/>1<sp/>&lt;&lt;<sp/>(table_nb_bits<sp/>-<sp/>n);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(k=0;k&lt;nb;k++)<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUG_VLC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%4x:<sp/>code=%d<sp/>n=%d\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j,<sp/>i,<sp/>n);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(table[j][1]<sp/></highlight><highlight class="comment">/*bits*/</highlight><highlight class="normal"><sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>table[j][1]<sp/>=<sp/>n;<sp/></highlight><highlight class="comment">/*bits*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>table[j][0]<sp/>=<sp/>i;<sp/></highlight><highlight class="comment">/*code*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j++;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/>-=<sp/>table_nb_bits;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j<sp/>=<sp/>(code<sp/>&gt;&gt;<sp/>n)<sp/>&amp;<sp/>((1<sp/>&lt;&lt;<sp/>table_nb_bits)<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUG_VLC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%4x:<sp/>n=%d<sp/>(subtable)\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j,<sp/>n);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>compute<sp/>table<sp/>size<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n1<sp/>=<sp/>-table[j][1];<sp/></highlight><highlight class="comment">/*bits*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>&gt;<sp/>n1)</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n1<sp/>=<sp/>n;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>table[j][1]<sp/>=<sp/>-n1;<sp/></highlight><highlight class="comment">/*bits*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>second<sp/>pass<sp/>:<sp/>fill<sp/>auxillary<sp/>tables<sp/>recursively<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0;i&lt;table_size;i++)<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/>=<sp/>table[i][1];<sp/></highlight><highlight class="comment">/*bits*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/>=<sp/>-n;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>&gt;<sp/>table_nb_bits)<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/>=<sp/>table_nb_bits;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>table[i][1]<sp/>=<sp/>-n;<sp/></highlight><highlight class="comment">/*bits*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index<sp/>=<sp/><ref refid="bits_8c_1a452b9ed664f9e1b5ca6e12292e184e32" kindref="member">build_table</ref>(vlc,<sp/>n,<sp/>nb_codes,</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bits,<sp/>bits_wrap,<sp/>bits_size,</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>codes,<sp/>codes_wrap,<sp/>codes_size,</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(code_prefix<sp/>&lt;&lt;<sp/>table_nb_bits)<sp/>|<sp/>i,</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n_prefix<sp/>+<sp/>table_nb_bits);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>note:<sp/>realloc<sp/>has<sp/>been<sp/>done,<sp/>so<sp/>reload<sp/>tables<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>table<sp/>=<sp/>&amp;vlc-&gt;<ref refid="structVLC_1acaf94f3386396a95d3e7042c444a41f7" kindref="member">table</ref>[table_index];</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>table[i][0]<sp/>=<sp/>index;<sp/></highlight><highlight class="comment">/*code*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>table_index;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Build<sp/>VLC<sp/>decoding<sp/>tables<sp/>suitable<sp/>for<sp/>use<sp/>with<sp/>get_vlc().</highlight></codeline>
+<codeline lineno="205"><highlight class="comment"></highlight></codeline>
+<codeline lineno="206"><highlight class="comment"><sp/><sp/><sp/>&apos;nb_bits&apos;<sp/>set<sp/>thee<sp/>decoding<sp/>table<sp/>size<sp/>(2^nb_bits)<sp/>entries.<sp/>The</highlight></codeline>
+<codeline lineno="207"><highlight class="comment"><sp/><sp/><sp/>bigger<sp/>it<sp/>is,<sp/>the<sp/>faster<sp/>is<sp/>the<sp/>decoding.<sp/>But<sp/>it<sp/>should<sp/>not<sp/>be<sp/>too</highlight></codeline>
+<codeline lineno="208"><highlight class="comment"><sp/><sp/><sp/>big<sp/>to<sp/>save<sp/>memory<sp/>and<sp/>L1<sp/>cache.<sp/>&apos;9&apos;<sp/>is<sp/>a<sp/>good<sp/>compromise.</highlight></codeline>
+<codeline lineno="209"><highlight class="comment"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="210"><highlight class="comment"><sp/><sp/><sp/>&apos;nb_codes&apos;<sp/>:<sp/>number<sp/>of<sp/>vlcs<sp/>codes</highlight></codeline>
+<codeline lineno="211"><highlight class="comment"></highlight></codeline>
+<codeline lineno="212"><highlight class="comment"><sp/><sp/><sp/>&apos;bits&apos;<sp/>:<sp/>table<sp/>which<sp/>gives<sp/>the<sp/>size<sp/>(in<sp/>bits)<sp/>of<sp/>each<sp/>vlc<sp/>code.</highlight></codeline>
+<codeline lineno="213"><highlight class="comment"></highlight></codeline>
+<codeline lineno="214"><highlight class="comment"><sp/><sp/><sp/>&apos;codes&apos;<sp/>:<sp/>table<sp/>which<sp/>gives<sp/>the<sp/>bit<sp/>pattern<sp/>of<sp/>of<sp/>each<sp/>vlc<sp/>code.</highlight></codeline>
+<codeline lineno="215"><highlight class="comment"></highlight></codeline>
+<codeline lineno="216"><highlight class="comment"><sp/><sp/><sp/>&apos;xxx_wrap&apos;<sp/>:<sp/>give<sp/>the<sp/>number<sp/>of<sp/>bytes<sp/>between<sp/>each<sp/>entry<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="217"><highlight class="comment"><sp/><sp/><sp/>&apos;bits&apos;<sp/>or<sp/>&apos;codes&apos;<sp/>tables.</highlight></codeline>
+<codeline lineno="218"><highlight class="comment"></highlight></codeline>
+<codeline lineno="219"><highlight class="comment"><sp/><sp/><sp/>&apos;xxx_size&apos;<sp/>:<sp/>gives<sp/>the<sp/>number<sp/>of<sp/>bytes<sp/>of<sp/>each<sp/>entry<sp/>of<sp/>the<sp/>&apos;bits&apos;</highlight></codeline>
+<codeline lineno="220"><highlight class="comment"><sp/><sp/><sp/>or<sp/>&apos;codes&apos;<sp/>tables.</highlight></codeline>
+<codeline lineno="221"><highlight class="comment"></highlight></codeline>
+<codeline lineno="222"><highlight class="comment"><sp/><sp/><sp/>&apos;wrap&apos;<sp/>and<sp/>&apos;size&apos;<sp/>allows<sp/>to<sp/>use<sp/>any<sp/>memory<sp/>configuration<sp/>and<sp/>types</highlight></codeline>
+<codeline lineno="223"><highlight class="comment"><sp/><sp/><sp/>(byte/word/long)<sp/>to<sp/>store<sp/>the<sp/>&apos;bits&apos;<sp/>and<sp/>&apos;codes&apos;<sp/>tables.<sp/><sp/></highlight></codeline>
+<codeline lineno="224"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225" refid="internal_8h_1a17ce557803d3a49257e6fb289d43dfee" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bits_8c_1a17ce557803d3a49257e6fb289d43dfee" kindref="member">init_vlc</ref>(<ref refid="structVLC" kindref="compound">VLC</ref><sp/>*vlc,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nb_bits,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nb_codes,</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*bits,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bits_wrap,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bits_size,</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*codes,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>codes_wrap,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>codes_size)</highlight></codeline>
+<codeline lineno="228"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>vlc-&gt;<ref refid="structVLC_1ac36d06bc414af86fbe35c9efb6170fc5" kindref="member">bits</ref><sp/>=<sp/>nb_bits;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>vlc-&gt;<ref refid="structVLC_1acaf94f3386396a95d3e7042c444a41f7" kindref="member">table</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>vlc-&gt;<ref refid="structVLC_1aa13e8ff6ffe730398c69e9fc2d42266f" kindref="member">table_allocated</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>vlc-&gt;<ref refid="structVLC_1a5d373c883f68f747b3245733f2884d74" kindref="member">table_size</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUG_VLC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;build<sp/>table<sp/>nb_codes=%d\n&quot;</highlight><highlight class="normal">,<sp/>nb_codes);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="bits_8c_1a452b9ed664f9e1b5ca6e12292e184e32" kindref="member">build_table</ref>(vlc,<sp/>nb_bits,<sp/>nb_codes,</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bits,<sp/>bits_wrap,<sp/>bits_size,</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>codes,<sp/>codes_wrap,<sp/>codes_size,</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(vlc-&gt;<ref refid="structVLC_1acaf94f3386396a95d3e7042c444a41f7" kindref="member">table</ref>);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248" refid="internal_8h_1af5bade5c2576e97e3ce7bdb8b4bf1572" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bits_8c_1af5bade5c2576e97e3ce7bdb8b4bf1572" kindref="member">free_vlc</ref>(<ref refid="structVLC" kindref="compound">VLC</ref><sp/>*vlc)</highlight></codeline>
+<codeline lineno="249"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>free(vlc-&gt;<ref refid="structVLC_1acaf94f3386396a95d3e7042c444a41f7" kindref="member">table</ref>);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253" refid="internal_8h_1ad9d1cef202cce95b0fd843505647ae2c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bits_8c_1ad9d1cef202cce95b0fd843505647ae2c" kindref="member">get_vlc</ref>(<ref refid="structGetBitContext" kindref="compound">GetBitContext</ref><sp/>*s,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structVLC" kindref="compound">VLC</ref><sp/>*vlc)</highlight></codeline>
+<codeline lineno="254"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>code<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>depth<sp/>=<sp/>0,<sp/>max_depth<sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n,<sp/>index,<sp/>bits<sp/>=<sp/>vlc-&gt;<ref refid="structVLC_1ac36d06bc414af86fbe35c9efb6170fc5" kindref="member">bits</ref>;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>index<sp/>=<sp/><ref refid="bits_8c_1a1ab74f16c44ad8762a384924368175e7" kindref="member">show_bits</ref>(s,<sp/>bits)<sp/>+<sp/>code;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>code<sp/>=<sp/>vlc-&gt;<ref refid="structVLC_1acaf94f3386396a95d3e7042c444a41f7" kindref="member">table</ref>[index][0];</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/>=<sp/>vlc-&gt;<ref refid="structVLC_1acaf94f3386396a95d3e7042c444a41f7" kindref="member">table</ref>[index][1];</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>depth++;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>&lt;<sp/>0<sp/>&amp;&amp;<sp/>depth<sp/>&lt;<sp/>max_depth)<sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bits_8c_1aea74eea48a18a3731b052ac530f6afce" kindref="member">skip_bits</ref>(s,<sp/>bits);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bits<sp/>=<sp/>-n;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(n<sp/>&lt;<sp/>0<sp/>&amp;&amp;<sp/>depth<sp/>&lt;<sp/>max_depth);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bits_8c_1aea74eea48a18a3731b052ac530f6afce" kindref="member">skip_bits</ref>(s,<sp/>n);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>code;</highlight></codeline>
+<codeline lineno="273"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c"/>
+  </compounddef>
+</doxygen>

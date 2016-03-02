@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file LoadOBJ.cpp
+\author Wen Sheng Tang
+\par email: tang_wen_sheng\@nyp.edu.sg
+\brief
+.cpp file that read OBJ files
+*/
+/****************************************************************************/
 #include <iostream>
 #include <fstream>
 #include <map>

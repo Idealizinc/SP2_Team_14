@@ -1,0 +1,4 @@
+<map id="irrklang::SAudioStreamFormat::getBytesPerSecond" name="irrklang::SAudioStreamFormat::getBytesPerSecond">
+<area shape="rect" id="node2" href="$structirrklang_1_1SAudioStreamFormat.html#adbd8ce7f570a0c252d8aa74a3c444adb" title="returns the frame size of the stream data in bytes " alt="" coords="251,5,448,47"/>
+<area shape="rect" id="node3" href="$structirrklang_1_1SAudioStreamFormat.html#a0285204b54e3c969ae01d7bbec2f39b8" title="returns the size of a sample of the data described by the stream data in bytes " alt="" coords="496,5,693,47"/>
+</map>

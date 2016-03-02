@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="Application_8h" kind="file" language="C++">
+    <compoundname>Application.h</compoundname>
+    <includes refid="timer_8h" local="yes">timer.h</includes>
+    <includes refid="SharedData_8h" local="yes">SharedData.h</includes>
+    <includedby refid="Application_8cpp" local="yes">ComGLab/Source/Application.cpp</includedby>
+    <includedby refid="Camera_8cpp" local="yes">ComGLab/Source/Camera.cpp</includedby>
+    <includedby refid="Camera2_8cpp" local="yes">ComGLab/Source/Camera2.cpp</includedby>
+    <includedby refid="Camera3_8cpp" local="yes">ComGLab/Source/Camera3.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">ComGLab/Source/main.cpp</includedby>
+    <includedby refid="Particle_8cpp" local="yes">ComGLab/Source/Particle.cpp</includedby>
+    <includedby refid="SoundSystem_8h" local="yes">ComGLab/Source/SoundSystem.h</includedby>
+    <includedby refid="SP2__Scene_8cpp" local="yes">ComGLab/Source/SP2_Scene.cpp</includedby>
+    <incdepgraph>
+      <node id="1565">
+        <label>windows.h</label>
+      </node>
+      <node id="1566">
+        <label>SharedData.h</label>
+        <link refid="SharedData_8h"/>
+      </node>
+      <node id="1564">
+        <label>timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="1565" relation="include">
+        </childnode>
+      </node>
+      <node id="1563">
+        <label>ComGLab/Source/Application.h</label>
+        <link refid="Application.h"/>
+        <childnode refid="1564" relation="include">
+        </childnode>
+        <childnode refid="1566" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1575">
+        <label>ComGLab/Source/SoundSystem.cpp</label>
+        <link refid="SoundSystem_8cpp"/>
+      </node>
+      <node id="1573">
+        <label>ComGLab/Source/Particle.cpp</label>
+        <link refid="Particle_8cpp"/>
+      </node>
+      <node id="1567">
+        <label>ComGLab/Source/Application.h</label>
+        <link refid="Application.h"/>
+        <childnode refid="1568" relation="include">
+        </childnode>
+        <childnode refid="1569" relation="include">
+        </childnode>
+        <childnode refid="1570" relation="include">
+        </childnode>
+        <childnode refid="1571" relation="include">
+        </childnode>
+        <childnode refid="1572" relation="include">
+        </childnode>
+        <childnode refid="1573" relation="include">
+        </childnode>
+        <childnode refid="1574" relation="include">
+        </childnode>
+        <childnode refid="1576" relation="include">
+        </childnode>
+      </node>
+      <node id="1576">
+        <label>ComGLab/Source/SP2_Scene.cpp</label>
+        <link refid="SP2__Scene_8cpp"/>
+      </node>
+      <node id="1568">
+        <label>ComGLab/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="1574">
+        <label>ComGLab/Source/SoundSystem.h</label>
+        <link refid="SoundSystem_8h"/>
+        <childnode refid="1575" relation="include">
+        </childnode>
+      </node>
+      <node id="1570">
+        <label>ComGLab/Source/Camera2.cpp</label>
+        <link refid="Camera2_8cpp"/>
+      </node>
+      <node id="1571">
+        <label>ComGLab/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="1572">
+        <label>ComGLab/Source/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="1569">
+        <label>ComGLab/Source/Camera.cpp</label>
+        <link refid="Camera_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classApplication" prot="public">Application</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>APPLICATION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>APPLICATION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="timer_8h" kindref="compound">timer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SharedData_8h" kindref="compound">SharedData.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="classApplication" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classApplication" kindref="compound">Application</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1afa8cc05ce6b6092be5ecdfdae44e05f8" kindref="member">Application</ref>();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1a748bca84fefb9c12661cfaa2f623748d" kindref="member">~Application</ref>();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" kindref="member">Run</ref>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1a9d410604b39b8374a884b1f2a1f2a5ba" kindref="member">Exit</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" kindref="member">IsKeyPressed</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>key);</highlight></codeline>
+<codeline lineno="16" refid="classApplication_1ae02b37c3fd9151bc11e379db0fc51f22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classApplication_1ae02b37c3fd9151bc11e379db0fc51f22" kindref="member">CloseGame</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Declare<sp/>a<sp/>window<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classApplication_1ac81ea1396dc69c6d48b9a701954f53fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStopWatch" kindref="compound">StopWatch</ref><sp/><ref refid="classApplication_1ac81ea1396dc69c6d48b9a701954f53fe" kindref="member">m_timer</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="ComGLab/Source/Application.h"/>
+  </compounddef>
+</doxygen>

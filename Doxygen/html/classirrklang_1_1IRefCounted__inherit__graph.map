@@ -1,0 +1,12 @@
+<map id="irrklang::IRefCounted" name="irrklang::IRefCounted">
+<area shape="rect" id="node2" href="$classirrklang_1_1IAudioRecorder.html" title="Interface to an audio recorder. Create it using the createIrrKlangAudioRecorder() function..." alt="" coords="211,5,371,32"/>
+<area shape="rect" id="node3" href="$classirrklang_1_1IAudioStream.html" title="Reads and decodes audio data into an usable audio stream for the ISoundEngine. " alt="" coords="215,56,366,83"/>
+<area shape="rect" id="node5" href="$classirrklang_1_1IAudioStreamLoader.html" title="Class which is able to create an audio file stream from a file. " alt="" coords="196,107,385,133"/>
+<area shape="rect" id="node7" href="$classirrklang_1_1ICapturedAudioDataReceiver.html" title="Interface to be implemented by the user if access to the recorded audio data is needed. " alt="" coords="211,158,371,199"/>
+<area shape="rect" id="node8" href="$classirrklang_1_1IFileFactory.html" title="Interface to overwrite file access in irrKlang. " alt="" coords="221,224,361,251"/>
+<area shape="rect" id="node9" href="$classirrklang_1_1IFileReader.html" title="Interface providing read acess to a file. " alt="" coords="222,275,359,301"/>
+<area shape="rect" id="node10" href="$classirrklang_1_1ISoundDeviceList.html" title="A list of sound devices for a sound driver. Use irrklang::createSoundDeviceList() to create this list..." alt="" coords="205,325,376,352"/>
+<area shape="rect" id="node11" href="$classirrklang_1_1ISoundEngine.html" title="Interface to the sound engine, for playing 3d and 2d sound and music. " alt="" coords="215,376,367,403"/>
+<area shape="rect" id="node4" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html" title="Reads and decodes audio data into an usable audio stream for the ISoundEngine. " alt="" coords="433,42,592,83"/>
+<area shape="rect" id="node6" href="$classirrklang_1_1CIrrKlangAudioStreamLoaderMP3.html" title="Class which is able to create an audio file stream from a file. " alt="" coords="433,107,592,149"/>
+</map>

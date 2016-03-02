@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="mpaudec_8h" kind="file" language="C++">
+    <compoundname>mpaudec.h</compoundname>
+    <includedby refid="CIrrKlangAudioStreamMP3_8h" local="yes">irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h</includedby>
+    <includedby refid="internal_8h" local="yes">irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h</includedby>
+    <invincdepgraph>
+      <node id="2958">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h</label>
+        <link refid="CIrrKlangAudioStreamMP3_8h"/>
+        <childnode refid="2959" relation="include">
+        </childnode>
+        <childnode refid="2960" relation="include">
+        </childnode>
+      </node>
+      <node id="2961">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/internal.h</label>
+        <link refid="internal_8h"/>
+        <childnode refid="2962" relation="include">
+        </childnode>
+        <childnode refid="2963" relation="include">
+        </childnode>
+      </node>
+      <node id="2959">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamLoaderMP3.cpp</label>
+        <link refid="CIrrKlangAudioStreamLoaderMP3_8cpp"/>
+      </node>
+      <node id="2963">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c</label>
+        <link refid="mpaudec_8c"/>
+      </node>
+      <node id="2957">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h</label>
+        <link refid="mpaudec.h"/>
+        <childnode refid="2958" relation="include">
+        </childnode>
+        <childnode refid="2961" relation="include">
+        </childnode>
+      </node>
+      <node id="2960">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.cpp</label>
+        <link refid="CIrrKlangAudioStreamMP3_8cpp"/>
+      </node>
+      <node id="2962">
+        <label>irrKlang-1.5.0/plugins/ikpMP3/decoder/bits.c</label>
+        <link refid="bits_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structMPAuDecContext" prot="public">MPAuDecContext</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="mpaudec_8h_1a547ff0dd6bd65b902c7de2c5814d0aed" prot="public" static="no">
+        <name>MPAUDEC_MAX_AUDIO_FRAME_SIZE</name>
+        <initializer>4608</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" line="11" column="9" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" bodystart="11" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="15" endline="84">irrklang::CIrrKlangAudioStreamMP3::CIrrKlangAudioStreamMP3</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="mpaudec_8h_1abc945f103b438c327a16d25a59af9ff0" prot="public" static="no">
+        <type>struct <ref refid="structMPAuDecContext" kindref="compound">MPAuDecContext</ref></type>
+        <definition>typedef struct MPAuDecContext  MPAuDecContext</definition>
+        <argsstring></argsstring>
+        <name>MPAuDecContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" line="22" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="mpaudec_8h_1a0f2f19b46f286b7a9315b40e46f34227" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mpaudec_init</definition>
+        <argsstring>(MPAuDecContext *mpctx)</argsstring>
+        <name>mpaudec_init</name>
+        <param>
+          <type><ref refid="structMPAuDecContext" kindref="compound">MPAuDecContext</ref> *</type>
+          <declname>mpctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" line="24" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="306" bodyend="496"/>
+        <references refid="mpaudec_8c_1a733ea7db34c2b4dd85666218ec70a63d" compoundref="mpaudec_8c" startline="67">BACKSTEP_SIZE</references>
+        <references refid="mpaudec_8c_1ac2b4a1c4ea09034adb3f3c922ca7bdae" compoundref="mpaudec_8c" startline="134">band_index_long</references>
+        <references refid="mpaudectab_8h_1a0df9a837c9c4e59df9c96e968b332633" compoundref="mpaudectab_8h" startline="731">band_size_long</references>
+        <references refid="structHuffTable_1a3971691ed3ef40ac4ab71aa72a7cd2f0" compoundref="mpaudec_8c" startline="123">HuffTable::bits</references>
+        <references refid="mpaudectab_8h_1aa57a93e642f8c3ed0222b63e14dc794e" compoundref="mpaudectab_8h" startline="770">ci_table</references>
+        <references refid="structHuffTable_1a6693a947aa07344e5a5a378c0e8a1157" compoundref="mpaudec_8c" startline="124">HuffTable::codes</references>
+        <references refid="mpaudec_8c_1a3af47afde7c4a4211049cb3f8898786c" compoundref="mpaudec_8c" startline="146">csa_table</references>
+        <references refid="mpaudec_8c_1a88cf220be3bb27c93f7a42530b7b15b8" compoundref="mpaudec_8c" startline="53">FIX</references>
+        <references refid="mpaudec_8c_1a5d83ab8f3ec11509277f142878f6a203" compoundref="mpaudec_8c" startline="55">FIXR</references>
+        <references refid="mpaudec_8c_1a58bf38924819d3cb38facc24eb4bf799" compoundref="mpaudec_8c" startline="49">FRAC_ONE</references>
+        <references refid="mpaudec_8c_1ab486eeda38968b7da158bfe885782a1d" compoundref="mpaudec_8c" startline="131">huff_code_table</references>
+        <references refid="structMPADecodeContext_1adac9267053c81ebdcfb474a9006b0def" compoundref="mpaudec_8c" startline="72">MPADecodeContext::inbuf</references>
+        <references refid="structMPADecodeContext_1a50261340d0c177c2c8f98e2929293118" compoundref="mpaudec_8c" startline="70">MPADecodeContext::inbuf1</references>
+        <references refid="structMPADecodeContext_1ac80055478f6a1d0e6de8f8577dd682ad" compoundref="mpaudec_8c" startline="71">MPADecodeContext::inbuf_index</references>
+        <references refid="structMPADecodeContext_1a5aa3bf38d36e9a98410273712be1df30" compoundref="mpaudec_8c" startline="72">MPADecodeContext::inbuf_ptr</references>
+        <references refid="bits_8c_1a17ce557803d3a49257e6fb289d43dfee" compoundref="bits_8c" startline="225" endline="245">init_vlc</references>
+        <references refid="mpaudec_8c_1ad19555572a4583ac8af52fcaf58a2c87" compoundref="mpaudec_8c" startline="262" endline="304">int_pow</references>
+        <references refid="mpaudec_8c_1a23a825ca0fd958323342fced3275c436" compoundref="mpaudec_8c" startline="250" endline="259">int_pow_init</references>
+        <references refid="mpaudec_8c_1a500bc90548c810b036e77e5332d1f978" compoundref="mpaudec_8c" startline="144">is_table</references>
+        <references refid="mpaudec_8c_1a7db6c3f7d9bf80815714772a618abc43" compoundref="mpaudec_8c" startline="145">is_table_lsf</references>
+        <references refid="internal_8h_1ae71449b1cc6e6250b91f539153a7a0d3" compoundref="internal_8h" startline="20">M_PI</references>
+        <references refid="mpaudec_8c_1ab42e62b9a0a1df8ced04d2e7c037ff55" compoundref="mpaudec_8c" startline="147">mdct_win</references>
+        <references refid="mpaudectab_8h_1a4493e46e508fc1774a8bb2cd7e02af46" compoundref="mpaudectab_8h" startline="18">mpa_enwindow</references>
+        <references refid="mpaudectab_8h_1aecbd4e758fdde8e1932ede5ad21051d7" compoundref="mpaudectab_8h" startline="664">mpa_huff_tables</references>
+        <references refid="mpaudectab_8h_1a1c1ce845c3cf08bbc89ba8af6cf370de" compoundref="mpaudectab_8h" startline="725">mpa_quad_bits</references>
+        <references refid="mpaudectab_8h_1a840214e39135ea4816ff9f05aa500857" compoundref="mpaudectab_8h" startline="720">mpa_quad_codes</references>
+        <references refid="mpaudec_8c_1a4b441407adf716949297d9fd8cfded54" compoundref="mpaudec_8c" startline="51">MULL</references>
+        <references refid="structMPAuDecContext_1ac1e30ced961e8cdc9af6dcdbbde6acd5" compoundref="mpaudec_8h" startline="20">MPAuDecContext::parse_only</references>
+        <references refid="structMPAuDecContext_1aeeedc8a25b1887bc88c1200d30728f09" compoundref="mpaudec_8h" startline="19">MPAuDecContext::priv_data</references>
+        <references refid="mpaudec_8c_1a3ad73c4de28c42bc8c467927b07e613f" compoundref="mpaudec_8c" startline="150">scale_factor_modshift</references>
+        <references refid="mpaudec_8c_1a96ed305d6661b537d7489641a2c34765" compoundref="mpaudec_8c" startline="152">scale_factor_mult</references>
+        <references refid="mpaudec_8c_1a6dff21f08edc4b1bd8419084bba17e1d" compoundref="mpaudec_8c" startline="137">table_4_3_exp</references>
+        <references refid="mpaudec_8c_1a286c9ecb29f865ea6e5f4dfa153d783b" compoundref="mpaudec_8c" startline="136">TABLE_4_3_SIZE</references>
+        <references refid="mpaudec_8c_1a9a581693cc0107e0089ac7b175767222" compoundref="mpaudec_8c" startline="141">table_4_3_value</references>
+        <references refid="mpaudec_8c_1a1b4651c62d39bf11121b02dd6233818e" compoundref="mpaudec_8c" startline="43">WFRAC_BITS</references>
+        <references refid="mpaudec_8c_1a988bf6974f37c7585b0cd2f299605004" compoundref="mpaudec_8c" startline="172">window</references>
+        <references refid="structHuffTable_1a6e1599b5da1a99639f9394e553aa5c89" compoundref="mpaudec_8c" startline="122">HuffTable::xsize</references>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="15" endline="84">irrklang::CIrrKlangAudioStreamMP3::CIrrKlangAudioStreamMP3</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="215" endline="306">irrklang::CIrrKlangAudioStreamMP3::setPosition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="mpaudec_8h_1aef4fd97c73ea34fb71a55ae134458530" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mpaudec_decode_frame</definition>
+        <argsstring>(MPAuDecContext *mpctx, void *data, int *data_size, const unsigned char *buf, int buf_size)</argsstring>
+        <name>mpaudec_decode_frame</name>
+        <param>
+          <type><ref refid="structMPAuDecContext" kindref="compound">MPAuDecContext</ref> *</type>
+          <declname>mpctx</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>data_size</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>buf_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="mpaudec_8h_1ab0a860386211b1374764b470cc56129b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mpaudec_clear</definition>
+        <argsstring>(MPAuDecContext *mpctx)</argsstring>
+        <name>mpaudec_clear</name>
+        <param>
+          <type><ref refid="structMPAuDecContext" kindref="compound">MPAuDecContext</ref> *</type>
+          <declname>mpctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" line="28" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.c" bodystart="2472" bodyend="2477"/>
+        <references refid="structMPAuDecContext_1aeeedc8a25b1887bc88c1200d30728f09" compoundref="mpaudec_8h" startline="19">MPAuDecContext::priv_data</references>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="215" endline="306">irrklang::CIrrKlangAudioStreamMP3::setPosition</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae223aa810305f5a13e3aba97b525e048" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="86" endline="98">irrklang::CIrrKlangAudioStreamMP3::~CIrrKlangAudioStreamMP3</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Portions<sp/>based<sp/>on<sp/>avcodec.h<sp/>from<sp/>libavcodec.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MPAUDEC_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPAUDEC_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>in<sp/>bytes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="mpaudec_8h_1a547ff0dd6bd65b902c7de2c5814d0aed" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPAUDEC_MAX_AUDIO_FRAME_SIZE<sp/>4608</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="structMPAuDecContext" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structMPAuDecContext" kindref="compound">MPAuDecContext</ref><sp/>{</highlight></codeline>
+<codeline lineno="14" refid="structMPAuDecContext_1ad65f95dc72d0c3d64744c88b194aa904" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structMPAuDecContext_1ad65f95dc72d0c3d64744c88b194aa904" kindref="member">bit_rate</ref>;</highlight></codeline>
+<codeline lineno="15" refid="structMPAuDecContext_1adc7047707acb5823b3c23c1b56dd84a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structMPAuDecContext_1adc7047707acb5823b3c23c1b56dd84a4" kindref="member">layer</ref>;</highlight></codeline>
+<codeline lineno="16" refid="structMPAuDecContext_1a36e44d2b96644df34b619a854e1abc74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structMPAuDecContext_1a36e44d2b96644df34b619a854e1abc74" kindref="member">sample_rate</ref>;</highlight></codeline>
+<codeline lineno="17" refid="structMPAuDecContext_1a988371375f0a8b976370718f06ed8dcd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structMPAuDecContext_1a988371375f0a8b976370718f06ed8dcd" kindref="member">channels</ref>;</highlight></codeline>
+<codeline lineno="18" refid="structMPAuDecContext_1a11e79ba1890ab90c7facb5e602debf01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structMPAuDecContext_1a11e79ba1890ab90c7facb5e602debf01" kindref="member">frame_size</ref>;</highlight></codeline>
+<codeline lineno="19" refid="structMPAuDecContext_1aeeedc8a25b1887bc88c1200d30728f09" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structMPAuDecContext_1aeeedc8a25b1887bc88c1200d30728f09" kindref="member">priv_data</ref>;</highlight></codeline>
+<codeline lineno="20" refid="structMPAuDecContext_1ac1e30ced961e8cdc9af6dcdbbde6acd5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structMPAuDecContext_1ac1e30ced961e8cdc9af6dcdbbde6acd5" kindref="member">parse_only</ref>;</highlight></codeline>
+<codeline lineno="21" refid="structMPAuDecContext_1ad2b0b51f7e58b391bb558e4e910d86de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structMPAuDecContext_1ad2b0b51f7e58b391bb558e4e910d86de" kindref="member">coded_frame_size</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}<sp/><ref refid="mpaudec_8h_1abc945f103b438c327a16d25a59af9ff0" kindref="member">MPAuDecContext</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="mpaudec_8h_1a0f2f19b46f286b7a9315b40e46f34227" kindref="member">mpaudec_init</ref>(<ref refid="structMPAuDecContext" kindref="compound">MPAuDecContext</ref><sp/>*mpctx);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="mpaudec_8h_1aef4fd97c73ea34fb71a55ae134458530" kindref="member">mpaudec_decode_frame</ref>(<ref refid="structMPAuDecContext" kindref="compound">MPAuDecContext</ref><sp/>*<sp/>mpctx,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*data_size,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>buf,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>buf_size);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mpaudec_8h_1ab0a860386211b1374764b470cc56129b" kindref="member">mpaudec_clear</ref>(<ref refid="structMPAuDecContext" kindref="compound">MPAuDecContext</ref><sp/>*mpctx);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MPAUDEC_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h"/>
+  </compounddef>
+</doxygen>

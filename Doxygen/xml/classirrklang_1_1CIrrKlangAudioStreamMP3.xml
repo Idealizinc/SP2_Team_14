@@ -1,0 +1,671 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classirrklang_1_1CIrrKlangAudioStreamMP3" kind="class" language="C++" prot="public">
+    <compoundname>irrklang::CIrrKlangAudioStreamMP3</compoundname>
+    <basecompoundref refid="classirrklang_1_1IAudioStream" prot="public" virt="non-virtual">irrklang::IAudioStream</basecompoundref>
+    <includes refid="CIrrKlangAudioStreamMP3_8h" local="no">CIrrKlangAudioStreamMP3.h</includes>
+    <innerclass refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer" prot="protected">irrklang::CIrrKlangAudioStreamMP3::QueueBuffer</innerclass>
+    <innerclass refid="structirrklang_1_1CIrrKlangAudioStreamMP3_1_1SFramePositionData" prot="protected">irrklang::CIrrKlangAudioStreamMP3::SFramePositionData</innerclass>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1a263b10757d62918dd0dbfc909f10dfe9" prot="protected" static="no" mutable="no">
+        <type><ref refid="classirrklang_1_1IFileReader" kindref="compound">irrklang::IFileReader</ref> *</type>
+        <definition>irrklang::IFileReader* irrklang::CIrrKlangAudioStreamMP3::File</definition>
+        <argsstring></argsstring>
+        <name>File</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="55" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" bodystart="55" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="15" endline="84">CIrrKlangAudioStreamMP3</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">decodeFrame</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1abfc07cdaf0ca8c9b65f72c2befaef78f" compoundref="CIrrKlangAudioStreamMP3_8h" startline="47" endline="47">isOK</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="215" endline="306">setPosition</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a37a20bc8ccf0bfce2a6e8516c0b0e1aa" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="366" endline="394">skipID3IfNecessary</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae223aa810305f5a13e3aba97b525e048" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="86" endline="98">~CIrrKlangAudioStreamMP3</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1a30f3deb75be8466800177ca32c7d6166" prot="protected" static="no" mutable="no">
+        <type><ref refid="structirrklang_1_1SAudioStreamFormat" kindref="compound">SAudioStreamFormat</ref></type>
+        <definition>SAudioStreamFormat irrklang::CIrrKlangAudioStreamMP3::Format</definition>
+        <argsstring></argsstring>
+        <name>Format</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="56" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" bodystart="56" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="15" endline="84">CIrrKlangAudioStreamMP3</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">decodeFrame</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a2df652ff2b95dba4ac92b5eef46a9e36" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="103" endline="106">getFormat</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a85374ba5ed9178fa74dd256d59018ca0" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="110" endline="142">readFrames</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="215" endline="306">setPosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1a815212f85c48f95fabd059de18980b62" prot="protected" static="no" mutable="no">
+        <type><ref refid="structMPAuDecContext" kindref="compound">MPAuDecContext</ref> *</type>
+        <definition>MPAuDecContext* irrklang::CIrrKlangAudioStreamMP3::TheMPAuDecContext</definition>
+        <argsstring></argsstring>
+        <name>TheMPAuDecContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="59" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="15" endline="84">CIrrKlangAudioStreamMP3</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">decodeFrame</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="215" endline="306">setPosition</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae223aa810305f5a13e3aba97b525e048" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="86" endline="98">~CIrrKlangAudioStreamMP3</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1a798e8e34d287addd458d9a56b5f9704a" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespaceirrklang_1af1928ef855711d24f793f841013f000e" kindref="member">ik_u8</ref></type>
+        <definition>ik_u8 irrklang::CIrrKlangAudioStreamMP3::InputBuffer[IKP_MP3_INPUT_BUFFER_SIZE]</definition>
+        <argsstring>[IKP_MP3_INPUT_BUFFER_SIZE]</argsstring>
+        <name>InputBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="61" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" bodystart="61" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">decodeFrame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1a6403d0e3c7628d5ef21d43f6d58a2552" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int irrklang::CIrrKlangAudioStreamMP3::InputPosition</definition>
+        <argsstring></argsstring>
+        <name>InputPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="63" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" bodystart="63" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="15" endline="84">CIrrKlangAudioStreamMP3</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">decodeFrame</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="215" endline="306">setPosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1ab4cf58fb6ee76c0a157c137dc300dceb" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int irrklang::CIrrKlangAudioStreamMP3::InputLength</definition>
+        <argsstring></argsstring>
+        <name>InputLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="64" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" bodystart="64" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="15" endline="84">CIrrKlangAudioStreamMP3</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">decodeFrame</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="215" endline="306">setPosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1a1e6ae08aaf6958f4119f695ebd1ae8ed" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int irrklang::CIrrKlangAudioStreamMP3::Position</definition>
+        <argsstring></argsstring>
+        <name>Position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="65" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" bodystart="65" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="215" endline="306">setPosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1a15040d3de05ada8aba771b6b6072e042" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespaceirrklang_1af1928ef855711d24f793f841013f000e" kindref="member">ik_u8</ref> *</type>
+        <definition>ik_u8* irrklang::CIrrKlangAudioStreamMP3::DecodeBuffer</definition>
+        <argsstring></argsstring>
+        <name>DecodeBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="66" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" bodystart="66" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="15" endline="84">CIrrKlangAudioStreamMP3</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">decodeFrame</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae223aa810305f5a13e3aba97b525e048" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="86" endline="98">~CIrrKlangAudioStreamMP3</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1abf2b493be81b7263624da1d85a9ced91" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+        <definition>ik_s32 irrklang::CIrrKlangAudioStreamMP3::FileBegin</definition>
+        <argsstring></argsstring>
+        <name>FileBegin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="67" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="215" endline="306">setPosition</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a37a20bc8ccf0bfce2a6e8516c0b0e1aa" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="366" endline="394">skipID3IfNecessary</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1a52a2e07c2f629af781dc595c2f497ed4" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespaceirrklang_1adf9f75b6ca98aff6843fb294125571e0" kindref="member">ik_u32</ref></type>
+        <definition>ik_u32 irrklang::CIrrKlangAudioStreamMP3::CurrentFramePosition</definition>
+        <argsstring></argsstring>
+        <name>CurrentFramePosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="68" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" bodystart="68" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="215" endline="306">setPosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1a07478535dabffe3c34ce4106a6d9915b" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool irrklang::CIrrKlangAudioStreamMP3::FirstFrameRead</definition>
+        <argsstring></argsstring>
+        <name>FirstFrameRead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="70" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" bodystart="70" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">decodeFrame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1ac628f3913da904aa5ac0f42ddf4cf996" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool irrklang::CIrrKlangAudioStreamMP3::EndOfFileReached</definition>
+        <argsstring></argsstring>
+        <name>EndOfFileReached</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="71" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" bodystart="71" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="15" endline="84">CIrrKlangAudioStreamMP3</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">decodeFrame</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a85374ba5ed9178fa74dd256d59018ca0" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="110" endline="142">readFrames</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="215" endline="306">setPosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1acd19d708a19f5fbfb13a0978a9bd0d6b" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structirrklang_1_1CIrrKlangAudioStreamMP3_1_1SFramePositionData" kindref="compound">SFramePositionData</ref> &gt;</type>
+        <definition>std::vector&lt;SFramePositionData&gt; irrklang::CIrrKlangAudioStreamMP3::FramePositionData</definition>
+        <argsstring></argsstring>
+        <name>FramePositionData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="99" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" bodystart="99" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="15" endline="84">CIrrKlangAudioStreamMP3</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="215" endline="306">setPosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1a9d366c4523a7840754428add5f813998" prot="protected" static="no" mutable="no">
+        <type><ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer" kindref="compound">QueueBuffer</ref></type>
+        <definition>QueueBuffer irrklang::CIrrKlangAudioStreamMP3::DecodedQueue</definition>
+        <argsstring></argsstring>
+        <name>DecodedQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="100" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" bodystart="100" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">decodeFrame</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a85374ba5ed9178fa74dd256d59018ca0" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="110" endline="142">readFrames</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="215" endline="306">setPosition</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>irrklang::CIrrKlangAudioStreamMP3::CIrrKlangAudioStreamMP3</definition>
+        <argsstring>(IFileReader *file)</argsstring>
+        <name>CIrrKlangAudioStreamMP3</name>
+        <param>
+          <type><ref refid="classirrklang_1_1IFileReader" kindref="compound">IFileReader</ref> *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="27" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.cpp" bodystart="15" bodyend="84"/>
+        <references refid="structMPAuDecContext_1a988371375f0a8b976370718f06ed8dcd" compoundref="mpaudec_8h" startline="17">MPAuDecContext::channels</references>
+        <references refid="structMPAuDecContext_1ad2b0b51f7e58b391bb558e4e910d86de" compoundref="mpaudec_8h" startline="21">MPAuDecContext::coded_frame_size</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a15040d3de05ada8aba771b6b6072e042" compoundref="CIrrKlangAudioStreamMP3_8h" startline="66">DecodeBuffer</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">decodeFrame</references>
+        <references refid="classirrklang_1_1IRefCounted_1a869fe3adc6e49e8da105e95837a565b1" compoundref="ik__IRefCounted_8h" startline="98" endline="109">irrklang::IRefCounted::drop</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ac628f3913da904aa5ac0f42ddf4cf996" compoundref="CIrrKlangAudioStreamMP3_8h" startline="71">EndOfFileReached</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a263b10757d62918dd0dbfc909f10dfe9" compoundref="CIrrKlangAudioStreamMP3_8h" startline="55">File</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a30f3deb75be8466800177ca32c7d6166" compoundref="CIrrKlangAudioStreamMP3_8h" startline="56">Format</references>
+        <references refid="structMPAuDecContext_1a11e79ba1890ab90c7facb5e602debf01" compoundref="mpaudec_8h" startline="18">MPAuDecContext::frame_size</references>
+        <references refid="structirrklang_1_1SAudioStreamFormat_1ab4f3d1b9df4e1adf53b128c0f14af313" compoundref="ik__SAudioStreamFormat_8h" startline="33">irrklang::SAudioStreamFormat::FrameCount</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1acd19d708a19f5fbfb13a0978a9bd0d6b" compoundref="CIrrKlangAudioStreamMP3_8h" startline="99">FramePositionData</references>
+        <references refid="classirrklang_1_1IFileReader_1a99c405529f07b2b0190beda048b432e2">irrklang::IFileReader::getPos</references>
+        <references refid="classirrklang_1_1IFileReader_1af6f0881f2c887cc41016c58144853b5f">irrklang::IFileReader::getSize</references>
+        <references refid="classirrklang_1_1IRefCounted_1a737b09ee717069b964a3bd0451690388" compoundref="ik__IRefCounted_8h" startline="80" endline="80">irrklang::IRefCounted::grab</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ab4cf58fb6ee76c0a157c137dc300dceb" compoundref="CIrrKlangAudioStreamMP3_8h" startline="64">InputLength</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a6403d0e3c7628d5ef21d43f6d58a2552" compoundref="CIrrKlangAudioStreamMP3_8h" startline="63">InputPosition</references>
+        <references refid="mpaudec_8c_1a0f2f19b46f286b7a9315b40e46f34227" compoundref="mpaudec_8c" startline="306" endline="496">mpaudec_init</references>
+        <references refid="mpaudec_8h_1a547ff0dd6bd65b902c7de2c5814d0aed" compoundref="mpaudec_8h" startline="11">MPAUDEC_MAX_AUDIO_FRAME_SIZE</references>
+        <references refid="structirrklang_1_1CIrrKlangAudioStreamMP3_1_1SFramePositionData_1a423af13d56b0406153ad0c03eef0fdcd" compoundref="CIrrKlangAudioStreamMP3_8h" startline="95">irrklang::CIrrKlangAudioStreamMP3::SFramePositionData::offset</references>
+        <references refid="structMPAuDecContext_1ac1e30ced961e8cdc9af6dcdbbde6acd5" compoundref="mpaudec_8h" startline="20">MPAuDecContext::parse_only</references>
+        <references refid="structMPAuDecContext_1a36e44d2b96644df34b619a854e1abc74" compoundref="mpaudec_8h" startline="16">MPAuDecContext::sample_rate</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="215" endline="306">setPosition</references>
+        <references refid="structirrklang_1_1CIrrKlangAudioStreamMP3_1_1SFramePositionData_1a0c24559f19dfbf618508bf37f7b38e1d" compoundref="CIrrKlangAudioStreamMP3_8h" startline="96">irrklang::CIrrKlangAudioStreamMP3::SFramePositionData::size</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a37a20bc8ccf0bfce2a6e8516c0b0e1aa" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="366" endline="394">skipID3IfNecessary</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a815212f85c48f95fabd059de18980b62" compoundref="CIrrKlangAudioStreamMP3_8h" startline="59">TheMPAuDecContext</references>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae223aa810305f5a13e3aba97b525e048" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>irrklang::CIrrKlangAudioStreamMP3::~CIrrKlangAudioStreamMP3</definition>
+        <argsstring>()</argsstring>
+        <name>~CIrrKlangAudioStreamMP3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="28" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.cpp" bodystart="86" bodyend="98"/>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a15040d3de05ada8aba771b6b6072e042" compoundref="CIrrKlangAudioStreamMP3_8h" startline="66">DecodeBuffer</references>
+        <references refid="classirrklang_1_1IRefCounted_1a869fe3adc6e49e8da105e95837a565b1" compoundref="ik__IRefCounted_8h" startline="98" endline="109">irrklang::IRefCounted::drop</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a263b10757d62918dd0dbfc909f10dfe9" compoundref="CIrrKlangAudioStreamMP3_8h" startline="55">File</references>
+        <references refid="mpaudec_8c_1ab0a860386211b1374764b470cc56129b" compoundref="mpaudec_8c" startline="2472" endline="2477">mpaudec_clear</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a815212f85c48f95fabd059de18980b62" compoundref="CIrrKlangAudioStreamMP3_8h" startline="59">TheMPAuDecContext</references>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1a2df652ff2b95dba4ac92b5eef46a9e36" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="structirrklang_1_1SAudioStreamFormat" kindref="compound">SAudioStreamFormat</ref></type>
+        <definition>SAudioStreamFormat irrklang::CIrrKlangAudioStreamMP3::getFormat</definition>
+        <argsstring>()</argsstring>
+        <name>getFormat</name>
+        <reimplements refid="classirrklang_1_1IAudioStream_1a179a1fc826d94884f9cb3dd4f5e52943">getFormat</reimplements>
+        <briefdescription>
+<para>returns format of the audio stream </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="31" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.cpp" bodystart="103" bodyend="106"/>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a30f3deb75be8466800177ca32c7d6166" compoundref="CIrrKlangAudioStreamMP3_8h" startline="56">Format</references>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1a85374ba5ed9178fa74dd256d59018ca0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+        <definition>ik_s32 irrklang::CIrrKlangAudioStreamMP3::readFrames</definition>
+        <argsstring>(void *target, ik_s32 frameCountToRead)</argsstring>
+        <name>readFrames</name>
+        <reimplements refid="classirrklang_1_1IAudioStream_1a09d6d3de70aa95df109f5eb58c799980">readFrames</reimplements>
+        <param>
+          <type>void *</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+          <declname>frameCountToRead</declname>
+        </param>
+        <briefdescription>
+<para>tells the audio stream to read n audio frames into the specified buffer </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target data buffer to the method will write the read frames into. The specified buffer will be <ref refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a2df652ff2b95dba4ac92b5eef46a9e36" kindref="member">getFormat()</ref>.getFrameSize()*frameCount big. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frameCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>amount of frames to be read. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns amount of frames really read. Should be frameCountToRead in most cases. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="38" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.cpp" bodystart="110" bodyend="142"/>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a9d366c4523a7840754428add5f813998" compoundref="CIrrKlangAudioStreamMP3_8h" startline="100">DecodedQueue</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">decodeFrame</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ac628f3913da904aa5ac0f42ddf4cf996" compoundref="CIrrKlangAudioStreamMP3_8h" startline="71">EndOfFileReached</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a30f3deb75be8466800177ca32c7d6166" compoundref="CIrrKlangAudioStreamMP3_8h" startline="56">Format</references>
+        <references refid="structirrklang_1_1SAudioStreamFormat_1adbd8ce7f570a0c252d8aa74a3c444adb" compoundref="ik__SAudioStreamFormat_8h" startline="48" endline="51">irrklang::SAudioStreamFormat::getFrameSize</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer_1aafc3dcda6238a052b154795ed3332c81" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="323" endline="326">irrklang::CIrrKlangAudioStreamMP3::QueueBuffer::getSize</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer_1a53c29a763d2ed10cf4b2211e362d76d6" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="348" endline="357">irrklang::CIrrKlangAudioStreamMP3::QueueBuffer::read</references>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="215" endline="306">setPosition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool irrklang::CIrrKlangAudioStreamMP3::setPosition</definition>
+        <argsstring>(ik_s32 pos)</argsstring>
+        <name>setPosition</name>
+        <reimplements refid="classirrklang_1_1IAudioStream_1a1ac6276613e91d0f530bfee3cf5f92ff">setPosition</reimplements>
+        <param>
+          <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>sets the position of the audio stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>For example to let the stream be read from the beginning of the file again, setPosition(0) would be called. This is usually done be the sound engine to loop a stream after if has reached the end. Return true if sucessful and 0 if not. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="44" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.cpp" bodystart="215" bodyend="306"/>
+        <references refid="structMPAuDecContext_1ad65f95dc72d0c3d64744c88b194aa904" compoundref="mpaudec_8h" startline="14">MPAuDecContext::bit_rate</references>
+        <references refid="structMPAuDecContext_1a988371375f0a8b976370718f06ed8dcd" compoundref="mpaudec_8h" startline="17">MPAuDecContext::channels</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer_1ad25f32a5a4200bbfb762d4bd74d67c94" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="360" endline="363">irrklang::CIrrKlangAudioStreamMP3::QueueBuffer::clear</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a52a2e07c2f629af781dc595c2f497ed4" compoundref="CIrrKlangAudioStreamMP3_8h" startline="68">CurrentFramePosition</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a9d366c4523a7840754428add5f813998" compoundref="CIrrKlangAudioStreamMP3_8h" startline="100">DecodedQueue</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">decodeFrame</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ac628f3913da904aa5ac0f42ddf4cf996" compoundref="CIrrKlangAudioStreamMP3_8h" startline="71">EndOfFileReached</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a263b10757d62918dd0dbfc909f10dfe9" compoundref="CIrrKlangAudioStreamMP3_8h" startline="55">File</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1abf2b493be81b7263624da1d85a9ced91" compoundref="CIrrKlangAudioStreamMP3_8h" startline="67">FileBegin</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a30f3deb75be8466800177ca32c7d6166" compoundref="CIrrKlangAudioStreamMP3_8h" startline="56">Format</references>
+        <references refid="structMPAuDecContext_1a11e79ba1890ab90c7facb5e602debf01" compoundref="mpaudec_8h" startline="18">MPAuDecContext::frame_size</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1acd19d708a19f5fbfb13a0978a9bd0d6b" compoundref="CIrrKlangAudioStreamMP3_8h" startline="99">FramePositionData</references>
+        <references refid="structirrklang_1_1SAudioStreamFormat_1adbd8ce7f570a0c252d8aa74a3c444adb" compoundref="ik__SAudioStreamFormat_8h" startline="48" endline="51">irrklang::SAudioStreamFormat::getFrameSize</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ab4cf58fb6ee76c0a157c137dc300dceb" compoundref="CIrrKlangAudioStreamMP3_8h" startline="64">InputLength</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a6403d0e3c7628d5ef21d43f6d58a2552" compoundref="CIrrKlangAudioStreamMP3_8h" startline="63">InputPosition</references>
+        <references refid="mpaudec_8c_1ab0a860386211b1374764b470cc56129b" compoundref="mpaudec_8c" startline="2472" endline="2477">mpaudec_clear</references>
+        <references refid="mpaudec_8c_1a0f2f19b46f286b7a9315b40e46f34227" compoundref="mpaudec_8c" startline="306" endline="496">mpaudec_init</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a1e6ae08aaf6958f4119f695ebd1ae8ed" compoundref="CIrrKlangAudioStreamMP3_8h" startline="65">Position</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a85374ba5ed9178fa74dd256d59018ca0" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="110" endline="142">readFrames</references>
+        <references refid="structMPAuDecContext_1a36e44d2b96644df34b619a854e1abc74" compoundref="mpaudec_8h" startline="16">MPAuDecContext::sample_rate</references>
+        <references refid="classirrklang_1_1IFileReader_1a1c98718116049833e2de77a67a07faaa">irrklang::IFileReader::seek</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a815212f85c48f95fabd059de18980b62" compoundref="CIrrKlangAudioStreamMP3_8h" startline="59">TheMPAuDecContext</references>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="15" endline="84">CIrrKlangAudioStreamMP3</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1abfc07cdaf0ca8c9b65f72c2befaef78f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool irrklang::CIrrKlangAudioStreamMP3::isOK</definition>
+        <argsstring>()</argsstring>
+        <name>isOK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="47" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" bodystart="47" bodyend="47"/>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a263b10757d62918dd0dbfc909f10dfe9" compoundref="CIrrKlangAudioStreamMP3_8h" startline="55">File</references>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamLoaderMP3_1aa2abcfd3b38eb8bb49e782678aac3ab2" compoundref="CIrrKlangAudioStreamLoaderMP3_8cpp" startline="27" endline="38">irrklang::CIrrKlangAudioStreamLoaderMP3::createAudioStream</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1afc059786d4e8bb14cbd4c9b380223117" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+        <definition>ik_s32 irrklang::CIrrKlangAudioStreamMP3::readFrameForMP3</definition>
+        <argsstring>(void *target, ik_s32 frameCountToRead, bool parseOnly=false)</argsstring>
+        <name>readFrameForMP3</name>
+        <param>
+          <type>void *</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+          <declname>frameCountToRead</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>parseOnly</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool irrklang::CIrrKlangAudioStreamMP3::decodeFrame</definition>
+        <argsstring>()</argsstring>
+        <name>decodeFrame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="52" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.cpp" bodystart="146" bodyend="207"/>
+        <references refid="structirrklang_1_1SAudioStreamFormat_1a4ff43d45603ce7e65c27a07a860b96f5" compoundref="ik__SAudioStreamFormat_8h" startline="29">irrklang::SAudioStreamFormat::ChannelCount</references>
+        <references refid="structMPAuDecContext_1a988371375f0a8b976370718f06ed8dcd" compoundref="mpaudec_8h" startline="17">MPAuDecContext::channels</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a15040d3de05ada8aba771b6b6072e042" compoundref="CIrrKlangAudioStreamMP3_8h" startline="66">DecodeBuffer</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a9d366c4523a7840754428add5f813998" compoundref="CIrrKlangAudioStreamMP3_8h" startline="100">DecodedQueue</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ac628f3913da904aa5ac0f42ddf4cf996" compoundref="CIrrKlangAudioStreamMP3_8h" startline="71">EndOfFileReached</references>
+        <references refid="namespaceirrklang_1a2b85d1e9288cb552fceef8e8a726a80eaa3dc63221ae7c396d6b32431da872104" compoundref="ik__SAudioStreamFormat_8h" startline="21">irrklang::ESF_S16</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a263b10757d62918dd0dbfc909f10dfe9" compoundref="CIrrKlangAudioStreamMP3_8h" startline="55">File</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a07478535dabffe3c34ce4106a6d9915b" compoundref="CIrrKlangAudioStreamMP3_8h" startline="70">FirstFrameRead</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a30f3deb75be8466800177ca32c7d6166" compoundref="CIrrKlangAudioStreamMP3_8h" startline="56">Format</references>
+        <references refid="structMPAuDecContext_1a11e79ba1890ab90c7facb5e602debf01" compoundref="mpaudec_8h" startline="18">MPAuDecContext::frame_size</references>
+        <references refid="structirrklang_1_1SAudioStreamFormat_1ab4f3d1b9df4e1adf53b128c0f14af313" compoundref="ik__SAudioStreamFormat_8h" startline="33">irrklang::SAudioStreamFormat::FrameCount</references>
+        <references refid="structirrklang_1_1SAudioStreamFormat_1adbd8ce7f570a0c252d8aa74a3c444adb" compoundref="ik__SAudioStreamFormat_8h" startline="48" endline="51">irrklang::SAudioStreamFormat::getFrameSize</references>
+        <references refid="namespaceirrklang_1a6e877f4a7838386812719e6ba0a5d4f0" compoundref="CIrrKlangAudioStreamMP3_8h" startline="17">irrklang::IKP_MP3_INPUT_BUFFER_SIZE</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a798e8e34d287addd458d9a56b5f9704a" compoundref="CIrrKlangAudioStreamMP3_8h" startline="61">InputBuffer</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ab4cf58fb6ee76c0a157c137dc300dceb" compoundref="CIrrKlangAudioStreamMP3_8h" startline="64">InputLength</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a6403d0e3c7628d5ef21d43f6d58a2552" compoundref="CIrrKlangAudioStreamMP3_8h" startline="63">InputPosition</references>
+        <references refid="mpaudec_8c_1ad804754f6cb3863f2489fcddc56f9ae4" compoundref="mpaudec_8c" startline="2312" endline="2470">mpaudec_decode_frame</references>
+        <references refid="structMPAuDecContext_1ac1e30ced961e8cdc9af6dcdbbde6acd5" compoundref="mpaudec_8h" startline="20">MPAuDecContext::parse_only</references>
+        <references refid="classirrklang_1_1IFileReader_1a0ba36fc0023d3ad430bbe34770364559">irrklang::IFileReader::read</references>
+        <references refid="structMPAuDecContext_1a36e44d2b96644df34b619a854e1abc74" compoundref="mpaudec_8h" startline="16">MPAuDecContext::sample_rate</references>
+        <references refid="structirrklang_1_1SAudioStreamFormat_1a6a3c4b7a3ac829555b0bcc7312e12c8f" compoundref="ik__SAudioStreamFormat_8h" startline="39">irrklang::SAudioStreamFormat::SampleFormat</references>
+        <references refid="structirrklang_1_1SAudioStreamFormat_1adffd0aaf1d5e09b2832f6ad9b2589756" compoundref="ik__SAudioStreamFormat_8h" startline="36">irrklang::SAudioStreamFormat::SampleRate</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a815212f85c48f95fabd059de18980b62" compoundref="CIrrKlangAudioStreamMP3_8h" startline="59">TheMPAuDecContext</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer_1a001b3786ec714fa1ef1182e1539d3c50" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="328" endline="345">irrklang::CIrrKlangAudioStreamMP3::QueueBuffer::write</references>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="15" endline="84">CIrrKlangAudioStreamMP3</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a85374ba5ed9178fa74dd256d59018ca0" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="110" endline="142">readFrames</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="215" endline="306">setPosition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1CIrrKlangAudioStreamMP3_1a37a20bc8ccf0bfce2a6e8516c0b0e1aa" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void irrklang::CIrrKlangAudioStreamMP3::skipID3IfNecessary</definition>
+        <argsstring>()</argsstring>
+        <name>skipID3IfNecessary</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="53" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.cpp" bodystart="366" bodyend="394"/>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a263b10757d62918dd0dbfc909f10dfe9" compoundref="CIrrKlangAudioStreamMP3_8h" startline="55">File</references>
+        <references refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1abf2b493be81b7263624da1d85a9ced91" compoundref="CIrrKlangAudioStreamMP3_8h" startline="67">FileBegin</references>
+        <references refid="classirrklang_1_1IFileReader_1a0ba36fc0023d3ad430bbe34770364559">irrklang::IFileReader::read</references>
+        <references refid="classirrklang_1_1IFileReader_1a1c98718116049833e2de77a67a07faaa">irrklang::IFileReader::seek</references>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="15" endline="84">CIrrKlangAudioStreamMP3</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Reads and decodes audio data into an usable audio stream for the <ref refid="classirrklang_1_1ISoundEngine" kindref="compound">ISoundEngine</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para>To extend irrKlang with new audio format decoders, the only thing needed to do is implementing the <ref refid="classirrklang_1_1IAudioStream" kindref="compound">IAudioStream</ref> interface. All the code available in this class is only for mp3 decoding and may make this class look a bit more complicated then it actually is. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="366">
+        <label>irrklang::CIrrKlangAudioStreamMP3</label>
+        <link refid="classirrklang_1_1CIrrKlangAudioStreamMP3"/>
+        <childnode refid="367" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="367">
+        <label>irrklang::IAudioStream</label>
+        <link refid="classirrklang_1_1IAudioStream"/>
+        <childnode refid="368" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="368">
+        <label>irrklang::IRefCounted</label>
+        <link refid="classirrklang_1_1IRefCounted"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="379">
+        <label>ik_u8 *</label>
+      </node>
+      <node id="373">
+        <label>vector&lt; irrklang::CIrrKlangAudioStreamMP3::SFramePositionData &gt;</label>
+      </node>
+      <node id="375">
+        <label>void *</label>
+      </node>
+      <node id="374">
+        <label>MPAuDecContext</label>
+        <link refid="structMPAuDecContext"/>
+        <childnode refid="372" relation="usage">
+          <edgelabel>coded_frame_size</edgelabel>
+          <edgelabel>bit_rate</edgelabel>
+          <edgelabel>sample_rate</edgelabel>
+          <edgelabel>parse_only</edgelabel>
+          <edgelabel>layer</edgelabel>
+          <edgelabel>frame_size</edgelabel>
+          <edgelabel>channels</edgelabel>
+        </childnode>
+        <childnode refid="375" relation="usage">
+          <edgelabel>priv_data</edgelabel>
+        </childnode>
+      </node>
+      <node id="378">
+        <label>ESampleFormat</label>
+      </node>
+      <node id="369">
+        <label>irrklang::CIrrKlangAudioStreamMP3</label>
+        <link refid="classirrklang_1_1CIrrKlangAudioStreamMP3"/>
+        <childnode refid="370" relation="public-inheritance">
+        </childnode>
+        <childnode refid="373" relation="usage">
+          <edgelabel>FramePositionData</edgelabel>
+        </childnode>
+        <childnode refid="374" relation="usage">
+          <edgelabel>TheMPAuDecContext</edgelabel>
+        </childnode>
+        <childnode refid="372" relation="usage">
+          <edgelabel>FileBegin</edgelabel>
+          <edgelabel>InputLength</edgelabel>
+          <edgelabel>Position</edgelabel>
+          <edgelabel>InputPosition</edgelabel>
+        </childnode>
+        <childnode refid="376" relation="usage">
+          <edgelabel>EndOfFileReached</edgelabel>
+          <edgelabel>FirstFrameRead</edgelabel>
+        </childnode>
+        <childnode refid="377" relation="usage">
+          <edgelabel>Format</edgelabel>
+        </childnode>
+        <childnode refid="379" relation="usage">
+          <edgelabel>DecodeBuffer</edgelabel>
+        </childnode>
+        <childnode refid="380" relation="usage">
+          <edgelabel>DecodedQueue</edgelabel>
+        </childnode>
+        <childnode refid="381" relation="usage">
+          <edgelabel>CurrentFramePosition</edgelabel>
+          <edgelabel>InputBuffer</edgelabel>
+        </childnode>
+        <childnode refid="382" relation="usage">
+          <edgelabel>File</edgelabel>
+        </childnode>
+      </node>
+      <node id="372">
+        <label>int</label>
+      </node>
+      <node id="377">
+        <label>irrklang::SAudioStreamFormat</label>
+        <link refid="structirrklang_1_1SAudioStreamFormat"/>
+        <childnode refid="378" relation="usage">
+          <edgelabel>SampleFormat</edgelabel>
+        </childnode>
+        <childnode refid="372" relation="usage">
+          <edgelabel>ChannelCount</edgelabel>
+          <edgelabel>FrameCount</edgelabel>
+          <edgelabel>SampleRate</edgelabel>
+        </childnode>
+      </node>
+      <node id="370">
+        <label>irrklang::IAudioStream</label>
+        <link refid="classirrklang_1_1IAudioStream"/>
+        <childnode refid="371" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="371">
+        <label>irrklang::IRefCounted</label>
+        <link refid="classirrklang_1_1IRefCounted"/>
+        <childnode refid="372" relation="usage">
+          <edgelabel>ReferenceCounter</edgelabel>
+        </childnode>
+      </node>
+      <node id="381">
+        <label>unsigned</label>
+      </node>
+      <node id="376">
+        <label>bool</label>
+      </node>
+      <node id="380">
+        <label>irrklang::CIrrKlangAudioStreamMP3::QueueBuffer</label>
+        <link refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1_1QueueBuffer"/>
+        <childnode refid="372" relation="usage">
+          <edgelabel>Size</edgelabel>
+          <edgelabel>Capacity</edgelabel>
+        </childnode>
+        <childnode refid="379" relation="usage">
+          <edgelabel>Buffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="382">
+        <label>irrklang::IFileReader</label>
+        <link refid="classirrklang_1_1IFileReader"/>
+        <childnode refid="371" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" line="24" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/CIrrKlangAudioStreamMP3.h" bodystart="23" bodyend="101"/>
+    <listofallmembers>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" prot="public" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>CIrrKlangAudioStreamMP3</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a52a2e07c2f629af781dc595c2f497ed4" prot="protected" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>CurrentFramePosition</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a15040d3de05ada8aba771b6b6072e042" prot="protected" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>DecodeBuffer</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a9d366c4523a7840754428add5f813998" prot="protected" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>DecodedQueue</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" prot="protected" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>decodeFrame</name></member>
+      <member refid="classirrklang_1_1IRefCounted_1a869fe3adc6e49e8da105e95837a565b1" prot="public" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>drop</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ac628f3913da904aa5ac0f42ddf4cf996" prot="protected" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>EndOfFileReached</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a263b10757d62918dd0dbfc909f10dfe9" prot="protected" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>File</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1abf2b493be81b7263624da1d85a9ced91" prot="protected" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>FileBegin</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a07478535dabffe3c34ce4106a6d9915b" prot="protected" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>FirstFrameRead</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a30f3deb75be8466800177ca32c7d6166" prot="protected" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>Format</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1acd19d708a19f5fbfb13a0978a9bd0d6b" prot="protected" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>FramePositionData</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a2df652ff2b95dba4ac92b5eef46a9e36" prot="public" virt="virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>getFormat</name></member>
+      <member refid="classirrklang_1_1IAudioStream_1a4e10ae9405140ec6b4f09422c8c2eaa4" prot="public" virt="virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>getIsSeekingSupported</name></member>
+      <member refid="classirrklang_1_1IRefCounted_1a737b09ee717069b964a3bd0451690388" prot="public" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>grab</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a798e8e34d287addd458d9a56b5f9704a" prot="protected" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>InputBuffer</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ab4cf58fb6ee76c0a157c137dc300dceb" prot="protected" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>InputLength</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a6403d0e3c7628d5ef21d43f6d58a2552" prot="protected" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>InputPosition</name></member>
+      <member refid="classirrklang_1_1IRefCounted_1ad9d20b84a525d7bc07e44b556fbf7da6" prot="public" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>IRefCounted</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1abfc07cdaf0ca8c9b65f72c2befaef78f" prot="public" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>isOK</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a1e6ae08aaf6958f4119f695ebd1ae8ed" prot="protected" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>Position</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1afc059786d4e8bb14cbd4c9b380223117" prot="protected" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>readFrameForMP3</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a85374ba5ed9178fa74dd256d59018ca0" prot="public" virt="virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>readFrames</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" prot="public" virt="virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>setPosition</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a37a20bc8ccf0bfce2a6e8516c0b0e1aa" prot="protected" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>skipID3IfNecessary</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a815212f85c48f95fabd059de18980b62" prot="protected" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>TheMPAuDecContext</name></member>
+      <member refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae223aa810305f5a13e3aba97b525e048" prot="public" virt="non-virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>~CIrrKlangAudioStreamMP3</name></member>
+      <member refid="classirrklang_1_1IAudioStream_1ab356024dfcdde9f864cfa7dc9d76e346" prot="public" virt="virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>~IAudioStream</name></member>
+      <member refid="classirrklang_1_1IRefCounted_1a7fe8953e57adac9bcd28a94d3b251886" prot="public" virt="virtual"><scope>irrklang::CIrrKlangAudioStreamMP3</scope><name>~IRefCounted</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

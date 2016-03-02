@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file WeaponSystem.cpp
+\author Ryan Lim Rui An
+\par email: 150577L@mymail.nyp.edu.sg
+\brief
+.cpp file that defines Weapon System
+*/
+/****************************************************************************/
 #include "WeaponSystem.h"
 
 WeaponSystem::~WeaponSystem()

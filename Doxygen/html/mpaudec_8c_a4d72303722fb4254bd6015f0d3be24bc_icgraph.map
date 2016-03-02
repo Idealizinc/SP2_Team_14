@@ -1,0 +1,9 @@
+<map id="l2_unscale_group" name="l2_unscale_group">
+<area shape="rect" id="node2" href="$mpaudec_8c.html#a72ee70f98e9873f63c88b69b80e15825" title="mp_decode_layer2" alt="" coords="176,42,307,69"/>
+<area shape="rect" id="node3" href="$mpaudec_8c.html#a2dff7b15a5f55a97729fb3f2d7194e64" title="mp_decode_frame" alt="" coords="355,42,483,69"/>
+<area shape="rect" id="node4" href="$mpaudec_8c.html#ad804754f6cb3863f2489fcddc56f9ae4" title="mpaudec_decode_frame" alt="" coords="531,42,693,69"/>
+<area shape="rect" id="node5" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#a0694b0e9c0ca306701236b660a11633d" title="irrklang::CIrrKlangAudio\lStreamMP3::decodeFrame" alt="" coords="741,35,920,76"/>
+<area shape="rect" id="node6" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#aa0525477376ae287275da88a17f4825d" title="irrklang::CIrrKlangAudio\lStreamMP3::CIrrKlangAudioStreamMP3" alt="" coords="1396,5,1651,47"/>
+<area shape="rect" id="node7" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#a85374ba5ed9178fa74dd256d59018ca0" title="tells the audio stream to read n audio frames into the specified buffer " alt="" coords="968,35,1136,76"/>
+<area shape="rect" id="node8" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#ae615c171d074153463af08a11118ceaf" title="sets the position of the audio stream. " alt="" coords="1184,35,1348,76"/>
+</map>

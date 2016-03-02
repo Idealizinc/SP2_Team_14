@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structMPAuDecContext" kind="struct" language="C++" prot="public">
+    <compoundname>MPAuDecContext</compoundname>
+    <includes refid="mpaudec_8h" local="no">mpaudec.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structMPAuDecContext_1ad65f95dc72d0c3d64744c88b194aa904" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPAuDecContext::bit_rate</definition>
+        <argsstring></argsstring>
+        <name>bit_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" line="14" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" bodystart="14" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1ad804754f6cb3863f2489fcddc56f9ae4" compoundref="mpaudec_8c" startline="2312" endline="2470">mpaudec_decode_frame</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="215" endline="306">irrklang::CIrrKlangAudioStreamMP3::setPosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPAuDecContext_1adc7047707acb5823b3c23c1b56dd84a4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPAuDecContext::layer</definition>
+        <argsstring></argsstring>
+        <name>layer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" line="15" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="mpaudec_8c_1ad804754f6cb3863f2489fcddc56f9ae4" compoundref="mpaudec_8c" startline="2312" endline="2470">mpaudec_decode_frame</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPAuDecContext_1a36e44d2b96644df34b619a854e1abc74" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPAuDecContext::sample_rate</definition>
+        <argsstring></argsstring>
+        <name>sample_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" line="16" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="15" endline="84">irrklang::CIrrKlangAudioStreamMP3::CIrrKlangAudioStreamMP3</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">irrklang::CIrrKlangAudioStreamMP3::decodeFrame</referencedby>
+        <referencedby refid="mpaudec_8c_1ad804754f6cb3863f2489fcddc56f9ae4" compoundref="mpaudec_8c" startline="2312" endline="2470">mpaudec_decode_frame</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="215" endline="306">irrklang::CIrrKlangAudioStreamMP3::setPosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPAuDecContext_1a988371375f0a8b976370718f06ed8dcd" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPAuDecContext::channels</definition>
+        <argsstring></argsstring>
+        <name>channels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" line="17" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" bodystart="17" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="15" endline="84">irrklang::CIrrKlangAudioStreamMP3::CIrrKlangAudioStreamMP3</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">irrklang::CIrrKlangAudioStreamMP3::decodeFrame</referencedby>
+        <referencedby refid="mpaudec_8c_1ad804754f6cb3863f2489fcddc56f9ae4" compoundref="mpaudec_8c" startline="2312" endline="2470">mpaudec_decode_frame</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="215" endline="306">irrklang::CIrrKlangAudioStreamMP3::setPosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPAuDecContext_1a11e79ba1890ab90c7facb5e602debf01" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPAuDecContext::frame_size</definition>
+        <argsstring></argsstring>
+        <name>frame_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" line="18" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="15" endline="84">irrklang::CIrrKlangAudioStreamMP3::CIrrKlangAudioStreamMP3</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">irrklang::CIrrKlangAudioStreamMP3::decodeFrame</referencedby>
+        <referencedby refid="mpaudec_8c_1ad804754f6cb3863f2489fcddc56f9ae4" compoundref="mpaudec_8c" startline="2312" endline="2470">mpaudec_decode_frame</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1ae615c171d074153463af08a11118ceaf" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="215" endline="306">irrklang::CIrrKlangAudioStreamMP3::setPosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPAuDecContext_1aeeedc8a25b1887bc88c1200d30728f09" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* MPAuDecContext::priv_data</definition>
+        <argsstring></argsstring>
+        <name>priv_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" line="19" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" bodystart="19" bodyend="-1"/>
+        <referencedby refid="mpaudec_8h_1ab0a860386211b1374764b470cc56129b" compoundref="mpaudec_8c" startline="2472" endline="2477">mpaudec_clear</referencedby>
+        <referencedby refid="mpaudec_8c_1ad804754f6cb3863f2489fcddc56f9ae4" compoundref="mpaudec_8c" startline="2312" endline="2470">mpaudec_decode_frame</referencedby>
+        <referencedby refid="mpaudec_8h_1a0f2f19b46f286b7a9315b40e46f34227" compoundref="mpaudec_8c" startline="306" endline="496">mpaudec_init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPAuDecContext_1ac1e30ced961e8cdc9af6dcdbbde6acd5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPAuDecContext::parse_only</definition>
+        <argsstring></argsstring>
+        <name>parse_only</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" line="20" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="15" endline="84">irrklang::CIrrKlangAudioStreamMP3::CIrrKlangAudioStreamMP3</referencedby>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1a0694b0e9c0ca306701236b660a11633d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="146" endline="207">irrklang::CIrrKlangAudioStreamMP3::decodeFrame</referencedby>
+        <referencedby refid="mpaudec_8c_1ad804754f6cb3863f2489fcddc56f9ae4" compoundref="mpaudec_8c" startline="2312" endline="2470">mpaudec_decode_frame</referencedby>
+        <referencedby refid="mpaudec_8h_1a0f2f19b46f286b7a9315b40e46f34227" compoundref="mpaudec_8c" startline="306" endline="496">mpaudec_init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMPAuDecContext_1ad2b0b51f7e58b391bb558e4e910d86de" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MPAuDecContext::coded_frame_size</definition>
+        <argsstring></argsstring>
+        <name>coded_frame_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" line="21" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" bodystart="21" bodyend="-1"/>
+        <referencedby refid="classirrklang_1_1CIrrKlangAudioStreamMP3_1aa0525477376ae287275da88a17f4825d" compoundref="CIrrKlangAudioStreamMP3_8cpp" startline="15" endline="84">irrklang::CIrrKlangAudioStreamMP3::CIrrKlangAudioStreamMP3</referencedby>
+        <referencedby refid="mpaudec_8c_1ad804754f6cb3863f2489fcddc56f9ae4" compoundref="mpaudec_8c" startline="2312" endline="2470">mpaudec_decode_frame</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="510">
+        <label>void *</label>
+      </node>
+      <node id="508">
+        <label>MPAuDecContext</label>
+        <link refid="structMPAuDecContext"/>
+        <childnode refid="509" relation="usage">
+          <edgelabel>coded_frame_size</edgelabel>
+          <edgelabel>bit_rate</edgelabel>
+          <edgelabel>sample_rate</edgelabel>
+          <edgelabel>parse_only</edgelabel>
+          <edgelabel>layer</edgelabel>
+          <edgelabel>frame_size</edgelabel>
+          <edgelabel>channels</edgelabel>
+        </childnode>
+        <childnode refid="510" relation="usage">
+          <edgelabel>priv_data</edgelabel>
+        </childnode>
+      </node>
+      <node id="509">
+        <label>int</label>
+      </node>
+    </collaborationgraph>
+    <location file="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" line="13" column="1" bodyfile="irrKlang-1.5.0/plugins/ikpMP3/decoder/mpaudec.h" bodystart="13" bodyend="22"/>
+    <listofallmembers>
+      <member refid="structMPAuDecContext_1ad65f95dc72d0c3d64744c88b194aa904" prot="public" virt="non-virtual"><scope>MPAuDecContext</scope><name>bit_rate</name></member>
+      <member refid="structMPAuDecContext_1a988371375f0a8b976370718f06ed8dcd" prot="public" virt="non-virtual"><scope>MPAuDecContext</scope><name>channels</name></member>
+      <member refid="structMPAuDecContext_1ad2b0b51f7e58b391bb558e4e910d86de" prot="public" virt="non-virtual"><scope>MPAuDecContext</scope><name>coded_frame_size</name></member>
+      <member refid="structMPAuDecContext_1a11e79ba1890ab90c7facb5e602debf01" prot="public" virt="non-virtual"><scope>MPAuDecContext</scope><name>frame_size</name></member>
+      <member refid="structMPAuDecContext_1adc7047707acb5823b3c23c1b56dd84a4" prot="public" virt="non-virtual"><scope>MPAuDecContext</scope><name>layer</name></member>
+      <member refid="structMPAuDecContext_1ac1e30ced961e8cdc9af6dcdbbde6acd5" prot="public" virt="non-virtual"><scope>MPAuDecContext</scope><name>parse_only</name></member>
+      <member refid="structMPAuDecContext_1aeeedc8a25b1887bc88c1200d30728f09" prot="public" virt="non-virtual"><scope>MPAuDecContext</scope><name>priv_data</name></member>
+      <member refid="structMPAuDecContext_1a36e44d2b96644df34b619a854e1abc74" prot="public" virt="non-virtual"><scope>MPAuDecContext</scope><name>sample_rate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

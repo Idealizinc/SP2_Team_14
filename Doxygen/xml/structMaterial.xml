@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structMaterial" kind="struct" language="C++" prot="public">
+    <compoundname>Material</compoundname>
+    <includes refid="Material_8h" local="no">Material.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structMaterial_1ab3819b3151cbf3ac1892195ab091e3b8" prot="public" static="no" mutable="no">
+        <type><ref refid="structComponent" kindref="compound">Component</ref></type>
+        <definition>Component Material::kAmbient</definition>
+        <argsstring></argsstring>
+        <name>kAmbient</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Material.h" line="14" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="14" bodyend="-1"/>
+        <referencedby refid="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" compoundref="Material_8cpp" startline="3" endline="9">Material</referencedby>
+        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">Particle::RenderMesh</referencedby>
+        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="629" endline="670">SP2_Scene::RenderMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMaterial_1aa88dd619cacf46e2f26ddd23fe032898" prot="public" static="no" mutable="no">
+        <type><ref refid="structComponent" kindref="compound">Component</ref></type>
+        <definition>Component Material::kDiffuse</definition>
+        <argsstring></argsstring>
+        <name>kDiffuse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Material.h" line="15" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" compoundref="Material_8cpp" startline="3" endline="9">Material</referencedby>
+        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">Particle::RenderMesh</referencedby>
+        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="629" endline="670">SP2_Scene::RenderMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMaterial_1a97cc0bf34b02c758b198d12dd24e96e2" prot="public" static="no" mutable="no">
+        <type><ref refid="structComponent" kindref="compound">Component</ref></type>
+        <definition>Component Material::kSpecular</definition>
+        <argsstring></argsstring>
+        <name>kSpecular</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Material.h" line="16" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" compoundref="Material_8cpp" startline="3" endline="9">Material</referencedby>
+        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">Particle::RenderMesh</referencedby>
+        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="629" endline="670">SP2_Scene::RenderMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structMaterial_1a07cec8956c43f81adeb6ba7aea104915" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Material::kShininess</definition>
+        <argsstring></argsstring>
+        <name>kShininess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Material.h" line="17" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="17" bodyend="-1"/>
+        <referencedby refid="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" compoundref="Material_8cpp" startline="3" endline="9">Material</referencedby>
+        <referencedby refid="classParticle_1a8aea59081fe6e9a7bf00f1b9c5679821" compoundref="Particle_8cpp" startline="169" endline="210">Particle::RenderMesh</referencedby>
+        <referencedby refid="classSP2__Scene_1a0cd5fd0736fa9288f21b0712d22ff17c" compoundref="SP2__Scene_8cpp" startline="629" endline="670">SP2_Scene::RenderMesh</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Material::Material</definition>
+        <argsstring>()</argsstring>
+        <name>Material</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Material.h" line="13" column="1" bodyfile="ComGLab/Source/Material.cpp" bodystart="3" bodyend="9"/>
+        <references refid="structMaterial_1ab3819b3151cbf3ac1892195ab091e3b8" compoundref="Material_8h" startline="14">kAmbient</references>
+        <references refid="structMaterial_1aa88dd619cacf46e2f26ddd23fe032898" compoundref="Material_8h" startline="15">kDiffuse</references>
+        <references refid="structMaterial_1a07cec8956c43f81adeb6ba7aea104915" compoundref="Material_8h" startline="17">kShininess</references>
+        <references refid="structMaterial_1a97cc0bf34b02c758b198d12dd24e96e2" compoundref="Material_8h" startline="16">kSpecular</references>
+        <references refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="8" endline="8">Component::Set</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="490">
+        <label>Component</label>
+        <link refid="structComponent"/>
+        <childnode refid="489" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="488">
+        <label>Material</label>
+        <link refid="structMaterial"/>
+        <childnode refid="489" relation="usage">
+          <edgelabel>kShininess</edgelabel>
+        </childnode>
+        <childnode refid="490" relation="usage">
+          <edgelabel>kDiffuse</edgelabel>
+          <edgelabel>kAmbient</edgelabel>
+          <edgelabel>kSpecular</edgelabel>
+        </childnode>
+      </node>
+      <node id="489">
+        <label>float</label>
+      </node>
+    </collaborationgraph>
+    <location file="ComGLab/Source/Material.h" line="12" column="1" bodyfile="ComGLab/Source/Material.h" bodystart="11" bodyend="18"/>
+    <listofallmembers>
+      <member refid="structMaterial_1ab3819b3151cbf3ac1892195ab091e3b8" prot="public" virt="non-virtual"><scope>Material</scope><name>kAmbient</name></member>
+      <member refid="structMaterial_1aa88dd619cacf46e2f26ddd23fe032898" prot="public" virt="non-virtual"><scope>Material</scope><name>kDiffuse</name></member>
+      <member refid="structMaterial_1a07cec8956c43f81adeb6ba7aea104915" prot="public" virt="non-virtual"><scope>Material</scope><name>kShininess</name></member>
+      <member refid="structMaterial_1a97cc0bf34b02c758b198d12dd24e96e2" prot="public" virt="non-virtual"><scope>Material</scope><name>kSpecular</name></member>
+      <member refid="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" prot="public" virt="non-virtual"><scope>Material</scope><name>Material</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

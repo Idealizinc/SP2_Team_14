@@ -1,0 +1,9 @@
+<map id="seek_to_maindata" name="seek_to_maindata">
+<area shape="rect" id="node2" href="$mpaudec_8c.html#aa6bde9d54d008252eb8b748f805c7c1e" title="mp_decode_layer3" alt="" coords="181,42,312,69"/>
+<area shape="rect" id="node3" href="$mpaudec_8c.html#a2dff7b15a5f55a97729fb3f2d7194e64" title="mp_decode_frame" alt="" coords="360,42,488,69"/>
+<area shape="rect" id="node4" href="$mpaudec_8c.html#ad804754f6cb3863f2489fcddc56f9ae4" title="mpaudec_decode_frame" alt="" coords="536,42,699,69"/>
+<area shape="rect" id="node5" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#a0694b0e9c0ca306701236b660a11633d" title="irrklang::CIrrKlangAudio\lStreamMP3::decodeFrame" alt="" coords="747,35,925,76"/>
+<area shape="rect" id="node6" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#aa0525477376ae287275da88a17f4825d" title="irrklang::CIrrKlangAudio\lStreamMP3::CIrrKlangAudioStreamMP3" alt="" coords="1401,5,1656,47"/>
+<area shape="rect" id="node7" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#a85374ba5ed9178fa74dd256d59018ca0" title="tells the audio stream to read n audio frames into the specified buffer " alt="" coords="973,35,1141,76"/>
+<area shape="rect" id="node8" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#ae615c171d074153463af08a11118ceaf" title="sets the position of the audio stream. " alt="" coords="1189,35,1353,76"/>
+</map>

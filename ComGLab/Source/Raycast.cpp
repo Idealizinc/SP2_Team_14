@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file Raycast.cpp
+\author Ryan Lim Rui An
+\par email: 150577L@mymail.nyp.edu.sg
+\brief
+.cpp file that defines Raycast
+*/
+/****************************************************************************/
 #include "RayCast.h"
 
 RayCast::~RayCast()

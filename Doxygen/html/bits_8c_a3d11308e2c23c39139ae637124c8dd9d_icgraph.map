@@ -1,0 +1,12 @@
+<map id="alloc_table" name="alloc_table">
+<area shape="rect" id="node2" href="$bits_8c.html#a452b9ed664f9e1b5ca6e12292e184e32" title="build_table" alt="" coords="161,20,245,47"/>
+<area shape="rect" id="node7" href="$mpaudec_8c.html#a72ee70f98e9873f63c88b69b80e15825" title="mp_decode_layer2" alt="" coords="137,75,268,101"/>
+<area shape="rect" id="node3" href="$internal_8h.html#a17ce557803d3a49257e6fb289d43dfee" title="init_vlc" alt="" coords="349,19,411,45"/>
+<area shape="rect" id="node4" href="$mpaudec_8h.html#a0f2f19b46f286b7a9315b40e46f34227" title="mpaudec_init" alt="" coords="964,5,1063,32"/>
+<area shape="rect" id="node5" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#aa0525477376ae287275da88a17f4825d" title="irrklang::CIrrKlangAudio\lStreamMP3::CIrrKlangAudioStreamMP3" alt="" coords="1357,57,1612,98"/>
+<area shape="rect" id="node6" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#ae615c171d074153463af08a11118ceaf" title="sets the position of the audio stream. " alt="" coords="1145,57,1309,98"/>
+<area shape="rect" id="node8" href="$mpaudec_8c.html#a2dff7b15a5f55a97729fb3f2d7194e64" title="mp_decode_frame" alt="" coords="316,101,444,128"/>
+<area shape="rect" id="node9" href="$mpaudec_8c.html#ad804754f6cb3863f2489fcddc56f9ae4" title="mpaudec_decode_frame" alt="" coords="492,103,655,129"/>
+<area shape="rect" id="node10" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#a0694b0e9c0ca306701236b660a11633d" title="irrklang::CIrrKlangAudio\lStreamMP3::decodeFrame" alt="" coords="703,95,881,137"/>
+<area shape="rect" id="node11" href="$classirrklang_1_1CIrrKlangAudioStreamMP3.html#a85374ba5ed9178fa74dd256d59018ca0" title="tells the audio stream to read n audio frames into the specified buffer " alt="" coords="929,107,1097,149"/>
+</map>

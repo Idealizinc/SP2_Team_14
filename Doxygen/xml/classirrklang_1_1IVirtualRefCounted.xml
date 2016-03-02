@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classirrklang_1_1IVirtualRefCounted" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>irrklang::IVirtualRefCounted</compoundname>
+    <derivedcompoundref refid="classirrklang_1_1ISound" prot="public" virt="non-virtual">irrklang::ISound</derivedcompoundref>
+    <derivedcompoundref refid="classirrklang_1_1ISoundSource" prot="public" virt="non-virtual">irrklang::ISoundSource</derivedcompoundref>
+    <includes refid="ik__IVirtualRefCounted_8h" local="no">ik_IVirtualRefCounted.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classirrklang_1_1IVirtualRefCounted_1a54ed4b2c2bf1fd7666f7d78a9e768612" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual irrklang::IVirtualRefCounted::~IVirtualRefCounted</definition>
+        <argsstring>()</argsstring>
+        <name>~IVirtualRefCounted</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_IVirtualRefCounted.h" line="24" column="1" bodyfile="irrKlang-1.5.0/include/ik_IVirtualRefCounted.h" bodystart="24" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1IVirtualRefCounted_1a1720491c5a3a511985903bfa3c829018" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void irrklang::IVirtualRefCounted::grab</definition>
+        <argsstring>()=0</argsstring>
+        <name>grab</name>
+        <briefdescription>
+<para>Grabs the object. Increments the reference counter by one. </para>        </briefdescription>
+        <detaileddescription>
+<para>To be implemented by the derived class. If you don&apos;t want to implement this, use the class <ref refid="classirrklang_1_1IRefCounted" kindref="compound">IRefCounted</ref> instead. See <ref refid="classirrklang_1_1IRefCounted_1a737b09ee717069b964a3bd0451690388" kindref="member">IRefCounted::grab()</ref> for details of this method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_IVirtualRefCounted.h" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1IVirtualRefCounted_1a6602c3d110f23410c5bca8a08b709aa4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool irrklang::IVirtualRefCounted::drop</definition>
+        <argsstring>()=0</argsstring>
+        <name>drop</name>
+        <briefdescription>
+<para>Drops the object. Decrements the reference counter by one. </para>        </briefdescription>
+        <detaileddescription>
+<para>To be implemented by the derived class. If you don&apos;t want to implement this, use the class <ref refid="classirrklang_1_1IRefCounted" kindref="compound">IRefCounted</ref> instead. See <ref refid="classirrklang_1_1IRefCounted_1a737b09ee717069b964a3bd0451690388" kindref="member">IRefCounted::grab()</ref> for details of this method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_IVirtualRefCounted.h" line="38" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Reference counting base class for objects in the Irrlicht Engine similar to <ref refid="classirrklang_1_1IRefCounted" kindref="compound">IRefCounted</ref>. </para>    </briefdescription>
+    <detaileddescription>
+<para>See <ref refid="classirrklang_1_1IRefCounted" kindref="compound">IRefCounted</ref> for the basics of this class. The difference to <ref refid="classirrklang_1_1IRefCounted" kindref="compound">IRefCounted</ref> is that the class has to implement reference counting for itself. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="476">
+        <label>irrklang::IVirtualRefCounted</label>
+        <link refid="classirrklang_1_1IVirtualRefCounted"/>
+      </node>
+      <node id="477">
+        <label>irrklang::ISound</label>
+        <link refid="classirrklang_1_1ISound"/>
+        <childnode refid="476" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="478">
+        <label>irrklang::ISoundSource</label>
+        <link refid="classirrklang_1_1ISoundSource"/>
+        <childnode refid="476" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="irrKlang-1.5.0/include/ik_IVirtualRefCounted.h" line="20" column="1" bodyfile="irrKlang-1.5.0/include/ik_IVirtualRefCounted.h" bodystart="19" bodyend="39"/>
+    <listofallmembers>
+      <member refid="classirrklang_1_1IVirtualRefCounted_1a6602c3d110f23410c5bca8a08b709aa4" prot="public" virt="pure-virtual"><scope>irrklang::IVirtualRefCounted</scope><name>drop</name></member>
+      <member refid="classirrklang_1_1IVirtualRefCounted_1a1720491c5a3a511985903bfa3c829018" prot="public" virt="pure-virtual"><scope>irrklang::IVirtualRefCounted</scope><name>grab</name></member>
+      <member refid="classirrklang_1_1IVirtualRefCounted_1a54ed4b2c2bf1fd7666f7d78a9e768612" prot="public" virt="virtual"><scope>irrklang::IVirtualRefCounted</scope><name>~IVirtualRefCounted</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

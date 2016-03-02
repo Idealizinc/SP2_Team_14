@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="Utility_8h" kind="file" language="C++">
+    <compoundname>Utility.h</compoundname>
+    <includes refid="Mtx44_8h" local="yes">Mtx44.h</includes>
+    <includes refid="Vertex_8h" local="yes">Vertex.h</includes>
+    <includedby refid="Particle_8cpp" local="yes">ComGLab/Source/Particle.cpp</includedby>
+    <includedby refid="SP2__Scene_8cpp" local="yes">ComGLab/Source/SP2_Scene.cpp</includedby>
+    <includedby refid="Utility_8cpp" local="yes">ComGLab/Source/Utility.cpp</includedby>
+    <incdepgraph>
+      <node id="2267">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="2268" relation="include">
+        </childnode>
+        <childnode refid="2269" relation="include">
+        </childnode>
+        <childnode refid="2270" relation="include">
+        </childnode>
+        <childnode refid="2271" relation="include">
+        </childnode>
+      </node>
+      <node id="2266">
+        <label>Mtx44.h</label>
+        <link refid="Mtx44_8h"/>
+        <childnode refid="2267" relation="include">
+        </childnode>
+        <childnode refid="2272" relation="include">
+        </childnode>
+      </node>
+      <node id="2272">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="2267" relation="include">
+        </childnode>
+        <childnode refid="2273" relation="include">
+        </childnode>
+      </node>
+      <node id="2268">
+        <label>cmath</label>
+      </node>
+      <node id="2269">
+        <label>exception</label>
+      </node>
+      <node id="2274">
+        <label>Vertex.h</label>
+        <link refid="Vertex_8h"/>
+        <childnode refid="2272" relation="include">
+        </childnode>
+      </node>
+      <node id="2270">
+        <label>ctime</label>
+      </node>
+      <node id="2265">
+        <label>ComGLab/Source/Utility.h</label>
+        <link refid="Utility.h"/>
+        <childnode refid="2266" relation="include">
+        </childnode>
+        <childnode refid="2274" relation="include">
+        </childnode>
+      </node>
+      <node id="2271">
+        <label>cstdlib</label>
+      </node>
+      <node id="2273">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2276">
+        <label>ComGLab/Source/Particle.cpp</label>
+        <link refid="Particle_8cpp"/>
+      </node>
+      <node id="2277">
+        <label>ComGLab/Source/SP2_Scene.cpp</label>
+        <link refid="SP2__Scene_8cpp"/>
+      </node>
+      <node id="2278">
+        <label>ComGLab/Source/Utility.cpp</label>
+        <link refid="Utility_8cpp"/>
+      </node>
+      <node id="2275">
+        <label>ComGLab/Source/Utility.h</label>
+        <link refid="Utility.h"/>
+        <childnode refid="2276" relation="include">
+        </childnode>
+        <childnode refid="2277" relation="include">
+        </childnode>
+        <childnode refid="2278" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="Utility_8h_1adfba271c0b8f223d01dd4f35e62e27af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structPosition" kindref="compound">Position</ref></type>
+        <definition>Position operator*</definition>
+        <argsstring>(const Mtx44 &amp;lhs, const Position &amp;rhs)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classMtx44" kindref="compound">Mtx44</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structPosition" kindref="compound">Position</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Utility.h" line="7" column="1" bodyfile="ComGLab/Source/Utility.cpp" bodystart="3" bodyend="11"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">Mtx44::a</references>
+        <references refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" compoundref="Vertex_8h" startline="8">Position::x</references>
+        <references refid="structPosition_1a54a6182b5f7539295b32255808897d3f" compoundref="Vertex_8h" startline="8">Position::y</references>
+        <references refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" compoundref="Vertex_8h" startline="8">Position::z</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>UTILITY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UTILITY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Mtx44_8h" kindref="compound">Mtx44.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Vertex_8h" kindref="compound">Vertex.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><ref refid="structPosition" kindref="compound">Position</ref><sp/><ref refid="Utility_8h_1adfba271c0b8f223d01dd4f35e62e27af" kindref="member">operator*</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classMtx44" kindref="compound">Mtx44</ref>&amp;<sp/>lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structPosition" kindref="compound">Position</ref>&amp;<sp/>rhs);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight></codeline>
+    </programlisting>
+    <location file="ComGLab/Source/Utility.h"/>
+  </compounddef>
+</doxygen>

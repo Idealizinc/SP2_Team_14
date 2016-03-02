@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="classirrklang_1_1ISoundDeviceList" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>irrklang::ISoundDeviceList</compoundname>
+    <basecompoundref refid="classirrklang_1_1IRefCounted" prot="public" virt="non-virtual">irrklang::IRefCounted</basecompoundref>
+    <includes refid="ik__ISoundDeviceList_8h" local="no">ik_ISoundDeviceList.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classirrklang_1_1ISoundDeviceList_1a546d93bf5e70b5b168c430329194f2e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+        <definition>virtual ik_s32 irrklang::ISoundDeviceList::getDeviceCount</definition>
+        <argsstring>()=0</argsstring>
+        <name>getDeviceCount</name>
+        <briefdescription>
+<para>Returns amount of enumerated devices in the list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundDeviceList.h" line="24" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundDeviceList_1a77509686d507ea5939a50d31ca8fdf93" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>const char *</type>
+        <definition>virtual const char* irrklang::ISoundDeviceList::getDeviceID</definition>
+        <argsstring>(ik_s32 index)=0</argsstring>
+        <name>getDeviceID</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Returns the ID of the device. Use this string to identify this device in <ref refid="namespaceirrklang_1ad9829f898bc0665fdd2554a6f5c7ca1c" kindref="member">createIrrKlangDevice()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the device, a value between 0 and <ref refid="classirrklang_1_1ISoundDeviceList_1a546d93bf5e70b5b168c430329194f2e4" kindref="member">ISoundDeviceList::getDeviceCount()</ref>-1. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a pointer to a string identifying the device. The string will only as long valid as long as the <ref refid="classirrklang_1_1ISoundDeviceList" kindref="compound">ISoundDeviceList</ref> exists. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundDeviceList.h" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classirrklang_1_1ISoundDeviceList_1a79160c5136dbdcd81999f3d95d603498" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>const char *</type>
+        <definition>virtual const char* irrklang::ISoundDeviceList::getDeviceDescription</definition>
+        <argsstring>(ik_s32 index)=0</argsstring>
+        <name>getDeviceDescription</name>
+        <param>
+          <type><ref refid="namespaceirrklang_1af8028b1c477e50d479270611ecb76e92" kindref="member">ik_s32</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Returns description of the device. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the device, a value between 0 and <ref refid="classirrklang_1_1ISoundDeviceList_1a546d93bf5e70b5b168c430329194f2e4" kindref="member">ISoundDeviceList::getDeviceCount()</ref>-1. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="irrKlang-1.5.0/include/ik_ISoundDeviceList.h" line="34" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A list of sound devices for a sound driver. Use <ref refid="namespaceirrklang_1a38d9a69bf54fd60e76e80e199e44faee" kindref="member">irrklang::createSoundDeviceList()</ref> to create this list. </para>    </briefdescription>
+    <detaileddescription>
+<para>The function <ref refid="namespaceirrklang_1ad9829f898bc0665fdd2554a6f5c7ca1c" kindref="member">createIrrKlangDevice()</ref> has a parameter &apos;deviceID&apos; which takes the value returned by <ref refid="classirrklang_1_1ISoundDeviceList_1a77509686d507ea5939a50d31ca8fdf93" kindref="member">ISoundDeviceList::getDeviceID()</ref> and uses that device then. The list of devices in <ref refid="classirrklang_1_1ISoundDeviceList" kindref="compound">ISoundDeviceList</ref> usually also includes the default device which is the first entry and has an empty deviceID string (&quot;&quot;) and the description &quot;default device&quot;. There is some example code on how to use the <ref refid="classirrklang_1_1ISoundDeviceList" kindref="compound">ISoundDeviceList</ref> in <ref refid="index_1enumeratingDevices" kindref="member">Enumerating sound devices</ref>. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="456">
+        <label>irrklang::ISoundDeviceList</label>
+        <link refid="classirrklang_1_1ISoundDeviceList"/>
+        <childnode refid="457" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="457">
+        <label>irrklang::IRefCounted</label>
+        <link refid="classirrklang_1_1IRefCounted"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="458">
+        <label>irrklang::ISoundDeviceList</label>
+        <link refid="classirrklang_1_1ISoundDeviceList"/>
+        <childnode refid="459" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="460">
+        <label>int</label>
+      </node>
+      <node id="459">
+        <label>irrklang::IRefCounted</label>
+        <link refid="classirrklang_1_1IRefCounted"/>
+        <childnode refid="460" relation="usage">
+          <edgelabel>ReferenceCounter</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="irrKlang-1.5.0/include/ik_ISoundDeviceList.h" line="20" column="1" bodyfile="irrKlang-1.5.0/include/ik_ISoundDeviceList.h" bodystart="19" bodyend="35"/>
+    <listofallmembers>
+      <member refid="classirrklang_1_1IRefCounted_1a869fe3adc6e49e8da105e95837a565b1" prot="public" virt="non-virtual"><scope>irrklang::ISoundDeviceList</scope><name>drop</name></member>
+      <member refid="classirrklang_1_1ISoundDeviceList_1a546d93bf5e70b5b168c430329194f2e4" prot="public" virt="pure-virtual"><scope>irrklang::ISoundDeviceList</scope><name>getDeviceCount</name></member>
+      <member refid="classirrklang_1_1ISoundDeviceList_1a79160c5136dbdcd81999f3d95d603498" prot="public" virt="pure-virtual"><scope>irrklang::ISoundDeviceList</scope><name>getDeviceDescription</name></member>
+      <member refid="classirrklang_1_1ISoundDeviceList_1a77509686d507ea5939a50d31ca8fdf93" prot="public" virt="pure-virtual"><scope>irrklang::ISoundDeviceList</scope><name>getDeviceID</name></member>
+      <member refid="classirrklang_1_1IRefCounted_1a737b09ee717069b964a3bd0451690388" prot="public" virt="non-virtual"><scope>irrklang::ISoundDeviceList</scope><name>grab</name></member>
+      <member refid="classirrklang_1_1IRefCounted_1ad9d20b84a525d7bc07e44b556fbf7da6" prot="public" virt="non-virtual"><scope>irrklang::ISoundDeviceList</scope><name>IRefCounted</name></member>
+      <member refid="classirrklang_1_1IRefCounted_1a7fe8953e57adac9bcd28a94d3b251886" prot="public" virt="virtual"><scope>irrklang::ISoundDeviceList</scope><name>~IRefCounted</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

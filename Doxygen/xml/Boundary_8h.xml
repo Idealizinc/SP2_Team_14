@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="Boundary_8h" kind="file" language="C++">
+    <compoundname>Boundary.h</compoundname>
+    <includedby refid="Camera3_8h" local="yes">ComGLab/Source/Camera3.h</includedby>
+    <includedby refid="Raycast_8h" local="yes">ComGLab/Source/Raycast.h</includedby>
+    <includedby refid="Robot_8h" local="yes">ComGLab/Source/Robot.h</includedby>
+    <includedby refid="Boundary_8cpp" local="yes">ComGLab/Source/Boundary.cpp</includedby>
+    <invincdepgraph>
+      <node id="1589">
+        <label>ComGLab/Source/Raycast.h</label>
+        <link refid="Raycast_8h"/>
+        <childnode refid="1590" relation="include">
+        </childnode>
+        <childnode refid="1596" relation="include">
+        </childnode>
+      </node>
+      <node id="1587">
+        <label>ComGLab/Source/Particle.cpp</label>
+        <link refid="Particle_8cpp"/>
+      </node>
+      <node id="1590">
+        <label>ComGLab/Source/WeaponSystem.h</label>
+        <link refid="WeaponSystem_8h"/>
+        <childnode refid="1583" relation="include">
+        </childnode>
+        <childnode refid="1591" relation="include">
+        </childnode>
+        <childnode refid="1595" relation="include">
+        </childnode>
+      </node>
+      <node id="1585">
+        <label>ComGLab/Source/SP2_Scene.cpp</label>
+        <link refid="SP2__Scene_8cpp"/>
+      </node>
+      <node id="1584">
+        <label>ComGLab/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="1596">
+        <label>ComGLab/Source/Raycast.cpp</label>
+        <link refid="Raycast_8cpp"/>
+      </node>
+      <node id="1581">
+        <label>ComGLab/Source/Boundary.h</label>
+        <link refid="Boundary.h"/>
+        <childnode refid="1582" relation="include">
+        </childnode>
+        <childnode refid="1589" relation="include">
+        </childnode>
+        <childnode refid="1591" relation="include">
+        </childnode>
+        <childnode refid="1597" relation="include">
+        </childnode>
+      </node>
+      <node id="1597">
+        <label>ComGLab/Source/Boundary.cpp</label>
+        <link refid="Boundary_8cpp"/>
+      </node>
+      <node id="1583">
+        <label>ComGLab/Source/SP2_Scene.h</label>
+        <link refid="SP2__Scene_8h"/>
+        <childnode refid="1584" relation="include">
+        </childnode>
+        <childnode refid="1585" relation="include">
+        </childnode>
+      </node>
+      <node id="1595">
+        <label>ComGLab/Source/WeaponSystem.cpp</label>
+        <link refid="WeaponSystem_8cpp"/>
+      </node>
+      <node id="1593">
+        <label>ComGLab/Source/RobotManager.cpp</label>
+        <link refid="RobotManager_8cpp"/>
+      </node>
+      <node id="1588">
+        <label>ComGLab/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="1582">
+        <label>ComGLab/Source/Camera3.h</label>
+        <link refid="Camera3_8h"/>
+        <childnode refid="1583" relation="include">
+        </childnode>
+        <childnode refid="1586" relation="include">
+        </childnode>
+        <childnode refid="1588" relation="include">
+        </childnode>
+      </node>
+      <node id="1591">
+        <label>ComGLab/Source/Robot.h</label>
+        <link refid="Robot_8h"/>
+        <childnode refid="1583" relation="include">
+        </childnode>
+        <childnode refid="1592" relation="include">
+        </childnode>
+        <childnode refid="1594" relation="include">
+        </childnode>
+        <childnode refid="1585" relation="include">
+        </childnode>
+      </node>
+      <node id="1592">
+        <label>ComGLab/Source/RobotManager.h</label>
+        <link refid="RobotManager_8h"/>
+        <childnode refid="1583" relation="include">
+        </childnode>
+        <childnode refid="1593" relation="include">
+        </childnode>
+      </node>
+      <node id="1586">
+        <label>ComGLab/Source/Particle.h</label>
+        <link refid="Particle_8h"/>
+        <childnode refid="1584" relation="include">
+        </childnode>
+        <childnode refid="1587" relation="include">
+        </childnode>
+      </node>
+      <node id="1594">
+        <label>ComGLab/Source/Robot.cpp</label>
+        <link refid="Robot_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structBoundary" prot="public">Boundary</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_BOUNDARY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_BOUNDARY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="structBoundary" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structBoundary" kindref="compound">Boundary</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6" refid="structBoundary_1a44bd457691e03ec3db93e88cbe36d87a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary_1a44bd457691e03ec3db93e88cbe36d87a" kindref="member">Boundary</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structBoundary_1a52861c6957c6cc6081f7d19113ea5bd2" kindref="member">xMin</ref><sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structBoundary_1a85c5f834019116be139c56e37c0e45de" kindref="member">xMax</ref><sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structBoundary_1a19b72bc2972778edd5cad9b601fe2e5d" kindref="member">zMin</ref><sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structBoundary_1a1238d3324e1a66fea65acd5dbe881e84" kindref="member">zMax</ref><sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structBoundary_1ad97b083262315dabde223a7df01a8233" kindref="member">yMin</ref><sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structBoundary_1adb22e67fd9b5bcc52788383c15b2b419" kindref="member">yMax</ref><sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="structBoundary_1a30e4384c799da245bd2a47084cd6e4d3" kindref="member">type</ref><sp/>=<sp/>0)<sp/>:<sp/><ref refid="structBoundary_1a52861c6957c6cc6081f7d19113ea5bd2" kindref="member">xMin</ref>(<ref refid="structBoundary_1a52861c6957c6cc6081f7d19113ea5bd2" kindref="member">xMin</ref>),<sp/><ref refid="structBoundary_1a85c5f834019116be139c56e37c0e45de" kindref="member">xMax</ref>(<ref refid="structBoundary_1a85c5f834019116be139c56e37c0e45de" kindref="member">xMax</ref>),<sp/><ref refid="structBoundary_1a19b72bc2972778edd5cad9b601fe2e5d" kindref="member">zMin</ref>(<ref refid="structBoundary_1a19b72bc2972778edd5cad9b601fe2e5d" kindref="member">zMin</ref>),<sp/><ref refid="structBoundary_1a1238d3324e1a66fea65acd5dbe881e84" kindref="member">zMax</ref>(<ref refid="structBoundary_1a1238d3324e1a66fea65acd5dbe881e84" kindref="member">zMax</ref>),<sp/><ref refid="structBoundary_1ad97b083262315dabde223a7df01a8233" kindref="member">yMin</ref>(<ref refid="structBoundary_1ad97b083262315dabde223a7df01a8233" kindref="member">yMin</ref>),<sp/><ref refid="structBoundary_1adb22e67fd9b5bcc52788383c15b2b419" kindref="member">yMax</ref>(<ref refid="structBoundary_1adb22e67fd9b5bcc52788383c15b2b419" kindref="member">yMax</ref>),<sp/><ref refid="structBoundary_1a30e4384c799da245bd2a47084cd6e4d3" kindref="member">type</ref>(<ref refid="structBoundary_1a30e4384c799da245bd2a47084cd6e4d3" kindref="member">type</ref>)<sp/>{};</highlight></codeline>
+<codeline lineno="7" refid="structBoundary_1a19b72bc2972778edd5cad9b601fe2e5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structBoundary_1a44bd457691e03ec3db93e88cbe36d87a" kindref="member">Boundary</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structBoundary" kindref="compound">Boundary</ref>&amp;<sp/>bound){};</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structBoundary_1a52861c6957c6cc6081f7d19113ea5bd2" kindref="member">xMin</ref>,<sp/><ref refid="structBoundary_1a85c5f834019116be139c56e37c0e45de" kindref="member">xMax</ref>,<sp/><ref refid="structBoundary_1a19b72bc2972778edd5cad9b601fe2e5d" kindref="member">zMin</ref>,<sp/><ref refid="structBoundary_1a1238d3324e1a66fea65acd5dbe881e84" kindref="member">zMax</ref>,<sp/><ref refid="structBoundary_1ad97b083262315dabde223a7df01a8233" kindref="member">yMin</ref>,<sp/><ref refid="structBoundary_1adb22e67fd9b5bcc52788383c15b2b419" kindref="member">yMax</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>0<sp/>for<sp/>collidable,<sp/>1<sp/>for<sp/>interactable;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="structBoundary_1a30e4384c799da245bd2a47084cd6e4d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="structBoundary_1a30e4384c799da245bd2a47084cd6e4d3" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="11" refid="structBoundary_1a02778ac00885bcd5f71a72b583e42d28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structBoundary_1a02778ac00885bcd5f71a72b583e42d28" kindref="member">active</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12" refid="structBoundary_1a911fb29af5fe9212d5f5ed309f87d84e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structBoundary_1a911fb29af5fe9212d5f5ed309f87d84e" kindref="member">isWithin</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structBoundary_1a3cf640001c6bbc842d129f453fb3441b" kindref="member">set</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>xMin<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>xMax<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>zMin<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>zMax<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>yMin<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>yMax<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structBoundary_1ac8729f6b5ec80c5af1151892c0a3e9b8" kindref="member">BoundaryCheck</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>playerCoordX,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>playerCoordZ,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&amp;<sp/>playerCoordY);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//_BOUNDARY_H</highlight></codeline>
+    </programlisting>
+    <location file="ComGLab/Source/Boundary.h"/>
+  </compounddef>
+</doxygen>

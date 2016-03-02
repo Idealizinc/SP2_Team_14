@@ -1,3 +1,12 @@
+/****************************************************************************/
+/*!
+\file shader.cpp
+\author Wen Sheng Tang
+\par email: tang_wen_sheng\@nyp.edu.sg
+\brief
+.cpp file that reads shader files
+*/
+/****************************************************************************/
 #include <stdio.h>
 #include <string>
 #include <vector>

@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structPosition" kind="struct" language="C++" prot="public">
+    <compoundname>Position</compoundname>
+    <includes refid="Vertex_8h" local="no">Vertex.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structPosition_1af684446cbf0f6d53386686283da6dcc6" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Position::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Vertex.h" line="8" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="8" bodyend="-1"/>
+        <referencedby refid="classMeshBuilder_1a3123aa273acbacf182adc536433c4911" compoundref="MeshBuilder_8cpp" startline="694" endline="743">MeshBuilder::GenerateCone</referencedby>
+        <referencedby refid="classMeshBuilder_1a36320c69da431e763f864e3247c58a9b" compoundref="MeshBuilder_8cpp" startline="479" endline="522">MeshBuilder::GenerateHemisphere</referencedby>
+        <referencedby refid="classMeshBuilder_1a227ca853ca1ea18521bae1c1d46d6715" compoundref="MeshBuilder_8cpp" startline="433" endline="477">MeshBuilder::GenerateQuarterSphere</referencedby>
+        <referencedby refid="classMeshBuilder_1a569c4966c1422841fc79118803f5ca7e" compoundref="MeshBuilder_8cpp" startline="385" endline="431">MeshBuilder::GenerateSphere</referencedby>
+        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">Particle::initLights</referencedby>
+        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="672" endline="757">SP2_Scene::initLights</referencedby>
+        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="7" endline="115">LoadOBJ</referencedby>
+        <referencedby refid="Utility_8h_1adfba271c0b8f223d01dd4f35e62e27af" compoundref="Utility_8cpp" startline="3" endline="11">operator*</referencedby>
+        <referencedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" compoundref="Particle_8cpp" startline="358" endline="422">Particle::Render</referencedby>
+        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2248" endline="2508">SP2_Scene::Render</referencedby>
+        <referencedby refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" compoundref="Vertex_8h" startline="13" endline="13">Set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structPosition_1a54a6182b5f7539295b32255808897d3f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Position::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Vertex.h" line="8" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="8" bodyend="-1"/>
+        <referencedby refid="classMeshBuilder_1a36320c69da431e763f864e3247c58a9b" compoundref="MeshBuilder_8cpp" startline="479" endline="522">MeshBuilder::GenerateHemisphere</referencedby>
+        <referencedby refid="classMeshBuilder_1a227ca853ca1ea18521bae1c1d46d6715" compoundref="MeshBuilder_8cpp" startline="433" endline="477">MeshBuilder::GenerateQuarterSphere</referencedby>
+        <referencedby refid="classMeshBuilder_1a569c4966c1422841fc79118803f5ca7e" compoundref="MeshBuilder_8cpp" startline="385" endline="431">MeshBuilder::GenerateSphere</referencedby>
+        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">Particle::initLights</referencedby>
+        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="672" endline="757">SP2_Scene::initLights</referencedby>
+        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="7" endline="115">LoadOBJ</referencedby>
+        <referencedby refid="Utility_8h_1adfba271c0b8f223d01dd4f35e62e27af" compoundref="Utility_8cpp" startline="3" endline="11">operator*</referencedby>
+        <referencedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" compoundref="Particle_8cpp" startline="358" endline="422">Particle::Render</referencedby>
+        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2248" endline="2508">SP2_Scene::Render</referencedby>
+        <referencedby refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" compoundref="Vertex_8h" startline="13" endline="13">Set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Position::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Vertex.h" line="8" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="8" bodyend="-1"/>
+        <referencedby refid="classMeshBuilder_1a3123aa273acbacf182adc536433c4911" compoundref="MeshBuilder_8cpp" startline="694" endline="743">MeshBuilder::GenerateCone</referencedby>
+        <referencedby refid="classMeshBuilder_1a36320c69da431e763f864e3247c58a9b" compoundref="MeshBuilder_8cpp" startline="479" endline="522">MeshBuilder::GenerateHemisphere</referencedby>
+        <referencedby refid="classMeshBuilder_1a227ca853ca1ea18521bae1c1d46d6715" compoundref="MeshBuilder_8cpp" startline="433" endline="477">MeshBuilder::GenerateQuarterSphere</referencedby>
+        <referencedby refid="classMeshBuilder_1a569c4966c1422841fc79118803f5ca7e" compoundref="MeshBuilder_8cpp" startline="385" endline="431">MeshBuilder::GenerateSphere</referencedby>
+        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">Particle::initLights</referencedby>
+        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="672" endline="757">SP2_Scene::initLights</referencedby>
+        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="7" endline="115">LoadOBJ</referencedby>
+        <referencedby refid="Utility_8h_1adfba271c0b8f223d01dd4f35e62e27af" compoundref="Utility_8cpp" startline="3" endline="11">operator*</referencedby>
+        <referencedby refid="classParticle_1aff7cd61e7a2b82cebc3e9494fa54aa5d" compoundref="Particle_8cpp" startline="358" endline="422">Particle::Render</referencedby>
+        <referencedby refid="classSP2__Scene_1a3fcef22a72e71bd29f02567c4a92ce61" compoundref="SP2__Scene_8cpp" startline="2248" endline="2508">SP2_Scene::Render</referencedby>
+        <referencedby refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" compoundref="Vertex_8h" startline="13" endline="13">Set</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structPosition_1ab73d81912c4ead48cee5342d7cf5a33b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Position::Position</definition>
+        <argsstring>(float x=0, float y=0, float z=0)</argsstring>
+        <name>Position</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Vertex.h" line="9" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="9" bodyend="12"/>
+        <references refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" compoundref="Vertex_8h" startline="13" endline="13">Set</references>
+      </memberdef>
+      <memberdef kind="function" id="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Position::Set</definition>
+        <argsstring>(float x, float y, float z)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ComGLab/Source/Vertex.h" line="13" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="13" bodyend="13"/>
+        <references refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" compoundref="Vertex_8h" startline="8">x</references>
+        <references refid="structPosition_1a54a6182b5f7539295b32255808897d3f" compoundref="Vertex_8h" startline="8">y</references>
+        <references refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" compoundref="Vertex_8h" startline="8">z</references>
+        <referencedby refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="17" endline="65">MeshBuilder::GenerateAxes</referencedby>
+        <referencedby refid="classMeshBuilder_1a68d491a27ed57b66b7a8161a2b230951" compoundref="MeshBuilder_8cpp" startline="267" endline="313">MeshBuilder::GenerateCircle</referencedby>
+        <referencedby refid="classMeshBuilder_1a3123aa273acbacf182adc536433c4911" compoundref="MeshBuilder_8cpp" startline="694" endline="743">MeshBuilder::GenerateCone</referencedby>
+        <referencedby refid="classMeshBuilder_1a5e777328dc946f483beb5645d8f24c4a" compoundref="MeshBuilder_8cpp" startline="138" endline="202">MeshBuilder::GenerateCube</referencedby>
+        <referencedby refid="classMeshBuilder_1a06796a82056f0a291f6cda3d8318531c" compoundref="MeshBuilder_8cpp" startline="623" endline="692">MeshBuilder::GenerateCylinder</referencedby>
+        <referencedby refid="classMeshBuilder_1a334f7cc0723906edca201cf80bc865ba" compoundref="MeshBuilder_8cpp" startline="572" endline="620">MeshBuilder::GenerateHalfTorus</referencedby>
+        <referencedby refid="classMeshBuilder_1a36320c69da431e763f864e3247c58a9b" compoundref="MeshBuilder_8cpp" startline="479" endline="522">MeshBuilder::GenerateHemisphere</referencedby>
+        <referencedby refid="classMeshBuilder_1a6220b5a8d58df2c01bc2026b00477c30" compoundref="MeshBuilder_8cpp" startline="204" endline="255">MeshBuilder::GeneratePrism</referencedby>
+        <referencedby refid="classMeshBuilder_1aa3751076aa9f74324d49a999a3c3fa55" compoundref="MeshBuilder_8cpp" startline="80" endline="122">MeshBuilder::GenerateQuad</referencedby>
+        <referencedby refid="classMeshBuilder_1a227ca853ca1ea18521bae1c1d46d6715" compoundref="MeshBuilder_8cpp" startline="433" endline="477">MeshBuilder::GenerateQuarterSphere</referencedby>
+        <referencedby refid="classMeshBuilder_1a53f9fa5f58c23dfce5327d27e6fa1783" compoundref="MeshBuilder_8cpp" startline="315" endline="367">MeshBuilder::GenerateRing</referencedby>
+        <referencedby refid="classMeshBuilder_1a569c4966c1422841fc79118803f5ca7e" compoundref="MeshBuilder_8cpp" startline="385" endline="431">MeshBuilder::GenerateSphere</referencedby>
+        <referencedby refid="classMeshBuilder_1aac7c87881dbc08f8d41f2068e0f40c76" compoundref="MeshBuilder_8cpp" startline="839" endline="887">MeshBuilder::GenerateText</referencedby>
+        <referencedby refid="classMeshBuilder_1ae78de92278560e1d9d33bad688f3ac7f" compoundref="MeshBuilder_8cpp" startline="524" endline="570">MeshBuilder::GenerateTorus</referencedby>
+        <referencedby refid="classMeshBuilder_1a579c3377542eaf2cfb64ae7bbb309630" compoundref="MeshBuilder_8cpp" startline="745" endline="809">MeshBuilder::GenerateTrapezium</referencedby>
+        <referencedby refid="LoadOBJ_8h_1aa99ef9426a57205ed8acb8f7d41f3bae" compoundref="LoadOBJ_8cpp" startline="143" endline="183">IndexVBO</referencedby>
+        <referencedby refid="classParticle_1af4e559fde47d973ab72ee0dc73b1f04b" compoundref="Particle_8cpp" startline="212" endline="256">Particle::initLights</referencedby>
+        <referencedby refid="classSP2__Scene_1ad5ca8ed703d21efb44c09ecc4af6d454" compoundref="SP2__Scene_8cpp" startline="672" endline="757">SP2_Scene::initLights</referencedby>
+        <referencedby refid="structLight_1aeb5df09a25a32f19fdffa761268ba24f" compoundref="Light_8cpp" startline="3" endline="9">Light::Light</referencedby>
+        <referencedby refid="structPosition_1ab73d81912c4ead48cee5342d7cf5a33b" compoundref="Vertex_8h" startline="9" endline="12">Position</referencedby>
+        <referencedby refid="classSP2__Scene_1a2d81e16b1353a71274ac59b796969cf0" compoundref="SP2__Scene_8cpp" startline="1226" endline="1791">SP2_Scene::Update</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="549">
+        <label>Position</label>
+        <link refid="structPosition"/>
+        <childnode refid="550" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+      <node id="550">
+        <label>float</label>
+      </node>
+    </collaborationgraph>
+    <location file="ComGLab/Source/Vertex.h" line="7" column="1" bodyfile="ComGLab/Source/Vertex.h" bodystart="6" bodyend="14"/>
+    <listofallmembers>
+      <member refid="structPosition_1ab73d81912c4ead48cee5342d7cf5a33b" prot="public" virt="non-virtual"><scope>Position</scope><name>Position</name></member>
+      <member refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" prot="public" virt="non-virtual"><scope>Position</scope><name>Set</name></member>
+      <member refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" prot="public" virt="non-virtual"><scope>Position</scope><name>x</name></member>
+      <member refid="structPosition_1a54a6182b5f7539295b32255808897d3f" prot="public" virt="non-virtual"><scope>Position</scope><name>y</name></member>
+      <member refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" prot="public" virt="non-virtual"><scope>Position</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
