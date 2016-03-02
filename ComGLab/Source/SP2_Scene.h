@@ -395,5 +395,4 @@ private:
 	bool loadWep = false;
 };
 
-
 #endif

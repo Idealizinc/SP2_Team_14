@@ -6,7 +6,8 @@
 \brief
 .cpp file that defines camera
 */
-/****************************************************************************/
+/****************************************************************************/
+
 #include "Camera3.h"
 #include "Application.h"
 #include "Mtx44.h"
@@ -521,5 +522,3 @@ void Camera3::jump(double dt, int level)
 		}
 	}
 }
-
-

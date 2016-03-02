@@ -2523,4 +2523,3 @@ void SP2_Scene::Exit()
 	glDeleteVertexArrays(1, &m_vertexArrayID);
 	glDeleteProgram(m_programID);
 }
-
