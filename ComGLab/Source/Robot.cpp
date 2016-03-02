@@ -105,102 +105,121 @@ void Robot::SetHealth(float newHP)
 
 void Robot::RobotAnimation(double dt)
 {
-	//left arm
-	if (leftarmrotate == true)
-	{
-		rotatelefthand -= (float)(5 * dt);
-	}
-	else if (leftarmrotate == false)
-	{
-		rotatelefthand += (float)(5 * dt);
-	}
-	if (rotatelefthand <= leftarmrotatelimit)
-	{
-		leftarmrotate = false;
-	}
-	else if (rotatelefthand >= -leftarmrotatelimit)
-	{
-		leftarmrotate = true;
-	}
+	if (RobotTypeVal != 3)
+	{//left arm
+		if (leftarmrotate == true)
+		{
+			rotatelefthand -= (float)(5 * dt);
+		}
+		else if (leftarmrotate == false)
+		{
+			rotatelefthand += (float)(5 * dt);
+		}
+		if (rotatelefthand <= leftarmrotatelimit)
+		{
+			leftarmrotate = false;
+		}
+		else if (rotatelefthand >= -leftarmrotatelimit)
+		{
+			leftarmrotate = true;
+		}
 
-	//right arm
-	if (rightarmrotate == true)
-	{
-		rotaterighthand += (float)(5 * dt);
-	}
-	else if (rightarmrotate == false)
-	{
-		rotaterighthand -= (float)(5 * dt);
-	}
-	if (rotaterighthand <= rightarmrotatelimit)
-	{
-		rightarmrotate = true;
-	}
-	else if (rotaterighthand >= -rightarmrotatelimit)
-	{
-		rightarmrotate = false;
-	}
-	//left leg
-	if (leftleg == true)
-	{
-		moveleftleg -= (float)(20 * dt);
-	}
-	else if (leftleg == false)
-	{
-		moveleftleg += (float)(20 * dt);
-	}
-	if (moveleftleg >= leftleglimit)
-	{
-		leftleg = true;
-	}
-	else if (moveleftleg <= -leftleglimit)
-	{
-		leftleg = false;
-	}
+		//right arm
+		if (rightarmrotate == true)
+		{
+			rotaterighthand += (float)(5 * dt);
+		}
+		else if (rightarmrotate == false)
+		{
+			rotaterighthand -= (float)(5 * dt);
+		}
+		if (rotaterighthand <= rightarmrotatelimit)
+		{
+			rightarmrotate = true;
+		}
+		else if (rotaterighthand >= -rightarmrotatelimit)
+		{
+			rightarmrotate = false;
+		}
+		//left leg
+		if (leftleg == true)
+		{
+			moveleftleg -= (float)(20 * dt);
+		}
+		else if (leftleg == false)
+		{
+			moveleftleg += (float)(20 * dt);
+		}
+		if (moveleftleg >= leftleglimit)
+		{
+			leftleg = true;
+		}
+		else if (moveleftleg <= -leftleglimit)
+		{
+			leftleg = false;
+		}
 
-	//right leg
-	if (rightleg == true)
-	{
-		moverightleg += (float)(20 * dt);
-	}
-	else if (rightleg == false)
-	{
-		moverightleg -= (float)(20 * dt);
-	}
-	if (moverightleg >= rightleglimit)
-	{
-		rightleg = false;
-	}
-	else if (moverightleg <= -rightleglimit)
-	{
-		rightleg = true;
-	}
-	//walking
-	/*if (walk == false)
-	{
+		//right leg
+		if (rightleg == true)
+		{
+			moverightleg += (float)(20 * dt);
+		}
+		else if (rightleg == false)
+		{
+			moverightleg -= (float)(20 * dt);
+		}
+		if (moverightleg >= rightleglimit)
+		{
+			rightleg = false;
+		}
+		else if (moverightleg <= -rightleglimit)
+		{
+			rightleg = true;
+		}
+		//walking
+		/*if (walk == false)
+		{
 		leftarmrotatelimit = -3;
 		rightarmrotatelimit = -3;
-	}*/
+		}*/
 
-	
-
-	if (die == true)
-	{
-		rotatelefthand = 0;
-		rotaterighthand = 0;
-		moveleftleg = 0;
-		moverightleg = 0;
-		collapse += (float)(100 * dt);
-		if (collapse > 85)
+		if (die == true)
 		{
-			die = false;
-			collapse -= (float)(100 * dt);
-			deadanimationover = true;
+			rotatelefthand = 0;
+			rotaterighthand = 0;
+			moveleftleg = 0;
+			moverightleg = 0;
+			collapse += (float)(100 * dt);
+			if (collapse > 85)
+			{
+				die = false;
+				collapse -= (float)(100 * dt);
+				deadanimationover = true;
+			}
 		}
 	}
+	else if (RobotTypeVal == 3) //&& Mothership.RobotList.front().GetHealth() < 0)
+	{
+		if (die == true)
+		{
+			explosion += (float)(0.5 * dt);
+			if (explosion > 5)
+			{
 
-	//droid repair animation
-	
+				//explosion -= (float)(0.5 * dt);
+				deadanimationover = true;
+			}
+		}
+		//defeated = true;
+
+	}
+
+
+	/*if (explosion > 50)
+	{
+	defeated = false;
+	}*/
+
 }
 
 void Robot::CalcBounds()

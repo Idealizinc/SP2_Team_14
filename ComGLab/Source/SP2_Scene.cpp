@@ -1110,16 +1110,29 @@ void SP2_Scene::RenderSpaceMap()
 		modelStack.PushMatrix();
 		modelStack.Translate(i.Position().x, i.Position().y, i.Position().z);
 		modelStack.Rotate(ShipRotation, 0, 1, 0);
-			modelStack.PushMatrix();
-			//modelStack.Translate(0, 10, 100);
-			//modelStack.Translate(0, moveMshipUp, 0);
-			modelStack.Scale(20, 20, 20);
-			RenderMesh(meshList[GEO_MOTHERSHIP_TOP], true);
-			RenderMesh(meshList[GEO_MOTHERSHIP_BOTTOM], true);
-			RenderMesh(meshList[GEO_MOTHERSHIP_UPPER], true);
-			RenderMesh(meshList[GEO_MOTHERSHIP_LOWER], true);
-			RenderMesh(meshList[GEO_MOTHERSHIP_TAIL], true);
-			modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		//modelStack.Translate(0, 10, 100);
+		//modelStack.Translate(0, moveMshipUp, 0);
+		modelStack.Scale(20, 20, 20);
+		modelStack.Translate(-i.explosion / 3, i.explosion / 2, 0);
+		RenderMesh(meshList[GEO_MOTHERSHIP_TOP], true);
+		modelStack.PushMatrix();
+		modelStack.Translate(-i.explosion / 3, 0, i.explosion / 2);
+		RenderMesh(meshList[GEO_MOTHERSHIP_UPPER], true);
+		modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		modelStack.Translate(i.explosion / 2, i.explosion / 2, 0);
+		RenderMesh(meshList[GEO_MOTHERSHIP_LOWER], true);
+		modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		modelStack.Translate(i.explosion / 2, -i.explosion / 2, 0);
+		RenderMesh(meshList[GEO_MOTHERSHIP_BOTTOM], true);
+		modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		modelStack.Translate(-i.explosion / 2, -i.explosion / 3, 0);
+		RenderMesh(meshList[GEO_MOTHERSHIP_TAIL], true);
+		modelStack.PopMatrix();
+		modelStack.PopMatrix();
 		modelStack.PopMatrix();
 	}
 	modelStack.PushMatrix();
@@ -1914,6 +1927,10 @@ void SP2_Scene::Update(double dt)
 			MothershipHandler.RobotList.front().SetShipTarget(ShipPos1);
 			ShipRotation = 90;
 		}
+		for (std::list<Robot>::iterator iter = MothershipHandler.RobotList.begin(); iter != MothershipHandler.RobotList.end(); ++iter)
+		{
+			(*iter).RobotAnimation(dt);
+		}
 		if (ShipSpawned && weaponsOn && MothershipHandler.RobotList.front().GetHealth() >= 0)
 		{
 			for (std::list<Robot>::iterator iter = MothershipHandler.RobotList.begin(); iter != MothershipHandler.RobotList.end(); ++iter)
@@ -1986,7 +2003,7 @@ void SP2_Scene::Update(double dt)
 				}
 			}
 		}
-		else if (ShipSpawned && MothershipHandler.RobotList.front().GetHealth() <= 0)
+		else if (ShipSpawned && MothershipHandler.RobotList.front().GetHealth() <= 0 && MothershipHandler.RobotList.front().deadanimationover == true)
 		{
 			WaveBGM2->stop();
 			GameOver = true;
@@ -2393,84 +2410,8 @@ void SP2_Scene::RenderMainMenu()
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
 	// MAIN UI END
-	if (InSettings)
-	{
-		//Crystal
-		modelStack.PushMatrix();
-		modelStack.Translate(UICrystalPosition.x - 12, UICrystalPosition.y, UICrystalPosition.z);
-		modelStack.Rotate(constRotation, 0, 1, 0);
-		RenderMesh(meshList[GEO_CRYSTAL], true);
-		modelStack.PopMatrix();
 
-		// SETTINGS UI 
-		modelStack.PushMatrix();
-		modelStack.Translate(0, 0, -2);
-		RenderImageInMap(UI_BG, 30, 15);
-		modelStack.PopMatrix();
-
-		modelStack.PushMatrix();
-		modelStack.Translate(InstrScrnMove, 0, 0);
-		modelStack.PushMatrix();
-		modelStack.PushMatrix();
-		modelStack.Translate(-4, 5, 0);
-		RenderText(meshList[GEO_TEXT], "<Settings Menu>", Color(0, 1, 1));
-		modelStack.Translate(3.4, 0, 0);
-		RenderImageInMap(UI_LoadingBG, 10, 1.5);
-		modelStack.PopMatrix();
-		modelStack.PushMatrix();
-		modelStack.Translate(-6, 2, 0);
-		if (UICrystalChoice2 == 1){ RenderText(meshList[GEO_TEXT], "Mouse Sensitivity", Color(0, 1, 1)); }
-		else{ RenderText(meshList[GEO_TEXT], "Mouse Sensitivity", Color(1, 1, 1)); }
-		modelStack.Translate(4, 0, 0);
-		RenderImageInMap(UI_LoadingBG, 11, 1.5);
-		modelStack.PopMatrix();
-		modelStack.PushMatrix();
-		modelStack.Translate(8, 2, 0);
-		if (camera.MouseSensitivity == 1){ RenderText(meshList[GEO_TEXT], "Normal", Color(1, 1, 0)); }
-		else if (camera.MouseSensitivity == 2){ RenderText(meshList[GEO_TEXT], "High", Color(1, 0, 0)); }
-		else if (camera.MouseSensitivity == 0.5){ RenderText(meshList[GEO_TEXT], "Low", Color(0, 1, 0)); }
-		modelStack.Translate(1, 0, 0);
-		RenderImageInMap(UI_LoadingBG, 5, 1.5);
-		modelStack.PopMatrix();
-
-		modelStack.PushMatrix();
-		modelStack.Translate(-6, -1, 0);
-		if (UICrystalChoice2 == 2){ RenderText(meshList[GEO_TEXT], "Testing Mode", Color(0, 1, 1)); }
-		else{ RenderText(meshList[GEO_TEXT], "Testing Mode", Color(1, 1, 1)); }
-		modelStack.Translate(3, 0, 0);
-		RenderImageInMap(UI_LoadingBG, 9, 1.5);
-		modelStack.PopMatrix();
-
-		modelStack.PushMatrix();
-		modelStack.Translate(8, -1, 0);
-		if (TestingModeON){ RenderText(meshList[GEO_TEXT], "Yes", Color(0, 1, 0)); }
-		else if (!TestingModeON){ RenderText(meshList[GEO_TEXT], "No", Color(1, 0, 0)); }
-		modelStack.Translate(1, 0, 0);
-		RenderImageInMap(UI_LoadingBG, 5, 1.5);
-		modelStack.PopMatrix();
-
-		modelStack.PushMatrix();
-		modelStack.Translate(-6, -4, 0);
-		if (UICrystalChoice2 == 3){ RenderText(meshList[GEO_TEXT], "Scene Detail Level", Color(0, 1, 1)); }
-		else{ RenderText(meshList[GEO_TEXT], "Scene Detail Level", Color(1, 1, 1)); }
-		modelStack.Translate(4.5, 0, 0);
-		RenderImageInMap(UI_LoadingBG, 12, 1.5);
-		modelStack.PopMatrix();
-		modelStack.PopMatrix();
-
-		modelStack.PushMatrix();
-		modelStack.Translate(8, -4, 0);
-		if (SceneDetailLevel == 0){ RenderText(meshList[GEO_TEXT], "Normal", Color(1, 1, 0)); }
-		else if (SceneDetailLevel == 2){ RenderText(meshList[GEO_TEXT], "High", Color(1, 0, 0)); }
-		else if (SceneDetailLevel == -2){ RenderText(meshList[GEO_TEXT], "Low", Color(0, 1, 0)); }
-		modelStack.Translate(1, 0, 0);
-		RenderImageInMap(UI_LoadingBG, 5, 1.5);
-		modelStack.PopMatrix();
-
-		modelStack.PopMatrix();
-		// SETTINGS UI END
-	}
-	else if (InstructionScreen)
+	if (InstructionScreen)
 	{
 		// INSTR UI 
 		modelStack.PushMatrix();
@@ -2607,6 +2548,86 @@ void SP2_Scene::RenderMainMenu()
 		modelStack.PopMatrix();
 		// INSTR UI END
 	}
+	
+	else if (InSettings)
+	{
+		//Crystal
+		modelStack.PushMatrix();
+		modelStack.Translate(UICrystalPosition.x - 12, UICrystalPosition.y, UICrystalPosition.z);
+		modelStack.Rotate(constRotation, 0, 1, 0);
+		RenderMesh(meshList[GEO_CRYSTAL], true);
+		modelStack.PopMatrix();
+
+		// SETTINGS UI 
+		modelStack.PushMatrix();
+		modelStack.Translate(0, 0, -2);
+		RenderImageInMap(UI_BG, 30, 15);
+		modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+		modelStack.Translate(InstrScrnMove, 0, 0);
+		modelStack.PushMatrix();
+		modelStack.PushMatrix();
+		modelStack.Translate(-4, 5, 0);
+		RenderText(meshList[GEO_TEXT], "<Settings Menu>", Color(0, 1, 1));
+		modelStack.Translate(3.4, 0, 0);
+		RenderImageInMap(UI_LoadingBG, 10, 1.5);
+		modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		modelStack.Translate(-6, 2, 0);
+		if (UICrystalChoice2 == 1){ RenderText(meshList[GEO_TEXT], "Mouse Sensitivity", Color(0, 1, 1)); }
+		else{ RenderText(meshList[GEO_TEXT], "Mouse Sensitivity", Color(1, 1, 1)); }
+		modelStack.Translate(4, 0, 0);
+		RenderImageInMap(UI_LoadingBG, 11, 1.5);
+		modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		modelStack.Translate(8, 2, 0);
+		if (camera.MouseSensitivity == 1){ RenderText(meshList[GEO_TEXT], "Normal", Color(1, 1, 0)); }
+		else if (camera.MouseSensitivity == 2){ RenderText(meshList[GEO_TEXT], "High", Color(1, 0, 0)); }
+		else if (camera.MouseSensitivity == 0.5){ RenderText(meshList[GEO_TEXT], "Low", Color(0, 1, 0)); }
+		modelStack.Translate(1, 0, 0);
+		RenderImageInMap(UI_LoadingBG, 5, 1.5);
+		modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+		modelStack.Translate(-6, -1, 0);
+		if (UICrystalChoice2 == 2){ RenderText(meshList[GEO_TEXT], "Testing Mode", Color(0, 1, 1)); }
+		else{ RenderText(meshList[GEO_TEXT], "Testing Mode", Color(1, 1, 1)); }
+		modelStack.Translate(3, 0, 0);
+		RenderImageInMap(UI_LoadingBG, 9, 1.5);
+		modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+		modelStack.Translate(8, -1, 0);
+		if (TestingModeON){ RenderText(meshList[GEO_TEXT], "Yes", Color(0, 1, 0)); }
+		else if (!TestingModeON){ RenderText(meshList[GEO_TEXT], "No", Color(1, 0, 0)); }
+		modelStack.Translate(1, 0, 0);
+		RenderImageInMap(UI_LoadingBG, 5, 1.5);
+		modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+		modelStack.Translate(-6, -4, 0);
+		if (UICrystalChoice2 == 3){ RenderText(meshList[GEO_TEXT], "Scene Detail Level", Color(0, 1, 1)); }
+		else{ RenderText(meshList[GEO_TEXT], "Scene Detail Level", Color(1, 1, 1)); }
+		modelStack.Translate(4.5, 0, 0);
+		RenderImageInMap(UI_LoadingBG, 12, 1.5);
+		modelStack.PopMatrix();
+		modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+		modelStack.Translate(8, -4, 0);
+		if (SceneDetailLevel == 0){ RenderText(meshList[GEO_TEXT], "Normal", Color(1, 1, 0)); }
+		else if (SceneDetailLevel == 2){ RenderText(meshList[GEO_TEXT], "High", Color(1, 0, 0)); }
+		else if (SceneDetailLevel == -2){ RenderText(meshList[GEO_TEXT], "Low", Color(0, 1, 0)); }
+		modelStack.Translate(1, 0, 0);
+		RenderImageInMap(UI_LoadingBG, 5, 1.5);
+		modelStack.PopMatrix();
+
+		modelStack.PopMatrix();
+		// SETTINGS UI END
+	}
+		
+		
 	modelStack.PopMatrix();
 }
 

@@ -56,6 +56,9 @@ public:
 	float collapse = 0;
 	bool die = false;
 	bool deadanimationover = false;
+	//mothership defeated animation
+	bool defeated = false;
+	float explosion = 0;
 
 private:
 	Vector3 GetDirVec(Vector3 Target);
