@@ -69,52 +69,30 @@ class SP2_Scene : public Scene
 		GEO_SMG,
 		GEO_SNIPER,
 		GEO_RIFLE,
-		GEO_SHOTGUN,
 
 		//Ships
 		GEO_PLAYERSHIP,
-		GEO_MOTHERSHIP,
-
-		//drone
-		GEO_DRONEBODY,
-		GEO_DRONELEFTUPPERARM,
-		GEO_DRONELEFTLOWERARM,
-		GEO_DRONERIGHTUPPERARM,
-		GEO_DRONERIGHTLOWERARM,
+		GEO_MOTHERSHIP_BOTTOM,
+		GEO_MOTHERSHIP_TOP,
+		GEO_MOTHERSHIP_LOWER,
+		GEO_MOTHERSHIP_UPPER,
+		GEO_MOTHERSHIP_TAIL,
 
 		//robots
 		GEO_ROBOTHEALTH,
 		GEO_ROBOTHEALTH2,
 
-		GEO_MELEEROBOTBODY,
-		GEO_MELEEROBOTLEFTUPPERARM,
-		GEO_MELEEROBOTLEFTLOWERARM,
-		GEO_MELEEROBOTRIGHTUPPERARM,
-		GEO_MELEEROBOTRIGHTLOWERARM,
-		GEO_MELEEROBOTRIGHTARM,
-		GEO_MELEEROBOTLEFTLEG,
-		GEO_MELEEROBOTRIGHTLEG,
-
-		GEO_RANGEROBOTBODY,
-		GEO_RANGEROBOTLEFTUPPERARM,
-		GEO_RANGEROBOTLEFTLOWERARM,
-		GEO_RANGEROBOTRIGHTUPPERARM,
-		GEO_RANGEROBOTRIGHTLOWERARM,
-		GEO_RANGEROBOTLEFTLEG,
-		GEO_RANGEROBOTRIGHTLEG,
-
-		GEO_MIXEDROBOTBODY,
-		GEO_MIXEDROBOTLEFTUPPERARM,
-		GEO_MIXEDROBOTLEFTLOWERARM,
-		GEO_MIXEDROBOTRIGHTUPPERARM,
-		GEO_MIXEDROBOTRIGHTLOWERARM,
-		GEO_MIXEDROBOTLEFTLEG,
-		GEO_MIXEDROBOTRIGHTLEG,
+		GEO_ROBOTBODY,
+		GEO_ROBOTLEFTUPPERARM,
+		GEO_ROBOTLEFTLOWERARM,
+		GEO_ROBOTRIGHTUPPERARM,
+		GEO_ROBOTRIGHTLOWERARM,
+		GEO_ROBOTRIGHTARM,
+		GEO_ROBOTLEFTLEG,
+		GEO_ROBOTRIGHTLEG,
 
 		// UNCLASSIFIED
-		GEO_GATE,
 		GEO_METEOR,
-		//GEO_COMPUTER,
 		GEO_CRYSTAL,
 		GEO_CRYSTALBASE,
 		GEO_MOONFLOOR,
@@ -124,9 +102,6 @@ class SP2_Scene : public Scene
 
 		//add these enum in GEOMETRY_TYPE before NUM_GEOMETRY
 		GEO_TEXT,
-
-		GEO_LIGHTBALL,
-		GEO_FLOOR,
 
 		GEO_BASE,
 		GEO_GATE_SIDE,
@@ -217,21 +192,18 @@ public:
 	float ShipY;
 	float ShipRot;
 	unsigned short repairShipPhase;
-	bool walk;
 	//mothership
 	bool moveMship;
 	float moveMshipUp;
 	float rotateMship;
 	bool floatRocks;
-	float moveRocks; //for space map wave 6float droidrepairgate;
+	float moveRocks; 
 
 	bool rLimiter;
 	bool toggleLimiters;
 	bool limitersON;
 	float constTranslation;
 	bool canUseDoor = true;
-	int weaponSelect;
-	bool sniper, rifle;
 
 	unsigned short skyboxID = 0;
 
@@ -333,16 +305,16 @@ private:
 	void RenderTeleporter(bool render = false);
 	void RenderGateText(bool render = false);
 	void RenderRocks();
-	void RenderLevel();
 	void initBounds();
-	void RenderGate(bool render = false);
-	void RenderUI();
-	//void RobotAnimation(double dt);
+	void RenderGameUI();
 	void RenderShip();
 	void RenderSpaceMap();
 	void RenderBase();
 	void RenderRobots();
 	void RenderPowerUp(unsigned short PowerUpType = 1);
+	void RenderMainMenu();
+	void RenderGameOver();
+	void RenderLoadScreen();
 
 	//Interaction Values
 	bool buttonPress;
@@ -385,9 +357,16 @@ private:
 	//Main Menu Stuff
 	Vector3 UICrystalPosition = Vector3(2, 0, 0);
 	unsigned short UICrystalChoice;
+	unsigned short UICrystalChoice2;
 	bool InMainMenu = false;
 	bool GameStarted = false;
 	bool InSettings = false;
+	bool InstructionScreen = false;
+	float UIPushBackVal = 0;
+	float InstrScrnMove = 0;
+	unsigned short VolumeLevel = 1;
+	float VolumeIncrement = 0;
+	bool TestingModeON = false;
 
 	//Load Values
 	float LoadTimer = 0;
@@ -399,6 +378,7 @@ private:
 
 	//mothership defeated animation
 	float explosion;
+	bool playOnce = false;
 
 	//Power Up Stuff
 	bool PowerUpActive = true;

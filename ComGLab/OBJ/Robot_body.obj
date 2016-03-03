@@ -1,6 +1,6 @@
 # This file uses centimeters as units for non-parametric coordinates.
 
-mtllib MeleeRobot_body.mtl
+mtllib RangeRobot_body.mtl
 g default
 v -0.000000 5.305077 0.475592
 v -0.000000 5.326735 -0.499344

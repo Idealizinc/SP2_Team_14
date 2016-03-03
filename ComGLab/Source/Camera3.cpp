@@ -11,7 +11,6 @@
 #include "Camera3.h"
 #include "Application.h"
 #include "Mtx44.h"
-#include "CameraPhysics.h"
 #include "MyMath.h"
 
 /****************************************************************************/
@@ -118,8 +117,8 @@ Resulting boolean values
 
 void Camera3::Update(double dt)
 {
-
 	cameraMovement2(dt);
+	rotate_Sensitivity = S_Width / S_Height * 2 * MouseSensitivity;
 	rotateCamera(dt);
 
 	if (!TeleporterF1NW.BoundaryCheck(position.x, position.z, position.y) || !TeleporterF1NE.BoundaryCheck(position.x, position.z, position.y)
@@ -502,6 +501,7 @@ void Camera3::initBoundVec()
 
 	ShipCheck.set(-25, 15, 54, 96, 0, 10);
 	CoreCheck.set(-2.5, 2.5, -2.5, 2.5, 0, 10);
+	PowerUp.set(-2, 2, -2, 2, 10, 20);
 }
 
 /****************************************************************************/
@@ -527,11 +527,11 @@ void Camera3::jump(double dt, int level)
 	{
 		if (isMaxJump == false) 
 		{
-			position.y += (float)(2 * dt);
+			position.y += (float)(5 * dt);
 		}
 		else
 		{
-			position.y -= (float)(2 * dt);
+			position.y -= (float)(5 * dt);
 		}
 		if (position.y > maxJump)
 		{

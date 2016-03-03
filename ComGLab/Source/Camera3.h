@@ -50,6 +50,7 @@ public:
 	float baseWalkSpeed = 4;
 	bool CanMoveCamera = true;
 	Boundary PowerUp;
+	float MouseSensitivity = 1;
 
 private:
 	Vector3 view;

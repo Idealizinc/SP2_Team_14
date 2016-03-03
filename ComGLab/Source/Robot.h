@@ -6,7 +6,8 @@
 \brief
 Class to define Robot
 */
-/****************************************************************************/
+/****************************************************************************/
+
 #ifndef _ROBOT_H
 #define _ROBOT_H
 
@@ -72,6 +73,7 @@ public:
 	float collapse = 0;
 	bool die = false;
 	bool deadanimationover = false;
+	float explosion = 0;
 
 private:
 	Vector3 GetDirVec(Vector3 Target);
